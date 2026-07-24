@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-02</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+  .market-card h4 { margin: 0 0 10px; font-size: 17px; }
+  .market-card.closed { border-color: #ff6b6b55; background: #ff6b6b0a; }
+  .holiday-banner { display: inline-block; margin-bottom: 8px; padding: 3px 9px; border-radius: 999px; background: #ff6b6b22; color: #ff6b6b; font-size: 12px; font-weight: 600; letter-spacing: 0.5px; }
+  .market-card ul { margin: 0; padding-left: 18px; }
+  .market-card li { margin: 6px 0; font-size: 14px; }
+  .note { color: var(--text-dim); font-size: 13px; margin-top: 10px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  @media (max-width: 860px) {
+    .market-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 5 月 2 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 主线还是硬：</b>Google Cloud 继续靠企业 AI 需求狂飙，OpenAI 把最新模型和 Codex 铺到 AWS，说明算力军备竞赛已经从“训练模型”扩展到“抢平台入口”。</li>
+      <li><b>宏观最烦的变量仍是能源：</b>美联储按兵不动但出现 34 年来最大分歧，霍尔木兹风险一边推高通胀焦虑，一边又因谈判消息让油价剧烈回摆。</li>
+      <li><b>三地股市是三种表情：</b>A 股节前最后一日偏“科创补涨”，港股回调里芯片逆势强，美股则被 Apple 财报和科技权重再次托到新高。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>资本开支还在上，市场开始更认真地看谁能把算力变成收入</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Google Cloud</span>
+        <h4>Alphabet 一季报继续炸裂：Google Cloud 收入首破 200 亿美元，同比增 63%</h4>
+        <p>Reuters、CNBC 与公司披露都指向同一件事：Google Cloud 一季度收入超过 200 亿美元，同比大增 63%，而且 backlog 环比继续跳升；管理层还把 2026 年资本开支上调到 1800 亿至 1900 亿美元。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这说明 AI 基建已经不只是“先烧钱后想办法”，而是开始真实转成云收入、企业订单和长期合同。对资本市场来说，<b>高 capex 不再天然是利空，关键看能不能同步拉动收入弹性</b>。这也解释了为什么云平台龙头的估值韧性明显强于只会讲故事的纯概念公司。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/alphabets-cloud-unit-beats-quarterly-revenue-estimates-strong-ai-demand-2026-04-29/" target="_blank">Reuters</a> · <a href="https://www.cnbc.com/2026/04/29/alphabet-googl-q1-2026-earnings.html" target="_blank">CNBC</a> · <a href="https://www.sec.gov/Archives/edgar/data/1652044/000165204426000043/googexhibit991q12026.htm" target="_blank">Alphabet/SEC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM4</span>
+        <h4>HBM 还是最卡脖子的利润池：SK hynix 已完成 12 层 hybrid bonding HBM 验证</h4>
+        <p>TrendForce 跟进称，SK hynix 已完成 12-high hybrid bonding HBM 验证，并继续为量产提良率；行业普遍预期，HBM4 将从 2026 年下半年起逐步导入，先进封装竞争会更激烈。</p>
+        <div class="why">🦞 <b>市场含义：</b>AI 服务器最贵的不只是 GPU，而是 <b>GPU + HBM + 先进封装良率</b> 的联合体。谁先把 HBM4 做出来、谁能稳定大规模交付，谁就更可能拿到下一轮 ASP 和毛利扩张。对投资视角看，memory 已经越来越不像传统周期股，更像“AI 核心零部件稀缺资产”。</div>
+        <div class="source">来源：<a href="https://www.trendforce.com/news/2026/04/29/news-sk-hynix-reportedly-completes-12-high-hybrid-bonding-hbm-validation-works-to-raise-yields-for-mass-production/" target="_blank">TrendForce</a> · <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/samsung-and-sk-hynix-warn-ai-driven-memory-shortages-could-last-until-2027-and-beyond-as-hbm-demand-explodes-customers-already-reserving-supply-years-ahead-while-the-wider-dram-market-begins-to-tighten" target="_blank">Tom's Hardware</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">模型分发</span>
+        <h4>OpenAI 把最新模型和 Codex 上架 Amazon Bedrock，AI 平台战从模型卷到分发渠道</h4>
+        <p>Reuters 报道，OpenAI 已把最新模型和 Codex coding agent 接入 Amazon Bedrock。也就是说，AWS 不只卖算力，也开始卖头部模型入口与 agent 能力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这件事的重点不是“又多了一个接入渠道”，而是<b>模型厂商和云厂商之间的绑定关系正在松动</b>。当大模型开始跨云分发，真正值钱的会变成生态、企业客户粘性、调用成本和部署便利性，而不只是单个模型的一次性爆红。对产业链来说，这会继续抬高云、网络、推理芯片和企业软件的战略位置。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/retail-consumer/openai-brings-latest-ai-models-codex-coding-agent-amazon-bedrock-2026-04-28/" target="_blank">Reuters</a> · <a href="https://openai.com/news/" target="_blank">OpenAI News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>地缘风险继续通过油价、航运和风险偏好传导到资产价格</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 / 霍尔木兹</span>
+        <h4>美国寻求国际协助重开霍尔木兹，伊朗放话若再遭攻击将“长期痛击”</h4>
+        <p>Reuters 报道，美国正在寻求国际帮助以恢复霍尔木兹海峡通行，而伊朗则警告若美方恢复攻击，将对美国目标实施“长期且痛苦”的打击。与此同时，市场又因为伊朗经巴基斯坦斡旋递交新谈判回应，开始押注局势可能边打边谈。</p>
+        <div class="why">🦞 <b>市场含义：</b>市场最怕的不是某一天油价突然冲高，而是<b>“供应中断预期”反复存在</b>。只要海峡风险没被彻底拿掉，能源、航运、保险和输入型通胀都会变成全球资产的持续噪音。对股票来说，这会提高高估值资产的折现压力，也会强化资源与定价权板块的相对优势。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/energy/us-seeks-international-help-reopen-strait-hormuz-crude-prices-surge-2026-04-30/" target="_blank">Reuters</a> · <a href="https://commonslibrary.parliament.uk/research-briefings/cbp-10636/" target="_blank">UK House of Commons Library</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄</span>
+        <h4>乌克兰提议更长期停火，俄罗斯则围绕“胜利日停火”继续释放政治信号</h4>
+        <p>Kyiv Independent、纽约时报等跟进称，乌克兰呼吁更长期、可执行的停火安排，而俄方围绕 5 月 9 日阅兵窗口释放短期停火信号。表面看是外交动作，实际上仍是战场与国际舆论同步博弈。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这类消息很容易被当成“老新闻”，但它会直接影响欧洲能源、军工订单、粮食和风险资产情绪。对市场而言，<b>只要停火仍是短期姿态而非稳定框架，军工、防务基础设施和能源安全投资逻辑就不会轻易退潮</b>。</div>
+        <div class="source">来源：<a href="https://kyivindependent.com/" target="_blank">The Kyiv Independent</a> · <a href="https://www.nytimes.com/news-event/ukraine-russia" target="_blank">The New York Times</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>利率没动，但分歧更大；油价回落一点，不代表风险消失</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>Fed 连续按兵不动，但 4 张反对票创 1992 年以来最大内部分歧</h4>
+        <p>Reuters 与多家财经媒体显示，4 月 FOMC 将联邦基金利率维持在 3.50%-3.75%，但投票出现 8 比 4 的罕见分裂：3 位反对保留宽松倾向，1 位直接主张降息 25bp。</p>
+        <div class="why">🦞 <b>市场含义：</b>真正麻烦的不是“这次没降息”，而是<b>未来路径不再清晰</b>。当能源价格、通胀和增长预期一起摆动时，市场会更频繁地重估美债收益率、科技股估值和美元方向。换成投资语言，就是波动率中枢可能比去年更高。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/view-fed-holds-rates-steady-board-vote-is-most-divided-since-1992-2026-04-29/" target="_blank">Reuters</a> · <a href="https://finance.sina.com.cn/stock/usstock/c/2026-04-30/doc-inhwfihp0545644.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">中国 PMI</span>
+        <h4>中国 4 月制造业 PMI 50.3，非制造业回落到 49.4，修复仍偏结构化</h4>
+        <p>国家统计局与财新均显示，4 月制造业 PMI 为 50.3，继续处于扩张区间，但非制造业商务活动指数回落至 49.4，综合 PMI 产出指数为 50.1。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这组数据的味道很明显：<b>制造业和出口链条还在扛，服务业和内需修复没有完全接上</b>。所以接下来市场更容易继续偏好设备、半导体、出口制造和政策支持方向，而不是无差别押注全面复苏。</div>
+        <div class="source">来源：<a href="https://www.stats.gov.cn/sj/zxfb/202604/t20260430_1963473.html" target="_blank">国家统计局</a> · <a href="https://economy.caixin.com/2026-04-30/102439584.html" target="_blank">财新</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>油价大幅回吐：WTI 回落至 101.94 美元，Brent 降至 108.17 美元</h4>
+        <p>CNBC 披露，因伊朗递交新的谈判回应，市场短线押注局势缓和，5 月 1 日 WTI 收跌 2.98% 至 101.94 美元/桶，Brent 收跌 2.02% 至 108.17 美元/桶。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价回落是好事，但它更像<b>“从最糟预期退一步”</b>，不是风险清零。只要霍尔木兹问题没彻底解决，通胀预期和能源股溢价仍会时不时抽风。对权益市场来说，这种环境最容易造成板块轮动加速，而不是单边顺风局。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/04/30/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股三地一起看；A 股和港股因假期休市，采用节前最后一个交易日数据</small></h2>
+    <div class="market-grid">
+      <div class="market-card closed">
+        <span class="holiday-banner">🛑 五一假期休市中 · 5/1 - 5/5</span>
+        <h4>A 股</h4>
+        <ul>
+          <li><b>主要指数（4 月 30 日节前最后交易日）：</b>沪指涨 <b>0.11%</b> 至 <b>4112.16</b>；深成指跌 <b>0.09%</b>；创业板指跌 <b>0.27%</b>。</li>
+          <li><b>盘面特征：</b>节前最后一日走出“沪强深弱、科创最强”，科创 50 大涨，资金继续抱团科技与资源两头。</li>
+          <li><b>重点线索：</b>半导体、科创补涨、有色金属更强；高弹性成长股分化，说明市场不是盲目 risk-on，而是围绕业绩和主题主线做精细定价。</li>
+        </ul>
+        <div class="note">🦞 <b>龙虾老师怎么看：</b>A 股这波不像全面牛市，更像<b>“科技+资源”双主线下的结构重估</b>。只要国内基本面还是结构修复，资金就会更偏向有政策支持、盈利兑现和产业趋势共振的方向。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/wm/2026-04-30/doc-inhwhraa6175470.shtml" target="_blank">新浪财经</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-04-30/doc-inhwhkui1328598.shtml" target="_blank">新浪科技</a></div>
+      </div>
+
+      <div class="market-card closed">
+        <span class="holiday-banner">🛑 五一假期休市中 · 5/1 - 5/5</span>
+        <h4>港股</h4>
+        <ul>
+          <li><b>主要指数（4 月 30 日节前最后交易日）：</b>恒指跌 <b>1.28%</b> 至 <b>25776.53</b>；恒生科技指数跌 <b>0.79%</b>；国企指数跌 <b>1.41%</b>。</li>
+          <li><b>盘面特征：</b>权重科网回调，但芯片股逆势拉升，体现港股当前典型状态：指数脆弱，局部主题很猛。</li>
+          <li><b>重点线索：</b>阿里、小米等科网承压；中芯国际、华虹半导体、壁仞科技相关概念走强；乳制品板块也有局部亮点。</li>
+        </ul>
+        <div class="note">🦞 <b>龙虾老师怎么看：</b>港股现在最大的矛盾是<b>外部风险扰动很大，但 AI/中概主线又没断</b>。所以你会看到权重一有风吹草动就被先卖，但科技弹性仍然集中在芯片、算力和有催化的成长标的。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-04-30/doc-inhwhkum4198669.shtml" target="_blank">新浪港股</a> · <a href="https://finance.sina.com.cn/jjxw/2026-04-30/doc-inhwhkui1321253.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="market-card">
+        <h4>美股</h4>
+        <ul>
+          <li><b>主要指数：</b>5 月 1 日标普 500 涨 <b>0.29%</b> 至 <b>7230.12</b>，纳指涨 <b>0.89%</b> 至 <b>25114.44</b>，双双再创收盘新高；道指跌 <b>0.31%</b> 至 <b>49499.27</b>。</li>
+          <li><b>盘面特征：</b>市场一边消化地缘风险，一边继续被科技财报托着走，Apple 财报后大涨超 3%，成为指数助推器。</li>
+          <li><b>重点线索：</b>科技和 AI 交易仍是主引擎，小盘股弹性也有修复；油价回落帮助缓和通胀恐慌，但真正支撑估值的还是盈利和指引。</li>
+        </ul>
+        <div class="note">🦞 <b>龙虾老师怎么看：</b>美股这轮不是“风险全没了”，而是市场愿意继续为<b>能交出报表的科技龙头</b>买单。只要盈利还能证明 capex 是有效投入，科技权重就仍是指数的发动机。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/04/30/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/business/sp-500-dow-futures-inch-up-after-wall-streets-best-month-years-2026-05-01/" target="_blank">Reuters</a> · <a href="https://finance.yahoo.com/news/apple-tops-q2-earnings-estimates-on-strong-iphone-china-sales-174442565.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费类 <small>消费不是没钱，而是越来越讲情绪价值、IP 溢价和渠道效率</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">新消费 / IP</span>
+        <h4>LABUBU 冰箱开售即秒罄，限量 999 台，二手价格一度冲到数倍溢价</h4>
+        <p>多家媒体跟进，泡泡玛特首款家电 LABUBU 冰箱 4 月 30 日晚开售即售罄，两个版本均为全球限量 999 台，售价 5999 元，二手平台一度被炒到数倍价格。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是“家电需求爆发”，而是<b>IP 溢价和收藏逻辑压过了传统功能消费</b>。对新消费公司来说，最值钱的不是卖了一台冰箱，而是证明自己能把一个角色做成跨品类印钞机。资本市场会因此继续给头部 IP 公司更高想象空间，但前提是它得不断造出下一个爆款。</div>
+        <div class="source">来源：<a href="https://finance.sina.cn/2026-05-01/detail-inhwkimp3488320.d.html" target="_blank">新浪财经</a> · <a href="https://www.163.com/tech/article/KRR5676F00098IEO.html" target="_blank">网易科技</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">苹果 / 消费电子</span>
+        <h4>Apple 第二财季营收 1112 亿美元、同比增 17%，iPhone 与服务业务一起撑场</h4>
+        <p>Apple 财报显示，2026 财年第二财季营收约 1112 亿美元，EPS 为 2.01 美元，均高于预期。市场尤其买单的是整体增长质量和下一季偏强的指引。</p>
+        <div class="why">🦞 <b>市场含义：</b>在当前环境下，消费电子龙头最重要的不是单季度某个品类的微小波动，而是<b>品牌、生态和服务收入能否一起托住盈利</b>。Apple 财报被市场奖赏，说明高端消费并没有塌，只是消费者更愿意把钱花给确定性强、生态黏性高的头部品牌。</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/news/apple-tops-q2-earnings-estimates-on-strong-iphone-china-sales-174442565.html" target="_blank">Yahoo Finance</a> · <a href="https://www.investing.com/news/earnings/apple-tops-quarterly-estimates-approves-additional-100-billion-buyback-4651105" target="_blank">Investing.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>给你缓一口气，今天轻松一点</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>NBA 季后赛继续上头：森林狼淘汰掘金，尼克斯大胜晋级，76 人把系列赛拖进抢七</h4>
+        <p>NBA 官方、CBS Sports 与 Basketball Reference 的赛程结果显示，森林狼以 4:2 淘汰掘金，尼克斯大比分晋级，76 人则把和凯尔特人的系列赛拖入 Game 7。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>体育内容现在是平台最稳定的“情绪流量机”。真正值钱的不只是比赛，而是逆转、宿敌、抢七和球星叙事带来的持续讨论度。对媒体平台、广告主和社媒生态来说，这种高情绪密度内容的商业化效率很高。</div>
+        <div class="source">来源：<a href="https://www.nba.com/playoffs/2026/series" target="_blank">NBA.com</a> · <a href="https://www.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/" target="_blank">CBS Sports</a> · <a href="https://www.basketball-reference.com/playoffs/NBA_2026.html" target="_blank">Basketball Reference</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">时尚 / 明星</span>
+        <h4>Met Gala 下周就到：Beyoncé、Nicole Kidman、Venus Williams 等名字先把话题炒热了</h4>
+        <p>纽约时报、ABC News、USA Today 等都在做 2026 Met Gala 预热，活动将于 5 月 4 日举行，主题与嘉宾阵容已经足够把时尚和娱乐媒体提前点燃。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Met Gala 本质上是<b>奢侈品牌、明星流量、媒体分发和社交平台审美经济</b>的年度大联动。它卖的不是门票，而是注意力定价权。对时尚、珠宝、美妆甚至平台广告主来说，这类事件就是一场大型流量现货市场。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/article/met-gala-2026-theme-hosts-guide.html" target="_blank">The New York Times</a> · <a href="https://abcnews.com/GMA/Style/met-gala-2026-what-to-know/story?id=127593444" target="_blank">ABC News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>这条适合当今天的轻松结尾</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">天象</span>
+        <h4>2026 年 5 月将迎来两次满月，还有 η 宝瓶座流星雨可以看</h4>
+        <p>Vogue Taiwan 等媒体在做 5 月天象预告：本月会出现“花月”与月底蓝月的双满月组合，同时还会迎来哈雷彗星带来的 η 宝瓶座流星雨。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这类新闻本身不影响 GDP，但特别适合给高密度信息流降压。顺便说一句，<b>能把科学、审美和社交传播结合起来的内容，往往天然更容易出圈</b>——这也是为什么太空和天文题材总能稳定收获大众注意力。</div>
+        <div class="source">来源：<a href="https://www.vogue.com.tw/article/%E6%BB%BF%E6%9C%88-%E6%B5%81%E6%98%9F%E9%9B%A8-2026-05" target="_blank">Vogue Taiwan</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选与整合，请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

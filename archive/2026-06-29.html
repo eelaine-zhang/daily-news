@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-29</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block .idx { font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+  .market-block .up { color: #4ade80; }
+  .market-block .down { color: #f87171; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 29 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美伊停火协议濒临崩溃：</b>双方互相指责违反 MoU 第 5 条（霍尔木兹海峡通航条款），周末再度交火——伊朗攻击巴林和科威特美军基地，美军轰炸伊朗霍尔木兹附近。油价不涨反跌，Brent 跌至 <b>72 美元</b>附近。</li>
+      <li><b>Baidu 昆仑芯拟赴港 IPO，目标估值 <b>500 亿美元</b>：</b>中国 AI 芯片国产替代的标志性事件——但要求投资人"顺带买芯片"的操作也引发了争议。</li>
+      <li><b>美股 6 月惨淡收场：</b>纳指月跌超 6%，标普跌 3%，道指逆势涨 1%——风格极致分化。A 股沪指周五收 4,027（-2.26%），恒指 22,672（周跌 1.8%）。今天是 6 月最后一个交易日 / 周一开盘，关注季末调仓效应。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Baidu 昆仑芯</span>
+        <h4>Baidu AI 芯片子公司昆仑芯科技拟赴港 IPO，目标估值 500 亿美元</h4>
+        <p>Reuters/The Information 6/28 独家：百度旗下 AI 芯片公司<b>昆仑芯科技（Kunlunxin Technology）</b>正在筹备香港上市，目标估值 <b>500 亿美元</b>。更引人注目的是，昆仑芯在路演中要求 IPO 投资人同时采购其芯片——用"入股 + 采购"绑定模式确保客户基础。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是中国 AI 芯片国产替代的标志性事件。500 亿美元什么概念？相当于<b>寒武纪市值的 3 倍</b>。但关键问题在于：昆仑芯的芯片目前主要供百度内部 ERNIE 大模型推理用，外部客户极少。"买股送芯片"的做法说明它还没找到独立商业化路径。对港股市场来说，如果这单 IPO 成功，会打开中国 AI 芯片公司的估值天花板；如果失败，则说明资本市场对"非英伟达 AI 芯片"的耐心已经到顶。</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/technology/ai/articles/baidus-ai-chip-unit-kunlunxin-181913432.html" target="_blank">Yahoo Finance / Reuters</a> · <a href="https://www.theinformation.com/articles/baidus-chip-unit-asked-ipo-investors-buy-semiconductors" target="_blank">The Information</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Qualcomm 数据中心</span>
+        <h4>Qualcomm 推出 Dragonfly 品牌进军 AI 数据中心芯片，Meta 已签约</h4>
+        <p>Qualcomm 在 6/26 的半导体周报上正式发布 <b>Dragonfly</b> 品牌 AI 数据中心解决方案，已拿下 Meta 作为首个大客户。Qualcomm 同时将 FY29 非手机收入目标上调至 <b>400 亿美元</b>。与此同时，AMD 宣称其 AI 业务瞄准 <b>1200 亿美元</b>市场，TSMC-Amkor 封装联盟正在重塑先进封装版图。</p>
+        <div class="why">🦞 <b>市场含义：</b>AI 芯片正在从"Nvidia 一家通吃"变成"诸侯割据"。Qualcomm 进数据中心是大事——它的手机芯片出货量基数可以摊薄 R&D 成本，用价格战抢推理市场份额。对 Meta 来说，多一个供应商就是多一层议价筹码。<b>推理芯片市场是未来 2 年AI产业链 alpha 最大的一环</b>——毛利率比训练芯片低，但出货量可能高 5-10 倍。Nvidia 的溢价空间会被持续挤压。</div>
+        <div class="source">来源：<a href="https://www.distillintelligence.com/briefings/semiconductors-ai-chips-2026-06-26" target="_blank">Distill Intelligence</a> · <a href="https://www.digitimes.com/news/a20260625PD213/nvidia-cpo-infrastructure-optics-roadmap-tsmc.html" target="_blank">DIGITIMES</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix · HBM4</span>
+        <h4>SK Hynix 独揽 Nvidia Vera Rubin HBM4 产能，三星转供 OpenAI Titan</h4>
+        <p>Motley Fool 6/25 深度报道：AI 数据中心 2026 年将消耗全球 <b>70% 的存储芯片</b>。SK Hynix 拿下了 Nvidia 下一代 Vera Rubin 平台 <b>60-70% 的 HBM4 产能</b>，6/6 签了多年联合研发协议。三星则转向 OpenAI——为其与 Broadcom 合制的 Titan 芯片供应 HBM4，三星平泽工厂 <b>50% 以上产能</b>划给 OpenAI。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>HBM 已经不只是"存储"，而是 AI 芯片的"第二颗硅"。SK Hynix 和 Nvidia 的关系已从供应商升级为<b>联合研发伙伴</b>——这意味着 HBM4 的设计周期和 GPU 设计周期同步，其他存储厂想插进来越来越难。三星转向 OpenAI 是不得已的"B 计划"——但 OpenAI 的 Titan 量级远小于 Nvidia，三星 HBM 利润率会被拉低。存储板块的<b>分化</b>是接下来 1 年的主旋律。</div>
+        <div class="source">来源：<a href="https://www.fool.com/investing/2026/06/25/ai-data-centers-will-consume-70-of-all-memory-chip/" target="_blank">Motley Fool</a> · <a href="https://aimultiple.com/ai-chip-makers" target="_blank">AIMultiple</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国 AI 算力网</span>
+        <h4>北京拟投 2950 亿美元建全国 AI 算力网，80% 国产芯片——结构性排除 Nvidia</h4>
+        <p>TechTimes 6/22 报道：北京正在起草一项 <b>2950 亿美元</b>的全国 AI 算力网建设计划，要求 <b>80% 使用国产芯片</b>。华为昇腾芯片填补空缺，但 SMIC 产能受限仍是瓶颈。这意味着 Nvidia 和 AMD 被结构性排除在中国 AI 基建市场之外。</p>
+        <div class="why">🦞 <b>商业含义：</b>2950 亿美元是什么概念？相当于中国 2025 年 GDP 的 ~1.6%。如果真的落地，这对<b>华为昇腾生态链（中芯国际 SMIC、长电科技、沪硅产业）</b>是巨量订单。但这里有一个现实问题：SMIC 的 7nm 良率仍然在 50% 出头，产能远跟不上需求。短期看，这个计划更像"方向性宣言"而非可执行预算。<b>对 Nvidia 来说，中国市场收入占比已从 25% 降到 10% 以下，边际影响递减。</b></div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/318868/20260622/china-ai-data-center-grid-locks-out-nvidia-295-billion-domestic-chip-mandate.htm" target="_blank">TechTimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>美伊停火协议面临最大考验</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 霍尔木兹</span>
+        <h4>MoU 第 5 条引爆新一轮交火：美伊互相指责对方违反霍尔木兹通航条款</h4>
+        <p>Al Jazeera / LiveMint 6/28-29 报道：6 月 17 日签署的美伊临时停火协议（14 点 MoU）正面临最大危机。第 5 条要求恢复霍尔木兹海峡商船自由通航——但<b>双方对"自由通航"的定义完全不同</b>：美国要求国际协调航线，伊朗坚持保留对海峡过境的管辖权。周末双方再度交火：美军轰炸伊朗霍尔木兹附近，伊朗 IRGC 向巴林和科威特美军基地发射导弹。</p>
+        <div class="why">🦞 <b>市场含义：</b>这个 MoU 从签署那天就是"脆弱停火"——用 14 条文字把根本性分歧糊弄过去，第 5 条是最先崩的。但市场反应有趣：<b>油价不涨反跌</b>，Brent 周五跌到 72 美元附近。原因：霍尔木兹实际通航量在恢复中（日均通过油轮从 2 月的 5 艘恢复到 15 艘以上），市场已经定价"打而不封"。真正的尾部风险是如果伊朗真的封锁海峡——但这会招致美军全面打击，德黑兰目前没有这个意愿。CSIS 定调："这是耐力战。"</div>
+        <div class="source">来源：<a href="https://www.aljazeera.com/news/2026/6/28/why-is-article-5-of-mou-causing-confrontations-in-the-strait-of-hormuz" target="_blank">Al Jazeera</a> · <a href="https://www.livemint.com/news/world/what-is-article-5-of-the-us-iran-interim-agreement-how-the-strait-of-hormuz-clause-triggered-fresh-us-iran-strikes-11782668939387.html" target="_blank">LiveMint</a> · <a href="https://www.csis.org/programs/latest-analysis-war-iran" target="_blank">CSIS</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">英国政局</span>
+        <h4>Starmer 辞职一周后，英国工党领袖争夺战升温——Burnham 领跑</h4>
+        <p>6/22 英国首相 Keir Starmer 宣布辞职后，工党内部党魁竞争进入白热化。前大曼彻斯特市长 Andy Burnham 是领跑者。这是英国<b>7 年内第 6 位首相</b>，政治不稳定已经从"偶发事件"变成"结构性问题"。导火索是国防大臣 Healey因不满 Starmer 在乌俄战争和伊朗战争的国防拨款立场而辞职，引发连锁反应。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>英国政局动荡的底层原因是<b>"财政赤字 + 国防开支上升 + 经济增速放缓"的三重夹击</b>。对市场来说：英镑持续承压、英国国债信用溢价上升、伦敦金融城的吸引力在下降。对亚太市场的间接影响有限，但如果 Burnham 上台走"福利扩张"路线，英国国债可能遭遇抛售——全球避险资金会流向美债和黄金。</div>
+        <div class="source">来源：<a href="https://www.cnn.com/2026/06/22/world/live-news/keir-starmer-uk-pm" target="_blank">CNN</a> · <a href="https://en.wikipedia.org/wiki/2026_Labour_Party_leadership_crisis" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">主权基金</span>
+        <h4>主权财富基金大迁移：从公开市场撤向私募 + AI 基建</h4>
+        <p>FT 6/28 报道：全球主权财富基金正大规模将资金从公开股票市场转向<b>私募信贷和 AI 基建</b>。驱动因素：① 公开市场头部集中度太高（少数几家巨头占指数权重过大）；② 国家安全敏感度上升；③ 追求更长期稳定的回报。</p>
+        <div class="why">🦞 <b>映射：</b>主权基金是市场的"聪明的长钱"。它们撤出公开市场→指数被动买入力量减弱→<b>头部 AI 股的估值支撑减弱</b>。同时，私募市场拿到更多资金→AI 基建（数据中心、电力、光缆）投资加速→利好私人 AI 基建公司（CoreWeave、Crusoe 等）。这个趋势是"公开市场 AI 泡沫 → 私募市场 AI 基建"的资金搬家。</div>
+        <div class="source">来源：<a href="https://www.ft.com/content/8ea5b49f-e115-4e18-8c14-c426fcac27ba" target="_blank">Financial Times</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>BofA 调头：Fed 今年或加息三次</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed · 利率</span>
+        <h4>BofA 预测大转弯：Fed 今年可能加息三次至 4.25%-4.5%，9 月开始</h4>
+        <p>Fortune 6/22 报道：BofA 把利率预测从"全年不变"改为<b>"9 月、10 月、12 月各加 25bp"</b>，利率升至 4.25%-4.5%。原因：① 核心通胀可能达 3.5%（同比+70bp）；② 新任 Fed 主席 Warsh 上周发表鹰派言论；③ 油价仍高于战前；④ 劳动力市场走强。FOMC 上周有<b>半数委员</b>支持加息。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>如果 BofA 预测成真，这是 2025 年底降息后的<b>彻底转向</b>。对市场的含义：① 美债收益率曲线整体上移——10 年期从 4.4% 可能冲到 4.8%+；② 成长股估值再次承压（纳指 6 月已经跌了 6%+）；③ 美元走强→新兴市场资本外流→港股/A股承压；④ 黄金承压（实际利率上行）。<b>关键时间节点是 7 月 FOMC——如果不加息但声明偏鹰，9 月加息概率就会到 70% 以上。</b></div>
+        <div class="source">来源：<a href="https://fortune.com/2026/06/22/fed-rate-hikes-outlook-sticky-inflation-kevin-warsh-job-growth-oil-prices/" target="_blank">Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国经济</span>
+        <h4>美国 Q1 GDP 终值 2.1%，通胀 + 油价 + 利率三重压力并存</h4>
+        <p>BEA 6/26 发布 Q1 GDP 第三次估值：年化增速 <b>2.1%</b>。Deloitte 周报指出：通胀将受油价和通胀预期双重影响——工人要求更高工资→企业涨价→通胀螺旋。ADM 报告显示黄金自 5 月中旬持续下行，因为美债收益率上行 + 美元走强 + Fed 鹰派重新定价。</p>
+        <div class="why">🦞 <b>读给你听：</b>2.1% 的 GDP 不弱也不强——正好是"滞胀前夜"的标准数据。如果 Fed 真的加息三次，名义 GDP 增速可能从 5%+ 降到 4%，实际增速降到 1.5%。<b>对企业盈利的含义：收入增速放缓 + 融资成本上升 = EPS 下修周期</b>。这也是为什么纳指 6 月跌了 6%——市场在抢跑 Q3 盈利下修。</div>
+        <div class="source">来源：<a href="https://www.bea.gov/" target="_blank">BEA</a> · <a href="https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html" target="_blank">Deloitte</a> · <a href="https://www.admis.com/commodities-overview-june-2026-edition/" target="_blank">ADM</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">油价</span>
+        <h4>原油悖论：美伊交火但油价反跌——Brent 72 / WTI 69</h4>
+        <p>截至 6/27 收盘：Brent 约 <b>72 美元</b>，WTI 约 <b>69 美元</b>。周内一度因伊朗攻击商船冲高，但随后因霍尔木兹实际通航恢复而回落。Invezz 技术分析：WTI 跌破 70 支撑，Brent 跌破关键斐波那契位，50/100 日均线死叉——技术面明显偏空。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是经典的"地缘风险溢价被消化"的走势。油价从 2 月开战时的 100+ 跌到 72，说明市场已经把"伊朗战争"定价为<b>"持久低烈度冲突"而非"全面封锁"</b>。但反向风险也要注意：如果 MoU 彻底崩溃→霍尔木兹真正被封→油价可能一天跳涨 20-30 美元。<b>当前油价对 Fed 来说仍然太高</b>——战前 Brent 65 左右，现在 72，差价就是通胀的"油价税"。</div>
+        <div class="source">来源：<a href="https://www.thestreet.com/economy/chevron-cfo-reveals-why-gas-prices-are-stuck" target="_blank">TheStreet</a> · <a href="https://invezz.com/au/news/2026/06/28/crude-oil-price-forecast-as-us-and-iran-intensify-attacks/" target="_blank">Invezz</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 4,027（周五 -2.26%），创业板暴跌 4.07%</h4>
+      <div class="idx">上证指数 4,027 <span class="down">▼ 2.26%</span> · 深成指 15,782 <span class="down">▼ 3.44%</span> · 创业板 <span class="down">▼ 4.07%</span></div>
+      <p>周五 A 股全线大跌，沪指收两周新低。领跌板块：新能源（北汽蓝谷 -5.37%）、保险（新华保险 -5.23%、中国太保 -5.15%）。科技股受全球 AI 回调传导承压。<b>本周一是 6 月最后交易日</b>，关注季末基金调仓效应和 4,000 点心理支撑。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>A 股这波下跌的逻辑是"三杀"——① 美股科技回调传导；② Fed 鹰派导致外资回流；③ 6/18 消费数据疲弱确认内需不足。4,000 点是心理底线，如果破了，情绪会加速恶化。但好消息是：货币政策还有空间（CPI 不高），如果 7 月政治局会议释放刺激信号，可能有一波反弹。</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 22,672（周跌 1.8%），科技指数年内跌超 20%</h4>
+      <div class="idx">恒生指数 22,672 <span class="down">▼ 1.8%（周）</span> · 恒生科技指数 年内 <span class="down">▼ 20%+</span></div>
+      <p>港股周线再收阴，AI 芯片板块领跌。昆仑芯 IPO 如果成功定价，可能给科技板块带来一波主题炒作。京东（JD.com）因 6/18 数据疲弱，美股 ADS 跌至 52 周新低 25.39 美元，港股同步承压。<b>KOSPI 周涨 5.81%（全球最强）</b>，资金在亚洲内部从港股韩股切换。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>港股现在是最尴尬的市场——外资因 Fed 鹰派撤出、南向资金因 A 股下跌也不敢加仓、科技股估值被美股 AI 回调拖累。恒指 22,000 是关键支撑，如果破了，可能看到 20,000。但<b>反向逻辑</b>：如果昆仑芯 IPO 成功（500 亿美元估值），港股科技板块可能迎来"中国 AI 芯片"主题重估，类似 2023 年 AI 行情。关键看 IPO 定价和首日表现。</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 51,876（月涨 1%），纳指月跌 6%+，风格极致分化</h4>
+      <div class="idx">道琼斯 51,876 <span class="down">▼ 0.09%（日）</span> · 标普 500 月跌 <span class="down">▼ 3%</span> · 纳斯达克 月跌 <span class="down">▼ 6%+</span></div>
+      <p>美股 6 月走势极端分化：道指逆势涨 1%（蓝筹防御受宠），纳指跌超 6%（AI 成长股回调）。Microsoft 市值稳在 2.7 万亿美元。小盘股 Russell 2000 在 2026 年表现出韧性。周末期货小幅走高：道指期货 +0.2%，标普期货 +0.4%，纳指 100 期货 +0.5%。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>这是 2024 年"大轮动"的翻版——资金从 AI 巨头流向价值股和小盘股。区别在于：这次有 Fed 加息预期加持，蓝筹的"防御属性"更有说服力。<b>但别急着抄纳指</b>：如果 BofA 的加息预测兑现（9 月开始），纳指可能还有 5-8% 下行空间。真正的抄底信号是 Fed 确认"不加了"——目前还没看到。</div>
+      <div class="source" style="margin-top:8px;">来源：<a href="https://www.bbntimes.com/global-economy/dow-jones-djia-weekly-review-industrial-average-outperforms-in-a-turbulent-week-rising-0-6-as-sector-rotation-favours-blue-chip-defensives" target="_blank">BBN Times</a> · <a href="https://www.cnbc.com/2026/06/28/stock-futures-today-live-updates.html" target="_blank">CNBC</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>618 大促疲软，AI 成唯一亮点</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">618 大促</span>
+        <h4>中国 618 电商大促 GMV 增速断崖式放缓至 0.9%，"AI 原生购物节"成唯一亮点</h4>
+        <p>CNBC/Forbes/AsiaOne 多源报道：星图数据 618 大促全网 GMV 达 <b>9340 亿元（~1380 亿美元）</b>，同比增长仅 <b>0.9%</b>，而去年的增速还有 7%。天猫仍居第一，京东第二，抖音第三。京东称下单用户数创新高但未公布总销售额。<b>AI 成为本届 618 的"唯一亮点"</b>：阿里推出集成通义千问模型的"AI 万象引擎"重塑商品匹配逻辑；京东用"京晓通"智能系统实现全渠道运营；抖音推出千川乘风、快手升级磁力金牛。</p>
+        <div class="why">🦞 <b>市场含义：</b>0.9% 的增速基本等于零增长——中国电商已经从"增长赛道"变成<b>"存量博弈赛道"</b>。对投资人的启示：① 阿里、京东、拼多多的收入增速天花板就在这里了，未来 EPS 增长只能靠降本；② AI 在电商的应用从"锦上添花"变成"核心引擎"——这意味着阿里云/京东云的 AI 服务收入会快速增长；③ 抖音电商增速放缓但对传统电商的份额侵蚀仍在继续。<b>JD.com 股价跌至 52 周新低就是市场对"电商存量时代"的投票。</b></div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/06/23/china-618-shopping-festival-sales-growth-consumer-spending-slowdown-syntun.html" target="_blank">CNBC</a> · <a href="https://www.forbes.com/sites/ronschmelzer/2026/06/25/china-wants-ai-to-make-consumers-spend-again/" target="_blank">Forbes</a> · <a href="https://www.asiaone.com/china/chinas-618-shopping-festival-sees-flat-e-commerce-sales-shoppers-remain-cautious" target="_blank">AsiaOne</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">京东</span>
+        <h4>JD.com 跌至 52 周新低 25.39 美元，6/18 数据疲弱叠加消费疲软</h4>
+        <p>京东美股 ADS 6/27 收于 <b>25.39 美元</b>，接近 52 周低点。港股同步走弱。直接原因是 618 大促销售数据低于预期——下单用户数虽创新高，但客单价持续下滑，反映消费降级趋势。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>京东是"消费晴雨表"——它的用户群以一二线城市中产为主，客单价下滑说明<b>中产阶级的消费意愿在收缩</b>。这和 618 整体 0.9% 增速、Bain-Altagamma 奢侈品报告的"企稳但无反弹"是同一根线。<b>对中国消费股的启示：</b>估值便宜≠值得买——如果没有收入增长预期，PE 可能会"价值陷阱"式下跌。</div>
+        <div class="source">来源：<a href="https://ts2.tech/en/stock-market-today-27-06-2026/" target="_blank">TS2</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>世界杯淘汰赛来了！</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">⚽ 世界杯</span>
+        <h4>2026 世界杯进入淘汰赛！加拿大爆冷南非晋级 16 强，今天巴西 vs 日本</h4>
+        <p>6/28 世界杯进入淘汰赛阶段（Round of 32）。首场比赛：<b>加拿大 1-0 爆冷南非</b>，Eustaquio 进球，加拿大首次在世界杯淘汰赛赢球！6/29 今天两场重头戏：<b>巴西 vs 日本</b>（休斯顿，凌晨 1 点）和<b>德国 vs </b>（待确认对手）。Channing Tatum 在看台上扮挪威球迷 Haaland 的视频火遍社交媒体。</p>
+        <div class="why">🦞 <b>轻松一下：</b>加拿大足球的崛起还在继续——2022 年她们女足世界杯就爆冷过，现在男足也在淘汰赛赢球了。今天巴西 vs 日本值得看：日本在小组赛表现强劲（赢过德国），如果日本晋级 8 强，亚洲足球会再次"破圈"。伊朗在小组赛被淘汰后，伊朗球员在更衣室的绝望照片在网上流传——战争阴影下的世界杯，五味杂陈。</div>
+        <div class="source">来源：<a href="https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket" target="_blank">ESPN</a> · <a href="https://sports.yahoo.com/soccer/article/2026-world-cup-results-standings-and-schedule-live-scores-group-stage-updates-and-how-to-watch-050724193.html" target="_blank">Yahoo Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">🎮 任天堂</span>
+        <h4>任天堂股价 3 个月暴跌 26%，Switch 2 后继乏力还是抄底机会？</h4>
+        <p>任天堂（TSE:7974）股价 3 个月跌 <b>26%</b>，年内跌 38%。PE 17.9 倍，高于日本娱乐业平均。市场担忧 Switch 2 销售增速放缓，以及后续游戏管线不够强。</p>
+        <div class="why">🦞 <b>花边视角：</b>任天堂的"周期性"一直是投资人的痛点——每代主机生命周期末尾都会经历"销量下滑→新机发布→再起→再落"的循环。26% 的跌幅对于一个 PE 不到 20 的公司来说有点狠了。但如果你看任天堂的 IP 价值（马里奥、塞尔达、宝可梦），其实它更像一家<b>"游戏版迪士尼"</b>——IP 才是核心资产，不是硬件。当然，这不算投资建议哈🦞。</div>
+        <div class="source">来源：<a href="https://ts2.tech/en/stock-market-today-28-06-2026/" target="_blank">TS2</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">🎬 DC</span>
+        <h4>Supergirl 开画 $40M 不敌 Toy Story 5 二周末——DC 重启再遇冷</h4>
+        <p>DC 新宇宙第二部作品 Supergirl 周末开画 <b>4000 万美元</b>，被 Toy Story 5 第二周末压制。DC 重启宇宙（Gunn 导演）首部 Superman 表现尚可，但 Supergirl 口碑两极分化。</p>
+        <div class="why">🦞 <b>轻松看：</b>DC 的重启之路比漫威的"复联周期"难多了——观众对超英片的审美疲劳是结构性的。Toy Story 5 能赢不是因为多好，是因为<b>"皮克斯品牌 + 合家欢"</b>的确定性在不确定时代更值钱。影视行业 2026 的关键词是"确定性为王"。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>SETI 搜了星际天体 3I/ATLAS 的无线电信号——什么也没找到</h4>
+        <p>ScienceDaily 6/23 报道：SETI 研究所对第三个已知星际天体 <b>3I/ATLAS</b> 进行了射电信号搜索，<b>未发现任何非人类技术信号</b>。这是人类首次对星际彗星进行系统性的外星技术搜索。3I/ATLAS 于 2025 年被发现，是继 'Oumuamua 和 Borisov 之后的第三个星际访客。</p>
+        <div class="why">🦞 <b>彩蛋：</b>好消息：没有外星人。坏消息：真的没有外星人。不过从科学角度看，这次搜索本身就是一个里程碑——我们终于有了"检查星际访客是否带技术信号"的习惯和能力。下次再来一个，还会再查。聊天可以说："宇宙还是安静的——至少暂时如此。"</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/news/top/science/" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

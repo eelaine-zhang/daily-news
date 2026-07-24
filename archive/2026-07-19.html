@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-19</title>
+<style>
+  :root {
+    --bg: #0e1117; --card: #161b22; --card-hover: #1c232c; --border: #2a313c;
+    --text: #e6edf3; --text-dim: #9198a1; --accent: #ff6b6b; --accent-soft: #ff6b6b22;
+    --hbm: #ffb454; --geo: #7dd3fc; --macro: #a5f3a5; --biz: #c084fc; --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .target { margin-top: 6px; font-size: 13px; color: var(--hbm); font-weight: 500; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0 0 8px; font-size: 13px; color: var(--text); }
+  .market-block .movers { font-size: 12px; color: var(--text-dim); }
+  .market-block .movers .up { color: #4ade80; }
+  .market-block .movers .down { color: #f87171; }
+  .chain { margin-top: 12px; padding: 10px 14px; background: #1a1f2e; border-radius: 8px; font-size: 12px; color: var(--text-dim); border-left: 2px solid var(--biz); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 19 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 周末回顾 + 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>全球芯片抛售：</b>TSMC 财报后暴跌 6%（毛利率 67.7% 未达 70% 预期），宣布追加 $1000 亿美国建厂投资；费城半导体指数进入熊市，NVDA -2.21% 差点被 Apple 超越市值第一——AI 芯片叙事从"增长无敌"切换到"capex 焦虑"。</li>
+      <li><b>美伊战争第七夜：</b>美军连续 7 晚空袭伊朗，伊朗反击打击科威特发电厂等海湾基础设施，2 名美军在约旦阵亡；Brent 原油 +4% 至 ~$88/桶，霍尔木兹海峡通行量仅战前 50%。</li>
+      <li><b>Netflix 财报暴雷：</b>Q2 营收微 miss + Q3 指引低于预期，盘后暴跌 8%+；分析师集体下调目标价，流媒体增长放缓叙事卷土重来。</li>
+    </ul>
+  </div>
+
+  <!-- AI & 芯片 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>全球芯片抛售的一周</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">TSMC</span>
+        <h4>TSMC 财报后暴跌 6%——Q2 毛利率 67.7% 未达 70% 机构预期，宣布追加 $1000 亿美国建厂</h4>
+        <p>TSMC 7/16 公布 Q2 业绩：收入强劲、利润创新高，但毛利率 67.7% 低于部分机构期望的 70%，叠加宣布追加 $1000 亿美国亚利桑那建厂投资（总投资从 $120 亿→$1,650 亿，史上最大外国对美绿地投资），市场担忧利润率被美国高成本建厂稀释。7/17 台股 TSMC 单日暴跌 6%，市值蒸发近 4 万亿新台币（~$1,236 亿），ADR 在美股也跌近 3%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 之前学过的"CoWoS 护城河"叙事的第一次现实检验——TSMC 技术领先没错，但地缘政治正迫使其把最高成本的产能搬到美国，毛利率从"稳 70%"变成"可能 67-68%"。市场定价的不是 TSMC 的技术实力下降，而是"利润弹性被政治绑架"。对产业链：TSMC 美国建厂利好美国设备供应商（Applied Materials、Lam Research），但台湾系供应链（封装/测试）面临订单分流压力。</div>
+        <div class="target">📌 关联标的：TSM（TSMC ADR）— 短期承压/长期看修复 · 0050（台湾50 ETF）— 受损 · AMAT（应用材料）— 受益</div>
+        <div class="source">来源：<a href="https://finance.biggo.com/news/e26f86de-eb10-4ee1-96ce-c7069014b286" target="_blank">BigGo Finance</a> · <a href="https://www.theglobeandmail.com/investing/markets/stocks/TSM-N/pressreleases/3348712/" target="_blank">Globe and Mail</a> · <a href="https://www.tsmc.com/static/abouttsmcaz/index.htm" target="_blank">TSMC Arizona</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">半导体熊市</span>
+        <h4>费城半导体指数进入熊市——NVDA -2.21% 差点被 Apple 超越市值第一，Intel -13%，全球芯片股全面回调</h4>
+        <p>本周全球半导体板块遭遇大规模抛售：NVDA 周跌近 4%，Intel 暴跌 13%，AMD -4.9%，应用材料 -6.5%，Micron/SanDisk -1~4%。抛售从华尔街蔓延至首尔（KOSPI -5%）和台北（台股 -6.5%）。NVDA 盘中一度被 Apple 超越市值，最终以 $4.91 万亿勉强保住全球第一。日本日经 -4%，台湾加权 -6.5%。</p>
+        <div class="why">🦞 <b>市场含义：</b>这不是单一公司的问题，是整个 AI 芯片叙事从"增长无敌"切换到"capex 焦虑"——市场开始质疑：超大规模厂商砸进去的万亿 capex 什么时候能看到回报？TSMC 毛利率低于预期是导火索，Netflix 弱指引是加速器（广告收入放缓=AI 推荐的变现不及预期）。短期看，费城半导体指数已从高点回撤 >20% 进入技术性熊市，但这也是"恐慌中贪婪"的信号——NVDA 估值回到更合理区间。</div>
+        <div class="target">📌 关联标的：SMH（半导体ETF）— 熊市中定投标的 · NVDA — 短期承压 · INTC — 受损最重 · 512760（半导体ETF A股）— 跟跌</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/news/this-weeks-ai-winners-and-losers-131654035.html" target="_blank">Yahoo Finance</a> · <a href="https://finance.biggo.com/news/e21634db-a96d-4fd2-8b5a-7951ba18cfdf" target="_blank">BigGo Finance</a> · <a href="https://www.semiconreport.org/en/articles/ai-trade-wobble-chip-stock-selloff-semiconductor-industry" target="_blank">SemiconReport</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Netflix</span>
+        <h4>Netflix Q2 营收微 miss + Q3 指引低于预期，盘后暴跌 8%+——流媒体增长放缓叙事回归</h4>
+        <p>Netflix 7/17 发布 Q2 财报：EPS 勉强 beat 1 cent，但营收略低于预期；Q3 指引 EPS $0.82 vs 预期 $0.84，营收 $128.6 亿 vs 预期 $130 亿。更糟的是，Netflix 宣布将"What We Watched"报告从季度改为年度——减少透明度引发分析师不满。多家机构下调目标价。NFLX 是 2026 年表现最弱的大型科技股之一。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Netflix 是 AI 叙事的"反面参照"——它用 AI 做推荐、做内容采购，但变现路径不如云厂商直接。Q3 指引弱=订阅增长见顶+广告变现不及预期。对 lainy：这告诉你 AI 变现有三档——①最直接卖算力（NVDA/TSMC）；②用 AI 提效省成本（Meta/Google）；③用 AI 提升用户体验但难直接收费（Netflix/Spotify）。第三档的 AI ROI 最难量化，市场最先抛售。</div>
+        <div class="target">📌 关联标的：NFLX — 受损 · DIS（迪士尼）— 同业压力 · 广告板块（WPP/OMC）— 间接承压</div>
+        <div class="source">来源：<a href="https://stocktwits.com/news-articles/markets/equity/nflx-stock-sinks-over-8-percent-after-hours-q2-revenue-miss-and-q3-weak-guidance-weigh-on-netflix-shares/cZZEYByR7tG" target="_blank">Stocktwits</a> · <a href="https://www.tipranks.com/news/weekend-updates/netflix-stock-plunges-as-analysts-slash-price-targets" target="_blank">TipRanks</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">长鑫存储</span>
+        <h4>长鑫存储拟科创板 IPO 募资 579 亿元（~$86 亿）——中国最大存储芯片厂商冲刺上市</h4>
+        <p>长鑫存储科技（ChangXin Memory Technologies）正寻求在上海科创板上市，募资约 579 亿元人民币（~$86 亿），有望成为今年中国最大 IPO。长鑫是中国最大的 DRAM 存储芯片制造商，在国产替代浪潮中承接了大量原由三星/SK Hynix 占据的市场。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是"国产替代"叙事的又一个里程碑式 IPO。长鑫的 DRAM 产能虽远不及三星/Hynix，但在出口管制背景下，国内手机/服务器厂商有强烈意愿采购国产内存。对 lainy：之前学的 HBM 双寡头格局——现在中国正在建"第三极"。短期看，长鑫上市会吸走市场资金（580 亿不是小数目），对已上市半导体股形成资金分流压力。</div>
+        <div class="target">📌 关联标的：长鑫存储（待上市）— 关注 · 603986 兆易创新 — 同业/竞争 · 512760 半导体ETF — 资金分流压力</div>
+        <div class="source">来源：<a href="https://ts2.tech/en/stock-market-today-17-07-2026/" target="_blank">TS2 Tech</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [硅片/光刻胶: 信越/JSR] → 中游 [晶圆代工: TSMC/三星] → 下游 [AI 加速器: NVDA/AMD] — 当前受损环节：中游代工（毛利率被美国建厂稀释）+ 下游加速器（capex 焦虑导致估值回调）</div>
+  </section>
+
+  <!-- 国际局势 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>美伊战争第七夜，冲突外溢升级</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊战争</span>
+        <h4>美军连续 7 晚空袭伊朗，伊朗反击打击海湾民用基础设施——2 名美军在约旦阵亡</h4>
+        <p>美伊冲突急剧升级：美军连续第 7 夜空袭伊朗军事目标，首次打击发电厂和桥梁等民用基础设施。伊朗对部署美军的海湾国家发动报复性袭击，科威特一座发电+海水淡化厂被击中引发火灾，大量发电机组停运——沙漠城市基本生存设施被打。同时，伊朗对约旦美军基地发动攻击，2 名美军阵亡、1 人失踪。6 月 17 日签订的 60 天停火备忘录已名存实亡——Trump 宣布"停火结束"。</p>
+        <div class="why">🦞 <b>市场含义：</b>冲突已从"军事对军事"升级到"打民用基础设施"——这是战争烈度上台阶的标志。科威特发电厂被袭尤其关键：海湾产油国一旦断电=石油出口中断。Brent +4% 至 $88 不是恐慌定价，而是"霍尔木兹半封锁"的现实反映——通行量仅战前 50%。如果伊朗进一步封锁海峡，Brent 可能快速突破 $100。对资产配置：能源股/油气基金是直接对冲，A 股军工（中航沈飞、中国船舶）间接受益。</div>
+        <div class="target">📌 关联标的：Brent 原油期货 — 受益 · XLE（能源ETF）— 受益 · 600150 中国船舶 — 间接受益 · XOM/CVX — 受益</div>
+        <div class="source">来源：<a href="https://www.sinchew.com.my/news/20260718/international/7680040" target="_blank">星洲日报</a> · <a href="https://www.nytimes.com/live/2026/07/18/world/iran-war-strikes-trump-hormuz" target="_blank">NYT Live</a> · <a href="https://www.foxnews.com/live-news/iran-war-trump-israel-hormuz-oil-july-17-2026" target="_blank">Fox News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>霍尔木兹海峡油轮爆炸+通行量仅战前 50%——全球 20% 原油运输要道命悬一线</h4>
+        <p>伊朗媒体报道霍尔木兹海峡两艘油轮发生爆炸。自 3 月以来，海峡通行油轮数量已降至战前约 50% 水平。美国警告可能"切断伊朗所有发电来源"作为施压手段。ProFinance 指出：如果美伊秋季前达不成协议，全球能源市场将陷入危机。4 月 Brent 曾飙至 $120+，当前 $88 仍低于峰值但持续上行。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>霍尔木兹每天有 ~2,000 万桶原油经过（全球需求 20%）。现在只过了一半——意味着每天有 1,000 万桶"消失"了。这个缺口 Saudi/UAE 补不了。如果完全封锁，Brent 可能快速上 $120-150。对 lainy：油价是"通胀之母"——高油价→Fed 无法降息→股市杀估值→AI capex 融资成本上升，形成恶性循环。</div>
+        <div class="target">📌 关联标的：Brent 原油 — 受益 · CL（WTI 原油）— 受益 · 600988 宝丰能源 — 受益 · 601857 中国石油 — 受益</div>
+        <div class="source">来源：<a href="https://www.ajudaily.com/view/20260718111270957" target="_blank">亚洲日报</a> · <a href="https://www.profinance.ru/news/2026/07/17/cjrl-mirovoj-energorynok-osenyu-okunetsya-v-krizis.html" target="_blank">ProFinance</a> · <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">Wikipedia</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [伊朗原油出口] → 中游 [霍尔木兹海峡运输] → 下游 [全球炼化/汽油零售] — 当前受损环节：中游运输（通行量 50%）→ 下游汽油价格上行压力</div>
+  </section>
+
+  <!-- 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>消费信心反弹 vs 地缘风险</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">消费信心</span>
+        <h4>美国 7 月消费者信心指数升至 54.4 创 5 个月新高——汽油价格回落驱动，但可能不持久</h4>
+        <p>密歇根大学 7 月消费者信心初值 54.4，为 2 月以来最高，受益于汽油价格从高位回落。但分析人士警告：如果美伊冲突推高油价、pump prices 重回 $4/加仑，信心改善可能逆转。CPI 方面，6 月数据低于预期（同比 3.5% vs 预期 3.8%，环比 -0.4% 创六年最大跌幅），但联储官员仍称通胀"无疑过高"约 4%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>消费者信心 54.4 从绝对值看仍远低于历史均值（~70-80），只是从极低位置反弹。对 lainy：信心回升 → 消费支出可能回暖 → Q3 GDP 有支撑。但如果油价因美伊冲突再次飙升，这个"信心修复"会被打回原形。Fed 9 月降息概率取决于通胀，而通胀取决于油价——地缘和宏观在此刻高度耦合。</div>
+        <div class="target">📌 关联标的：XLY（可选消费ETF）— 受益于信心回升 · XLE（能源ETF）— 对冲油价风险 · TLT（长债ETF）— 降息预期受益</div>
+        <div class="source">来源：<a href="https://seekingalpha.com/article/4923167-consumer-sentiment-hits-highest-level-since-february-on-easing-gas-prices" target="_blank">Seeking Alpha</a> · <a href="https://www.usnn.news/us-consumer-sentiment-rebounds-to-5-month-high-university-of-michigan/" target="_blank">USNN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>Brent $88 +4% · COMEX 黄金 $4,019 · VIX +12% 至 18.77——地缘溢价全面回归</h4>
+        <p>7/18 收盘：Brent 原油 $88.10（+4%），WTI $82.49，均为 6 月初以来最高。COMEX 黄金 $4,018.80（+0.67%）维持高位。VIX 恐慌指数 +12.19% 至 18.77，脱离近期低位。同时本周 A 股 ETF 净流入 2,113 亿元创纪录——"你恐慌我贪婪"在中国市场上演。</p>
+        <div class="why">🦞 <b>市场含义：</b>三件事同时发生——油价涨（地缘风险）、黄金涨（避险需求）、VIX 涨（波动率回归）。这是典型的"风险偏好下降"组合。但 A 股 2,113 亿 ETF 净流入说明中国投资者在"抄底"——科创芯片/通信 ETF 被资金看好。这和美股的恐慌形成对照：中国市场已经在定价"政策底"，而美股在定价"估值顶"。</div>
+        <div class="target">📌 关联标的：COMEX 黄金 — 避险受益 · Brent 原油 — 地缘溢价 · 510300 沪深300 ETF — 抄底资金涌入 · VIX 期货 — 波动率交易</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/jjxw/2026-07-18/doc-iniifamy7130021.shtml" target="_blank">新浪财经</a> · <a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a> · <a href="https://www.indexbox.io/blog/oil-prices-surge-over-4-after-us-strikes-on-iran-and-strait-of-hormuz-closure/" target="_blank">IndexBox</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [原油/黄金开采] → 中游 [运输/精炼] → 下游 [汽油零售/黄金饰品/ETF 资金流] — 当前受益环节：上游能源+避险资产（地缘溢价持续）</div>
+  </section>
+
+  <!-- 股市行情 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股 三市场周末快照</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 周线暴跌：沪指 -5.81% 报 3,764，深成 -8.9% 报 13,707；但 2,113 亿 ETF 资金抄底</h4>
+      <p>本周 A 股大幅回调。沪指收 3,764.15（周跌 5.81%），深成 13,706.88（周跌 8.9%）。科技龙头回调最猛：兆易创新较高点回撤 ~45%，北方华创 -30%，中际旭创 -31%，寒武纪、中微公司等 AI 产业链龙头纷纷进入调整区间。但资金蜂拥抄底——沪深两市股票型+跨境型 ETF 合计净流入 2,113.21 亿元，其中科创芯片、通信 ETF 被资金看好。本周两市成交 13.15 万亿元。</p>
+      <p><b>重点异动个股：</b></p>
+      <div class="movers">
+        • 603986 兆易创新 — 较 7 月初高点回撤 ~45%，AI 算力+国产存储风口热度退潮<span class="down"> 🔻 大跌</span><br>
+        • 002371 北方华创 — 从高点跌去 30%，半导体设备估值过高引发获利了结<span class="down"> 🔻</span><br>
+        • 300308 中际旭创 — 高点回落 31%，光模块板块遭 AI capex 焦虑拖累<span class="down"> 🔻</span><br>
+        • 688256 寒武纪 — AI 芯片龙头进入深调，高位追涨资金措手不及<span class="down"> 🔻</span><br>
+        <b>ETF 资金流向：</b>科创芯片 ETF + 通信 ETF 净流入领先；卫星/半导体设备 ETF 被抛售
+      </div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 ~24,514（-2%），受全球芯片抛售拖累；Eoptolink 拟赴港 IPO 募 $40-50 亿</h4>
+      <p>恒生指数本周跌约 2% 至 24,514 点附近。科技股跟随全球半导体抛售走低。但 IPO 市场仍有热度：深市上市公司 Eoptolink（光通信收发器制造商，AI 数据中心受益标的）据报已秘密提交香港 IPO 申请，拟募 $40-50 亿美元。此外先正达（Syngenta，中化集团控股）表示将在条件合适时重返公开市场。</p>
+      <p><b>重点异动：</b></p>
+      <div class="movers">
+        • 01810 小米 — 跟随科技板块回调<span class="down"> 🔻</span><br>
+        • 00700 腾讯 — 半导体/科技板块联动下跌<span class="down"> 🔻</span><br>
+        • Eoptolink（拟上市）— AI 数据中心光模块标的，港交所或迎来大型科技 IPO<br>
+        <b>南向资金：</b>本周持续净买入，重点流向高股息+医药板块
+      </div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 -0.77% 报 52,146；纳指 -1.40% 报 25,520；标普 -1.01% 报 7,458——三大指数本周均跌</h4>
+      <p>7/17 收盘（周五）：道指 -406.55（-0.77%）报 52,146.42；纳指 -361.70（-1.40%）报 25,520.24；标普 -76.08（-1.01%）报 7,457.69。VIX +12.19% 至 18.77。本周三大股指均录得跌幅。半导体板块领跌，Netflix 弱指引拖累科技股。能源股逆势上涨（油价 +4%）。道指最大成份股跌幅：Coca-Cola -4.04%，IBM -3.14%，Goldman Sachs -2.67%。涨幅领先：Travelers +9.32%，Cisco +2.14%，Chevron +1.91%。</p>
+      <p><b>重点异动个股：</b></p>
+      <div class="movers">
+        • NFLX Netflix — 盘后暴跌 8%+，Q3 指引低于预期<span class="down"> 🔻 大跌</span><br>
+        • NVDA — -2.21%，市值 $4.91 万亿险守全球第一（盘中被 Apple 超越）<span class="down"> 🔻</span><br>
+        • INTC Intel — 周跌 13%，费城半导体熊市中受伤最重<span class="down"> 🔻 大跌</span><br>
+        • CVX Chevron — +1.91%，油价上涨受益<span class="up"> 🔺</span><br>
+        • TRV Travelers — +9.32%，保险板块受益于地缘风险升温<span class="up"> 🔺</span><br>
+        <b>板块资金流向：</b>科技/半导体 大幅净流出 → 能源/保险/公用事业 净流入
+      </div>
+    </div>
+  </section>
+
+  <!-- 消费 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>中国消费"冰火两重天"</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">中国消费</span>
+        <h4>中国上半年消费数据冰点——零售增速仅 1.3%，高端失速 vs "穷鬼套餐"爆火</h4>
+        <p>2026 年上半年：GDP 增长 4.7%，社会消费品零售总额同比仅 +1.3%（5 月甚至 -0.6%，6 月 +1.0%）。消费对 GDP 贡献率从 52% 降至 44.7%。结构分化触目：品牌专卖店零售额同比 -8.7%，百货 -2.1%；便利店 +6.6%，超市 +3.8%。"精致退场，穷鬼套餐爆火"成为普遍现象——中等收入群体"财富幻觉"破灭后退守刚需。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是"消费降级"那么简单——这是中等收入群体的"资产负债表收缩"。房产不再增值、年终奖缩水、就业压力增大→消费从"体验型"退回"功能型"。对 lainy：金融视角看，白酒（高端）、奢侈品、百货商场是受损方；性价比零售（蜜雪冰城、瑞幸、零食很忙）、便利店是受益方。投资逻辑从"消费升级"切换到"极致性价比"。</div>
+        <div class="target">📌 关联标的：600519 贵州茅台 — 高端承压 · 002714 牧原股份 — 刚需受益 · 蜜雪冰城（待上市）— 性价比受益 · 601888 中国中免 — 免税高端受损</div>
+        <div class="source">来源：<a href="https://www.epochtimes.com/gb/26/7/17/n14811698.htm" target="_blank">大纪元</a> · <a href="https://news.china.com.cn/2026-07/18/content_118606189.shtml" target="_blank">中国网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">暑期消费</span>
+        <h4>中国"暑期消费"+"夜经济"场景上新——文化+餐饮+夜市多元业态释放活力</h4>
+        <p>各地政府和商家大力打造暑期消费场景：四川泸县推出"宋宴"体验项目（宋代石刻博物馆+宋代美食+民俗体验），山东深挖夜间消费潜力（露天音乐节、特色夜市、非遗市集），品牌旗舰店从单一卖场转型为"城市休闲第三空间"。官方媒体定调"夏日经济活力持续释放"。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是政策端在努力——用"场景创新"而非"直接发钱"来刺激消费。对 lainy：文旅+餐饮融合是 2026 年消费投资的少数亮点之一，但要注意这更多是"量"的恢复（人次增长）而非"价"的提升（客单价仍在下降）。真正受益的是能做"极致性价比+文化体验"的品牌。</div>
+        <div class="target">📌 关联标的：600059 古越龙山 — 文旅受益 · 601888 中国中免 — 暑期出行受益但弹性有限</div>
+        <div class="source">来源：<a href="http://news.china.com.cn/2026-07/18/content_118606189.shtml" target="_blank">中国网</a> · <a href="https://news.dayoo.com/china/202607/18/139997_54981200.htm" target="_blank">大洋网</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [品牌方/供应商] → 中游 [百货/商超/便利店/餐饮] → 下游 [消费者] — 当前受益环节：极致性价比零售（蜜雪冰城/瑞幸/便利店）+ 文旅体验场景</div>
+  </section>
+
+  <!-- 娱乐花边 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>周末轻松一下</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">NBA</span>
+        <h4>NBA 夏季联赛进入半决赛——Clippers 创纪录 128 分击败 Timberwolves，7/18-19 决出冠军</h4>
+        <p>NBA Summer League Las Vegas 7/9-19 进行中，7/18 安排了 7 场比赛包括两场半决赛。Clippers 以 128-120 击败 Timberwolves，创下夏季联赛单场得分纪录。夏季联赛虽是表演赛，但新秀表现直接影响下赛季轮换预期——是球探和管理层评估年轻球员的关键窗口。</p>
+        <div class="why">🦞 <b>轻松看：</b>夏季联赛就是 NBA 的" preseason 测试赛"——胜负不重要，但新秀是否 ready 很重要。lainy 如果关注 NBA，可以留意哪些二轮签/落选秀在 Vegas 打出名堂——这些故事总是最励志的。</div>
+        <div class="source">来源：<a href="https://sports.yahoo.com/nba/article/nba-summer-league-2026-daily-schedule-scores-standings-format-how-to-watch-153417060.html" target="_blank">Yahoo Sports</a> · <a href="https://en.wikipedia.org/wiki/2026_NBA_Summer_League" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">综艺</span>
+        <h4>《说唱巅峰对决 2026》爱奇艺热播——华语说唱顶级竞技盛宴再度启航</h4>
+        <p>爱奇艺《说唱巅峰对决 2026》正在热播，延续现象级 IP 影响力，赛制与舞台呈现全面升级。节目定位为"最纯粹、多元的 Hip-hop 文化内核"——不仅是技术较量，更强调"灵魂的共振"。目标是让说唱成为年轻一代表达态度、记录时代的文化载体。</p>
+        <div class="why">🦞 <b>轻松看：</b>说唱综艺已经从"地下文化"变成"主流娱乐"——这本身就是一个消费趋势指标。年轻人在看什么、听什么=品牌赞助在哪里投。lainy 周末追剧的话可以看看放松一下。</div>
+        <div class="source">来源：<a href="https://www.iqiyi.com/a_12aqygzz3i1.html" target="_blank">爱奇艺</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">天文</span>
+        <h4>英仙座流星雨 7/17 正式开启！2026 年峰值撞上 8/12 全日食——天文爱好者双重盛宴</h4>
+        <p>2026 年英仙座流星雨 7 月 17 日开始活跃，峰值预计在 8 月 12 日——恰好同天将发生全日食。NASA 表示这将是"天象奇观的罕见叠加"。同时还有另外两个流星雨同期活跃，使"流星"数量更加可观。Space.com 称这将是"全年最佳观星窗口"。</p>
+        <div class="why">🦞 <b>轻松看：</b>lainy 如果周末想出去走走，抬头看看星星也挺好——7 月底到 8 月中是全年最佳观星期。全日食+流星雨同天更是难得。不过香港光污染严重，可能得去郊区或离岛才看得到。</div>
+        <div class="source">来源：<a href="https://www.space.com/" target="_blank">Space.com</a> · <a href="https://www.space.com/news" target="_blank">Space.com News</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 科技花边 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>一条有趣的发现</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">天文学</span>
+        <h4>哈勃望远镜发现 4 颗"藏在眼皮底下"的白矮星——躲在红矮星伴星旁边多年</h4>
+        <p>天文学家利用哈勃望远镜的紫外波段观测，在"近邻"恒星系统中发现了 4 颗白矮星——它们一直隐藏在更亮的红矮星伴星旁边，光学望远镜无法分辨。这是首次利用 UV 波段成功"分离"这类双星系统。同时，JWST 也在一个被反复研究的行星系统中发现了一颗新的巨型系外行星——连最被仔细审视的系统都还有"藏"着的行星。</p>
+        <div class="why">🦞 <b>为什么有趣：</b>这告诉你——即使在我们"最了解"的宇宙角落，还有东西在藏着。科学的本质就是"看得更清楚=发现更多未知"。对 lainy：哈勃和 JWST 就是人类最贵的"显微镜"——NASA 花 $100 亿造 JWST 看星星，和 NVDA 花 $1000 亿建 AI 超算，本质上都是"把看不见的看见"。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/news/" target="_blank">ScienceDaily</a> · <a href="https://phys.org/space-news/" target="_blank">Phys.org</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师 · 每日不错过新闻 · 2026-07-19<br>
+    <span class="footer-note">数据截至 2026-07-18 收盘/最新报道 · 周末特刊：本周回顾 + 周日前瞻 · 仅供 lainy 学习参考，不构成投资建议</span>
+  </footer>
+</div>
+</body>
+</html>

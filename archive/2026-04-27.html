@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-04-27</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --stock: #fbbf24;
+    --biz: #c084fc;
+    --consume: #f472b6;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .market-grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 720px) { .market-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--stock);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .market-card h5 { margin: 0 0 6px; font-size: 15px; }
+  .market-card .idx { color: var(--stock); font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+  .market-card p { font-size: 13px; margin: 0; color: var(--text-dim); line-height: 1.55; }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.stock { background: #fbbf2422; color: var(--stock); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.consume { background: #f472b622; color: var(--consume); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 4 月 27 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报（v2 扩版首发：加了股市 / 消费 / 娱乐）</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>市场：</b>上周五美股 S&amp;P 500、纳指双双创收盘新高，英伟达重返 5 万亿美元市值，今日 A 股三大指数盘中震荡走弱（北证 50 一度跌 2%+），港股恒科涨超 1%。</li>
+      <li><b>AI 硬件：</b>英伟达一边公开反对"10 万亿参数模型需要顶级算力"的说法（护盘利润率逻辑），一边把 CUDA Tile 抛出来防守国产 TileLang；国内液冷龙头英维克净利暴跌 82%，反而是"大陆液冷进入英伟达供应链"的大机会。</li>
+      <li><b>地缘：</b>伊朗通过中间人给美国递了"三阶段谈判方案"，油价压力暂缓；本周市场最重的是周五的美国 3 月核心 PCE——决定美联储今年还剩几次降息。</li>
+    </ul>
+  </div>
+
+  <!-- 1. AI & 芯片 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">英伟达</span>
+        <h4>黄仁勋罕见失态否认"10 万亿参数需要顶级算力"，一边亮出 CUDA Tile</h4>
+        <p>采访中面对"像 Mythos 这种 10 万亿参数级模型必须跑在顶级 GPU 上"的说法，黄仁勋坚决反驳，强调算法优化同样重要。几乎同时，英伟达推出 <b>CUDA Tile</b>——对标国产 TileLang 的新编程层，2025 年 1 月 TileLang 才刚上线，一年不到老黄就把正规军端出来了。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这两件事是同一回事——<b>护利润率</b>。黄仁勋不敢承认"顶级模型一定要顶级芯片"，否则会触发美国政府对华 GPU 出口再收紧，砍掉英伟达在中国的营收尾巴；但同时国内 TileLang 这类软件栈一旦普及，会让英伟达 GPU "好用 → 好赚"的软件护城河松动，所以 CUDA Tile 必须快速推出。简单说：老黄在两条战线上同时防御——政治端和技术端。对 A 股映射：国产算力、国产编译器（寒武纪、海光、燧原生态）反而吃到反向红利。</div>
+        <div class="source">来源：<a href="https://www.bilibili.com/video/BV1D9d9B3Exr/" target="_blank">业内深度视频 · bilibili</a> · <a href="https://www.bilibili.com/video/BV1fdFVzHEm3/" target="_blank">CUDA Tile 解读 · X.PIN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">液冷</span>
+        <h4>英维克一季度净利暴跌 82%，液冷龙头市值蒸发 250 亿</h4>
+        <p>国内液冷龙头英维克 Q1 净利润同比 <b>-82%</b>，股价应声大跌。但产业逻辑反而更有意思：英伟达给出新的液冷供应窗口，让大陆液冷企业有机会直接进英伟达供应链；谷歌 TPU 液冷已经采取"直采"模式，跳过 ODM 中间环节。Grand View Research 测算：全球数据中心液冷市场规模 2025 年 67 亿美元 → 2030 年 178 亿美元（CAGR 21.6%），国海证券更激进：2026 年就能到 165 亿美元，2025-2026 增速约 <b>59%</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是典型的"短期业绩 vs 长期 TAM"背离。英维克 Q1 暴跌，反映国内数据中心建设节奏（去年抢建透支了今年 Q1 订单）；但供应链入口同时打开——一旦进了英伟达的 AVL (Approved Vendor List)，未来 3-5 年订单可见度会重估。金融视角：这类公司要看的不是 Q1 EPS，而是<b>"海外客户认证进度 + 新一代液冷（浸没式、CDU 冷板）的产品线成熟度"</b>。板块里要关注的是进入海外供应链成功的那几家，不是全部。</div>
+        <div class="source">来源：<a href="https://www.huxiu.com/article/4853876.html" target="_blank">虎嗅网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">DGX Spark</span>
+        <h4>英伟达 4 万元桌面 AI 服务器 DGX Spark 拆解：GB10 + 海力士 LPDDR5X</h4>
+        <p>DGX Spark 内部搭载英伟达 GB10 超级芯片、8 颗 <b>SK 海力士 LPDDR5X</b> 内存、ConnectX-7 网卡，4TB 版本预装三星 PM9E1 固态硬盘，属于英伟达"下沉到桌面"的产品线。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>英伟达正在把推理能力从"数据中心"打包下放到"企业级桌面"——AI 硬件的使用场景在向 Edge 延伸。受益链条：海力士 LPDDR5X（内存 ASP 上移）、三星存储、ConnectX 网卡（迈络思体系）、万国半导体、新唐 TPM。对金融人关注的点：AI 硬件 BOM 表里，<b>内存占比越来越高</b>——这一波 HBM+LPDDR5X 两个内存产品的毛利都在扩张，DRAM 三巨头（海力士、三星、美光）的周期性被削弱。</div>
+        <div class="source">来源：<a href="https://www.bilibili.com/video/BV1p5oYB3EbA/" target="_blank">DGX Spark 拆解 · bilibili</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. 国际局势 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>地缘 → 大宗 → 市场</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊</span>
+        <h4>伊朗通过中间人给美国递"三阶段谈判方案"，霍尔木兹警报暂缓</h4>
+        <p>央视新闻 27 日消息源：伊朗已通过中间人向美方传达了"三阶段谈判方案"，表示如果美国同意该方案，谈判即可重启。同时伊朗议长警告：特朗普若要封锁霍尔木兹海峡，可能导致停火协议破裂。美国一边延长对俄罗斯已装船原油的销售制裁豁免一个月。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是自 4 月初美以伊冲突以来第一次出现"实质性谈判方案"，对风险资产是利好——上周五美股反弹、油价回落就是这个预期的抢跑。但真实博弈没那么快：<b>霍尔木兹海峡 ≈ 全球 20% 原油运输 + 25% LNG 运输的咽喉</b>，只要还挂着"封锁威胁"这根线，Brent 原油就难回 80 美元以下，美联储降息空间就被卡住。市场短期乐观、中期仍夹在能源通胀阴影里。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/KRH42N0M0534A4SC.html" target="_blank">网易新闻</a> · <a href="https://www.hk01.com/即時國際/60340610/" target="_blank">HK01</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">中东供应链</span>
+        <h4>中国对沙特"绿化沙漠"输出技术，中东基建合作层级上移</h4>
+        <p>人民网报道：中国技术和经验支持沙特"种植 100 亿棵树"计划，从适应性植物种植、退化土地恢复到生物多样性保护全链条介入。沙特是受荒漠化影响最严重的国家之一，国家级项目。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>新闻看起来是"绿化花边"，但其实是<b>中沙合作从能源 → 基建 → 环境治理的层级跃迁</b>——这类项目一旦签下去就是 10 年+ 订单，对中国工程基建、节水灌溉、光伏一体化沙漠治理（光伏+治沙）等板块长期利好。映射到 A 股：一带一路、沙特相关基建股（中材国际、北方国际这类）值得放在关注池。</div>
+        <div class="source">来源：<a href="https://world.people.com.cn/" target="_blank">人民网国际</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>本周最重要的一份数据</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>本周核心 PCE 压轴，经济学家普遍下调今年降息预期至"仅 1 次"</h4>
+        <p>本周美国公布一季度 GDP 增速 + 3 月核心 PCE 价格指数（美联储最关注的通胀指标）。受伊朗局势推高能源价格影响，经济学家普遍<b>上调 2026 年通胀预期</b>，预计核心 PCE 全年维持 3% 以上；对应把美联储 2026 年降息次数从多次下调至 <b>仅一次</b>，时点也往后推。新美联储主席沃什曾提到希望采用"切尾通胀率"替代传统核心 PCE，如果成真可能让美联储反而<b>提前降息</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是今年最核心的宏观变量之一：降息节奏 = 成长股 PE 估值的贴现率。市场现在夹在"油价推高通胀（鹰派）"vs"新主席换通胀口径（鸽派）"之间拉扯，<b>周五 PCE 的读数会决定 5 月 FOMC 的调性</b>。对你持仓逻辑的启示：AI 成长股近期走强，其实 leaning on 的是"新主席沃什鸽派"这条线，一旦 PCE 超预期热（&gt;3.2%），可能出现一次快速 derisk。</div>
+        <div class="source">来源：<a href="https://www.stcn.com/article/detail/3818843.html" target="_blank">证券时报</a> · <a href="https://finance.sina.com.cn/wm/2026-04-23/doc-inhvpcuy3668146.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">国内</span>
+        <h4>Q1 电力市场交易电量同比 +25.6%，实体活跃度 leading indicator</h4>
+        <p>今日《人民日报》头版：2026 年一季度电力市场交易电量 <b>同比增长 25.6%</b>。电力是实体经济的"血压计"，这个数字显著高于 GDP 增速。同时 360 集团 AI 驱动"漏洞挖掘智能体"已发现近 1000 个漏洞，AI 应用侧国产替代叙事继续推进。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>25.6% 的电量增速里，很大一块来自 AI 数据中心 + 新能源车 + 先进制造。金融视角：<b>电力消费才是 AI Capex 最真实的落点</b>——模型训练就是电转算力，电力高增说明国内数据中心建设有真实支撑，这会反哺给电力设备、液冷、IDC、UPS 板块业绩兑现。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/headline/2026-04-27/doc-inhvwwmp2484764.shtml" target="_blank">新浪财经 · 四大证券报摘要</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. 股市行情（新板块） -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 三大市场</small></h2>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <h5>🇨🇳 A 股</h5>
+        <div class="idx">三大指数盘中震荡 · 北证 50 一度 -2.21%</div>
+        <p>今日 A 股三大指数震荡走弱，<b>北证 50 跌幅一度超 2%</b>。板块上：<b>燃气、油气开采与服务、电力、煤炭开采加工、算力租赁</b>领涨；<b>能源金属、贵金属、小金属、化学纤维</b>领跌。个股异动：众合科技因"低轨卫星 / 合成生物 / 光芯片"概念连续三日涨停被交易所追问后澄清"相关业务营收均不足 1%"，预告 2025 全年亏损 4000-6000 万。</p>
+      </div>
+      <div class="market-card">
+        <h5>🇭🇰 港股</h5>
+        <div class="idx">恒指早盘 26,016 +0.15% · 恒科 +1.31%</div>
+        <p>港股恒生指数早盘窄幅上涨，<b>恒生科技指数涨 1.31%</b>，成交 1346 亿港元。芯片股集体走高：天数智芯 <b>+6.78%</b>、澜起科技 <b>+7.55%</b>、壁仞科技 <b>+3.24%</b>、爱芯元智 <b>+11%</b>、兆易创新 <b>+9%</b>、上海复旦 <b>+5%</b>。有色金属板块同步走强，天齐锂业 +5%、赣锋锂业 +3%、洛阳钼业 +3%。<b>宁德时代跌超 3%</b>，此前传出考虑配售 50 亿美元股票。</p>
+      </div>
+      <div class="market-card">
+        <h5>🇺🇸 美股</h5>
+        <div class="idx">上周五 S&amp;P 500、纳指双双创新高</div>
+        <p>4 月 24 日（周五）收盘：S&amp;P 500 +0.8% 至 <b>7,165.08</b>（历史新高），纳指 +1.63% 至 <b>24,836.60</b>（历史新高），道指 -0.16% 至 <b>49,230.71</b>。驱动力：英特尔大涨带动半导体指数连涨 18 天，<b>英伟达重返 5 万亿美元市值</b>；油价下跌（美伊谈判预期）+ 司法部撤回对鲍威尔的调查，双重利好风险资产。本周五核心 PCE 数据是最大变量。</p>
+      </div>
+    </div>
+
+    <div class="cards" style="margin-top: 18px;">
+      <div class="card">
+        <span class="tag stock">三市共振</span>
+        <h4>🦞 今天这三个市场说了什么？</h4>
+        <p>三个市场今天的表情是<b>错位的</b>：美股周五是"AI 叙事 + 地缘缓和"双击，A 股今天反而是"能源/防御板块涨、科技/有色金属涨跌分化"，港股跟得更紧——半导体和有色同步大涨。核心原因：A 股和港股早两个小时开盘，率先反映美伊谈判（利好能源）和国产芯片软件栈（CUDA Tile 反向刺激）的预期。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这种"港股科技 &gt; A 股科技"的强弱关系，近期很稳——<b>港股里的半导体/AI 含量更高、估值更顺美股</b>，而 A 股科技指数里传统 IT 占比高，所以同样的 AI 新闻，港股涨、A 股平。金融视角：把港股科技 ETF 看作"亚太版 Nasdaq 映射"，比纯 A 股跟得更紧。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 消费（新板块） -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>零售、餐饮、新消费</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag consume">餐饮</span>
+        <h4>海底捞"员工自费给顾客买礼物"翻车 + "给狗庆生"连续出圈</h4>
+        <p>本周海底捞连续两次登上舆论场：先是"给狗庆生"事件，紧接着被曝员工被要求自费为顾客买礼物、门店再下罪己诏。从 2021 年的"关店潮"到今天的"服务过度内卷"，海底捞的服务叙事正在反噬。同期消息：西贝也因类似的"服务用力过度"再次被质疑。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>表面是公关事件，实质是连锁餐饮"<b>单店模型承压</b>"的外化——门店业绩不行，管理层就向服务端加码压力（员工倒贴买礼物本质是把 marketing 成本转嫁给员工）。金融视角：中式连锁餐饮的问题不是翻台率而是 <b>同店 ASP 和消费频次在下降</b>，这是今年所有上市餐饮股（海底捞、九毛九、瑞幸）业绩端真正的风险所在。</div>
+        <div class="source">来源：<a href="https://www.bilibili.com/video/BV1yDoMBzEsh/" target="_blank">IC 实验室</a> · <a href="https://www.bilibili.com/video/BV147oNBvELo/" target="_blank">曹小灵比比叨</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag consume">零售全球</span>
+        <h4>2026 全球零售 TOP50 榜单：前 10 无中国企业，欧洲系统能力领跑</h4>
+        <p>虎嗅深度：2026 全球零售 TOP50 揭示"规模神话终结、韧性成为新核心"——前十名稳定，<b>但无中国企业</b>。欧洲零售商凭借"系统能力"（供应链韧性、场景化运营、持续创造客户价值）长期领跑。沃尔玛、亚马逊是同时具备"敏捷性 + 场景化 + 客户价值"三层韧性的代表。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 这种做产业研究的人来说，这份榜单是一面镜子——过去十年我们习惯看"谁规模最大"（GMV、门店数），现在的胜负手变成"<b>在通胀 + 关税 + 供应链扰动下还能稳增长的能力</b>"。中国零售巨头（阿里、京东、拼多多）的问题不是没规模，而是供应链韧性三层没做扎实，同店增长弱。这也是为什么中国电商集体转向海外（速卖通、Joybuy、拼多多新拼姆）——海外还有规模红利，国内已经进入存量博弈。</div>
+        <div class="source">来源：<a href="https://www.huxiu.com/article/4853937.html" target="_blank">虎嗅网 · 全球零售变天</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-04-27/doc-inhvxatm2445660.shtml" target="_blank">新浪科技 · 电商三巨头海外暗战</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag consume">新消费收购</span>
+        <h4>创源股份 8000 万收购酷乐潮玩 30 家门店，潮玩赛道结构性整合</h4>
+        <p>创源股份公告以 8000 万元收购宁波酷乐潮玩 30 家门店，布局文创业务转型。酷乐潮玩此前有 300+ 线下门店，覆盖一二线及核心三线城市。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>潮玩赛道去年还在打"IP 创新仗"，今年开始打"<b>门店并购仗</b>"——说明增长进入整合期。对标：泡泡玛特已经把估值打到天花板，二梯队玩家靠收购走规模，但这条路的 IRR 通常一般（门店整合协同效应有限）。金融视角：这种"传统制造转消费"的公司估值不容易重估，看点是后续能不能把 IP 授权能力做起来。</div>
+        <div class="source">来源：<a href="https://www.huxiu.com/article/4853860.html" target="_blank">虎嗅网</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. 娱乐花边（新板块） -->
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>放松一下</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">热搜</span>
+        <h4>"贾乃亮这届爸爸已经开始卷空气了"：新晋热搜话题</h4>
+        <p>微博热搜"#贾乃亮这届爸爸已经开始卷空气了#"冲上小时榜。起因是贾乃亮带娃视频里自我激情输出、女儿甜馨在旁一脸"我爸又在干嘛"的反差萌，被网友戏称"卷空气"。</p>
+        <div class="why">🦞 <b>轻松一下：</b>现在连"带娃"都内卷出了新赛道——贾式爸爸的核心卖点是"真实不端着"。给你当下午茶消息。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001904q7zc.html" target="_blank">新浪明星热点</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">直播风波</span>
+        <h4>"潘嘎"再次连麦：嘎子终于扳回一局</h4>
+        <p>经典直播 IP"潘长江 vs 谢孟伟（嘎子）"再度连麦，这次嘎子明显占了上风，潘长江一度断线逃离。相关话题视频播放量 100 万+。</p>
+        <div class="why">🦞 <b>轻松一下：</b>"潘嘎之交"这个梗从 2021 年火到 2026 年，属于互联网长青 IP。背后其实是一代中老年艺人转型带货之后的人设反噬，好在网友看得开心就行。</div>
+        <div class="source">来源：<a href="https://www.bilibili.com/video/BV1Xr4y1H79A/" target="_blank">bilibili</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>《袁姗姗"茶里茶气"往事》刷屏，娱乐圈旧瓜再翻新</h4>
+        <p>B 站 & 微博同步刷屏"袁姗姗和她身后的 8 个备胎"深扒，涉及杨幂、王鸥、郑恺、陈晓等名字，属于周末典型的娱乐圈"翻旧账"内容。</p>
+        <div class="why">🦞 <b>轻松一下：</b>这种"考古型娱乐稿"最近特别火——行业新剧不够看、品牌代言空档，观众只能回头嗑老瓜。反映娱乐工业供给端的阶段性疲软。</div>
+        <div class="source">来源：<a href="https://www.bilibili.com/video/BV15v411e7Ya/" target="_blank">bilibili 明星八卦</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师出品 · 每日 08:00 更新 · v2 扩版从今日起（加入股市 / 消费 / 娱乐）</div>
+    <div class="footer-note">本页面仅作信息整理，不构成投资建议。</div>
+  </footer>
+
+</div>
+</body>
+</html>

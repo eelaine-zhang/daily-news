@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-31</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --stock: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.stock { background: #fcd34d22; color: var(--stock); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .market { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  .market h5 { margin: 0 0 6px; font-size: 15px; }
+  .market .ticker { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .market .up { color: #a5f3a5; }
+  .market .down { color: #ff8b8b; }
+  .market p { margin: 6px 0 0; font-size: 13.5px; color: var(--text); }
+  .closed { opacity: 0.65; }
+  .holiday-banner { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #9198a122; color: var(--text-dim); margin-left: 6px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 5 月 31 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>地缘卡关：</b>Trump 又把美伊 MoU 的 <b>"最终决定"推迟</b>了——周五在白宫开了两小时会，没签字；伊朗 IRGC 将领同日警告"若 Trump 反悔，将再袭海湾"，市场再次紧盯霍尔木兹。</li>
+      <li><b>美股记录月：</b>S&amp;P 500 <b>九连周红（2023 年来最长）</b>、Dow 站上 <b>51,000 历史首次</b>、5 月 S&amp;P +5.5% / Nasdaq +6.8%——AI capex 故事配上"美伊降级预期"双驱。</li>
+      <li><b>娱乐震撼：</b>本周第二个一号种子倒在罗兰加洛斯——<b>19 岁巴西小将 Fonseca 从 0-2 落后大逆转 Djokovic</b>，5 小时五盘大战；NBA 西决 G7 今晨打响（Wemby vs OKC）。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>HBM 供需吃紧，AI 生态"二线赢家"开始跑赢 Nvidia</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">HBM 供需</span>
+        <h4>Reuters：AI 内存供应紧到挤压 PC/手机厂——HBM 厂利润创纪录的另一面</h4>
+        <p>Reuters 周六行业稿：Nvidia 那种高端 AI 芯片的<b>HBM 需求把高端内存全线吸走</b>，<b>DDR5、LPDDR5 现货价同步抬头</b>，Samsung、SK Hynix、Micron 三家都把今年产能进一步向 HBM 倾斜。下游 PC 整机厂、Android 旗舰厂被迫接受价格上调。Counterpoint 数据：HBM 占 DRAM 营收已经从 2024 年的 17% 飙到 2026 Q1 的 <b>38%</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 HBM 故事的"溢出"阶段——AI 不再只是 SK Hynix / Samsung 的个股逻辑，开始<b>把整条 DRAM 价格曲线向上推</b>。映射含义：(1) Micron 受益最大，它的 DDR5 业务占比仍高，HBM 抢产能 = 现有 DDR5 涨价；(2) 联想/惠普/戴尔的 PC 业务毛利会被压一档（内存涨价转嫁到终端需要 1-2 季度滞后）；(3) <b>苹果即将在 9 月发布的 iPhone 18 大概率内存涨价 5-10 美元</b>，被市场视为利好——因为它会被 ASP 涨价吸收，毛利反而保住。这是"AI 受益的二阶传导"，值得关注。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/technology/artificial-intelligence/" target="_blank">Reuters AI</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">"打败 Nvidia"</span>
+        <h4>2026 跑赢 Nvidia 的 AI 股：Robinhood/Nasdaq 点名一只 +67%、一只 +121%</h4>
+        <p>Nasdaq/Robinhood 周六榜单：年初至今 NVDA 涨 38%，但被两只 AI 小弟反超——一只主营 AI 数据中心电源管理（+67%），一只是 AI 基建+液冷供应商（+121%）。同期 Palantir、Vertiv、Eaton 等"AI 基建二线"涨幅都在 50%+。Wedbush、Goldman 都开始喊：<b>"AI 第二阶段是 picks & shovels"——卖给淘金者铁锹的人比淘金者赚得多</b>。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是经典科技牛市进化的"主力换手"——第一阶段（GPU/算力，由 Nvidia 独享）已经走完，<b>第二阶段是电源、冷却、机房、光模块、电网</b>这些"挖掘机配件"。给金融背景的 lainy 翻译一下：(1) 这意味着 AI 概念股不再只是少数巨头，<b>赢家面变宽 → 估值溢价开始往中盘扩散</b>；(2) 反过来 Nvidia 自己的 "alpha 溢价" 会被稀释——它仍涨，但跑不赢的概率上升；(3) 投资策略上的含义是"AI capex ETF"开始跑赢"AI 个股 ETF"。这一轮和 1999-2000 网络泡沫前期非常像。</div>
+        <div class="source">来源：<a href="https://robinhood.com/us/en/stocks/NVDA/" target="_blank">Robinhood/Nasdaq</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Samsung vs SK</span>
+        <h4>买 Samsung 还是 SK Hynix？分析师周末复盘：HBM 领导权之争已进入"中场"</h4>
+        <p>IBT/SeekingAlpha 一组周末复盘文：Samsung HBM4E 抢首发 + 股价单日 +6% 后，券商开始重新做 Samsung vs SK Hynix 估值模型。摩根士丹利上调 Samsung 目标价 18%，但仍然认为 SK Hynix 因 Nvidia 锁定订单的"客户黏性"更稳。Counterpoint：HBM4E 真正量产要到 2026 Q4 或 2027 Q1，意味着<b>SK Hynix 的现金奶牛地位至少再持续 6-9 个月</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是昨天 Samsung HBM4E 新闻的"二日交易复盘"，重要的不是结论是哪个赢，而是<b>"AI 内存的双寡头格局"正在形成</b>——以前是 SK Hynix 一家通吃，现在变成 SK + Samsung 各拿 ~40-45%，Micron 拿剩下的。这对 Nvidia 是利好（议价空间），对内存代工厂格局是中性偏正面。给中国半导体的隐含影响：<b>HBM 三巨头的份额博弈越激烈，长鑫存储/长江存储的国产替代窗口越窄</b>——华虹、中芯还是更卷在成熟制程那边。</div>
+        <div class="source">来源：<a href="https://www.ibtimes.com.au/samsung-hbm4e-ai-memory-performance-1869782" target="_blank">IBTimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>Trump 把 Iran MoU 推迟，NATO 收紧防御边界</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 MoU 卡关</span>
+        <h4>NYT：Trump 把"最终决定"推迟——白宫两小时闭门会后仍未签字，IRGC 警告"再袭海湾"</h4>
+        <p>NYT/Hindustan Times 5/30 报道：Trump 周五在白宫与 Vance、Rubio、Hegseth 等核心幕僚开了<b>两小时闭门会</b>，议程就是要不要签 60 天延期停火 MoU，<b>结果是"推迟最终决定"</b>。同日伊朗革命卫队（IRGC）Rezaei 将军公开警告："若 Trump 反悔，我方将进攻海湾封锁线"。CBS News 同日：Hegseth 说"必要时美军准备对伊朗重启打击"。美军另一边继续对试图突破封锁线的商船动手——本周已经第二艘被瘫痪。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>市场在过去 10 天已经把"MoU 签了"提前定价进去——Brent 5 月跌近 19%、S&amp;P 九连周红、Dow 站 51,000。<b>如果 Trump 周末签字 → 这部分定价兑现；如果他玩"最后一刻反悔加价"的招（这是他经典套路）→ 油价快速反弹，美股周一可能回吐</b>。三个跟踪点：(1) Trump 周末/周一是否签字；(2) IRGC 是否对海湾再做"威慑性挑衅"；(3) MQ-9 Reaper 被伊朗损毁两架的事件是否升级。这是<b>本周资产价格最关键的二元事件</b>。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/05/29/world/iran-war-us-trump-deal" target="_blank">NYT</a> · <a href="https://www.hindustantimes.com/world-news/us-iran-news-live-updates-ceasefire-deal-proposal-donald-trump-strikes-hormuz-strait-netanyahu-israel-lebanon-latest-101780101778333.html" target="_blank">Hindustan Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">NATO 内部裂痕</span>
+        <h4>BBC/Reuters：五角大楼内部备忘录——美国考虑"惩罚不出力的 NATO 盟友"</h4>
+        <p>BBC 引 Reuters 看到的五角大楼备忘录：美国正在评估如何"惩罚那些在 Iran 战争中未提供足够支持的 NATO 盟友"。可能的工具：(1) 削减/重置美军驻扎；(2) 调整军购优先级；(3) 在共同防务费用谈判上施压。备忘录直接点名希腊、葡萄牙、比利时三国"出力不足"。这件事被 BBC 评为"NATO 创立以来最尖锐的内部裂痕信号之一"。</p>
+        <div class="why">🦞 <b>映射含义：</b>这条新闻看起来"地缘"，本质对市场是<b>欧洲军工 ETF 的利好</b>——核心机制：Trump 政府越强调"盟友自付"，欧洲国家越要自建国防工业。BAE、Rheinmetall、Saab、Thales、Leonardo 今年股价已经平均涨了 70%+，这条新闻是<b>"故事的下一章催化"</b>。次级影响：(1) 美国军火出口转向"友好盟友"配额制；(2) 欧洲债券因军费上行有抬升压力 → 欧洲长端利率比预期更高更久。给 lainy 的视角：这是"去美元化 + 去美军保护伞"的双重叙事，是 2026 年第二大宏观主线（仅次于 AI capex）。</div>
+        <div class="source">来源：<a href="https://www.bbc.com/news/war-in-ukraine" target="_blank">BBC</a> · <a href="https://www.reuters.com/" target="_blank">Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄情报</span>
+        <h4>Zelensky：俄方将发动大规模无人机+导弹突袭，乌方已收到情报</h4>
+        <p>CBS：Zelensky 5/30 公开表态："乌克兰已收到情报，俄罗斯将发动一次大规模无人机+导弹突袭。"目的可能是配合俄军在顿巴斯的夏季攻势节奏。乌克兰已转入预防性灯火管制，电网和重要基础设施进入战时戒备。同期前一日（5/29）一架俄无人机坠落罗马尼亚境内，NATO 多国声讨。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>俄军夏季攻势的"准备节拍"和昨日 NATO 集体声讨叠加，意味着<b>6 月初将进入战事强度高峰</b>。映射到资产价格：(1) 欧洲天然气和电价对此非常敏感——若乌克兰电网被打掉，欧洲冬季储气压力提前显现，TTF 期货可能再次抬头；(2) 农产品（小麦/玉米）期货上一次类似事件涨了 8%；(3) 防御股（Saab、Lockheed）会继续买在新高。建议关注 6 月初的 TTF gas、CME 小麦的盘前异动。</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/us-iran-tensions/" target="_blank">CBS News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美股 5 月最佳月之一，但 Fed 内部警告"AI 反而推高通胀"</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">5 月收官</span>
+        <h4>5 月美股大丰收：S&amp;P +5.5%、Nasdaq +6.8%、Dow +2.5%——AI 故事 + Iran 降级双驱</h4>
+        <p>Alain Guillot/Investopedia：2026 年 5 月是 S&amp;P 500 历史上排名前列的"最佳 5 月"之一。<b>Dow 站上 51,000、S&amp;P 7,580、Nasdaq 26,972</b> 均创新高；S&amp;P 走出<b>九连周红盘——2023 年 9 月以来最长连涨</b>。两大引擎：(1) AI capex 故事被 Dell/Snowflake/Nvidia/Samsung HBM4E 接力点燃；(2) Iran 60 天 MoU 接近落地、Brent 月跌 19% 缓解通胀压力。VIX 收 12.x，恐慌指数处于年内低点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>九连周红 + Dow 站 51,000 + 5 月这种"巨幅"涨幅，意味着市场<b>已经把今年所有好消息提前定价</b>。下一步要分两种情景：(a) Iran MoU 签字+6/18 FOMC 鸽派 → 七月还能再涨一波，但 alpha 越来越难找；(b) Iran 反复 + PCE 6/26 又抬头 → 6 月可能出现"夏季回调"，可能给 5-8% 的回撤窗口。<b>对 lainy 的实操建议：5/6 月仓位高的话，6 月初是检查止盈位置的好时机</b>——不是清仓，但要把"如果回调 5%/10% 怎么办"的剧本写出来。</div>
+        <div class="source">来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-05292026-11986232" target="_blank">Investopedia</a> · <a href="https://www.alainguillot.com/stock-market-recep-friday-may-29-2026/" target="_blank">Alain Guillot</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Fed 警告</span>
+        <h4>Reuters：Fed 官员警告——本该缓解通胀的 AI，反而可能推高通胀</h4>
+        <p>Reuters Markets 5/30：多位 Fed 官员在公开演讲/论文中表达<b>反直觉的担忧</b>：原本预期"AI 提升生产率 → 抑制通胀"的逻辑，<b>近期在数据上没成立</b>。原因：(1) AI 基建本身的电力/铜/铝/HBM 需求把上游商品价格拉高；(2) AI 数据中心抢电力，居民/商业电价上行；(3) 企业把 AI 节省的成本主要用于<b>提价/扩张利润</b>，而非传导给消费者。Polymarket 数据：年内降息预期已经从 75% 降到 28%。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是<b>对长债的实质利空</b>——如果 AI 是结构性通胀因素，10 年期国债收益率"长期 4-4.5%"可能成为新常态而不是过渡。资产配置含义：(1) <b>科技股 vs 长债</b>的相关性变正——以往科技涨 = 利率涨 = 长债跌，未来这个关系会强化；(2) <b>黄金的"防 AI 通胀"叙事</b>会被强化（黄金已经 $4,500/oz 高位）；(3) 银行股因利差/财富管理双驱，反而会跑赢。给 lainy 的金融视角：AI 不再只是"算力故事"，<b>它正在重塑通胀模型本身</b>——这是六月 FOMC 之前最值得理解的宏观叙事变化。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/markets/" target="_blank">Reuters Markets</a> · <a href="https://polymarket.com/event/fed-rate-cut-by-629" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金 + 油</span>
+        <h4>金价回到 $4,500 上方，Brent 月跌 19% 但周末偷偷反弹</h4>
+        <p>Reuters/VTMarkets：上周金价在 Iran 谈判反复 + AI 通胀担忧双驱下回到 <b>$4,500/oz 上方</b>，月度 +3.2%。Brent 整月跌 19%（疫情以来最差单月），但 5/30 周末凌晨小幅反弹到 $66.x，市场担心 Trump 推迟签字。WTI 同步在 $62-63 区间徘徊。<b>金/油比已经突破 70</b>——历史上这个比值高位往往对应衰退预期或地缘风险。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>金/油比 70 是 2020 年 4 月（疫情爆发）和 2024 年 11 月（中东战火）以来的高位。映射含义：(1) <b>资金正在做"防御性配置"——买金避险，但不相信油会再涨</b>；(2) 隐含"地缘风险会缓和、但宏观风险会拉长"的预期；(3) 黄金股（Newmont、Barrack）、能源股的相对走势会分化——金矿继续被买，能源股可能下半年承压。<b>对 A 股的映射</b>：金价站 $4,500 = 紫金矿业、山东黄金、招金等继续有相对收益；油气板块（中石油/中海油）则受到压制。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/markets/gold/" target="_blank">Reuters Gold</a> · <a href="https://www.vtmarkets.com/live-updates/gold-climbs-as-us-iran-ceasefire-talks-weigh-on-oil-and-temper-fed-rate-hike-bets/" target="_blank">VTMarkets</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股回调休整，港股止跌反弹，美股九连周</small></h2>
+    <div class="market-grid">
+      <div class="market">
+        <h5>🇨🇳 A 股 · 上证 4068.57 <span class="down">(-0.73%)</span> <span style="font-size:12px;color:var(--text-dim);font-weight:normal;">· 创业板 4037.95 <span class="down">(-2.11%)</span></span></h5>
+        <div class="ticker">深成指 15,575 (-1.81%) · 科创 100 -4.07% · 两市成交 ~2.5 万亿</div>
+        <p>周五 A 股冲高回落：盘中创业板一度突破 4150 点、上证一度刷十年新高，<b>午后被科技/AI 板块的获利盘集中砸出去</b>。最受伤的是科创板——前期最猛的光模块、AI 算力、半导体板块一起回调，<b>"易中天"（新易盛、中际旭创、天孚通信）三只光模块龙头全线下挫 5-8%</b>，但都还在月度大涨 30%+ 的位置。下周关注：(a) 阿里达摩院的"GPU 求解器突破亿级变量"是否带动算法板块；(b) 6 月 MLF 续做的窗口；(c) 618 大促预热数据。</p>
+      </div>
+      <div class="market">
+        <h5>🇭🇰 港股 · 恒生 25,199.99 <span class="up">(+0.78%)</span> <span style="font-size:12px;color:var(--text-dim);font-weight:normal;">· 恒科 4890.64 <span class="up">(+0.04%)</span></span></h5>
+        <div class="ticker">恒生国企 +0.84% · 全周累计跌 0.7%</div>
+        <p>港股周五止跌反弹：<b>泡泡玛特领涨蓝筹</b>（结束此前 Labubu 流量见顶的回调）、<b>华虹半导体盘中创新高</b>、建筑节能板块涨幅居前。AI 牛股<b>智谱、MiniMax 正式被纳入恒生科技指数</b>（5/26 公告，6 月生效），中长期资金被动加仓的预期开始定价。<b>港股的"国产 AI 重估"叙事仍在</b>——但短期被美股扯着走，要等 6 月 Iran MoU 落地后才有独立行情空间。</p>
+      </div>
+      <div class="market">
+        <h5>🇺🇸 美股 · S&amp;P 7,580 <span class="up">(+0.22%)</span> <span style="font-size:12px;color:var(--text-dim);font-weight:normal;">· Nasdaq 26,972 <span class="up">(+0.2%)</span> · Dow 51,000+ <span class="up">(+0.9%)</span></span></h5>
+        <div class="ticker">9 连周红，2023 年 9 月以来最长 · 5 月：S&amp;P +5.5% / Nasdaq +6.8% / Dow +2.5%</div>
+        <p>周五美股三大指数齐创新高，<b>Dow Jones 首次突破 51,000</b>。本周最大功臣是 <b>Dell 周五开盘 +32%</b>（AI 服务器 757% 同比 + 600 亿指引）带动整个 AI 基建链。S&amp;P 科技 + 金融板块双涨。<b>9 连周红盘 = 2023 年 9 月以来最长</b>，是这轮 AI 牛市的标志性技术形态。但 VIX 12.x + 估值百分位 92% 暗示<b>风险偏好已经高到危险位置</b>——下周如果 Iran MoU 卡住或 ISM 数据走弱，回调一触即发。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>Costco 财报后修复，中国零售见 3 年最低增长</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Costco 应对</span>
+        <h4>Costco Q3 财报后修复："会员痛点"被 CEO 公开拿出来解</h4>
+        <p>Costco CEO Ron Vachris 在 Q3 财报电话会上点名"结账速度慢"——这是 Costco 会员投诉榜首问题，公司过去 6 个月已经投入数十亿改造收银设备+自助闸机，<b>CEO 公开承诺"已经看到可量化的速度改善"</b>。结合周三 Q3 营收 705 亿（+12%）超预期但毛利率压缩、股价反而下跌的背景，<b>这是一次"主动修复市场信心"的姿态</b>。Marketbeat 给出目标价 $1,056，比当前 $956 有 ~10% 空间。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Costco 的故事核心是<b>"会员复购 LTV"——95%+ 续费率 + 提价不流失 = 现金牛模型</b>。但毛利率压缩说明<b>"高质感低价"的承诺正在烧钱</b>——它需要靠运营效率（结账速度、商品周转、自有品牌占比）把毛利提回来。CEO 拿"结账速度"做公关动作，本质上在告诉市场"我能在 6-9 个月内把毛利修回"。映射含义：Costco 的护城河仍在，但 <b>2026 年估值不再是"无脑买"——下一次入场点要等毛利率指引明确转向</b>。同业 Sam's Club / BJ's 反而可能短期估值修复更快。</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/markets/stocks/articles/costco-just-made-major-move-160300694.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国零售</span>
+        <h4>中国 4 月社零仅同比 +0.2%——2022 年 12 月以来最低增速</h4>
+        <p>Breakwave Advisors/Commodore Research 5/29 数据点评：中国 4 月社零增速 <b>仅 +0.2% YoY</b>，是 2022 年 12 月以来最低（疫情封控阶段除外）。考虑 4 月 CPI +1.2%，<b>实质零售增长是负数</b>。同期 Circana 中国消费者情绪调查：油价上涨导致<b>居民下调外出就餐预算、转向日用必需品</b>。商务部强调 1-4 月"消费市场稳健"，但月度数据明显失速。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是中国宏观叙事里<b>"消费转弱 vs AI/科技股强"</b>分裂的硬证据。机制：地产财富效应失效 + 工资增速跑不赢生活成本 + 油价反弹挤压可选消费预算。映射含义：(1) <b>白酒、餐饮、可选消费股短期承压</b>——茅台年内已经跌 17%、海底捞/百胜中国都在筑底；(2) 必选消费（食品、家庭用品）相对抗跌；(3) <b>政策面预期升温</b>——市场会把"7 月政治局会议出消费刺激"的概率往上调。对 A 股的传导：必选消费 ETF 跑赢可选消费 ETF 的状态可能延续到 Q3。<b>618 数据将是 6/18 后的关键试金石</b>。</div>
+        <div class="source">来源：<a href="https://www.breakwaveadvisors.com/insights/2026/5/29/chinas-consumer-sector-reaches-breaking-point" target="_blank">Breakwave Advisors</a> · <a href="https://english.news.cn/20260525/01380dbd9ba04c9cbb4082def0eb420c/c.html" target="_blank">Xinhua</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">油价转嫁</span>
+        <h4>Walmart "压力信号"：美国消费者单次加油不超 10 加仑——"2022 年来首次"</h4>
+        <p>Archynewsy 引 Walmart CFO John David Rainey 在投资者会议：<b>"我们看到消费者单次加油已经降到 10 加仑以下"</b>——这是自 2022 年汽油价格冲高以来首次重现。同期 Costco 加油站和 Walmart 的"超市加油价格"出现历史性人流（因为大牌油站涨太多）。<b>美国零售加油价格 5 月均价 $4.20/加仑，部分州破 $5</b>。</p>
+        <div class="why">🦞 <b>映射含义：</b>这条新闻看着"小"，但是<b>消费分层的微观证据</b>——美国家庭把"加满"改成"加 30-40 块"，意味着<b>他们对短期现金流压力非常敏感</b>。给金融视角：(1) 这是 Walmart/Costco 这种"折扣店"今年股价跑赢 Target、Macy's 的根本原因——下沉消费力被压；(2) <b>Brent 月跌 19% 的好消息还没完全传导到零售加油价格</b>，因为炼油商利润扩张——这意味着 6-7 月加油价格回落仍是利好；(3) 食品通胀如果跟着回落，6 月 PCE 有望从 3.8% 回到 3.5% 以下——这是<b>美联储 6/18 会议鸽派的关键前提</b>。</div>
+        <div class="source">来源：<a href="https://www.archynewsy.com/record-gas-prices-drive-surge-at-costco-walmart-how-americans-are-changing-fuel-habits/" target="_blank">Archynewsy</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>法网爆冷王 + NBA 西决 G7 今晨</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">法网爆冷</span>
+        <h4>19 岁巴西小将 Fonseca 从 0-2 落后大逆转 Djokovic，5 小时五盘大战</h4>
+        <p>5/29 晚 Court Philippe-Chatrier：<b>19 岁巴西人 João Fonseca 4-6, 4-6, 6-3, 7-5, 7-5 击败 Djokovic</b>，耗时 4 小时 53 分钟。Djokovic 一度 2-0 领先，但被对方 0 破发到 5-5 时崩盘，第五盘 5-5 之后连保 2 个发球局完成致命一击。<b>这是本周第二个一号种子倒下——周四 Sinner 已经在 R2 爆冷出局</b>。Djokovic 赛后被问到职业未来时<b>非常生硬</b>："I don't know."</p>
+        <div class="why">🦞 <b>为什么值得看：</b>红土之王的最后一个堡垒——Roland Garros——这周连失两条主线（Sinner + Djokovic），<b>男单冠军基本已经从"两强争霸"变成"群雄混战"</b>。对市场含义：(1) <b>Fonseca 是巴西人，巴西网球热度立刻被点燃</b>——耐克、阿迪在巴西的青年装备出货可能受益；(2) 法网下周的电视收视率会下滑，但社交媒体讨论度暴涨；(3) 19 岁球员靠"心态稳"逆转 24 个大满贯持有者，<b>体育商业故事最爱这种叙事</b>。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/athletic/7318309/2026/05/29/novak-djokovic-french-open-draw-joao-fonseca/" target="_blank">The Athletic</a> · <a href="https://www.theguardian.com/sport/2026/may/29/tennis-french-open-novak-djokovic-joao-fonseca-roland-garros-five-sets" target="_blank">Guardian</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA 西决 G7</span>
+        <h4>Wemby 28+10 把西决拖到 G7，今晨（HK 时间 5/31 上午）OKC 客场决战</h4>
+        <p>5/28 G6：Wembanyama <b>28 分 10 板（仅打 28 分钟）</b>带领 Spurs 客场大胜 OKC <b>118-91</b>，把对手卫冕路上的西决拖到生死 G7。Chet Holmgren 当场被打到 10 分 11 板低迷数据。<b>本场 G7 在 HK 时间 5/31 上午开打，奥克拉荷马城主场</b>，OKC 防守效率赛季第一，但 Wemby 状态正巅峰。ESPN 给 Spurs 30% 上限概率（爆冷概率），但他们打出连续两场高水准就完全可能改写。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 NBA 近 5 年最受期待的西决 G7——<b>21 岁 Wemby vs 22 岁 SGA + Chet Holmgren 的青年世代直接对话</b>。无论谁赢，这场比赛将定义未来 5 年 NBA 的剧本。商业角度：(1) NBA G7 收视率历史均值 +35% vs G6，今天大概率破今年新高；(2) Wemby 球衣销量已经超越 SGA 排名西区第一——若 Spurs 真的走到总决赛，<b>Wemby 球鞋代言（NB 签 4 年 1 亿）的 ROI 提前兑现</b>。</div>
+        <div class="source">来源：<a href="https://www.espn.com/nba/story/_/id/48902205/2026-nba-playoffs-san-antonio-spurs-oklahoma-city-thunder-game-6-recap-game-7-preview" target="_blank">ESPN</a> · <a href="https://www.nba.com/news/live-updates-game-6-thunder-spurs" target="_blank">NBA.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">网坛新生代</span>
+        <h4>Sinner + Djokovic 接连倒下：2000 年来法网首次"前 3 号种子在 R4 前都消失"</h4>
+        <p>The Athletic 周末复盘：本届法网历史性时刻——<b>世界第一 Sinner R2 出局、第三号种子 Djokovic R3 出局、第二号种子 Alcaraz 此前已经因伤退赛</b>。这是 ATP 公开赛时代（2000 年起）<b>首次前 3 号种子在第四轮之前全部消失</b>。剩下的争冠候选：Zverev、Medvedev、Rune，以及刚 19 岁的 Fonseca 这种"打鸡血选手"。</p>
+        <div class="why">🦞 <b>映射含义：</b>这种"种子全倒"的法网会大幅<b>抬高电视收视的不确定性 → 广告商和转播方的赌注变高</b>。但反过来对赞助商是机会：(1) 谁能赞助到 Fonseca/Rune 这种新星，性价比远高于赞助 Djokovic；(2) 法网官方收入今年可能因决赛球员"知名度不足"而被压；(3) 长期看，网球世代更替已经开始 → <b>商业故事从"Big 3"切换到"新生代群雄"</b>。和 NBA 的"Wemby + Chet + SGA"剧情同步发生，巧合背后是各种体育 IP 的代际换班。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/athletic/live-blogs/french-open-2026-live-updates-day-six-scores-results/TYL9noLgwBrw/" target="_blank">The Athletic</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>本周末一条让人会心一笑的</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">阿里达摩院</span>
+        <h4>阿里达摩院首发"GPU 版本求解器"：突破亿级变量"不可解"难题</h4>
+        <p>东方财富/36氪：阿里达摩院 5/29 发布 <b>首个 GPU 加速的大规模优化求解器</b>，把传统 CPU 解不动的"亿级变量"线性规划/混合整数规划问题，搬到 GPU 上跑——<b>速度比 IBM CPLEX、Gurobi 这种行业基准快 100 倍以上</b>。覆盖物流路径、电网调度、芯片版图、金融组合优化等场景。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条新闻技术上"小众"，但对你看的"AI 硬件 → 商业"映射特别清晰：<b>它把 GPU 从"训 AI 模型"扩展到"传统优化问题"</b>。机制：以前 GPU 只对深度学习友好，因为问题可以矩阵化；线性规划/MIP 是结构化离散问题，GPU 一直被认为"用不上"。达摩院和 Nvidia 合作把这层突破了。映射含义：(1) GPU 应用面变宽 → <b>Nvidia 不再只是"AI capex 一笔账"，也是"全行业优化 capex 一笔账"</b>；(2) 国产替代视角：阿里这种"用 AI 公司能做出来"会反推国产 GPU（壁仞、海光、华为昇腾）加快软件生态；(3) 物流/电网/制造企业的 IT 预算将从 CPU 转向 GPU——<b>Lenovo、浪潮、宁畅这种集成商今年订单会被这条消息带动</b>。</div>
+        <div class="source">来源：<a href="https://stock.eastmoney.com/a/cdpfx.html" target="_blank">东方财富</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师 · 给 lainy 的每日不错过新闻
+    <div class="footer-note">2026-05-31（周日）· 数据时间戳 HKT 早上 8 点 · 注：财经/地缘信息瞬息万变，建议交易前再次确认</div>
+  </footer>
+</div>
+</body>
+</html>

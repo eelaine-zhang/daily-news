@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-04</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+  }
+  .market-block h4 { margin: 0 0 8px; font-size: 16px; }
+  .market-block p { margin: 0 0 8px; font-size: 14px; }
+  .market-block .why { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .closed { opacity: 0.6; }
+  .holiday-banner {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: #ffb45422;
+    color: var(--hbm);
+    margin-bottom: 8px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 4 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 美国独立日假期 · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Nvidia 当"AI 央行"：</b>推出 GPU 托底融资 + 收入分成模式，为 neocloud 承担闲置风险——从卖硬件升级成卖"算力保险"，锁定生态护城河。</li>
+      <li><b>6 月非农仅 +5.7 万：</b>不及预期一半，Fed 9 月加息概率从 65%→50%，黄金跳破 $4,100，避险资产全线走强。</li>
+      <li><b>半导体两日血洗后 V 型反弹：</b>韩股 SK Hynix 单日 +11%、Samsung +9%，A 股 CSI 300 +0.93%，港股恒指 +1.28%——但 Micron 盘后财报炸裂涨 20%，周一周二又有好戏。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Nvidia 商业模式</span>
+        <h4>Nvidia 推出 GPU 托底融资 + 收入分成：从"卖芯片"升级成"AI 央行"</h4>
+        <p>7 月 1 日，Nvidia 宣布为 neocloud（新兴 AI 云服务商）提供<b>信用支持 + 收入分成</b>模式：如果 GPU 租不出去，Nvidia 补贴闲置成本；如果租出去了，Nvidia 从云收入中抽成。Sharon AI（部署 4 万张 GPU）和 Firmus（印尼 360MW 数据中心、17 万张 GPU）是首批合作伙伴。同期 Together AI 拿到 Aramco 领投的 $8 亿 C 轮（估值 $83 亿），Nvidia 参投。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Nvidia 商业模式的关键拐点——不再只是"卖硬件一次性收钱"，而是变成了"算力的央行"：发 GPU（发钞）→ 担保流动性（托底闲置）→ 抽云收入税（铸币税）。金融视角：<b>Nvidia 的 recurring revenue 占比会提升，估值模型从"硬件周期股"向"平台 SaaS"漂移</b>。同时 neocloud 们被绑定得更深——拿的是 Nvidia 的"补贴贷款"，未来换芯片供应商的成本极高。这才是真正的护城河，不只是 CUDA。</div>
+        <div class="source">来源：<a href="https://www.forbes.com/sites/janakirammsv/2026/07/03/why-the-neocloud-gold-rush-is-now-vendor-financed/" target="_blank">Forbes</a> · <a href="https://www.cnbc.com/2026/07/02/nvidia-plans-to-offer-start-up-customers-access-to-revenue-sharing-deals.html" target="_blank">CNBC</a> · <a href="https://datacenter.news/story/nvidia-launches-revenue-sharing-ai-cloud-financing" target="_blank">Data Center News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Anthropic 自研芯片</span>
+        <h4>Anthropic 接洽 Samsung 代工 2nm 自研 AI 芯片，削减对 Nvidia 的依赖</h4>
+        <p>The Information 7 月 2 日爆料：Anthropic 正在与 Samsung 电子洽谈，用其 SF2P（2nm 性能优化版）工艺和先进封装（CoWoS 或 I-Cube4）制造自研 AI 加速器。目前仍处于早期阶段，尚未确定最终设计。Anthropic 此前在 H 轮融资中拿了 Samsung、SK Hynix、Micron 合计 $6.5 亿。竞品 OpenAI 的自研芯片走的是 Broadcom + TSMC 3nm 路线。</p>
+        <div class="why">🦞 <b>商业含义：</b>AI 模型公司自研芯片已成趋势——Google（TPU）、Meta（MTIA）、Amazon（Trainium）、OpenAI（Titan）、现在 Anthropic 也入局。逻辑很直接：<b>推理成本 = 毛利率天花板</b>，谁控制了推理硬件谁就控制了利润率。Samsung 2nm 良率传闻 ~70%，还没经大批量验证；如果走通，Samsung Foundry 将首次在 AI 芯片代工上拿到顶级客户，打破 TSMC 垄断叙事。但风险也不小——TSMC 2nm 产能已被 Apple 和 Nvidia 预定，Samsung 的 I-Cube 封装成熟度也落后 CoWoS。</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/319574/20260702/anthropic-talks-samsung-build-custom-ai-chip-aiming-2nm-process.htm" target="_blank">TechTimes</a> · <a href="https://www.trendforce.com/news/2026/07/03/news-anthropic-reportedly-eyes-custom-ai-chip-in-talks-with-samsung-for-2nm-foundry-and-advanced-packaging/" target="_blank">TrendForce</a> · <a href="https://www.koreaherald.com/article/10797311" target="_blank">Korea Herald</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">韩国存储芯片</span>
+        <h4>三星 + SK Hynix 豪赌 $870 亿：韩国存储芯片十年扩产大计</h4>
+        <p>7 月 3 日，Samsung 和 SK Hynix 联合公布在韩国忠清地区约 <b>$870 亿（240 万亿韩元）</b>的十年扩产计划：Samsung 投 ~$916 亿建 HBM 产线 + OLED + 电池；SK Hynix 投 ~$654 亿扩 NAND + 先进封装。同时 SK Hynix 将部分 HBM4 产能转做 DDR5（因标准 DRAM 利润率可达 90%），并定于 7/10 在 Nasdaq 上市。Samsung HBM4E 良率突破 70%，DRAM/LPDDR 涨价最高 20%。</p>
+        <div class="why">🦞 <b>映射到市场：</b>这是存储芯片周期的<b>供给侧大事件</b>。逻辑链：AI 需 HBM → HBM 挤占 DRAM 产能 → DRAM 供不应求 → 价格涨 → SK Hynix 反手把部分 HBM 产能切回 DDR5（因为 DDR5 利润也到 90%）。换句话说：<b>HBM 和 DDR5 现在都是"印钞机"</b>，韩国两家在加杠杆扩产能。短期利好设备商（ASML、Applied Materials），中期需要警惕 <b>2027-2028 年产能集中释放后的供需反转风险</b>——历史上存储芯片周期 3-4 年，扩产高峰往往是周期顶部的信号。</div>
+        <div class="source">来源：<a href="https://finance.biggo.com/news/4ce08b98-50b6-4a22-b790-67ec09f04db4" target="_blank">BigGo Finance</a> · <a href="https://www.eetimes.com/sk-hynix-plans-713b-domestic-investment/" target="_blank">EE Times</a> · <a href="https://www.digitimes.com/news/a20260703VL204/samsung-display-investment-hbm-materials.html" target="_blank">DigiTimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">半导体抛售与反弹</span>
+        <h4>芯片股两日血洗后 V 型反弹：费城半导体指数跌 5.4% 后亚洲全线反弹</h4>
+        <p>7/2 美股：费城半导体指数 -5.4%（两日累计 -7%+），Micron -7%、Marvell -10%、Applied Materials -10%、SanDisk -13%。但 7/3 亚太强势反弹：KOSPI +5.76%（SK Hynix +11.3%、Samsung +9.1%），日经 +1.5%，港股恒指 +1.28%，A 股 CSI 300 +0.93%。Micron 盘后发布财报极强，盘后涨 20% 收复失地。Nvidia 同时宣布扩产美国本土制造（Arizona + Texas）。</p>
+        <div class="why">🦞 <b>龙虾老师解读：</b>这轮半导下跌的触发因素不是基本面——是<b>估值恐慌</b>："AI capex 到底能不能持续？" 这个问题被高盛和 BofA 同时提出后，拥挤的多头交易踩踏。但 Micron 财报炸裂（存储需求仍在加速）直接打脸空头。对于你理解这个市场：<b>AI 芯片股的波动率会持续高于大盘</b>，因为市场在"capex 持续"和"capex 泡沫"之间摇摆，每一次财报都是一次投票。Nvidia 扩产美国本土是政治正确的动作——关税/出口管制的对冲。</div>
+        <div class="source">来源：<a href="https://www.metatradingclub.com/market-close-july-2-2026-dow-record-soft-jobs-tesla-semiconductors/" target="_blank">MetaTradingClub</a> · <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262008304-unexpectedly-weak-nfp-drove-surge-gold-prices-ai-chip-stocks-plummeted-sandisk-falling-over-14-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.home.saxo/content/articles/macro/market-quick-take---3-july-2026-03072026" target="_blank">Saxo</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>美伊"修好"信号频出：Trump 称"跟伊朗处得很好"，霍尔木兹航运恢复</h4>
+        <p>Reuters 7 月 3 日：Trump 公开表示"美国和伊朗现在相处得很好"。同时，霍尔木兹海峡商业航运持续恢复，油价回落到 Brent ~$72 / WTI ~$69。伊朗前最高领袖 Khamenei 的葬礼 7 月 4 日开始，卡塔尔和平谈判因此推迟。美国国内原油库存连续 12 周下降，降至 2025 年 3 月以来最低。</p>
+        <div class="why">🦞 <b>市场含义：</b>相比 4 月的"霍尔木兹扣船 → Brent $101"，现在油价回到 $72 说明<b>地缘风险溢价基本被消化</b>。这对全球风险资产是顺风——油价低 = 通胀压力小 = Fed 不用因为地缘被迫加息。但要注意：Khamenei 葬礼后的政治真空期是变数，伊朗内部强硬派可能搞事。短期内油价下行空间有限（库存已很低），上行风险取决于葬礼后伊朗政局。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/world/middle-east/" target="_blank">Reuters</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">NATO 安卡拉峰会</span>
+        <h4>NATO 7/7-7/8 安卡拉峰会：将承诺对乌克兰 €700 亿军援 + "铁钳"集体防御声明</h4>
+        <p>7 月 3 日曝光的宣言草案：NATO 成员国将承诺 <b>2026 年向乌克兰提供 €700 亿（$800 亿）军援</b>，2027 年"至少同等水平"。宣言重申 Article 5"一国有事即全盟有事"。峰会在土耳其安卡拉举行，Erdogan 利用与 Trump 的私人关系确保其出席。但 Bloomberg 报道各国仍在乌克兰拨款金额上争论。议题还包括：国防工业合作、EU-NATO 协调、黑海/北欧安全、应对俄中朝伊轴心。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$800 亿军援 = 欧洲国防股的直接催化剂（Rheinmetall、BAE、Thales、Saab）。更重要的是<b>"burden sharing"叙事</b>——Trump 一直施压欧洲多掏钱，这次峰会欧洲会被迫承诺提高国防开支到 GDP 的 3%+。长期来看：<b>欧洲财政赤字会上行 → 欧元债券供给增加 → 对欧股是双刃剑</b>（国防股受益，但财政担忧压制整体估值）。乌克兰局势方面，这笔钱意味着消耗战还会持续，短期看不到终战。</div>
+        <div class="source">来源：<a href="https://www.usnews.com/news/world/articles/2026-07-03/nato-leaders-to-affirm-ironclad-commitment-to-collective-defence-in-ankara-summit-text-says" target="_blank">US News</a> · <a href="https://www.thehindu.com/news/international/nato-leaders-in-ankara-aiming-to-smooth-over-tensions-with-trump/article71177759.ece" target="_blank">The Hindu</a> · <a href="https://www.ispionline.it/en/publication/the-ankara-files-approaching-the-nato-summit-240877" target="_blank">ISPI</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌克兰前线</span>
+        <h4>乌克兰深入打击俄本土，俄方警告"大规模报复"</h4>
+        <p>NYT 7 月 3 日：乌克兰军队近期更深入地打击俄罗斯本土目标，乌克兰总统警告莫斯科正准备"大规模打击"。乌军在前线米格-29 连损之后，正转向远程无人机+导弹战术。俄罗斯方面继续在乌东缓慢推进，但代价高昂。</p>
+        <div class="why">🦞 <b>联动：</b>这正好解释了 NATO 为什么要给 $800 亿——乌克兰在战场上打得很苦，需要持续输血。对市场来说，乌克兰局势已从"冲击事件"变成<b>结构性背景噪音</b>：它不再引发单日跳涨跳跌，但持续推高能源/粮食/国防板块的 risk premium。如果俄罗斯真的发动"大规模报复"（比如攻击北约后勤枢纽），那就是升级信号。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/section/world" target="_blank">NYT World</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed · 就业 · 大宗商品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美国就业</span>
+        <h4>6 月非农仅 +5.7 万：预期 11 万的一半，Fed 9 月加息概率应声崩到 50%</h4>
+        <p>7 月 2 日公布的 6 月 NFP：仅 <b>+57,000</b>，远低于预期 ~110,000。休闲酒店业反而流失 6.1 万岗位（世界杯旅游拉动不及预期）。劳动参与率降至 2021 年 3 月以来最低。CME FedWatch：9 月加息概率从 65% → 50%。Fed 主席 Warsh 上月表示"看 3-6 个月趋势比单月重要"，但连续两月走弱已经开始动摇鹰派立场。</p>
+        <div class="why">🦞 <b>读给你听：</b>6 万多新增岗位意味着什么？疫情前美国月均新增 ~20 万，现在不到 1/3。<b>这不是"soft landing"，是"hard cooling"</b>——从年初世界杯拉动的假繁荣回到了真实的放缓趋势。金融视角：加息概率下降 → 美元走弱 → 新兴市场（包括港股/A 股）获得喘息空间。但如果就业继续恶化，"衰退交易"会替代"降息交易"成为主导，那时风险资产反而会跌——<b>降息好事，但要是因为衰退才降的，就不好了</b>。</p>
+        <div class="source">来源：<a href="https://www.ig.com/uk/trading-strategies/us-jobs-report-june-2026-what-it-means-for-uk-investors-260703" target="_blank">IG UK</a> · <a href="https://www.techtimes.com/articles/319594/20260703/june-jobs-report-57000-payrolls-miss-consensus-half-hike-odds-crumble.htm" target="_blank">TechTimes</a> · <a href="https://finance.yahoo.com/economy/policy/articles/fed-bets-decline-june-jobs-141500096.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金 · 油价</span>
+        <h4>黄金突破 $4,100：State Street 看到明年 Q1 $5,500</h4>
+        <p>7 月 3 日：黄金跳涨 2%+ 突破 <b>$4,123/盎司</b>，从八个月低点反弹。触发因素：弱非农 → Fed 加息预期降温 → 实际利率下行 → 黄金走强。同时油价维持低位（Brent ~$72），霍尔木兹航运恢复降低了通胀二次抬头的担忧。State Street 预测基准情景下金价 2027 Q1 可达 <b>$5,500/盎司</b>，理由是股债相关性高位下黄金的分散价值凸显。</p>
+        <div class="why">🦞 <b>配置含义：</b>黄金这轮的逻辑不是"避险"（地缘风险溢价在消退），而是<b>"利率见顶 + 股债同跌风险"</b>。State Street 的 $5,500 目标意味着从当前还有 ~33% 空间。如果你在配置港股/A 股组合，黄金相关标的（山东黄金、紫金矿业、SPDR Gold）可以作为对冲腿——<b>当 NFP 弱到让市场从"加息恐慌"切换到"衰退恐慌"时，黄金是唯一在两种情景下都能涨的资产</b>。</p>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.kitco.com/news/article/2026-07-03/state-streets-baseline-scenario-sees-gold-price-high-5500oz-q1-2027" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国经济</span>
+        <h4>Q1 GDP 终值确认 +2.1%，CPI 5 月回升到 4.2%</h4>
+        <p>BEA 7 月 3 日发布 Q1 GDP 第三次估值：年化 <b>+2.1%</b>（与前值一致）。但 5 月 CPI 同比回升到 <b>4.2%</b>（4 月 3.8%），通胀回落趋势被打断。组合起来看：经济在放缓（Q1 2.1% 不算强），通胀还在 4%+ 的高位——<b>类滞胀</b>的苗头在显现。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"类滞胀"是金融资产最不喜欢的环境：企业盈利随经济放缓走弱，但 Fed 又因为通胀高企不敢降息。1970 年代的剧本。不过当前 4.2% 远低于 70 年代的 10%+，只是方向不利。<b>这对成长股估值是逆风</b>，但 AI 龙头的 EPS 增速足够强可以对冲——所以你看到 Nasdaq 虽然波动大但没崩。</p>
+        <div class="source">来源：<a href="https://www.bea.gov/" target="_blank">BEA</a> · <a href="https://tradingeconomics.com/united-states/inflation-cpi" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 4,073（+1.16%），CSI 300 +0.93%，反弹修复</h4>
+      <p>7/3 收盘：上证综指 +1.16% 至 ~4,073 点，CSI 300 +0.93%，深圳成指跟涨。此前两日 A 股连跌（CSI 300 曾跌 3% 创三周新低），7/3 随亚太反弹修复。财新服务业 PMI 仍在扩张区间，显示内需尚可。板块方面：科技/半导体跟随亚太反弹，黄金股强势（金价突破 $4,100）。</p>
+      <div class="why">🦞 <b>解读：</b>A 股这两天的走势是"跌多了反弹"，不是趋势反转。CSI 300 从 6/12 的高点已回落约 5%，<b>4,000 点是心理支撑</b>。弱非农 → Fed 加息预期降温 → 美元走弱 → 人民币贬值压力缓解，这对 A 股是边际利好。但 4.2% 的 CPI 和 2.1% 的 GDP 说明国内复苏仍在"弱修复"阶段，<b>不追高、等回调</b>是更稳的策略。</div>
+      <div class="source">来源：<a href="https://www.bbntimes.com/financial/sse-composite-today-shanghai-benchmark-climbs-toward-4-073-as-chinese-equities-track-broader-asia-pacific-recovery" target="_blank">BBN Times</a> · <a href="https://uk.investing.com/news/stock-market-news/asia-stocks-rebound-as-chipmakers-recover-from-selloff-weak-oil-boosts-sentiment-4756165" target="_blank">Investing.com</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 +1.28%~1.93%，黄金股领涨，腾讯连续 32 天回购</h4>
+      <p>7/3 收盘：恒指 +1.28%（盘中一度 +1.93%），报 ~23,416 点。黄金相关股领涨（金价突破 $4,100），科技股反弹。腾讯连续第 32 天回购，7/3 回购 115 万股（HK$5.01 亿），价格区间 HK$431.4-443.8，累计回购 3,452 万股。日经 +1.5%，KOSPI +5.76%（韩国半导体 V 型反转）。</p>
+      <div class="why">🦞 <b>解读：</b>港股 23,400 附近是近期中枢。腾讯的持续回购（32 天不间断）是<b>重要的底部信号</b>——管理层认为股价低于内在价值，而且有现金流支撑。从估值看，恒指 PE 仍在历史低位区间，向下空间有限。但要突破 24,000 需要盈利催化剂（中报季在 8 月）。<b>弱非农 → 美元走弱 → 港股受益</b>（港币挂钩美元，美元弱 = 外资回流新兴市场）。</div>
+      <div class="source">来源：<a href="https://www.bbntimes.com/financial/hong-kong-stock-exchange-today-hang-seng-index-jumps-1-57-to-23-416-as-gold-related-shares-lead-afternoon-rally" target="_blank">BBN Times</a> · <a href="https://news.futunn.com/en/post/75523057/tencent-has-repurchased-shares-for-32-consecutive-days-accumulating-a" target="_blank">Futu</a> · <a href="https://www.cnbc.com/2026/07/03/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — Dow 创纪录 52,900（+1.1%），Nasdaq -0.8%，半导体两日血洗</h4>
+      <p>7/2 收盘（7/3 美股因独立日休市）：Dow +1.1% 至 <b>52,900</b>（再创新高），S&amp;P 500 基本持平 7,483，Nasdaq -0.8%。芯片股惨烈：费城半导体 -5.4%，Micron -7%、Marvell -10%、Applied Materials -10%、SanDisk -13%、Tesla -8%（尽管交付数据强）。但 Micron 盘后财报远超预期，盘后涨 20%。<b>板块轮动加剧</b>：资金从科技/芯片切向传统行业（Dow 受益）。</p>
+      <div class="why">🦞 <b>跨市场解读：</b>Dow 创高 + Nasdaq 跌 = <b>"AI 见顶论 vs 传统复苏"的轮动</b>。但别急着下结论——Micron 财报炸裂说明 AI 需求还在加速，芯片股的下跌更像是<b>"拥挤交易的技术性回调"</b>而非基本面反转。如果你是 lainy 的视角：美股现在分化极大，指数层面看 Dow 强但实际上是少数权重股拉动的。<b>真正的机会在波动之后</b>——Micron 盘后涨 20% 说明市场对 AI 的信仰只需要一个好数字就能恢复。</div>
+      <div class="source">来源：<a href="https://www.home.saxo/content/articles/macro/market-quick-take---3-july-2026-03072026" target="_blank">Saxo</a> · <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🦞 龙虾老师的跨市场解读</h4>
+      <p><b>本周核心叙事：</b>"非农弱 → Fed 鸽 → 美元弱 → 新兴市场受益" 和 "半导体估值恐慌 → 财报验证 → 信仰恢复" 两条线在并行。A 股和港股的反弹更多是跟随亚太情绪，不是内生催化驱动。<b>下一个关键节点是 Micron 财报（已出，超预期）和 7/10 SK Hynix Nasdaq 上市</b>——如果 SK Hynix IPO 火爆，会再次点燃 HBM/存储链情绪。</p>
+      <div class="why">🦞 <b>给 lainy 的操作思路：</b>不要追涨杀跌。当前市场处于"高波动 + 板块轮动"阶段，最适合的是：<b>持有核心仓位 + 留弹药等回调</b>。黄金可以作为对冲腿配置 5-10%。港股腾讯的回购底给了一个安全垫，如果跌到 HK$420 以下是加仓机会。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>零售 · 奢侈品 · 新消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>Versace 任命 Pieter Mulier 为新创意总监：Prada 集团整合第一步</h4>
+        <p>7 月 1 日生效：Versace 任命前 Alaïa 创意总监 Pieter Mulier 为新 CCO，这是 Prada 集团收购 Versace 后的首次重大人事调整。Mulier 以紧身高定和建筑感剪裁闻名，首秀要到 2027 年。同时，Taylor Swift 婚礼的婚纱猜测也把 Versace/Mulier 推上话题热搜。</p>
+        <div class="why">🦞 <b>商业含义：</b>Prada 集团收购 Versace 后的整合逻辑：Mulier 的设计语言（极简+身体线条）和 Versace 的 glam 混搭，是要把 Versace 从"暴发户风"拉到"高智感性感"的路线。对标 LVMH 整合 Dior（用 Kim Jones）的剧本。<b>对 Prada 集团（1913.HK）的估值意义</b>：如果 Mulier 首秀成功，Versace 的收入可以翻 2-3 倍，集团整体利润率上行。但奢侈品的人事更迭风险极高——Mulier 在 Alaïa 干得不错，但 Versace 的体量和调性不同。</div>
+        <div class="source">来源：<a href="https://www.drapersonline.com/news/this-weeks-fashion-retail-people-moves-asda-next-dr-martens" target="_blank">Drapers</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">快时尚</span>
+        <h4>Uniqlo 国际业务 H1 财年 +22.4%：趁中国低价电商被监管之际抢空白市场</h4>
+        <p>Uniqlo 国际业务 H1 FY2026：收入 ~$79.3 亿（同比 +22.4%），利润 ~$14.9 亿（+37.4%）。核心增长来自东南亚和北美。策略定位：当 Temu/Shein 在北美欧洲遭遇监管壁垒时，Uniqlo 以"质量可控的平价"填补中间市场空白。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是消费分级的经典案例——<b>不是最便宜的赢，而是"最便宜的靠谱"赢</b>。Temu 被监管后，美国消费者不会回到全价 Gap，但也不信任 Temu 的质量，Uniqlo 卡位正好。<b>迅销集团（9983.T）</b>的股价催化剂在国际占比提升到 50%+ 后估值会从"日本零售股"切换到"全球消费股"。</div>
+        <div class="source">来源：<a href="https://economy.ac/news/2026/07/202607289470" target="_blank">The Economy</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美国消费</span>
+        <h4>7 月 4 日独立日大促：零售商集体押注" patriot spending"</h4>
+        <p>NBC News / Rolling Stone 汇总：Macy's、Nike、Nordstrom、Anthropologie、REI 等全面启动 7/4 促销，Anthropologie 额外 50% off sale 区，REI 打 Hoka/Patagonia 折扣。专家建议买：户外装备、家电、夏季服饰；不建议买：电子产品（等 Black Friday）。</p>
+        <div class="why">🦞 <b>消费信号：</b>7/4 促销力度是<b>下半年消费信用的温度计</b>。如果今年折扣深、清库存压力大，说明消费者在"降级消费"——这对美国零售股（Target、Macy's）是利空，对折扣渠道（TJMaxx、Ross）是利好。结合弱非农（休闲酒店业流失 6.1 万岗位），美国消费的下半场不乐观。</div>
+        <div class="source">来源：<a href="https://www.nbcnews.com/select/shopping/july-fourth-2026-what-to-buy-and-skip-rcna352546" target="_blank">NBC News</a> · <a href="https://www.rollingstone.com/product-recommendations/electronics/best-fourth-of-july-sales-2026-top-deals-discounts-online-1235588801/" target="_blank">Rolling Stone</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">明星婚礼</span>
+        <h4>Taylor Swift × Travis Kelce 在麦迪逊广场花园完婚！Adam Sandler 主持！</h4>
+        <p>7 月 3 日晚 7:30，Taylor Swift 和 NFL 球星 Travis Kelce 在纽约麦迪逊广场花园（MSG）正式完婚！MSG 外墙打出 "JUST MARRIED!" 灯牌，公关 Tree Paine 确认。婚礼流程：7/2 晚彩排晚宴（100 位宾客）→ 7/3 正式仪式 → 深夜派对。<b>Adam Sandler 担任证婚人</b>，没有伴娘。Karlie Kloss + Joshua Kushner 等出席。NYC 封路许可从 7/2 到 7/4 中午。Blake Lively + Ryan Reynolds 没来（在 200 英里外的马术比赛）。</p>
+        <div class="why">🦞 <b>花边看点：</b>这是 2026 年全球最大娱乐圈事件，没有之一。MSG 包场办婚礼（不是租餐厅是租整个体育馆），封路三天——这个排场只有超级碗可比。婚纱设计师还没确认，但 Versace 的新任 Mulier 和新娘的婚纱猜测绑在一起上了热搜。<b>商业角度</b>：Swift 一场婚礼带动的经济效应（酒店、安保、餐饮、媒体）估计 >$1 亿，NYC 旅游业直接受益。E! Online 独家转播权据说 $5000 万级别。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/07/03/style/taylor-swift-wedding-travis-kelce" target="_blank">NYT Live</a> · <a href="https://www.theguardian.com/music/2026/jul/03/taylor-swift-travis-kelce-wedding-msg-new-york" target="_blank">The Guardian</a> · <a href="https://www.dailymail.com/tvshowbiz/article-15939435/taylor-swift-travis-kelce-wedding-live.html" target="_blank">Daily Mail</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>温网第 5 日：德约追平费德勒胜场纪录，萨巴伦卡 vs 大坂直美上演巅峰对决</h4>
+        <p>7 月 3 日温网第 5 日：德约科维奇 3-1 击败 Rinderknech，追平费德勒温网胜场纪录，晋级 16 强。辛纳 3-0 速胜。女单方面，萨巴伦卡力克奥斯塔彭科，下一轮对阵<b>大坂直美</b>——这是 2026 年最有看点的女单对阵。Chris Rock 出现在温网包厢看球。</p>
+        <div class="why">🦞 <b>观赛建议：</b>萨巴伦卡 vs 大坂直美是力量型网球的巅峰——两人都打到 200km/h 发球，底线对拉震撼。如果你有时间，值得追。德约追平费德勒纪录意味着他大概率要打破所有温网历史记录了，38 岁仍在打，本身就是传奇。</div>
+        <div class="source">来源：<a href="https://www.bbc.com/sport/tennis/articles/cevlkr4jxy4o" target="_blank">BBC Sport</a> · <a href="https://www.bbc.com/sport/tennis/articles/cddlqd0877mo" target="_blank">BBC Sport</a> · <a href="https://www.cbssports.com/tennis/news/wimbledon-2026-schedule-bracket-live-updates-results-scores-matches-where-to-watch/live/" target="_blank">CBS Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">电影</span>
+        <h4>宝莱坞：阿米尔·汗 7/5 班德拉宅邸举办 intimate 婚礼；《Jailer 2》定档 Dussehra</h4>
+        <p>阿米尔·汗（Aamir Khan）与 Gauri Spratt 不办婚宴，只于 7 月 5 日在孟买班德拉住所举办亲密婚礼。同时 Rajinikanth 的《Jailer 2》发布新预告，锁定 Dussehra 档期上映。Netflix 7/4 周末推荐：《A Beautiful Day in the Neighborhood》等新片上线。</p>
+        <div class="why">🦞 <b>聊天素材：</b>同一天 Taylor Swift 在纽约包体育馆结婚，阿米尔·汗在孟买家里"安静办"——两个世界的巨星婚礼画风完全不同，可以聊。Rajinikanth 的《Jailer 2》是南印度电影票房的另一波验证。</div>
+        <div class="source">来源：<a href="https://timesofindia.indiatimes.com/entertainment" target="_blank">Times of India</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>一条彩蛋</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">量子物理</span>
+        <h4>科学家实现"量子时间反转"：让系统看起来在倒着跑，还能从中提取能量</h4>
+        <p>ScienceDaily 7 月 3 日：研究人员开发了量子控制技术，通过精确管理量子测量，可以重塑系统的"时间之箭"，让量子系统<b>看起来在时间上倒退运行</b>，甚至能从中提取能量。同期另一发现：UCLA 团队发现 NDRG1 蛋白是导致<b>老年肌肉修复变慢</b>的"刹车"——年老不等于不可逆。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>量子时间反转不是时间旅行（别激动），但它说明<b>量子层面的"熵增"不是不可逆的</b>——至少在极小尺度可以操纵。长期来看这可能是量子计算纠错的新路径。NDRG1 的发现更贴近生活：如果能用药物抑制这个蛋白，老年人的肌肉修复能力可以恢复——这对医疗/养老产业有深远影响。从研究到商用 10-15 年，但方向是好的。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/news/matter_energy/physics/" target="_blank">ScienceDaily Physics</a> · <a href="https://www.sciencedaily.com/news/" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

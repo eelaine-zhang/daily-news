@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-24</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--macro);
+  }
+  .market-card h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-card .idx { font-size: 13px; color: var(--text-dim); margin: 2px 0; }
+  .market-card .red { color: #ff6b6b; }
+  .market-card .green { color: #a5f3a5; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 24 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>停火：</b>Trump 今日宣布美伊停火，霍尔木兹海峡重开——周一 1900 万桶原油通过，Brent 崩至 <b>$78</b>，油价单日暴跌 11%。参议院同日通过战争权力决议「打脸」Trump。</li>
+      <li><b>芯片血洗：</b>全球半导体 ETF (SMH) 单日 <b>-7%</b>——Micron 财报前夕暴跌 13%，韩国 SK Hynix/Samsung 拖累全球存储芯片集体跳水。</li>
+      <li><b>美联储鹰派加码：</b>19 名委员中 9 人支持今年加息，美元走强黄金跌至 $4,129——周四 PCE 数据将定调。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>存储芯片集体跳水的日子</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">存储芯片崩盘</span>
+        <h4>Micron 财报前暴跌 13%，韩国存储芯片抛售蔓延全球</h4>
+        <p>Micron (MU) 周二收跌 <b>13.18%</b> 至 $1,051.77，拖累费城半导体 ETF (SMH) <b>-7%</b>。抛售源头在韩国——SK Hynix 和 Samsung 周内连续下挫，蔓延到美国存储芯片板块。市场核心担忧：AI 基建开支增速见顶？HBM 产能扩张是否供过于求？Micron 周三盘后财报成了「全村的希望」。不过 BofA 反向操作，把 MU 目标价上调了 58%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 芯片链从「无脑涨」进入「分化定价」的信号弹。过去半年 HBM = 印钞机，现在市场开始问：<b>每美元 AI capex 的回报率到底多少？</b> Micron 财报不只是看营收——HBM3e/HBM4 的 ASP、出货指引、2027 年产能扩张计划才是真正的定价锚。如果 Micron 给出强指引，今天就是抄底机会；如果 HBM 占比不及预期，整条存储链要继续杀。</div>
+        <div class="source">来源：<a href="https://www.fool.com/coverage/stock-market-today/2026/06/23/stock-market-today-june-23-micron-falls-as-south-korea-led-memory-selloff-raises-earnings-stakes/" target="_blank">Motley Fool</a> · <a href="https://stocktwits.com/news-articles/markets/equity/mu-stock-down-ahead-of-q3-earnings-bofa-raised-micron-price-target/cZKw7ZIR7aY" target="_blank">Stocktwits</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">去英伟达化</span>
+        <h4>CPU / ASIC / 自研芯片全面进攻：2026 年英伟达的「多面受敌」</h4>
+        <p>多家分析机构指出：随着 AI 从训练转向推理（inference），Server CPU、定制 ASIC（Google TPU、Amazon Trainium、Meta MTIA）、自研芯片需求井喷。Agentic AI 的兴起让硬件需求更加碎片化——不再是一张 GPU 通吃所有场景。同时 TSMC 的 CoWoS 封装仍然是整条链的<b>绝对瓶颈</b>，所有玩家都在排队。</p>
+        <div class="why">🦞 <b>市场含义：</b>英伟达的护城河不是被一家公司挑战，而是被<b>整个生态从不同方向侵蚀</b>。训练（Nvidia 高端 GPU）的垄断短期内无解，但推理市场（量大、单价低、毛利薄）会分流到 ASIC 和自研芯片。对投资人：Nvidia 仍然是 AI 芯片之王，但<b>2026 下半年「Nvidia alpha」可能会跑输更广泛的芯片股</b>——TSMC、Broadcom、Marvell 这些「卖铲子 + 卖水」的角色反而风险回报比更好。</div>
+        <div class="source">来源：<a href="https://windowsnews.ai/article/beyond-gpus-the-2026-onslaught-of-cpus-asics-and-custom-silicon-challenging-nvidias-ai-crown.429306" target="_blank">Windows News</a> · <a href="https://www.insidermonkey.com/blog/why-tsmcs-cowos-role-keeps-taiwan-semiconductor-tsm-central-to-the-hbm-driven-ai-chip-boom-1787826/" target="_blank">Insider Monkey</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM 供给</span>
+        <h4>黄仁勋公开催 SK Hynix「多产点 HBM」，62% 市占的甜蜜与压力</h4>
+        <p>6 月 2 日，Nvidia CEO Jensen Huang 公开喊话 SK Hynix 加码 HBM 产能。SK Hynix 目前同时稳定出货 HBM3E 和 HBM4，占全球 HBM 市场 <b>约 62%</b>。AI 记忆芯片的瓶颈不再是晶圆制造，而是先进封装（CoWoS）和 HBM 堆叠良率。</p>
+        <div class="why">🦞 <b>供应链读法：</b>CEO 公开「催货」= 供需缺口比外界想象的更大。SK Hynix 的 HBM 产能扩张节奏直接决定 Nvidia B200/Rubin 的出货量，也间接决定 Google TPU、AMD MI400 的交付时间。对 lainy 关注的产业链：<b>HBM 是 AI 硬件里弹性最大的环节</b>——单价每年涨 40-60%，而制造成本几乎不变，毛利率碾压普通 DRAM。</div>
+        <div class="source">来源：<a href="https://www.bitmex.com/blog/what-is-sk-hynix" target="_blank">BitMex Research</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>停火日！</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火</span>
+        <h4>Trump 宣布美伊停火，霍尔木兹海峡「完全开放」——油价单日崩 11%</h4>
+        <p>今天最大新闻：Trump 宣布美伊停火生效。6/21 美军轰炸 Fordow、Natanz、Isfahan 三处伊朗核设施后，双方在瑞士斡旋下达成 14 点停火备忘录（MoU）。Trump 声称霍尔木兹海峡「完全开放」，周一有 <b>1900 万桶</b>原油通过——「史上最多」。国际能源署 32 国已释放 <b>4 亿桶</b>战略储备稳供应。Brent 原油从高位暴跌 <b>11%</b>，目前约 <b>$78/桶</b>。</p>
+        <div class="why">🦞 <b>市场传导链：</b>油价暴跌 → 通胀预期下调 → 美联储加息压力减轻（但鹰派基调不变）→ 风险资产理论上受益。但要注意：<b>停火 ≠ 和平</b>。MoU 只有 60 天免费通行期，执行机制未定，伊朗随时可能翻脸。市场会先交易「缓和红利」，但如果后续谈判破裂，油价会 V 型反转。建议关注：伊朗是否会真交出高浓缩铀、霍尔木兹商船通行恢复速度。</div>
+        <div class="source">来源：<a href="https://en.wikipedia.org/wiki/2025%E2%80%932026_Iran%E2%80%93United_States_negotiations" target="_blank">Wikipedia</a> · <a href="https://www.dailymail.com/news/article-15922817/Trump-cheers-needed-dip-oil-prices-declares-Strait-Hormuz-OPEN-peace-Iran-remains-balance.html" target="_blank">Daily Mail</a> · <a href="https://www.nytimes.com/live/2026/06/22/world/iran-us-trump-lebanon" target="_blank">NYT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">参议院打脸</span>
+        <h4>美参议院通过战争权力决议，史上首次「叫停 Trump 对伊军事行动」</h4>
+        <p>参议院今天以跨党派票数通过战争权力决议，要求 Trump 停止对伊军事行动或寻求国会授权。几位共和党参议员倒戈加入民主党。这是 Trump 任期内参议院首次通过针对他的战争权力决议——尽管 White House 已表示将否决。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个投票是<b>政治风向标</b>而非实际政策改变（Trump 会否决），但它传递的信号是：两党对「无限期中东军事行动」的耐心在耗尽。对市场来说，这降低了「战争升级」的尾部风险——如果国会真的开始限制总统的军事权限，油价的地缘溢价会被进一步压缩。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/senate-iran-war-powers-resolution-trump-7462a9a561103f531d995aac91f9fc96" target="_blank">AP News</a> · <a href="https://www.nytimes.com/2026/06/23/us/politics/senate-trump-war-powers-iran.html" target="_blank">NYT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌克兰</span>
+        <h4>乌克兰开启新一轮中程打击行动，战争进入新阶段</h4>
+        <p>ISW（战争研究所）最新报告指出：乌克兰正在发动中程打击行动（IRSM campaign），配合新型机械化攻击，标志着乌俄战争进入新阶段。同时，Chatham House 分析了伊朗冲突对俄乌战争的溢出效应——美伊停火可能让美国把更多注意力转回乌克兰。</p>
+        <div class="why">🦞 <b>市场视角：</b>乌俄是欧洲能源和粮食定价的底层变量。如果美国注意力从伊朗切回乌克兰，对欧洲天然气、小麦期货、东欧防务股都是重新定价的契机。但短期内，伊朗停火让能源市场松了一口气，乌克兰局势对大宗商品的溢价影响暂时被掩盖。</div>
+        <div class="source">来源：<a href="https://understandingwar.org/" target="_blank">ISW</a> · <a href="https://www.chathamhouse.org/" target="_blank">Chatham House</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>鹰派美联储 + 停火红利</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>9/19 委员支持今年加息——鹰派 Warsh 时代「耐心用完」</h4>
+        <p>上周美联储维持利率不变，但立场更加鹰派。19 名决策者中已有 <b>9 人</b>预计今年至少加息一次，市场越来越多押注 <b>9 月</b>就会动手。本周四 PCE 通胀数据（美联储最看重的通胀指标）将成为下一个定价锚。美元指数逼近一年高位，10 年期国债收益率上行。</p>
+        <div class="why">🦞 <b>对 lainy 的影响：</b>美联储加息 = 美元更强 = 新兴市场资本外流 = 港股/A 股承压。但这次有点不一样——如果停火让油价真正回落，通胀预期会下来，美联储反而可以不那么鹰。所以<b>周四 PCE 数据比停火本身更重要</b>：如果 PCE 超预期，加息定价会迅速从 1 次跳到 2-3 次，科技股估值会再杀一波。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.fxstreet.com/analysis/global-macro-transmission-monitor-week-ending-june-19-2026-202606230457" target="_blank">FXStreet</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>黄金跌至 $4,129（-1.49%），原油崩至 $78——强美元 + 停火双杀</h4>
+        <p>黄金 6/23 收 $4,129.07/oz，日内跌 1.49%，月跌 9.63%。Brent 原油约 <b>$78/桶</b>（停火后暴跌 11%）。美元走强 + 美联储鹰派 = 持有无息资产（黄金）的机会成本上升。油价虽然因为停火暴跌，但如果 60 天后霍尔木兹再次受扰，随时可能 V 型反弹。</p>
+        <div class="why">🦞 <b>配置视角：</b>黄金从 $4,500+ 高位回调到 $4,129，月跌近 10%——这波回调的核心驱动是「鹰派美联储 + 风险溢价消退」。如果 PCE 超预期 + 油价只是短暂下跌，黄金可能继续承压。但反过来，如果通胀数据温和，$4,000 附近可能是很好的重新入场点。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics · Gold</a> · <a href="https://fortune.com/article/price-of-oil-06-23-2026/" target="_blank">Fortune · Oil</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>6/23 收盘 · 全球科技股血洗日</small></h2>
+    <div class="market-grid">
+      <div class="market-card">
+        <h4>🇺🇸 美股（6/23 收盘）— 科技股领跌，半导体血洗</h4>
+        <div class="idx">S&amp;P 500：<span class="red">-1.44%</span> · Nasdaq Composite：<span class="red">-2.2%</span> · Dow Jones：<span class="red">-0.1%</span></div>
+        <div class="idx">费城半导体 ETF (SMH)：<span class="red">-7%</span> · Micron (MU)：<span class="red">-13.18%</span> 至 $1,051.77</div>
+        <p style="font-size:13px; margin-top:8px;">BofA 加息预警 + 亚洲芯片抛售蔓延 + AI capex 担忧 = 三重暴击。Nasdaq 跌至一周新低。市场在问：AI 的钱什么时候能赚回来？本周 Micron 财报（周三盘后）和 PCE（周四）是定价双锚。SpaceX IPO 后持续低迷，上市热度消退。</p>
+      </div>
+      <div class="market-card">
+        <h4>🇭🇰 港股（6/23 收盘）— 恒指 -1.51%，科技股 -3.3%</h4>
+        <div class="idx">恒生指数：<span class="red">-1.51%</span> 至 23,409.45 · 恒生科技指数：<span class="red">-3.3%</span></div>
+        <p style="font-size:13px; margin-top:8px;">AI 硬件和科技股集体暴跌，有色金属同步杀跌。美联储鹰派预期 + 全球芯片抛售双重打击。停火消息在亚洲收盘后才确认，当天的反弹红利要等今天（6/24）才能体现。关注今天开盘是否能借停火利好修复。</p>
+      </div>
+      <div class="market-card">
+        <h4>🇨🇳 A 股（6/23 收盘）— 沪指 -0.78%，创业板重挫</h4>
+        <div class="idx">上证综指：<span class="red">-0.78%</span> 至 4,130.80 · CSI 300：<span class="red">-2.8%</span> · ChiNext：<span class="red">-3.8%</span></div>
+        <p style="font-size:13px; margin-top:8px;">美联储加息预期压制风险偏好，创业板跌幅最大。科创板 50 指数 -1.7%。A 股对「停火」的反应通常滞后一天，加上美联储鹰派的压力更直接，短期 A 股可能在 4,100 附近磨底。不过如果周四 PCE 温和，反弹空间不小。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>杂货店之困 + 美容并购</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">零售 / 杂货</span>
+        <h4>Kroger 同店增速从 3.2% 降到 1%——美国杂货消费踩刹车</h4>
+        <p>Kroger 最新季度同店销售（不含燃油）增速仅 <b>1%</b>，去年同期还有 3.2%。公司维持全年指引 1-2% 不变，但市场反应消极。Deloitte 最新消费者脉搏报告也印证：杂货消费意愿升至 2025 年 8 月以来最高（因为食品通胀回来了），但非必需消费正在被挤压。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Kroger 是美国最大传统杂货商之一，它的减速不只是公司层面的问题——是<b>美国消费者「钱包分配」在发生质变</b>。食品价格涨 → 杂货支出占比上升 → 可支配收入被挤压 → 餐饮、服装、电子消费品受累。这个逻辑链对宏观判断很重要：如果 PCE 里核心服务通胀还黏在 4%+，美联储鹰派就有底气。</div>
+        <div class="source">来源：<a href="https://www.thestreet.com/retail/kroger-stock-slide-reveals-bigger-grocery-problem" target="_blank">TheStreet</a> · <a href="https://www.deloitte.com/us/en/insights/topics/economy/consumer-pulse/state-of-the-us-consumer.html" target="_blank">Deloitte</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美妆 / 并购</span>
+        <h4>Ulta Beauty 收购 Space NK——美妆零售的「规模 + 全球化」竞赛</h4>
+        <p>PwC 2026 消费市场并购趋势报告点名：Ulta Beauty 收购 Space NK 反映了一个行业大趋势——高端美妆零售的控制权、全球品牌供应商关系、全渠道覆盖正在成为<b>核心竞争力</b>。食品饮料领域也在加速整合，六大细分赛道的并购活跃度达近年高位。</p>
+        <div class="why">🦞 <b>市场含义：</b>消费并购升温通常出现在行业增速放缓的拐点——增长买不动了就买整合。对投资人的信号：消费赛道的 alpha 从「同店增长」转移到「并购整合能力」。美妆/个护的 premiumization（高端化）故事讲了好几年，现在到了<b>谁能在高端品牌端掌控渠道</b>谁赢的阶段。</div>
+        <div class="source">来源：<a href="https://www.pwc.com/gx/en/services/deals/trends/consumer-markets.html" target="_blank">PwC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>世界杯 + 超人本色</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">⚽ 世界杯</span>
+        <h4>葡萄牙 5-0 屠杀乌兹别克斯坦 · 法国 3-0 伊拉克（Mbappé 双响）</h4>
+        <p>C 罗带队，葡萄牙 5-0 碾压乌兹别克斯坦，C 罗打入开场进球。另一边法国 vs 伊拉克比赛中途因雷暴<b>延迟 2 小时</b>，成了世界杯史上最长比赛（131 分钟）。Mbappé 两球追平 Messi 世界杯进球纪录，Dembélé锦上添花，法国 3-0 拿下 Group I。今晚（6/24 10pm ET）哥伦比亚 vs 刚果（金）。</p>
+        <div class="why">🦞 <b>龙虾老师视角：</b>这届世界杯小组赛进球潮——攻强守弱的趋势很明显。C 罗 40 岁还在进球真的离谱，Mbappé 追 Messi 纪录是这届杯赛最大看点之一。今晚 lainy 如果有空的话可以看看哥伦比亚 vs 刚果（金），FS1 转播。</div>
+        <div class="source">来源：<a href="https://sports.yahoo.com/soccer/article/2026-world-cup-results-standings-and-schedule-live-scores-group-stage-updates-and-how-to-watch-050724193.html" target="_blank">Yahoo Sports</a> · <a href="https://www.bbc.com/sport/football/live/cq810n4exgvt" target="_blank">BBC Sport</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">🎬 DCU</span>
+        <h4>「真人超人」：David Corenswet 红毯上护 Milly Alcock 挡摄影师，全网封神</h4>
+        <p>Supergirl 电影（6/26 上映）纽约首映礼上，摄影师对 Milly Alcock 动手动脚，同场的「超人」David Corenswet 立刻挡上前保护。直播画面在社交媒体病毒式传播，粉丝狂赞「real life Superman」。Alcock 主演的 Supergirl: Woman of Tomorrow 是 DCU 的关键一步。</p>
+        <div class="why">🦞 <b>吃瓜视角：</b>这种「自然红」比花钱营销好太多——DCU 不用花一分钱宣传费，全网都在帮忙。对 Warner Bros. 来说，Supergirl 首周末票房预期可能因此上调。不过 DCU 口碑一向不稳定，先看看口碑再说。</div>
+        <div class="source">来源：<a href="https://www.thewrap.com/creative-content/movies/david-corenswet-defends-milly-alcock-photographer-supergirl-premiere/" target="_blank">The Wrap</a> · <a href="https://people.com/fans-praise-david-corenswet-aiding-supergirl-costar-milly-alcock-red-carpet-12005040" target="_blank">People</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科学花边 <small>星际访客 + 失落的世界</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">🔭 天文</span>
+        <h4>SETI 搜了星际彗星 3I/ATLAS 的无线电信号——结果只有人类噪音</h4>
+        <p>SETI 研究所对首个确认的第三颗星际来客——彗星 3I/ATLAS（2025 年 7 月发现）——进行了快速响应式无线电搜索。结果：没有外星技术信号，只有人类自己制造的电磁干扰。不过这次观测帮助确认了 3I/ATLAS 的物理特征。另一组科学家在陨石中发现了<b>太阳系早期一颗月球大小的原行星</b>被撞碎的证据。</p>
+        <div class="why">🦞 <b>彩蛋：</b>人类第三次确认了来自太阳系外的访客（1I/Oumuamua → 2I/Borisov → 3I/ATLAS），而且这次有了快速 SETI 响应能力——虽然没找到外星人，但「从发现到观测」的响应速度在指数级提升。那个失落世界的陨石故事更有趣：太阳系早期可能有过几十个月球至火星大小的「原行星」互相碰撞合并，今天的类地行星就是它们的残骸。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/releases/2026/06/260621060309.htm" target="_blank">ScienceDaily · SETI</a> · <a href="https://www.sciencedaily.com/news/top/technology/" target="_blank">ScienceDaily · Meteorite</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-05</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .market-card h5 { margin: 0 0 6px; font-size: 14px; }
+  .market-card .idx { font-size: 13px; color: var(--text-dim); }
+  .market-card .chg { font-size: 16px; font-weight: 600; margin: 4px 0; }
+  .chg.up { color: #4ade80; }
+  .chg.down { color: #f87171; }
+  .chg.flat { color: var(--text-dim); }
+  .market-card .note { font-size: 12px; color: var(--text-dim); margin-top: 4px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  @media (max-width: 640px) {
+    .market-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 5 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 芯片洗牌：</b>Broadcom AI 指引不及预期引爆 <b>1.3 万亿美元</b>半导体抛售；同时 Anthropic 找 Samsung 代工自研 2nm 芯片，Micron 在日本砸 <b>93 亿美元</b>扩 HBM 产能——AI 芯片"去英伟达化"正在从口号变成合同。</li>
+      <li><b>宏观：</b>美国 6 月非农只增 <b>5.7 万人</b>（预期 11.4 万），打脸"经济强劲"叙事；道指却在弱数据催化下创 <b>52,844 点</b>历史新高——市场赌美联储没法再硬撑了。</li>
+      <li><b>国际：</b>乌克兰无人机轰炸圣彼得堡石油设施，打到大俄第二大城；Trump 在 Rushmore 演讲警告"共产主义威胁"，美国 250 周年国庆被 <b>1.8 亿人</b>热浪笼罩。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Broadcom 抛售</span>
+        <h4>Broadcom AI 指引"只有"160 亿美元，引爆 1.3 万亿美元半导体大洗仓</h4>
+        <p>7/2 收盘后 Broadcom 给出 Q3 AI 收入指引 <b>$16B</b>，低于华尔街预期。次日开盘费城半导体指数暴跌 <b>6%+</b>，存储/光通信概念股大幅回落，拖累 Nasdaq 跌 0.8%。道指反而涨 1.1% 创历史新高——资金从拥挤的 AI/芯片仓位撤出，流入金融、消费等价值板块。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是"Broadcom 不行了"，而是市场对 AI capex 的预期被推得太满。$16B 在任何正常行业都是炸裂的增速，但华尔街要的是"超预期"。这次抛售的核心信号：<b>ASIC 定制芯片的增长曲线可能比 GPU 更波动</b>——每个大客户（Google/Meta）切换订单节奏不可预测。对 lainy 理解这条线的关键：AI 芯片不再是"闭眼买英伟达"的单边行情，而是"GPU + ASIC + HBM"三条线交替发力的博弈市。</div>
+        <div class="source">来源：<a href="https://eciks.org/11847-98008-stock-market-dow-record-nasdaq-chip-selloff" target="_blank">eciks</a> · <a href="https://ts2.tech/en/stock-market-today-03-07-2026/" target="_blank">TS2</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Anthropic × Samsung</span>
+        <h4>Anthropic 谈判 Samsung 代工 2nm 自研 AI 芯片——继 OpenAI Jalapeño 之后又一 Lab 自建硅</h4>
+        <p>The Information 7/2 报道：Anthropic 正与 Samsung 晶圆代工部门谈判，用 Samsung <b>2nm 工艺</b>制造定制 AI 芯片。同日 SamMobile 报道 Samsung 也在跟 Meta 谈类似合作。核心目的：降低对 Nvidia GPU 的依赖，控制推理成本。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是"AI Lab 自研硅"趋势的第三个确认信号（OpenAI Jalapeño → Google TPU 拆分 → Anthropic 找 Samsung）。对供应链格局的影响：① Samsung 晶圆代工终于找到突破口——TSMC 吃不下所有需求，2nm 产能给了 Samsung 翻身机会；② <b>每个大 Lab 都要自己的推理芯片</b>，这意味着推理算力的供给端将从"英伟达一家独大"变成"多家定制 ASIC 竞争"，长期压制 GPU 溢价。</div>
+        <div class="source">来源：<a href="https://www.sammobile.com/2026/07/04/samsung-talks-make-2nm-ai-chips-anthropic-meta/" target="_blank">SamMobile</a> · <a href="https://www.upi.com/Top_News/World-News/2026/07/03/Anthropic-Samsung-Electronics/7811783128641/" target="_blank">UPI</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Micron HBM</span>
+        <h4>Micron 在日本广岛动工 93 亿美元 HBM 扩产，2028 年量产下一代高带宽内存</h4>
+        <p>Bloomberg 7/4 报道：Micron 在广岛工厂破土 <b>¥1.5 万亿（$9.3B）</b>扩建项目，主攻下一代 HBM（高带宽内存）量产，预计 2028 年开始出货。日本产业大臣赤泽视察了工厂。这是 Micron 挑战 SK Hynix/Samsung HBM 双寡头格局的核心一步。</p>
+        <div class="why">🦞 <b>商业含义：</b>HBM 是 AI 芯片里最"卡脖子"的环节——Nvidia GPU 90% 的 HBM 来自 SK Hynix。Micron 此举意味着 HBM 供应链从"两家独大"走向"三足鼎立"。对 lainy 的报告框架：HBM 市场预计 2026 年达 <b>$54.6B</b>，如果 Micron 能拿到 Nvidia Rubin 平台的第三供应商资格（已在 6 月确认），其 HBM 业务收入有望在 2028-2029 年追平 SK Hynix。关注 Micron (MU) 的 HBM 产能爬坡节奏——这是 2027 年存储板块最大的 alpha。</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-07-04/micron-breaks-ground-on-9-billion-western-japan-plant-expansion" target="_blank">Bloomberg</a> · <a href="https://www.japantimes.co.jp/business/2026/07/04/tech/micron-hiroshima-chip-plant/" target="_blank">Japan Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 亚利桑那</span>
+        <h4>TSMC 获台湾当局批准再投 200 亿美元扩建亚利桑那工厂</h4>
+        <p>7/4 报道：TSMC 获台湾投审会批准追加 <b>$20B</b>投资亚利桑那州，建设 12 英寸晶圆厂和先进封装厂。同日 S&amp;P Global 上调 TSMC 信用评级展望，理由是"AI 芯片主导地位强化 EBITDA 和现金流生成能力"。台湾方面同时批准了 7 个海外投资项目，合计约 $230.5 亿。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>TSMC 亚利桑那工厂从"政治任务"变成"商业刚需"——先进封装（CoWoS）产能是英伟达 GB200/Rubin 交付的瓶颈环节，在美国本土做封装可以规避地缘风险溢价。S&amp;P 的评级上调意味着 TSMC 的"净现金头寸"可持续，这在半导体行业里极为罕见——<b>技术垄断 → 定价权 → 超额利润 → 净现金</b>的飞轮正在兑现。</div>
+        <div class="source">来源：<a href="https://www.aroged.com/2026/07/04/tsmc-received-permission-from-taiwanese-authorities-to-spend-another-20-billion-on-a-plant-in-the-united-states" target="_blank">Aroged</a> · <a href="https://www.insidermonkey.com/blog/tsmcs-ai-chip-dominance-strengthens-its-credit-outlook-1795303/" target="_blank">Insider Monkey</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>Trump：伊朗"迫切想和解"，卡塔尔/巴基斯坦调停人在多哈分别会见美伊谈判团</h4>
+        <p>7/2 Trading Economics 报道：Trump 表示美伊谈判"进展顺利"，卡塔尔和巴基斯坦调停人周三在多哈分别与美国和伊朗谈判团会面。同时中国原油进口对霍尔木兹海峡的依赖已降至 <b>33%</b>，通过增加南美、俄罗斯、非洲来源分散风险。</p>
+        <div class="why">🦞 <b>市场含义：</b>美伊从对抗走向谈判桌，油价应声回落——Brent 从前期高点降到 <b>$71-72</b>，WTI 降到 <b>$67-68</b>。对中国来说，霍尔木兹依赖度降到 1/3 是一个战略级变化，意味着即使中东出事，中国经济的能源缓冲也比 2023 年强得多。油价下行利好航空、化工下游、新兴市场通胀预期。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.cnenergynews.cn/article/4SF2Z9qrWWy" target="_blank">中国能源新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄 · 无人机战</span>
+        <h4>乌克兰无人机轰炸圣彼得堡石油设施——打到俄罗斯第二大城</h4>
+        <p>AP/Bloomberg/NBC 7/4 报道：乌克兰发动大规模无人机袭击，命中圣彼得堡港口和石油设施。泽连斯基证实此次袭击，称旨在削弱俄罗斯能源作战能力。此前 7/1 俄军对基辅发动 11 小时导弹+无人机袭击，造成 20 死 90 伤。专家分析：乌方在远程打击上已占优势，"真正的战斗才刚开始"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>战事从"东线堑壕"升级为"互相轰炸后方城市"。乌方打圣彼得堡的意义在于——证明有能力威胁莫斯科和圣彼得堡两大经济核心。对市场的影响：① 欧洲天然气/油价短期波动加大；② 俄罗斯石油出口设施被毁 → 俄油供应减少 → 全球油价底部有支撑；③ 欧洲军工/防务板块（Rheinmetall、BAE）利好持续性超预期。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/russia-ukraine-war-oil-st-petersburg-c95b97c0ab5ca8d06050f09e54ea69a9" target="_blank">AP News</a> · <a href="https://www.nbcnews.com/world/russia/st-petersburg-region-port-oil-terminal-hit-major-ukrainian-drone-attac-rcna352944" target="_blank">NBC News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">Trump · 250周年</span>
+        <h4>Trump 在 Rushmore 演讲：警告"共产主义威胁"，宣布"美国黄金时代刚开始"</h4>
+        <p>NPR/Guardian/CBS 7/4 报道：Trump 在美国 250 周年独立日前夜于 Mount Rushmore 发表半小时演讲，画风从"团结爱国"急转为"党派攻击"——将政治对手描述为"godless 共产主义者"，称他们是"1776 年 7 月 4 日的敌人"。随后在 Truth Social 发帖把民主党人 P 成 Pee-wee Herman。美国 28 个州 1.8 亿人同时遭遇极端热浪，多地国庆活动取消。</p>
+        <div class="why">🦞 <b>市场含义：</b>Trump 的"红色恐吓"叙事如果持续到 2026 中期选举周期，对中国相关资产（中概股、A 股外资流入）是持续的情绪压制。但实质性的关税/制裁政策已经被市场定价得差不多了。热浪才是真正值得关注的基本面变量——<b>极端高温 → 电力负荷飙升 → 天然气/煤炭短期需求跳增 → 通胀韧性</b>，给美联储"不降息"多了一个理由。</div>
+        <div class="source">来源：<a href="https://www.npr.org/2026/07/04/g-s1-132025/mount-rushmore-speech-trump-july-4-250" target="_blank">NPR</a> · <a href="https://www.theguardian.com/us-news/2026/jul/04/trump-launches-americas-250th-birthday-celebrations-with-partisan-attack" target="_blank">The Guardian</a> · <a href="https://www.cbsnews.com/news/trump-mount-rushmore-speech-july-4-communism/" target="_blank">CBS</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美联储 · 就业 · 大宗商品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">非农爆冷</span>
+        <h4>6 月非农仅 +5.7 万人（预期 11.4 万），剔除世界杯临时岗位只剩 1.7 万</h4>
+        <p>BLS 7/3 公布：6 月非农就业新增 <b>57,000 人</b>，远低于市场预期的 113,000-115,000 人。更惊人的是，剔除世界杯相关临时岗位后仅 <b>17,000 人</b>。前两个月数据也被下修。华尔街开始质疑 BLS 数据准确性，Yahoo Finance 报道称"分析师越来越不相信政府的就业数字"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年宏观叙事的分水岭事件。就业市场从"强劲"骤变为"接近停滞"，意味着：① 消费驱动型经济的基本面在松动；② 美联储"higher for longer"的底气被削弱——CME FedWatch 显示 <b>75.6% 概率维持利率不变</b>，市场只定价了今年 1 次 25bp 的动作。但弱就业也意味着衰退风险上升，所以市场反应矛盾：道指创历史新高（赌降息），但黄金和防御性板块同步走强（怕衰退）。</p>
+        <div class="source">来源：<a href="https://eciks.org/11775-47242-employee-jobs-report-june-layoffs" target="_blank">eciks</a> · <a href="https://www.stl.news/u-s-stock-market-weekly-softening-labor-market/" target="_blank">STL News</a> · <a href="https://growbeansprout.com/tools/fedwatch" target="_blank">CME FedWatch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">油价回落</span>
+        <h4>原油降至 $67-72 区间，中国成品油价迎近 6 年最大单次降幅</h4>
+        <p>Brent 在 <b>$71-72</b> 区间震荡，WTI 在 <b>$67-68</b> 附近。中国能源新闻报：国内成品油价迎来近 6 年最大单次降幅，预计持续下降至 10 月。美伊谈判缓和 + 全球需求放缓是主因。</p>
+        <div class="why">🦞 <b>传导链：</b>油价下行 → 全球通胀压力缓解 → 央行降息空间打开 → 但同时意味着需求端在走弱（不好消息）。对 lainy 的框架：油价从"通胀推手"变成"需求晴雨表"——如果跌破 $65，市场叙事会从"通胀顽固"切换到"衰退逼近"。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.cnenergynews.cn/article/4SF2Z9qrWWy" target="_blank">中国能源新闻</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+    <div class="market-grid">
+      <div class="market-card">
+        <h5>🇺🇸 美股</h5>
+        <div class="idx">Dow Jones</div>
+        <div class="chg up">52,844 (+1.1%) 📈</div>
+        <div class="note">7/2 收盘 · 创 2026 年第 20 个历史新高</div>
+      </div>
+      <div class="market-card">
+        <h5>🇨🇳 A 股</h5>
+        <div class="idx">上证指数</div>
+        <div class="chg up">4,043.64 (+0.37%)</div>
+        <div class="note">7/3 收盘 · 深证 +0.64% · 创业板 +0.07%</div>
+      </div>
+      <div class="market-card">
+        <h5>🇭🇰 港股</h5>
+        <div class="idx">Hang Seng</div>
+        <div class="chg down">-2.8%</div>
+        <div class="note">7/3 收盘 · 受半导体抛售 + 地缘扰动</div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美股解读</span>
+        <h4>Dow 创新高 vs Nasdaq 跌：AI 资金"大轮动"真的来了？</h4>
+        <p>7/2 收盘：Dow +1.1%（Apple +4.8%、McDonald's +4.07%、Disney +3.84% 领涨），S&amp;P 500 平盘，Nasdaq -0.8%。三分之二的 S&amp;P 500 成分股上涨——<b>资金从拥挤的 AI/芯片仓位扩散到价值/消费板块</b>。Broadcom 的失望指引是催化剂，但底层逻辑是：弱非农 → 赌降息 → 利好对利率敏感的价值股。</p>
+        <div class="why">🦞 <b>关键判断：</b>这次轮动跟 4 月那次"大轮动"不同——上次是被 AI 巨头估值吓跑的主动调仓，这次是被宏观数据（弱非农）驱动的利率预期调整。如果 7 月通胀数据也配合下行，这轮价值股补涨有持续性。但如果油价反弹或者通胀反复，AI 龙头的 EPS 韧性会让资金很快回流。<b>7/6 周一开盘是观察轮动持续性的关键节点</b>。</div>
+        <div class="source">来源：<a href="https://ts2.tech/en/stock-market-today-03-07-2026/" target="_blank">TS2</a> · <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">A 股 + 港股解读</span>
+        <h4>A 股守 4000 点关口，港股被半导体拖累</h4>
+        <p>A 股 7/3 收盘：上证 4043.64（+0.37%），深证成指 +0.64%，创业板 +0.07%，科创 50 -0.59%。两市分化明显——主板稳住 4000 点，但双创弱于主板，科技股受全球半导体抛售情绪影响。港股 7/3 大跌 2.8%，受 Broadcom 引发的全球芯片股回调 + 地缘扰动双重打击。人民币反而走强，在岸人民币一度升到 <b>6.7790</b>（6/23 以来最强）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>A 股 4000 点是 2026 年的心理锚——守住意味着市场对"服务业新政 + 人民币资产"的信心还在。港股跌得多是因为对外部风险（半导体周期、地缘）更敏感。人民币走强是一个积极信号：说明弱非农后美元走弱，新兴市场资金有回流动力。<b>A/H 折让收窄 = 外资在回补</b>。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001907r88y.html" target="_blank">新浪 ETF</a> · <a href="https://www.forexfactory.com/news" target="_blank">Forex Factory</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>零售 · 家电 · 新消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">大卖场落幕</span>
+        <h4>52 亿买入、200 万卖出：苏宁清仓家乐福中国，大卖场时代正式终结</h4>
+        <p>7/3 报道：苏宁易购公告完成所持家乐福中国 100% 股权出售，转让价 <b>200 万元人民币</b>。2019 年苏宁以 48 亿收购 80% 股权（累计投入超 52 亿），七年后以"脚踝斩"离场。买家为香港快行天下国际有限公司。业内评价：大卖场业态从"外资集体撤退"到"中资接盘者也退场"，只剩沃尔玛通过山姆会员店转型存活。</p>
+        <div class="why">🦞 <b>商业含义：</b>这不是苏宁一家的问题，是<b>整个大卖场业态的结构性出清</b>。2023-2026 年中国大卖场门店数持续下降，社区团购、即时零售、仓储会员店三股力量把传统大卖场的"一站式购物"逻辑拆碎了。对 lainy 的消费板块框架：看零售不要再看"门店数"，要看<b>坪效 × 供应链效率 × 会员复购率</b>——胖东来分光 40 亿利润 vs 苏宁 52 亿变 200 万，同一个赛道里商业模式差异比行业差异还大。</div>
+        <div class="source">来源：<a href="https://news.southcn.com/node_812903b83a/b43a6697ef.shtml" target="_blank">南方网</a> · <a href="https://www.sina.cn/news/detail/5316748531206505.html" target="_blank">新浪</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">家电降价潮</span>
+        <h4>2026 下半年四大品类或迎降价潮：家电、新能源车、房价、零售</h4>
+        <p>网易 7/3 报道：分析师预计 2026 下半年家电、新能源车、房价、快消品四大品类将迎来降价潮。家电方面，品牌竞争白热化 + "以旧换新"政策窗口期 = 消费者站上黄金买点。家电行业从"增量市场"转入"存量替换市场"，定价权从品牌方转移到消费者。</p>
+        <div class="why">🦞 <b>市场含义：</b>降价潮对 CPI 是拖累，但对消费复苏是刺激。关注：① 白电龙头（美的、海尔、格力）能否在"量增价跌"中保住毛利——关键看高端化/出海进展；② "以旧换新"政策的财政补贴力度是否加码。如果下半年 CPI 因降价潮走低，给央行宽松空间，利好 A 股估值修复。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L101DPVF0556816L.html" target="_blank">网易</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">温网 2026</span>
+        <h4>Serena Williams 复出首轮出局 + 退赛双打，Swiatek 卫冕冠军被淘汰</h4>
+        <p>Wimbledon 2026 大新闻：Serena 时隔四年复出，单打首轮 3-6, 7-6(6), 3-6 输给 20 岁澳洲小将 <b>Maya Joint</b>，随后因膝盖伤退退双打（"我心碎了，我已尽一切努力准备"）。卫冕女单冠军 <b>Iga Swiatek 被 Alex Eala 7-6, 6-2 爆冷淘汰</b>，Elena Rybakina 也被 Elise Mertens 出局。女单签表大洗牌。</p>
+        <div class="why">🦞 <b>轻松看：</b>温网今年太戏剧化了——Serena 的复出本身比结果更动人，43 岁打到第三盘抢七已经封神。Swiatek 被菲律宾小将 Eala 淘汰更是历史性时刻：第一个菲律宾球员在温网中心球场赢球。女单现在彻底开放，谁都能拿——今年的温网决赛值得追。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/athletic/7418930/2026/07/04/serena-venus-williams-wimbledon-doubles-out/" target="_blank">The Athletic</a> · <a href="https://www.cbssports.com/tennis/news/wimbledon-2026-schedule-bracket-live-updates-results-scores-matches-where-to-watch/live/" target="_blank">CBS Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">美国热浪</span>
+        <h4>1.8 亿人在热浪中过国庆——费城独立日游行取消，多地活动叫停</h4>
+        <p>NOAA 数据：6/27-28 开始的"热穹顶"覆盖美国中东部，<b>1.8 亿人</b>处于"重大"或"极端"高温风险。体感温度 100-115°F（38-46°C），费城的独立日游行因极端高温取消。ABC 报道：高中生乐队在独立宫外被紧急供水。CNN 称这是"美国近年来最强烈的东部热浪之一"。</p>
+        <div class="why">🦞 <b>花边角度：</b>美国 250 岁生日蜡烛还没吹，先被太阳烤了。这种极端天气对农业、电力、保险行业都有直接冲击——不过对我们看新闻来说，最魔幻的画面是：高中生乐队穿着制服在费城街上被灌水，旁边就是独立宣言签署的地方。</div>
+        <div class="source">来源：<a href="https://en.wikipedia.org/wiki/2026_North_American_heat_wave" target="_blank">Wikipedia</a> · <a href="https://abcnews.com/US/1-million-power-country-us-blanketed-heatwave/story?id=134467508" target="_blank">ABC News</a> · <a href="https://www.cnn.com/2026/07/04/weather/heat-wave-dc-philadelphia-forecast-climate" target="_blank">CNN</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边 <small>一条彩蛋</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">太阳风暴</span>
+        <h4>G3 级太阳风暴来袭，多地出现极光——7/4 的另一个"烟花"</h4>
+        <p>Suspicious Observers 7/4 报道：G3 级地磁暴正在抵达地球，引发大范围极光爆发（Auroral Outbreak）。同时科学家确认银河系形状有了新发现。对于在美国国庆日晚上抬头看天空的人来说，极光可能比人造烟花还壮观。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>太阳活动周期 25 正在接近极大值，G3 级风暴对电网和 GPS 有轻微干扰可能，但最大的"影响"大概是——在温网和热浪占据头条的日子里，太阳默默给地球放了一场免费的灯光秀。</div>
+        <div class="source">来源：<a href="https://www.youtube.com/watch?v=732wz8f2B7c" target="_blank">YouTube / S0 News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

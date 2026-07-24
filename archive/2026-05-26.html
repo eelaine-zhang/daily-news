@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-26</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .market-row { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 720px) { .market-row { grid-template-columns: 1fr 1fr 1fr; } }
+  .mini-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .mini-card h5 {
+    margin: 0 0 6px; font-size: 13px; color: var(--text-dim);
+    letter-spacing: 0.06em; text-transform: uppercase;
+  }
+  .mini-card .num { font-size: 18px; font-weight: 600; margin-bottom: 4px; }
+  .mini-card .delta { font-size: 12px; }
+  .delta.up { color: #ef4444; }
+  .delta.down { color: #22c55e; }
+  .delta.flat { color: var(--text-dim); }
+  .mini-card .note { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 5 月 26 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>Micron 公布 HBM4E 路线图，base die 直接外包给 <b>TSMC</b> 做，三家 HBM 厂 2026 产能 <b>全部售罄</b>；Deutsche Bank 警告："AI 内存股要做好被‘扰动'的心理准备"。</li>
+      <li><b>国际 / 油价：</b>美伊协议谈到细节阶段，Trump 周一称 "时间在我们一边"；Brent 周一一度跌破 <b>100 美元</b>，单日跌幅约 5%（约 97-98 美元）。</li>
+      <li><b>市场：</b>美股周一因 Memorial Day 休市，<b>周二 9:30 ET 重开</b>，本周交易主轴是 <b>周四 PCE</b> 和 GDP 数据；A 股 4112.90 点附近震荡，等待方向选择。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>从 GPU → HBM 内存这条线在快速重定价</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">HBM / Micron</span>
+        <h4>Micron 把 HBM4E base die 外包给 TSMC，HBM 产能 2026 已经全部卖光</h4>
+        <p>Micron 在 Investor Day / TrendForce 通气会上公布 HBM 路线图：HBM4 量产顺畅，下一代 <b>HBM4E</b> 2027 年量产，<b>核心 DRAM 升级到 1γ 制程（首次用 EUV），base die 从自家做改为外包给 TSMC</b>（3nm 制程）。同步消息：SK 海力士、三星、Micron 三家 HBM 厂的 <b>2026 年产能已经全部被预订/锁定</b>。</p>
+        <div class="why">🦞 <b>金融视角：</b>这是"<b>AI 内存比 GPU 更稀缺</b>"叙事的最新一锤。两点要 mapping 到投资逻辑：① Micron 把 base die 让给 TSMC 做 = TSMC 拿到的不只是 GPU 晶圆，连"内存底座"也吃下了——CoWoS/SoIC 封装 + HBM base die 双产能利好；② "三家全部售罄"意味着 <b>HBM 价格 2026 全年都很难松动</b>，对应 Micron / SK 海力士毛利继续向上。AI 芯片成本里内存已经占到 <b>2/3</b>（Indmoney 引数据），这条新闻其实是在告诉你："砍 GPU 价格不能让 AI 算力变便宜，砍 HBM 才能"。</div>
+        <div class="source">来源：<a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261925924-mu-hbm-nvda-dram-tradingkey" target="_blank">TradingKey</a> · <a href="https://cloudnews.tech/micron-accelerates-ai-memory-with-hbm4e-and-custom-designs/" target="_blank">CloudNews</a> · <a href="https://www.indmoney.com/blog/us-stocks/ai-memory-chips-hbm-stocks-investment-thesis" target="_blank">Indmoney</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">内存周期 · 警告</span>
+        <h4>Deutsche Bank：AI 内存股是高弹性资产，要做好"被搅局"的心理准备</h4>
+        <p>CNBC 周一报道：Deutsche Bank 在最新研报中说，投资者要"为持续的 AI 相关扰动做准备"——参考点是前阵子 TurboQuant 发布后，三大头部内存厂股价一度急挫。结论：内存股是 AI 链条里 <b>波动率最高</b> 的板块，回报很爆，但要承得起像周期股一样的回撤节奏。</p>
+        <div class="why">🦞 <b>读给你听：</b>很多人现在把 Micron / SK 海力士当 "AI 永动机" 在买。但内存历来是 <b>典型周期股</b>（boom-bust）——产能从下单到出货 12-18 个月，需求一旦边际转弱，供给消化期会非常痛。Deutsche 这种提醒不是看空，是在告诉你 <b>仓位管理要按周期股做</b>，不是按成长股做。对你做行业报告很有用：HBM 龙头的 PE 看似不高，但要叠加周期 multiple，估值才是公允的。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/05/25/memory-stocks-cyclical-boom-bust-samsung-sk-hynix.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">代工 · AMD</span>
+        <h4>AMD 把部分 2nm 订单转给三星，TSMC 在 AI 代工上的"独大"出现裂缝</h4>
+        <p>Digitimes 多篇深度跟踪：AMD 已经把部分 2nm 流片订单从 TSMC <b>转给三星</b>，被业内称为 "<b>2nm defection</b>"。同时 AMD 在台湾投资 100 亿美元扩 AI 基建，英伟达也在重新切分 "ACIE 市场"（AI Compute &amp; Infrastructure Edge）报告口径——背后逻辑都是想跳出"只能买 TSMC"的供应链单点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 代工格局 <b>第一个真正的分水岭</b>。过去三年 TSMC 在 AI 芯片代工上市占接近垄断（Nvidia / AMD / Broadcom / Marvell 都在用），毛利能稳在 55%+ 全靠这条护城河。AMD 撕了一道口子之后，三星的 SF2（2nm）就有了 "第二 AI 代工厂" 的故事——三星电子估值会被重新定价，但 TSMC 的稀缺性溢价会回落一档。<b>看戏的角度：</b>这又是一个"老大不一定守得住份额"的案例。</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260525PD210/nvidia-amd-intel-ai-server-supply-chain.html" target="_blank">Digitimes</a> · <a href="https://www.digitimes.com/news/a20260523VL200/nvidia-amd-taiwan-ai-chip-war.html" target="_blank">Digitimes Deep Dive</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>美伊协议逼近+乌俄拉锯</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 协议进展</span>
+        <h4>美伊协议条款浮出水面：浓缩铀降到 3.67%、霍尔木兹分阶段重开、制裁分级松绑</h4>
+        <p>WaPo / CBS / CNN / Hindustan Times 综合：周末-周一这一波，美伊"长期协议"的细节大致拼出来了——伊朗将 <b>60% 高浓缩铀降回 3.67%</b>（民用级）、海峡分阶段重开海运、美国分级解除部分制裁；俄罗斯欢迎并提议"接走" 伊朗存量铀。Trump 周一说"时间在我们一边、协议还没完全谈定"，故意压住市场对"突发利好"的过度定价。</p>
+        <div class="why">🦞 <b>市场含义：</b>真正影响价格的是 <b>"高浓缩铀怎么处置"</b> 这一点——只要这一项落地，市场就会认 "去风险化是可信的"，油价的地缘溢价才能持续松开。Trump 的口风"时间在我们一边"，等同提前给市场打预防针：<b>这是慢谈，不要一次性消费完利好</b>。后续两周注意三件事：① 浓缩铀转移机制（是否给俄罗斯）；② 霍尔木兹商船护航协议细节；③ 以色列方面的态度——这是协议能不能落地的真实卡点。</div>
+        <div class="source">来源：<a href="https://www.washingtonpost.com/world/2026/05/24/us-iran-near-deal-extend-ceasefire-reopen-hormuz/" target="_blank">Washington Post</a> · <a href="https://www.cnn.com/2026/05/24/middleeast/iran-us-proposed-deal-wwk-intl" target="_blank">CNN</a> · <a href="https://www.hindustantimes.com/world-news/trump-floats-iran-us-peace-deal-but-burning-questions-still-remain-ht-decodes-101779707213044.html" target="_blank">Hindustan Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>Brent 周一单日跌 6%，跌破 100 美元，是两周来最低</h4>
+        <p>Guardian / Investing.com / TOI 数据：周一伦敦盘 <b>Brent 一度跌到 97.43 美元/桶</b>（-6%），WTI 跌到 90.83 美元（-5.77 美元）。直接驱动是 "美伊协议接近 + 霍尔木兹可能阶段性重开"。Trump 周末称 "协议大致谈妥"，周一又改口说"还没完全敲定"——市场情绪因此先抢跑、然后部分回吐。</p>
+        <div class="why">🦞 <b>传导链拆给你：</b>油价从 104 跌回 97 = 大约 <b>7% 的地缘溢价被挤出</b>。短期受益最直接的是：① 美国航空（达美、美航、联航 燃油成本立刻下来）；② 大宗下游化工（巴斯夫、陶氏、万华）；③ 新兴市场进口国（印度、土耳其、东南亚）股市；④ 美联储路径——油价回落 = 通胀二次抬头的尾部风险下去了 = 9 月降息的概率从 <b>"很难"</b> 上调到 <b>"可以重新讨论"</b>。压力方：能源股短期承压、中东主权基金减分。</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/business/2026/may/25/oil-prices-fall-below-100-dollars-a-barrel-iran" target="_blank">Guardian</a> · <a href="https://www.investing.com/news/commodities-news/oil-slides-5-with-brent-below-100barrel-on-usiran-peace-hopes-4708246" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">日本 · 财政</span>
+        <h4>高市早苗宣布编制 3 万亿日元规模补正预算，重点是电力/燃气补贴 + 战略储备</h4>
+        <p>日经 / 日刊体育 / 时事通信：高市早苗 25 日表态——为应对中东局势带来的能源价格上行，将编制 <b>约 3 万亿日元</b>（约 190 亿美元）规模的补正预算；普通家庭 7-9 月电费燃气费可减负 <b>约 5000 日元</b>。她同时强调 "不新增国债"，财源走一般预备费。</p>
+        <div class="why">🦞 <b>读给你听：</b>这是一个"<b>典型的高油价对策包</b>"——给居民补贴 + 增加战略储备 + 不增发国债。三个金融含义：① 日元在外汇市场反应温和（已涨 0.2% 到 158.91）——因为没增国债 = 不刺激货币宽松预期；② 利好日本 <b>电力、燃气龙头</b>（东电、关电、东京瓦斯），因为补贴会通过他们渠道发放，回收成本风险更低；③ 是高市对"民生不满"的及时回应——日本 CPI 现在主要矛盾就是能源，<b>这种"靶向式财政"在 lainy 的金融职业语境里值得记住</b>，比无差别发钱效率高很多。</div>
+        <div class="source">来源：<a href="https://www.nikkei.com/article/DGXZQOUA2575Q0V20C26A5000000/" target="_blank">日経新聞</a> · <a href="https://www.nikkansports.com/general/nikkan/news/202605250001368.html" target="_blank">日刊スポーツ</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>本周 = PCE 周</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">数据周</span>
+        <h4>本周三大数据：周四 PCE、Q1 GDP 修正、个人收入/支出，决定 9 月降息节奏</h4>
+        <p>TradingEconomics / Polymarket / 各 FX 信号商一致认为：本周 <b>核心 PCE</b>（联储最看重的通胀指标）、Q1 GDP 修正值、4 月个人收入与支出，是接下来一个月利率定价的关键拼图。Polymarket 上 <b>"6 月 FOMC 维持利率不动"</b> 概率持续高位（57% 以上）。市场视角：高油价回落 + PCE 若不超预期 = 9 月降息窗口重新打开。</p>
+        <div class="why">🦞 <b>市场含义：</b>这周交易主轴非常清楚——<b>"高利率更久" 这条叙事能不能被打破</b>，靠周四数据。三种情景给你：① PCE 温和、油价继续松 → 美股 AI 龙头 + 黄金齐涨，10y 美债收益率回 4.3% 下方；② PCE 偏高 + 油价反弹 → 9 月降息预期再被推后，成长股估值压力重来；③ PCE 中性 → 市场会先盯第二个变量"消费者实际支出"——如果支出降速，会被解读为"经济在凉"，对利率债是利好对股票是利空。<b>你这周要看的就是这一组数</b>。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a> · <a href="https://polymarket.com/event/fed-decision-in-june-825" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">CPI</span>
+        <h4>美国 4 月 CPI 同比 3.8%（前值 3.3%），通胀反弹是真的</h4>
+        <p>TradingEconomics：美国 4 月通胀率从 3 月的 <b>3.3%</b> 反弹到 <b>3.8%</b>，背后主要是能源 + 服务通胀双双抬头。这也是上周联储官员表态偏鹰、Nomura 收回年内降息预期的直接原因。</p>
+        <div class="why">🦞 <b>给你接续上周的视角：</b>4 月 CPI 不是噪音，是真切的"通胀二次抬头"。但本周需要看的是 <b>核心 PCE</b>（剔除能源和食品的服务通胀） —— 如果核心 PCE 没跟着 CPI 一起跳，说明这次反弹主要是<b>地缘事件驱动的能源</b>，可以被周一的油价回落"中和"；如果核心 PCE 也明显上行，那就是<b>真通胀</b>，市场要重新定价。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/inflation-cpi" target="_blank">Trading Economics CPI</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A股 / 港股 / 美股</small></h2>
+    <div class="market-row" style="margin-bottom: 18px;">
+      <div class="mini-card">
+        <h5>🇨🇳 A 股（上证）</h5>
+        <div class="num">4112.90 点</div>
+        <div class="delta flat">周五收盘 · 本周二开盘震荡</div>
+        <div class="note">深证成指 15597.30 (+2.30%)<br>创业板指 3938.50 (+2.84%)</div>
+      </div>
+      <div class="mini-card">
+        <h5>🇭🇰 港股（恒指）</h5>
+        <div class="num">约 25696 点</div>
+        <div class="delta flat">周五收涨 +1.22% · 本周关注 AI / 联想</div>
+        <div class="note">恒生科技继续作多 · 港股本周二正常交易</div>
+      </div>
+      <div class="mini-card">
+        <h5>🇺🇸 美股</h5>
+        <div class="num">道指 50579.70 / 标普 7473.47</div>
+        <div class="delta up">道指连续创高 · 标普连涨 8 周</div>
+        <div class="note">周一 Memorial Day 休市<br><b>周二 9:30 ET 重开</b></div>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">A 股</span>
+        <h4>沪指卡在 4100 点上方震荡，市场在等"AI 端侧 + 机器人"的下一轮催化</h4>
+        <p>券研社 / 同花顺复盘：经过周四的调整 + 周五缩量小阳，沪指收在 <b>4112.90 点</b>，本周大概率会先进入 "震荡整理" 阶段。机构观点（中金、券研社）：当前资金充裕没变，但需要新催化——重点关注 <b>端侧 AI 产品级验证</b>（手机 / PC 端 AI）和 <b>机器人 + 具身智能</b> 政策落地。中金还提醒：高股息策略短期可能跑不赢成长，但中长期适合稳健配置。</p>
+        <div class="why">🦞 <b>金融视角：</b>4000 点是 A 股的心理 + 技术双重阵地，能不能站住的关键不是流动性（已经够），而是 <b>盈利的可验证性</b>。上周科创 50 暴涨 5.47% 主要靠"半导体补涨 + 内存涨价"，是 <b>主题催化</b>。下一波要看的是端侧 AI（华为 Mate 80 / 小米 16 / 联想 AI PC 这种"看得见用得着"的产品）能否带出真增量。如果今年 618（5/30 开门红） + 国庆季两轮 AI 终端销售都打不出大数据，<b>沪指要往上突破就比较难</b>。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001905w8fe.html" target="_blank">新浪 A 股复盘</a> · <a href="https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-05-25/doc-inhzafps2699597.shtml" target="_blank">中金研报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">港股</span>
+        <h4>港股本周二照常交易：恒生科技继续作多，AI / 半导体情绪锚还在</h4>
+        <p>上周五恒指收涨约 <b>1.22% 到 25696 点</b>，恒生科技 + 联想集团成为情绪主轴。本周一全球流动性减少（美国 + 英国 + 欧洲多市场休市），<b>港股是少数照常交易的市场之一</b>，资金会被动接住部分定价权。新浪财经晚间快讯指出：因美元指数跌 0.3% 到 98.969，资金面对港股偏友好。</p>
+        <div class="why">🦞 <b>市场含义：</b>港股本周要解决的核心问题是 <b>26000 点</b> 这个心理 + 技术阻力位。三个变量决定：① 美元走弱（已经在弱）→ 中性偏利好；② 油价继续松 → 进口能源股 / 航空股压力释放；③ A 股能不能往上靠 →  AH 价差不能扩太多。短期看，<b>26000 是 "缓涨能上、急涨够呛"</b>——除非美股周二开盘有明显 AI 利好（比如英伟达对中国市场口风变化、新订单等）。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/headline/2026-05-26/doc-inhzekpa1684339.shtml" target="_blank">新浪财经隔夜要闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美股</span>
+        <h4>美股周二重开，盘前看油价回落 + PCE 周，多空双向都有理由</h4>
+        <p>市场预热：道指 50579.70 创纪录、标普 7473.47 连涨 8 周，纳指 26343.97。盘前期货（IBT / 经济时报）显示道指、标普、纳指期货均在 Memorial Day 休市期间小幅走高。Polymarket 给"NVDA 5 月底前回到 $236 高点"的概率持续走低（财报后回调到 $215 附近）。本周关键事件除了 PCE，还有 <b>Salesforce / Dell / Zscaler 财报</b>。</p>
+        <div class="why">🦞 <b>读给你听：</b>美股周二开盘有两个相反的拉扯——<b>正面</b>：油价跌破 100、中东去风险、9 月降息预期重启；<b>负面</b>：英伟达财报后估值已经被定到接近天花板（forward PE ~30x），市场没增量买盘。从经验看：<b>这种位置最容易"先冲高再回落"</b>，盘中波动会比标普 ATM 30 天隐含波动率高一档。Dell 财报这个值得你单独看——它对企业 AI capex（不只是大厂自建，而是中型企业买 AI server）有最直接的口径。</div>
+        <div class="source">来源：<a href="https://www.benzinga.com/markets/equities/26/05/52765375/memorial-day-2026-is-stock-market-open-today" target="_blank">Benzinga</a> · <a href="https://polymarket.com/event/what-price-will-nvda-hit-in-may-2026" target="_blank">Polymarket NVDA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>618 + 茶饮分化 + 国货奢侈</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">中国 · 奢侈</span>
+        <h4>NYT：14 万美元的国产 EV + 黄金潮品，"中国本土奢侈"开始抢欧洲老牌饭碗</h4>
+        <p>《纽约时报》5/25 大稿：中国经济减速 + 民族情绪上升 → 消费者越来越倾向买 "本土奢侈"。除了价格 14 万美元级别的国产高端 EV（如新势力高端线、华为问界 + 比亚迪仰望体系），<b>黄金 / 老字号 / 文化 IP 联名</b> 也在快速吃 LVMH、爱马仕、开云的高端份额。SCMP 同步：Q1 财报里 LVMH / Hermès / Prada 中国销售稳，<b>Kering（古驰母公司）中国销售下滑</b>。</p>
+        <div class="why">🦞 <b>金融视角：</b>这是一个 <b>结构变化，不是周期变化</b>。三个映射：① 欧洲奢侈三巨头估值要分化——Hermès（"安全资产"叙事）跑赢 LVMH（"周期 + 中国"叙事）跑赢 Kering（"故事老化"）；② 中国本土黄金股（老凤祥、周大福、潮宏基）+ 高端国货美妆（毛戈平等）会吃到结构红利；③ 关键转折点：<b>"中国消费者愿意为本土品牌付溢价" </b> 一旦坐实，对 1990s 以来"欧洲品牌升级中国"的剧本是一次根本性反转。lainy 的报告里如果要切这个角度，可以从"<b>毛利率结构</b>" 切入——Hermès 70% 毛利的可持续性主要靠稀缺性 + 文化叙事，本土玩家要追的不是产品力是文化资本。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/05/25/business/chinese-luxury-brands.html" target="_blank">NYT</a> · <a href="https://www.scmp.com/economy/china-economy/article/3354733/china-sales-stable-european-luxury-brands-tally-first-quarter-impact-iran-war" target="_blank">SCMP</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">茶饮赛道</span>
+        <h4>新茶饮 2025 年报全部出炉：蜜雪冰城净利 60 亿但被古茗超车，霸王茶姬腰斩</h4>
+        <p>36 氪深度盘点：6 家上市新茶饮 2025 年合计营收 <b>约 736 亿</b>、净利 <b>约 113 亿</b>。但格局是 "<b>断崖式分化</b>"：蜜雪冰城营收 + 净利 + 门店三冠，但 <b>古茗营收/净利增速 + 单店效率最强</b>，被定为 "年度最大赢家"；<b>霸王茶姬</b> 因为外卖补贴战误判，净利润 <b>腰斩</b>；奈雪沦为垫底，营收首次下滑。同步：蜜雪冰城 2025 年底在 <b>曼哈顿连开 3 家店</b>，海外尝试低价模型。</p>
+        <div class="why">🦞 <b>消费视角：</b>这是茶饮赛道的 <b>第一份"已上市玩家全面对比表"</b>，对你做消费分析很有用。三个结论：① <b>单店效率 ＞ 总门店数</b>——古茗赢的就是这个；② <b>极致价格带</b>（蜜雪冰城 6-8 元）能跨文化复用，曼哈顿三店是个有意思的样本，等于把"中国式极致供应链"放到美国市场试压；③ 高端自营（奈雪）+ 中端自营 + 外卖补贴战玩家（霸王茶姬）都受伤了，加盟轻资产模型在这个周期里压倒性胜出。<b>如果让你为新茶饮估值打分，2026 年应该把"单店日均流水稳定性"作为核心 KPI</b>，比 GMV 增速更稳。</div>
+        <div class="source">来源：<a href="https://36kr.com/p/3804266567687680" target="_blank">36 氪深度</a> · <a href="https://www.worldjournal.com/wj/story/124875/9513765" target="_blank">世界日报</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">北美票房</span>
+        <h4>《Mandalorian and Grogu》Memorial Day 周末开 1.02 亿美元，但今年大盘不如去年</h4>
+        <p>Variety / Deadline：迪士尼《曼达洛人与古鲁》四日开 <b>1.02 亿美元</b>，是这个 Memorial Day 周末的票房冠军。次席《Obsession》第二周 <b>2800 万</b>，跌幅小。四日大盘约 <b>2.21 亿美元</b>，跟疫情前 2019 年同期持平，但比去年（去年有《Lilo &amp; Stitch》+ 《Mission Impossible 最终清算》双爆款）少了一截。</p>
+        <div class="why">🦞 <b>市场视角的小八卦：</b>北美票房现在是典型的 <b>"头部依赖症"</b>——单部不爆，整周末都拉不动。迪士尼借《Mandalorian》试探 Star Wars 系列还有没有大银幕粘性，这次结论是 <b>"能跑，但跑不出 Lilo & Stitch 那种 1.8 亿"</b>——说明 Star Wars 的票房天花板已经被压缩了一档。聊天可以说："Disney 现在最强的现金牛其实不是 Marvel 也不是 Star Wars，是 Pixar 和真人翻拍。"</div>
+        <div class="source">来源：<a href="https://variety.com/2026/film/box-office/mandalorian-and-grogu-box-office-opening-memorial-day-weekend-1236757827/" target="_blank">Variety</a> · <a href="https://deadline.com/2026/05/box-office-mandalorian-and-grogu-1236918713/" target="_blank">Deadline</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">网球 · 罗兰加洛斯</span>
+        <h4>法网开打：Alcaraz 因手腕伤退赛、Sinner 顺利首轮过关，男单天平向 Sinner 倾斜</h4>
+        <p>2026 法网 5/25 开打。两大男单看点：① 卫冕冠军 <b>Carlos Alcaraz 因手腕伤退赛</b>，是他自 2023 澳网以来首次缺席大满贯——Sinner 想完成职业大满贯一下子少了最强对手；② Sinner 首轮顺利过关（vs Tabur）；③ 老将 <b>Monfils 法网告别战</b>，输给 Hugo Gaston，球迷情绪在线。Tiafoe、Shelton 也都晋级。</p>
+        <div class="why">🦞 <b>聊天用：</b>这次法网的最大变量是 Alcaraz 缺席——以前 Sinner vs Alcaraz 是这两年最热的网球叙事。少了 Alcaraz，<b>男单半决赛之前可能没什么悬念</b>。但反过来对体育商业来说有个机会：法网 + Sinner 单核 = ATP 全力造星 Sinner 的好机会，赞助商（Gucci、Rolex）会借这个窗口加码。<b>娱乐 + 商业的双线视角：体育冠军永远是奢侈品最稳的代言池。</b></div>
+        <div class="source">来源：<a href="https://en.wikipedia.org/wiki/2026_French_Open_%E2%80%93_Men%27s_singles" target="_blank">Wikipedia</a> · <a href="https://www.nytimes.com/athletic/live-blogs/french-open-2026-live-updates-day-two-scores-results/VXLHNIwP1k0m/" target="_blank">The Athletic</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">音乐 · 颁奖</span>
+        <h4>AMAs 今晚拉斯维加斯举行：K-pop 团体压轴，Allegiant 体育馆做完颁奖直接接演唱会</h4>
+        <p>The Hollywood Reporter：2026 American Music Awards 今晚（拉斯维加斯时间 5/26 晚）在 Allegiant 体育馆举行，多组 K-pop 团体获邀压轴献唱，颁奖结束直接在同场地接两晚演唱会——"颁奖 → 演唱会 → 票房 → 周边" 一条龙的"音乐 IP 全链路变现"是新趋势。</p>
+        <div class="why">🦞 <b>看戏视角：</b>美国音乐颁奖礼这两年含金量是肉眼可见下滑（Grammy 除外），但 AMAs 用"颁奖 + 演出 + 周边"三件套硬把现场拉回来了。这是一个 <b>"内容公司怎么把活动包打成生意"</b> 的典型案例——拉斯维加斯 + Allegiant + K-pop 团体的组合本身就是为 high-rolling 游客准备的。lainy 周末聊天可以提："美国娱乐业的钱越来越靠 IP + 现场 + 旅游消费包打"。</div>
+        <div class="source">来源：<a href="https://www.hollywoodreporter.com/" target="_blank">The Hollywood Reporter</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-01</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --stock: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.stock { background: #fcd34d22; color: var(--stock); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .market { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  .market h5 { margin: 0 0 6px; font-size: 15px; }
+  .market .ticker { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .market .up { color: #a5f3a5; }
+  .market .down { color: #ff8b8b; }
+  .market p { margin: 6px 0 0; font-size: 13.5px; color: var(--text); }
+  .closed { opacity: 0.65; }
+  .holiday-banner { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #9198a122; color: var(--text-dim); margin-left: 6px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 1 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 焦点周开锣：</b>今天傍晚 11 点（台北时间）Jensen Huang 在 <b>GTC Taipei × Computex 2026</b> 开主题演讲，<b>Vera Rubin VR200</b> 下一代 AI 机柜首秀，全球四大韩国财团（Samsung、SK、现代、LG）随老黄一起上台谈合作。</li>
+      <li><b>伊朗政治风暴：</b>伊朗总统 <b>Pezeshkian 周日向最高领袖递交辞呈</b>，理由是"IRGC 已经全面接管"——美伊 MoU 在 Trump 推迟签字之后，又多了一层"伊朗国内动荡"的不确定性。</li>
+      <li><b>中美数据日：</b>中国 5 月制造业 PMI <b>50.0%（临界点）、降 0.3pp</b>，高技术制造业 PMI 52.9% 连续 16 个月扩张——经济在 "AI 制造扩张 + 传统消费收缩"的分裂里继续走；同日 Pezeshkian 辞呈让原油盘前躁动。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>GTC Taipei 开幕 + VR200 首秀 + HBM 故事进入"第二章"</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">GTC Taipei 主秀</span>
+        <h4>今晚 23:00（台北时间）：Jensen Huang 主题演讲，下一代 Vera Rubin VR200 机柜全球首秀</h4>
+        <p>NVIDIA <b>GTC Taipei × Computex 2026</b> 今天（6/1）开幕，跨度 6/1-6/5。重头戏：<b>北京时间今晚 23:00、香港时间同步、台北时间 23:00</b>，老黄在台北流行音乐中心主舞台开主题演讲，<b>Vera Rubin VR200 机柜（下一代 GB300 后继者）将首次正式亮相</b>，预计同步发布：Rubin Ultra 路线图、用于物理 AI 的新一代 Jetson Thor、与台积电/Samsung HBM4E 的合作细节、以及"AI 工厂"参考设计。Reuters/TradingKey 提前点出 Samsung、SK Hynix、现代汽车、LG 四大韩国财团 CEO 集体登台。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是<b>2026 年下半年 AI 产业链定价的"风向标事件"</b>——VR200 的内存带宽、HBM 规格、能耗指标直接决定接下来 6-12 个月 HBM/光模块/液冷/电源四个子板块的估值锚。三个看点：(1) <b>VR200 是否官宣 HBM4E 全量采用</b>——若是，Samsung 拿到首单的故事兑现，SK Hynix 阶段性承压；(2) <b>能耗指标</b>——决定数据中心电力/液冷子板块下半年订单弹性；(3) <b>"AI Factory" reference design</b>——这是 Nvidia 把 GPU 故事升级为"工厂故事"的关键节点。对 A 股/港股的传导：今晚发布后明天开盘，<b>易中天三兄弟（新易盛/中际旭创/天孚通信）+ 工业富联 + 沪电股份</b>会率先反应，但因为周末已经吹风，"卖事实"风险也存在。</div>
+        <div class="source">来源：<a href="https://www.pcmag.com/news/how-to-watch-nvidia-ceo-jensen-huang-computex-2026-keynote" target="_blank">PCMag</a> · <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261937540-computex-2026-jensen-huang-chip-titans-ai-highlights-watch-taipei-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.nvidia.com/en-tw/gtc/taipei/" target="_blank">NVIDIA GTC Taipei</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">韩国 4 大财团</span>
+        <h4>Jensen Huang 与 Samsung/SK/Hyundai/LG 同台——把"AI + 机器人 + 通信"三件套打包卖</h4>
+        <p>Seoul Economic Daily：本次 GTC Taipei + Computex 的核心叙事之一是"韩国半导体/机器人/通信全产业链上台"。具体看点：(1) <b>Samsung 围绕 HBM4E 量产时间表</b>正式表态；(2) <b>SK Hynix 谈 HBM4 现有产品订单可见度</b>；(3) <b>现代汽车展出 AI 自动驾驶 / 人形机器人 Atlas 后继车型与 Jetson Thor 的合作</b>；(4) <b>LG 围绕"AI 数据中心通信基础设施"的合作方案</b>。市场之前担心 HBM 故事被 Samsung "搅局"的紧张感今天会被部分释放。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是<b>"老黄朋友圈正在从台积电向韩国财团扩张"</b>的具体落地。给金融视角：(1) <b>SK Hynix 已经站上万亿美元市值</b>，Samsung HBM4E 首单使其市值差距在 6 个月里大幅收敛，<b>两家公司从"零和博弈"转向"双寡头分蛋糕"</b>——这种结构对 Nvidia 是终极利好（议价权稳）；(2) <b>现代/LG 的入场</b>意味着 AI 资本开支正在从"GPU 数据中心"向"机器人/通信"分支扩张；(3) 对 A 股的隐含影响：物理 AI / 人形机器人板块（埃斯顿、汇川技术、绿的谐波）下周可能继续躁动；通信设备方面注意中兴/中际旭创联动。</div>
+        <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/05/31/jensen-huang-to-meet-koreas-top-4-conglomerates-on-ai-chips" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM 估值"压力测试"</span>
+        <h4>Market Index 周一晨报：Micron 2027 净利预测 $1,200 亿——已经超过亚马逊</h4>
+        <p>marketindex.com.au 周一晨报：HBM 三巨头的盈利预期已经被卖方<b>调到极致</b>——<b>Micron 2026 净利预测从 $85 亿被上调到 $668 亿，2027 进一步看到 $1,200 亿</b>，<b>这个数字已经超过当年亚马逊的预期净利</b>。Micron YTD 涨幅"翻三倍"、SK Hynix +260%、Samsung +165%，三家市值同时迈入万亿俱乐部。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是<b>HBM 故事的"估值压力测试"</b>——卖方预期已经把 2027 年 Micron 净利推到了"超过亚马逊"的程度。两种解读：(a) 如果 HBM4E 真的能在 2027 年大规模量产 + AI 数据中心 capex 仍然指数级扩张，这个数字"未必离谱"；(b) 如果出现任何节奏放缓（VR200 推迟、超大客户砍单、AI ROI 数据走弱），现在的估值会非常脆弱。<b>给 lainy 的金融视角：HBM 三巨头现在的估值，是把 2027 年的乐观情形定价了 70-80%。这意味着任何"略低于完美"的指引都可能触发 15-20% 回调</b>。Nvidia GTC Taipei 今晚的指引就是第一道考验。</div>
+        <div class="source">来源：<a href="https://www.marketindex.com.au/news/asx-200-live-today-monday-1st-june" target="_blank">Market Index Live</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>Pezeshkian 辞呈 + Trump MoU 仍未签 = 油价新变量</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">伊朗政治震荡</span>
+        <h4>伊朗总统 Pezeshkian 周日向最高领袖递交辞呈——理由是"IRGC 已经全面接管"</h4>
+        <p>Iran International / Times of India / Jerusalem Post 周日同步报道：<b>伊朗温和派总统 Masoud Pezeshkian 已经向最高领袖 Mojtaba Khamenei 办公室递交正式辞呈</b>，理由直白——"IRGC 革命卫队指挥官们已经完全接管国家", 他的政府失去执行空间。伊朗官方对此否认，但 BizToc 实时新闻和多个伊朗媒体已经在追这条线。背景：美伊 60 天延期停火 MoU 上周接近敲定但 Trump 推迟签字，IRGC 同日警告"再袭海湾"，是 Pezeshkian 这次辞呈的直接导火索。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是<b>"美伊谈判桌的对手方可能换人"</b>——影响极其重大：(1) <b>如果辞呈被接受 → Trump 上周一直在拖的"签字"等于失去对手</b>，MoU 框架可能直接作废；(2) <b>IRGC 全面执政 → 强硬派立场上桌</b>，霍尔木兹封锁、对美军反击的概率显著上升；(3) <b>原油直接逆转</b>——Brent 5 月跌 19% 的最大前提"美伊降级"可能崩塌，<b>明天亚洲盘开盘 Brent 可能跳涨 3-5%</b>。对全球资产的二阶传导：(a) 美股周一开盘可能回吐九连周红涨幅 1-2%；(b) 金价进一步上行测试 $4,600；(c) 防御股、能源股相对收益；(d) 航空、运输股承压。<b>这是本周最该追踪的单一事件</b>。</div>
+        <div class="source">来源：<a href="https://www.iranintl.com/en/202605312204" target="_blank">Iran International</a> · <a href="https://timesofindia.indiatimes.com/world/middle-east/iran-president-pezeshkian-submits-resignation-letter-to-supreme-leaders-office-claims-report-official-rejects-claim/articleshow/131431370.cms" target="_blank">Times of India</a> · <a href="https://www.jpost.com/middle-east/iran-news/article-897917" target="_blank">Jerusalem Post</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌克兰反击</span>
+        <h4>乌克兰 USF：摧毁俄军塔甘罗格基地 2 架 Tu-142 长程轰炸机 + 1 套伊斯坎德尔导弹系统</h4>
+        <p>ISW（战争研究所）5/31 战报：乌克兰无人系统部队（USF）报告，深夜突袭俄军塔甘罗格军用机场，<b>摧毁两架 Tu-142 长程反潜/巡逻机 + 一套部署中的伊斯坎德尔短程战术导弹系统</b>。乌方公布了卫星定位的爆炸残骸图像。同期 Zelensky 签署两道总统令，与欧盟同步对俄、伊朗、苏丹的一批个人和企业实施新一轮制裁。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Tu-142 是俄军舰队反潜机的关键资产，<b>一次性损失两架意味着俄北方海军的"远程预警"能力被掏空一块</b>。映射含义：(1) <b>俄军 6 月夏季攻势的空中支援被削</b>——乌克兰用"群体无人机"在前线和后方同时打高价值目标的能力已经成熟；(2) 欧洲军工企业再次被点亮——BAE、Saab、Rheinmetall 周一开盘大概率延续强势；(3) 对油价的影响有限（俄罗斯产能未受冲击），但对俄罗斯主权信用的隐含定价继续恶化。</div>
+        <div class="source">来源：<a href="https://understandingwar.org/research/russia-ukraine/russian-offensive-campaign-assessment-updates-3/" target="_blank">ISW</a> · <a href="https://www.ukrinform.net/rubric-polytics" target="_blank">Ukrinform</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">缅甸惨剧</span>
+        <h4>缅甸建筑爆炸 40+ 死、70+ 伤——疑为军方军火库</h4>
+        <p>BizToc 周日实时：缅甸一栋储存军火的建筑发生爆炸，<b>已造成至少 40 人死亡、70 人受伤</b>，伤亡仍在统计。当地媒体指爆炸点疑似与缅军武器仓库或临时弹药点相关。事件背景：缅甸内战进入第六年，少数民族武装在中部走廊持续攻势。</p>
+        <div class="why">🦞 <b>映射含义：</b>对市场短期影响有限，但<b>对中国西南边境贸易、稀土通道有间接含义</b>——缅甸是中国稀土加工原料的重要走廊（特别是镝、铽、钇这类重稀土）。如果军政府控制力进一步松动，<b>稀土供应链定价权可能再次倾向中国境内的赣州/包头</b>。对 A 股稀土板块（北方稀土、中国稀土）是潜在催化。</div>
+        <div class="source">来源：<a href="https://biztoc.com/" target="_blank">BizToc</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>中国 PMI 卡在临界点，AI 制造连扩 16 个月</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">中国 PMI</span>
+        <h4>中国 5 月制造业 PMI 50.0%——刚好卡在临界点、月环比降 0.3pp</h4>
+        <p>国家统计局 5/31 数据：<b>中国 5 月制造业 PMI 50.0%（临界点），比 4 月降 0.3 个百分点；非制造业商务活动指数 50.3%；综合 PMI 产出指数 50.5%（环比 +0.4pp）</b>。结构上呈现明显分化：<b>高技术制造业 PMI 52.9%（连续 16 个月扩张）、装备制造业 52.1%</b>，但<b>消费品行业 PMI 回落，高耗能行业进一步走弱</b>。生产指数 51.2%（韧性仍在），新订单指数 49.9%（首次跌破荣枯线）——意味着"现在还能造，但订单已经在凉"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是<b>中国宏观叙事"撕裂"</b>最直接的官方证据：<b>AI / 装备 / 高科技端景气度顶住，传统消费 / 出口 / 房地产链拖累</b>。映射含义：(1) <b>政策面预期升温</b>——综合产出指数还在 50.5，但新订单已经掉破 50，意味着 7 月政治局会议出"消费刺激 + 财政加码"的概率往上调；(2) <b>板块分化继续</b>——AI 算力、半导体、新能源高端装备相对收益；白酒、家居、消费电子（除手机外）继续承压；(3) 对人民币的影响中性偏弱——基本面没崩，但也没强到能压制美元指数；(4) 对全球的传导：中国订单走弱 → 全球大宗需求边际向下 → 强化"AI 通胀 vs 制造业通缩"的二元宏观。</div>
+        <div class="source">来源：<a href="https://www.stats.gov.cn/sj/zxfb/202605/t20260531_1963824.html" target="_blank">国家统计局</a> · <a href="https://finance.sina.com.cn/wm/2026-05-31/doc-inhzuvrq4730914.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Fed 决定 6/17</span>
+        <h4>Polymarket：6 月 FOMC "维持利率不变" 概率已飙到 96%</h4>
+        <p>Polymarket 周日数据：<b>6/16-17 FOMC 维持利率在 3.5%-3.75% 不变的概率已经飙到 96%</b>。背景：4 月 CPI 同比 3.8%（2023 年来最高）、PCE 3.8%/核心 3.3%、5 月 9 连周红盘 + Dow 51,000 让 Fed 完全没有理由也没必要在 6 月动手。年底 Fed Funds 落在 3.75% 或 4.0% 的市场隐含概率合计 ~70%——<b>意味着市场预期"6 月按兵不动 + 7/9 月降息窗口被关</b>"。</p>
+        <div class="why">🦞 <b>映射含义：</b>对 lainy 的金融视角："Fed 6 月按兵不动"已经被定价 96%——<b>这意味着市场对 6/17 FOMC 当天的真正交易点不是"利率决定"，而是 Powell 新闻发布会的"措辞"</b>。三个具体追踪点：(1) Powell 是否承认"AI capex 对通胀的结构性上行风险"——若是，长债收益率会快速上行；(2) SEP 点阵图是否把 2026 年底中位数从 3.625% 上调到 3.875%——这相当于"年内取消所有降息"，对成长股是利空；(3) Powell 对"就业市场韧性 vs 通胀粘性"如何权衡。提前部署：6/16 前持有的 10 年期国债 ETF（TLT）有止损空间；科技股 5-8% 回调的概率上升。</div>
+        <div class="source">来源：<a href="https://polymarket.com/event/fed-decision-in-june-825" target="_blank">Polymarket</a> · <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">金 + 油</span>
+        <h4>Pezeshkian 辞呈 + Trump 未签字双叠加：油价亚盘开盘可能跳空，金价测试 $4,550</h4>
+        <p>结合周末两条线索：(1) 周五 Brent 收 $66.x、WTI $62.x，整月跌近 19%；(2) Pezeshkian 周日辞呈 + Trump 推迟签字 → 美伊"60 天 MoU"框架的最大支柱（伊朗温和派配合）出现裂缝。Bloomberg/Oilprice 周一晨报预期：<b>原油亚盘开盘可能跳空高开 2-3%</b>。同期金价从 $4,500 反弹蓄势，黄金期权波动率上行，市场提前买保险。</p>
+        <div class="why">🦞 <b>映射含义：</b>这条新闻把伊朗政治震荡和资产价格直接连起来：(1) <b>"风险溢价"会被 Trump 周六周日的态度连续重新定价</b>——如果他周一就签 MoU，金、油会再次回吐；如果他继续等，伊朗强硬派接管后 MoU 等于作废；(2) <b>对 A 股、港股</b>：金价上行 = 紫金矿业、山东黄金、招金有相对收益；油价上行 = 中海油（含权益分红）、中石油弹性更大；(3) <b>对美股</b>：能源股本周可能从"5 月最差板块"反转，但科技股可能因油价反弹强化"AI 通胀"叙事而承压。这是<b>过去一周市场最爱的"两段式交易"</b>——先因 MoU 临近做多 Risk-on，再因 MoU 作废做防御。</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/energy" target="_blank">Bloomberg Energy</a> · <a href="https://www.reuters.com/markets/gold/" target="_blank">Reuters Gold</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股周末"PMI 50.0"考验，港股聚焦 GTC，美股记录月收官</small></h2>
+    <div class="market-grid">
+      <div class="market">
+        <h5>🇨🇳 A 股 · 周五（5/30）上证 <span class="up">收 4,068.57</span> · 创业板 <span class="down">-2.11%</span> 收 4,037.95 <span class="holiday-banner">今日开盘待 PMI/GTC 双驱动</span></h5>
+        <div class="ticker">深成指 15,575 (-1.81%) · 科创 100 -4.07% · 5 月累计：上证 +3.8% / 创业板 +9.6% / 科创 50 +14%</div>
+        <p>周五 A 股冲高回落、上证创年内新高后被科技板块获利盘砸下来，<b>易中天三兄弟（新易盛、中际旭创、天孚通信）全线下挫 5-8%</b>，但月度还在 30%+ 大涨位置。今天开盘的核心变量：(1) <b>5 月制造业 PMI 50.0% 临界点</b>——刚好不破又不强，对大盘是"中性偏弱"，但<b>高技术制造业 PMI 52.9%（连续 16 月扩张）</b>是结构性强支撑；(2) <b>GTC Taipei 今晚 23:00 老黄演讲</b>——若 VR200 + HBM4E 利好兑现，明天 AI 算力链可能再次冲高；(3) 注意 6 月 MLF 续做窗口对资金面影响。<b>当前 A 股估值/位置已经透支了大量好消息，建议看着 GTC Taipei 决定下半周的方向</b>。</p>
+      </div>
+      <div class="market">
+        <h5>🇭🇰 港股 · 周五（5/30）恒生 <span class="up">收 25,199.99 (+0.78%)</span> · 恒科 +0.04% <span class="holiday-banner">今日开盘聚焦 GTC + Pezeshkian 辞呈</span></h5>
+        <div class="ticker">恒生国企 +0.84% · 全周累计跌 0.7% · 5 月累计 +2.4%</div>
+        <p>港股周五止跌反弹后周末有两大变量需要消化：(1) <b>智谱、MiniMax 6/1 正式纳入恒生科技指数</b>——被动资金加仓预期开始定价，国产 AI 重估叙事再获助力；(2) <b>Pezeshkian 辞呈</b>叠加 Trump MoU 未签的双重不确定性 → <b>风险资产开盘可能承压</b>。重点关注：(a) 智谱+MiniMax 首日资金流入实际规模；(b) 半导体（华虹半导体、中芯国际）是否延续上周末的强势；(c) 港股内房板块若有"国资接盘传闻"会有躁动；(d) <b>恒生科技 vs 恒生主板的剪刀差</b>——若今天高开走弱，意味着科技股 5 月涨幅的获利兑现压力依然在。</p>
+      </div>
+      <div class="market">
+        <h5>🇺🇸 美股 · 周五（5/29）S&amp;P <span class="up">7,580.06 (+0.22%)</span> · Nasdaq 26,972 <span class="up">(+0.2%)</span> · Dow 51,000+ <span class="up">(+0.7%)</span> <span class="holiday-banner">9 连周红，本周开盘看 Pezeshkian</span></h5>
+        <div class="ticker">5 月最终成绩：S&amp;P +5.5% / Nasdaq +6.8% / Dow +2.5% / Russell 2000 +5.1% · VIX 收 12.x</div>
+        <p>周五美股三大指数<b>齐创新高 + 5 月收官最强月之一</b>，<b>S&amp;P 走出 9 连周红（2023 年 9 月以来最长）</b>。但记录月收官后周一开盘要面对三个新变量：(1) <b>Pezeshkian 辞呈 → 油价跳涨 → "AI 通胀"叙事强化 → 长债承压 → 成长股估值压力</b>；(2) <b>Trump MoU 仍未签字</b>——市场已经把 MoU 落地定价进去了，反复或失败会触发回吐；(3) <b>GTC Taipei 老黄演讲（北京时间今晚 23:00）</b>——这是 AI capex 故事 6 月最关键的一次"再点火"。<b>预期：周一/周二可能温和回调 1-2%，但 GTC 利好兑现后周中可能反弹；本周对美股是"事件密度极高"的一周</b>。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>白酒进入"618 + 端午"双窗口，但价格预期偏弱</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">白酒承压</span>
+        <h4>白酒行业早讯：今年端午临近，飞天茅台/国窖 1573 价格反而小幅下降——618 大促预期已经先压一档</h4>
+        <p>460.net.cn 白酒 B2B 周报：传统上端午是白酒销售小高峰，但<b>今年端午临近，价格反而出现小幅下降</b>。同期天猫/京东 618 大促预热数据显示：<b>飞天茅台、国窖 1573 渠道价普遍承压</b>；主力消费价格段从 300-500 元进一步下沉到 100-300 元；年轻消费群体（85 后/94 后）成为细分突破口。背景：茅台 3/31 已经把出厂指导价从 1169 上调到 1269/瓶，但终端实际成交价没有跟上，渠道库存压力上升。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是<b>"中国可选消费降级"的最直接信号</b>——白酒在中国是宏观消费信心的镜子。给金融视角：(1) <b>茅台年内 -17%、五粮液跌破关键支撑位</b>，反映的不是单一品类问题，而是<b>消费者对"面子型/礼品型可选消费"的预算大幅压缩</b>；(2) 价格段下沉到 100-300 元 → <b>"低端白酒"赢家</b>：牛栏山、老白干这类受益（但港股没有标的）；(3) 政策面对策：<b>白酒消费税预期再次抬头</b>——若 7 月政治局会议没有大规模消费刺激，<b>整个白酒板块可能继续筑底 1-2 个季度</b>；(4) 这与 PMI 数据"消费品行业 PMI 回落"完全互证——AI 制造扩张、传统消费收缩，这是中国宏观的真实分裂。</div>
+        <div class="source">来源：<a href="https://www.460.net.cn/news/show-414548.html" target="_blank">460 白酒 B2B 周报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国零售对比</span>
+        <h4>德国 7 年间消失 6.5 万家小型零售店——欧洲制造业老大同样在"消费降级"</h4>
+        <p>Gateway Pundit 5/31：德国数据——<b>2019 年至今 65,000 家小型零售店关闭、340,000 个工业岗位流失</b>。德国零售联合会发文警告：是"去工业化政策叠加能源价格"的双重打击。德国零售业占 GDP 比 15%，是<b>欧洲消费的核心指标</b>。这条新闻和中国 4 月社零 +0.2% / 5 月制造业 PMI 50.0%形成<b>奇异的对照</b>——全球同步出现"传统消费/制造业疲软"。</p>
+        <div class="why">🦞 <b>映射含义：</b>这是<b>"全球可选消费走弱"</b>的硬证据。德国 + 中国同步收缩，意味着：(1) <b>奢侈品板块（LVMH、Hermès、Kering）下半年压力会大</b>——欧洲本土消费 + 中国海外消费同时弱；(2) <b>欧洲ECB 6 月降息预期升温</b>——德国零售/工业双弱 → ECB 比 Fed 更有降息空间 → 欧元兑美元继续承压；(3) <b>美股中"必选消费"vs"可选消费"的剪刀差</b>会拉大；(4) <b>对 lainy 的金融视角</b>：全球消费分化的真正赢家是 Costco/Walmart 这类"折扣超市"，输家是 Macy's/百货公司、奢侈品大牌。这条逻辑会延续到 Q3 财报季。</div>
+        <div class="source">来源：<a href="https://www.thegatewaypundit.com/2026/05/germany-65000-small-retail-stores-disappear-340000-industrial/" target="_blank">Gateway Pundit</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>Spurs 进 NBA Finals + 法网爆冷连续 + Dua Lipa 闪婚</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA 总决赛</span>
+        <h4>Wemby + Spurs 抢七赢 OKC 进 NBA 总决赛——21 岁法国小子的第一次 Finals</h4>
+        <p>CBS/NBA 官方：周六晚 G7 在 OKC，<b>Spurs 111-103 客场击败卫冕冠军 Thunder</b>，<b>Victor Wembanyama 22 分 7 板 2 助攻 + 关键第四节连得 9 分一锤定音</b>，Keldon Johnson 关键 3+1。SGA 全场 35 分但独木难支。<b>Spurs 进 NBA Finals 将对阵 Knicks，21 岁的 Wemby 完成"职业生涯第一次 Finals"</b>。Tim Duncan 之后第一次以"年轻当家"姿态登 Finals——Spurs 的"重建窗口"提前完成。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>给 lainy 一个非常轻松的"减压故事"：21 岁的 Wemby 第一次进 NBA Finals，已经被 ESPN/NBC 提前喊"是这十年最稳的超巨形态"。Spurs 这次是<b>"超低薪 + 高天赋"的代表</b>——团队工资总额在联盟前五低，但季后赛抢七淘汰卫冕冠军。给金融背景的 lainy 一个有趣的类比：<b>Spurs 现在的故事就像 2020 年的 Tesla——单核稀缺资产 + 团队估值（市值）很低 + 想象空间巨大</b>。NBC 转播费今年新合同生效，本届 Finals 收视率预期突破 1500 万——Disney、Netflix 都没有，这种实时体育转播是 NBC/Peacock 难以复制的"现金牛 IP"。</div>
+        <div class="source">来源：<a href="https://www.cbssports.com/nba/news/thunder-spurs-score-game-7-live-updates/live/" target="_blank">CBS Sports</a> · <a href="https://www.nba.com/news/4-takeaways-spurs-thunder-game-7" target="_blank">NBA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">法网爆冷</span>
+        <h4>法网 4 强种子 Swiatek 在 25 岁生日当天 R4 出局——这届罗兰加洛斯成了"前 3 号种子坟场"</h4>
+        <p>BBC/Guardian：<b>四届法网冠军、世界第三 Iga Swiatek 在自己 25 岁生日当天，于 R4 直落两盘被乌克兰 15 号种子 Marta Kostyuk 击败</b>。结合此前：<b>1 号种子 Sinner R2 爆冷出局、2 号种子 Alcaraz 伤退、Djokovic R3 被 19 岁巴西人 Fonseca 0-2 落后大逆转淘汰</b>——<b>2000 年以来法网第一次出现"前 3 号种子在 R4 之前全部出局"</b>。Zverev 4-1 进 8 强、对阵西班牙新星 Rafael Jodar。男单女单都开放局面。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>本届罗兰加洛斯成了<b>"网球老牌秩序大重置"</b>——五巨头时代彻底退场，新秀群体（Fonseca 19 岁、Jodar、Kostyuk）开始抢标题。从商业角度：(1) ATP/WTA 长期最大焦虑是"Big Three 退役后还有谁能撑流量"——这种"全员爆冷"实际上是<b>给新秀的破圈机会</b>；(2) Nike、Wilson、Babolat 等运动赞助商正在大规模签新秀；(3) <b>对 lainy 来说</b>：周日决赛日的男单冠军大概率从 Zverev、Fonseca、Cobolli 等"非传统大满贯"球员中诞生——这是 2003 年 Federer 在温网"老一代换代"之后最重要的网球分水岭。</div>
+        <div class="source">来源：<a href="https://www.bbc.com/sport/tennis/articles/cvgzy1k2e51o" target="_blank">BBC Sport</a> · <a href="https://www.olympics.com/en/news/french-open-2026-alexander-zverev-overcomes-jesper-de-jong-fourth-round" target="_blank">Olympics.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">明星闪婚</span>
+        <h4>Dua Lipa 和 Callum Turner 在伦敦秘密办婚礼——"互联网最爱的情侣"正式合法</h4>
+        <p>Vogue/People/Vanity Fair 周日同步独家：<b>Dua Lipa 和 Callum Turner 周日（5/31）下午在伦敦 Old Marylebone Town Hall（玛丽勒邦市政厅）举行私密婚礼</b>，仅亲友小圈出席，三日后将在意大利办大型 reception。两人 2024 年初恋情曝光，约会两年半后步入婚姻。Dua 自己当"something blue"（穿浅蓝礼服）；伴娘是好闺蜜 Eve Jobs。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>很纯粹的"星期日下午糖水新闻"，给 lainy 配早咖啡刚好。两点小料：(1) Dua Lipa 的<b>"Service95" 媒体公司</b>估值近 $1 亿，她已经在按"全媒体明星"路径布局 —— 婚礼新闻就在自家 Service95 IG 配合公关全套；(2) Callum Turner 是《天才物语》《Boys in the Boat》男主，Christopher Nolan 下一部电影男一号—— <b>这是好莱坞"演员 + 流量明星"夫妻档的最新打卡组合</b>，对比已经走完的 Blake Lively + Ryan Reynolds、Hailey + Justin 模式。Z 世代偶像市场的"夫妻 IP 化"正在成为新趋势。</div>
+        <div class="source">来源：<a href="https://www.vogue.com/article/dua-lipa-callum-turner-wedding-london" target="_blank">Vogue</a> · <a href="https://people.com/dua-lipa-and-callum-turner-married-11876930" target="_blank">People</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻 · 2026-06-01</div>
+    <div class="footer-note">⚠️ 内容仅供信息参考，不构成任何投资建议。数据来源截至 2026-06-01 早 8:00 (HKT)。</div>
+  </footer>
+</div>
+</body>
+</html>

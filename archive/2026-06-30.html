@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-30</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block .summary { font-size: 14px; color: var(--text); margin: 0 0 8px; }
+  .market-block .why { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 30 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 芯片：</b>英伟达在中国市场节节败退——华为已抢占主导地位；与此同时 Caffe 之父贾扬清从 Nvidia 离职，DGX Cloud Lepton 战略受挫。</li>
+      <li><b>市场：</b>美股道指首破 52,000 点历史新高，纳指反弹 2%——Comcast 宣布拆分 NBCUniversal 股价暴涨 24%；港股恒指反弹 1.57% 收复 23,000 点。</li>
+      <li><b>地缘：</b>美伊达成临时停火并将于今日在卡塔尔多哈重启谈判，霍尔木兹海峡通航有望恢复，Brent 原油回落至 ~$73。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Nvidia 中国</span>
+        <h4>英伟达在华 AI 芯片销量停滞，华为反超成中国市场主导</h4>
+        <p>AP / LA Times 报道：美国出口管制效应持续放大，英伟达特供中国的 H20 芯片出货量持续下滑。华为凭借昇腾系列加速器已在中国 AI 芯片市场取得主导地位。英伟达 CEO 黄仁勋此前在投资者会议上承认，中国市场份额"可能回不来了"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是中美科技脱钩最有象徵意义的转折点——英伟达在中国 AI 芯片市场的份额从曾经的 95% 降到如今被华为反超。对金融视角来说：<b>英伟达失去的不是一笔收入，而是一个生态</b>。CUDA 生态在中国被逐步替换为华为 CANN + MindSpore，一旦开发者习惯迁移，即使未来管制放松也很难逆转。这对英伟达长期增长故事是个结构性收窄。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/ai-chips-nvidia-huawei-china-1ae6228c4928ddbb43f984e9b38f49dd" target="_blank">AP News</a> · <a href="https://www.latimes.com/business/story/2026-06-29/nvidias-ai-chip-sales-in-china-stall-as-local-chipmakers-like-huawei-take-lead" target="_blank">LA Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">人才流失</span>
+        <h4>Caffe 之父贾扬清离开英伟达——DGX Cloud Lepton 战略未达预期</h4>
+        <p>SemiAnalysis 6/29 独家报道：贾扬清（Caffe 框架创始人、前 Nvidia VP）在 Nvidia 收购其创业公司 LeptonAI 一年后离职。据报黄仁勋对 DGX Cloud Lepton 平台业绩不满。贾扬清已加入 GPU 云服务商 Hyperbolic 担任技术顾问。</p>
+        <div class="why">🦞 <b>商业含义：</b>Nvidia 买 LeptonAI 是为了建"AI 云平台"——直接向客户出租 GPU 算力，跟 AWS/Azure/Google Cloud 竞争。但一年后核心创始人走人，说明这条路走不通。对英伟达来说：<b>卖芯片是印钞机，做云平台是另一门生意</b>，基因不一样。这也让核心云厂商松了口气——Nvidia 不会变成它们的直接竞争者。</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/319301/20260629/nvidia-ai-infrastructure-bet-fails-caffe-creator-quits-over-broken-pledge.htm" target="_blank">TechTimes</a> · <a href="https://www.kucoin.com/news/flash/jia-yangqing-leaves-nvidia-after-one-year-dgx-lepton-fails-to-meet-expectations" target="_blank">KuCoin News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">存储 / HBM</span>
+        <h4>联想 AI 服务器积压订单达 $210 亿，HBM 短缺卡住中国算力脖子</h4>
+        <p>联想披露其 AI 服务器积压订单已膨胀至 210 亿美元，但 SK Hynix 2026 年 HBM 产能已全部售罄，导致交付受阻。联想 ISG 部门（年收 192 亿美元）接单速度远超交付能力。同时三星、SK Hynix、美光因涉嫌利用 HBM 转产操纵 DRAM 价格被提起反垄断集体诉讼。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>HBM 已经从"AI 芯片的一个零件"变成"整个 AI 产业链的瓶颈阀门"。对金融视角：<b>HBM 三巨头（SK Hynix / 三星 / 美光）的定价权是当前半导体行业最强的</b>——它们决定谁先拿到货、谁先建好数据中心。反垄断诉讼如果推进，可能逼迫它们释放更多常规 DRAM 产能，缓解消费电子涨价压力。但短期内 HBM 价格只会更紧。</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/319260/20260629/lenovo-ai-server-backlog-hits-21-billion-hbm-shortage-stalls-chinas-compute-race.htm" target="_blank">TechTimes</a> · <a href="https://videocardz.com/newz/samsung-sk-hynix-and-micron-sued-over-alleged-dram-price-fixing" target="_blank">VideoCardz</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国存储</span>
+        <h4>腾讯与长鑫存储（CXMT）签 200 亿元 DRAM 五年长约，中国存储自主加速</h4>
+        <p>Reuters 独家：中国存储芯片制造商 CXMT 与腾讯签署长期 DRAM 供应协议，金额超 200 亿元人民币（约 29.4 亿美元），为期最长五年。CXMT 正在加速上海新建 DRAM 工厂扩产，并推进科创板 IPO（目标募资 295 亿元）。此外苹果正游说美国政府批准从 CXMT 采购存储芯片。</p>
+        <div class="why">🦞 <b>映射到市场含义：</b>这是中国存储芯片"国产替代"进入巨头采购阶段的标志性事件——<b>腾讯这样的互联网大厂愿意签五年长约</b>，说明 CXMT 的产品已经达到可用水准。对投资逻辑：CXMT 上市后，A 股存储产业链（设备、材料、封装）将迎来估值锚定。对全球存储三巨头来说，中国市场的份额流失只是时间问题。</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/technology/articles/exclusive-chinas-cxmt-wins-3-070237888.html" target="_blank">Reuters / Yahoo Finance</a> · <a href="https://www.tekedia.com/tencent-signs-2-9bn-memory-deal-with-cxmt-as-china-accelerates-ai-chip-self-reliance-ahead-of-landmark-ipo/" target="_blank">Tekedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AI 模型</span>
+        <h4>OpenAI GPT-5.6 限量预览：Sol / Terra / Luna 三档，但被政府"门控"</h4>
+        <p>OpenAI 6/26 发布 GPT-5.6 系列预览，首次拆成三档——Sol（旗舰）、Terra（均衡）、Luna（快速低成本）。但应美国政府要求，公开发布被无限期推迟，仅约 20 家政府审查的合作伙伴可通过 API 和 Codex 使用。ChatGPT 暂不开放。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>两件事：(1) <b>模型分层</b>是 AI 走向企业级的标准操作——不同工作负载用不同模型，跟芯片分训练/推理一个逻辑；(2) <b>政府门控</b>说明 AI 模型已经从"商业产品"变成"战略资源"。对市场来说：OpenAI 的商业化节奏被打乱，竞争对手（Anthropic Fable 5、Google Gemini）有窗口期抢企业客户。定价权预期也会下调。</div>
+        <div class="source">来源：<a href="https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna" target="_blank">OpenAI Help Center</a> · <a href="https://indianexpress.com/article/technology/artificial-intelligence/openai-gpt-5-6-sol-terra-luna-restricted-access-10761186/" target="_blank">Indian Express</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火</span>
+        <h4>美伊达成临时停火，今日在多哈重启谈判</h4>
+        <p>经过数日霍尔木兹海峡周边的交锋后，美国与伊朗同意立即停止相互攻击，并将于周二在卡塔尔多哈举行新一轮技术谈判。核心议题包括霍尔木兹海峡通航恢复、制裁豁免、以及伊朗核计划。伊朗方面表示"只与调解人讨论美国履行停火承诺"，立场仍强硬。</p>
+        <div class="why">🦞 <b>市场含义：</b>停火消息让 Brent 原油回落至 ~$73/桶——<b>油价跌 = 通胀预期降温 = Fed 降息空间回归</b>。但这是脆弱停火：过去两周已经两次"停了又打"。关键看点是多哈谈判能否达成"去冲突机制"（de-confliction cell）。如果谈崩，油价会立刻跳回 $80+。风险资产短期受益，但需要密切关注谈判结果。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/06/29/world/hormuz-us-iran-strikes" target="_blank">NYT</a> · <a href="https://apnews.com/article/iran-us-war-strait-of-hormuz-june-29-2026-d1c0ec8aa84c0e5693b94f0cf0862bab" target="_blank">AP News</a> · <a href="https://www.cbsnews.com/live-updates/us-iran-war-peace-talks-timetable-unclear-strait-of-hormuz-clashes/" target="_blank">CBS News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">NATO 峰会</span>
+        <h4>NATO 安卡拉峰会 7/7-8 逼近：欧洲接棒防务 + 乌克兰支持成焦点</h4>
+        <p>德国外长 Wadephul 6/29 与美国务卿 Rubio 会面，讨论在 7/7-8 的安卡拉 NATO 峰会上达成新的防务负担分担方案，以及"对乌克兰的稳定长期支持"。Foreign Policy 分析：欧洲已学会与 Trump 打交道，跨大西洋联盟已退化为"便利伙伴关系"，但仍然是伙伴关系。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>NATO 峰会前的外交博弈直接决定欧洲防务开支节奏——<b>军费 = 国防股订单</b>。欧洲接棒防务意味着莱茵金属、BAE、泰雷兹等欧洲军工长期订单可见度提升。对中国来说，美欧关系如果"冷下来"，中欧经贸合作窗口反而打开——这对港股和中概股是正面信号。</div>
+        <div class="source">来源：<a href="https://foreignpolicy.com/2026/06/29/nato-trump-erdogan-ankara-summit-europe-defense-russia/" target="_blank">Foreign Policy</a> · <a href="https://www.thehindu.com/news/international/german-foreign-minister-us-counterpart-to-discuss-new-burden-sharing-arrangement-in-nato/article71160324.ece" target="_blank">The Hindu</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">中国</span>
+        <h4>NYT：霍尔木兹危机中"中国的油罐是满的"</h4>
+        <p>纽约时报分析指出，在美伊冲突扰乱全球能源供应期间，中国因提前大量囤储原油，油罐储备充裕，反而成为相对赢家。同期数据显示部分石油船货从亚洲转向中国储备。</p>
+        <div class="why">🦞 <b>市场含义：</b>中国的战略石油储备（SPR）在这次危机中发挥了"减震器"作用——国际油价飙升时，国内成品油价格压力可控。这对中国制造业和运输成本是隐性利好，也解释了为什么 A 股在美伊冲突期间比港股抗跌。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/" target="_blank">NYT</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>利率 / 大宗商品 / 全球</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>Fed 按兵不动：利率维持 3.50%-3.75%，市场押注 9 月加息</h4>
+        <p>美联储 6 月会议连续第四次维持利率不变（3.50%-3.75%），这是新任主席 Kevin Warsh 首次主持会议。最新点阵图显示 9 位官员预计今年至少加息一次，6 位预计加息至 4.25%-4.5%。市场目前定价 9 月加息概率约 60%。黄金因加息预期承压回落，但仍维持高位。</p>
+        <div class="why">🦞 <b>读给你听：</b>Warsh 上任后态度偏鹰——油价高企 + 核心 PCE 升至 3.4%（三年高位）让他没法松手。对市场来说：<b>加息预期 = 美元走强 = 新兴市场资本外流压力</b>。这也是港股近期跑输 A 股的原因之一。但美股道指创新高说明市场在"加息 vs 经济韧性"之间选择了后者——只要就业数据不崩，温和加息不杀估值。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a> · <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Gold Price</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>原油回落至 $73 附近，黄金承压——停火降温风险溢价</h4>
+        <p>美伊临时停火推动 Brent 原油从近期高点回落至约 $73/桶，WTI 约 $69-70。黄金在加息预期 + 美元走强双重压力下走弱，市场等待本周美国非农就业数据。分析师预期若非农强劲，9 月加息几乎成定局。</p>
+        <div class="why">🦞 <b>传导链：</b>油价回落 → 通胀预期降温 → Fed 加息压力减轻 → 风险资产估值修复。但这条链很脆弱——多哈谈判一旦破裂，油价会立刻反弹。黄金的短期逻辑是"加息杀金价"，但长期央行购金趋势不变（JP Morgan 预测中期目标 $4,000+）。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics - Oil</a> · <a href="https://fortune.com/article/price-of-oil-06-29-2026/" target="_blank">Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国消费</span>
+        <h4>中国 5 月零售额同比收缩 0.6%——2022 年 12 月以来首次负增长</h4>
+        <p>Commodore Research 数据：中国 5 月零售销售同比下滑 0.6%，为 2022 年底以来首次负增长。考虑通胀后实际跌幅更大。消费疲软叠加青年失业率高企，引发市场对下半年政策刺激的预期升温。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是中国消费端最弱的信号——之前还能说"弱复苏"，现在直接转负。对市场来说：<b>越差的数据 = 越强的政策预期</b>。A 股最近能撑住部分是因为"坏数据 = 宽货币/宽财政"的博弈逻辑。但如果政策不及预期，补跌风险很大。消费股（白酒、餐饮、零售）短期承压，但可能成为政策受益板块。</div>
+        <div class="source">来源：<a href="https://www.breakwaveadvisors.com/insights/2026/6/29/chinas-consumer-sector-has-become-even-weaker" target="_blank">Breakwave Advisors</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 4,074（6/29 收盘 +1.16%），科创板爆发 +3.12%</h4>
+      <p class="summary">6/29（周一）A 股全线收红：上证指数报 4,073.90 涨 1.16%，深证成指 +0.19%，创业板指 +0.54%，科创综指大涨 3.12%。两市成交约 3.54 万亿元。医药板块爆发——国家医保局公示 2026 年目录初审药品名单，创新药、减肥药概念飙升，百济神州涨超 10%，药明康德涨近 7%。半导体板块盘中发力，兆易创新涨停 14.6%。上周（6/22-26）科创 50 逆势涨 6.32%，显著跑赢其他宽基指数。</p>
+      <div class="why">🦞 <b>解读：</b>A 股半年收官战最后两天走强，主要靠两条线——<b>医药（政策催化）+ 半导体（AI 国产替代）</b>。医药板块的逻辑是医保目录扩容 → 创新药放量预期 → 估值修复。半导体则承接"华为替代英伟达"叙事。但消费数据转负是隐忧，红利指数收跌 2.03% 说明防御资金在撤。今天（6/30）是半年线收官日，关注尾盘资金博弈。</div>
+      <div class="source">来源：<a href="https://finance.sina.com.cn/stock/y/2026-06-30/doc-inifcrnk6809154.shtml" target="_blank">新浪财经</a> · <a href="https://www.163.com/dy/article/L0JVVLPN053469RG.html" target="_blank">网易财经</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 23,027（6/29 收盘 +1.57%），恒科大涨 3.23%</h4>
+      <p class="summary">6/29 港股强势反弹，恒指收复 23,000 关口报 23,026.68（+1.57%），恒生科技指数暴涨 3.23% 报 4,393.01，恒生国企指数 +1.94%。成交额 3,154 亿港元。半导体全线飙升——兆易创新 +14.6%、华虹 +7.8%、中芯国际 +6.0%（股东会全议案通过）。互联网股回暖，网易 +6.35%。但上周恒指累跌 5.2%（一年最差周），科技指数年内跌超 20%。</p>
+      <div class="why">🦞 <b>解读：</b>这是超跌反弹——上周跌太狠，周一逢低买盘介入。但要注意：南向资金净流出 103 亿港元，说明<b>反弹靠外资回补而非内资加仓</b>，持续性存疑。恒科年内跌超 20% 后，估值已到历史低位区间，但盈利下修还没结束。本周如果多哈谈判顺利 + 美国非农不爆雷，港股可能延续反弹；否则 22,600 的底部会再受考验。</div>
+      <div class="source">来源：<a href="https://news.fx168news.com/cooperate/2606/7467290.shtml" target="_blank">FX168</a> · <a href="https://news.futunn.com/en/post/75236277/hong-kong-market-close-strong-rebound-hang-seng-tech-index" target="_blank">Futu</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指首破 52,000 创新高（+0.59%），纳指反弹 +2.25%</h4>
+      <p class="summary">6/29（周一）美股全线走高：道指收涨 0.59% 报 51,876，历史首次收盘破 52,000；标普 500 +1.18%；纳指 100 暴涨 2.25%；纳指综合 +2%。科技股止跌反弹——Alphabet +4.1%（被 FTSE Russell 重新分类为纯成长股）。最大亮点：<b>Comcast 宣布拆分 NBCUniversal + Sky 为独立上市公司，股价暴涨 24%</b>。Strategy（原 MicroStrategy）宣布授权出售至多 $12.5 亿比特币 + $20 亿回购计划。</p>
+      <div class="why">🦞 <b>解读：</b>两件事改变格局：(1) <b>Comcast 拆分</b>——媒体业务和宽带业务分开估值，市场给"纯管道"业务更高估值（类似 2014 年 eBay/PayPal 拆分逻辑）。这会引发其他综合企业效仿。(2) <b>Strategy 卖币</b>——Saylor 首次开卖比特币，说明"永买不卖"叙事破了。如果比特币继续跌，Strategy 会被迫加速出售，形成负反馈。纳指反弹但只是超跌修正——6 月累跌 6%+，风格极端分化（道指月涨 1% vs 纳指月跌 6%）的格局没变。</div>
+      <div class="source">来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06292026-12008268" target="_blank">Investopedia</a> · <a href="https://fortune.com/2026/06/29/comcast-nbcuniversal-spinoff-split-broadband-media/" target="_blank">Fortune</a> · <a href="https://www.coindesk.com/markets/2026/06/29/strategy-opens-the-door-to-selling-bitcoin-under-new-capital-plan-here-s-what-it-means" target="_blank">CoinDesk</a></div>
+    </div>
+
+    <div class="card">
+      <span class="tag macro">三市场联动</span>
+      <h4>🦞 三市场联动解读</h4>
+      <p>美股道指创新高 + 纳指反弹 = 风险偏好回升；港股超跌反弹但南向资金流出 = 外资驱动；A 股靠医药 + 半导体扛住 = 政策 + 国产替代逻辑。三市场共同的主线是<b>"AI 分化"——AI 受益股（半导体、算力）在三个市场都跑赢大盘，AI 杠杆过高的标的（Strategy、软银等）则在去杠杆。</b></p>
+      <div class="why">🦞 对 lainy 的启示：关注本周五美国非农数据——强非农 = 9 月加息近确定 = 美元走强 = 港股 A 股外部压力增大。弱非农 = 加息预期降温 = 风险资产全线反弹。这是本周最大的宏观变量。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>零售 / 奢侈品 / 新消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>Bain-Altagamma 报告：全球奢侈品触底企稳，但行业已流失 7000 万消费者</h4>
+        <p>Bain &amp; Company 最新报告：全球个人奢侈品市场 2025 年微降至 €3580 亿（-2%），预计 2026 年回升 2-4% 至 €3650-3730 亿。但行业自 2022 年以来因品牌涨价 + 聚焦顶级客户，已流失约 7000 万消费者。BoF + McKinsey 调查显示：中美两国奢侈品客户的<b>"情感连接"</b>已成为品牌吸引力的首要因素。</p>
+        <div class="why">🦞 <b>商业含义：</b>奢侈品行业的"涨价驱逐中产"策略走到十字路口——提价带来了短期利润，但代价是客群萎缩。对 LVMH / 开云 / 历峰来说：增长模式必须从"提价驱动"切换回"客群扩张驱动"。Ferragamo 股价创 52 周新高说明市场对"转型中"的奢侈品品牌有期待。中国消费疲软叠加奢侈品"去中间层"，短期内港股消费板块承压。</div>
+        <div class="source">来源：<a href="https://www.zawya.com/en/press-release/research-and-studies/global-luxury-stabilizes-amid-compounding-disruptions-as-brands-race-to-amplify-meaning-and-rebuild-relevance-e05i9bvr" target="_blank">Zawya / Bain</a> · <a href="https://cyprus-mail.com/2026/06/29/luxury-industry-shifts-focus-from-top-spenders-to-wider-consumer-base" target="_blank">Cyprus Mail</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">IPO / 新消费</span>
+        <h4>Reformation 申请赴美 IPO：可持续时尚品牌年收 $5.07 亿</h4>
+        <p>洛杉矶可持续时尚品牌 Reformation 6/25 向 SEC 递交 IPO 注册声明，拟在纽交所上市（代码 REF）。品牌以复古风连衣裙 + 可持续叙事起家，年营收超 $5.07 亿，在全球拥有 70+ 门店，盈利且 DTC 复购率高。Permira 旗下基金此前完成收购。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年时尚行业第一单值得关注的 IPO。Reformation 的故事——<b>DTC + 可持续 + 盈利</b>——正好打在当下投资者最看好的三个标签上。但市场焦点在 AI 和 SpaceX 上，时尚 IPO 能拿到多少资金是个问题。定价和估值将给整个 DTC 品牌赛道锚定参照。</div>
+        <div class="source">来源：<a href="https://www.retailtouchpoints.com/news/six-things-to-know-about-reformations-business-as-the-company-prepares-to-go-public/620215/" target="_blank">Retail TouchPoints</a> · <a href="https://wwd.com/business-news/financial/reformation-fashion-ipos-vs-spacex-moonshot-1239046314/" target="_blank">WWD</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费电子</span>
+        <h4>存储涨价传导到消费端：OPPO / vivo / 小米全线涨价，PC 涨超 20%</h4>
+        <p>受 HBM 挤占常规 DRAM 产能影响，存储芯片价格持续上涨。OPPO、vivo、小米自 3 月以来陆续上调产品价格，部分 PC 型号比年初涨超 20%。苹果正游说美国政府批准从中国 CXMT 采购存储芯片以缓解成本压力。联想称"高 RAM 价格是新常态"。</p>
+        <div class="why">🦞 <b>传导链：</b>AI 数据中心抢 HBM → DRAM 产能被挤 → 消费电子存储涨价 → 手机/PC 涨价 → 消费者买单。对投资者：<b>存储涨价是"隐形通胀"</b>——不体现在 CPI 里但实实在在压低消费意愿。手机品牌毛利率短期受益（涨价 > 成本），但量会跌。苹果游说买 CXMT 存储如果成真，是中国半导体进入全球供应链的里程碑。</div>
+        <div class="source">来源：<a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261997319-ai-soaring-memory-prices-fatten-chip-giants-as-device-makers-hike-prices-tradingkey" target="_blank">TradingKey</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>世界杯 32 强开打！巴西 2-1 绝杀日本，加拿大爆冷淘汰南非</h4>
+        <p>2026 世界杯进入淘汰赛阶段！6/29 巴西在休斯顿凭借 Martinelli 补时绝杀 2-1 击败日本，晋级 16 强。加拿大 1-0 爆冷淘汰南非。今天（6/30）赛程：荷兰 vs 摩洛哥、科特迪瓦 vs 厄瓜多尔等。德国昨晚已晋级。</p>
+        <div class="why">🦞 <b>花边视角：</b>巴西 vs 日本这场质量很高——日本小组赛表现出色但淘汰赛经验不足的老毛病又犯了。今晚荷兰 vs 摩洛哥值得看，摩洛哥上届世界杯四强的黑马来历还热着呢。</div>
+        <div class="source">来源：<a href="https://www.skysports.com/football/news/12098/13556636/world-cup-2026-bracket-and-knockout-fixtures-whos-facing-who-in-the-last-32-and-route-to-final" target="_blank">Sky Sports</a> · <a href="https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket" target="_blank">ESPN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">网球</span>
+        <h4>温网 2026 开赛！Serena Williams 时隔近四年重返单打赛场</h4>
+        <p>2026 年温布尔登锦标赛 6/29 开幕，今天是 Day 2。最大看点：Serena Williams 时隔近四年重返单打赛场，今天（6/30）对阵 20 岁小将 Maya Joint。美国一哥 Taylor Fritz 也于今日出战 Jack Draper。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Serena 44 岁了还能打大满贯单打，这本身就是传奇。不管赢不赢，今天的话题度拉满。温网 + 世界杯 + BET Awards 颁奖，这个夏天体育娱乐太满了。</div>
+        <div class="source">来源：<a href="https://www.sportingnews.com/us/tennis/news/serena-williams-next-match-wimbledon-schedule-scores-results/6d4a052800af5e1b7665b065" target="_blank">Sporting News</a> · <a href="https://www.nytimes.com/athletic/7397124/2026/06/29/wimbledon-2026-schedule-streaming-tv-how-to-watch/" target="_blank">The Athletic</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">音乐</span>
+        <h4>BET Awards 2026 颁奖：Lauryn Hill 获致敬，Doechii &amp; SZA 翻唱 Ready Or Not</h4>
+        <p>6/28 洛杉矶 Peacock Theater，Druski 主持。最大亮点：D'Angelo 获先锋致敬（The Vanguard、Ari Lennox、RAYE、George Clinton 等联合演绎），Ms. Lauryn Hill 获全场致敬——Nas、Doja Cat、SZA、Doechii、Tems、Lizzo、Queen Latifah 等集体登台。Doechii &amp; SZA 合唱 "Ready Or Not" 成为社交媒体热传片段。</p>
+        <div class="why">🦞 <b>花边：</b>Lauryn Hill 被全场致敬说明她在 Hip-Hop/R&amp;B 圈的地位已经"封圣"——一个只出了一张专辑《The Miseducation of Lauryn Hill》的传奇。Doechii 是当下最火的新生代 Rapper，和 SZA 合唱这首 Fugees 老歌是跨世代的画面。</div>
+        <div class="source">来源：<a href="https://www.nme.com/news/music/bet-awards-2026-check-out-the-full-winners-list-and-see-all-the-performances-3953885" target="_blank">NME</a> · <a href="https://www.huffpost.com/entry/bet-awards-2026-live-updates_n_6a3acf87e4b058c5d1c57e50" target="_blank">HuffPost</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边 <small>一条就够</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>超冷原子被驱动进入"分数量子海"——物理学新物态</h4>
+        <p>ScienceDaily 6/29 报道：研究人员成功将超冷原子驱动进入一种名为"分数量子海"（fractional Fermi sea）的全新量子态，粒子以意想不到的方式自组织。这一发现挑战了此前的凝聚态物理规则，可能为未来量子计算材料提供新方向。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这不是今天的股票催化剂，但可能是 10 年后量子计算突破的种子。"分数量子"态如果能在室温下稳定存在，量子计算机的形态会完全不同——从需要超低温的"冰箱机器"变成固态芯片。暂时只是实验室里的奇观，但值得记住这个名字。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/releases/2026/06/260629003952.htm" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

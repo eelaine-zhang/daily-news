@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-26</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .market-card h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-card .idx { font-size: 13px; color: var(--text-dim); margin: 2px 0; }
+  .market-card .up { color: #4ade80; }
+  .market-card .down { color: #f87171; }
+  .market-card .flat { color: var(--text-dim); }
+  .market-card .note { font-size: 13px; color: var(--text); margin-top: 6px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 26 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>Micron Q3 营收翻了 4 倍到 $41.5B、毛利率 84.6%——HBM 需求炸裂。同日 SK Hynix 申请 $294 亿美股 IPO，Qualcomm 发布 Dragonfly 正式叫板英伟达。</li>
+      <li><b>通胀回潮：</b>5 月 PCE 同比 4.1%（三年新高），核心 PCE 3.4%——Fed 新主席 Warsh 面临"加息还是忍"的极限二选一。</li>
+      <li><b>地缘再起：</b>伊朗在霍尔木兹海峡再打一艘商船，Brent 反弹到 $75。Apple/Microsoft 同日宣布硬件涨价——AI 吃内存的代价传到消费者了。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Micron 财报</span>
+        <h4>Micron Q3 营收 $41.46B（同比 +346%），EPS $25.11——盘后飙 15%</h4>
+        <p>Micron 公布 FY2026 Q3 财报：营收 <b>$41.46B</b>（去年同期 $9.3B），非 GAAP EPS <b>$25.11</b>（同比涨 12 倍），毛利率约 <b>84.6%</b>——三项全部大超华尔街预期（预期营收 $35.85B）。下季度指引营收 <b>$50B</b>。盘后股价涨 15% 至 $1,213。HBM4 产能是核心驱动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个毛利率 84.6% 是半导体行业历史级别的数字——比 Nvidia 还高。原因：HBM 严重供不应求，定价权完全在卖方手里。但要注意：<b>这种利润率不可持续</b>——Samsung、SK Hynix 都在扩产，2027 年 HBM 产能翻倍后毛利会回归。短期看，Micron 的暴涨会带动整个存储链情绪（A 股的存储板块、万润科技、江波龙等）。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/06/25/micron-stock-3q-earnings-memory.html" target="_blank">CNBC</a> · <a href="https://investingengineer.com/micron-technology-q3-2026-earnings/" target="_blank">Investing Engineer</a> · <a href="https://investors.micron.com/" target="_blank">Micron IR</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix IPO</span>
+        <h4>SK Hynix 申请 $294 亿美股 IPO——史上第五大 IPO，7 月 10 日纳斯达克挂牌</h4>
+        <p>SK Hynix 正式向 SEC 提交美股 ADR 上市申请，募资 <b>$29.4B</b>（约 45.45 万亿韩元），预计 7 月 10 日在纳斯达克开始交易。这将是继 SpaceX 之后全球第二大 IPO。SK Hynix 占全球 HBM 产能 <b>50%+</b>，是 Nvidia 的核心 HBM 供应商。韩国股价当日涨 12%。</p>
+        <div class="why">🦞 <b>商业含义：</b>这是 AI 硬件链条今年最重要的一次 IPO。对金融视角来说：(1) SK Hynix 估值将直接对标 Micron，两家都是 HBM 核心玩家；(2) 募资用途是扩产——Yongin Cluster 2027 年投产，意味着 HBM 供给 2027 年大幅释放；(3) <b>对 Samsung 是压力</b>——Samsung 在 HBM 上已经落后 SK Hynix 一代，现在对手又拿到了美股市场的弹药。</p>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-06-24/sk-hynix-29-4-billion-us-listing-to-seize-on-memory-chip-frenzy" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/06/24/sk-hynix-nasdaq-adr-listing-south-korea.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Qualcomm Dragonfly</span>
+        <h4>Qualcomm Investor Day：Dragonfly CPU + HBC 架构 + 收购 Modular，目标 2029 数据中心 $15B</h4>
+        <p>Qualcomm 在 6/24 Investor Day 上全面发布数据中心芯片品牌 <b>Dragonfly</b>：C1000 CPU（与 Meta 签定制化协议）、AI300 推理加速器、HBC（High-Bandwidth Compute）新架构主打"内存优先"。同时 <b>$40 亿收购 AI 软件公司 Modular</b>，直接挑战 Nvidia CUDA 生态。目标 2029 年非手机收入 $40B，其中数据中心 $15B。股价盘初涨 11% 后回落。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Qualcomm 的策略很聪明——不跟 Nvidia 硬拼训练芯片，而是攻推理 + 定制化 CPU。推理芯片的量远大于训练芯片，而且客户（Meta、Microsoft）<b>迫切需要第二个供应商来压价</b>。Modular 收购是关键一步：CUDA 生态是 Nvidia 最大的护城河，Modular 做的是硬件无关的 AI 编译层。不过 2028 年才量产，短期是"远期支票"。</p>
+        <div class="source">来源：<a href="https://www.forbes.com/sites/stevemcdowell/2026/06/25/qualcomms-ai-data-center-bet-inside-the-dragonfly-strategy/" target="_blank">Forbes</a> · <a href="https://www.digitimes.com/news/a20260625VL201/qualcomm-data-center-nvidia-meta-chips.html" target="_blank">Digitimes</a> · <a href="https://www.sdxcentral.com/news/qualcomm-acquires-ai-startup-modular-in-open-ecosystem-bet-to-challenge-cuda/" target="_blank">SDxCentral</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AI 模型</span>
+        <h4>中国 Z.ai（智谱）GLM-5.2 性能逼近 Anthropic/OpenAI，计划国内上市</h4>
+        <p>NYT/Reuters 报道：智谱 AI 旗下 Z.ai 的 <b>GLM-5.2</b>（6/16 发布，MoE 架构，~750B 参数，100 万 token 上下文）在公开 benchmark 上<b>接近 Anthropic Claude 和 OpenAI GPT 的顶级水平</b>，但使用成本仅约 1/6。Z.ai 6/25 宣布计划在国内（上海）上市，估值已超 <b>$1000 亿</b>。同日 Anthropic 公开指控阿里巴巴用 25,000 个假账号"蒸馏"Claude 模型。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>两件事放一起看很有意思：(1) 中国 AI 模型的性能差距已经缩小到"几乎追平"——而且成本更低；(2) Anthropic 指控 Alibaba "蒸馏"（用大模型输出训练自己的模型），涉及 25,000 假账号和 2880 万次对话。这是 AI 知识产权的新战场——<b>模型输出到底算不算"窃取"</b>，法律还没跟上。对投资者：智谱上市是今年国内 AI 最大的一级市场事件。</p>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/06/25/technology/zai-china-artificial-intelligence-models.html" target="_blank">NYT</a> · <a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank">Reuters</a> · <a href="https://www.bbc.com/news/articles/cwyklykn5dwo" target="_blank">BBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">消费电子涨价</span>
+        <h4>Apple MacBook/iPad 涨价近 20%，Microsoft Xbox 涨 $100-150——AI 吃内存的账单来了</h4>
+        <p>Apple 同日宣布 MacBook、iPad、HomePod、Apple TV 全线涨价（$100-200 不等），原因是内存/存储芯片成本"<b>翻了两倍</b>"。iPhone 暂未涨价但 JPMorgan 预计 iPhone 18 Pro 将涨 $100-200。数小时后 Microsoft 宣布 Xbox 涨价（512GB 版 +$100 到 ~$500，1TB 版 +$150），8 月 1 日生效——这是 Xbox <b>第三次</b>涨价。Apple 股价跌 6.1%，Microsoft 跌 3.2%。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是 AI capex 向消费者转导的第一个明确信号——<b>HBM/DRAM 涨价 → 消费电子 BOM 上升 → 终端涨价</b>。传导链：Micron 赚翻 → Apple/Microsoft 成本承压 → 消费者买单。但涨价 = 需求承压 = 消费电子销量下行风险。对 Apple 来说，iPhone 18 如果涨价，在中国市场面对华为/小米的竞争会更被动。<b>存储芯片厂的盛宴，就是品牌厂的通胀</b>。</p>
+        <div class="source">来源：<a href="https://www.cbsnews.com/news/apple-price-hikes-macbook-ipad-2026/" target="_blank">CBS</a> · <a href="https://www.bbc.com/news/articles/c3ryj81ywlro" target="_blank">BBC</a> · <a href="https://www.cnbc.com/2026/06/25/microsoft-lifts-price-of-xbox-consoles-due-to-soaring-component-costs.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗再袭商船：霍尔木兹海峡紧张重燃，Brent 反弹至 $75</h4>
+        <p>6/25 伊朗在霍尔木兹海峡向一艘新加坡籍集装箱船发射不明弹丸，船体受损但无人员伤亡。UK Maritime Agency 已发航行警告。联合国暂停了海峡疏散行动。Brent 原油期货涨 2.1% 收 <b>$75.26</b>，WTI 同步上涨。这是美伊"停火谅解备忘录"后首次在霍尔木兹发生袭船事件。</p>
+        <div class="why">🦞 <b>市场含义：</b>虽然油价已从 4 月的 $101 大幅回落，但这次袭船说明<b>霍尔木兹的"和平"很脆弱</b>。值得注意：伊朗声称"非指定航线的船只安全不保证"——这是在变相收"过路费"。对市场来说：短期油价 $70-80 区间震荡，但如果摩擦升级，$90+ 不是不可能。港股/A 股对油价敏感的板块（航空、化工、航运）需要关注。</p>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/06/25/business/oil-prices-gas-iran.html" target="_blank">NYT</a> · <a href="https://www.bbc.co.uk/news/articles/cjwg9np904qo" target="_blank">BBC</a> · <a href="https://au.investing.com/news/commodities-news/oil-prices-edge-up-on-new-supply-worries-after-cargo-ship-hit-near-oman-4505354" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">委内瑞拉</span>
+        <h4>委内瑞拉双震：7.2 + 7.5 级，至少 188 死 1520 伤，首都加拉加斯建筑倒塌</h4>
+        <p>6/24 晚间，委内瑞拉北部不到一分钟内连续发生 <b>7.2 级和 7.5 级</b>两次强震，首都加拉加斯多栋建筑倒塌。已致 <b>188 人死亡、1520 人受伤、157 人失踪</b>。政府宣布国家紧急状态。Trump 表示美国"准备好、愿意并能够"提供援助。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>委内瑞拉是全球已探明石油储量第一的国家，地震可能影响其原油出口基础设施。短期油价已有小幅反应。更长期看，灾后重建 + 政治不稳定可能引发新一轮拉美难民潮，对美股拉美概念股和油价都有边际影响。</p>
+        <div class="source">来源：<a href="https://www.nbcnews.com/world/venezuela/powerful-earthquake-venezuela-rcna351673" target="_blank">NBC</a> · <a href="https://apnews.com/article/venezuela-earthquake-caracas-rodriguez-aid-0a62e6fc9feb5202a750c4fbb11a6aec" target="_blank">AP News</a> · <a href="https://www.theguardian.com/world/2026/jun/25/earthquake-venezuela-caracas-tremors-aftershocks" target="_blank">Guardian</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>PCE / Fed / 大宗商品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">PCE 通胀</span>
+        <h4>5 月 PCE 同比 4.1%（三年新高），核心 PCE 3.4%——Fed 的头疼事又多了一件</h4>
+        <p>商务部 6/25 公布：5 月 PCE 物价指数环比 +0.4%，同比 <b>4.1%</b>（三年新高）；核心 PCE 同比 <b>3.4%</b>（2023 年以来新高），均高于 Fed 2% 目标。汽油价格是主要推手。这是新主席 Warsh 上任后第一份 PCE 数据——6 月 FOMC 已维持利率 3.50-3.75% 不变，9 名委员支持今年至少加息一次。</p>
+        <div class="why">🦞 <b>读给你听：</b>PCE 是 Fed 最看重的通胀指标。4.1% 远超 2% 目标 = 降息基本不可能 = 甚至可能加息。这对市场意味着：(1) 美债收益率上行 → 成长股估值承压；(2) 美元走强 → 新兴市场资本外流；(3) 黄金短期承压（但地缘风险提供支撑）。<b>核心矛盾：AI 推动的一切都在涨（股价、芯片、电力），但通胀让 Fed 无法宽松</b>——这是 2026 下半年市场的主旋律。</p>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/06/25/business/federal-reserve-inflation-pce.html" target="_blank">NYT</a> · <a href="https://www.politico.com/news/2026/06/25/inflation-fed-rates-midterms-iran-00975567" target="_blank">Politico</a> · <a href="https://abcnews.com/Business/wireStory/key-inflation-gauge-jumps-3-year-high-latest-134201826" target="_blank">ABC News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美元 &amp; 黄金</span>
+        <h4>美元指数破 101（一年新高），黄金从 $4000 回调后寻找支撑</h4>
+        <p>PCE 数据公布后，美元指数 DXY 站上 <b>101</b>，创 2025 年 5 月以来新高。黄金此前已从历史高点回落至 $4,000 以下，短期在地缘风险（霍尔木兹）和通胀数据之间拉锯。Saxo 分析师指出，黄金已从 1 月高点回调 <b>29%</b>，但央行购金需求仍提供底部支撑。</p>
+        <div class="why">🦞 <b>传导链：</b>强美元 + 高通胀 + Fed 鹰派 = 对新兴市场是"三杀"。港股的 6 月跌幅（-8%）已经反映了这个逻辑。对 A 股影响相对小一些（资本管制 + 内需主导），但北向资金流出压力不小。<b>关注：如果 PCE 持续在 4%+，Warsh 可能在 9 月 FOMC 加息——那将是本轮周期第一次加息，全球风险资产会有一次重新定价。</b></p>
+        <div class="source">来源：<a href="https://goldsilver.com/industry-news/goldsilver-news/pce-hit-4-1-gold-went-up-heres-why/" target="_blank">GoldSilver</a> · <a href="https://www.home.saxo/content/articles/macro/market-quick-take---25-june-2026-25062026" target="_blank">Saxo</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-card">
+      <h4>🇺🇸 美股（6/25 收盘）— 道指微涨，纳指四连跌</h4>
+      <div class="idx">道琼斯 <span class="up">+0.14%</span> → 51,920 | 标普 500 <span class="flat">-0.01%</span> → 7,357 | 纳斯达克 <span class="down">-0.46%</span> → 25,359</div>
+      <div class="note">Mag7 继续承压：<b>Apple -6.1%</b>（涨价引发需求担忧）、<b>Microsoft -3.2%</b>。但 <b>Micron 盘后飙 15%</b> 带动期货拉升。Nasdaq 本周已跌 <b>4.4%</b>，标普跌 1.9%。市场宽度还行（58% 个股在 50 日线上），说明调整集中在 mega cap，没全面恐慌。逻辑：PCE 通胀超预期 + Apple/MSFT 涨价 = 利润率承压 → 科技巨头杀估值。</div>
+    </div>
+
+    <div class="market-card">
+      <h4>🇭🇰 港股（6/25 收盘）— 恒指 -1.4% 至 23,077，形成"死叉"</h4>
+      <div class="idx">恒生指数 <span class="down">-1.43%</span> → 23,077 | 恒生科技 跌幅更大</div>
+      <div class="note">恒指连续下跌，技术上形成<b>死叉</b>（50 日线下穿 200 日线），为去年 6 月以来最低。6 月以来恒指跌超 <b>8%</b>，而同期日经 +9%、韩股 +5%。Trip.com 季报净利润同比 -41%，港股暴跌 9%。Anthropic 指控 Alibaba 蒸馏事件也对阿里股价形成压力。<b>港股成了亚洲"丑小鸭"</b>——盈利改善是唯一出路，但短期缺乏催化。</div>
+    </div>
+
+    <div class="market-card">
+      <h4>🇨🇳 A 股（6/25 收盘）— 沪指 +0.23% 至 4,120，硬科技继续跑赢</h4>
+      <div class="idx">上证指数 <span class="up">+0.23%</span> → 4,120 | 深证成指 <span class="up">+1.24%</span> → 16,051 | 创业板 <span class="up">+1.41%</span> | 科创 50 <span class="up">+3.82%</span></div>
+      <div class="note">A 股延续"硬科技成长"主线，科创 50 大涨 3.82%。PBOC 推出隔夜逆回购专项流动性工具，资金面偏暖。Micron 超预期带动 A 股存储/半导体板块情绪。对比港股的弱势，A 股受益于<b>内资主导 + 政策预期</b>，外资风险偏好的扰动相对有限。<b>A/H 价差走阔</b>趋势仍在继续。</div>
+    </div>
+
+    <div class="market-card">
+      <h4>🦞 三市场联动解读</h4>
+      <div class="note">本周主线：<b>PCE 通胀超预期 → Fed 加息预期升温 → 美元走强 → 港股/A 股外资流出 → 港股跌得比 A 股多</b>。但 A 股有 PBOC 流动性对冲 + 硬科技行情支撑，跑赢港股。美股处于"Mag7 调整 vs Micron 引领存储反弹"的分裂状态。下周一（6/29）关注：Wimbledon 主赛开打 + 月末/季末 rebalancing。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>消费电子涨价 / 白酒 / 黄金消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">白酒</span>
+        <h4>1-5 月白酒产量同比 -4.3%，5 月单月 -6.7%——存量竞争加剧</h4>
+        <p>国家统计局数据：2026 年 1-5 月规上白酒企业产量 <b>145.2 万千升</b>，同比 <b>-4.3%</b>；5 月单月 26.3 万千升，同比 <b>-6.7%</b>。啤酒 1-5 月 +0.8%，但 5 月单月 -6.2%。葡萄酒继续萎缩。618 空调市场也"量额齐跌"：线上 -11.9%，线下 -16.4%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>白酒产量连年下滑已经是共识，但 5 月单月加速下降 -6.7% 值得注意——说明<b>消费降级 + 库存去化</b>还在进行。对五粮液、泸州老窖等头部品牌来说，"以价换量"策略可能接近尾声，下一个阶段是"存量博弈 + 品牌集中度提升"。618 空调数据也印证：地产低迷 + 消费信心弱 = 可选消费承压。不过好消息是政策面在转向（服务业新政），下半年可能有边际改善。</p>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L093GK6L05199NPP.html" target="_blank">网易/国家统计局</a> · <a href="https://smarthome.ofweek.com/2026-06/ART-91005-8110-30692081.html" target="_blank">OFweek</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">黄金消费</span>
+        <h4>老铺黄金股价一年腰斩，从"明星"变"老登"——金价波动 + 资金偏好 AI</h4>
+        <p>老铺黄金（06181.HK）股价较高点回撤超 <b>50%</b>。野村指出原因：(1) 3 月以来金价波动加剧影响消费信心；(2) 资金从消费股转向 AI/科技主题。若中东和平推进、金价企稳，下半年销售悲观情绪有望缓解。</p>
+        <div class="why">🦞 <b>市场含义：</b>老铺黄金是港股消费股"被 AI 抽血"的缩影。当资金全涌向 AI 硬件（Micron 涨 15%、SK Hynix 涨 12%），消费股自然失血。但从基本面看，金价回调对<b>终端消费其实是利好</b>（买金饰的成本降了）。如果 2026 下半年 AI 交易拥挤度到顶、资金开始扩散，黄金消费股可能有估值修复机会。</p>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0AF4AV60519MPBR.html" target="_blank">网易</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA</span>
+        <h4>尼克斯 4-1 击败马刺，53 年后再夺 NBA 总冠军！Brunson FMVP</h4>
+        <p>2026 NBA Finals 6/13 结束：纽约尼克斯 <b>94-90</b> 客场赢下 G5，总比分 <b>4-1</b> 击败文班亚马领衔的马刺。<b>Jalen Brunson</b> 场均 32.6 分当选 FMVP。Karl-Anthony Towns 创造 NBA 单赛季季后赛 +/- 纪录（+258）。这是尼克斯自 <b>1973 年</b>以来首个总冠军——等了 53 年。Mitchell Robinson 的关键前场篮板成为锁定胜局的画面。</p>
+        <div class="why">🦞 <b>花边视角：</b>尼克斯夺冠是 2026 年体育界最大的"情怀杀"。53 年——上一次夺冠时 Nixon 还在当总统。Brunson 从"被独行侠放弃"到"纽约之王"的故事线堪称完美。文班亚马虽然输了，但季后赛 239 个篮板球展示了未来 10 年的统治力。<b>下赛季 NBA Draft 已在 6/25 开始，新的故事又要开始了。</b></p>
+        <div class="source">来源：<a href="https://en.wikipedia.org/wiki/2026_NBA_Finals" target="_blank">Wikipedia</a> · <a href="https://www.sportsgrid.com/nba/video/knicks-win-nba-finals-claim-first-title-since-1973" target="_blank">SportsGrid</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">网球</span>
+        <h4>温网 2026 资格赛今日收官，正赛 6/29 周一开打</h4>
+        <p>温布尔登网球锦标赛资格赛 6/22-6/26 进行，正赛 <b>6 月 29 日（周一）</b>开打，至 7 月 12 日。中心球场 1:30 PM 开赛。这是 2026 年第三项大满贯，Sinner/Alcaraz 的对决仍是主线。</p>
+        <div class="why">🦞 <b>轻松一下：</b>温网是夏天最优雅的体育赛事，没有之一。如果 lainy 周末想追比赛，周一开打正好。全白球衣 + 草地 + 草莓奶油 = 伦敦夏天的正确打开方式。</p>
+        <div class="source">来源：<a href="https://www.atptour.com/en/news/wimbledon-2026-history-draw-schedule" target="_blank">ATP Tour</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">娱乐</span>
+        <h4>Will Smith 一家亮相巴黎时装周，Priyanka Chopra 亮相 Cannes Lions 2026</h4>
+        <p>Paris Fashion Week 持续进行中，Will Smith、Jada Pinkett Smith 及家人亮相 Dior 秀场。Cannes Lions 2026（广告创意节）也在进行，Priyanka Chopra 在台上分享了全球化视野在娱乐产业中的重要性。Netflix 宣布《Quarterback》第三季 7/14 首播，Joe Flacco 在 Bengals 的 backup 故事曝光。</p>
+        <div class="why">🦞 <b>花边小结：</b>巴黎时装周 + Cannes Lions = 6 月底欧洲最热闹的两件事。轻松看看图就好。</p>
+        <div class="source">来源：<a href="https://people.com/star-tracks-thursday-june-25-2026-new-celebrity-photos-updated-daily-12006241" target="_blank">People</a> · <a href="https://mashable.com/entertainment/new-to-streaming-june-26-2026" target="_blank">Mashable</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>一条就够</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">天文</span>
+        <h4>天文学家发现两颗"超级蓬松"系外行星——密度比棉花糖还低</h4>
+        <p>Space.com 报道：天文学家发现了两颗围绕同一颗恒星运行的"super-puff"系外行星，其<b>密度低于棉花糖</b>，是有史以来观测到最轻的行星。这类行星的体积接近气态巨行星，但质量极小，挑战现有的行星形成理论。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>想象一下——一颗比木星还大的行星，但质量只有地球的几分之一。如果你能站在上面，可能直接陷进去。这种"棉花糖行星"的存在说明我们对行星形成的理解还很粗糙。聊天可以说："宇宙连棉花糖都造出来了，地球人的 AI 还在卷 token 价格。"</p>
+        <div class="source">来源：<a href="https://www.space.com/" target="_blank">Space.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

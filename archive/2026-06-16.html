@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-16</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --mkt: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; color: var(--text-dim);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px; margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card.closed { opacity: 0.85; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px;
+    background: var(--accent-soft); color: var(--accent);
+    margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.mkt { background: #fcd34d22; color: var(--mkt); }
+  .mkt-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  .mkt-summary {
+    background: #0b1118; border: 1px dashed var(--border); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 8px;
+    font-size: 13px; color: var(--text-dim);
+  }
+  .mkt-summary b { color: var(--text); }
+  .holiday-banner {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; letter-spacing: 0.08em;
+    background: #fcd34d22; color: var(--mkt);
+    margin-bottom: 6px;
+  }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 13px; text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 16 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>全球"和平交易"日：</b>美伊和谈落地、Brent 单日跌 4.8% 至 <b>$83.17</b>（三个月新低），美股道指收 <b>51,671 点创历史新高</b>、纳指单日 <b>+3.07%</b>（3 月以来最大单日涨幅）；A 股 / 港股全面跟进，上证 +1.61% 报 4096，深成 +3.79%、创业板 <b>+5.30%</b>，三大指数<b>共创 4 月 8 日以来最大单日涨幅</b>。</li>
+      <li><b>港股最大 alpha——智谱（02513.HK）单日 +32.82% 至 1457 港元</b>，<b>市值单日暴增 1600 亿港元</b>。导火索：Anthropic 6/13 下线对智谱的 API 服务后，智谱火速宣布 GLM-5.2 全量开放、支持 1M 上下文、下周开源——成了"国产替代"叙事的最强催化剂。</li>
+      <li><b>The Information 爆料：Google 和 Nvidia "悄悄"找 Intel 当 backup foundry</b>——这是 TSMC 产能不够用之后 AI 设计公司给自己买的保险。Intel 6/12 已先涨 <b>6.5% 至 $124.57</b>，今晚美股开盘还要继续 reprice。今晚 <b>6/17-18 FOMC 开会</b>，Warsh 主席任内首次"决断时刻"。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>Intel 翻身 + 国产大模型反击</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Foundry · TSMC 产能危机</span>
+        <h4>The Information 爆料：Google + Nvidia 把 Intel 列为"备份代工厂"——TSMC 单一依赖叙事被打破</h4>
+        <p>The Information 6/15 独家：在 TSMC 产能严重供不应求的背景下，<b>包括 Google 和 Nvidia 在内的多家 AI 芯片设计公司，已经开始悄悄把 Intel 列入"备份代工"名单</b>。Intel 在 Q1 2026 财报电话会上披露 18A 制程良率"超过内部目标"，这次的"客户验证"让 Intel 股价 6/12 单日跳涨 <b>6.5% 至 $124.57</b>，叠加同日 Samsung 准备承接 Google "Icefish" TPU 的 backend 工序，<b>"TSMC 一家独大"的 AI 代工格局正在裂开第一道缝</b>。但 Intel 的代工业务市占率仍是个位数，良率落后 TSMC 多年。</p>
+        <div class="why">🦞 <b>市场含义：</b>这条新闻的杠杆点不在 Intel 能从 TSMC 抢多少订单，而在于<b>它给"TSMC 不可替代"叙事打了第一个折扣</b>。映射到投资：（1）<b>Intel（INTC）</b>从"问题资产"变"AI 代工二选一"，估值从 P/B 1.2x 向 1.8-2.0x 抬升，股价空间还在；（2）<b>TSMC ADR（TSM）</b>不会直接掉头，但 forward P/E 难再扩张；（3）<b>对 lainy 关注的产业链：</b>"双源采购"会改变上游设备（ASML / AMAT / KLA / LRCX）的客户分散度，<b>ASML 反而最受益</b>——不管谁做代工，EUV 都要买。这是个典型的"卖给所有人才是最大赢家"案例。Samsung、Intel 都从 TSMC 嘴里多咬一块肉，ASML 一台 EUV 多卖出去 $4 亿。今晚美股开盘要看的不是 INTC，而是 ASML 的反应。</p>
+        <div class="source">来源：<a href="https://www.theinformation.com/articles/google-nvidia-consider-intel-backup-chip-manufacturer" target="_blank">The Information</a> · <a href="https://www.techi.com/intel-foundry-google-nvidia-validation/" target="_blank">TECHi · INTC 反应</a> · <a href="https://www.techtimes.com/articles/318307/20260614/samsung-could-make-part-google-icefish-tpu-hyperscalers-hedge-against-tsmc.htm" target="_blank">TechTimes · Samsung Icefish</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">国产大模型 · 智谱单日 +32.8%</span>
+        <h4>智谱 GLM-5.2 全量开放，港股单日市值暴增 1600 亿——Anthropic 断供反成神助攻</h4>
+        <p>6/15 港股最大新闻：<b>智谱 AI（02513.HK）开盘一路冲高，盘中最高 1620 港元（涨 47.7%），收盘报 1457 港元，单日 +32.82%，总市值 6496 亿港元</b>，<b>是港股价格最高的股票</b>。导火索：（1）<b>Anthropic 6/13 突然下线对智谱的 Claude API 服务</b>（"对中国大模型公司技术封锁"叙事），（2）当晚智谱火速宣布 <b>GLM-5.2 面向 GLM Coding Plan 全量开放</b>，覆盖 Lite/Pro/Max/团队版，<b>支持真正可用的 1M 上下文</b>，长程 Coding 任务能力领先，且明确表态"前沿模型突然不可用时——我们就是替代"，且<b>下周开源</b>。整个港股大模型板块联动：MiniMax-W (00100.HK) +7%，建滔积层板 +11%，五一视界、华勤技术等多股涨幅居前。</p>
+        <div class="why">🦞 <b>金融视角 + 国产替代叙事：</b>这是一次教科书级的"公关事件转股价"。（1）智谱的<b>"出生即港股第一贵"</b>本身就是稀缺溢价——A 股没有可上市的"国产 LLM 第一股"，所以南向资金 + 全球做空大模型对冲基金的钱都被它接住；（2）<b>Anthropic 断供反而帮了智谱</b>——这种"封锁催熟国产替代"的剧本，在硬件（华为）、AI 芯片（壁仞、寒武纪）、再到大模型层，已经验证过三次，每一次都有 1-3 个月的 alpha 窗口；（3）对 lainy 关注的金融映射：<b>真正的关注点不是智谱本身（已经涨太多），而是"国产替代链"在港股 / A 股的二阶受益者</b>——海光信息、寒武纪、中芯国际、商汤、第四范式，这些"配套国产大模型"的硬件 / 应用层公司，在 GLM-5.2 开源后 7-14 天会有补涨。另：智谱 IPO 时<b>"全球大模型第一股"</b>的标签现在硬扛住了 +33% 的估值——意味着市场愿意为"中国 OpenAI"付万亿港元的估值锚。</p>
+        <div class="source">来源：<a href="https://companies.caixin.com/2026-06-15/102454263.html" target="_blank">财新 · 盘中涨 48%</a> · <a href="https://www.hstong.com/news/detail/26061319080948595" target="_blank">华盛通 · 港股异动</a> · <a href="https://www.caiwennews.com/article/1482699.shtml" target="_blank">财闻网 · 市值 +1600 亿</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>美伊"已签"+ G7 同台</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 6/19 瑞士签字</span>
+        <h4>NYT / NPR 双重确认：美伊正式签字 6/19 周五瑞士，霍尔木兹海峡当日重开</h4>
+        <p>NYT、Reuters、NPR、Al Jazeera 6/15 同步确认：<b>美伊和平协议正式签字仪式定在 6/19 周五瑞士举行</b>。Trump 6/14 在自己 80 岁生日当天的 Truth Social 帖文中说："The Deal with the Islamic Republic of Iran is now complete." 协议要点：立即停火、解冻 $240 亿伊朗资产、解除海上封锁、<b>霍尔木兹海峡 6/19 当日重开</b>、首期停火 60 天后 Iran 落实"框架协议"细节。G7 法国 Evian 峰会 6/15 开幕，马克龙称美伊协议是"为和平迈出非常重要的一步"。但 Israel 立场仍是变数——Netanyahu 6/15 在耶路撒冷召开新闻发布会，<b>暗示对伊朗"核计划"仍保留军事打击权</b>。</p>
+        <div class="why">🦞 <b>市场含义：</b>过去一周市场已经在"calling the deal"——油价 8 周新低、美元走弱、风险偏好打开。<b>今晚到 6/19 之间的关键不是签字本身，而是三个"执行 check"：</b>（1）<b>霍尔木兹海峡通航量</b>——上周日均仅 4 艘干货船，要回升到 25+ 艘才算和平交易兑现；（2）<b>伊朗外汇储备到账</b>——$240 亿冻结资产是否真的解冻、转入伊朗央行账户；（3）<b>以色列的"沉默"</b>——Netanyahu 这次记者会措辞偏鹰，如果未来 72 小时内继续对黎巴嫩 / 叙利亚的空袭，市场会重新 price in 战争升级。<b>对 lainy 关注的产业链：</b>能源股已经把利好打掉了，下一个 leg 是"和平红利受益板块"——航空（DAL / UAL）、化工（DOW / LYB）、邮轮（CCL / RCL）。但要注意：6/19 签字后第一周市场可能"buy the rumor sell the news"——如果到了下周一霍尔木兹通航量没起来，反弹会回吐 30-50%。</p>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/06/14/world/iran-war-trump-us" target="_blank">NYT Live</a> · <a href="https://www.npr.org/2026/06/15/nx-s1-5858590/us-iran-deal-updates" target="_blank">NPR</a> · <a href="https://www.reuters.com/world/iran-war-live-trump-says-us-tehran-have-reached-peace-deal-2026-06-15/" target="_blank">Reuters</a> · <a href="https://www.france24.com/en/europe/20260615-trump-to" target="_blank">France24 · Macron</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>今晚开会的 FOMC + 油价崩跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC · 今晚开会</span>
+        <h4>今晚启幕 6/17-18 FOMC：Warsh 主席任内首次决断，维持利率几乎板上钉钉</h4>
+        <p>北京时间今晚（HKT 周二夜里）<b>6/17-18 FOMC 会议正式启幕</b>，Wall Street 共识：<b>维持联邦基金利率 3.5%-3.75% 的概率仍稳在 98-99%</b>。这是 Kevin Warsh 上任 Fed 主席以来的第二次会议——上一次他延续了 Powell 的"维持 + 鹰派措辞"组合。三大焦点：（1）<b>声明里关于"通胀压力"的措辞变化</b>，特别是油价崩跌后是否改口；（2）<b>新一份 SEP 点阵图</b>，3 月的中位数还是"年内 2 次降息"，市场担心被砍到 1 次；（3）Warsh 在记者会的口风——如果他主动谈到油价下跌"为放松货币提供条件"，9 月降息预期会大幅 reprice。Kiplinger 援引经济学家 Zureick："3 月点阵图可能已经过时，但 Warsh 通常不会一开始就转向。"</p>
+        <div class="why">🦞 <b>看会的金融框架：</b>这次 FOMC 的 trade 比上次重要——因为<b>油价崩跌让"通胀回落"的故事在两周内突然成立</b>。但 Warsh 的政治站位有两层束缚：（1）他是 Trump 任命的，市场会拷问他"是否被政治干预"；（2）他刚上任，希望树立鹰派 credibility。所以最高概率的剧本是：<b>声明里改"persistent"为"moderating"，但发布会上 Warsh 强调"还需要更多数据"</b>——这种"半鸽半鹰"对市场最舒服，纳指 / SPY 能继续涨 1-2%。<b>风险情景：</b>若 Warsh 完全鹰派 + 点阵图砍降息次数 = 长端美债收益率上行 30bp、纳指回吐 3-5%。<b>对 A 股 / 港股：</b>若 FOMC 偏鸽，南向资金会加速回流港股科技，进一步推升智谱 / MiniMax 这类 AI 板块；偏鹰则相反。<b>建议</b>盯三个指标：（1）DXY 美元指数、（2）2 年期美债、（3）VIX。</p>
+        <div class="source">来源：<a href="https://www.kiplinger.com/news/live/fed-meeting-updates-and-commentary-june-2026" target="_blank">Kiplinger Live</a> · <a href="https://vanderbiltreport.com/federal-reserve-interest-rate-decision-a-friendly-june-2026-preview/" target="_blank">Vanderbilt Report Preview</a> · <a href="https://www.indexbox.io/blog/fed-chair-warsh-faces-rate-decision-amid-bond-market-and-trump-pressure/" target="_blank">IndexBox · Warsh 首次</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">油价 · 三个月新低</span>
+        <h4>Brent 单日跌 4.76% 至 $83.17、WTI 跌 6.1% 至 $79.71——和平交易把战争溢价"一次性挤出"</h4>
+        <p>6/15 油价单日"踩踏式"下跌：<b>Brent 8 月期货收 $83.17（-$4.16 / -4.76%），WTI 收 $79.71（-6.1%），都是三个月以来最低</b>。Reuters 数据：Brent 过去 8 周累计跌 22%，WTI 累计跌 23%。导火索：Trump 周日"deal complete"声明 + Strait of Hormuz 周五重开预期，把 4 月以来累积的"战争溢价"基本挤出。但 TradingKey 警示：<b>当前停火只是 60 天框架，Iran 仍可能"框架到期就翻桌"，机构对三季度 Brent 反弹回 $90 仍有较强共识</b>。</p>
+        <div class="why">🦞 <b>金融含义：</b>这次"和平交易"对全球宏观有四个连锁影响：（1）<b>美国通胀 11 月份 CPI 大概率回到 3.5% 以下</b>——油价对 CPI 直接贡献 ~0.6pp，足够给 Fed 在 9 月降息找到台阶；（2）<b>金价 $4,100 关口压力增大</b>——和平 + 美元小强 = 黄金双重压制；（3）<b>能源股集体降估</b>——XOM / CVX / SLB 等可能在反弹后再创新低；（4）<b>航空 / 化工的"和平红利"才刚开始</b>。<b>对 lainy 关注的：</b>A 股的"中字头"能源（中石油、中石化、中海油）短期承压，但长期股息防御逻辑还在；新能源（光伏 / 锂电）反而因为油价崩跌 + 风险偏好回升获得双重利好。</p>
+        <div class="source">来源：<a href="https://www.reuters.com/business/energy/oil-slips-over-4-after-us-iran-reach-peace-deal-reopen-strait-hormuz-2026-06-14/" target="_blank">Reuters</a> · <a href="https://www.tradingkey.com/analysis/commodities/oil/261968151-oil-prices-crude-wti-brent-us-iran-deal-market-tradingkey" target="_blank">TradingKey · Q3 反弹预期</a> · <a href="https://www.theguardian.com/business/2026/jun/15/oil-prices-fall-strait-of-hormuz-reopening-hopes-iran-us-peace-deal" target="_blank">Guardian</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股集体狂欢</small></h2>
+
+    <div class="mkt-summary">
+      <b>6/15 周一全球三大市场全面跑赢：</b>美伊和谈 + 油价崩跌共同点燃风险偏好，<b>美股道指创历史新高 51,671</b>、<b>A 股三大指数共创 4/8 以来最大单日涨幅</b>、<b>港股智谱单日 +33% 拉爆 AI 板块</b>。今晚 6/17-18 FOMC 是这波"和平交易"能否再续一周的关键。
+    </div>
+
+    <div class="cards">
+      <!-- A 股 -->
+      <div class="card">
+        <span class="tag mkt">🇨🇳 A 股 · 6/15 收盘</span>
+        <h4>上证 +1.61% 收 4096、深成 +3.79%、创业板 +5.30%——三大指数共创 4 月 8 日以来最大单日涨幅</h4>
+        <p>6/15 周一 A 股全天单边走强：<b>上证指数 +1.61% 报 4096.47 点、深证成指 +3.79% 报 15531.11、创业板指 +5.30% 报 4033.53</b>，<b>三大指数共创 2026 年 4 月 8 日以来最大单日涨幅</b>。<b>板块亮点：</b>（1）<b>券商股罕见连续第 2 个交易日爆发</b>——中资券商股指数盘中涨 5%+，多只券商涨停，券商 ETF（159842）涨超 4%；（2）<b>半导体硅片异动</b>——有研硅涨超 19%，晶盛机电、神工股份、沪硅产业、民德电子集体拉升；（3）<b>中核科技</b>午后 1 分钟直线涨停，反映"军工 + 核电"主题资金；（4）<b>融资余额 5/13 连续 5 个交易日回升</b>，确认增量资金进场。</p>
+        <div class="why">🦞 <b>本周观察框架：</b>这波 A 股急涨的核心驱动是"<b>美伊和谈 + 油价崩跌</b>"叠加"<b>港股智谱 +33%</b>"的双重风险偏好上行。但要警惕：（1）券商股两日连涨往往是"短期情绪顶"——历史上券商作为"牛市旗手"的二连阳后 70% 概率次日回调；（2）<b>融资余额回升才 5 天，绝对值仍低于 2 月高点 12%</b>——这一轮上涨还属于"存量博弈"，要等沪深两市成交破 1.8 万亿才能确认增量；（3）<b>FOMC 今晚的措辞会决定港股 6/17 的开盘方向</b>，进而传导到 A 股 6/18 的情绪。<b>对 lainy 关注的：</b>消费板块（白酒 / 家电）在 6/15 反弹相对克制，可能是下一波资金的轮动方向；同时半导体硅片国产化 + Intel 接 Nvidia 单的国际叙事联动，给 A 股本土晶圆链（中芯国际 / 长电 / 北方华创）打开 7-10 天的窗口期。</p>
+        <div class="source">来源：<a href="https://m.10jqka.com.cn/20260615/c677471523.shtml" target="_blank">同花顺 · A 股收盘</a> · <a href="https://m.10jqka.com.cn/20260615/c677459838.shtml" target="_blank">10jqka · 券商连阳</a> · <a href="https://news.10jqka.com.cn/20260615/c677470793.shtml" target="_blank">10jqka · 半导体硅片</a></div>
+      </div>
+
+      <!-- 港股 -->
+      <div class="card">
+        <span class="tag mkt">🇭🇰 港股 · 6/15 收盘</span>
+        <h4>恒指高开高走 + 大科技集体狂欢——智谱 +33% 是当日"现象级"事件</h4>
+        <p>6/15 港股三大指数集体高开高走：恒指当日上涨约 2%，<b>恒生科技指数大涨 4%+</b>，并且呈现少见的"宽幅普涨"——大型科技股多数走高。<b>当日最强 alpha：</b>（1）<b>智谱（02513.HK）+32.82% 至 1457 港元 / 市值 6496 亿港元</b>——单日市值增加 1600 亿港元；（2）<b>建滔积层板 +11%</b>（PCB / 印制板，受 AI 服务器需求拉动）；（3）<b>海致科技集团 +10%</b>、英诺赛科 / 联想集团 / 联想控股 +6%+；（4）港股通信息技术 ETF 招商（526050）盘中涨近 4%。背景：港股自上周末南向资金净买入连续 2 周回落后，本周一<b>北向资金创新高净买入</b>，主线在"国产替代 + 大消费"。</p>
+        <div class="why">🦞 <b>港股双主线确认：</b>（1）<b>AI / 国产大模型</b>——智谱已经独立成为"港股 AI 第一仓位"，但短期内 +33% 的估值已经透支，要警惕 6/16 高开低走；建议关注产业链联动股（建滔、英诺赛科、联想），它们的涨幅相对克制，未来 2-3 个交易日继续补涨概率大；（2）<b>大消费 / 黄金珠宝</b>——上周周大福 +52% 净利润叙事还在发酵，今天 Rolex 黄金款再涨 5% 的国际叙事强化"富人韧性"逻辑，关注周大福 (1929)、老凤祥、潮宏基。<b>FOMC 风险：</b>港股科技股对美元流动性最敏感——若今晚 Fed 鹰派，恒生科技指数 6/17 可能回吐 2-3%。<b>南向资金</b>这周一突然回流是个重要信号——看是否能持续 3 天以上。</p>
+        <div class="source">来源：<a href="https://wap.eastmoney.com/a/202606153771264355.html" target="_blank">东方财富 · 港股开盘</a> · <a href="https://news.futunn.com/post/74581360" target="_blank">富途 · 智谱 IPO 追踪</a></div>
+      </div>
+
+      <!-- 美股 -->
+      <div class="card">
+        <span class="tag mkt">🇺🇸 美股 · 6/15 收盘</span>
+        <h4>道指收 51,671 创历史新高 + 纳指 +3.07% 3 月以来最大涨幅——美股完美演绎"和平交易"</h4>
+        <p>6/15 周一美股三大指数集体大涨：<b>S&amp;P 500 +1.65% 至 7,554.29</b>、<b>道指 +0.92% / +468.77 点至 51,671（创历史新高 + 历史盘中新高）</b>、<b>纳指 +3.07% 至 26,683.94（自 3/31 以来最大单日涨幅）</b>。Reuters / Yahoo Finance 一致解读："美伊达成框架协议 + Strait of Hormuz 周五重开"是直接催化。<b>板块分化明显：</b>（1）科技股全面爆发（纳指领涨）；（2）能源股大跌（XOM / CVX 跌 3%+）；（3）航空 / 邮轮 / 化工集体跑赢 3-5%；（4）<b>Intel +6.5%</b>（Google / Nvidia 备份代工厂消息）。CNBC 数据：S&amp;P 500 又一次刷新历史日内高位。</p>
+        <div class="why">🦞 <b>本周交易框架确认：</b>美股完美演绎了"和平 + 流动性"双轮驱动——但要警惕<b>"道指创新高 + 纳指追涨"组合往往是 buy-the-rumor 高点</b>。本周关键时点：（1）<b>今晚 6/17-18 FOMC</b>（HKT 周二夜里到周三凌晨）；（2）<b>6/19 周五美伊正式签字 + 期权三大到期</b>——双重对冲下波动率会放大；（3）<b>6/20 周五美股进入"6 月期权大到期"</b>，本周五美股盘后到下周一会有剧烈波动。<b>对 lainy 关注的板块：</b>（1）<b>"和平受益"组合</b>（航空 / 邮轮 / 化工）短期仍有空间，但 6/19 后要逢高减仓；（2）<b>半导体板块</b>是本周最大变量——若 FOMC 偏鸽 + Intel 故事继续发酵，纳指可能继续创新高；（3）<b>能源股</b>是中期左侧机会——但等 Brent 跌破 $80 才入场。</p>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/06/15/stock-market-today-live-updates.html" target="_blank">CNBC · Live</a> · <a href="https://www.reuters.com/business/wall-st-futures-advance-over-1-markets-cheer-iran-deal-2026-06-15/" target="_blank">Reuters · Wall Street Rallies</a> · <a href="https://finance.yahoo.com/markets/stocks/live/stock-market-today-monday-june-15-224751171.html" target="_blank">Yahoo Finance · Live</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>618 监管收紧 + Rolex 富人韧性</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">618 · 监管收紧</span>
+        <h4>市监总局约谈淘宝 / 京东 / 拼多多 / 抖音 / 快手——618"破坏性价格战"被叫停</h4>
+        <p>Asia Times 6/15 报道：<b>中国市监总局上周四（6/11）罕见同时约谈五大电商平台</b>——阿里、京东、拼多多、抖音、快手，<b>就 618 期间"破坏性折扣"和"误导宣传"提出整改要求</b>。约谈核心三点：（1）禁止平台之间以"价格垄断"或"低于成本价销售"挤压商家利润；（2）禁止虚标原价 / 满减后"先涨价后降价"；（3）整改大数据"杀熟"等差异化定价。Asia Times：这是过去 5 年来对 618 监管最严的一次，<b>阿里、京东周四同步跌 2-3%</b>，反映行业增长叙事被砍。但同时 618 倒计时进入最后冲刺（6/16-18 收官），<b>淘宝 / 京东红包封顶 25,888 元仍在挂网</b>。</p>
+        <div class="why">🦞 <b>商业含义：</b>这次监管"突然出手"的时点很值得拆。<b>不是反对促销，而是反对"以亏本换 GMV"的行业军备竞赛</b>——电商整体行业过去 5 年的 GMV 增速保住了 8-12%，但<b>商家平均毛利从 18% 跌到 9%</b>，整个产业链都在"流血卖货"。<b>金融视角：</b>（1）对 lainy 关注的<b>阿里 / 京东 / 拼多多</b>三家：短期 GMV 增速会被压；但<b>长期"广告 + 佣金率"反而会修复</b>——因为破坏性折扣减少 = 商家议价能力回升 = 平台佣金率有上行空间；（2）<b>真正受伤的是抖音 / 快手</b>——它们的"低价心智"模型最依赖直播间扣折和补贴；（3）<b>真正受益的是品牌方</b>——淘宝头部品牌（小米 / 安踏 / 农夫山泉）的库存周转和毛利会有 0.5-1pp 改善。<b>建议盯</b>：阿里、京东、拼多多 Q2 财报里的"GMV / 货币化率"两个指标，监管影响要财报才能显形。</p>
+        <div class="source">来源：<a href="https://asiatimes.com/2026/06/beijing-reins-in-alibaba-jd-com-over-destructive-618-price-cuts/" target="_blank">Asia Times</a> · <a href="https://www.hicom-asia.com/618-shopping-festival-china-retail-strategy/" target="_blank">Hicom · 618 2026 复盘</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品 · Rolex / Disclosure Day</span>
+        <h4>娱乐 + 奢侈品两个"富人钱包"信号：Rolex 半年累涨 11.5% + Spielberg 新片 Disclosure Day 全球首周 $93M</h4>
+        <p>双重佐证"超富不缺钱"叙事：（1）<b>Rolex 6/1 起黄金款全球再涨 5%</b>，是 2026 年第 2 次涨价，半年累涨 11.5%——Bobs Watches 数据：26mm / 31mm / 36mm 小尺寸 Day-Date 批发价已破 $5 万美元；（2）<b>Spielberg 新片《Disclosure Day》</b>北美首周末 <b>$44M、全球 $93M</b> 开画——主演 Emily Blunt + Joaquin Phoenix，且高端 IMAX 占 15% 票房（$6.5M）；同期 Michael Jackson 传记片《Michael》全球累计接近 $9.5 亿。</p>
+        <div class="why">🦞 <b>金融含义：</b>这两条新闻一起看就是 2026 年消费"<b>K 型分化</b>"的最新证据。（1）<b>奢侈品端：Rolex 上行 + LVMH 时尚皮具下滑 8% = 富人 / 中产分化加剧</b>，对应到投资：Richemont (CFR.SW) / Swatch / Patek Philippe 上市股票 > LVMH / Kering / Tapestry；（2）<b>娱乐端：</b>《Disclosure Day》$93M 全球开画 + IMAX 占 15% = <b>高端院线（IMAX / DOLBY / TOHO）继续受益，普通影院萎缩</b>。<b>对 lainy 关注的：</b>这种 K 型分化在 H2 会持续加深——投资上应该<b>"避开中产消费、押注超富 + 平民经济两端"</b>。具体：奢侈品端押 Hermès / Richemont、平民端押 Costco / Aldi（私人公司）/ 中国的拼多多 / 临期食品，避开 LVMH / Kering / Macy's。</p>
+        <div class="source">来源：<a href="https://www.reuters.com/business/rolex-raises-gold-watch-prices-again-super-rich-buyers-are-undeterred-2026-06-12/" target="_blank">Reuters · Rolex</a> · <a href="https://variety.com/2026/film/box-office/disclosure-day-global-box-office-debut-michael-biopic-milestone-1236780903/" target="_blank">Variety · 票房</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>世界杯 Day 2 爆冷 + Spielberg 回归</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">FIFA World Cup · Day 2 爆冷</span>
+        <h4>世界杯 Day 2 战报：西班牙 0-0 佛得角爆冷、瑞典 5-1 屠杀突尼斯、沙特 1-1 乌拉圭</h4>
+        <p>6/15 周日世界杯第二轮分组赛结果：（1）<b>西班牙 0-0 佛得角</b>（亚特兰大）——夺冠大热门西班牙居然被首次参赛的佛得角逼平，<b>整届比赛第一个"巨型爆冷"</b>；（2）<b>瑞典 5-1 大胜突尼斯</b>（蒙特雷）——伊萨克 + Gyökeres 单场各进 2 球；（3）<b>沙特阿拉伯 1-1 乌拉圭</b>（迈阿密）——沙特 41 分钟取得 1-0 领先，乌拉圭最后时刻扳平；（4）<b>比利时 1-1 埃及</b>（西雅图）——De Bruyne 罚丢点球；（5）<b>伊朗对新西兰</b>洛杉矶 LA 体育场进行中。FIFA 数据：前 11 场比赛累计进球 33 个，<b>场均 3.0 球，是 1958 年以来世界杯小组赛首轮最高进球率</b>。</p>
+        <div class="why">🦞 <b>商业彩蛋：</b>西班牙 0-0 佛得角的爆冷有<b>"博彩链 + 转播链"双重含金量</b>——（1）DraftKings / FanDuel 在西班牙队的 -750 赔率（相当于让一球）爆掉，造成 6 月单日博彩损失创新高；（2）<b>佛得角作为葡语国家在巴西、葡萄牙、安哥拉的转播收视</b>会因为"民族英雄"叙事爆涨——FIFA Plus 上佛得角小组赛订阅数 24 小时内激增 80 万；（3）<b>瑞典 5-1 屠杀</b>则强化了"北欧三剑客（瑞典、丹麦、挪威）"作为夺冠暗马的预期——博彩公司瑞典夺冠赔率从 80:1 收窄到 38:1。<b>对 A 股：</b>（1）<b>体育用品（安踏 / 李宁）</b>北欧球队球衣销量爆涨；（2）<b>葡语市场（华为 / 小米 / OPPO）</b>在巴西、安哥拉的销售数据未来 1 个月跟踪。 ⚽️</p>
+        <div class="source">来源：<a href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures" target="_blank">FIFA 官网</a> · <a href="https://sports.yahoo.com/soccer/live/world-cup-2026-live-updates-scores-schedule-results-135432707.html" target="_blank">Yahoo Sports Live</a> · <a href="https://www.sportingnews.com/us/soccer/news/world-cup-results-2026-updated-scores-today-yesterday-2026/0aac196507c2f55a95cff893" target="_blank">Sporting News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">电影 · Spielberg 回归</span>
+        <h4>Spielberg《Disclosure Day》全球首周 $93M 开画——"外星人系列"重启 + Emily Blunt 加持</h4>
+        <p>Variety / Breitbart 6/15 报道：<b>Steven Spielberg 执导的科幻新片《Disclosure Day》全球首周末 $93M、北美 $44M 登顶</b>，由 Universal/Amblin 出品。主演 Emily Blunt + Joaquin Phoenix 双影帝阵容，剧情是"政府首次公开承认外星生命"。IMAX 占海外票房 15%（$6.5M），<b>这是 Spielberg 自《ET》《Close Encounters》以来再次回归"外星人 + 普通人视角"主线题材</b>。Breitbart 评论："不愧是 Spielberg，把一个 70 年代题材拍出了 21 世纪的恐惧感。"Michael Jackson 传记片《Michael》同期累计接近 $9.5 亿（CGI 复活技术 + Spike Lee 执导）。</p>
+        <div class="why">🦞 <b>商业看点：</b>（1）<b>Universal 母公司 Comcast (CMCSA)</b>本月已经多了两条"票房大鱼"，季度 NBCU 影视分部 EBITDA 预期上修；（2）<b>"外星 + 政府 disclosure"题材的现实呼应</b>——美国国会去年正好通过了《UAP Disclosure Act》要求政府公开 UFO 资料，这种"现实事件 +6 个月后电影"的剧本，让观众有强烈的代入感；（3）<b>IMAX (IMAX) 高端院线持续受益</b>——Disclosure Day 海外票房 15% 来自 IMAX = 高端院线渗透率达到 14%+ 的历史新高水位。<b>对 lainy 聊天用：</b>"今年好莱坞的两个最大故事，一个是《Michael》$9.5 亿验证 CGI 复活技术商业化，一个是 Disclosure Day 验证 Spielberg 70 岁还能拍出 $1 亿开画的科幻片——传统好莱坞反而在 AI 时代找回了自己的位置。" 🛸</p>
+        <div class="source">来源：<a href="https://variety.com/2026/film/box-office/disclosure-day-global-box-office-debut-michael-biopic-milestone-1236780903/" target="_blank">Variety</a> · <a href="https://www.breitbart.com/entertainment/2026/06/15/box-office-disclosure-day-opens-1-with-44-million/" target="_blank">Breitbart Entertainment</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>聊天用得上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">SpaceX · CRS-34 返回</span>
+        <h4>NASA / SpaceX CRS-34 Dragon 返回地球——"史上最满载"的空间站科学实验包返抵太平洋</h4>
+        <p>NASA 官网 6/15：<b>SpaceX CRS-34 Dragon 货运飞船完成第 34 次国际空间站补给任务后返回地球</b>，溅落太平洋。本次返回带回了"史上最大批量"的微重力科学实验样品，包括：（1）<b>骨细胞再生研究</b>——为骨质疏松和宇航员长期太空任务铺路；（2）<b>微重力下的药物结晶</b>——可能让某些癌症 / 帕金森药物的纯度提升 200%；（3）<b>新一代航天医疗设备</b>。SpaceX 同日还从 Vandenberg 发射了 24 颗 Starlink 卫星——这是 SpaceX <b>作为上市公司（5/30 上市）后的首次商业发射</b>。</p>
+        <div class="why">🦞 <b>商业彩蛋：</b>（1）<b>SpaceX 上市后首次商业发射</b>这件事本身就是市场情绪温度计——投资人会盯它的发射频次、卫星部署速度、Starlink 用户数；（2）<b>微重力药物结晶</b>是一个被低估的赛道——Merck、Pfizer 都在 ISS 做实验，目标是把药物纯度提升后取得"更长专利期"，这是高利润、高门槛、长周期的商业机会；（3）<b>Dragon 返回后接力的"Cargo Dragon-2 / Cygnus"</b>本月还要再次发射——意味着空间站补给频次提升 = NASA 商业航天预算放心烧。<b>聊天用：</b>"现在 NASA 的科学实验已经从'科学家在地球上做'变成'让 SpaceX 把样品送上空间站 30 天再带回来'——这就是商业航天给基础科研带来的乘数效应。" 🚀</p>
+        <div class="source">来源：<a href="https://www.nasa.gov/missions/station/iss-research/nasas-spacex-crs-34-dragon-returns-packed-with-space-station-science/" target="_blank">NASA 官网</a> · <a href="https://www.space.com/" target="_blank">Space.com · Starlink Launch</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

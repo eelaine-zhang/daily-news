@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-12</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --mkt: #fde68a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; color: var(--text-dim);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px; margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px;
+    background: var(--accent-soft); color: var(--accent);
+    margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.mkt { background: #fde68a22; color: var(--mkt); }
+  .market-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--mkt);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+  }
+  .market-block h5 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: var(--mkt);
+    letter-spacing: 0.04em;
+  }
+  .market-block .quote {
+    font-size: 13px; color: var(--text-dim); margin-bottom: 6px;
+  }
+  .market-block .quote b { color: var(--text); }
+  .market-block p { margin: 6px 0 0; font-size: 13.5px; }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 12 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>SpaceX 今晚正式登 Nasdaq（SPCX）：</b>固定 $135 / 股、融资 750 亿美元、估值 1.77 万亿——史上最大科技 IPO 今夜开盘，所有 AI 主题投资人盯着的"<b>第一笔报价</b>"决定下半年风险偏好。</li>
+      <li><b>美股暴力反弹：</b>Trump 一句"<b>伊朗很快会达成协议</b>"+ 以色列暂停打击，<b>Dow +930 / S&amp;P +1.75% / Nasdaq +2.54%</b>，把周三 CPI 4.2% 的恐慌全部吞回去——但霍尔木兹仍处"准关闭"。</li>
+      <li><b>港股七连跌创年内新低：</b>恒指 24,249（-0.65%）盘中破 24,000，阿里跌超 5%；A 股则在 4,000 点附近反复——南北资金都在等 CPI 烫数据后政策的下一步动作。</li>
+    </ul>
+  </div>
+
+  <!-- ===== AI & 芯片 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>SpaceX 上市夜 + TSMC 下一代封装</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">SpaceX IPO</span>
+        <h4>SPCX 今晚 Nasdaq 开盘：定价 $135、估值 1.77 万亿——AI 投资人盯的不是马斯克，是这个数</h4>
+        <p>SpaceX 周四锁定 IPO 定价 <b>$135 / 股</b>，融资 <b>750 亿美元</b>，估值 <b>1.77 万亿美元</b>。今天（6/12）正式以 ticker <b>SPCX</b> 登陆 Nasdaq，是史上最大规模科技 IPO。Business Insider、CNBC、XTB 普遍预测开盘高波动——开盘价（与 $135 的差距）将是判断"AI 主题钱袋"还剩多少弹药的关键信号。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>不要把它当成马斯克情绪股看，要当成 <b>AI / 卫星 / 算力基础设施"还能吸金多少"</b> 的温度计。逻辑：① Starlink 已经是 AI 数据传输和军事通信的实质垄断方；② 这一轮 750 亿募资里，主要去向是 Starship 大批量生产线（=未来 5 年 AI 数据中心轨道部署）。如果开盘溢价 ≥ 30%，说明 AI 主题资金还很热；如果跌破发行价，警报：风格切换可能比预期早。</div>
+        <div class="source">来源：<a href="https://www.businessinsider.com/spacex-ipo-live-updates-pricing-spcx-stock-2026-6" target="_blank">Business Insider</a> · <a href="https://www.xtb.com/en/education/spacex-share-price-spcx-what-to-expect-after-the-ipo" target="_blank">XTB</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 先进封装</span>
+        <h4>TSMC CoPoS 封装急推 2028 量产——Nvidia 下下代 Feynman 把 CoWoS 尺寸"撑爆"</h4>
+        <p>Wccftech 引述分析师：TSMC 正把 <b>CoPoS（Chip-on-Panel-on-Substrate）</b>这条下一代先进封装路线 <b>提前到 2028 H2 量产</b>。原因是 Nvidia 下下代 AI 芯片 <b>Feynman</b> 的封装尺寸预计将打破现有 CoWoS 上限（约 reticle 3.5x 限制），需要在更大的有机面板上做超大 silicon + HBM 集成。</p>
+        <div class="why">🦞 <b>商业含义：</b>之前我们说过——AI 芯片瓶颈从制程切到了"封装 + HBM"。CoWoS 是 TSMC 当前 80%+ AI 芯片代工的卡位关键，CoPoS 则是 "下一代议价权"。<b>把 2028 当作 TSMC 毛利保卫战的窗口</b>：在 CoWoS 仍紧张的同时锁死 CoPoS，意味着 Nvidia / Google / 客户端在未来两代 GPU 上都跑不掉 TSMC。这是为 TSM 长期估值兜底的逻辑——比单纯的 2nm/A14 制程更厚。</div>
+        <div class="source">来源：<a href="https://wccftech.com/nvidias-feynman-ai-chip-poised-to-break-the-cowos-size-barrier-as-tsmc-rushes-copos-to-2028-production-analyst/" target="_blank">Wccftech</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM 供应</span>
+        <h4>Nvidia × SK Hynix 多年协议升级：HBM4 + LPDDR5X + 3D NAND 一篮子绑定</h4>
+        <p>Tom's Hardware：Nvidia 与 SK Hynix 把过去单一的 HBM 采购，升级为<b>多年期联合开发 + 多产品供应协议</b>。第一阶段覆盖：Vera Rubin AI 系统（HBM4、LPDDR5X、3D NAND）、独立 Vera 处理器（LPDDR5X）、RTX Spark 个人电脑（LPDDR5X、3D NAND）、Jetson Thor 机器人计算（HBM4e）。这是把"老黄掌握的 AI 路线图"提前 36 个月嵌进 SK Hynix 的产能规划。</p>
+        <div class="why">🦞 <b>读给金融视角：</b>之前 HBM 是"年度报价、年度签约"，现在 Nvidia 把它锁成 <b>3 年联合开发 + 一篮子产品</b>——这对 SK Hynix 是 EPS 可见度极大利好（毛利和量价都被绑定），但也意味着 Samsung / Micron 必须靠"备胎位 + 价格战"才能挤进 Rubin Ultra 之后的代际。<b>HBM 行业从"周期股"正在变成"长协股"</b>——存储板块的估值方法论可能要切换了。</div>
+        <div class="source">来源：<a href="https://www.tomshardware.com/pc-components/dram/nvidia-and-sk-hynix-ink-multi-year-memory-co-development-and-supply-agreement-seeks-to-address-extended-development-cycles" target="_blank">Tom's Hardware</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Apple × Google</span>
+        <h4>WWDC 26 落地确认：下一代 Apple Intelligence "底层模型与 Google Gemini 共同定制"</h4>
+        <p>Apple 官方新闻稿正式确认：<b>下一代 Apple Foundation Models 与 Google 联合定制 Gemini 模型</b>，深度嵌入到 Apple Intelligence 体验里。iOS 27 上 Siri AI 周一已发布，秋季正式上线。这是周一 WWDC 主题演讲的官方延伸——OpenAI "默认位"被彻底剔除。</p>
+        <div class="why">🦞 <b>跟昨天的进展：</b>昨天我们说 OpenAI 被踢出默认位，今天苹果官方稿用 "co-built with Google" 的表述把这件事正式定性——这是<b>苹果第一次承认依赖外部基础模型</b>的官方文件。对 OpenAI：失去 20 亿 iPhone 的预装入口，估值溢价压力实质化；对 Google：Gemini 的"基座模型"地位被苹果用 PR 文档背书，等于免费打广告。</div>
+        <div class="source">来源：<a href="https://www.apple.com/newsroom/2026/06/apple-intelligence-brings-powerful-ai-capabilities-into-everyday-experiences/" target="_blank">Apple Newsroom</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 国际局势 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>停火 + 谈判窗口被强行拉开</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火</span>
+        <h4>Trump 称"伊朗很快会达成协议"，以色列暂停打击进入第二天</h4>
+        <p>纽约时报：Netanyahu 与 Trump 通话后宣布"以色列的火力暂停"（fire is on hold）；伊朗也表态停止反击，但双方都警告随时可以重启。Trump 在白宫公开放话："伊朗很快会达成协议"——这句话直接成为 6/11 美股暴力反弹的导火索。</p>
+        <div class="why">🦞 <b>市场含义：</b>不要被 Trump 的措辞迷惑——"暂停"不是"停止"。但短期市场只交易最近一根 K 线：地缘风险溢价被"瞬间挤掉"，VIX 从 19.87 跌回 16 区间。<b>真正决定下周走向的是周一伊朗对"美军 232 制裁清单"的回应</b>，不是周末的 Trump 推特。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/06/08/world/iran-israel-lebanon-attacks" target="_blank">NYT Live Blog</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹海峡</span>
+        <h4>Hormuz 仍"实质关闭"：日均通过仅 4 艘干货船、伊朗收 100 万美元/船过路费</h4>
+        <p>Wikipedia / Reuters 综合：尽管停火宣布开放海峡，但伊朗以"限流 + 高额过路费"实质卡控——<b>停火首日只有 4 艘干货船（非油轮）通过</b>，常态下日均 9 艘；伊朗收取 100 万美元/船甚至 100 万美元/桶的过路费。Brent 6/11 跌至 ~$89-95 区间（不同时段报价），但仍较 5 月 +20%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是地缘事件"被市场低估"的典型——名义停火 ≠ 油运正常化。<b>"准关闭"才是真实成本结构</b>：航运公司的保险费翻倍、亚洲炼厂的原油到岸成本上升 8-12 美元/桶，对中印日韩的下半年 CPI 都是隐性压力。航空（油价占成本 30%）和化工（PX/PTA 等炼化下游）板块的二季度报告会被这个事件再次拉低预期。</div>
+        <div class="source">来源：<a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">Wikipedia · Hormuz Crisis</a> · <a href="https://www.reuters.com/world/iran/" target="_blank">Reuters Iran</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>原油"假摔"继续：Brent 跌到 $89 / WTI 跌到 $86——4 月以来最低</h4>
+        <p>Trading Economics 收盘：<b>WTI 跌到 $85.94</b>（过去 4 周 -15.74%），Brent 一度逼近 $89。Fortune 早盘 9am ET 看到 Brent ~$95，但日内随 Trump 表态持续走低。逻辑：<b>停火 + OPEC+ 7 月增产 18.8 万桶/日</b> 双杀避险买盘。</p>
+        <div class="why">🦞 <b>对你的报告：</b>注意这里有一个反向逻辑——油价跌不一定是好事。当下油价下跌的驱动是"地缘缓和 + OPEC+ 增产"，但<b>需求侧（中美欧 PMI）并没有改善</b>。如果地缘风险周末重新升级，油价可能在一周内来回 ±15%——能源期权隐含波动率已经飙到一年高位。对中国炼化企业反而是机会窗口：低价补库 + 限制端价格稳定。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://fortune.com/article/price-of-oil-06-11-2026/" target="_blank">Fortune</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 宏观 & 市场 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 4.2% + Fed 不降息 已成定局</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">CPI 4.2%</span>
+        <h4>美 5 月 CPI 4.2% 三年新高、核心 +2.9%——Goldman 取消年内降息预期</h4>
+        <p>Bureau of Labor Statistics 6/10 公布：5 月 CPI 同比 <b>4.2%</b>（4 月 3.7% → 5 月 4.2%，连续 4 个月加速），环比 +0.5%；核心 CPI +2.9%。能源 +3.9% 是最大贡献项，住房 +0.3%、食品 +0.2%。<b>Goldman Sachs 当日声明：不再预期 Fed 2026 年降息</b>；NYT 报道部分利率衍生品定价甚至开始计入"12 月可能加息"。</p>
+        <div class="why">🦞 <b>关键传导：</b>这是关税 + 油价 + 工资三轮通胀终于同步发酵——之前市场赌"通胀只是关税一次性传导"，现在已被打脸 4 个月。<b>对你最相关的影响</b>：① 美债收益率上行 → 美元强 → 港股/A 股流出压力；② Fed 不降息 → 高估值成长股（特别是非 AI 的小盘股）估值承压；③ 反过来 <b>AI 龙头的 EPS 增速反而成"避风港"</b>，这是 6/11 美股反弹时 Nasdaq +2.54% 超越 Dow +1.86% 的核心原因。</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/business/2026/jun/10/inflation-report-rate" target="_blank">The Guardian</a> · <a href="https://cceonlinenews.com/stock-watch/us-inflation-hits-4-2-wall-street-fed-rate-cuts/" target="_blank">CCE Online News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">劳动力市场</span>
+        <h4>5 月新增非农 17.2 万 / 失业率 4.3%——"通胀强 + 就业强"的 Fed 噩梦剧本</h4>
+        <p>Guardian 综合：美国 5 月新增 <b>17.2 万非农就业</b>（高于预期），失业率维持 4.3%。这意味着 Fed 面临的不是"滞胀"，而是真正难处理的"<b>偏热经济 + 偏热通胀</b>"——任何降息都会被解读为政治屈服。</p>
+        <div class="why">🦞 <b>读给你听：</b>这才是 Powell 真正头疼的剧本。如果是"通胀高 + 就业差"，他能用"避免衰退"作为降息的政治掩护；现在两端都热，意味着 Fed 必须背锅、维持高利率到 2026 年底。<b>对中国央行</b>是个隐性约束——人民银行任何宽松动作都会立刻面临汇率压力，所以下半年降准降息的窗口比想象中更窄。</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/business/2026/jun/10/inflation-report-rate" target="_blank">Guardian</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 股市行情 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>美股暴力反弹 / 港股七连跌 / A 股 4000 拉锯</small></h2>
+
+    <div class="market-block">
+      <h5>🇨🇳 A 股 · 6/11 收盘</h5>
+      <div class="quote">
+        上证 <b>3,987.01 (-0.16%)</b> · 深成指 <b>14,851.98 (-0.68%)</b> · 创业板 <b>3,811.25 (-1.13%)</b> · 科创 50 <b>+0.62%</b>
+      </div>
+      <p>📉 上证盘中再次失守 4,000 整数关，4,500 只个股下跌，<b>成交量缩到 1.59 万亿（半日）</b>——南北分化继续。亮点：科创 50 是唯一红盘，AI 算力 + 半导体硅片"涨价拐点"叙事强势——传出主流硅片厂在 Q2 末上调长协价 5-8%，对应板块尾盘异动。培育钻石异军突起：惠丰钻石、四方达、黄河旋风等多家涨停，超级电容板块跟涨。
+      <br>🦞 <b>逻辑解读：</b>缩量盘整 + 板块轮动加速 = 资金"等政策"。<b>没人愿意在 CPI 烫数据 + Fed 表态前主动加仓</b>，但也舍不得卖——所以 4,000 点附近反复试探是大概率剧本。下周 LPR + 经济数据是变量。</p>
+    </div>
+
+    <div class="market-block">
+      <h5>🇭🇰 港股 · 6/11 收盘</h5>
+      <div class="quote">
+        恒指 <b>24,249.29 (-0.65%)</b> · 恒科 <b>-1.46%</b> · 国企 <b>-1.22%</b> · 成交 <b>2,886 亿港元</b>
+      </div>
+      <p>🚨 港股 <b>七连跌创年内新低</b>，盘中一度跌破 24,000 点。<b>阿里跌超 5%</b>（解禁 + AI 估值二次回调）、百度跌超 3%、京东跌超 2%——科网股全线承压。<b>半导体板块逆势走强</b>：算力 + 硅片涨价主线传导到港股映射。技术面更糟：恒指出现"<b>死亡交叉</b>"（50 日均线下穿 200 日），自 2023 年 7 月以来首次。
+      <br>🦞 <b>逻辑解读：</b>港股是中港美三重压力的"承压面"——美元强 + 中概公司减持解禁 + 国内经济数据等待。死叉只是技术信号，更核心的是<b>外资在 24,500-25,000 区间持续撤离</b>。如果下周破 24,000 关口而 A 股仍守 4,000，港 A 价差会继续走阔，反弹要等到 7 月业绩季前后真正的盈利证据。</p>
+    </div>
+
+    <div class="market-block">
+      <h5>🇺🇸 美股 · 6/11 收盘</h5>
+      <div class="quote">
+        Dow <b>50,848.75 (+930pt / +1.86%)</b> · S&amp;P 500 <b>7,394.30 (+1.75%)</b> · Nasdaq <b>25,809.66 (+2.54%)</b>
+      </div>
+      <p>💥 周三 CPI 4.2% 的恐慌被周四"暴力吞回"——三大指数集体反弹 1.7-2.5%。导火索：<b>Trump 称"伊朗很快达成协议"</b>+ 以色列暂停打击；<b>SpaceX IPO 定价 $135 / 估值 1.77 万亿</b> 提振科技股情绪。Nasdaq 反弹最猛是因为 AI 龙头（Nvidia、Oracle、Micron、Intel）齐涨；中概股反弹有限。VIX 从 19.87 跌回 16 区间。
+      <br>🦞 <b>逻辑解读：</b>这是一个典型的"地缘缓和 + IPO 情绪"双驱动反弹，<b>不是因为 CPI 数据本身被消化</b>——Fed 不降息这件事市场还没真正定价进去。<b>下周一开盘前两个变量</b>：① SpaceX 今晚开盘表现是否撑得住 $135 发行价；② 周末有没有伊朗或以色列单边动作。任何一个 negative 都会瞬间打回头。</p>
+    </div>
+  </section>
+
+  <!-- ===== 消费 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>618 最后冲刺 + 监管约谈出场</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">监管 · 618</span>
+        <h4>淘宝/京东/拼多多/抖音/小红书 集体被约谈："百亿补贴"被指真金不足百亿</h4>
+        <p>市场监管总局对淘宝、京东、拼多多、抖音、小红书展开 618 大促前约谈。质疑点：<b>"百亿补贴"是长期营销活动，并非 618 期间真实投入 100 亿</b>。各平台均"多次拒绝提供实际补贴金额及商家出资比例"，同时未在显著位置公示活动规则、商家资质。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 618 进入第 12 年第一次"被压名号"。<b>短期</b>：平台必须在 6/13-18 最后冲刺周补足合规材料，可能限制最低价券的投放力度，对消费者实际让利可能"看起来变少"。<b>长期</b>：电商大促营销"夸张化"红利结束，监管开始介入<b>补贴的真实性</b>——这会让平台之间的"补贴军备竞赛"从台面退到台下，可能利好京东这类"自营 + 真补贴"模式相对天猫拼多多的"流量补贴"模式。</div>
+        <div class="source">来源：<a href="https://www.sohu.com/a/1035160919_463965" target="_blank">搜狐财经</a> · <a href="https://www.163.com/dy/article/KV506R350552HBC9.html" target="_blank">网易新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">国货美妆</span>
+        <h4>珀莱雅再卫冕天猫 618 美妆 TOP 1——温州兄弟 21 年把欧莱雅打成第二</h4>
+        <p>36Kr 报道：今年 618 天猫美妆周期，<b>珀莱雅再次反超欧莱雅，蝉联护肤品牌销售 TOP 1</b>，同时稳居抖音美妆 TOP 5。这是国货美妆继 2023 双 11 首次登顶后<b>连续 5 个大促周期</b>的统治。背后是温州兄弟（侯军呈、方玉友）21 年构建的"研发 + 抖音 + 主力大单品（红宝石精华、源力精华）"组合。</p>
+        <div class="why">🦞 <b>映射到金融视角：</b>珀莱雅的故事是中国消费"高端化转向"的最直接样本——<b>毛利率从 60% 拉到 70%</b>（接近国际一线水准），同时单品 ASP（平均售价）连续 3 年提升。对应到资本市场，珀莱雅的 PE 已经超过欧莱雅，估值溢价反映出"国货红利 + 数字化护城河"的双重叙事。下半年关键变量：抖音 GMV 见顶之后能否切到自营 + 海外市场。</div>
+        <div class="source">来源：<a href="https://36kr.com/p/2874096717861256" target="_blank">36Kr</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">跨境电商</span>
+        <h4>速卖通海外 618：383 个品牌日销 GMV 超亚马逊——国货跨境跳板成型</h4>
+        <p>《科创板日报》：阿里速卖通 6/1 启动海外 618，期间 <b>383 个品牌日销 GMV 超越亚马逊</b>，超七成合作品牌实现数倍业绩反超。中小国货品牌（特别是家居、3C、户外细分）借助跨境通道完成"<b>避开内卷 + 触达海外消费力</b>"的转型。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是国货品牌"二次出海"的关键节点。<b>第一次出海</b>（2015-2020）靠 Anker、Shein 等代工出身的品牌；<b>第二次出海</b>（2024-2026）的特征是消费品牌主动跳过 Amazon、用 AliExpress/TikTok Shop 直接打到欧洲东欧。对阿里：海外业务从"亏损 burn cash"切到"GMV+毛利双驱动"，速卖通可能在 Q2 财报里首次贡献正向 EBITDA。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/KV63SI5B05198CJN.html" target="_blank">网易科技</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 娱乐花边 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>NBA 神奇逆转 + 歌手补位</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA 总决赛</span>
+        <h4>Knicks G4 史诗逆转 29 分：OG Anunoby 1.2 秒补篮绝杀，系列赛 3-1</h4>
+        <p>NBA.com：周三 G4 在 MSG，Knicks 一度落后 29 分，最终 <b>OG Anunoby 在 1.2 秒补篮绝杀 107-106</b>，3-1 领先 Spurs。这是 NBA 总决赛历史上"<b>最大分差逆转之一</b>"。Game 5 周六 6/13 在圣安东尼奥，Knicks 主场抢冠机会；如果回 MSG，Wemby 必须 50+ 才能逼出 G6。</p>
+        <div class="why">🦞 <b>聊天用：</b>没看的话也可以装作看了——这是过去 15 年总决赛最戏剧性的一场。商业层面：MSG 票务系统瘫痪 30 分钟、ABC 收视率创 2024 以来最高。如果 Knicks 周六客场夺冠，纽约这周末整个城市要疯——Knicks 自 1973 年后从未夺冠。</div>
+        <div class="source">来源：<a href="https://www.nba.com/news/starting-5-june-11-2026" target="_blank">NBA.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">综艺</span>
+        <h4>《歌手 2026》补位阵容曝光：EJ / 万妮达 / 张远 / 侯明昊 / 杨坤——这季的张力来了</h4>
+        <p>新浪：《歌手 2026》补位歌手名单出炉——<b>EJ、万妮达、张远、侯明昊、杨坤</b>。这个名单的有趣之处在于跨度极大：杨坤是老牌实力派、张远是男团 R&amp;B 路线、万妮达 / EJ 是 Rap + 国际化方向、侯明昊是流量演员转型——五个人代表五条完全不同的赛道。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>《歌手》今年明显在<b>找"出圈话题点"</b>——上一季袁娅维 vs 单依纯之争翻车后，节目组这次明显选择"<b>风格冲突最大化</b>"。万妮达 + EJ 的国际化路线 vs 杨坤的"中国 Rock"，背后是节目对短视频时代"唱功 vs 个性"分歧的回应。聊天可以说："要看哪场？万妮达 vs 杨坤同台肯定是高光。"</div>
+        <div class="source">来源：<a href="https://www.sina.cn/news/detail/5308688321744190.html" target="_blank">新浪新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">网球</span>
+        <h4>2026 NBA 总决赛 ABC 收视破 1500 万——美国体育"主场反弹"</h4>
+        <p>体育媒体综合：ABC 报道 Knicks vs Spurs G4 的收视达 <b>1,500+ 万观众</b>，是 2024 NBA 总决赛以来最高。原因：① 纽约市场半个世纪未夺冠的情绪买单；② Wemby 32 分爆发 + Anunoby 绝杀的戏剧性。NBA League Pass 在 G4 期间订阅量短时间内涨 12%。</p>
+        <div class="why">🦞 <b>商业含义：</b>NBA 这几年被 Caitlin Clark + WNBA 抢去了一些主流叙事，G4 的爆款收视意味着<b>NBA 还能讲故事，只是需要"明星城市 + 戏剧性结局"双触发</b>。对 Disney（ABC 母公司）：转播权续约谈判中拿到一个加价的"现实弹药"。对 NBA：明年与流媒体（亚马逊、NBC、ESPN）签的 760 亿美元合约的合理性又加固一层。</div>
+        <div class="source">来源：<a href="https://sports.yahoo.com/articles/knicks-vs-spurs-2026-nba-184006672.html" target="_blank">Yahoo Sports</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 科技/科学花边 ===== -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科学花边 <small>聊天用得上的冷知识</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">JWST 系外行星</span>
+        <h4>韦伯望远镜：WASP-121b "白天黄昏分裂"——同一颗行星，黎明区比黄昏区凉得多</h4>
+        <p>ScienceDaily：JWST 揭示热木星 <b>WASP-121b</b>（距地球 ~880 光年）的"<b>黎明 vs 黄昏</b>"区域出现戏剧性温差。同一颗潮汐锁定行星，黄昏面（朝向恒星刚结束）金属雾化更密集；黎明面（即将面对恒星）则相对清澈——意味着<b>大气层并不是一个简单的"被太阳烤的球"，而是有完整的环流模式</b>。</p>
+        <div class="why">🦞 <b>聊天用：</b>如果有人问"系外行星到底有什么用"——可以这样讲：找到的不是外星人，而是<b>"地球大气模型"的实验对照组</b>。气候学家在用 WASP-121b 这种极端环境校准地球的大气环流模拟。换句话说，每发现一颗系外行星，我们对自己星球的天气预报模型都准一点。这是<b>"基础研究 → 气候经济"链条</b>少有的具体案例。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/news/space_time/" target="_blank">ScienceDaily · Space & Time</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

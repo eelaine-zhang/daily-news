@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-28</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 28 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>OpenAI + Broadcom 发布首款自研推理芯片 "Jalapeño"，专为 LLM 推理优化；Nvidia 同步公布"零水耗"数据中心设计——AI 基建的下一个战场从算力转向散热和定制化。</li>
+      <li><b>地缘 + 油价：</b>美伊达成停火协议，Brent 原油暴跌至 $72-73（开战以来最低），高盛下调 Q4 预测至 $80；但 Trump 指责伊朗仍在用无人机袭船，停火脆弱。</li>
+      <li><b>市场：</b>全球科技股"黑色一周"——纳指连跌 5 天累跌 4.6%，A 股创业板周五暴跌 4%，恒指创一年最差周（-5.2%）；道指却逆势创历史新高，风格轮动极端分化。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">OpenAI 自研芯片</span>
+        <h4>OpenAI + Broadcom发布"Jalapeño"——首款自研 LLM 推理芯片</h4>
+        <p>6/24，OpenAI 与 Broadcom 联合公布 Jalapeño 推理处理器，从零设计、专为大语言模型推理优化。Broadcom CEO Hock Tan 表示将支持"吉瓦级数据中心"部署，2026 年开始与 Microsoft 等合作伙伴上线。这是 OpenAI 去年 10 月宣布自研芯片合作后的首个落地成果。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是"去英伟达化"的又一里程碑。Google 拆了 TPU（训练 + 推理分开），现在 OpenAI 也下场做推理 ASIC。逻辑很清晰：<b>推理是规模化部署的环节，量远大于训练，自研能把单次推理成本压下来</b>。英伟达的护城河从"算力垄断"变成"训练卡垄断 + 推理卡竞争"。Broadcom 是最大赢家——它同时帮 Google、Meta、OpenAI 做定制 ASIC，议价权飞涨。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html" target="_blank">CNBC</a> · <a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/" target="_blank">TechCrunch</a> · <a href="https://arstechnica.com/gadgets/2026/06/openai-and-broadcom-announce-chip-designed-for-llm-inference-at-scale/" target="_blank">Ars Technica</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 散热</span>
+        <h4>Nvidia 发布"零水耗"数据中心设计，称 AI 水问题"基本解决"</h4>
+        <p>6/22 伦敦气候周期间，Nvidia 发布下一代 AI 数据中心参考设计，用闭环液冷替代蒸发式冷却塔，声称"几乎消除所有水耗"。不过 TechTimes 指出：这套方案只解决数据中心内部的用水，外部发电环节的耗水并未计入。</p>
+        <div class="why">🦞 <b>商业含义：</b>散热是 AI 数据中心扩张的<b>物理瓶颈</b>之一——不是"算力不够"而是"散热跟不上"。Nvidia 把闭环液冷标准化，意味着未来数据中心选址不再被水资源绑定，可以在更干旱/更偏远的地方建——<b>土地和电价更便宜</b>。利好液冷设备供应商（Vertiv、施耐德），也对数据中心 REIT 的成本结构是利好。但要留意"零水耗"是营销话术，全生命周期水足迹远不止机房内部。</div>
+        <div class="source">来源：<a href="https://fortune.com/2026/06/22/nvidia-new-data-center-design-ai-water-problem-cooling/" target="_blank">Fortune</a> · <a href="https://www.axios.com/2026/06/22/nvidia-data-center-water-solution" target="_blank">Axios</a> · <a href="https://www.techtimes.com/articles/319107/20260625/ai-data-center-water-use-not-solved-nvidias-cooling-fix-stops-walls.htm" target="_blank">TechTimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国存储芯片</span>
+        <h4>CXMT 加速 HBM 扩产 + Apple 申请采购中国存储芯片</h4>
+        <p>SemiAnalysis 深度报告：中国最大 DRAM 厂商 CXMT（长鑫存储）HBM 产能将从 2025 年底约 5 kwspm 扩到 2026 年底约 30 kwspm，并计划在上海建 HBM 封装厂。同时 FT 报道 Apple 正向美国政府申请批准从 CXMT 采购内存芯片——这是供应链多元化的重大信号。Corsair 已在部分 DDR5 产品中采用 CXMT 芯片。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CXMT 是中国半导体"国产替代"里进展最快的存储玩家。HBM3 如果能量产，意味着中国 AI 基建有了"不依赖 SK Hynix/Samsung"的备份方案。Apple 申请采购 CXMT 更是风向标——<b>如果获批，说明美国制裁线在存储领域有松动的可能</b>。对 Micron 来说是双刃剑：HBM 需求太强所以自己业绩爆表，但 CXMT 进来抢 DDR5 通用市场会压低长期 ASP。</div>
+        <div class="source">来源：<a href="https://newsletter.semianalysis.com/p/chinas-cxmt-is-set-to-challenge-dram" target="_blank">SemiAnalysis</a> · <a href="https://www.scmp.com/tech/tech-war/article/3358301/us-chip-giant-micron-validates-growth-chinas-cxmt-and-ymtc-amid-tight-memory-market" target="_blank">SCMP</a> · <a href="https://ph.investing.com/news/company-news/apple-seeks-us-approval-to-buy-memory-chips-from-chinas-cxmt-ft-reports-2469069" target="_blank">Investing.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火</span>
+        <h4>美伊达成临时停火协议，油价跌至开战以来最低</h4>
+        <p>TradingEconomics 数据：Brent 原油周五跌至 $72-73/桶，为 2 月 27 日（开战前）以来最低，<b>单周跌幅超 10%</b>（一个月来最大）。高盛将 Q4 Brent 预测从 $90 下调至 $80，预计波斯湾原油出口 7 月底恢复到战前水平——比此前估计提前一个月。但 Trump 周五指控伊朗仍用无人机袭击霍尔木兹海峡商船，称其"违反停火"。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 4 月的 $101 跌到 $72，跌幅 30%，这对全球通胀预期是巨大的利好——Fed 少了一个大麻烦。但停火很脆弱（Trump 自己都在说对方违约），所以油价下行不会一帆风顺。<b>传导链</b>：油价跌 → 通胀预期降温 → Fed 降息空间打开 → 美元走弱 → 新兴市场资本回流。这就是为什么周五道指创新高：能源成本下降直接利好传统工业/运输/消费板块。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.investing.com/commodities/brent-oil" target="_blank">Investing.com</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">中国能源</span>
+        <h4>NYT：全世界抢油的时候，中国的油罐是满的</h4>
+        <p>纽约时报 6/21 深度报道：伊朗和俄罗斯对中国的石油出口近年来占两国 GDP 的 6% 以上。当其他国家因霍尔木兹危机抢油时，中国凭借"灰色采购"渠道已囤满战略储备。这也解释了为什么中国对美伊停火谈判的态度一直比较超然。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>中国"满油罐"意味着两件事：① 油价下跌时中国不会急着补库，<b>反而会拖慢油价反弹的速度</b>；② 中国在谈判桌上有更多筹码——能源安全感足了，对中东外交就不需要那么积极。对投资者来说：油价短期可能超跌，但中国的储备采购节奏是中期油价的上限"锚"。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/06/21/business/china-oil-iran.html" target="_blank">New York Times</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed · 油价 · 通胀</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed 观望</span>
+        <h4>Fed 按兵不动：就业强劲 + 油价仍高于战前，dot plot 成焦点</h4>
+        <p>TradingEconomics 报道：尽管美伊已达成临时停火，油价仍高于战前水平，叠加近期就业数据持续强劲，市场预期 Fed 将在下次 FOMC 维持利率不变。投资者密切关注 Fed 的"点阵图"——是否暗示今年还有降息。达拉斯联储 6/23 研究指出：美国已成为净石油出口国，对地缘油价的脆弱性比过去显著降低。</p>
+        <div class="why">🦞 <b>读给你听：</b>Fed 现在的处境是"两边不讨好"——油价跌了但还没跌到战前，就业太强所以降息缺乏正当性，但高利率维持太久又会让科技股估值继续承压。<b>风格分化的根源就在这里</b>：道指（价值/工业股）创新高是因为"高利率 + 油价跌"对传统行业是净利好；纳指连跌是因为"高利率不降"直接压制远期现金流折现。这个分化在 Fed 明确转向之前不会结束。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a> · <a href="https://www.dallasfed.org/research/economics/2026/0623" target="_blank">Dallas Fed</a> · <a href="https://www.deloitte.com/us/en/insights/topics/economy/global-economic-outlook/weekly-update.html" target="_blank">Deloitte</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>6/26 周五收盘</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">🇺🇸 美股</span>
+        <h4>纳指五连跌累跌 4.6%，道指却创历史新高——极端风格分化</h4>
+        <p><b>6/26 收盘：</b>道指 51,876 (-0.09%)，标普 500 7,354 (-0.1%)，纳指 25,298 (-0.2%)。<b>周线：</b>道指 +0.6%（创新高），标普 -2.0%，纳指 -4.6%。Caterpillar -5.67%、Cisco -4.56%、Goldman -4.07% 领跌道指；Microsoft +5.71%、Salesforce +5.45%、IBM +5.08% 逆势上涨。OpenAI 据报道考虑推迟 IPO，进一步打击 AI 板块情绪。</p>
+        <div class="why">🦞 <b>解读：</b>这周的市场叙事是"AI 估值反思"——Magnificent Seven 贡献了标普一季度 60% 的盈利增长和 83% 的指数涨幅，这种集中度本身就是风险。<b>当市场开始质疑 AI ROI 回报周期时，资金从高估值科技股流向价值股和工业股</b>。道指创新高不是偶然：石油跌 + Fed 不降息 = 传统行业最舒服的宏观组合。但要注意：如果纳指继续下跌超 10%，市场恐慌情绪会传染到所有板块。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/06/25/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06262026-12007282" target="_blank">Investopedia</a> · <a href="https://www.livemint.com/market/stock-market-news/us-stock-markets-dow-jones-hits-record-high-nasdaq-sinks-4-6-what-shook-wall-street-this-week-11782534509448.html" target="_blank">LiveMint</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">🇭🇰 港股</span>
+        <h4>恒指创一年最差周（-5.2%），科技指数年内跌超 20%</h4>
+        <p><b>6/26 收盘：</b>恒指 22,671.86 (-1.76%)，失守 23,000 关口。恒生科技指数年内已跌超 20%，进入技术性熊市。本周恒指 -5.2%，为一年多来最大周跌幅。SCMP 分析认为：全球 AI 估值回调 + 地缘不确定性是主因，南向资金净买入也未能扭转趋势。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>港股的问题在于它是"中美双重定价"——<b>同时受美股科技股回调和中国经济基本面影响</b>。恒生科技指数跌入技术熊市是个危险信号：如果继续恶化，可能触发融资盘平仓。不过从估值看，恒指 PE 已回到 10x 附近（历史低位区间），如果油价继续跌 + Fed 下半年降息，港股的弹性会很大。现在的关键是等二季度财报验证"盈利改善"叙事能否持续。</div>
+        <div class="source">来源：<a href="https://www.scmp.com/business/china-business/article/3358428/hang-seng-index-heads-worst-week-over-year-renewed-sell-engulfs-tech-names" target="_blank">SCMP</a> · <a href="https://www.bbntimes.com/global-economy/hong-kong-stock-exchange-hang-seng-index-drops-1-76-to-22-671-as-ai-sell-off-hits-one-year-low" target="_blank">BBN Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">🇨🇳 A 股</span>
+        <h4>创业板暴跌 4.07%，沪指跌破 4,100——全球科技回调传导</h4>
+        <p><b>6/26 收盘：</b>沪指 4,027.26 (-2.26%)，深成指 15,782 (-3.44%)，创业板 4,194.21 (-4.07%)。算力硬件方向领跌，锂电池板块跟跌。前一日（6/25）创业板刚创新高后骤然回调，形成"昨日巅峰今日深渊"的走势。此前 6/23 创业板已有单日 -3.84% 的暴跌（7 个月最大），本周可谓"双杀"。</p>
+        <div class="why">🦞 <b>解读：</b>A 股科技板块这周的下跌不是孤立事件，而是<b>全球 AI 估值回调的中国映射</b>。创业板两周一波"过山车"——先创新高再暴跌，说明资金在高位分歧极大。好的一面是：沪指 4,000 附近有较强支撑（政策底 + 估值底），且油价下跌对中国这个最大石油进口国是净利好。<b>下周关注：创业板能否在 4,100-4,200 区间企稳，如果继续破位则中期趋势走坏。</b></div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001907fq2i.html" target="_blank">新浪财经</a> · <a href="https://m.sohu.com/a/1040581653_116062" target="_blank">搜狐</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">🦞 三市场联动</span>
+        <h4>油价跌 + Fed 不降息 = 风格极端分化的一周</h4>
+        <p>本周全球市场的核心矛盾：油价暴跌（利好传统行业）但 Fed 维持鹰派（压制成长股估值），导致价值/成长风格极端分化。道指创新高、纳指崩跌、A 股创业板从巅峰到暴跌，本质上是同一个宏观逻辑的不同面。<b>中国作为最大石油进口国，油价下跌对 A 股整体是利好，但科技板块的估值压力盖过了基本面改善。</b></p>
+        <div class="why">🦞 <b>下周看点：</b>① 美伊停火能否持续（决定油价方向）② Fed 下周讲话是否释放降息信号 ③ 创业板 4,100 能否守住 ④ BET Awards / 世界杯对消费情绪的提振。如果油价继续走低 + Fed 开始转鸽，这波科技股回调可能就是"假摔"。</div>
+        <div class="source">来源：🦞 龙虾老师综合研判</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 零售</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>Bain-Altagamma 报告：全球奢侈品市场 2026 触底企稳</h4>
+        <p>Bain & Company 6/26 发布最新报告：全球奢侈品市场在经历 2023-2026 初期的持续下滑后，正显示企稳迹象。<b>结构性变化值得关注</b>：① 一半奢侈品消费者在购买新品前会先查看二手市场；② 一半消费者已在购买旅程中使用 AI 工具；③ 美国本土品牌 Q1 同比增长 10-15%；④ 35 岁以下消费者支出比年长群体高出 4 个百分点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>奢侈品从"炫耀性消费"转向"意义消费"——消费者要的是<b>工艺、设计师身份、持久价值</b>，不是 logo。对 LVMH/Kering 等头部集团来说，这意味定价权在减弱（二手市场是价格锚），但品牌力强的（Hermès、Bottega）反而更稀缺。AI 进入购买旅程也是新变量——<b>谁能用 AI 做好个性化推荐和虚拟试穿，谁就能抓住年轻消费者</b>。</p>
+        <div class="source">来源：<a href="https://www.bain.com/about/media-center/press-releases/2026/global-luxury-stabilizes-amid-compounding-disruptions-as-brands-race-to-amplify-meaning-and-rebuild-relevance/" target="_blank">Bain & Company</a> · <a href="https://wwd.com/business-news/business-features/luxury-market-bain-altagamma-forecasts-growth-2026-1239032562/" target="_blank">WWD</a> · <a href="https://www.forbes.com/sites/pamdanziger/2026/06/25/luxury-must-amplify-meaning-as-living-well-now-outranks-owning-more/" target="_blank">Forbes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">零售重组</span>
+        <h4>Saks 母公司走出破产，更名 Exemplar Luxury Group</h4>
+        <p>Saks Global（旗下含 Neiman Marcus、Saks Fifth Avenue、Bergdorf Goodman）6/27 宣布完成 Chapter 11 重组程序，更名为 Exemplar Luxury Group。CEO Geoffroy van Raemdonck 押注美国奢侈品消费者的韧性推动增长。这是近年来奢侈品零售领域最大规模的重组案例。</p>
+        <div class="why">🦞 <b>商业含义：</b>美国奢侈品零售的"洗牌"基本结束——Neiman Marcus + Saks + Bergdorf 三大品牌归入同一平台，采购议价权大增。对中国消费者来说可能感受不深，但对全球奢侈品牌来说，<b>美国渠道集中度提高意味着谈判桌变窄了</b>。品牌方要么接受更低的批发利润，要么加速 DTC（直营）转型。</div>
+        <div class="source">来源：<a href="https://www.businessoffashion.com/articles/retail/saks-global-exits-bankruptcy-and-rebrands-to-exemplar-luxury-group/" target="_blank">BoF</a> · <a href="https://www.keenesentinel.com/online_features/press_releases/saks-global-successfully-emerges-as-exemplar-luxury-group-offering-unrivaled-customer-experiences-across-neiman-marcus/article_ced82eca-9b16-57ab-b64c-c09d2ede3863.html" target="_blank">PR</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>周末快乐 🎉</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">世界杯</span>
+        <h4>2026 世界杯小组赛收官！比利时头名出线，挪威 vs 法国引关注</h4>
+        <p>6/27 小组赛最后一轮全部完赛，32 强对阵表确定。比利时凭借 Trossard 双响赢下小组头名；澳大利亚与巴拉圭 0-0 携手出线；挪威 vs 法国的对决也吸引眼球——Channing Tatum 装扮成 Haaland 在看台为挪威加油（没错，演员扮球员）。英格兰 vs 巴拿马今晚（6/28）开打。</p>
+        <div class="why">🦞 <b>花边视角：</b>世界杯正在美国/加拿大/墨西哥进行，48 队史上最多。FIFA 估计本届商业收入将创新高。对中国品牌来说，世界杯仍是出海最大的曝光窗口——虽然中国没进决赛圈，但赞助和周边营销没停过。</div>
+        <div class="source">来源：<a href="https://www.latimes.com/sports/soccer/live/fifa-world-cup-live-updates-tv-schedule-scores-highlights-standings" target="_blank">LA Times</a> · <a href="https://www.espn.com/soccer/story/_/id/48939282/2026-fifa-world-cup-fixtures-results-match-schedule-group-stage-knockout-rounds-bracket" target="_blank">ESPN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">北美票房</span>
+        <h4>Supergirl 开画 $40M 不敌 Toy Story 5 二周末——DC 重启遇冷</h4>
+        <p>DC Studios 新片 Supergirl（制作成本 $170-186M）首周末票房约 $40M，远低于预期，被 Disney-Pixar 的 Toy Story 5（二周末预计 $72-96M）碾压。Toy Story 5 上周末以 $159.6M 创下 2026 年最大开画纪录，总票房奔 $300M+。Supergirl 是 James Gunn 主导的 DC 宇宙重启第二部作品，粉丝对超级英雄大片已显疲态。</p>
+        <div class="why">🦞 <b>市场含义：</b>"超英疲劳"已经不是新鲜词，但 Supergirl 的表现说明问题比想象中严重——<b>DC 重启的口碑红利只够用一部 Superman</b>。对 Warner Bros. 来说压力很大：如果 DC 宇宙第二部就扑街，后续 The Batman 2 / Clayface 的投资回报率都要打个问号。Pixar 方面，Toy Story 5 证明了"续集+情怀"仍是最稳的票房公式。</div>
+        <div class="source">来源：<a href="https://deadline.com/2026/06/box-office-supergirl-toy-story-5-1236968254/" target="_blank">Deadline</a> · <a href="https://variety.com/2026/film/box-office/box-office-supergirl-milly-alcock-toy-story-5-1236789996/" target="_blank">Variety</a> · <a href="https://www.hollywoodreporter.com/movies/movie-news/box-office-supergirl-toy-story-5-1236632101/" target="_blank">THR</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">BET Awards</span>
+        <h4>BET Awards 2026 今晚直播！RAYE、Ari Lennox 等加盟演出</h4>
+        <p>2026 BET Awards 今晚（6/28 8pm ET）在洛杉矶 Peacock Theater 举行，将在 Paramount/BET/MTV/VH1 等多平台同步直播。英国歌手 RAYE 和 Ari Lennox 加盟演出阵容，Keke Palmer、Kelly Rowland 等担任颁奖嘉宾。这是美国黑人文化和音乐界年度盛事。</p>
+        <div class="why">🦞 <b>轻松一下：</b>RAYE 去年横扫 Brit Awards 后进军美国市场，这次 BET Awards 是她在北美主流观众面前的重要曝光。如果你还没听过 RAYE 的 "Escapism"，强烈推荐——是那种听完会想反复循环的歌。</div>
+        <div class="source">来源：<a href="https://people.com/bet-awards-2026-everything-to-know-12007680" target="_blank">People</a> · <a href="https://entertainmentnow.com/music/2026-bet-awards-nominees-voting-performers-honorees-watch-time-date/" target="_blank">EntertainmentNow</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边 <small>一条即可</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">半导体前沿</span>
+        <h4>ASML + TSMC + imec：2D 材料晶体管突破 50nm 极限，300mm 晶圆首次跑通</h4>
+        <p>6/15，ASML、TSMC 和比利时研究机构 imec 联合宣布：在 300mm 晶圆上首次实现 50nm 接触栅间距（contacted poly pitch）的 2D 材料晶体管——这是超越硅基摩尔定律的关键里程碑。2D 材料（如 MoS₂）被认为是硅达到物理极限后的下一代沟道材料。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>从实验室到量产通常要 5-10 年，但这条新闻的意义在于"300mm 晶圆"——以前 2D 材料只在厘米级样品上验证过，现在跑通了量产级晶圆尺寸。<b>如果 2030 年前后 2D 材料能商用，摩尔定律的"死后余生"就有了着落</b>。对投资者来说暂时是噪音，但它解释了为什么 ASML 和 TSMC 的研发投入仍然在加速——制程竞赛的终点不在 2nm，而在"硅之后"。</div>
+        <div class="source">来源：<a href="https://www.originbrief.app/en/reports/semiconductor-chip-industry/2026-06-22/weekly" target="_blank">Origin Brief</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦞 龙虾老师 · 每日不错过新闻</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #0f1419;
+    color: #e8e8e8;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 2px solid #ff6b6b;
+    margin-bottom: 30px;
+  }
+  h1 {
+    font-size: 28px;
+    color: #ff6b6b;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #999;
+    font-size: 14px;
+  }
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 16px;
+    font-size: 13px;
+    color: #888;
+  }
+  .stats strong { color: #ff6b6b; }
+  .latest-card {
+    background: linear-gradient(135deg, #1a1f2e 0%, #2a1f2e 100%);
+    border: 1px solid #ff6b6b;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .latest-card .label {
+    color: #ff6b6b;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .latest-card a {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin-top: 8px;
+  }
+  .latest-card a:hover { color: #ff6b6b; }
+  h2 {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 16px;
+    padding-left: 4px;
+  }
+  ul.news-list {
+    list-style: none;
+  }
+  li.news-item a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: #1a1f2e;
+    border: 1px solid #2a2f3e;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    color: #e8e8e8;
+    transition: all 0.15s;
+  }
+  li.news-item a:hover {
+    border-color: #ff6b6b;
+    background: #1f2536;
+    transform: translateX(4px);
+  }
+  li.news-item.latest a {
+    border-color: #ff6b6b;
+    background: linear-gradient(90deg, #1f1a2e 0%, #1a1f2e 100%);
+  }
+  .date {
+    font-weight: 600;
+    font-size: 15px;
+    flex: 1;
+  }
+  .date-iso {
+    color: #888;
+    font-size: 13px;
+    font-family: "SF Mono", Monaco, monospace;
+  }
+  .badge-latest {
+    background: #ff6b6b;
+    color: #0f1419;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2f3e;
+    color: #666;
+    font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 22px; }
+    .latest-card a { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🦞 龙虾老师 · 每日不错过新闻</h1>
+    <div class="subtitle">每天 08:00 自动更新 · 世界新闻 / 行业宏观 / 国际局势 / 重要资讯</div>
+    <div class="stats">
+      <span>共 <strong>84</strong> 期</span>
+      <span>·</span>
+      <span>更新于 2026-07-24 11:03</span>
+    </div>
+  </header>
+
+  <div class="latest-card">
+    <div class="label">📌 今日早报</div>
+    <a href="archive/2026-07-24.html">2026年7月24日 周五</a>
+  </div>
+
+  <h2>📚 历史日报</h2>
+  <ul class="news-list">
+      <li class="news-item latest"><a href="archive/2026-07-24.html"><span class="date">2026年7月24日 周五</span><span class="date-iso">2026-07-24</span><span class="badge-latest">最新</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-23.html"><span class="date">2026年7月23日 周四</span><span class="date-iso">2026-07-23</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-22.html"><span class="date">2026年7月22日 周三</span><span class="date-iso">2026-07-22</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-21.html"><span class="date">2026年7月21日 周二</span><span class="date-iso">2026-07-21</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-20.html"><span class="date">2026年7月20日 周一</span><span class="date-iso">2026-07-20</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-19.html"><span class="date">2026年7月19日 周日</span><span class="date-iso">2026-07-19</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-17.html"><span class="date">2026年7月17日 周五</span><span class="date-iso">2026-07-17</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-16.html"><span class="date">2026年7月16日 周四</span><span class="date-iso">2026-07-16</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-15.html"><span class="date">2026年7月15日 周三</span><span class="date-iso">2026-07-15</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-14.html"><span class="date">2026年7月14日 周二</span><span class="date-iso">2026-07-14</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-12.html"><span class="date">2026年7月12日 周日</span><span class="date-iso">2026-07-12</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-11.html"><span class="date">2026年7月11日 周六</span><span class="date-iso">2026-07-11</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-10.html"><span class="date">2026年7月10日 周五</span><span class="date-iso">2026-07-10</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-09.html"><span class="date">2026年7月9日 周四</span><span class="date-iso">2026-07-09</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-08.html"><span class="date">2026年7月8日 周三</span><span class="date-iso">2026-07-08</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-07.html"><span class="date">2026年7月7日 周二</span><span class="date-iso">2026-07-07</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-06.html"><span class="date">2026年7月6日 周一</span><span class="date-iso">2026-07-06</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-05.html"><span class="date">2026年7月5日 周日</span><span class="date-iso">2026-07-05</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-04.html"><span class="date">2026年7月4日 周六</span><span class="date-iso">2026-07-04</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-02.html"><span class="date">2026年7月2日 周四</span><span class="date-iso">2026-07-02</span></a></li>
+      <li class="news-item"><a href="archive/2026-07-01.html"><span class="date">2026年7月1日 周三</span><span class="date-iso">2026-07-01</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-30.html"><span class="date">2026年6月30日 周二</span><span class="date-iso">2026-06-30</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-29.html"><span class="date">2026年6月29日 周一</span><span class="date-iso">2026-06-29</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-28.html"><span class="date">2026年6月28日 周日</span><span class="date-iso">2026-06-28</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-27.html"><span class="date">2026年6月27日 周六</span><span class="date-iso">2026-06-27</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-26.html"><span class="date">2026年6月26日 周五</span><span class="date-iso">2026-06-26</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-25.html"><span class="date">2026年6月25日 周四</span><span class="date-iso">2026-06-25</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-24.html"><span class="date">2026年6月24日 周三</span><span class="date-iso">2026-06-24</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-23.html"><span class="date">2026年6月23日 周二</span><span class="date-iso">2026-06-23</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-22.html"><span class="date">2026年6月22日 周一</span><span class="date-iso">2026-06-22</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-17.html"><span class="date">2026年6月17日 周三</span><span class="date-iso">2026-06-17</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-16.html"><span class="date">2026年6月16日 周二</span><span class="date-iso">2026-06-16</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-15.html"><span class="date">2026年6月15日 周一</span><span class="date-iso">2026-06-15</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-14.html"><span class="date">2026年6月14日 周日</span><span class="date-iso">2026-06-14</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-13.html"><span class="date">2026年6月13日 周六</span><span class="date-iso">2026-06-13</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-12.html"><span class="date">2026年6月12日 周五</span><span class="date-iso">2026-06-12</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-11.html"><span class="date">2026年6月11日 周四</span><span class="date-iso">2026-06-11</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-10.html"><span class="date">2026年6月10日 周三</span><span class="date-iso">2026-06-10</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-09.html"><span class="date">2026年6月9日 周二</span><span class="date-iso">2026-06-09</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-08.html"><span class="date">2026年6月8日 周一</span><span class="date-iso">2026-06-08</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-07.html"><span class="date">2026年6月7日 周日</span><span class="date-iso">2026-06-07</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-06.html"><span class="date">2026年6月6日 周六</span><span class="date-iso">2026-06-06</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-04.html"><span class="date">2026年6月4日 周四</span><span class="date-iso">2026-06-04</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-03.html"><span class="date">2026年6月3日 周三</span><span class="date-iso">2026-06-03</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-02.html"><span class="date">2026年6月2日 周二</span><span class="date-iso">2026-06-02</span></a></li>
+      <li class="news-item"><a href="archive/2026-06-01.html"><span class="date">2026年6月1日 周一</span><span class="date-iso">2026-06-01</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-31.html"><span class="date">2026年5月31日 周日</span><span class="date-iso">2026-05-31</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-30.html"><span class="date">2026年5月30日 周六</span><span class="date-iso">2026-05-30</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-29.html"><span class="date">2026年5月29日 周五</span><span class="date-iso">2026-05-29</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-28.html"><span class="date">2026年5月28日 周四</span><span class="date-iso">2026-05-28</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-27.html"><span class="date">2026年5月27日 周三</span><span class="date-iso">2026-05-27</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-26.html"><span class="date">2026年5月26日 周二</span><span class="date-iso">2026-05-26</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-25.html"><span class="date">2026年5月25日 周一</span><span class="date-iso">2026-05-25</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-24.html"><span class="date">2026年5月24日 周日</span><span class="date-iso">2026-05-24</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-23.html"><span class="date">2026年5月23日 周六</span><span class="date-iso">2026-05-23</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-22.html"><span class="date">2026年5月22日 周五</span><span class="date-iso">2026-05-22</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-21.html"><span class="date">2026年5月21日 周四</span><span class="date-iso">2026-05-21</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-20.html"><span class="date">2026年5月20日 周三</span><span class="date-iso">2026-05-20</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-19.html"><span class="date">2026年5月19日 周二</span><span class="date-iso">2026-05-19</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-18.html"><span class="date">2026年5月18日 周一</span><span class="date-iso">2026-05-18</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-16.html"><span class="date">2026年5月16日 周六</span><span class="date-iso">2026-05-16</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-15.html"><span class="date">2026年5月15日 周五</span><span class="date-iso">2026-05-15</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-14.html"><span class="date">2026年5月14日 周四</span><span class="date-iso">2026-05-14</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-13.html"><span class="date">2026年5月13日 周三</span><span class="date-iso">2026-05-13</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-12.html"><span class="date">2026年5月12日 周二</span><span class="date-iso">2026-05-12</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-11.html"><span class="date">2026年5月11日 周一</span><span class="date-iso">2026-05-11</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-10.html"><span class="date">2026年5月10日 周日</span><span class="date-iso">2026-05-10</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-09.html"><span class="date">2026年5月9日 周六</span><span class="date-iso">2026-05-09</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-08.html"><span class="date">2026年5月8日 周五</span><span class="date-iso">2026-05-08</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-06.html"><span class="date">2026年5月6日 周三</span><span class="date-iso">2026-05-06</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-05.html"><span class="date">2026年5月5日 周二</span><span class="date-iso">2026-05-05</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-04.html"><span class="date">2026年5月4日 周一</span><span class="date-iso">2026-05-04</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-03.html"><span class="date">2026年5月3日 周日</span><span class="date-iso">2026-05-03</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-02.html"><span class="date">2026年5月2日 周六</span><span class="date-iso">2026-05-02</span></a></li>
+      <li class="news-item"><a href="archive/2026-05-01.html"><span class="date">2026年5月1日 周五</span><span class="date-iso">2026-05-01</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-30.html"><span class="date">2026年4月30日 周四</span><span class="date-iso">2026-04-30</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-29.html"><span class="date">2026年4月29日 周三</span><span class="date-iso">2026-04-29</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-28.html"><span class="date">2026年4月28日 周二</span><span class="date-iso">2026-04-28</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-27.html"><span class="date">2026年4月27日 周一</span><span class="date-iso">2026-04-27</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-26.html"><span class="date">2026年4月26日 周日</span><span class="date-iso">2026-04-26</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-25.html"><span class="date">2026年4月25日 周六</span><span class="date-iso">2026-04-25</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-24.html"><span class="date">2026年4月24日 周五</span><span class="date-iso">2026-04-24</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-23.html"><span class="date">2026年4月23日 周四</span><span class="date-iso">2026-04-23</span></a></li>
+      <li class="news-item"><a href="archive/2026-04-22.html"><span class="date">2026年4月22日 周三</span><span class="date-iso">2026-04-22</span></a></li>
+  </ul>
+
+  <footer>
+    Powered by 龙虾老师 🦞 · <a href="https://github.com/eelaine-zhang/daily-news" style="color:#888;">GitHub</a>
+  </footer>
+</div>
+</body>
+</html>

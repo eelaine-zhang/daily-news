@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fed + Mag7 一页速记 · 2026-04-30</title>
+<style>
+  :root{
+    --bg:#0f1419; --panel:#161c25; --line:#2a3240;
+    --ink:#e6edf3; --dim:#9aa7b5; --mute:#6f7a87;
+    --red:#ff6b6b; --blue:#5ea0e6; --green:#5ec48b; --yellow:#e6c460; --orange:#e69b4a;
+  }
+  @page{size:A4;margin:12mm}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Noto Sans CJK SC",sans-serif;
+    font-size:13px;line-height:1.55;padding:20px;max-width:960px;margin:0 auto}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--red);padding-bottom:8px;margin-bottom:14px}
+  .head h1{margin:0;font-size:20px;letter-spacing:.5px}
+  .head .meta{color:var(--dim);font-size:11px;text-align:right}
+  h2{font-size:14px;margin:14px 0 6px;padding-left:8px;border-left:3px solid var(--red);letter-spacing:.3px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+  .card h3{margin:0 0 6px;font-size:13px;color:var(--ink)}
+  .card .tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:10px;margin-right:4px;color:#0f1419;font-weight:600}
+  .t-blue{background:var(--blue)} .t-green{background:var(--green)} .t-yellow{background:var(--yellow)} .t-red{background:var(--red)} .t-orange{background:var(--orange)}
+  .kv{margin:0;padding:0;list-style:none}
+  .kv li{padding:2px 0;color:var(--ink)}
+  .kv li b{color:var(--yellow)}
+  .why{margin-top:6px;padding:6px 8px;background:rgba(94,196,139,.08);border-left:2px solid var(--green);border-radius:4px;font-size:12px;color:#d6e8de}
+  .why b{color:var(--green)}
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+  table th,table td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left}
+  table th{color:var(--dim);font-weight:500;font-size:11px}
+  .up{color:var(--green)} .down{color:var(--red)} .flat{color:var(--dim)}
+  .tldr{background:linear-gradient(135deg,rgba(255,107,107,.08),rgba(94,160,230,.05));
+    border:1px solid var(--red);border-radius:8px;padding:10px 14px;margin-bottom:12px}
+  .tldr b{color:var(--red)}
+  .foot{margin-top:14px;padding-top:8px;border-top:1px solid var(--line);color:var(--mute);font-size:11px;text-align:center}
+  .mono{font-family:"SF Mono","JetBrains Mono",Menlo,monospace;font-size:11px;color:var(--dim)}
+  strong.hi{color:var(--yellow)}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <h1>🦞 Fed + Mag7 一页速记</h1>
+  <div class="meta">2026-04-30 · Asia/Hong_Kong<br>来源：Reuters / CNBC · 龙虾老师整理</div>
+</div>
+
+<div class="tldr">
+  <b>一句话：</b>Fed 按兵不动但分歧创 1992 年以来最大；白天美股被油价 + 鹰派投票压着走，<b>晚上真正的战场是 Mag7 财报——市场要验证 AI capex 能不能继续兑现成业绩。</b>
+</div>
+
+<h2>① 美联储 · FOMC 4 月决议</h2>
+<div class="grid">
+  <div class="card">
+    <span class="tag t-red">政策</span><span class="tag t-yellow">分歧</span>
+    <h3>利率维持 3.5%–3.75%，但投票 8:4 分裂</h3>
+    <ul class="kv">
+      <li><b>票数：</b>8 人 hold · 4 人 dissent</li>
+      <li><b>分歧结构：</b>3 人反对保留"偏宽松倾向" · 1 人主张直接降息</li>
+      <li><b>背景：</b>Powell 任期尾声，FOMC 共识在变薄</li>
+      <li><b>定性：</b>1992 年以来最分裂的一次决定之一</li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="tag t-orange">通胀</span><span class="tag t-blue">预期</span>
+    <h3>为什么这次降息路径变难</h3>
+    <ul class="kv">
+      <li><b>CPI nowcast：</b>仍在高位（Cleveland Fed 口径）</li>
+      <li><b>新变量：</b>霍尔木兹扰动把 Brent 再推向 120 美元</li>
+      <li><b>二阶效应：</b>能源 → 航空/物流/化工 → 通胀预期反弹</li>
+      <li><b>市场 repricing：</b>今年能否顺畅降息变成问号</li>
+    </ul>
+  </div>
+</div>
+
+<div class="why" style="margin-top:10px">
+  🦞 <b>金融视角：</b>市场最怕的组合不是高利率本身，而是<strong class="hi">"增长没强到足以覆盖成本上升、但油价已经先涨了"</strong>。这会同时压缩盈利（成本端）和估值（利率端）——利率敏感板块（小盘、地产、未盈利成长）最吃亏，能源和防御性板块相对抗跌。
+</div>
+
+<h2>② Mag7 财报 · 盘后四大发榜</h2>
+<table>
+  <thead>
+    <tr><th>公司</th><th>关键信号</th><th>市场解读</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Meta</b> <span class="mono">META</span></td>
+      <td>上调资本开支指引，继续加码 AI 基建</td>
+      <td class="up">Capex 不减速 → 上游供应链利多</td>
+    </tr>
+    <tr>
+      <td><b>Alphabet</b> <span class="mono">GOOGL</span></td>
+      <td>季度营收 + 利润双超预期</td>
+      <td class="up">云 + 广告业务把 AI 投入转化成收入，模范生</td>
+    </tr>
+    <tr>
+      <td><b>Microsoft</b> <span class="mono">MSFT</span></td>
+      <td>盘后待发（焦点：Azure AI 增速、capex 节奏）</td>
+      <td class="flat">Azure 速度是定价 AI 变现的第一锚</td>
+    </tr>
+    <tr>
+      <td><b>Amazon</b> <span class="mono">AMZN</span></td>
+      <td>盘后待发（焦点：AWS 毛利、广告、零售）</td>
+      <td class="flat">AWS 毛利是看 AI capex ROI 的关键窗口</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="grid" style="margin-top:10px">
+  <div class="card">
+    <span class="tag t-green">利多</span>
+    <h3>上游供应链（GPU / HBM / 电力 / 液冷 / 交换机）</h3>
+    <ul class="kv">
+      <li>Meta + Alphabet + MSFT + AMZN 仍在高强度采购</li>
+      <li>TSMC 加快 2nm 扩产 = 下一波订单在路上</li>
+      <li><b>主线判断：</b>订单还在，没证伪</li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="tag t-yellow">关注</span>
+    <h3>下游变现（云 / 广告 / 模型能力）</h3>
+    <ul class="kv">
+      <li>市场开始拆分："谁的 capex 最快变收入？"</li>
+      <li>Alphabet 已经拿出答卷，其他三家在被对标</li>
+      <li><b>波动来源：</b>个股分化，不是板块性崩盘</li>
+    </ul>
+  </div>
+</div>
+
+<h2>③ 交易含义 · 给 lainy 的一句话 takeaway</h2>
+<div class="card" style="border-color:var(--green)">
+  <ul class="kv">
+    <li>⚡ <b>宏观侧：</b>"Fed 不急着降息 + 油价重新抬头"这个组合，短期内持续压利率敏感资产。</li>
+    <li>💾 <b>AI 产业链：</b>主线<strong class="hi">未断</strong>——但市场定价方式变了：<b>上游先确认订单，下游再证明变现</b>。</li>
+    <li>📈 <b>盘面观察：</b>白天波动看油价 + Fed 措辞，晚上波动看 Mag7 指引；两条线已经不再同步，这本身就是行情最重要的信号。</li>
+    <li>🎯 <b>接下来 48 小时盯点：</b>MSFT / AMZN 财报指引 · Powell 后续讲话 · Brent 是否破 120 · 美债 10Y 走向。</li>
+  </ul>
+</div>
+
+<div class="foot">🦞 龙虾老师 · 每日不错过新闻 · 一页速记版 · 技术机制 → 商业含义 一眼看完</div>
+
+</body>
+</html>

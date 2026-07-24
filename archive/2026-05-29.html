@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-29</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-row { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  @media (min-width: 700px) { .market-row { grid-template-columns: repeat(3, 1fr); } }
+  .market-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .market-card .head { font-size: 13px; color: var(--text-dim); letter-spacing: 0.06em; margin-bottom: 6px; }
+  .market-card .num { font-size: 17px; font-weight: 600; }
+  .market-card .delta-up { color: #4ade80; }
+  .market-card .delta-down { color: #f87171; }
+  .market-card .note { margin-top: 8px; font-size: 12.5px; color: var(--text-dim); line-height: 1.55; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 5 月 29 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>宏观炸雷：</b>美国 4 月 PCE 同比 <b>3.8%</b>、核心 PCE <b>3.3%</b>（2023 年 11 月以来最高），关税 + 油价的二次通胀已经写在数据里——但美股盘中再创新高，市场赌"通胀见顶"。</li>
+      <li><b>AI 视角：</b>Snowflake 财报后单日 <b>+37%</b>、宣布 <b>60 亿美元</b> AWS 合作；TSMC 出来喊话"AI 芯片瓶颈已经不是制程，是<b>能耗</b>"，A13/2nm 战略要重新平衡能效。</li>
+      <li><b>花边惊喜：</b>世界第一 <b>Sinner 法网二轮爆冷出局</b>，男单豁口大开；同时 Pop Mart 的 Labubu 流量暴跌，<b>网红玩具泡沫开始破</b>，是消费板块的一个信号。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>能耗 vs 制程的拐点</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC · 能耗</span>
+        <h4>TSMC 出来正面喊话："AI 芯片瓶颈已经不是制程，是能耗"</h4>
+        <p>路透 5/28：TSMC 高管在阿姆斯特丹 ITF World 大会公开表示，AI 芯片设计正在被"能耗"逼着重写规则——TSMC 已经把下一代 EUV 的引入推迟数年，<b>把研发资源压到"提高能效"而不是"更小线宽"</b>。直接给 ASML 的下一代 High-NA EUV 设备一次冷水。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是产业逻辑的一次小转弯。<b>过去十年的故事是"更小制程 = 更强算力 = TSMC 议价权"</b>。现在数据中心一个园区动辄几百兆瓦电力，单卡功耗已经到 1,000W 级别——客户最痛的不是再小 10%，而是<b>同样性能下能不能少耗 30% 电</b>。这给 ASML 短期是利空、给 Vertiv / 施耐德 / 液冷供应链是利好，给 TSMC 自己是"我能继续涨价"的新理由（封装 + 能效 = 二次议价）。</p>
+        <div class="source">来源：<a href="https://www.marketscreener.com/news/energy-use-forcing-rethink-of-ai-chip-design-tsmc-says-ce7f5ddadf89f220" target="_blank">MarketScreener / Reuters</a> · <a href="https://www.investing.com/news/stock-market-news/energy-use-forcing-rethink-of-ai-chip-design-tsmc-says-4715097" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Snowflake · AI 数据</span>
+        <h4>Snowflake 财报炸场：股价 +37%、宣布 60 亿美元 AWS 合作</h4>
+        <p>Snowflake 5/27 盘后公布 Q1 FY27 业绩，收入超预期 + 上调指引，盘前一度跳 <b>+37%</b>，市值一夜增加几百亿；同步公告与 AWS 签订<b>未来五年 60 亿美元</b>合作框架，主打"AI Data Cloud + Bedrock 模型即服务"。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是一个"软件层吃到 AI 红利"的标志性证据。过去两年市场只信"硬件铲子"——英伟达、TSMC、HBM。但 Snowflake 这波证明：<b>AI 训练完之后，企业要把数据搬进来、跑推理、产生业务价值，最终的钱还是要给数据/分析/数据库公司</b>。这一类的还有 Databricks（未上市）、MongoDB、Confluent。对组合的含义是：AI 主题不再只买硬件，<b>数据层 SaaS 重新拿到估值溢价</b>。</p>
+        <div class="source">来源：<a href="https://www.gurufocus.com/news/8886680/snowflake-snow-shares-surge-37-on-strong-earnings-and-aws-deal" target="_blank">GuruFocus</a> · <a href="https://www.timothysykes.com/news/snowflake-inc-snow-news-2026_05_28/" target="_blank">Timothy Sykes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达 · 财后冷却</span>
+        <h4>Nvidia 财报后情绪降温：周四单日跌约 1%，AI 软件接力</h4>
+        <p>Nvidia 上周财报炸场后这周开始震荡。5/28 周四 NVDA 跌约 <b>1%</b>，但 Microsoft、Oracle、Palantir 单日涨 <b>3-4%</b>，资金从"硬件铲子"切到"AI 软件应用"。Snowflake 异动同期 +30%+，整条 AI 软件赛道被点燃。</p>
+        <div class="why">🦞 <b>读给你听：</b>这是典型的"领跑者休息、跟跑者接力"——并不是 AI 主题熄火，而是市场在内部轮动。对你做行业图谱有意义的是：<b>资金正在用脚证明"AI 价值链下游也能赚钱"</b>，意味着估值溢价不再独占英伟达。后面要看 Oracle / Palantir / ServiceNow 6 月财报能不能继续接棒。</p>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>停火 MoU 拉锯，海湾再起小冲突</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · MoU 拉锯</span>
+        <h4>美伊达成"延长停火 60 天 + 启动核谈"MoU，但 Trump 尚未签字</h4>
+        <p>路透与 AP 同日报道：美伊已就停火延长 <b>60 天 + 启动核谈</b>的备忘录达成原则一致，将由 Trump 最终签署。但 Trump 周四继续表态："只要伊朗不放弃浓缩铀，制裁就不松绑。"卡塔尔被传"拿 120 亿美元买和平"——卡塔尔外交部已公开否认，称是"破坏交易的造谣"。</p>
+        <div class="why">🦞 <b>市场含义：</b>这就是为什么油价两边来回横跳——MoU 接近 = Brent 跌；Trump 卡签字 = Brent 涨。<b>关键不在协议本身，而在 Trump 用不用这个 MoU 作为对内政治筹码</b>。短期内霍尔木兹的"风险溢价"会一直在 5-10 美元/桶之间反复，是产业链最难定价的部分。</p>
+        <div class="source">来源：<a href="https://www.reuters.com/world/iran/" target="_blank">Reuters</a> · <a href="https://apnews.com/hub/russia-ukraine" target="_blank">AP News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价 · 海湾</span>
+        <h4>WTI 反弹到 $90.5，Brent 摸 $96.6——海湾"再起小动作"</h4>
+        <p>5/28 周四，Brent 单日涨 <b>2.48% 到 $96.63</b>，WTI 涨 <b>2% 到 $90.5</b>。原因：海湾出现新的"小艇袭击 + 油轮被骚扰"事件，外加 MoU 进入"Trump 桌上等签"的微妙窗口。市场对地缘风险的反应模式从"看大事件"切到"看每一艘船"。</p>
+        <div class="why">🦞 <b>传导：</b>油价回到 $90+ 中枢，直接给 4 月 PCE 通胀"贡献了 0.5 个百分点"。也是为什么<b>PCE 核心通胀同比反弹到 3.3%</b>（见下一栏）。能源—通胀—利率—估值的链条又被激活，对消费股、地产 REIT、新兴市场是直接压力，对能源股是阶段性利好。</p>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.investing.com/commodities/crude-oil" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄</span>
+        <h4>FT：乌克兰用"群体无人机"扳回半场，但货币失衡新问题浮现</h4>
+        <p>FT 5/28 长报道：乌克兰大规模无人机生产终于让前线扳平节奏，俄军连续两周推进受阻。但副作用是：俄罗斯能源出口反而推卢布到三年新高，挤压了其他出口。一边打仗一边出现"荷兰病"，是这场战争今年最反直觉的发展。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>战争的"经济叙事"开始反转——过去市场默认"俄罗斯被制裁掏空"，今天的真相是俄罗斯出口收入反而把卢布顶高。这对大宗商品的定价权、对中俄能源结算（人民币国际化）、对欧盟央行的政策都有连锁影响。</p>
+        <div class="source">来源：<a href="https://www.ft.com/war-in-ukraine" target="_blank">FT</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>PCE 是今天最大的事</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美国 · PCE</span>
+        <h4>美国 4 月 PCE：同比 3.8%、核心 3.3%——核心通胀创 2023 年 11 月以来最高</h4>
+        <p>BEA 5/28 公布：4 月整体 PCE 同比 <b>3.8%</b>（前值 3.5%），核心 PCE 同比 <b>3.3%</b>（前值约 3.0%），月环比也加速。这是美联储最关注的通胀指标，<b>核心 PCE 连续两年最高读数</b>。NYT 直接定性："关税 + 海湾战争把通胀往上推了一档。"</p>
+        <div class="why">🦞 <b>市场反应反直觉：</b>S&amp;P 500、Nasdaq 当天<b>还在创新高</b>——为什么？两个原因：① 数据"符合预期"没超预期，市场早就 price in；② Snowflake / Best Buy 给的盈利惊喜盖过了通胀焦虑。但中长期看：<b>9 月降息概率已经被衍生品市场打到 30% 以下</b>，"今年只剩一次降息"成为新共识，3.50-3.75% 这个利率区间可能要拖到 2027 年。对成长股估值是慢性消耗。</p>
+        <div class="source">来源：<a href="https://www.reuters.com/business/us-pce-inflation-firmer-april-2026-05-28/" target="_blank">Reuters</a> · <a href="https://www.nytimes.com/2026/05/28/business/inflation-pce-gauge.html" target="_blank">NYT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Q1 GDP &amp; 数据日</span>
+        <h4>同一天还有 Q1 GDP 修正 + 个人收入/支出：消费仍在但增长放缓</h4>
+        <p>BEA 同步公布 Q1 GDP 第二次修正，叠加个人收入/支出数据。市场关注点是"消费有没有放慢"——结果是消费增速继续下滑，但还在正区间。Walmart、Target 上周财报已经给过预警："消费者在收紧。"今天 Best Buy 反而大超预期 +15%，电子产品在 5 月反弹明显。</p>
+        <div class="why">🦞 <b>读：</b>美国消费正在"分层"——刚需 + 性价比的（Walmart）压力很大；耐用品/电子（Best Buy）反而 K 型反弹，因为关税预期下大家提前囤货。对你做组合配置的启示：<b>不要把"美国消费"当一个整体仓位</b>，要按"折扣/必需/电子/奢侈"分别看。</p>
+        <div class="source">来源：<a href="https://www.bea.gov/data/personal-consumption-expenditures-price-index" target="_blank">BEA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-row" style="margin-bottom: 18px;">
+      <div class="market-card">
+        <div class="head">🇨🇳 A 股 · 上证综指</div>
+        <div class="num">4,097.74 <span class="delta-down">-0.10%</span></div>
+        <div class="note">5/28 收盘小幅整理，半导体/华为产业链强势（华虹 +15%、中芯国际盘中飙）。但市场对"AI 端侧 + 机器人"题材分化，国家队前期重仓被砸盘。</div>
+      </div>
+      <div class="market-card">
+        <div class="head">🇭🇰 港股 · 恒生指数</div>
+        <div class="num">25,006.16 <span class="delta-down">-1.27%</span></div>
+        <div class="note">5/28 三大指数普跌：恒指 -1.27%、国企 -1.17%、恒指科技 -0.39%。IPO 解禁高峰 + 资金外流去日韩追 AI 存储/半导体资产，短期承压。</div>
+      </div>
+      <div class="market-card">
+        <div class="head">🇺🇸 美股 · S&amp;P 500</div>
+        <div class="num">历史新高 <span class="delta-up">+0.3%</span></div>
+        <div class="note">PCE 符合预期 + Snowflake 暴涨带动情绪，S&amp;P 500、Nasdaq 双双再创历史新高；Nvidia 微跌 1%，Microsoft / Oracle / Palantir 涨 3-4%，AI 软件接棒硬件。</div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">A 股 · 半导体 / 华为</span>
+        <h4>半导体板块继续走强：华虹半导体盘中 +15%、华为×SK 海力士技术突破点燃情绪</h4>
+        <p>5/28 A 股大盘虽小幅整理，但<b>半导体是主线</b>——华虹半导体、中芯国际、东芯股份等盘中"20cm 涨停"屡见不鲜，触发因素是"华为 + SK 海力士"在 HBM 上的合作传闻 + 国产替代政策预期。同时 PCB 概念、CPO（共封装光学）板块拉升。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是 A 股从"宏观叙事"切到"产业 alpha"的信号——指数不涨，结构性大涨。<b>半导体被定价为"国产替代 + AI capex 拉动"双引擎</b>。但要警惕：估值已经追到 PE 70x 以上的个股，财报兑现不了的话回撤会很猛。建议盯住三个观察点：① 龙头公司 H2 在手订单；② 政府专项基金落地节奏；③ 美国对华出口管制是否再加码。</p>
+        <div class="source">来源：<a href="https://cn.investing.com/indices/shanghai-composite-candlestick" target="_blank">英为财情</a> · <a href="https://stock.eastmoney.com/" target="_blank">东方财富</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">港股 · 资金外流</span>
+        <h4>港股压力点：IPO 解禁高峰 + 资金被日韩 AI 存储吸走</h4>
+        <p>恒指 5/28 跌 1.27% 跌破 25,500，市场情绪转向悲观。东方财富/雪球资金跟踪显示：<b>资金从港股流出，明显去买日韩的 AI 存储/半导体股</b>（SK 海力士、三星、Renesas 等）。叠加近期港股 IPO 太密集，老股解禁 + 新股抽水形成"结构性矛盾"。</p>
+        <div class="why">🦞 <b>读：</b>港股目前的尴尬是"夹在中间"——A 股有政策红利、估值低；日韩有 AI 硬件直接受益。港股的"中国互联网龙头"（腾讯、阿里、美团、京东）估值不算贵但缺乏新催化剂。<b>恒指要重新启动，需要等腾讯 / 阿里 / 美团 6 月业绩出来，或者 Hang Seng Tech 再被注入 AI 新故事</b>。短期内 24,500 是关键支撑。</p>
+        <div class="source">来源：<a href="https://www.hstong.com/news/detail/26052816110602134" target="_blank">华盛通</a> · <a href="https://stock360.hkej.com/" target="_blank">信报港股 360</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美股 · Best Buy</span>
+        <h4>Best Buy 财报炸场 +15%：电子产品零售在 5 月"个位数到高个位数"增长</h4>
+        <p>Best Buy（BBY）5/28 公布 Q1 FY27 业绩，远超预期，股价单日 +15%。CEO 公开提到"5 月销售出现高个位数百分比的强劲增长"——这跟同期 Walmart、Target 的"消费者在退守"语气完全相反。Costco 同期财报亦表现稳健，Q3 油站记录创史。</p>
+        <div class="why">🦞 <b>读：</b>这就是上面说的"K 型消费"——耐用品 + 电子在 5 月反弹，部分原因是"关税要涨之前提前买"。对你做行业判断：<b>这类抢跑式购买会让 Q2 报表很漂亮、Q3 可能塌</b>。Best Buy 的 +15% 不一定能持续，但说明短期消费动能比市场预期强，间接给美股见顶论降温。</p>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/05/28/best-buy-bby-q1-2027-earnings.html" target="_blank">CNBC · Best Buy</a> · <a href="https://www.axios.com/2026/05/28/retail-earnings-costco-kohls-best-buy-gap" target="_blank">Axios</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费类 <small>Labubu 泡沫开始破 · 茅台进第三个周期</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">中国消费 · Pop Mart</span>
+        <h4>Labubu 流量暴跌：Pop Mart 网站访问量 9 个月内"完成 V 型回收"</h4>
+        <p>Business Insider + eMarketer 5/28 数据：Pop Mart 网站访问量从今年初的高点一路掉到接近年初水平，<b>Labubu 这一波从爆款到冷却只用了 9 个月</b>。叠加美国国土安全部被人权组织施压"调查 Labubu 是否涉及新疆代工"，给 Pop Mart 的海外扩张多了一个监管阴影。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是一个对你做行业图谱很有用的样本——<b>"网红玩具"的资本市场半衰期正在缩短</b>。Pop Mart 是港股消费成长股的代表，过去一年股价跟 Labubu 高度绑定。流量见顶 = EPS 上修空间被压缩，估值溢价 (60x+ forward PE) 撑不住。看法：泡泡玛特的真正考验是<b>能不能从"单 IP 爆款"转向"多 IP 平台公司"</b>，下一个 Labubu 没出现之前都是脆弱的。</p>
+        <div class="source">来源：<a href="https://www.businessinsider.com/labubu-demand-declines-chart-2026-5" target="_blank">Business Insider</a> · <a href="https://www.emarketer.com/content/labubu-bubble-has-burst" target="_blank">eMarketer</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国消费 · 白酒</span>
+        <h4>茅台进"第三个周期"：2025 Q4 营收 -19%、净利 -30%，年内股价 -17%</h4>
+        <p>36 氪 5/28 长文盘点：贵州茅台 Q4 2025 单季营收约 <b>403.84 亿元，同比 -19.43%</b>，归母净利约 <b>176.93 亿元，同比 -30.34%</b>。叠加 2025 年"最严禁酒令"、年内股价跌幅约 17%。文章定性："茅台进入第三个周期——量缩、价跌、利减。"</p>
+        <div class="why">🦞 <b>金融读法：</b>白酒板块过去是 A 股最稳的"消费蓝筹+ 高股息"组合，茅台是定海神针。<b>现在最大的麻烦：商务/政务消费场景被禁酒令切走，但年轻人转向健康饮品/精酿/咖啡，需求结构两头夹击</b>。这意味着白酒板块的 PE 中枢可能从 25-30x 降到 18-20x，是消费板块"再估值"的一个标志事件。后面要看茅台能不能开出新的产品线/场景（健康酒、海外华人市场、文创等）。</p>
+        <div class="source">来源：<a href="https://36kr.com/p/3824471138377993" target="_blank">36 氪 · 茅台合规</a> · <a href="https://36kr.com/p/3669147302048518" target="_blank">36 氪 · 第三个周期</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美国消费 · 零售</span>
+        <h4>Dollar Tree / Kohl's / Best Buy 集体反弹：消费者"挑剔但还在花"</h4>
+        <p>Axios 5/28 综合：美国 5/28 一天里 Dollar Tree、Burlington、Best Buy、Kohl's 财报陆续出炉，<b>全部超预期</b>，但语气一致——"消费者还在花钱，但变得很挑剔，要么是必需品打折，要么是小确幸"。Costco 同日 Q3 财报亦稳健，强调"油站交易量创历史新高"（油价高让消费者去 Costco 找便宜油）。</p>
+        <div class="why">🦞 <b>读：</b>这跟茅台/Pop Mart 的趋势是同一个事——<b>"中间档消费"被两头侵蚀</b>。高端要更高端（奢侈品继续好），低端要更便宜（折扣店强劲）。中间的（白酒、潮玩、中端餐饮）被结构性挤压。对组合的含义：在消费板块里偏配"两头"——奢侈品（LVMH、爱马仕）+ 折扣店（Costco、Dollar Tree），减配"中端品牌"。</p>
+        <div class="source">来源：<a href="https://www.axios.com/2026/05/28/retail-earnings-costco-kohls-best-buy-gap" target="_blank">Axios</a> · <a href="https://www.cnbc.com/2026/05/28/costco-cost-q3-2026-earnings.html" target="_blank">CNBC · Costco</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>Sinner 爆冷 / NBA 抢七 / 戛纳收官</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">网球 · 法网</span>
+        <h4>世界第一 Sinner 法网二轮爆冷出局！男单"职业大满贯"梦碎</h4>
+        <p>BBC / The Athletic 5/28：罗兰加洛斯第二轮，<b>世界第一 Jannik Sinner 被阿根廷小将 Juan Manuel Cerundolo 5 盘逆转</b>（3-6, 2-6, 7-5, 6-1, 6-1）。Sinner 在第三盘连丢 15 分、体力崩盘，赛后承认"找不到力气"，但否认是巴黎高温的锅。<b>近年法网最大冷门之一，男单签表瞬间打开</b>。</p>
+        <div class="why">🦞 <b>悄悄说：</b>tennis 圈这是地震——Sinner 本来是冲"职业大满贯"（红土是他唯一没拿的大满贯），赛前赔率是 1.8。出局后冠军赔率最大的是 Alcaraz（已退赛）→ 现在变成 Zverev / Djokovic / Tsitsipas 群雄逐鹿。后半周比赛精彩度反而提升了。</p>
+        <div class="source">来源：<a href="https://www.bbc.com/sport/tennis/articles/c3d2yg8342xo" target="_blank">BBC Sport</a> · <a href="https://www.cbssports.com/tennis/news/french-open-2026-results-jannik-sinner-second-round-upset-juan-manuel-cerundolo/" target="_blank">CBS Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA · 总决赛</span>
+        <h4>NBA 总决赛已定东部：Knicks，西部还在抢七 Spurs vs Thunder</h4>
+        <p>Knicks 4-0 横扫 Cavaliers 锁定东决冠军（115 / 109 / 121 / 130 一波带走）。西部 Spurs vs Thunder 已打到天王山，Wembanyama 带队的马刺把雷霆拖入抢七。Trump 已被邀请观战 NBA Finals（消息来自 AP News）。</p>
+        <div class="why">🦞 <b>读：</b>Knicks 时隔 27 年再进总决赛，纽约的票价 + 周边消费会被点燃一整个 6 月。给 Madison Square Garden Sports（MSGS）股票一个短期催化剂。看西决谁出线决定收视率走向——Wemby 出来对纽约市场来说是"梦幻对决 + 票房保证"。</p>
+        <div class="source">来源：<a href="https://www.directv.com/insider/nba-playoffs-schedule/" target="_blank">DIRECTV Insider</a> · <a href="https://apnews.com/hub/nba" target="_blank">AP NBA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">戛纳 · 金棕榈</span>
+        <h4>第 79 届戛纳金棕榈花落《Fjord》：Neon 连续第 7 年押中</h4>
+        <p>戛纳 5/24 闭幕：金棕榈颁给了《Fjord》，<b>美国独立发行商 Neon 连续 7 年押中金棕榈</b>（从《寄生虫》开始）——这是 Neon 商业模式的极致体现：押宝艺术电影顶奖 + 通过冲奥赚利润。</p>
+        <div class="why">🦞 <b>有意思的小生意：</b>Neon 没有大片，没有 IP，没有流媒体，但靠"押对 7 次金棕榈"把品牌做成了独立电影圈最响的招牌。这本身是商业案例——<b>在巨头通杀的内容行业，"专一垂直 + 高品牌识别度"还是能活</b>。Disney、Warner 反而要为大片冷淡焦虑。</p>
+        <div class="source">来源：<a href="https://www.indiewire.com/awards/results/cannes-film-festival-2026-award-winners-full-list-1235196021/" target="_blank">IndieWire</a> · <a href="https://www.vanityfair.com/hollywood/story/cannes-film-festival-2026-winners" target="_blank">Vanity Fair</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>开源机械臂的 200 美元革命</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">机器人 · Jetson</span>
+        <h4>200 美元起售的开源机器人手臂——跑在 Nvidia Jetson 上、用自然语言指令控制</h4>
+        <p>Nvidia 5/28 Newsroom 推 Seeed Studio 的 CEO Eric Pan 的访谈：他们做了一款 <b>开源机械臂，起价 $200</b>，跑在 Nvidia Jetson 边缘计算上，<b>可以用纯文本指令来控制</b>（比如"把红色的杯子拿起来"）。CEO 的预测："未来的 physical AI 不是由专家造的，是由几百万个 maker 造的。"</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是机器人版的"开源 LLM 时刻"。<b>当机器人硬件 + AI 模型都白菜化，门槛会断崖式下降</b>——就像当年树莓派让"个人计算"民主化，几百万个开发者会涌入"实体 AI"。对产业意义：① Nvidia 的 Jetson 平台是最大赢家（吃推理端的边缘市场）；② 工业机器人巨头（ABB、Fanuc）会被"长尾创业公司"侵蚀；③ 中国的小型机械臂制造商（如某些深圳厂）和教育市场会被卷起来。这一波是慢变量，2-3 年才会显化，但今天可以开始关注。</p>
+        <div class="source">来源：<a href="https://nvidianews.nvidia.com/" target="_blank">Nvidia Newsroom</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻</div>
+    <div class="footer-note">数据来源：BBC / Reuters / NYT / CNBC / Axios / 36 氪 / 东方财富 等公开信息整理 · 仅供 lainy 个人参考，不构成投资建议</div>
+  </footer>
+</div>
+</body>
+</html>

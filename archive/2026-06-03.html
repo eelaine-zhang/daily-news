@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-03</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --stock: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.stock { background: #fcd34d22; color: var(--stock); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .market { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  .market h5 { margin: 0 0 6px; font-size: 15px; }
+  .market .ticker { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .market .up { color: #a5f3a5; }
+  .market .down { color: #ff8b8b; }
+  .market p { margin: 6px 0 0; font-size: 13.5px; color: var(--text); }
+  .closed { opacity: 0.65; }
+  .holiday-banner { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #9198a122; color: var(--text-dim); margin-left: 6px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 3 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Marvell 一夜 +33%、被老黄钦点"下一个万亿"：</b>Computex 余波继续——Jensen Huang 在台北公开说 Marvell 会是下一家"万亿美元芯片公司"，叠加 Marvell 发布 <b>Teralynx T100 AI 数据中心交换芯片</b> + 上调指引，<b>MRVL +33%</b> 领涨纳指、HPE / Dell 同步狂飙，<b>S&amp;P 500 历史首次站上 7,600、Nasdaq 27,094</b>，三大指数集体新高。</li>
+      <li><b>港股科技股一日翻身、A 股极致割裂：</b>恒生科技 +4.72%、腾讯单日 +10%——"五大巨头集体猛拉"的剧本一夜上演；A 股则是<b>沪指 +0.43% / 深成指 +1.63% / 创业板 +2.66%</b>，但全市场个股普跌，<b>通信板块净流入 92.7 亿</b>，资金完全押注 AI 硬件，AI 应用/传媒/地产/农业被抽血。</li>
+      <li><b>美伊"近了又远了"：</b>Rubio 称伊朗已"同意就核计划某些方面谈判"，Trump 隔空说"一周内可能成交"——但伊朗官媒同时放话"几天没和华盛顿联系了"；地缘溢价不退反进，<b>Brent 仍在 $93、金价 $4,460</b>，市场态度："谈到签字前一秒都不算数"。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>Marvell 一夜封神 + 宇树科技 A 股具身智能第一股</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">老黄背书</span>
+        <h4>Marvell 一夜 +33%：老黄钦点"下一个万亿"+ Teralynx T100 AI 交换芯片 + 上调指引三重叠加</h4>
+        <p>Jensen Huang 周一在 Computex 公开点名 Marvell 是<b>"下一家万亿美元芯片公司"</b>。周二 Marvell 趁热打铁，发布 <b>Teralynx T100</b>——专为 AI 数据中心设计的交换芯片，同步上调 FY2027 收入指引（CFRA 等机构把季度收入预测拔到 $30 亿），市值一度逼近 $2,200 亿。MRVL 当日 +33% 创新高（曾盘中 +12% 已经够吓人，收盘冲到 +28-33% 不同口径），直接带飞光通信整条产业链：HPE、Coherent、Lumentum、Marvell 客户 AWS/Google/Meta 的 ASIC 故事重新被市场拉出来讲。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Computex 主秀之后 <b>"老黄朋友圈"的二次定价</b>——昨天市场在为 Nvidia 自家股票（+5%）买单，今天开始把账记到供应链上。Marvell 的核心标签是 <b>自定义 ASIC + 光互连（NVLink Fusion / Teralynx）</b>，两个东西都是云大厂"减少对 Nvidia 依赖"的关键件——但讽刺的是，老黄亲自背书反而把 Marvell 拉进 <b>Nvidia 生态护城河</b> 里：客户用 Marvell 的 ASIC 也好、自研芯片也好，只要还接 NVLink，就还在 Nvidia 的盘子里。对 A 股/港股的传导：光模块（中际旭创、新易盛、天孚通信）、CPO、铜连接（沃尔核材）继续是受益方；港股看 ASMPT、瑞声、舜宇有没有溢出。<span class="source">来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06022026-11988714">Investopedia</a> · <a href="https://www.fool.com/coverage/stock-market-today/2026/06/02/stock-market-today-june-2-marvell-technology-surges-after-nvidia-ceo-highlights-ai-infrastructure-role/">Motley Fool</a> · <a href="https://www.tradingkey.com/news/market-movers/261941879-market-movers-mrvl-20260602">TradingKey</a></span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">A 股 IPO</span>
+        <h4>宇树科技 73 天闪电过会、估值 ¥420 亿——A 股"具身智能第一股"已提交注册</h4>
+        <p>6/1 上交所第 31 次审议会议通过宇树科技科创板 IPO，<b>从 3/20 受理到过会仅 73 天</b>，刷新科创板"预先审阅"机制以来最快纪录。拟募资 ¥42.02 亿，主投智能机器人模型研发、本体研发、智能制造基地。当前估值 ¥420 亿，<b>美团是第二大股东</b>。6/2 宇树科技再宣布单款双足机器人累计下线突破 1.1 万台，未来产能规划 7.5 万台/年。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 A 股第一次以"人形机器人整机"为主营业务的公司过会，意义类似当年小鹏/蔚来登陆港股——给市场一个直接对标"特斯拉 Optimus + Figure"的本土锚。<b>商业含义</b>：(1) <b>估值锚定效应</b>——¥420 亿一锤下来，已上市的拓斯达、绿的谐波、汇川的"机器人业务部分"会被重新拉框框估值；(2) <b>美团二股东的渠道含义</b>——具身机器人最大的近场应用是配送/餐饮/酒店服务，美团既是股东又是潜在采购方，等于把"商业化路径"提前签好；(3) <b>73 天闪电过会的政策信号</b>——监管在用速度告诉市场，"硬科技 IPO 通道"是真的开了，2026 H2 看其他人形机器人/AI 芯片公司是不是跟进。lainy 重点关注：发行价定价、首日涨幅、解禁节奏。<span class="source">来源：<a href="https://finance.sina.com.cn/tech/digi/2026-06-02/doc-inhzzivn3133478.shtml">新浪科技</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-06-02/doc-inhzxmek3812296.shtml">新浪财经</a></span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">设备龙头</span>
+        <h4>Applied Materials 被翻出来重估：不管哪家芯片赢，它都在卖铲子</h4>
+        <p>Trefis 周二专题：投资者一般想到 AI 受益股就是 Nvidia / TSMC / Micron，但 <b>Applied Materials（AMAT）</b>这种"半导体设备供应商"才是真正的"不下注、躺收成"——TSMC 扩 CoWoS、SK Hynix/Micron 扩 HBM、Intel 18A、Samsung GAA 全部要用 AMAT 的设备。在所有先进制程节点（N3/N2/HBM3E/HBM4）的设备 BOM 里，AMAT 拿到的比例都在上升。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Computex 主秀外溢的<b>第三圈水波</b>——先是 Nvidia 自己（+5%）→ Marvell / HPE / Dell（+10~33%）→ 现在开始外溢到上游设备（AMAT、ASML、LRCX、KLA、TEL）。商业逻辑很简单：你信不信 AI 需求长期高景气？信，那 AMAT 这种"卖给所有芯片厂的设备厂"就是<b>最低 beta 的押注</b>。对 lainy 视角的提醒：A 股对应的"卖铲子赢家"是 <b>北方华创、中微公司、拓荆科技、华海清科</b>——昨天 A 股半导体整体回血、今天港股科技狂欢，A 股设备股是不是开始补涨值得盯。<span class="source">来源：<a href="https://www.trefis.com/stock/amat/articles/600968/applied-materials-the-ai-stock-that-wins-no-matter-which-chip-wins/2026-06-02">Trefis</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>Rubio 喊话伊朗"同意谈核" + Trump 一周内成交 + 美伊罗生门继续</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">外交</span>
+        <h4>Rubio：伊朗"破天荒"同意谈核计划具体细节——Trump 接力放话"一周内可能成交"</h4>
+        <p>美国国务卿 Rubio 周二在 CNBC 采访中说："一个月前甚至一年前，伊朗连提都不愿意提的核计划细节，他们现在同意谈了——可能今天、明天、下周就会出结果。"几乎同时，Trump 在 Truth Social 上说谈判"以快节奏在继续"——但前一天他刚说过"我不在乎谈判是不是结束了"。伊朗官媒同时放话"已经几天没和华盛顿联系了"——双方还在隔空打信号战。关键卡点：<b>伊朗核能力 + 霍尔木兹海峡</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条要和昨天那条"Pezeshkian 辞职罗生门"串着看——伊朗内部 IRGC vs. 改革派的角力还没完，Rubio/Trump 现在表演"美方主动 + 进度乐观"，本质上是在对德黑兰<b>政治施压</b>：你不签，市场和油价就把你的国内经济先压垮一遍。<b>市场含义</b>：今天 Brent 从昨天的 $94.98 跌到 $93 附近、金价从 $4,550 滑回 $4,460，已经说明<b>"和平溢价"开始重新进入定价</b>，但完全没回到 4 月份开战前的 $80。换句话说，市场给了 30% 的概率"deal 能签"，但 70% 概率"还要僵持几周"。lainy 看：原油 ETF、黄金 ETF、海运/航空股都是这条新闻的实时晴雨表。<span class="source">来源：<a href="https://www.cnbc.com/2026/06/02/rubio-iran-nuclear-talks-trump-war-strategy-hormuz.html">CNBC</a> · <a href="https://time.com/article/2026/06/02/trump-netanyahu-crazy-lebanon-hezbollah-ceasefire-iran-us-peace-deal/">TIME</a> · <a href="https://www.cbc.ca/news/world/iran-lebanon-trump-agreement-9.7220254">CBC</a></span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">中东局势</span>
+        <h4>Netanyahu 公开"留出 Round 2"选项 + 黎巴嫩战线没停——以色列在准备"打完再谈"</h4>
+        <p>Axios 援引美国官员：Netanyahu 周一在和 Trump 的会议上明确表示<b>不排除 2026 年内对伊朗发动"第二轮"军事打击</b>。同期黎巴嫩战线扩大、伊朗 IRGC Quds 部队司令威胁<b>"封锁范围从霍尔木兹扩展到曼德海峡"</b>——后者是连接红海和印度洋的另一处咽喉，全球 ~12% 海运贸易要走这里。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条解释了为什么 Rubio + Trump 一边喊"快成交"，原油却还在 $93——市场不只在看"deal 能不能签"，更在看"签了之后 Netanyahu 会不会再开火"。<b>商业映射</b>：(1) 海运/集运（中远海控、马士基）现在的运价里已经计入了"曼德海峡风险溢价"，2024 红海危机的剧本可能重演；(2) 大宗商品里铜、锌（依赖红海运输）会比原油更脆弱；(3) 全球航司（南航、东航、达美、AA）燃油成本和地缘绕航成本双向承压。<span class="source">来源：<a href="https://www.iranintl.com/en/israel">Iran International</a> · <a href="https://www.theguardian.com/world/live/2026/jun/01/iran-war-live-news-updates-kuwait-missile-drone-attack-us-strikes-iran-radar-sites">Guardian</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>JOLTS 4 月数据 + Beige Book 倒计时 + Powell 最后一次 FOMC 临近</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">就业数据</span>
+        <h4>JOLTS 4 月：762 万职位空缺、专业服务业领涨——劳动力市场"硬着陆"剧本继续推迟</h4>
+        <p>BLS 周二公布 4 月 JOLTS：<b>未填补职位 762 万</b>，专业与商业服务业领涨。在地缘风险加码、Fed 还没降息的环境下，美国就业市场仍然韧性十足。本周关键数据还有：周三 Beige Book、周四 ADP 私人就业、周五 5 月非农。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>劳动力市场只要不崩，Fed 6/16-17 会议<b>"维持利率不动"</b>的概率（Polymarket 已经 97%）就不会松动——这就是"Powell 最后一次 FOMC 投鸽派"剧本被打掉的根本原因。<b>对市场的含义</b>：(1) 利率"higher for longer"延续到夏天，10Y 美债收益率本周大概率在 4.5% 上方；(2) 美股短期最大风险不是"基本面差"而是"AI 故事过热 + 估值已贵"——CNBC 周二专门提"S&amp;P 涨势像 1987 崩盘前夕"；(3) 美元继续偏强压制 A 股/港股北上资金回流的弹性，今天港股科技狂欢能不能持续要看离岸人民币能不能稳住 7.20 下方。<span class="source">来源：<a href="https://finance.yahoo.com/economy/live/jobs-report-may-data-labor-market-live-updates-090000760.html">Yahoo Finance</a> · <a href="https://www.bls.gov/news.release/jolts.htm">BLS</a></span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>金价 $4,460、Brent $93——昨天"避险 + 通胀"两条腿、今天换成"和平预期 + 弱供给"两条腿</h4>
+        <p>昨天 Brent 一夜 +4%、金价冲 $4,550 是因为 Pezeshkian 辞职疑云 + 黎巴嫩升级。周二 Rubio/Trump "外交进度"消息一出，<b>Brent 从 $94.98 回到 $93 附近、WTI $91 上下，金价从 $4,550 滑回 $4,460</b>——但完全没跌破开战前的 $80。Cleveland Fed Inflation Nowcast 5 月 CPI 上调到 3.6% 同比，能源 pass-through 正在到来。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这就是 lainy 平时最关心的"地缘 → 通胀 → 利率 → 股市"传导链的实时演绎。把昨天的高位和今天的回踩对比，结论是：<b>市场在给伊朗谈判 30% 的成交概率、70% 的拖延概率</b>。<b>对资产配置的暗示</b>：(1) 黄金回踩 $4,400-4,500 是新的成本线，不是顶；(2) 原油从这里继续往下需要"签字 + Netanyahu 不再开火"双重确认，单边做空很危险；(3) 美债短端因为 Fed 不动而稳定、长端因为通胀重燃可能再陡——曲线"熊陡"是接下来 2 周的主旋律。<span class="source">来源：<a href="https://tradingeconomics.com/commodity/gold">Trading Economics</a> · <a href="https://fortune.com/article/price-of-oil-06-01-2026/">Fortune</a> · <a href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting">Cleveland Fed</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>6/2 收盘：港股科技封神 + A 股极致割裂 + 美股三大指数新高</small></h2>
+    <div class="market-grid">
+      <div class="market">
+        <h5>🇨🇳 A 股 · 6/2 收盘</h5>
+        <div class="ticker">沪指 <span class="up">+0.43%</span> · 深成指 <span class="up">+1.63%</span> · 创业板 <span class="up">+2.66%</span> · 科创综指 <span class="up">+0.74%</span></div>
+        <p><b>极致割裂日</b>：指数大涨但全市场个股普跌、超 3100 只下跌。资金高度集中在 <b>通信（+92.7 亿主力净流入）、有色（+29 亿）、电子、电力设备、汽车</b>。AI 应用、传媒、地产、农业被大幅抽血——典型的"AI 硬件回血、AI 应用见光死"分化。</p>
+        <p>🦞 <b>逻辑解读</b>：昨天 Computex 主秀之后，资金的态度从"AI 应用想象力"切换回"AI 硬件确定性"——光模块、PCB、CCL、HBM 链条上的公司被重新追入；而过去半年炒得很热的 AI 应用（影视、游戏、教育、传媒）因为"无法证伪 → 无法证实"开始杀逻辑。今天看接力赛：宇树科技过会消息会不会带动一波机器人板块。</p>
+      </div>
+
+      <div class="market">
+        <h5>🇭🇰 港股 · 6/2 收盘</h5>
+        <div class="ticker">恒生指数 <span class="up">+1.5%</span> · 恒生科技 <span class="up">+4.72%</span> · 站上 5000 点</div>
+        <p><b>一日翻身</b>：腾讯单日 +10%、阿里 +近 2%、美团早盘 +近 5%、京东/网易/快手齐拉——"五大巨头集体猛拉"剧本在港股一夜上演，万得（港股）中国科技龙头指数 +超 7%。盘中部分万亿巨头一度涨近 9%。</p>
+        <p>🦞 <b>逻辑解读</b>：港股科技的反弹是<b>三重共振</b>——(1) Computex 主秀直接外溢到中国 AI 概念；(2) A 股 5 月被压抑的科技情绪流向估值更便宜的港股；(3) 离岸人民币暂稳、美元短期见顶让外资敢于回港股。腾讯 +10% 是非常强的信号——它是港股最大权重 + 流动性最好的科技龙头，机构一旦决定加仓"中国 AI"，它就是必经之路。<b>持续性看</b>：明天恒科要看美股 Marvell/HPE/Dell 的隔夜表现能不能继续兑现。</p>
+      </div>
+
+      <div class="market">
+        <h5>🇺🇸 美股 · 6/2 收盘</h5>
+        <div class="ticker">S&amp;P 500 <span class="up">+0.41% · 7,609.78（历史首次站上 7,600）</span> · Nasdaq <span class="up">+0.03% · 27,093.90</span> · Dow <span class="up">+0.45% · 51,307.79</span></div>
+        <p><b>Marvell +33% 领涨纳指</b>——老黄"下一个万亿"背书 + Teralynx T100 发布 + 上调指引三重叠加。HPE 同步大涨，Dell 周一已 +10%。Cisco、Intel 等老牌网络/CPU 厂分化（Intel 周一 -4%）。<b>3 大指数集体新高</b>但盘面比较窄——科技 + 公用事业领涨，能源/材料/金融红绿参半。</p>
+        <p>🦞 <b>逻辑解读</b>：这是 Computex 主秀的"第二天兑现"——周一买 Nvidia，周二买"老黄朋友圈"。<b>风险信号</b>：CNBC 周二专题提到"S&amp;P 当前涨势节奏 vs. 1987 崩盘前夕的形态高度相似"——并不是说一定要崩，但<b>持续单日窄基新高 + AI 集中度（前 10 大权重股贡献了 60%+ 涨幅）+ VIX 还在 14 附近</b>这种组合，历史上后续 1-3 个月波动率均值回归的概率非常高。短线节奏：周四 ADP + 周五非农两个数据会决定是不是 7,650-7,700 还能继续推。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>Costco Q3 财报 + 加油站故事 + 6 月新品季</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">美国零售</span>
+        <h4>Costco Q3：营收 $705.3 亿、净利 $21.9 亿——加油站"低价油"反而成了 Q3 财报最亮点</h4>
+        <p>Costco 公布 FY2026 Q3：营收 $705.3 亿、净利 $21.9 亿；前九个月累计 $2,074 亿/$62.3 亿。CEO 公开复盘："本季最大的非预期变量是<b>加油站 fuel volume 暴涨</b>——伊朗局势把油价推高，消费者发现 Costco 加油比 Shell/Exxon 便宜 50¢/加仑，<b>会员卡 + 低价油</b>反而变成新一轮拉新引擎。"</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条要和上周"Walmart 单次加油不超 10 加仑"的压力信号并读——同样的高油价，<b>Costco 是赢家、Walmart 是受害者</b>。商业含义：(1) <b>会员制零售的护城河又被验证了一次</b>——会员卡让 Costco 即使在油价高位也能"低买高卖燃油 + 顺便带客流"；(2) 美国消费分层加剧——Costco/Sam's Club 这种"中产囤货店"在收割降级客流，普通超市/便利店受挤压；(3) 对 lainy 关注的 Q4 财报季，沃尔玛、Target、Kroger 的 EPS 预期会被 Costco 这份财报反向修正下调。<span class="source">来源：<a href="https://www.reuters.com/business/retail-consumer/">Reuters Retail</a> · <a href="https://simplywall.st/stocks/us/consumer-retailing/nasdaq-cost/costco-wholesale/news/is-costco-cost-quietly-redefining-its-value-proposition-thro">Simply Wall St</a></span></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">国内消费</span>
+        <h4>"618" 进入决战周 + 端午节临近——白酒价格倒挂从茅台 1935 扩散到五粮液普五</h4>
+        <p>京东、淘天、抖音三家平台 618 进入主战阶段。<b>白酒价格倒挂</b>持续扩散——继昨天京东补贴后茅台 1935 售 ¥729（i 茅台官网价 ¥1,188）之后，今天五粮液普五在直播间领券后已落到 ¥849（建议零售价 ¥1,499），泸州老窖 1573 部分电商渠道跌破 ¥780。端午临近本是白酒小旺季，但渠道为了清库存正在持续"以价换量"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>白酒倒挂已经不是"618 短期促销"那么简单——这是<b>渠道在替品牌承担定价压力</b>的结构性信号。商业含义：(1) <b>品牌侧</b>：茅台、五粮液、泸州老窖的"出厂价/批发价/终端价"三段价差正在被压缩，下半年财报的渠道库存、应收账款、销售费用都要警惕；(2) <b>消费侧</b>：18-35 岁人群的白酒消费心智持续下行，礼品白酒被精品咖啡、运动饮品、低度酒分流；(3) <b>资本市场</b>：白酒板块年内已跌 10%+，今天 A 股大涨但白酒继续被抛弃就是这个逻辑——市场已经不再相信"消费升级 + 通胀传导 → 白酒涨价"的旧叙事。<span class="source">来源：<a href="https://www.stcn.com/article/gmg.html">证券时报</a></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>NBA 总决赛 G1 今夜开打 + 法网 8 强 + Sabalenka 横扫</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA 总决赛</span>
+        <h4>NBA Finals G1：今晚 8:30pm ET（北京 6/4 早上 8:30）Spurs 主场迎战 Knicks——文班 vs. Brunson 正式开打</h4>
+        <p>2026 NBA 总决赛 G1 今晚开打：<b>Spurs vs. Knicks</b>，圣安东尼奥主场，ABC 直播。Spurs 拥有主场优势（G1/G2/G5/G7 主场）。<b>纽约自 1999 年以来首次进入总决赛、Spurs 自 2014 年夺冠后再次站上巅峰</b>。两边的对位看点：21 岁 7'4" 法国小子文班亚马（Wembanyama）vs. 32 岁老练后卫 Jalen Brunson——"未来 vs. 现在"+ "防守怪兽 vs. 控分大师"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这场总决赛对娱乐/广告/转播商业意义巨大——<b>纽约市场 + 国际化的 Spurs（Wembanyama 法国 / 文班的全球流量）</b>组合，几乎注定打破近 5 年的 Finals 收视率新高。商业映射：(1) Disney（ABC + ESPN）转播权 + 广告收入是直接受益；(2) Knicks 母公司 MSG Sports 港股有 ADR，可以盯一下；(3) Nike + 国民球队组合在中国市场的渗透——文班亚马的 Nike Air Wemby 系列要趁这一系列爆款上量。lainy 如果有兴趣看，可以挑 G1 + G3 这两场分别在两个主场的关键对决。</p>
+        <span class="source">来源：<a href="https://www.nba.com/playoffs/2026/nba-finals">NBA.com</a> · <a href="https://www.cnet.com/tech/services-and-software/nba-finals-2026-how-to-watch-knicks-vs-spurs/">CNET</a></span>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">法网</span>
+        <h4>法网女单 8 强已完成、Sabalenka 横扫四轮 0 丢盘——男单 Sinner 早早出局、Mensik 黑马晋级</h4>
+        <p>罗兰加洛斯 R4 收官：<b>Sabalenka 7-5 / 6-3 击败大坂直美</b>（本年度第三次击败大坂）晋级 8 强，至今四轮 0 丢盘——头号种子状态恐怖。男单冷门继续：Sinner 早早被 Cerúndolo 淘汰、终结 30 连胜，男单"前 3 号种子在 R4 前全部出局"的 25 年首次纪录已成事实。8 强里 <b>20 岁捷克黑马 Mensik 击败 19 岁巴西新星 Fonseca</b>，下一轮对阵 Zverev，男单进入"老中青三代混战"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>从娱乐商业角度看两件事：(1) <b>Sabalenka 已经是 WTA 最具市场号召力的女单 No.1</b>——四轮 0 丢盘 + 三次年内击败大坂直美，让她在 Adidas、Nike、Wilson 球拍、AO 大满贯 host 的代言议价权直线上升；(2) <b>男单"诸神黄昏"提前到来</b>——Djokovic 上轮也输给 Fonseca、Sinner R2 出局、Alcaraz 还在场上但状态不稳——意味着 ATP 接下来 12 个月要进入"群雄混战"，对赞助商和转播商来说反而是好事（多个新星 = 多套粉丝经济）。</p>
+        <span class="source">来源：<a href="https://www.nytimes.com/athletic/live-blogs/french-open-2026-live-updates-quarterfinals-scores-results/rHGDDacodzyJ/">The Athletic</a> · <a href="https://www.rolandgarros.com/en-us/article/2026-edition-r4-sabalenka-osaka">Roland Garros</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>CAR-T 疗法新突破</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">医学</span>
+        <h4>新发现：NFIL3 蛋白质让 CAR-T 细胞"累趴"——癌症免疫治疗有了新解锁点</h4>
+        <p>ScienceDaily 周二报道：研究者识别出一种叫 <b>NFIL3</b> 的蛋白质，是导致 CAR-T 细胞治疗"耐受疲劳"的关键障碍——CAR-T（嵌合抗原受体 T 细胞）疗法之前对血液癌效果惊人，但对实体瘤效果不佳、且容易在 6-12 个月后"失活"。这次发现意味着可以通过敲除/抑制 NFIL3 来<b>延长 CAR-T 细胞的杀癌力</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CAR-T 是 2020 年代肿瘤治疗最贵的几种疗法之一（单次治疗 $40-50 万美元），市场天花板被"持续性差 + 实体瘤无效"卡住。这次 NFIL3 的发现如果能临床转化（保守估计还要 3-5 年），对 <b>Novartis（Kymriah）、Gilead/Kite（Yescarta）、BMS（Breyanzi）、传奇生物</b>等 CAR-T 龙头的收入天花板是直接抬升。对 A 股/港股的传导：科济药业、复星医药/凯瑞特、传奇生物（NASDAQ）这类 CAR-T 玩家研报里"长期 TAM 假设"会被重写。</p>
+        <span class="source">来源：<a href="https://www.sciencedaily.com/">ScienceDaily</a></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师 · 每日不错过新闻 · 2026-06-03<br>
+    <span class="footer-note">为 lainy 定制 · 金融视角优先 · 数据/链接均来自当日公开报道</span>
+  </footer>
+</div>
+</body>
+</html>

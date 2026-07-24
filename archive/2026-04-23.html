@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-04-23</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 4 月 23 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>Google 把下一代 TPU 一拆为二——训练芯片 + 推理芯片，都跑 TSMC <b>2nm</b>；同时 TSMC 公布 <b>A13</b> 新工艺。英伟达的护城河被两路围攻。</li>
+      <li><b>国际：</b>伊朗在 <b>霍尔木兹海峡</b> 扣押两艘商船，美伊紧张再度升级，Brent 原油跳到 <b>101.7 美元</b>。</li>
+      <li><b>宏观：</b>"大轮动"失效——AI 成长股再次领跑美股；港股震荡整理，Hang Seng 徘徊 26,490 点附近。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Google TPU</span>
+        <h4>Google 发布 Ironwood TPU 实装，下一代拆成"训练 + 推理"双芯片</h4>
+        <p>Google Cloud Next 上正式上线 Ironwood TPU（每芯片 <b>4.6 petaFLOPS</b>）；同时预告第 8 代 TPU 首次一分为二——训练用芯片由 Broadcom 代工、推理用芯片交给 MediaTek，<b>都跑 TSMC 2nm，2027 年末上线</b>。官方数据：训练性能是 Ironwood 的 2.8 倍（同价），推理每美元性能提升 80%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 芯片格局的分叉信号——"训练"和"推理"两种工作负载，内存/带宽/能耗需求完全不同，继续塞在同一颗 GPU 里不经济。Google 拆了，Nvidia 的 Blackwell/Rubin 也在往这个方向靠。对供应链来说：<b>推理芯片量远大于训练芯片</b>，未来 MediaTek、联发科 ASIC 业务、TSMC 2nm 产能都会吃到大单。英伟达的"一颗通吃"溢价空间会被压缩。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/04/22/google-launches-training-and-inference-tpus-in-latest-shot-at-nvidia.html" target="_blank">CNBC</a> · <a href="https://thenextweb.com/news/google-ironwood-tpu-inference-cloud-next" target="_blank">TNW</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 工艺</span>
+        <h4>TSMC 亮相 A13 &amp; N2U 新工艺，CoWoS 封装继续扩产</h4>
+        <p>北美技术论坛上，TSMC 公布 A13（1.3nm 级）和 N2U 工艺，主攻更小、更快的 AI 芯片；同步扩展 CoWoS（Chip-on-Wafer-on-Substrate）先进封装产能，以便在单封装里塞下更多 silicon 和 HBM。</p>
+        <div class="why">🦞 <b>商业含义：</b>AI 芯片的瓶颈已经从"算力"切到"封装 + 内存带宽"。CoWoS 是 TSMC 卡位 Nvidia H100/B200/GB200 的关键环节，产能 = 报价权。A13 是未来 3 年的节奏锚——给金融视角看：<b>TSMC 毛利能保住 55%+ 的核心，不只是制程领先，而是封装 + HBM 打包议价</b>。</div>
+        <div class="source">来源：<a href="https://seekingalpha.com/news/4578186-tsmc-debuts-new-a13-n2u-chip-manufacturing-technology" target="_blank">Seeking Alpha</a> · <a href="https://www.barchart.com/story/news/1456433/tsmc-debuts-a13-technology-at-2026-north-america-technology-symposium" target="_blank">Barchart</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AI 安全事件</span>
+        <h4>Anthropic 调查：Mythos 模型被第三方供应商"越权访问"</h4>
+        <p>Bloomberg / BBC 披露：Anthropic 未公开发布的网络安全模型 Claude <b>Mythos</b>（因为太会"帮人做网络攻击"而一直不公开），被一小群未授权用户通过第三方承包商的账号拿到了访问权限。据称不是"黑客攻击"，是凭证被滥用。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 公司"<b>内部管控 + 第三方承包商</b>"链条第一次出大事。Frontier Lab 们要面对的新风险：不是模型本身被 jailbreak，而是内部访问策略失控。监管/合规口会借题发挥，对冲基金在定价这类事件时会上调 AI 头部公司的 compliance 溢价。</div>
+        <div class="source">来源：<a href="https://www.bbc.com/news/articles/cy41zejp9pko" target="_blank">BBC</a> · <a href="https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/" target="_blank">TechCrunch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">数据中心</span>
+        <h4>Data Center World 2026：AI 把基础设施推到极限，SMR/核聚变/微电网进场</h4>
+        <p>大会主旨：AI 数据中心正分化成两种形态——训练（十万卡紧耦合集群，低延迟）vs 推理（大规模分布式，高可用）。单园区功耗已到 "几百兆瓦" 级别，业界开始严肃讨论小型模块化核反应堆（SMR）、核聚变、微电网方案。</p>
+        <div class="why">🦞 <b>映射到你的报告：</b>"AI capex = GPU + 电力 + 土地"。两年前电力是隐性变量，现在是硬约束。关注三个板块：<b>电力设备（Vertiv、施耐德、伊顿）+ 小型核能（NuScale、BWXT）+ 美国 REIT 数据中心运营商（Equinix、Digital Realty）</b>。这些环节的毛利/定价权会比 GPU 链更有粘性。</div>
+        <div class="source">来源：<a href="https://www.datacenterknowledge.com/build-design/data-center-world-2026-ai-pushes-infrastructure-to-new-limits" target="_blank">Data Center Knowledge</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 霍尔木兹</span>
+        <h4>伊朗扣押两艘商船，霍尔木兹海峡紧张再升级</h4>
+        <p>Reuters：伊朗周三在霍尔木兹海峡扣押两艘商船，是美伊对峙进入新阶段后首次直接出手拦船。CSIS 最新报告定调："这是耐力战，伊朗赌的是能比美国的政治意愿撑得久。"</p>
+        <div class="why">🦞 <b>市场含义：</b>霍尔木兹承担全球约 20% 海运原油。扣船比停火谈判破裂"实感"强得多——油价立刻反应，Brent 日内跳涨 <b>3.3% 到 101.7 美元</b>，WTI 涨 3.08% 到 92.4 美元。能源出口国股（美国能源板块、中东主权基金相关股）受益，航空、化工、新兴市场消费股承压。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/" target="_blank">Reuters</a> · <a href="https://www.csis.org/programs/latest-analysis-war-iran" target="_blank">CSIS</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>原油单日跳涨：Brent 101.7 / WTI 92.4，近一年涨幅 50%</h4>
+        <p>4/22 收盘：Brent +3.30% 到 101.73 美元/桶，WTI +3.08% 到 92.43 美元/桶；过去 12 个月分别上涨 53.9% 和 48.4%。高盛、Energy Aspects 警告：<b>若霍尔木兹事件发酵成实质性断供，全球航班燃油短缺可能扩大</b>。</p>
+        <div class="why">🦞 <b>传导链：</b>油价高→通胀二次抬头→美联储降息节奏被迫推后→美股成长股估值承压（但 AI 龙头有 EPS 对冲能力，所以今天我们看到 AI 股反而强）→新兴市场资本外流压力再起。对港股/A 股来说，强美元 + 高油价是双压。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.cnbc.com/oil/" target="_blank">CNBC Oil</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄 · 网络战</span>
+        <h4>英国 NCSC 警告：俄伊中三线网络攻击升级</h4>
+        <p>英国国家网络安全中心（NCSC）负责人公开警告：俄罗斯正把乌俄战场上练出的混合战术用到英国本土；伊朗在英国街头对"政权威胁者"进行网络跟踪；中国情报/军方的网络行动"复杂程度令人咂舌"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>网络战从"情报圈的事"升级为"国家安全 + 金融基础设施风险"。保险行业开始给网络险加码定价，英美金融监管也在酝酿新的 cyber stress test。长期利好网安板块（CrowdStrike、Palo Alto、中国的奇安信等），但短期波动大。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/russia-iran-china-uk-cyber-defense-5fcdc5eaf14b2d016c2575bbdab47c39" target="_blank">AP News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>A 股 / 港股 / 全球</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美股</span>
+        <h4>"大轮动"没持续多久，AI 成长股又接管美股</h4>
+        <p>过去几周市场从 AI 巨头轮动到小盘 / 价值股，但这一轮动没撑过 10 天——AI 成长股重新领涨，原因：① 新一轮 AI 基建 capex 数据强于预期；② Ironwood / TPU 8 发布验证大厂还在加码；③ 高油价让消费股失速，相对来说 AI 龙头 EPS 更稳。</p>
+        <div class="why">🦞 <b>读给你听：</b>"轮动失败"意味着大钱还是没找到 AI 之外的配置替代品。从金融角度：Russell 2000 vs Nasdaq 100 的相对估值差没能收敛。这也解释了为什么今天即便油价涨、地缘紧张，美股大盘指数仍然能撑住——头部几家 AI 巨头的权重 + 业绩已经足够抵御宏观噪音。</div>
+        <div class="source">来源：<a href="https://www.aol.com/articles/great-rotation-didnt-last-best-180500971.html" target="_blank">AOL / The Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">港股</span>
+        <h4>港股消化地缘溢价，恒指徘徊 26,490 点</h4>
+        <p>恒指在连续两日走高 1.2% 后，周三出现整理。市场观点：<b>"盈利改善"正在成为下一阶段核心驱动</b>（而不只是流动性），叠加投资者风险偏好回升。但周三 Hang Seng Tech 盘中跳水——高油价 + AI 模型事件（Anthropic）导致科技股情绪波动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>港股的故事正在从"资金面"转向"基本面"——这是健康信号。但 26,500 是技术 + 心理双阻力位，需要一个实质性的业绩催化（比如腾讯、阿里、美团财报）才能突破。短期内，<b>高油价 + 美伊扰动会让港股跑输 A 股</b>，因为港股对外部风险更敏感。</div>
+        <div class="source">来源：<a href="https://news.rthk.hk/rthk/en/component/k2/1852049-20260422.htm" target="_blank">RTHK</a> · <a href="https://www.rttnews.com/3640899/consolidation-expected-for-hong-kong-shares.aspx" target="_blank">RTTNews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">宏观政策</span>
+        <h4>A 股：大陆收盘走高，港 A 价差走阔</h4>
+        <p>RTHK 数据：港股周二收跌，但 A 股主板收涨——资金从港股切回 A 股，一方面是避险（人民币资产外部扰动更低），另一方面是"百万亿服务业新政"落地后政策红利释放。</p>
+        <div class="why">🦞 <b>对你的启示：</b>金融背景看这个价差很直接——<b>同一家公司的 A/H 股折让率</b> 是外资风险偏好的情绪温度计。折让扩大 = 外资在撤；折让收窄 = 外资回流。最近折让没有显著扩大，说明 Hormuz 事件的冲击还是"可控紧张"而非系统性恐慌。</div>
+        <div class="source">来源：<a href="https://news.rthk.hk/rthk/en/component/k2/1852049-20260422.htm" target="_blank">RTHK</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 一点花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>Tufts 大学：AI 新架构能耗降到 1/100，精度反而更高</h4>
+        <p>ScienceDaily 报道：Tufts 大学团队发表 AI 新架构，在同等精度下能耗降为传统神经网络的 <b>1%</b>，且部分任务精度反而提升。论文暗示方向是类脑稀疏激活 + 光子/神经形态计算的结合。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>如果这种架构真能工程化，意味着"AI 数据中心需要 500 兆瓦"这个叙事会崩。不过从研究到商用至少 5-10 年——对二级市场短期是噪音，但对"能源多头"长期是压顶云。聊天可以说："AI 能耗问题，也许最终答案不在电网，而在芯片架构本身。"</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/releases/2026/04/260405003952.htm" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

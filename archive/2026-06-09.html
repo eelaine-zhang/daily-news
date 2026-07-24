@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-09</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --red: #ef4444;
+    --green: #22c55e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 720px) { .market-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  .market-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .market-card .name { font-size: 12px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .market-card .val { font-size: 20px; font-weight: 700; margin-top: 4px; }
+  .market-card .chg { font-size: 13px; margin-top: 2px; }
+  .red { color: var(--red); }
+  .green { color: var(--green); }
+  .closed { opacity: 0.7; }
+  .holiday-banner { background: #c084fc22; color: var(--biz); font-size: 11px; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 6px; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 9 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>WWDC 落地：</b>Apple 主题演讲塞了一堆 Siri 2.0 / iOS 27 / macOS Golden Gate，最大彩蛋是<b>跟 Google 签了 Gemini 深度集成协议</b>——意味着 Apple "AI 自研 narrative" 正式让位给"租 Google 模型"，对 OpenAI 而言是一次罕见的"被踢出 iOS 默认位"。</li>
+      <li><b>市场剧烈反转：</b>港股 / A 股周一各跌 1-3% 补吃上周五的隔夜冲击，但<b>美股周一立刻 V 形反弹</b>——SOX 半导体指数收涨 5.6%，Intel +11.2% / Micron +9.9% 领涨；亚洲今早大概率"低开高走"补回失地。</li>
+      <li><b>地缘暂时不升级：</b>以色列周一并未对伊朗导弹大规模报复——Trump 公开"劝阻 Netanyahu"，谈判窗口被强行拉开；油价回吐周末涨幅，金价小幅下行。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>WWDC + Apple-Google Gemini 大交易</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">🚨 头条 · WWDC</span>
+        <h4>Apple-Google 签 Gemini 集成协议：iOS 27 起 Siri 默认接入 Google 模型——OpenAI 被踢出"默认位"</h4>
+        <p>WWDC 2026 主题演讲：Apple 公布全新 Siri 2.0 + Apple Intelligence 整合方案，最大新闻是<b>跟 Google 在今年早些时候签下的深度合作正式落地</b>——iOS 27 / macOS Golden Gate 之后，Siri 在需要"大模型推理"时会优先调用 Gemini，而 iOS 26 上集成的 ChatGPT 角色被降级到"可选第三方"。另外发布：① Siri 进入 Spotlight 搜索栏直接问文件；② macOS 改名 Golden Gate（Liquid Glass 设计可调）；③ 全新儿童账户管理；④ 一批 AI 开发者工具。Tim Cook 在结尾"重申本届最重要发布"——被外媒解读为他任内"最后一场 keynote"的味道很重。</p>
+        <div class="why">🦞 <b>商业含义（重点）：</b>这是过去 18 个月 AI 故事最大的"权力转移"。Apple 选择"租 Google 的模型 + 自家硬件分发"而不是 all-in 自研，等于公开承认<b>大模型这一仗它不打了</b>——把自己定位成"AI 时代的入口设备厂商"，类似 iOS 之于 Google Search 那条老路。受益顺序：① <b>Google</b>（Gemini 拿到 iPhone 20 亿设备的默认流量，对标当年 Bing → Edge 默认搜索的反向版本）；② <b>TSMC</b>（device-side LLM 推理对 N3P / N2 产能依然是强需求）；③ 中性偏空：<b>OpenAI</b>（失去 iOS 默认位，渠道劣势开始显现）。市场角度：Apple 服务业务可能新增 "Gemini 接入费分成"，毛利率结构再上一个台阶；Google 短期股价应正面反应，但反垄断监管阴影会再加深。</div>
+        <div class="source">来源：<a href="https://www.theverge.com/tech/945693/apple-wwdc-2026-biggest-announcements-ios-27" target="_blank">The Verge</a> · <a href="https://www.tomsguide.com/news/live/wwdc-2026-live-news-updates" target="_blank">Tom's Guide</a> · <a href="https://techcrunch.com/2026/06/08/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/" target="_blank">TechCrunch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SOX V 形反弹</span>
+        <h4>SOX 半导体指数单日反弹 +5.6%：Intel +11.2% / Micron +9.9% / ASML +6.5%——上周五"-10.3% 黑色周五"立刻被打回</h4>
+        <p>美股周一收盘：SPX +0.29%、纳指 +0.86%、道指 -0.16%，但<b>SOX 半导体指数 +5.6%</b>是真正的主角。Intel +11.19%、Micron +9.87%、ASML +6.54%、AMD +5.14%、Nvidia +1.73% 收涨。Investing.com、Kiplinger、Yahoo Finance 普遍归因为：① 周末伊以并未大规模再升级，避险情绪释放；② 上周五 SOX -10.3% 已经把空头仓位塞满，技术性反弹门槛低；③ Intel 多个利好叠加（被传"测试给 Nvidia Feynman 架构代工 18A 产能" + Google 据传 2028 年要从 Intel 拿 300 万颗 AI 芯片）。</p>
+        <div class="why">🦞 <b>读给你听：</b>上周五我们说"分歧在于：是 2018 式回调还是 2000 式拐点"——周一这个 +5.6% 给出了短期答案：<b>市场认为是估值杀，不是叙事杀</b>。但要小心：本周三美国 5 月 CPI 出炉，如果通胀重新抬头，"不降息 → 高估值压力"的剧本会被重新打开。Intel +11% 是更有意思的信号——市场正在重新定价"TSMC 产能瓶颈 + 美国本土替代"这条 narrative。如果 Intel 真的从 Nvidia / Google 拿到代工大单，<b>"Intel 翻身股"会变成下半年最热门的逆向交易标的</b>。对 A 股 / 港股映射：半导体设备链周二大概率跟涨补弹，但要警惕"美股反弹一日游、亚洲补涨即冲高"的节奏。</div>
+        <div class="source">来源：<a href="https://www.kiplinger.com/investing/stocks/nasdaq-leads-as-chip-stocks-bounce-stock-market-today" target="_blank">Kiplinger</a> · <a href="https://www.investing.com/news/stock-market-news/us-stock-futures-rise-past-iranisrael-escalation-tech-rebound-eyed-4729729" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Google × Intel</span>
+        <h4>Google 据传向 Intel 18A 下 300 万颗 AI 芯片订单（2028 交付）+ Nvidia 测试 Feynman 试产——TSMC 产能瓶颈把 Intel 推上"备胎位"</h4>
+        <p>MLQ News 周一报道：Google 已经向 Intel 下了 2028 年交付的 300 万颗 AI 芯片订单，使用 Intel 18A 工艺；Nvidia 也在用 18A 跑下一代 Feynman GPU 的早期试产，但<b>暂时没下正式订单</b>。SK Hynix 已经开始测试 HBM 跟 Intel 先进封装的兼容性。Intel 股价当日 +11.19%，市值站上 5500 亿美金。</p>
+        <div class="why">🦞 <b>映射到金融：</b>这是一个被低估的"产业链多元化"信号。过去三年 TSMC 在最先进节点（N3 / N2 / N1.6）的市占率几乎是 100%，AI 芯片产业链高度集中——这种集中度本身就是定价权来源（TSMC 毛利 55%+ 来自于此）。但<b>下游客户开始"买保险"</b>：Google / Nvidia 同时在 Intel 18A 节点放产能，等于在产业链结构上多开一条腿。对 TSMC 短期没冲击（2028 交付的订单不影响近三年报价权），但<b>3-5 年后毛利顶部可能就是现在</b>，市场需要重新定价 TSMC 的"长期产能护城河估值溢价"。对 SK 海力士反而是利好——HBM 的客户多元化降低了"被 TSMC 锁定"的风险。</div>
+        <div class="source">来源：<a href="https://mlq.ai/news/google-orders-3-million-ai-chips-from-intel-for-2028-nvidia-tests-foundry-for-feynman/" target="_blank">MLQ News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>以色列没大规模报复 + Trump 强行拉开谈判窗口</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">🚨 头条 · 美伊以</span>
+        <h4>以色列周一未大规模报复 + Iran 停火 24h：Trump "电话劝阻 Netanyahu"，谈判窗口被强行拉开</h4>
+        <p>NYT / Guardian / The Athletic：周一以色列军方仅以小规模空袭回应周日伊朗导弹袭击，没有进入"大规模报复"阶段。<b>Trump 在 NBC 独家专访中表示已经亲自电话 Netanyahu，劝他不要立即报复</b>，并喊话 Tehran "回到谈判桌"。伊朗革命卫队周一发表声明："停火本来就是有条件的"——给自己留台阶。CNBC：Iran 周一暂停了对以色列的进一步打击。</p>
+        <div class="why">🦞 <b>市场含义：</b>关键不是"是不是真停火"，而是<b>Trump 这次没有"火上浇油"</b>。过去 100 天美伊冲突里，Trump 数次站在升级一侧；这次罕见地站在"克制"一侧，意味着大选周期靠近 + 油价不能再升的政治算盘已经压过"对伊鹰派 narrative"。直接影响：① 油价周一已经回吐周末涨幅，Brent 回到 $90 出头；② 黄金从避险高位小幅回落；③ 风险资产周一立刻"放假"——美股 +5.6% 半导体反弹的一大背景就是这里。但脆弱性极高：<b>任何一方再来一次小型挑衅，整个 setup 就会瞬间反转</b>。</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/world/live/2026/jun/07/israel-lebanon-southern-beirut-hezbollah-idf-ceasefire-iran-latest-news-updates" target="_blank">Guardian Live</a> · <a href="https://www.cnbc.com/2026/06/07/iran-fires-missiles-israel-ceasefire-strains.html" target="_blank">CNBC</a> · <a href="https://www.axios.com/2026/06/07/iran-israel-missiles-us-tehran-negotiations-ceasefire-risk" target="_blank">Axios</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>Strait of Hormuz 持续"准关闭"状态——Brent 维持 $90 不下，OPEC+ 7 月再加 18.8 万桶/日</h4>
+        <p>Trading Economics 周一晨报：霍尔木兹海峡持续"准关闭"，波斯湾能源出口仍受阻；同时 OPEC+ 通过 7 月增产 18.8 万桶/日的决议——这是"地缘紧张 + 内部超额"两条腿同时撑住油价的奇怪 setup。当前 Brent $90.x、WTI $87.x，金价 $4,344/oz（-0.47%），白银 $67.9。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这就是教科书级的"地缘 vs 基本面拉扯"——OPEC+ 增产理论上应该把价格往下打，但海峡通行受限把这部分供应直接锁死，所以油价反而稳在 $90 上方。<b>这种"高位横盘"对二级市场反而是最舒服的 setup</b>：通胀不再上行，但能源公司的盈利仍维持高位。受益板块：埃克森、雪佛龙、中海油、中石油 H 股；承压板块：航空、化工、低成本航线运营商。当 Brent &lt; $95 的"舒适区"维持，市场会逐渐忽略地缘风险溢价。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">关税</span>
+        <h4>白宫 6/1 修改 Section 232：建筑 + 农业设备临时降至 15%——精密制造商成本压力小幅释放</h4>
+        <p>Equipment World / Heavy Quip Magazine：Trump 政府 6/1 发布新一道 Proclamation，调整 Section 232 钢铝铜全值征税的副作用——给建筑机械 + 农业设备制造商一个临时窗口：如果资本设备里有 ≥85% 美国本土熔炼 / 浇铸 / 冶炼的钢铝成分，可以适用 10% 的减让税率；其他符合资质的设备整体降到 15%。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是 Section 232 全值征税出台后的"第一次松口"，说明国内重工业制造业的喊话起了作用（Caterpillar、Deere、AGCO 都在游说）。<b>金融视角：受益最直接的是 Caterpillar / Deere / AGCO 股价，整个农机 + 工程机械板块周一已经先吃了利好</b>。但同时也释放一个信号——Trump 政府对"高关税本土化"的执行力出现裂缝，未来类似的"行业 carveout"可能会越来越多。这种"全值征税 + 局部减让"的混乱方式，比"全面回退"更难定价，企业 capex 计划会被打回原形。</div>
+        <div class="source">来源：<a href="https://www.equipmentworld.com/regulations/article/15826986/trump-cuts-section-232-tariffs-on-construction-equipment-to-15" target="_blank">Equipment World</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>本周 CPI 是核弹 + 高盛 narrative 持续发酵</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">本周大事 · CPI</span>
+        <h4>美国 5 月 CPI 周三公布——"非农强 + 通胀回升"双杀剧本是否兑现？</h4>
+        <p>Zacks / Yahoo Finance / Investing.com 周一晨报：本周三 5 月 CPI 数据、周四 PPI 数据连续公布。市场共识：CPI 预期同比 +3.1%（4 月 +3.0%）、核心 CPI +3.4%；环比 +0.2% 左右。<b>关注重点：服务通胀（住房 + 医疗）是不是真的开始降速</b>，以及关税 pass-through 到底有没有传导到核心商品 CPI。</p>
+        <div class="why">🦞 <b>为什么是核弹：</b>上周五"非农 +172k 大超预期"已经让市场把降息时点推到 2027 年；如果<b>这周 CPI 再来一次同比抬升 0.1pp+，市场会被迫开始 price-in "Fed 要不要重新加息"</b>。Polymarket 上"年内加息"的概率已经从 5% 飙到 15%。剧本：① 鸽派情境（CPI 持平或回落 0.1pp）→ 半导体继续反弹 + 长端利率回落 + 港股 / A 股周三周四技术性 rally；② 鹰派情境（CPI 抬升 0.2pp+）→ 长端利率重新上 4.7%、SPX 再吃一根中阴线、SOX 周一的反弹彻底失效。建议周三盘前看清楚 print 再做交易。</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/economy/policy/articles/inflation-numbers-week-cpi-ppi-140100668.html" target="_blank">Yahoo Finance</a> · <a href="https://www.investing.com/analysis/economic-week-ahead-cpi-and-ppi-take-the-spotlight-as-markets-reprice-fed-outlook-200681656" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">高盛 narrative</span>
+        <h4>高盛"取消 2026 降息"被 Polymarket 验证：年内降息概率从 60% 跌到 5%——市场已基本接受"Fed 全年按兵不动"</h4>
+        <p>Reuters / Yahoo Finance：高盛把首次降息推到 2027 年 6 月（之前是 2026 年 12 月），最后两次 25bp 降息计划到 2027 年 6 月 + 12 月。Polymarket"年内降息"合约赔率从上周 60% 砍到周一收盘 5%。Trading Key 周一研报：David Mericle 团队<b>"完全放弃年内降息预期"</b>。</p>
+        <div class="why">🦞 <b>市场含义：</b>这一周下来，"年内不降息"已经从 narrative 变成 base case。对资产配置：① 长债收益率维持 4.5-4.7% 区间将是 H2 的常态；② <b>价值股 / 周期股的相对 alpha 重新出现</b>，因为高估值科技股的 DCF 现在用 4.5% 折现率会持续承压；③ 港股 / A 股反而可能受益——人民币没有降息压力 → 央行多了 PSL / OMO 的腾挪空间。需要警惕：<b>如果通胀再 reaccelerate，Fed 加息选项重新登场，所有风险资产都要重估</b>。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/goldman-sachs-pushes-fed-rate-cut-call-2027-strong-us-jobs-data-2026-06-08/" target="_blank">Reuters</a> · <a href="https://www.tradingkey.com/analysis/economic/indicators/261952287-cpi-takes-baton-nfp-inflation-fears-surge-fed-hike-option-returns-tradingkey" target="_blank">TradingKey</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股周一补跌 + 美股 V 反弹</small></h2>
+    <div class="market-grid">
+      <div class="market-card">
+        <div class="name">上证指数</div>
+        <div class="val">3,959.34</div>
+        <div class="chg red">-1.70% · 失守 4,000 点</div>
+        <div style="font-size: 11px; color: var(--text-dim); margin-top: 6px;">深成 -3.22% / 创业板 -3.69% / 科创 50 -4.30%</div>
+      </div>
+      <div class="market-card">
+        <div class="name">恒生指数</div>
+        <div class="val">24,657.06</div>
+        <div class="chg red">-1.22%</div>
+        <div style="font-size: 11px; color: var(--text-dim); margin-top: 6px;">恒科 -2.71% / 国企 -1.13%</div>
+      </div>
+      <div class="market-card">
+        <div class="name">S&amp;P 500 / SOX</div>
+        <div class="val">SOX +5.6%</div>
+        <div class="chg green">SPX +0.29% / NDX +0.86%</div>
+        <div style="font-size: 11px; color: var(--text-dim); margin-top: 6px;">Intel +11.2% / Micron +9.9%</div>
+      </div>
+    </div>
+
+    <div class="cards" style="margin-top: 14px;">
+      <div class="card">
+        <span class="tag biz">A 股</span>
+        <h4>沪指失守 4,000 点、近 4,600 股飘绿——但科技板块在午后已经出现"踩刹车"信号</h4>
+        <p>同花顺 / 北京商报：A 股周一开盘跌 2%+，全天单边震荡走弱。上证 -1.70% 报 3,959.34、深成 -3.22% 报 14,821.19、创业板 -3.69% 报 3,811.79、科创 50 -4.30%。半导体 + CPO + AI 设备链领跌；北证 50 逆势 +1.33%（小盘股资金避险）。51 只跌停。<b>盘面亮点</b>：智谱（02513.HK，今日正式纳入恒科指数 + 港股通）盘中涨超 13%，AI 大模型逻辑没崩。</p>
+        <div class="why">🦞 <b>读给你听：</b>上周五美股一夜蒸发 1 万亿美元市值，A 股周一只跌了 1.7%（沪指），其实<b>已经算是"比较克制的补跌"</b>——市场普遍预期的是 -3-4%。说明：① 国家队 / 险资在 4,000 点附近有维稳意图；② 北证 50 逆势上涨意味着真正的"避险盘"在轮动到小盘 + 政策概念；③ 智谱 AI 在恒科 + 港股通双重利好下大涨，说明<b>"国产 AI 大模型"narrative 在被独立定价</b>，没跟着美股半导体一起杀。今天（周二）大概率"低开高走"，半导体板块跟着美股反弹有戏。</div>
+        <div class="source">来源：<a href="https://m.10jqka.com.cn/20260608/c677301356.shtml" target="_blank">同花顺</a> · <a href="https://www.bbtnews.com.cn/2026/0608/595570.shtml" target="_blank">北京商报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">港股</span>
+        <h4>恒指收跌 1.22% / 恒科 -2.71%（三连阴）——但石油股逆势上涨，新经济板块开始分化</h4>
+        <p>21 世纪经济报道 / 每经：港股三大指数周一全线下跌。恒指 24,657.06 (-1.22%)、恒科 4,755.91 (-2.71%) 三连阴、国企指数 -1.13%。<b>科网股普跌</b>：百度 -7%、美团 -4%、快手 -3%、MiniMax -8%；<b>逆势上涨</b>：石油股集体 +1-3%（中海油 / 中石油 H 股）；芯片股大幅调整。<b>智谱 (02513) 唯一异类</b>：今日起正式纳入恒科指数 + 港股通，盘中一度 +13%，收涨 9.3%。</p>
+        <div class="why">🦞 <b>映射逻辑：</b>港股的跌幅其实是"美股黑色周五 + A 股科技调整"两条腿叠加，恒科 -2.71% 比恒指本身跌得更多，说明<b>科网股的资金正在快速重配</b>——百度 -7% / 美团 -4% 是典型的"高估值 AI 概念股 estimate cut"。但<b>智谱独立行情</b>+ 石油股逆势这条逻辑要重点抓：market 现在不愿意一刀切，而是在做"细分行业估值重排"。对你（lainy）的工作有用的角度：未来 H 股 AI 板块的 alpha 会越来越来自"是否进入恒指 + 港股通通道"——这是一种纯流动性 alpha，跟基本面无关。</div>
+        <div class="source">来源：<a href="https://www.nbd.com.cn/articles/2026-06-08/4420152.html" target="_blank">每经</a> · <a href="https://m.sfccn.com/2026/6-8/2MMDE0NzNfMjE1Njg2MQ.html" target="_blank">21 世纪经济报道</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美股</span>
+        <h4>三大指数收涨 + SOX +5.6% 暴力反弹——Intel / Micron / ASML 单日 +6-11%，但中概普遍跌</h4>
+        <p>同花顺 / CNBC：美股周一 SPX +0.29%、纳指 +0.86%、道指 -0.16%；<b>SOX 半导体指数 +5.6%</b> 完全收复上周五跌幅的一半。Intel +11.19%、Micron +9.87%、ASML +6.54%、AMD +5.14%、Tesla +4.59%、Nvidia +1.73%；<b>中概普跌</b>：哔哩哔哩 +2.86% 是少数上涨的，京东 -1.00%、携程 -1.01%、拼多多 -2.88%、苹果 -1.89%（被 WWDC 利空？）、Meta -1.28%、谷歌 A -1.36%。</p>
+        <div class="why">🦞 <b>读给你听三个分歧信号：</b>① 苹果跌 1.89%——市场对 WWDC 的"Gemini 集成"反应是负面的，担心 Apple "自研 AI 失败 + 沦为 Google 分发渠道"。② 谷歌跌 1.36%——本应该是 Gemini 大单受益方，但市场担心反垄断重新被点燃。③ 中概普跌——跟伊以局势降温后的资金回流美股科技股有关。<b>板块层面：本周二亚洲早盘大概率追美股半导体反弹，但要小心"反弹一日游"</b>——周三 CPI 数据出炉前的 setup 很脆弱。</div>
+        <div class="source">来源：<a href="https://m.10jqka.com.cn/20260609/c677305428.shtml" target="_blank">同花顺</a> · <a href="https://www.cnbc.com/2026/06/07/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>618 收官 + 手机 / 家电决战周</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">618 收官周</span>
+        <h4>618 进入"7 天倒计时"：iPhone 17 Pro 系列继续蝉联手机销量榜 Top 3——价格战刀刀见骨</h4>
+        <p>澎湃 / 京东 618 竞速榜：5 月 13 日 - 6 月 2 日累计榜，<b>iPhone 17 Pro / Pro Max / 17 标准版垄断前三</b>。618 第一阶段（截至 5 月 31 日）：超 4 万品牌成交额翻倍、亿元品牌数量同比 +40%、亿元体量且双位数增长的直播间同比 +50%。京东全球售平台首轮订单同比翻倍，高尔夫装备 / 电竞座椅订单增 10 倍。</p>
+        <div class="why">🦞 <b>市场含义：</b>① iPhone 蝉联 Top 3 = Apple 在中国市场的高端机型定价权回来了，但<b>这是靠 1,500 元的直接降价换的</b>，对苹果毛利是有压力的（中国区客单价直接砸下来 8-10%）。② 618 整体数据其实不算炸——"翻倍品牌 4 万家"听起来多，但要注意基数低 + 新品牌占大头；亿元品牌增长 40% 说明<b>头部品牌没怎么动，增长主要来自"小品牌冲量"</b>，这跟"消费降级 + 平价崛起"的大叙事吻合。对消费板块的二级市场含义：618 收官（6/18）后的 7-9 月可能进入"消费疲弱期"，平台股 + 名酒股 H2 估值溢价收窄风险大。</div>
+        <div class="source">来源：<a href="https://m.thepaper.cn/newsDetail_forward_33297627" target="_blank">澎湃</a> · <a href="https://www.51ldb.com/shsldb/cj/content/019e8bbde06fc001000066d533acd97d.html" target="_blank">劳动报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">跨境 + AI 消费</span>
+        <h4>618 被定调为"首个 AI 消费落地大年"——大模型 + 数字人替代低价券，跨境成国货掘金新跳板</h4>
+        <p>网易 / 经济日报观察：今年 618 平台普遍把"AI 接入"作为主推 narrative——大模型客服、数字人直播、AI 推荐算法升级。同时跨境出海订单大涨：京东全球售首轮订单翻倍，高尔夫装备 / 电竞座椅出口订单 +10 倍。海外市场首次成为 618 增量主战场。</p>
+        <div class="why">🦞 <b>看金融含义：</b>① "AI 消费落地年"听起来是包装，但<b>对平台是真利好</b>——大模型客服 / 数字人直播能把 SG&amp;A 砍 15-20%，对京东 / 阿里 / 拼多多这种重运营平台的利润率结构是个长期变量；② <b>跨境出海高速增长</b>对国货新消费品牌（泡泡玛特海外、安克创新、传音）是结构性利好——618 不再只是国内大促，开始变成"全球大促"。对 lainy 工作的角度：这是 AI 应用层第一次"商业模式落地拿出数据"的时间窗，可以重点关注 H1 财报里"AI 客服 / 数字人"对营业费用率的真实改善幅度。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/KUENHUTM05198CJN.html" target="_blank">网易</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>Zverev 首冠 + Tony Awards + NBA G3</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">网球</span>
+        <h4>Zverev 五盘逆转 Cobolli 拿下生涯首座大满贯——29 岁德国人成史上第 4 位"全级别冠军"</h4>
+        <p>法网男单决赛：2 号种子 Zverev 以 6-3 / 4-6 / 6-4 / 6-7 (5) / 6-1 击败首次闯进大满贯决赛的 Cobolli。<b>这是他第 4 次大满贯决赛、终于拿下首座金杯</b>。同时成为 ATP 历史上第 4 位拿下"挑战赛 + 250 + 500 + 1000 + 大满贯"所有级别冠军的球员。Zverev 是 1 型糖尿病患者，是 ATP 唯一被允许在比赛中实时监测血糖 + 补充胰岛素的球员。</p>
+        <div class="why">🦞 <b>有意思的地方：</b>三年来法网决赛第一次不是 Sinner / Alcaraz 的剧本——意味着<b>男子网坛"双寡头格局"出现裂缝</b>。Zverev 已经 29 岁，这次首冠之后他在 ATP 商业代言市场的报价会立刻翻倍（Adidas / Rolex 续约赔率拉满）。<b>对体育产业的小角度</b>：糖尿病 + 顶级运动员这个组合的代言溢价正在抬升，类似当年 Federer 跟 Wilson / Rolex 那种"长期 narrative 合约"模型。</div>
+        <div class="source">来源：<a href="https://www.sina.cn/news/detail/5307349934014815.html" target="_blank">新浪</a> · <a href="https://www.devdiscourse.com/article/sports-games/3931739-thrilling-weekend-in-sports-from-zverevs-french-open-triumph-to-kordas-dream-us-open-win" target="_blank">Devdiscourse</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">百老汇</span>
+        <h4>Tony Awards 2026：Schmigadoon! 最佳音乐剧 / Liberation 最佳话剧 / Death of a Salesman 一晚拿 6 座</h4>
+        <p>第 79 届 Tony Awards 周日（6/7）在 Radio City Music Hall 颁出：<b>Schmigadoon!（改编自 Apple TV+ 剧集）拿下最佳音乐剧 + 共 4 项</b>；Liberation 拿最佳话剧；Death of a Salesman（话剧复排版）拿 6 项，包括 Laurie Metcalf 凭最佳话剧女配拿下生涯第 3 座 Tony；Ragtime 拿最佳音乐剧复排。NPR 评价"今年没有大满贯，是分散给好几部戏"。</p>
+        <div class="why">🦞 <b>商业小注：</b>Schmigadoon! 是 Apple TV+ 原创剧改编上百老汇的成功案例——<b>Apple 把流媒体内容反向输出到剧院系统的商业模式终于跑通了</b>。对苹果 Services 业务的长期 narrative 是个小加分项（虽然 incremental revenue 不大，但是<b>"Apple Originals → IP → 多场景变现"的链条第一次成型</b>）。Tony Awards 收视也比去年回升，红毯名场面（Aubrey Plaza × Christopher Abbott 红毯首秀 / Sarah Paulson × Ella Beatty 牵手亮相）在 X 上又卷起一波讨论。</div>
+        <div class="source">来源：<a href="https://playbill.com/article/tony-awards-2026-winners-live-updating" target="_blank">Playbill</a> · <a href="https://www.npr.org/2026/06/07/nx-s1-5843086/tony-awards-winners-list-2026" target="_blank">NPR</a> · <a href="https://www.hollywoodreporter.com/lifestyle/arts/tonys-2026-recap-highlights-winners-1236616152/" target="_blank">Hollywood Reporter</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA Finals</span>
+        <h4>NBA 总决赛 G3 今晚 MSG 开打：Trump 据传亲赴现场——Knicks 2-0 领先 Spurs，能否在主场杀手锏继续</h4>
+        <p>今晨（6/9 HKT）NBA 总决赛 G3 在 Madison Square Garden 开打，<b>Knicks 2-0 领先 Spurs 回到主场</b>。最大场外新闻：Trump 据传亲赴 MSG 现场观赛（场馆已被部分封锁）。Knicks 主帅 Anunoby 在 G2 后说"你能感受到整支队伍都完全投入了"，本季 13 连胜。Spurs 这边 Wembanyama 在前两场被压制，需要找回 G1 / G2 完全消失的中距离投射。</p>
+        <div class="why">🦞 <b>小角度：</b>① Knicks 13 连胜 + 2-0 领先，<b>纽约商圈+ MSG 周边经济已经被点燃</b>，门票二级市场 G3 票价均价 $2,800（G1 / G2 在圣安东尼奥时约 $1,200），单场 MSG 的赞助 / 餐饮收入预估 2 倍于去年 NBA Finals 平均；② Trump 现场看球这个事，对 ESPN / NBC 周二早间收视贡献至少 +15%——会是<b>整个 6 月体育媒体最高曝光的单场赛事</b>。</div>
+        <div class="source">来源：<a href="https://www.nbcnews.com/sports/nba/live-blog/knicks-spurs-nba-finals-game-3-trump-watch-live-updates-rcna348953" target="_blank">NBC News</a> · <a href="https://www.nytimes.com/athletic/live-blogs/knicks-vs-spurs-live-updates-nba-finals-game-3-score-result/wmuNZ8WK2HM7/" target="_blank">The Athletic</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>独立科学发现</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科幻成真</span>
+        <h4>A24《Backrooms》冲上 $200M 全球票房——成 A24 史上首部 200M 量级电影，超越《Marty Supreme》</h4>
+        <p>Mint 周一报道：导演 Kane Parsons 的恐怖片《Backrooms》（改编自 YouTube 同名网络都市传说短片）周末票房冲上 2 亿美元全球，<b>成为 A24 历史上第一部破 200M 的电影</b>，超越《Marty Supreme》成为新标杆。这部电影改编自 Parsons 16 岁时在 YouTube 上传的短片，从短视频 IP 到院线大片的链条用了不到 4 年。</p>
+        <div class="why">🦞 <b>商业小注：</b>这是<b>"YouTube IP → A24 院线"商业链条首次跑通破 200M</b>。对内容产业的含义：① A24 不再只是"小众文艺片厂牌"，已经具备"恐怖 / 类型片 200M 量级"的发行能力——估值会被市场重新打高一档；② 短视频 IP 价值被验证可达 200M 票房后，Netflix / Disney / 华纳兄弟肯定会跟进收购 YouTube 个体创作者旗下 IP；③ 16 岁创作者从短视频起家走到 200M 电影，这是<b>下一代内容产业人才进入主流商业流程的标志性案例</b>。</div>
+        <div class="source">来源：<a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-june-9-2026-live-updates-11780947504209.html" target="_blank">Mint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻</div>
+    <div class="footer-note">2026-06-09 · 给 lainy 的每日简报 · 不构成投资建议</div>
+  </footer>
+</div>
+</body>
+</html>

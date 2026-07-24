@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-02</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    border-left: 3px solid var(--macro);
+  }
+  .market-card h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-card .idx { font-size: 13px; color: var(--text-dim); margin: 2px 0; }
+  .market-card .idx b { color: var(--text); }
+  .market-card .up { color: #4ade80; }
+  .market-card .down { color: #f87171; }
+  .market-card p { margin: 8px 0 0; font-size: 13px; color: var(--text-dim); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 2 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>Meta 宣布进军云计算、出售富余 AI 算力，"卖铲人变卖铲"逻辑冲击芯片股——美光、闪迪跌超 10%；高通同期推出放弃 HBM 的 AI 加速器 Dragonfly，走完全不同的技术路线。</li>
+      <li><b>宏观：</b>美联储新主席沃什辛特拉首秀——拒绝前瞻指引、称通胀仍太高，市场押注 7 月加息概率 36%；6 月小非农仅 +9.8 万远逊预期。</li>
+      <li><b>体育：</b>NBA 史诗级交易——凯尔特人把 2024 总决赛 MVP 杰伦·布朗送去 76 人换保罗·乔治；温网德约 3-0 速胜西西帕斯，中国金花全军覆没。</li>
+    </ul>
+  </div>
+
+  <!-- AI & 芯片 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <h4>Meta 进军云计算出售富余算力：从"最大买家"变"竞争对手"，芯片股遭恐慌抛售</h4>
+        <span class="tag hbm">AI 硬件</span>
+        <p>彭博报道称 Meta 正在制定云业务计划，向外部客户出售闲置 AI 算力，直接对标 AWS / Azure / Google Cloud。消息一出市场哗然：如果最大 GPU 买家之一开始转卖算力，是不是意味着 AI 硬件需求没想象中那么紧？美光（MU）、闪迪（SNDK）跌超 10%，英伟达、英特尔同步承压。Meta 逆势涨 8.8%。</p>
+        <div class="why">🦞 为什么值得看：这可能是 AI 硬件叙事的分水岭事件。此前逻辑是"大厂无限买卡→芯片股闭眼涨"，现在 Meta 自己说"我买多了，拿来卖"。短期利空存储和 GPU 链，但实质影响有限——Meta 自己的大模型做不过 Frontier Lab，推荐系统用不了这么多算力，卖闲置 GPU 是商业效率回归而非需求崩塌。市场有 PTSD 嫌疑。</div>
+        <div class="source">来源：<a href="https://news.qq.com/rain/a/20260701A0A1VM00">腾讯新闻</a> · <a href="https://www.moomoo.com/hans/stock/META-US">Moomoo</a></div>
+      </div>
+      <div class="card">
+        <h4>高通亮剑：Dragonfly AI 加速器放弃 HBM，用 LPDDR 堆叠"消灭 HBM 税"</h4>
+        <span class="tag hbm">AI 芯片</span>
+        <p>日经新闻披露高通在纽约展示了一套全新 AI 数据中心芯片方案——不用 HBM（高带宽内存），而是把低功耗 LPDDR5x 直接堆叠在逻辑芯片上方，单机架塞进 43TB 内存，未来代际目标突破 7PB/s 带宽。高通将其命名为"High Bandwidth Compute"（HBC），直言要"消除 HBM 税"。</p>
+        <div class="why">🦞 为什么值得看：这是一条截然不同的技术路线。英伟达 / AMD / 华为都押注 HBM 堆叠，SK 海力士和三星吃满了红利。高通的思路是——HBM 太贵太紧缺，不如用成熟便宜的 LPDDR 做平替，牺牲一些带宽换成本优势。如果推理场景对带宽不像训练那么苛刻，这条路可能跑通。对 lainy 关注的 HBM 产业链意味着：垄断格局可能被打破，但短期 HBM 仍是刚需。</div>
+        <div class="source">来源：<a href="https://asia.nikkei.com/business/technology/artificial-intelligence/qualcomm-challenges-nvidia-s-ai-grip-with-chip-that-ditches-hbm">Nikkei Asia</a> · <a href="https://www.techradar.com/pro/qualcomm-high-bandwidth-compute-aims-to-compete-with-high-bandwidth-flash-and-memory-by-stacking-lpddr-just-above-the-cpu-to-eliminate-hbm-tax">TechRadar</a></div>
+      </div>
+      <div class="card">
+        <h4>Anthropic 估值飙至 $9650 亿，ARR 从 $90 亿→$470 亿只花半年，已秘密提交 IPO</h4>
+        <span class="tag hbm">AI 模型</span>
+        <p>Forbes 报道 Anthropic 2025 全年收入约 $90 亿，到 2026 年 5 月年化收入已逼近 $470 亿，7 月目标突破 $500 亿。公司 5 月完成 $650 亿融资（估值 $9650 亿），已秘密提交 IPO 申请。80% 收入来自企业客户，主业是 API + Claude 企业订阅，不是 to-C 聊天。</p>
+        <div class="why">🦞 为什么值得看：半年五倍的增长速度在企业软件史上几乎没有先例。对比 OpenAI 的收入路径，Anthropic 的差异在于主押 B2B API 而非消费者应用——这意味着它的收入更"粘"、毛利更可控。估值 $9650 亿接近万亿门槛，IPO 一旦落地将是近年来最大科技 IPO。对市场含义：AI 模型层的商业化已被验证，但估值隐含的增长预期极高。</div>
+        <div class="source">来源：<a href="https://www.forbes.com/sites/jonmarkman/2026/07/01/everything-anthropic-built-before-its-ipo-where-the-company-stands/">Forbes</a> · <a href="https://danelfin.com/ipo/anthropic">Danelfin</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 国际局势 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势</h2>
+    <div class="cards">
+      <div class="card">
+        <h4>IEA：美国化石燃料发电投资今年首超中国——AI 算力用电成新驱动</h4>
+        <span class="tag geo">能源</span>
+        <p>国际能源署（IEA）最新预测显示，美国 2026 年燃煤与燃气发电投资将达 $500 亿，比中国高约 $30 亿——这是数十年来首次反超。核心驱动是 AI 数据中心扩张带来的电力需求暴涨。但分析师也警告：85GW 在建/规划装机若全部落地，总投资超 $8500 亿，其中约 $5000 亿属于"需求未经验证的前置资本"。</p>
+        <div class="why">🦞 市场含义：AI 产业链的投资正在从芯片向电力基础设施蔓延。对 lainy 来说，这条线的投资逻辑是——买 GPU 的钱最终会流向发电厂和电网。但如果 AI 需求不及预期，天然气发电可能变成"五百亿美元陷阱"。关注美国电力板块（VST、CEG、NRG）和天然气上游。</div>
+        <div class="source">来源：<a href="https://www.epochtimes.com/gb/26/7/1/n14800975.htm">大纪元</a> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_FWN4320Z6:0-iea-forecasts-us-fossil-fuel-power-spending-to-beat-china-for-the-first-time-in-decades-ft-reports/">TradingView/Reuters</a></div>
+      </div>
+      <div class="card">
+        <h4>特朗普 2025 财务披露：收入超 $22 亿，加密货币贡献 $14.26 亿</h4>
+        <span class="tag geo">美国政治</span>
+        <p>美国政府伦理办公室公布的 927 页财务报告显示，特朗普 2025 年个人收入至少 $22 亿，其中加密货币相关收入约 $14.26 亿。福布斯估值净资产 $65 亿，彭博估值约 $76 亿。加密货币收入主要来自 World Liberty Financial 和 Trump Media &amp; Technology Group 的代币业务。</p>
+        <div class="why">🦞 为什么值得看：总统在任期内通过加密货币赚取超 $14 亿，这在美国历史上没有先例。利益冲突争议会持续影响加密监管政策走向——特朗普政府对加密行业整体友好，但如果政策红利已经体现在总统个人财报里，市场会担心"利好已定价"。</div>
+        <div class="source">来源：<a href="https://www.bbc.com/news/articles/cy9rg133lrjo">BBC</a> · <a href="https://www.nytimes.com/2026/06/30/us/politics/trump-financial-disclosure-crypto-windfall.html">NYT</a></div>
+      </div>
+      <div class="card">
+        <h4>美对伊朗 60 天石油制裁豁免开始执行，中国外交部回应</h4>
+        <span class="tag geo">美伊</span>
+        <p>外交部记者会上，伊朗记者提问中国如何看待美国解除对伊朗制裁、60 天石油制裁豁免期已开始执行。中方回应表示正在关注形势变化，企业和政府正在适应。此前美伊达成临时停火，多哈谈判重启中。</p>
+        <div class="why">🦞 市场含义：如果伊朗石油恢复出口，全球原油供给增加→油价承压。这与今天国内油价"三连降"和大宗商品走势一致。对石化产业链偏空，但对炼厂和下游化工是成本利好。</div>
+        <div class="source">来源：<a href="https://jp.china-embassy.gov.cn/lcbt/wjbfyr/202607/t20260701_11955763.htm">中国驻日使馆</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场</h2>
+    <div class="cards">
+      <div class="card">
+        <h4>美联储新主席沃什辛特拉首秀：拒绝前瞻指引、通胀仍太高，7 月加息概率 36%</h4>
+        <span class="tag macro">美联储</span>
+        <p>7 月 1 日，欧洲央行葡萄牙辛特拉年度央行论坛上，新任美联储主席凯文·沃什完成国际场合首秀。核心要点：① 不再提供利率路径前瞻指引，每次会议基于数据讨论；② 当前通胀仍处过高区间；③ AI 正重塑经济，美国不惧怕生产力驱动的增长；④ 被问 7 月是否加息时笑而不答。利率互换市场定价 7 月加息 25bp 概率约 36%，LSEG 数据显示市场仍预计年内至少加一次。白宫经济顾问哈塞特称"加息将是宏观层面的错误"。</p>
+        <div class="why">🦞 市场含义：沃什比市场预期的更鹰。关掉前瞻指引意味着市场不能再靠"美联储喂饭"来定价——波动率会上升。6 月点阵图 18 位委员中 9 位支持今年至少加一次。叠加 ADP 不及预期，市场处于"数据差但央行偏鹰"的矛盾中。下周非农数据将决定 7 月是否真的加息。</div>
+        <div class="source">来源：<a href="https://www.stcn.com/article/detail/3993386.html">证券时报</a> · <a href="https://finance.sina.com.cn/money/bond/2026-07-01/doc-inifihns6228910.shtml">新浪财经</a></div>
+      </div>
+      <div class="card">
+        <h4>6 月小非农 ADP 仅 +9.8 万，远逊预期；ISM 制造业 PMI 回落至 53.3</h4>
+        <span class="tag macro">经济数据</span>
+        <p>ADP 数据显示美国 6 月私营部门就业新增 9.8 万人，低于预期的 11-11.9 万，前值 12.2 万。近半增长（4.8 万）来自教育医疗服务业，制造业萎缩。同期 ISM 制造业 PMI 从 54 降至 53.3，也低于预期。美元指数触及 101.59。</p>
+        <div class="why">🦞 为什么值得看：就业市场正在降温，但还没到衰退级别。对美联储来说，"软着陆但通胀仍高"是最尴尬的组合——不支持降息，但加息又怕压垮就业。周五非农如果也弱，7 月加息概率会骤降，对风险资产是利好。</div>
+        <div class="source">来源：<a href="https://www.rfi.fr/cn/财经快讯/20260701-美国6月小非农新增就业9-8万人-低于预期">RFI</a> · <a href="https://www.vtmarkets.com/cn-asia/live-updates/">VT Markets</a></div>
+      </div>
+      <div class="card">
+        <h4>国内油价 7/3 迎"三连降"：95 号汽油重返 7 元时代</h4>
+        <span class="tag macro">大宗商品</span>
+        <p>7 月 3 日 24 时国内第 13 轮成品油调价窗口将开启。当前测算汽油下调 820 元/吨，折合 92 号降 0.66 元/升、95 号降 0.70 元/升。叠加 6 月前两轮累计下调 0.84-0.89 元/升，95 号汽油有望全面回到 7 元区间。国际油价 Brent 停留在 $73 附近。</p>
+        <div class="why">🦞 市场含义：油价三连降是通胀下行的直接利好——降低运输成本→CPI 压力减轻→消费购买力间接恢复。对物流、航空、化工等用油大户是成本端改善。但对三桶油上游收入是利空。全球原油供应过剩格局短期难逆转。</div>
+        <div class="source">来源：<a href="http://www.eeo.com.cn/2026/0701/938190.shtml">经济观察网</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-07-01/doc-inifhvwy3105507.shtml">新浪科技</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 股市行情 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>7 月 1 日收盘</small></h2>
+    <div class="market-grid">
+      <div class="market-card" style="border-left-color: #f87171;">
+        <h4>🇨🇳 A 股 — 沪指 4,112（+0.44%），创业板跌 1.89%，风格剧烈切换</h4>
+        <div class="idx">沪指 <b>4,112.45</b> <span class="up">+0.44%</span> · 深成指 <b>16,119</b> <span class="down">-0.53%</span> · 创业板 <b>4,260</b> <span class="down">-1.89%</span></div>
+        <div class="idx">成交额 <b>3.66 万亿</b>（放量 +3,890 亿）· 超 4,300 只个股上涨 · 200+ 涨停</div>
+        <p>7 月开门红但风格分裂严重：大金融（券商、保险）集体爆发，多只券商涨停；半导体板块净流出 242 亿，前期爆炒的高位科技股集体重挫，"易中天"（中际旭创/新易盛/天孚通信）再遭抛售。资金从高估值成长→低估值价值轮动信号明确。光伏巨头盘中逼近跌停。</p>
+      </div>
+      <div class="market-card" style="border-left-color: #7dd3fc;">
+        <h4>🇭🇰 港股 — 恒指 -0.63%，恒科逆势 +1.8%，半导体/PCB 强势</h4>
+        <div class="idx">恒指 <span class="down">-0.63%</span> · 国企指数 <span class="down">-0.62%</span> · 恒生科技 <span class="up">+1.8%</span></div>
+        <div class="idx">2026 上半年：恒指累跌 <b>-10.73%</b> · 恒科累跌 <b>-18.92%</b></div>
+        <p>半导体、PCB、光通讯概念股强势领涨；黄金、石油、煤炭股低迷。港股上半年表现全球垫底，但恒科昨日逆势走强说明南向资金仍在逢低吸纳科技。IPO 募资创新高但外围波动拖累整体走势。</p>
+      </div>
+      <div class="market-card" style="border-left-color: #a5f3a5;">
+        <h4>🇺🇸 美股 — 三大指数收跌，Meta 逆势飙 8.8%，芯片股遭血洗</h4>
+        <div class="idx">道指 <b>52,305</b> <span class="down">-0.03%</span> · 标普 <b>7,483</b> <span class="down">-0.22%</span> · 纳指 <b>26,040</b> <span class="down">-0.66%</span></div>
+        <div class="idx">上半年：道指 +8.85%（5 年最佳）· 标普 +9.55% · 纳指 +12.79%</div>
+        <p>沃什鹰派发言 + ADP 不及预期 + Meta 云业务消息三重夹击。Meta 逆势飙 8.8%（从最大 GPU 买家变卖家），美光/闪迪跌超 10% 拖拽费城半导体。前一天（6/30）道指刚刷新历史新高 52,319，纳指涨 1.52%——半年收官强劲但 7 月开局承压。市场聚焦周五非农。</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top: 14px;">
+      <h4>🦞 龙虾老师的跨市场解读</h4>
+      <p>A 股和美股昨天在演绎同一个主题：<b>风格切换</b>。A 股是金融→科技的跷跷板，美股是 Meta→芯片链的跷跷板。共同信号：市场开始质疑"AI 硬件无限需求"的叙事。如果 Meta 转卖算力引发连锁反应，HBM 存储链的估值溢价会被压缩。但 A 股大金融爆发不等于科技行情结束——历史上 7 月风格切换往往持续 1-2 周后回归。关注周五非农数据，若弱于预期→加息预期降温→科技股反弹窗口。</p>
+    </div>
+  </section>
+
+  <!-- 消费 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费</h2>
+    <div class="cards">
+      <div class="card">
+        <h4>四川长虹 AI 家电全场景覆盖：AI TV 意图理解准确率超行业 18 个百分点</h4>
+        <span class="tag biz">家电</span>
+        <p>长虹股东大会披露：公司 AI TV 多轮交互意图理解准确率较行业均值高 18 个百分点，已将大模型赋能冰箱、空调全品类。2025 年前五月欧洲空调销量创新高。长虹构建了"AI 家电差异化竞争壁垒"。</p>
+        <div class="why">🦞 市场含义：家电行业正在复制手机的 AI 故事——从"卖硬件"变"卖 AI 体验"。长虹的看点不在国内（家电以旧换新补贴效应退坡，5 月零售额同比 -15.6%），而在欧洲增量。如果 AI 家电能撑起 ASP（平均售价），毛利率有改善空间。但传统家电厂商做 AI 生态的护城河存疑。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_5952915720_162d2490806704am5c.html">新浪新闻</a></div>
+      </div>
+      <div class="card">
+        <h4>618 消费洞察报告：AI 尚未"接管"618，但正在改写零售逻辑</h4>
+        <span class="tag biz">零售</span>
+        <p>36 氪发布的《618 消费洞察报告（2026）》显示，AI 在今年 618 中尚未成为"主导力量"，但已深度嵌入选品推荐、动态定价、客服、供应链预测等环节。AI 没有创造消费奇迹，但让零售效率的颗粒度更细了。</p>
+        <div class="why">🦞 为什么值得看：对消费股投资者来说，"AI + 零售"的投资机会不在前端（消费者感知不强），而在后端——谁能用 AI 把库存周转、选品命中率和营销 ROI 做上去，谁的利润率就能跑赢。关注电商平台和代运营赛道的 AI 落地进度。</div>
+        <div class="source">来源：<a href="https://36kr.com/p/3125013099757061">36氪</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 娱乐花边 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <h4>🏀 NBA 地震级交易：凯尔特人送杰伦·布朗去 76 人换保罗·乔治 + 4 个签</h4>
+        <span class="tag fun">体育</span>
+        <p>ESPN 报道，凯尔特人将 2024 年总决赛 MVP 杰伦·布朗交易至 76 人，换来 9 届全明星保罗·乔治 + 2 个首轮签（2028 快船签、2031 自有签）+ 2 个次轮签。此前凯尔特人曾试图用布朗换字母哥未果。东部格局彻底重塑——76 人组成乔治+恩比德+马克西三巨头，凯尔特人释放薪资空间进入重建模式。</p>
+        <div class="why">🦞 为什么值得看：这是近年来最让人意外的交易之一。布朗 28 岁正值巅峰，是凯尔特人 2024 夺冠的核心功臣。把他送去同区死敌 76 人，波士顿球迷心态大概已经崩了。但凯尔特人显然在为未来薪资弹性铺路——新版 CBA 协议下，两份顶薪已经很难维持争冠阵容。</div>
+        <div class="source">来源：<a href="https://www.espn.com/nba/story/_/id/49241843/sources-celtics-sending-brown-76ers-george-picks">ESPN</a> · <a href="https://www.nytimes.com/athletic/7393311/2026/07/01/jaylen-brown-traded-philadelphia-76ers-celtics/">The Athletic</a></div>
+      </div>
+      <div class="card">
+        <h4>🎾 温网第三日：德约 3-0 速胜西西帕斯，萨巴伦卡遭逆转，中国金花全军覆没</h4>
+        <span class="tag fun">体育</span>
+        <p>男单第二轮，德约科维奇直落三盘击败西西帕斯晋级第三轮。女单方面大冷门不断：5 号种子萨巴伦卡遭逆转出局，新科法网冠军安德列娃被克雷吉茨科娃三盘逆转、大满贯 8 连胜终结。中国金花张帅、王欣瑜均止步第二轮——温网仅第 3 天中国女单全军覆没。</p>
+        <div class="why">🦞 放松一下：德约看起来状态火热，草地天王不是白叫的。中国金花虽然全出局，但张帅从世界排名 700 开外杀回 51 位的故事已经是今年温网最励志的叙事了。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0QB0FLT0549BAP0.html">网易</a> · <a href="https://www.163.com/dy/article/L0Q5AG2205497GLB.html">网易</a></div>
+      </div>
+      <div class="card">
+        <h4>成毅一人包揽微博影视综月榜 13 部剧——选片眼光与长尾效应的胜利</h4>
+        <span class="tag fun">娱乐</span>
+        <p>7 月 1 日，微博影视综超话 6 月月度 TOP100 榜单出炉，成毅共有 13 部剧集跻身榜单，多部稳居上游。已播经典与未播新作均保持高社交讨论热度——这种"长尾现象"在业内少见，源于角色塑造的层次感和选片类型的广度。</p>
+        <div class="why">🦞 纯花边：一个演员同时有 13 部剧在榜，说明"内容库存"策略在娱乐圈也开始流行了。跟半导体行业的"产能储备"异曲同工（不是。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0PC4FTA05568W0A.html">网易</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 科技花边 -->
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边</h2>
+    <div class="cards">
+      <div class="card">
+        <h4>阿维塔斩获 L3 自动驾驶测试牌照：合法"脱手脱脚"再进一步</h4>
+        <span class="tag biz">自动驾驶</span>
+        <p>7 月 1 日，阿维塔在重庆正式宣布获得 L3 级自动驾驶道路测试许可，多场景实测全面铺开。背景是 6 月 30 日公安部行业标准《智能网联汽车道路测试与示范应用安全通行规范》（GA/T 2388-2026）正式生效——国内首个面向 L3+ 的全国性道路通行安全规范。阿维塔 2025 年销量超 12 万辆，连续 10 个月破万。</p>
+        <div class="why">🦞 市场含义：L3 是自动驾驶从"辅助"到"有条件自动"的质变节点——驾驶员可以合法脱手脱脚。标准先行→牌照落地→商业化提速，这条政策路径很清晰。关注 L3 产业链：域控制器（德赛西威）、激光雷达（速腾聚变）、线控底盘（伯特利）。但量产落地仍需 1-2 年，短期更多是情绪催化。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/tech/discovery/2026-07-02/doc-inifhezh3126658.shtml">新浪科技</a> · <a href="https://www.163.com/dy/article/L0OSIT4205198CJN.html">网易</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>🦞 龙虾老师 · 每日不错过新闻 · 2026-07-02</p>
+    <p class="footer-note">数据截至 HKT 2026-07-02 09:48 · 仅供参考，不构成投资建议</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-27</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .market-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .market-card h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-card .index-line { font-size: 13px; color: var(--text-dim); margin: 2px 0; }
+  .market-card .red { color: #ff6b6b; }
+  .market-card .green { color: #a5f3a5; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 27 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 大事件：</b>OpenAI 发布 GPT-5.6 系列（Sol/Terra/Luna），但应美国政府要求限制开放；DeepSeek 宣布全员扩招一倍；韩国 Kospi 因 AI 杠杆爆仓触发熔断。</li>
+      <li><b>市场黑色星期五：</b>A 股创业板暴跌 4.07%，港股恒指本周累跌 5.2% 创一年最差周；美股纳指五连跌但道指创新高——AI 和非 AI 板块彻底分裂。</li>
+      <li><b>消费/科技：</b>苹果涨价风暴蔓延，iPhone 18 Pro 或破万元；法拉利首款纯电 Luce 国内 398.8 万起售；vivo X Fold6 发布定价 7999 元。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">OpenAI</span>
+        <h4>OpenAI 发布 GPT-5.6 系列：Sol / Terra / Luna 三档，但应美国政府要求限制定向开放</h4>
+        <p>6 月 26 日 OpenAI 发布下一代 GPT-5.6 系列——<b>Sol</b>（旗舰前沿模型）、<b>Terra</b>（均衡日常模型）、<b>Luna</b>（高速低价模型）。编程跑分超 Claude Mythos 5。但应特朗普政府要求，现阶段仅向"可信合作伙伴"提供预览权限，全面开放"将在未来数周内"推进。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 模型发布史上第一次"政府要求限制开放"——和 Anthropic Mythos 的"太强不敢放"不同，GPT-5.6 的限制更像国家安全审查。对市场来说：<b>AI 模型竞争正从"谁更强"变成"谁能放"——监管成为核心竞争力变量</b>。OpenAI 推迟 IPO 到明年的消息也同步爆出，说明管理层选择先把模型做好再上市。</div>
+        <div class="source">来源：<a href="https://openai.com/index/previewing-gpt-5-6-sol/" target="_blank">OpenAI 官方</a> · <a href="https://www.businessinsider.com/openai-gpt-5-6-limited-preview-us-government-ai-security-2026-6" target="_blank">Business Insider</a> · <a href="https://deploymentsafety.openai.com/gpt-5-6-preview" target="_blank">System Card</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">DeepSeek</span>
+        <h4>DeepSeek 深夜宣布全员扩招一倍：7 大类 33 个岗位全开，不限专业的"AI 跨界人才"引人注目</h4>
+        <p>6 月 25 日晚，DeepSeek 在社交平台发布成立以来最大规模招聘——所有部门规模至少扩大一倍，覆盖算法、AI 核心系统研发、运维、产品等 7 大类 33 个岗位，工作地点北京和杭州，所有岗位均接受实习。特别岗位"AI 跨界技术人才"不设专业背景限制。</p>
+        <div class="why">🦞 <b>市场含义：</b>DeepSeek 此前以"小团队高密度"著称（不到 200 人），现在翻倍意味着：<b>从研究阶段进入工程化/产品化阶段</b>。对中国 AI 行业来说，头部公司开始抢人=人才溢价加速。关注点：DeepSeek 如果走向 AGI 路线下的产品矩阵（不只是 API），估值逻辑会变——可能成为国内 AI 估值的下一个锚。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0BROA0L0519DFFO.html" target="_blank">网易 / 北京商报</a> · <a href="https://www.eet-china.com/news/202606262416.html" target="_blank">EET China</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">CoWoS 瓶颈</span>
+        <h4>NYT 深度：CoWoS 先进封装成为 AI 芯片"咽喉"——Nvidia Rubin 单封装 3360 亿晶体管</h4>
+        <p>纽约时报 6/26 长篇报道：TSMC 的 CoWoS（Chip-on-Wafer-on-Substrate）先进封装已成为 AI 产业链最关键的瓶颈。Nvidia Rubin 处理器使用 CoWoS 将两颗大芯片 + 8 堆 HBM（每堆 12 颗芯片）封装在一起，单封装 <b>3360 亿晶体管</b>。TSMC CEO 确认 CoWoS 产能"2026 年已全部售"，正从月产能 3.5-4 万片扩到 12-14 万片。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这验证了一个核心判断：<b>AI 芯片的瓶颈不在制程（2nm/3nm），在封装</b>。CoWoS = TSMC 的定价权护城河——Nvidia、AMD、Google TPU、甚至 Broadcom 的 ASIC 都要排队。UBS 预测 Nvidia 2026 年需订购 67.8 万片 CoWoS 晶圆（同比 +40%）。映射到投资：<b>CoWoS 产能 = AI 军备竞赛的"石油"</b>，TSMC 毛利率维持 55%+ 的底层支撑就在这里。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/06/26/technology/ai-advanced-chip-packaging-tsmc.html" target="_blank">New York Times</a> · <a href="https://www.globalmarketpulse.net/article/nvidias-2026-ai-bet-or-bubble-burst-the-300-trillion-question" target="_blank">Global Market Pulse</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星</span>
+        <h4>三星拟在韩国投资 1000 万亿韩元（约 $6480 亿），其中包括 300 万亿韩元新建芯片工厂</h4>
+        <p>Reuters 报道：三星电子计划未来十年在韩国投资 1000 万亿韩元（约 6480 亿美元），覆盖 AI 数据中心、电池、显示面板，以及 300 万亿韩元的芯片工厂建设。这是三星历史上最大规模的投资计划，预计下周正式宣布。</p>
+        <div class="why">🦞 <b>商业含义：</b>三星的逻辑很直接——HBM 和先进制程双重落后于 TSMC/SK Hynix，必须用"规模碾压"追。1000 万亿韩元 = 三星市值的一半以上。对供应链影响：<b>韩国本土半导体设备、材料公司</b>将率先受益；对中国存储芯片厂商来说，三星如果产能释放，2028 年后的 DRAM/NAND 供需格局可能再次逆转。</div>
+        <div class="source">来源：<a href="https://www.investing.com/news/stock-market-news/samsung-to-invest-1000-trillion-won-in-south-korea-media-report-says-4761890" target="_blank">Investing.com / Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">苹果存储链</span>
+        <h4>苹果涨价风暴：Mac/iPad 全线上调约 20%，iPhone 18 Pro 系列预计破万元——存储芯片是推手</h4>
+        <p>苹果 6/25 正式上调 Mac、iPad、Vision Pro、HomePod 等 14 款产品价格，涨幅约 20%。苹果官方声明："AI 数据中心扩张导致内存和存储芯片需求超常规增长，成本前所未有地上涨。"高盛测算 2026 年 DRAM 供需缺口 4.9%、NAND 4.2%、HBM 5.1%——三项均创 15 年最严重。iPhone 暂未涨价，但郭明錤和业内普遍预计 iPhone 18 Pro 系列将破万元。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 <b>AI capex → 消费电子通胀</b> 的第一条完整传导链。存储芯片厂商（Micron、SK Hynix、三星）是受益方，但苹果的定价权也在被考验——如果 iPhone 18 真破万元，中国市场需求弹性会是关键变量。36氪测算：存储新产能最快 2027H2 释放，这意味着<b>涨价不是一次性的，至少持续到明年</b>。</div>
+        <div class="source">来源：<a href="https://www.36kr.com/p/3869373619059584" target="_blank">36氪</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-06-26/doc-inieszry5230982.shtml" target="_blank">新浪科技</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-06-26/doc-inietfxw5267597.shtml" target="_blank">新浪·iPhone 18 Pro</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 霍尔木兹</span>
+        <h4>伊朗袭击新加坡籍货轮"Ever Lovely"，美伊停火协议受到实质考验</h4>
+        <p>伊朗伊斯兰革命卫队在霍尔木兹海峡袭击新加坡籍货轮"Ever Lovely"，驾驶台受损但无人员伤亡。伊朗波斯湾海峡管理局同时宣布：未加入 PGSA 的霍尔木兹海峡航线无安全通行保障，保险保障失效。联合国航运机构暂停受困船只撤离。但美国能源部长赖特预计伊朗每日原油出口最高可达 200 万桶，波斯湾原油出口已反弹至战前 75%。</p>
+        <div class="why">🦞 <b>市场含义：</b>停火协议"纸面上还在，实操上被打折"——这种半灰不白的状态最磨人。Brent 在 $75-76 附近震荡，没冲回 $100 说明市场在定价"伊朗不会真的断供"，但保险失效→运费上涨→亚欧航线成本抬升的传导已经启动。对港股/A 股的间接影响：<b>油价每涨 $5，中国 CPI 约抬升 0.3 个百分点</b>。</div>
+        <div class="source">来源：<a href="https://www.sohu.com/a/1041750352_122014422" target="_blank">搜狐 / 新浪财经摘要</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">亚洲 AI 杠杆崩盘</span>
+        <h4>韩国 Kospi 触发熔断（-9%），台湾 Taiex -3.6%，日本软银 -12%——AI 杠杆交易开始去杠杆</h4>
+        <p>6/26 亚洲交易时段，韩国 Kospi 暴跌 9% 触发本周第二次熔断；台湾 Taiex -3.6%；软银集团暴跌超 12%（OpenAI 推迟 IPO 拖累）。CNN 分析：Kospi 半数市值由 SK Hynix + Samsung 构成，杠杆资金（融资融券）在 AI 芯片上累积了创纪录的多头仓位，现在开始强制平仓。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 <b>AI 交易从"概念"转向"执行"的第一个系统性压力测试</b>。SCMP 引用 Gary Dugan（Global CIO Office）："投资者仍想要 AI 敞口，但不再愿意为长期增长、利润率扩张和市场领导地位同时付一个估值倍数。" 杠杆去化 → 波动率上升 → 被动资金流出 → 估值收敛。如果 Kospi/Taiex 继续跌，<b>港股科技股的估值天花板也会被压低</b>。</div>
+        <div class="source">来源：<a href="https://www.cnn.com/2026/06/26/investing/tech-stocks-nasdaq-kospi" target="_blank">CNN Business</a> · <a href="https://www.tradingkey.com/analysis/stocks/more/261993168-stock-kospi-nekki-kioxia-samsung-skhynix-ai-openai-softbank-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.scmp.com/business/china-business/article/3358428/" target="_blank">SCMP</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>PCE · 黄金 · 央行</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">PCE &amp; 美联储</span>
+        <h4>5 月核心 PCE 升至 3.4%（2023 年 10 月以来最高），广义 PCE 同比 4.1% 三年首破 4%</h4>
+        <p>核心数据：核心 PCE 从 4 月 3.3% 升至 3.4%；广义 PCE 同比 4.1%；个人消费支出环比 +0.7%，收入同步 +0.7%，储蓄率维持 3%；一季度 GDP 修正后 2.1%。能源是直接导火索（4 月汽油环比 +12.3%），但核心通胀同步上行——<b>通胀粘性已不局限于能源品类</b>。</p>
+        <div class="why">🦞 <b>读给你听：</b>这份 PCE 数据虽高但符合预期，市场反而松了一口气——美元指数高位回吐，黄金重回 $4000 上方。但别高兴太早：<b>核心 PCE 3.4% 意味着美联储今年降息窗口基本关闭</b>。下一份 PCE 在 7/30，三个观察变量：汽油能否降温、核心 PCE 是否继续上行、消费韧性是否维持。在此之前，久期资产和高借贷依赖型商业模式继续承压。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-26/doc-inietfxw5206212.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金重回 $4030 上方：PCE 符合预期缓解恐慌，美元走弱提供支撑</h4>
+        <p>现货黄金 6/26 突破 $4030/盎司（+1.03%），纽约期金突破 $4050。此前 6/24 黄金一度跌破 $4000 创半年新低，国内银行集体关闭个人贵金属代理交易。PCE 数据后美元指数高位回落，黄金获得喘息空间。</p>
+        <div class="why">🦞 <b>商业含义：</b>黄金这轮从 $4000 下方反弹说明<b>"通胀粘性 + 地缘紧张"组合下，黄金的避险属性仍在</b>。但银行关闭个人贵金属交易=去杠杆，意味着散户追高的杠杆盘被清理。中期看，如果核心 PCE 不回落，实际利率维持高位，黄金上行空间有限——<b>$4000-4100 可能是新的震荡中枢</b>。</div>
+        <div class="source">来源：<a href="https://www.amillex.com/2026/06/26/amillex%E5%AE%89%E8%BF%88%E6%AF%8F%E6%97%A5%E6%B1%87%E8%AF%84%EF%BD%9C%E7%BE%8Epce%E6%95%B0%E6%8D%AE%E7%BC%93%E8%A7%A3%E7%B4%A7%E7%BC%A9%E5%BF%A7%E8%99%91%EF%BC%8C%E8%88%AA%E8%BF%90%E5%B1%80%E5%8A%BF/" target="_blank">Amillex</a> · <a href="https://finance.sina.com.cn/stock/usstock/summary/2026-06-26/doc-inietfxw5277132.shtml" target="_blank">新浪财经</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股（6/26 收盘）</small></h2>
+    <div class="market-grid">
+      <div class="market-card">
+        <h4>🇨🇳 A 股（6/26 收盘）— 黑色星期五：创业板暴跌 4.07%</h4>
+        <div class="index-line">上证指数 <span class="red">-2.26%</span> → 4,027.26</div>
+        <div class="index-line">深证成指 <span class="red">-3.44%</span> → 15,782.22</div>
+        <div class="index-line">创业板指 <span class="red">-4.07%</span> → 4,194.21</div>
+        <div class="index-line">科创综指 <span class="red">-2.02%</span> · 北证50 <span class="red">-0.84%</span></div>
+        <div class="index-line">成交额 35,754 亿（缩量 436 亿）· 超 4600 只个股下跌</div>
+        <p style="margin-top:8px;font-size:13px;">板块方面：<b>CPO / 光纤 / 光通信集体调整</b>，联讯仪器盘中跌超 15%，汇绿生态、中天科技、烽火通信跌停，新易盛、中际旭创跟跌。电池板块同样低迷，圣阳股份、维科技术、德方纳米跌停，宁德时代、亿纬锂能跌超 5%。保险、有色金属、化学制药表现不佳。</p>
+        <div class="why" style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);color:var(--text-dim);font-size:13px;font-style:italic;">🦞 <b>龙虾老师解读：</b>A 股今天跌得又急又狠——创业板 -4% 是月度级别的调整信号。<b>核心逻辑：前期 AI 硬科技板块累积了太多获利盘，叠加美联储鹰派 + 韩国/台湾 AI 杠杆崩盘的情绪传染</b>。CPO 板块的集体杀跌尤其值得关注——光通信是今年 A 股最拥挤的赛道之一，一旦开始去杠杆，短期可能还有惯性。但中长期看，AI 基建 capex 没有减速，CPO 龙头的估值杀完之后还是买入机会。</div>
+      </div>
+
+      <div class="market-card">
+        <h4>🇭🇰 港股（6/26 收盘）— 恒指本周累跌 5.2%，一年最差周</h4>
+        <div class="index-line">恒生指数 <span class="red">-1.76%</span> → 22,671.86</div>
+        <div class="index-line">恒生科技 <span class="red">-3.40%</span></div>
+        <div class="index-line">本周累跌 <span class="red">5.2%</span>（2025/4 以来最大周跌幅）</div>
+        <p style="margin-top:8px;font-size:13px;">SCMP 分析：全球 AI 交易在本周遭遇"去杠杆"冲击——韩国 Kospi 和台湾 Taiex 的杠杆仓位爆仓，情绪传导至港股科技。中国消费者信心脆弱 + 互联网平台监管补贴审查，令港股科技股雪上加霜。Star50 -1.7%，ChiNext50 -4.6%，CSI300 -3%。</p>
+        <div class="why" style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);color:var(--text-dim);font-size:13px;font-style:italic;">🦞 <b>龙虾老师解读：</b>港股本周跌 5.2% 听着吓人，但从 24,000 跌到 22,670 也就是回到三个月前的位置。<b>关键问题：港股科技股的盈利能不能撑住估值</b>？如果腾讯、阿里、美团的中报能验证"降本增效→利润率改善"的故事，这轮回调就是买入机会。但如果消费持续疲软、补贴监管加码，估值天花板就真的被锁住了。</div>
+      </div>
+
+      <div class="market-card">
+        <h4>🇺🇸 美股（6/26 收盘）— 纳指五连跌 vs 道指创新高：AI 和非 AI 彻底分裂</h4>
+        <div class="index-line">道指 <span class="green">+0.15%</span>（创历史新高）</div>
+        <div class="index-line">标普500 <span class="red">-0.01%</span> → 7,354.02</div>
+        <div class="index-line">纳指 <span class="red">-0.52%</span>（五连跌，2 月以来最长连跌）→ 25,297.62</div>
+        <div class="index-line">本周：通信板块 -5.5%（最差），科技 -5.2%，可选消费 -3%</div>
+        <p style="margin-top:8px;font-size:13px;">苹果跌 6.42%（2025/4 以来最大单日跌幅），微软 -3.69%，亚马逊 -3.11%——"七姐妹"集体承压。Alphabet 本周 -7%，Meta -5%。美光虽然业绩超预期盘后涨 15%，但次日跟随板块回落。非 AI 板块反而走强——道指创新高说明防御/价值股在接棒。</p>
+        <div class="why" style="margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);color:var(--text-dim);font-size:13px;font-style:italic;">🦞 <b>龙虾老师解读：</b>这是"AI 大轮动 2.0"——但和上次不同，这次不是从小盘轮动到价值，而是<b>从 AI 巨头轮动到非 AI 蓝筹</b>。道指创新高 vs 纳指五连跌，这种分裂极少见。含义：<b>市场在重新评估"AI capex 能否转化为 EPS"</b>。苹果涨价→消费者买单→需求可能下滑→估值承压。短期内纳指如果失守 25,000，可能触发更多量化策略的卖出信号。</div>
+      </div>
+
+      <div class="market-card">
+        <h4>🦞 三市场联动解读</h4>
+        <p style="font-size:14px;margin:0;"><b>A 股</b>跌得最狠（创业板 -4%），因为前期 AI 硬科技涨幅最大、拥挤度最高；<b>港股</b>居中（恒指 -1.8%），受外资风险偏好回落 + 韩国/台湾杠杆爆盘情绪传染双重打击；<b>美股</b>分化最极端（道指新高 vs 纳指五连跌），因为美国市场的 AI 敞口和防御性板块 depth 都最大。<br><br>共同线索：<b>全球 AI 交易进入"估值再定价"阶段</b>——美联储鹰派（PCE 3.4%）扣动了扳机，亚洲杠杆爆仓加速了去化。下周关注：如果 Kospi/Taiex 周一继续跌，港股 A 股可能还有余震。但中期看，AI capex 不会停——TSMC CoWoS 2026 售罄、Nvidia 67.8 万片晶圆订单、三星 1000 万亿韩元投资——这些都是硬数据。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 &amp; 产业 <small>从存储涨价到消费电子到新消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费电子</span>
+        <h4>法拉利首款纯电 Luce 国内 398.8 万起售；vivo X Fold6 7999 元发布；启境 GT7 搭华为 ADS 5 上市 20.99 万起</h4>
+        <p>三款新消费/汽车产品同日扎堆发布：<b>法拉利 Luce</b>——首款纯电，四电机，0-100km/h 2.5 秒，中国定价 398.8 万（比欧洲便宜 36 万）。<b>vivo X Fold6</b>——7999 元起，天玑 9500 超能版，主打"AI 任务流"而非硬件堆料，折叠屏从"更大的屏幕"转向"多 AI 并行工作台"。<b>启境 GT7</b>——广汽 × 华为联合猎装轿跑，华为 ADS 5 智驾 + 鸿蒙座舱，20.99 万起，零百 2.98 秒。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>三个产品折射三个趋势——① 法拉利做纯电 = 豪华品牌"电动化不可逆"，中国定价低于欧洲说明<b>中国市场对法拉利的利润贡献在上升</b>；② vivo 折叠屏主打 AI 生产力 = 手机厂商从拼参数转向拼生态，折叠屏 + AI Agent 是新赛道；③ 广为 × 华为 ADS 5 = 华为智驾"白牌化"加速，<b>华为正在成为智能汽车的"高通"</b>。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/tech/digi/2026-06-26/doc-inieucci7204296.shtml" target="_blank">新浪科技</a> · <a href="https://www.163.com/dy/article/L0CQ014O0553DXPD.html" target="_blank">网易 / 闪电快讯</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费趋势</span>
+        <h4>消费观念转变信号：居民从"买贵买大牌"转向"性价比优先"，新茶饮闭店 14 万家</h4>
+        <p>多个数据交叉验证：2026 年下半年居民消费需求明显理性化——不愿为大品牌溢价买单，家电/汽车更换周期拉长。新茶饮行业 2025 年闭店超 14 万家。智慧安防 5 月线上零售额 5.8 亿（同比 -4.8%），监控摄像头罕见下跌。外卖战场迎来零售巨头入场——永辉开首家外卖店，鸭腿饭 17.9 元/份。</p>
+        <div class="why">🦞 <b>市场含义：</b>这对消费股投资是核心变量——<b>"消费降级"不是暂时的，是结构性的</b>。白酒产量 1-5 月同比 -4.3%（昨天数据），新茶饮闭店潮，家电换新意愿降低——都指向同一个结论：居民部门在去杠杆，消费企业如果不能"以价换量"或找到新增长曲线，营收增速会持续承压。<b>利好：折扣零售（奥莱、1688）、白牌消费、社区餐饮</b>。</div>
+        <div class="source">来源：<a href="https://www.aboluowang.com/2026/0626/2400496.html" target="_blank">阿波罗网</a> · <a href="https://36kr.com/p/3135352820678148" target="_blank">36氪</a> · <a href="https://m.tech.china.com/redian/2026/0626/062026_1903083.html" target="_blank">中华网 / 洛图科技</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">白玉兰奖</span>
+        <h4>杨紫凭《生命树》斩获白玉兰视后——90 后首位白玉兰最佳女主角</h4>
+        <p>6/26 第 31 届上海电视节白玉兰奖颁奖典礼：杨紫凭借《生命树》中巡山女警白菊一角拿下最佳女主角，三度提名后终于获奖，成为白玉兰历史上首位 90 后视后。红毯上穿 Zuhair Murad 2026 春夏高定（国内首穿）。与迪丽热巴（金鹰视后）形成 90 花"双视后"格局。</p>
+        <div class="why">🦞 <b>花边视角：</b>杨紫从童星到"三连提"到获奖，这个叙事弧线本身就是好故事。商业角度：《生命树》是"垂类行业剧"（巡山女警），能拿白玉兰说明<b>现实主义题材正在成为影视行业的"新流量密码"</b>——比古装偶像剧更容易拿奖、更容易过审、也更容易拉到平台投资。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0CUPLS70517RTVV.html" target="_blank">网易</a> · <a href="https://zh.wikipedia.org/zh-hans/%E7%AC%AC31%E5%B1%8A%E4%B8%8A%E6%B5%B7%E7%94%B5%E8%A7%86%E8%8A%82%E7%99%BD%E7%8E%89%E5%85%B0%E5%A5%96" target="_blank">维基百科</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">世界杯 2026</span>
+        <h4>世界杯小组赛进入白热化：墨西哥全胜晋级，巴西 3-0 苏格兰，瑞士 2-1 逆袭加拿大</h4>
+        <p>6/25 赛果更新：A 组墨西哥三战全胜首名晋级，南非次名；B 组瑞士 2-1 击败东道主加拿大首名出线，加拿大次名；C 组巴西 3 球击溃苏格兰，摩洛哥 4-2 挫海地，巴西首名、摩洛哥次名。韩国 1 球不敌南非跌落小组第三。目前确认出线的 6 个小组第一：墨西哥、瑞士、巴西、美国、德国、荷兰。</p>
+        <div class="why">🦞 <b>花边视角：</b>世界杯在美国/加拿大/墨西哥举办，东道主加拿大出线了但输给瑞士——说明中北美足球水平在上升但还没到"搅局者"级别。巴西三场全胜 + 净胜球优势，目前是夺冠热门前三。韩国跌落小组第三，孙兴慜的最后一舞可能提前结束。</div>
+        <div class="source">来源：<a href="https://www.hk01.com/%E5%8D%B3%E6%99%82%E9%AB%94%E8%82%B2/888100/" target="_blank">香港01</a> · <a href="https://applealmond.com/posts/317080" target="_blank">苹果仁</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">科技花边</span>
+        <h4>大疆 Pocket 4 首批备货提升 10 倍仍秒罄，已锁定黄牛团伙报警；微信回应"互删好友朋友圈痕迹"</h4>
+        <p>大疆 Osmo Pocket 4 系列首批备货比 Pocket 3 首批提升近 10 倍，仍然抢不到。大疆经溯源锁定部分黄牛团伙并报案。另外微信回应"互删好友后朋友圈痕迹"——TA 的点赞评论会从你的朋友圈消失，你的回复还在，但 TA 的痕迹全部撤走。</p>
+        <div class="why">🦞 <b>花边视角：</b>大疆 Pocket 4 的"10 倍备货还秒罄"说明<b>Vlog 硬件已经从极客圈破圈到大众消费</b>。微信那条纯属社交冷知识——但"TA 的痕迹全部撤走"这个措辞，已经被网友做成各种伤感文案了。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0DOF14L0511B8LM.html" target="_blank">网易 / IT早报</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">B站生态</span>
+        <h4>B站发布视频播客生态报告：日均播放时长目标 3 亿分钟，中长视频创作者迎来新赛道</h4>
+        <p>哔哩哔哩 6/25 发布《视频播客创作手册》（1.0 版本），首次系统披露视频播客生态增长数据。B站预计到明年视频播客日均播放时长有望达到 3 亿分钟。这一品类介于传统播客和长视频之间——有画面但以对谈为主，制作门槛低于传统 UP 主视频。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>B站押注"视频播客"是在做差异化——YouTube 有 Shorts、抖音有短视频、小宇宙有音频播客，但"中长视频对谈"这个品类没有霸主。如果 B站能吃下这个赛道，广告 ARPU 和创作者留存都会改善。对投资者来说，B站的变现拐点可能不在游戏，而在<b>视频播客的广告库存增长</b>。</div>
+        <div class="source">来源：<a href="https://www.163.com/dy/article/L0DOF14L0511B8LM.html" target="_blank">网易 / IT早报</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

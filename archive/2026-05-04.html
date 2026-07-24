@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-04 · 去重版</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --closed: #ff6b6b55;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.68;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 6px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .market-group { display: grid; gap: 18px; }
+  .market-subtitle {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: var(--text-dim);
+    letter-spacing: 0.03em;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card.closed { border-color: var(--closed); }
+  .holiday-banner {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    background: var(--closed);
+    color: #ffbdbd;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+  }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.42;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻（去重版）</span></div>
+    <h1>2026 年 5 月 4 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 只留 5/3-5/4 的新鲜料，复读条全砍</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话（全是昨天以后发生的事）</h3>
+    <ul>
+      <li><b>巴菲特的接班舞台正式开锣：</b>Abel 在奥马哈年会上给伯克希尔定调"传承不拆分"，顺便把"让 AI 假巴菲特帮他站台"的深伪事件挡下来——后巴菲特时代开始了。</li>
+      <li><b>AI 芯片融资从二级热进一级：</b>Cerebras 正申请 IPO、目标估值 400 亿美元，费城半导体指数年内已飙 +50%，这轮热度从英伟达溢出到整个算力一级市场。</li>
+      <li><b>霍尔木兹谈判今天翻车：</b>特朗普直接拒绝了伊朗"先停火后谈核"的 14 点提案，并宣布今天开始派船护航——昨天那个"风险溢价在缓"的叙事被打断了。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>这次不讲 capex 总额，讲今天真有进展的事</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">AI 芯片 IPO</span>
+        <h4>Cerebras 正申请 IPO、目标估值 400 亿美元、募 40 亿；认购意向已超 100 亿</h4>
+        <p>Bloomberg / ETTelecom 5 月 4 日报道，晶圆级 AI 芯片公司 <b>Cerebras Systems</b> 瞄准 <b>400 亿美元估值</b>、募资 <b>最多 40 亿美元</b>，承销行收到的认购意向已经超过 <b>100 亿美元</b>。背景是费城半导体指数年内累计上涨约 <b>50%</b>，算力一级市场被彻底点燃。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是个"温度计"级别的事件。真正值钱的不是 Cerebras 能不能成为下一个英伟达，而是这个估值能否顶住——它相当于市场给"非英伟达 AI 芯片"开出的新定价标尺。一级市场这么猛，也意味着很多 AI 硬件公司会抢着在下半年排队上市，二级那批"新兴算力股"要准备被重新估值。</div>
+        <div class="source">来源：<a href="https://telecom.economictimes.indiatimes.com/news/devices/ai-chipmaker-cerebras-targets-up-to-4-billion-in-ipo/130743643" target="_blank">ETTelecom / Bloomberg</a> · <a href="https://enterpriseai.economictimes.indiatimes.com/news/industry/cerebras-aims-for-4-billion-ipo-as-ai-chip-demand-soars/130730481" target="_blank">ETEnterpriseai</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">出口管制 / 英伟达</span>
+        <h4>Nvidia 对华新策略上桌：用"旧款 GPU"保留对中国 AI 的杠杆，成为华盛顿新一轮辩论焦点</h4>
+        <p>Benzinga 5 月 4 日报道，分析师 Daniel Newman 公开支持英伟达"卖次世代降规版给中国"的思路，认为完全禁运反而让中国自主化更快；参议员 Coons 则质疑这相当于给对手喂弹药。特朗普政府正在就新一轮许可证政策做最终权衡。</p>
+        <div class="why">🦞 <b>市场含义：</b>这不是简单的"制裁放松或收紧"二选一，而是在争一个杠杆——美国要不要通过"可控供货"来锁住中国的软件生态。对英伟达而言，这关系到 H 系列 / B 系列下调版到底能不能在大陆卖；对寒武纪、海光、摩尔线程这些国产方向，则是"进口替代窗口会不会被重新关上"的关键变量。</div>
+        <div class="source">来源：<a href="https://www.benzinga.com/markets/tech/26/05/52239926/daniel-newman-backs-pro-national-security-nvidia-china-strategy-says-selling-older-gpus-could-protect-americas-ai-edge" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">台湾链 / TSMC</span>
+        <h4>TSMC 龙潭扩产要过"土地关"：全球最关键的先进封装基地又面临供地瓶颈</h4>
+        <p>ts2.tech / 台媒连续追踪，5 月 3 日起的新一轮报道指出，台积电的 <b>龙潭 AI 封装扩产</b>计划正在被当地土地取得问题卡住。这里是 CoWoS 和 SoIC 这类 AI 必备先进封装的核心扩产地，每拖一个季度都会直接影响下游 HBM + GPU 的成品交付节奏。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>之前我们讲 AI capex 总是聊云厂砸多少钱，但瓶颈经常不在钱，而在"能不能盖出来"。先进封装产能紧张 → GPU/ASIC 的出货就紧 → 英伟达毛利维持在 75%+。所以任何扩产被卡的消息，对买不到货的下游是坏消息，对卖得掉货的上游反而是好消息。</div>
+        <div class="source">来源：<a href="https://ts2.tech/en/tsmcs-longtan-comeback-taiwan-semiconductors-next-ai-chip-bet-faces-a-land-test/" target="_blank">ts2.tech</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>今天对霍尔木兹的叙事被掰弯了</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 / 霍尔木兹</span>
+        <h4>翻车：特朗普拒绝伊朗 14 点提案，宣布今天开始派美军"引导船只"出霍尔木兹</h4>
+        <p>CNBC、Times of Israel、Al Jazeera 5 月 3-4 日连续报道：伊朗递交了 <b>14 点和平提案</b>，要求 30 天内先停火、开通霍尔木兹，然后再谈核问题。特朗普周日明确拒绝，并表示<b>周一（今天）起美军会开始护航困在海峡的船只</b>，伊方则回应"目前没有核谈判"。</p>
+        <div class="why">🦞 <b>市场含义：</b>这一条必须更新进来——因为它把昨天那个"风险溢价在缓"的叙事打断了。美军如果真的下场护航，短期油价的"封锁溢价"就不会轻易撤，同时也拉高任何一次意外擦枪走火的尾部概率。对高估值成长股，这不是利好；对能源、航运、防务板块，则又多了一轮托底。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/05/03/trump-iran-war-peace-proposal.html" target="_blank">CNBC</a> · <a href="https://www.timesofisrael.com/trump-said-to-nix-iran-plan-that-aimed-to-end-war-in-month-defer-nuclear-issue/" target="_blank">Times of Israel</a> · <a href="https://www.aljazeera.com/news/2026/5/3/whats-irans-14-point-proposal-to-end-the-war-and-will-trump-accept-it" target="_blank">Al Jazeera</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>这个板块今天的重头戏就一件事：奥马哈</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">伯克希尔年会</span>
+        <h4>Abel 时代第一届年会：伯克希尔明确"不拆分"，继续高现金、低负债，并直面一段"AI 巴菲特"深伪风波</h4>
+        <p>CNBC / Forbes 5 月 3 日报道：伯克希尔 <b>2026 年股东大会</b>主题定为 "The Legacy Continues"，新任 CEO <b>Greg Abel</b> 第一次正式主持。他明确排除"拆分集团"的可能、表示会更紧盯各子公司经营，同时一段疑似用 AI 生成的"巴菲特发言"视频流出，Abel 澄清与老爷子本人无关。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是近几天早报<b>真正没提过</b>的一件大事——后巴菲特时代的"估值锚"问题。伯克希尔手里现金超 3000 亿美元，Abel 选择维持保守姿态，意味着短期内他们不会砸一笔大 deal 去追 AI 热。这传递的信号是：最老派的那批机构资金仍在"贵 → 等"的阶段，而不是"all in 成长"。同时"AI 冒充 CEO"事件也是一个新的合规议题——未来上市公司都要学会抗击深伪。</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/05/03/berkshire-annual-meeting-greg-abel-rules-out-break-up-stressing-continuity-with-buffett.html" target="_blank">CNBC</a> · <a href="https://www.forbes.com/sites/bill_stone/2026/05/03/berkshire-hathaway-annual-meeting-2026-key-takeaways/" target="_blank">Forbes</a> · <a href="https://www.cnbc.com/2026/05/02/warren-buffett-berkshire-hathaway-annual-meeting-2026-live-updates.html" target="_blank">CNBC Live</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股仍在五一休市；美股看 5 月 1 日收盘</small></h2>
+    <div class="market-group">
+      <div>
+        <div class="market-subtitle">A 股</div>
+        <div class="cards">
+          <div class="card closed">
+            <div class="holiday-banner">🛑 五一假期休市中 · 5 月 1-5 日 · 5 月 6 日（周三）复市</div>
+            <h4>休市期数据不动，但一级数据有动静：五一全产业链"延展消费季"正在兑现</h4>
+            <p>A 股今日无盘面可跟。但场外高频数据值得提一下：交通运输部估计五一跨区域人员流动量将达 <b>15.2 亿人次</b>，江苏"苏超"异地文旅消费单周 <b>4.34 亿元</b>（银联渠道 +13%），五一档电影票房已破 <b>5 亿元</b>。复市后最先被点名的，很可能不是整体大消费，而是场景消费——OTA、景区、餐饮、体育赛事、文旅娱乐股。</p>
+            <div class="why">🦞 <b>怎么读：</b>别指望周三一开盘大盘就猛拉。"数据不错 + 景气分化"更可能让盘面继续走"科技科创强 + 消费股里面挑场景"这种结构。没新指数数据，就去看谁能把假期客流变真金白银。</div>
+            <div class="source">来源：<a href="https://www.chinanews.com.cn/cj/2026/05-03/10615182.shtml" target="_blank">中新网</a> · <a href="https://www.news.cn/20260503/af4c45f620ae4cfa83accfe7adf626ad/c.html" target="_blank">新华网</a> · <a href="https://www.cqnews.net/web/content_1500764861637468160.html" target="_blank">华龙网</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="market-subtitle">港股</div>
+        <div class="cards">
+          <div class="card closed">
+            <div class="holiday-banner">🛑 香港五一翌日假期 · 5 月 4 日休市 · 5 月 5 日（周二）复市</div>
+            <h4>今天港股休市，无新数据；看点是复市后对"Cerebras + 霍尔木兹"这两条的消化</h4>
+            <p>港股 5 月 4 日（五一翌日）休市。最值得留意的是，复市之后市场将集中消化两件今天才发生的事：一是<b>Cerebras 冲击 400 亿估值</b>（利好中芯、华虹等中资半导体链、但也抬高"英伟达之外谁都能赚"的预期），二是<b>霍尔木兹局势陡然收紧</b>（对油、航运、能源股是边际利好）。</p>
+            <div class="why">🦞 <b>怎么读：</b>港股的关键不是恒指今天多少点，而是明天复市后开盘的板块分化。如果芯片股在没内地资金接力的情况下仍然被"新一轮全球算力热"抬起来，那这波 AI 溢价是能扩散的；反之则是"北水不回来就得挨打"的老故事。</div>
+            <div class="source">来源：<a href="https://www.hkex.com.hk/Services/Trading-hours-and-Severe-Weather-Arrangements" target="_blank">HKEX 交易时间表</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="market-subtitle">美股</div>
+        <div class="cards">
+          <div class="card">
+            <span class="tag biz">美股 · 5 月 1 日收盘</span>
+            <h4>标普 7230.12 / 纳指 25114.44：两大指数周五再创收盘新高，科技股连续五周上涨</h4>
+            <p>CNBC、Reuters、Investopedia 均确认：<b>标普 500</b> 周五涨 <b>0.29%</b> 至 <b>7230.12</b>，<b>纳指</b> 涨 <b>0.89%</b> 至 <b>25114.44</b>，两者均创收盘新高、连续第五周上涨；<b>道指</b> 当日微跌 <b>0.31%</b>。苹果、大型科技股、半导体继续是主要驱动，油价盘中小幅回落给科技估值再加一把。</p>
+            <div class="why">🦞 <b>怎么读：</b>这轮上涨的叙事已经被市场自己改写成"AI 兑现 + 科技盈利"，不再依赖降息幻想。这是一把双刃剑：逻辑扎实、但容错率低。一旦下周有一家头部公司的 capex 回报或业绩指引不够硬，或者霍尔木兹真的升级，回调会来得比前几个月更快。</div>
+            <div class="source">来源：<a href="https://www.cnbc.com/2026/04/30/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/business/sp-500-dow-futures-inch-up-after-wall-streets-best-month-years-2026-05-01/" target="_blank">Reuters</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-05012026-11963432" target="_blank">Investopedia</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费类 <small>五一假期最后一天，数据开始出了</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">五一消费数据</span>
+        <h4>假期尾声：五一档电影票房破 5 亿、文旅消费券 2.84 亿、异地赛事消费大增——"场景消费"才是本届主线</h4>
+        <p>华龙网 5 月 4 日报道，<b>2026 年五一档电影票房已破 5 亿元</b>，放映场次超去年同期；文化和旅游部则披露，消费周期间各地合计办 <b>1.37 万场次</b>文旅活动、发放 <b>2.84 亿元</b>消费券；江苏"苏超"第二周银联异地文旅消费 <b>4.34 亿元</b>、环比 +13%。全社会跨区域流动量预计 <b>15.2 亿人次</b>。</p>
+        <div class="why">🦞 <b>金融含义：</b>别再把五一当"有没有花钱"的投票。本届真正值得记的是——赛事 / 演唱会 / 电影这些"场景"做到了把客流变现的闭环。受益最集中的不是传统百货，而是：OTA 和本地生活平台（携程、美团）、头部连锁餐饮、赛事版权方、院线、景区股。场景消费赛道的估值逻辑从"流量"切到"留量"。</div>
+        <div class="source">来源：<a href="https://www.cqnews.net/web/content_1500764861637468160.html" target="_blank">华龙网（票房）</a> · <a href="https://www.chinanews.com.cn/cj/2026/05-03/10615182.shtml" target="_blank">中新网（赛事）</a> · <a href="http://ent.people.com.cn/n1/2026/0503/c1012-40713095.html" target="_blank">人民网（文旅）</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>这次换新的，不复读德比</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Met Gala 今晚开场</span>
+        <h4>2026 Met Gala 今晚（纽约时间）开场，主题 "Costume Art"；红毯看点从"谁最贵"切到"谁最敢把衣服穿成展品"</h4>
+        <p>Vogue、Vanity Fair、Parade 都在最后倒计时：<b>2026 Met Gala</b> 将于 <b>5 月 4 日</b>（纽约时间）在大都会博物馆开幕；同期特展 <b>"Costume Art"</b> 将从 5 月 10 日开放至 2027 年 1 月 10 日。Host Committee 已确认 Taylor Swift、Doja Cat 等将出席。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Met Gala 从来都不是娱乐小事——它是全球奢侈品集团一年一度最大的集体路演。LVMH、Kering、开云、Prada、Chanel 的股价短期反应有限，但<b>品牌心智份额</b>和年轻一代消费者的定价能力，通常靠红毯这一晚被重新分配。特别今年主题是"服装即艺术"——也就是说，越能被博物馆级收藏、越能维持溢价的那些品牌，更受益。</div>
+        <div class="source">来源：<a href="https://www.vogue.com/tag/event/met-gala" target="_blank">Vogue</a> · <a href="https://www.vanityfair.com/met-gala-2026" target="_blank">Vanity Fair</a> · <a href="https://parade.com/entertainment/met-gala-2026" target="_blank">Parade</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA 季后赛</span>
+        <h4>首轮收官，4 组抢七打完：骑士、活塞双双 Game 7 晋级，第二轮对阵正式出炉</h4>
+        <p>NBA.com / CBS Sports 5 月 3 日更新：骑士和活塞分别在 G7 决胜，首轮正式收官。<b>第二轮对阵</b>：东部 <b>骑士 vs 活塞</b>、<b>尼克斯 vs 76 人</b>；西部 <b>雷霆 vs 湖人</b>、<b>马刺 vs 森林狼</b>。湖人和森林狼都是从 G6/G7 险胜杀出来的。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 的轻松话题意义是——接下来几周每天都会有话题比赛。但商业侧也有看点：第二轮东西部四组全是大市场球队（NY、Philly、LA、Minnesota 都是媒体城市），NBA 版权、博彩、运动品牌这些板块容易被整体带一波二季度的广告和转化数据。</div>
+        <div class="source">来源：<a href="https://www.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/" target="_blank">CBS Sports</a> · <a href="https://www.nba.com/playoffs/2026" target="_blank">NBA.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">本期为<b>去重加料版</b>——砍掉了前几天已经讲过的 Fed 1992 分歧、Alphabet Cloud 财报、Tufts AI 能耗 1%、肯塔基德比、OPEC+ 增产等条目，只保留 5/3-5/4 的新鲜进展与增量。投资相关信息不构成建议。</div>
+  </footer>
+
+</div>
+</body>
+</html>

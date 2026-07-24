@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-05-11</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --up: #ef4444;
+    --down: #22c55e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-grid { display: grid; gap: 12px; }
+  .market { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; }
+  .market h5 { margin: 0 0 6px; font-size: 14px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+  .market .pts { font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+  .market p { margin: 6px 0 0; font-size: 13px; color: var(--text); }
+  .pos { color: var(--up); }
+  .neg { color: var(--down); }
+  .closed-banner { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; background: #9198a122; color: var(--text-dim); }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 5 月 11 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>本周主线：</b>市场先盯 <b>5/12 美国 4 月 CPI</b>，再盯 <b>5/12-15 首尔磋商 + 北京特习会</b>；这两件事决定全球风险偏好是继续冲高，还是先回撤一脚。</li>
+      <li><b>AI 链条：</b>英伟达“绕道出货”调查继续发酵，TSMC / HBM 仍处高景气，但市场开始讨论 <b>AI capex 从加速转向高位平台</b>，估值锚会慢慢从故事切回现金流。</li>
+      <li><b>消费与股市：</b>中国 4 月出口强、母亲节“反向带妈”带热服务和健康礼赠；上周五 A 股偏轮动、港股回吐但快手百度硬撑，美股则靠科技股和就业数据再创高。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达 / 出口管制</span>
+        <h4>美方怀疑先进英伟达服务器经泰国流向中国，阿里被指是终端客户之一</h4>
+        <p>Reuters / Bloomberg 报道：一家与泰国国家 AI 计划有关联的公司，被怀疑协助把搭载先进英伟达芯片的 Super Micro 服务器转运到中国，<b>阿里巴巴被点名可能是终端客户之一</b>。这意味着美国针对“芯片本体”的限制，正在往“整机、服务器、第三地转运”继续扩圈。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是普通监管新闻，它直接改写 <b>AI 算力跨境流动的摩擦成本</b>。如果美方把泰国、马来、新加坡这类“灰色中转地”也纳入更严格审查，国内大厂拿高端训练卡的隐性成本会继续上升，<b>国产替代的推理侧机会更清晰，训练侧仍然难补</b>。对东南亚数据中心链条来说，项目审批和 GPU 到货节奏都可能变慢。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/world/asia-pacific/us-suspects-nvidia-chips-smuggled-alibaba-via-thailand-bloomberg-news-reports-2026-05-08/" target="_blank">Reuters</a> · <a href="https://www.bloomberg.com/news/articles/2026-05-08/us-said-to-suspect-nvidia-chips-smuggled-to-alibaba-via-thailand" target="_blank">Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC / HBM</span>
+        <h4>TSMC 4 月营收同比 +17.5%，HBM 与先进制程仍满载，但“景气加速”开始放缓</h4>
+        <p>TSMC 4 月营收约 <b>NT$4107 亿</b>，同比增长 17.5%，前 4 个月累计增长近 30%。AI 相关需求依旧强，HBM 价格仍在高位，AMD 也持续吃到数据中心红利；但市场开始注意到，<b>这是过去 6 个月里相对较慢的一次同比增速</b>，说明高景气还在，但最猛的加速度可能已经过去。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这很像周期股从“拔估值”切到“算现金流”的拐点。不是说 AI 见顶了，而是<b>从“越来越热”变成“很热但不再更热”</b>。金融含义：台积电、SK 海力士这类“产能=现金流”的核心环节仍有溢价；但市场会更挑剔，不再给所有 AI 概念股同样高的想象空间。接下来要比的是谁能把高景气真正落成 free cash flow。</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260508VL206/tsmc-revenue-2026-nyse-growth.html" target="_blank">DigiTimes</a> · <a href="https://www.bloomberg.com/news/articles/2026-05-08/tsmc-sales-grow-17-5-on-extended-ai-buildout-boom" target="_blank">Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AI 商业模式</span>
+        <h4>OpenAI / Anthropic 巨额云承诺再被质疑：上游先锁单，中游还在烧钱</h4>
+        <p>周末多篇深度分析都在追同一个问题：OpenAI、Anthropic 这类模型公司签下巨额云端资源和训练算力承诺，但自身自由现金流仍为负，<b>商业模式还没跑到能完全自供 capex 的阶段</b>。云厂和芯片厂先拿 backlog，模型公司则继续靠融资与高增长预期支撑。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这其实是 AI 产业链里最关键但最容易被忽略的一层：<b>上游（云、GPU、代工）盈利确定性 > 中游（模型）</b>。如果后面融资环境有一点收紧，估值压力会先在模型公司身上爆出来；反过来，台积电、英伟达、云厂商的业绩反而更稳。对投资视角来说，这解释了为什么“最性感”的公司不一定是最舒服的持仓。</div>
+        <div class="source">来源：<a href="https://fourweekmba.com/ai-anthropic-s-200b-google-cloud-bet-the-most-dangerous-busines/" target="_blank">FourWeekMBA</a> · <a href="https://www.theatlantic.com/technology/2026/04/openai-imitating-anthropic/686975/" target="_blank">The Atlantic</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">中美 / 特习会</span>
+        <h4>首尔工作磋商先行，特习会本周登场：市场先押“别变坏”，再谈突破</h4>
+        <p>中美双方确认，<b>5/12-13 在首尔先做工作磋商，5/14-15 北京再进行特习会</b>。议题不只关税，还包括芯片出口、稀土、伊朗、台海与 AI 监管。外媒普遍判断，这次更像“管理分歧”而不是“解决分歧”，但只要没有明显翻车，对市场已经算偏利好。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>当前市场对中美关系的要求其实不高：<b>不升级，就是利好</b>。如果会后确认贸易休战延续、芯片限制不再突然加码，港股科技、A 股半导体、美股中概都会先拿到一波情绪修复。相反，一旦出现强硬措辞，外资会第一时间砍仓风险资产，尤其是港股科技。</div>
+        <div class="source">来源：<a href="https://www.scmp.com/news/china/diplomacy/article/3353067/china-us-confirm-seoul-trade-talks-days-trump-xi-summit-beijing" target="_blank">SCMP</a> · <a href="https://www.channelnewsasia.com/world/china-us-hold-trade-talks-in-seoul-ahead-trump-xi-summit-6112241" target="_blank">CNA</a> · <a href="https://fortune.com/2026/05/10/china-trump-xi-meeting-trade-deal-iran-war-midterm-elections/" target="_blank">Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊 / 霍尔木兹</span>
+        <h4>霍尔木兹紧张持续，Brent 守在 101 美元附近，油价进入“高位交易区”</h4>
+        <p>霍尔木兹海峡相关摩擦并未真正散去。CBS / NBC 报道称，美军与伊朗相关船只冲突再起，伊朗外长同步访华寻求外交与能源安全层面的支持。当前 <b>Brent 约 101.29 美元 / WTI 约 95.42 美元</b>，较一年前仍高出五成以上。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价现在已经不是单纯地缘变量，而是<b>被交易资金高度金融化</b>的变量。对市场的真实冲击不在“再涨 1 美元”，而在于它已经足够高，正在持续蚕食低收入家庭、航空、运输、餐饮等板块利润。AI 板块短期还能靠高增长扛住，消费链却没有这么强的定价权。</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-attacks-qeshm-island-ceasefire/" target="_blank">CBS</a> · <a href="https://www.nbcnews.com/world/iran-war" target="_blank">NBC</a> · <a href="https://www.oilpriceapi.com/oil-prices-today" target="_blank">OilPriceAPI</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">俄乌 / 停火</span>
+        <h4>俄乌 5/9-11 三天停火名义生效，但前线冲突未停，市场只看“能否延长”</h4>
+        <p>特朗普撮合的 3 天停火和 <b>1000 人战俘交换</b> 方案落地后，普京公开称“战争接近尾声”；但乌方与多家媒体都指出，前线冲突仍未真正停止，停火更像“短暂停顿”而非实质结束。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对金融市场来说，这类消息的边际效应已经明显下降——<b>不是有没有停火，而是能不能从 3 天延长成更长期安排</b>。如果不能，欧洲风险资产的修复空间有限；如果能，欧股和天然气链条会明显受益。换句话说，消息标题没那么重要，持续时间才重要。</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/world/2026/may/10/vladimir-putin-suggests-ukraine-war-is-coming-to-an-end" target="_blank">Guardian</a> · <a href="https://www.aljazeera.com/news/2026/5/10/putin-suggests-russias-war-on-ukraine-coming-to-an-end" target="_blank">Al Jazeera</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>先看中国通胀，再看美国 CPI</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">中国数据</span>
+        <h4>中国 4 月出口同比 +14.1%，进口 +25.3%，外需和补库都比预期强</h4>
+        <p>海关总署数据显示，4 月按美元计 <b>出口同比 +14.1%</b>、进口 <b>+25.3%</b>，整体显著强于保守预期。今天市场还将等中国 4 月 CPI / PPI，普遍预期 CPI 在 0.8%~1.0% 左右，PPI 保持偏强。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这组数据说明现在的中国并不是“只靠政策托底”，而是外需仍有韧性、国内补库也在发生。对市场最友好的组合其实是<b>出口强 + 通胀不高</b>：既说明企业订单不差，又不给货币环境太大压力。对 A 股来说，这会继续支撑科技成长和出海链轮动。</div>
+        <div class="source">来源：<a href="https://www.amz123.com/kx/zLtbuybM" target="_blank">海关总署 / AMZ123</a> · <a href="https://investinglive.com/news/economic-and-event-calendar-in-asia-monday-may-11-2026-china-inflation-data-20260510/" target="_blank">Investing Live</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国 CPI</span>
+        <h4>明晚美国 4 月 CPI 是本周最大风险点，市场预期同比 3.8%</h4>
+        <p>美国将于 5/12 公布 4 月 CPI，市场预期整体 CPI 同比约 <b>3.8%</b>、核心约 <b>2.7%</b>。多家机构判断，高油价已经开始通过汽油、运输和生活成本传导进通胀，Fed 的首次降息时点因此继续被往后推。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>如果 CPI 低于预期，纳指和 AI 链条大概率继续抱团创新高；如果高于预期，10 年期美债收益率会先跳，成长股估值先挨打。对 lainy 来说，这一份数据最重要的不是宏观教材意义，而是它会不会<b>改变资金给 AI 龙头的估值倍数</b>。</div>
+        <div class="source">来源：<a href="https://www.tradingkey.com/analysis/economic/inflation/261877612-cpi-bls-april-oil-consumer-inflation-fed-nonfarm-rate-interest-jpm-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.kiplinger.com/investing/economy/cpi-report-april-2026-what-to-expect" target="_blank">Kiplinger</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国消费信心</span>
+        <h4>美国消费者信心跌到纪录低位：高油价终于开始咬家庭现金流</h4>
+        <p>Reuters 报道，5 月初美国消费者信心跌到纪录低位，主因就是<b>汽油价格上涨侵蚀购买力</b>。这说明高油价并不只影响能源与通胀预期，而是已经开始通过家庭预算，向终端消费做负反馈。</p>
+        <div class="why">🦞 <b>市场含义：</b>这条新闻很适合和 AI 热潮对照着看——一边是 AI capex 继续狂奔，一边是普通消费者越来越谨慎。<b>宏观的“冷热不均”越明显，市场就越会偏爱有定价权和高增速的龙头</b>，而不是泛消费和中低端可选消费。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/markets/europe/us-consumer-sentiment-hits-record-low-early-may-2026-05-08/" target="_blank">Reuters</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股三地一起看</small></h2>
+    <div class="market-grid">
+      <div class="market">
+        <h5>🇨🇳 A 股 <span class="closed-banner">截至 5/8 收盘</span></h5>
+        <div class="pts">上证 <span>4179.95</span>（平）｜深成指 <span class="neg">-0.50%</span>｜创业板 <span class="neg">-0.96%</span></div>
+        <p>指数表面一般，但盘面其实很热：<b>超 3600 只个股上涨</b>，机器人、商业航天、6G、CPO 这些高弹性方向继续吸金；半导体、电池链和科创 50 相对弱。说明市场不是没钱，而是在做“高低切 + 题材轮动”。</p>
+        <p><b>关键逻辑：</b>大盘没冲，资金却在中小票里找弹性，说明风险偏好还在，只是暂时不愿意追权重。</p>
+      </div>
+
+      <div class="market">
+        <h5>🇭🇰 港股 <span class="closed-banner">截至 5/8 收盘</span></h5>
+        <div class="pts">恒指 <span class="neg">26393.71（-0.87%）</span>｜恒生科技 <span class="neg">-0.36%</span></div>
+        <p>港股整体回吐，但结构并不差：<b>快手涨超 9%，百度涨超 5%</b>，说明资金仍愿意留在有业绩和故事的互联网平台；芯片、锂业偏弱，更多是前期涨多后的歇脚。港股现在很像在等本周中美会谈给方向。</p>
+        <p><b>关键逻辑：</b>港股最怕的是外资风险偏好回撤，目前并没有出现全面撤退，更像是“等消息前先降一点仓位”。</p>
+      </div>
+
+      <div class="market">
+        <h5>🇺🇸 美股 <span class="closed-banner">截至 5/8 收盘</span></h5>
+        <div class="pts">S&amp;P 500 <span class="pos">7398.93（+0.8%）</span>｜Nasdaq <span class="pos">26247（+1.7%）</span>｜连涨第 6 周</div>
+        <p>美国 4 月就业强于预期，科技股领涨，推动标普和纳指再创收盘新高。当前市场逻辑非常直接：<b>只要增长不塌、CPI 还没吓人，资金就继续抱科技</b>。这也是为什么哪怕中东还在闹，AI 龙头估值也没明显松动。</p>
+        <p><b>关键逻辑：</b>这轮美股不是“全面牛”，而是“AI 与大科技牛”。如果 CPI 不配合，回撤也会先发生在这些估值最贵的地方。</p>
+      </div>
+    </div>
+    <div class="source" style="margin-top:10px;">来源：<a href="https://www.stcn.com/article/detail/3899955.html" target="_blank">证券时报</a> · <a href="https://www.cls.cn/detail/2366145" target="_blank">财联社</a> · <a href="https://finance.sina.com.cn/stock/hkstock/marketalerts/2026-05-08/doc-inhxemqf7671215.shtml" target="_blank">新浪港股</a> · <a href="https://fred.stlouisfed.org/series/SP500" target="_blank">FRED</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-05082026-11969993" target="_blank">Investopedia</a></div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费类 <small>看真实购买力，不看口号</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">中国消费 / 母亲节</span>
+        <h4>“反向带妈”走红：年轻人开始给妈妈买酒店、旅行和健康礼物</h4>
+        <p>第一财经与多家平台数据显示，母亲节周末出现明显的“<b>反向带妈</b>”现象：20-30 岁年轻人成为主要下单人，酒店、周边游、健康类礼品成热点。天猫还披露，筋膜枪、颈椎按摩器、足浴盆等品类销售额同比大增，部分品牌日销较平日翻 3-4 倍。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这说明中国消费不是简单变弱，而是在<b>从“面子消费”切向“体验 + 健康 + 情绪价值”</b>。对市场来说，这比看一两个餐饮品牌翻台率更有意义：真正能吃到增量的，往往是有场景、能讲关怀、带一点功能升级的品牌，而不是纯打价格战的低端标品。</div>
+        <div class="source">来源：<a href="https://www.yicai.com/news/103172896.html" target="_blank">第一财经</a> · <a href="https://finance.sina.com.cn/stock/roll/2026-05-10/doc-inhxktnp7805017.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美国餐饮</span>
+        <h4>麦当劳警告：高油价正在伤到低收入消费者，Q2 开局偏弱</h4>
+        <p>Reuters 报道，麦当劳管理层在财报会上明确表示：<b>低收入消费者正变得更挑剔</b>，越来越倾向于只买单品而不是整套套餐；4 月美国销售已转为轻微负增长，主因就是高油价和家庭预算压力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>麦当劳一直是观察美国大众消费的“温度计”。连它都开始感到压力，说明当前美国消费并不是“全面强”，而是<strong>高收入继续花、低收入先收手</strong>。这会拉大消费股内部的分化：有品牌力和高客单的还扛得住，靠低价高频走量的反而更难做。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/mcdonalds-misses-us-sales-growth-target-value-push-fails-lift-demand-2026-05-07/" target="_blank">Reuters</a> · <a href="https://www.cnbc.com/2026/05/07/mcdonalds-mcd-q1-2026-earnings.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>给 lainy 放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">戛纳</span>
+        <h4>戛纳电影节明天开幕：朴赞郁任评审团主席，彼得·杰克逊将获荣誉金棕榈</h4>
+        <p>第 79 届戛纳电影节将于 5/12 开幕，朴赞郁担任主竞赛评审团主席，主办方还将在开幕式向彼得·杰克逊颁发荣誉金棕榈。外媒已经开始预热今年最值得看的新片名单，红毯浓度明显上来了。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>戛纳一直不只是文艺圈盛会，它对影视公司、流媒体、明星商务价值都有放大器作用。简单说：<b>奖项是艺术，红毯是流量，片单是生意</b>。如果你想看娱乐和资本市场怎么交叉，戛纳是最典型样本。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/cannes-film-festival-2026-movies-to-see-47a7c2e3e903bd267ed6171d8727fbda" target="_blank">AP</a> · <a href="https://www.france24.com/en/culture/20260510-what-to-watch-out-for-at-the-2026-cannes-film-festival" target="_blank">France24</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">票房 / 体育</span>
+        <h4>《Michael》全球票房破 5 亿美元；骑士赢下关键战把系列赛拉回来了</h4>
+        <p>Jaafar Jackson 主演的《Michael》上映第三个周末，全球票房已突破 <b>5 亿美元</b>，传记片热度还在；体育这边，骑士以 <b>116-109</b> 赢下关键一战，把系列赛追回一口气。娱乐圈和体育圈这两条周末情绪线，今天都算“向上”。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>一个说明老牌超级 IP 依然能打，一个说明季后赛内容仍然是最稳定的流量池。对平台和广告主来说，<b>能引发社交媒体二次传播的内容，商业价值远高于一次性观看</b>。这也是为什么体育版权和顶级音乐/电影 IP 永远贵。</div>
+        <div class="source">来源：<a href="https://www.zoomtventertainment.com/hollywood/michael-box-office-500-million-blockbuster-article-154288915" target="_blank">ZoomTV</a> · <a href="https://www.espn.com/nba/story/_/id/48419498/nba-playoffs-2026-play-finals-schedule-scores-news-highlights-bracket-dates" target="_blank">ESPN</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>今天选一条有意思的</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">生物学</span>
+        <h4>科学家意外发现“打破生命规则”的 DNA 代码：一个池塘微生物把教材改了</h4>
+        <p>ScienceDaily 报道，研究人员在做单细胞 DNA 测序时，意外发现一种微型池塘生物使用了异常的遗传编码方式，和我们熟悉的“标准密码表”不同，等于在教科书边上写了句：<b>规则不是绝对的</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这类发现短期不会直接变成产业，但它很迷人——因为它提醒我们，很多看起来像“物理定律”的生物规则，其实只是目前最常见的版本。放到技术投资里也一样：<b>别太早把某条路线当唯一答案</b>，真正的大机会常常就藏在“例外”里。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/releases/2026/05/260507024045.htm" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师每日整理 · 只写今天值得看的增量，不复读昨天</div>
+    <div class="footer-note">给 lainy：重点盯本周美国 CPI 和特习会；这两件事会决定 AI 估值还能不能继续抬。</div>
+  </footer>
+</div>
+</body>
+</html>

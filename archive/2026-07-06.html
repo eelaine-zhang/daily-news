@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-06</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 {
+    font-size: 36px;
+    margin: 12px 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px;
+    margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-right: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 12px;
+  }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text-dim); }
+  .market-block .why { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 12px; font-style: italic; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 6 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>韩国砸出 <b>4,755 万亿韩元</b>（约 $3.1 万亿）AI 大礼包——Samsung + SK Hynix 合计 800 万亿韩元建厂，SK Hynix 还要在周五登陆纳斯达克 ADR，融资 $290 亿。</li>
+      <li><b>地缘 & 油价：</b>伊朗宣布将对霍尔木兹通行船只"确定征收过路费"，但停火仍在维持——Brent 跌到 <b>$72</b>，回到战前水平，OPEC+ 下月再增产。</li>
+      <li><b>市场：</b>美股长假后今天重启，SpaceX 周二正式纳入 <b>Nasdaq-100</b>；本周 Q2 财报季开门、Fed 6 月会议纪要公布、中国 CPI/PPI 周四出炉。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">韩国 AI 大礼包</span>
+        <h4>韩国宣布 4,755 万亿韩元 AI 投资计划，Samsung + SK Hynix 合计 800 万亿韩元建厂</h4>
+        <p>韩国政府上周公布系列投资计划：Samsung Electronics 和 SK Hynix 在全罗道合建 4 座内存晶圆厂，投资额 <b>800 万亿韩元（$520 亿）</b>；SK、GS、Naver 等将投 <b>550 万亿韩元</b>建大型 AI 数据中心。加总各区域项目，整体规模达 <b>4,755 万亿韩元（约 $3.1 万亿）</b>。但 Korea Herald 专栏质疑：数字太大、执行周期太长，实际落地可能大打折扣。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是国家级 AI 产业政策的"军备竞赛"升级——韩国想用本土产能锁定 HBM/存储芯片的定价权，同时给 Samsung 和 SK Hynix 一个"不必全押美国"的替代选项。但<b>风险点</b>也很明显：华盛顿可能要求韩国企业在美国境内做等比投资作为 CHIPS Act 延续条件。对市场来说，SK Hynix Q2 毛利率预期 91%（Bernstein 估算），这种盈利能力给韩国政府底气搞大基建。</div>
+        <div class="source">来源：<a href="https://www.koreaherald.com/article/10798501" target="_blank">Korea Herald</a> · <a href="https://www.koreajoongangdaily.com/business/samsung-sk-hynixs-800-trillion-won-bet-at-home-may-create-us-pressure/12755481" target="_blank">Korea JoongAng Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix ADR</span>
+        <h4>SK Hynix 周五登陆纳斯达克，融资 $290 亿——AI 内存巨头直接对标 Micron</h4>
+        <p>Fortune 报道：SK Hynix 将于本周五（7/11）在纳斯达克挂牌 ADR，融资约 <b>$290 亿</b>，目标估值超过 $1 万亿。过去 12 个月 SK Hynix 韩股涨约 <b>700%</b>，与 Micron 同步跨入万亿俱乐部。Bernstein 预估其 Q2 2026 毛利率达 <b>91%</b>，运营利润率 70-80%——远超 Micron 的 50-55%。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是今年最大 IPO 之一。SK Hynix ADR 给美国投资者直接买入 HBM 龙头的渠道，会从 Micron 手里抢配置资金。短期看 Micron 可能承压，但中长期两只股票同步上涨的概率更高——AI 内存是"水涨船高"的赛道，不是零和博弈。关注点：<b>HBM4 量产时间表</b>和<b>客户集中度</b>（Nvidia 占比过高）。</div>
+        <div class="source">来源：<a href="https://fortune.com/2026/07/05/sk-hynix-us-stock-listing-nasdaq-29-billion-micron-ai-boom-chips/" target="_blank">Fortune</a> · <a href="https://247wallst.com/investing/2026/07/05/forget-micron-this-new-ai-memory-stock-could-be-the-best-buy-of-the-decade/" target="_blank">24/7 Wall St</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">芯片 vs 政府</span>
+        <h4>半导体行业协会警告 Trump 政府：别干预内存芯片定价，会"加剧短缺"</h4>
+        <p>Boston Herald 报道：半导体行业协会（SIA）向 Trump 政府发出警告——政府试图通过影响价格或产能分配来缓解全球内存芯片短缺的做法，反而会<b>恶化当前 AI 驱动的历史性供给紧张</b>。SIA 强调市场自身调节机制更有效。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这反映了一个有趣的张力——AI 热潮让 HBM/DRAM 价格飞涨，下游（消费电子、汽车）抱怨成本太高，政客想"管一管"。但半导体行业的逻辑是：<b>价格信号 = 扩产动力</b>，干预价格反而延迟供给响应。对投资者来说，这意味着 HBM 价格短期不会因为政治压力下跌——Samsung、SK Hynix、Micron 的高毛利可持续。</div>
+        <div class="source">来源：<a href="https://www.bostonherald.com/2026/07/05/chip-industry-warns-against-interference/" target="_blank">Boston Herald</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">伊朗 · 霍尔木兹</span>
+        <h4>伊朗宣布将"确定征收"霍尔木兹过路费，友好国家或享"特殊待遇"</h4>
+        <p>Times of Israel 7/4 报道：伊朗外长 Araghchi 表示，伊朗将"definitely"对通过霍尔木兹海峡的商船征收通行费，"友好国家"可能获得优惠。同时，卡塔尔和巴基斯坦调停人在多哈分别会见美伊谈判团。停火协议仍在维持但"处于紧张状态"——以色列袭击黎巴嫩后，伊朗拒绝重新开放霍尔木兹。Khamenei 葬礼进行中，新最高领袖尚未露面。</p>
+        <div class="why">🦞 <b>市场含义：</b>"过路费"是伊朗在停火框架内试探底线的新招——不直接封锁海峡（战争行为），而是收"保护费"（灰色地带）。如果执行，会小幅推高运费和保险费，但不会像全面封锁那样冲击油价。真正的变量是<b>新最高领袖人选</b>——强硬派上位可能推翻停火。目前市场定价"可控紧张"，VIX 没有大幅上跳。</div>
+        <div class="source">来源：<a href="https://www.timesofisrael.com/liveblog-july-4-2026/" target="_blank">Times of Israel</a> · <a href="https://www.cnn.com/2026/07/05/world/live-news/iran-khamenei-funeral-war-trump" target="_blank">CNN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>原油回到战前水平：Brent ~$72，OPEC+ 下月再增产</h4>
+        <p>周日电子盘：Brent 跌 0.4% 到 <b>$71.87</b>，WTI 跌 0.22% 到 $68.64——两者均回到 2 月底美伊开战前的水平。霍尔木兹航运恢复叠加 OPEC+ 8 月第五次增产，市场担忧供应过剩。Aramco 同时下调亚洲原油售价。摩根士丹利和高盛均警告短期下行风险。</p>
+        <div class="why">🦞 <b>传导链读给你听：</b>油价跌回战前 = 地缘溢价完全被挤出。这对通胀是利好（Fed 少了一个加息借口），但对能源出口国和能源股是逆风。沙特财政盈亏平衡线在 $80-85，当前 Brent $72 意味着沙特<b>财政赤字扩大</b>——可能迫使 OPEC+ 后续减产来托价。对中国这个全球最大原油进口国来说，低油价 = 输入性通缩缓解 + PPI 下行压力减轻，是利好。</div>
+        <div class="source">来源：<a href="https://www.hngn.com/articles/271907/20260705/oil-prices-hold-near-4-month-lows-hormuz-shipping-recovery-raises-glut-fears.htm" target="_blank">HNGN</a> · <a href="https://houseofsaud.com/opec-august-quota-hike/" target="_blank">House of Saud</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>本周关键事件</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>本周聚焦：Fed 6 月会议纪要 + Q2 财报季开门</h4>
+        <p>本周三（7/9）Fed 将公布 6 月 FOMC 会议纪要。6 月 17 日 Warsh 首次会议维持利率 <b>3.50-3.75%</b>，拒绝前瞻指引。市场将重点挖掘纪要中的分歧——是否有委员主张加息？同日，PepsiCo 财报打响 Q2 季前哨；周五 TSMC 6 月营收 + Delta Air Lines 财报。Micron、Nvidia、Broadcom 三家合计贡献 S&P 500 Q2 盈利增长的 <b>54%</b>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Warsh 上任后 Fed 的沟通风格变了——不再给前瞻指引，让市场自己猜。会议纪要是唯一能读到委员们内部分歧的窗口。如果纪要显示"多数委员倾向加息"，9 月加息概率（目前约 50%）会跳升。反过来如果分歧很大，市场会定价"更鹰但更分裂"的 Fed——这对短端利率是双向风险。</div>
+        <div class="source">来源：<a href="https://www.privatebank.bankofamerica.com/articles/washington-update.html" target="_blank">BofA Private Bank</a> · <a href="https://www.aol.com/articles/nvidia-micron-broadcom-hold-stock-130753000.html" target="_blank">AOL / Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">中国数据</span>
+        <h4>中国 6 月 CPI/PPI 周四公布：预测 CPI +1.1%，PPI +4.1%</h4>
+        <p>7/9（周四）国家统计局公布 6 月 CPI 和 PPI。浙商证券李超预测：<b>CPI 同比 +1.1%</b>，<b>PPI 同比 +4.1%</b>（较前月 +0.2pp）。价格"K 型分化"预计延续——工业品（PPI）强于消费品（CPI）。本周一还会公布 6 月外储数据，央行持续增持黄金。</p>
+        <div class="why">🦞 <b>映射：</b>PPI +4.1% 意味着上游工业品价格仍在涨——对制造业毛利是压力（成本端），但对周期股（有色、化工、钢铁）是收入端利好。CPI 只有 1.1% 则说明终端需求疲软——消费股短期难有基本面催化。这个"上游热下游冷"的剪刀差，本质上是<b>企业利润在向中上游集中</b>，下游品牌/零售承压。A 股配置上值得关注这个分化。</div>
+        <div class="source">来源：<a href="https://www.macrostream.ai/articles/6a49d3b73c80f748cb63084a" target="_blank">MacroStream</a> · <a href="https://news.futunn.com/en/post/75540352/weekly-preview-june-fomc-minutes-drop-sk-hynix-adr-set" target="_blank">Futu</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 上周收盘沪指 ~4,073，CSI 300 ~4,943，本周关注 CPI 数据</h4>
+      <p>7/3（上周四）收盘：沪指收涨 +1.16% 报 4,073，CSI 300 +0.93%。4000 点关口暂稳但风格切换剧烈——小盘成长遭杀跌，资金切向高股息/价值。本周四 CPI/PPI 数据是短期最大催化点。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>A 股现在是在 4000 点反复磨底，不是趋势性反弹。风格上"红利 + 科技"双线并行——资金在防御（煤炭、电力、银行）和进攻（AI 算力、半导体）之间摇摆，中间地带（消费、地产）被两头抽水。CPI 如果低于 1%，可能触发降息预期升温，利好成长股。</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指上周 +1.28%~1.93%，黄金股领涨，腾讯连续 32 天回购</h4>
+      <p>7/3 收盘：恒指 +1.28%，恒生科技区间涨幅更大。黄金突破 $4,187 刺激黄金股走强。腾讯连续 32 个交易日回购。阿里巴巴收 HK$94.10，距 52 周低仅 6%，但 Kling AI 获阿里+腾讯+百度 $28 亿注资、估值 $150 亿。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>港股比 A 股强的核心原因——<b>流动性改善 + 汇率端港元锚定美元</b>。美元走强时港股相对 A 股更有韧性。腾讯 32 天连续回购是非常强的价格信号，管理层在用真金白银说"被低估了"。Kling AI 融资 $28 亿说明中国 AI 视频赛道仍有大钱进来，和 Sora/Runway 的差距在缩小。</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 长假后今天重启，SpaceX 周二纳入 Nasdaq-100，Q2 财报季开锣</h4>
+      <p>上周四（7/2）收盘：Dow 创纪录 <b>52,900</b>（+1.14%），Nasdaq -0.80%，S&P 500 持平。Tesla -7.49%，芯片股继续承压。周五休市。S&P 500 期货周一早盘持稳。本周亮点：① SpaceX 周二正式纳入 Nasdaq-100，指数基金被动买入；② Q2 财报季启动——Micron/Nvidia/Broadcom 三家占 S&P 500 Q2 盈利增长 54%；③ Fed 会议纪要周三公布。</p>
+      <div class="why">🦞 <b>龙虾老师解读：</b>Dow 创高 vs Nasdaq 跌的"大轮动"叙事还在发酵，但我不认为 AI 泡沫会破——只是资金从"最拥挤的几家"扩散到"受益但被忽视的"（电力、能源、工业）。SpaceX 纳入 Nasdaq-100 是历史性事件：指数基金必须被动买入，短期可能推高股价 5-10%，但注意"纳入效应"通常在正式生效日后 1-2 周内见顶回落。Q2 财报是真正考验——Nvidia 的 Blackwell 出货量和 ASP 是全村的希望。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>品牌 &amp; 零售动态</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品整合</span>
+        <h4>L'Oréal $46 亿收购 Kering 美妆矩阵（含 Creed），奢侈品"拆分出售"加速</h4>
+        <p>3 月 L'Oréal 以 <b>$46 亿</b>收购 Kering 旗下美妆业务，拿下 Creed 等品牌。这是继 Versace 创意总监换人（7/4 报道 Pieter Mulier 上任）之后，奢侈品行业整合的又一信号。Prada 集团正在收编 Versace，Kering 则在"瘦身"聚焦核心皮具。</p>
+        <div class="why">🦞 <b>商业含义：</b>奢侈品行业进入"大鱼吃小鱼"阶段——开云卖掉美妆换现金流保 Gucci，L'Oréal 低价捡漏扩充香水矩阵。香水是奢侈品里<b>毛利最高、库存周转最快</b>的品类（>80% 毛利，不需要尺码/季节清仓），L'Oréal 这笔交易非常精明。对 Kering 来说，出售非核心资产 = 承认 Gucci 复苏需要"all in"。</div>
+        <div class="source">来源：<a href="https://www.fool.com/research/largest-consumer-staples-companies/" target="_blank">Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国车企</span>
+        <h4>中国车企改写欧洲市场格局，日系节节败退</h4>
+        <p>BizToc 报道：中国车企正在重写欧洲汽车市场层级，日本竞争对手节节败退。BYD、MG（上汽）、奇瑞等品牌凭借电动车定价优势和欧盟本地化组装策略，在欧洲市占率快速攀升。同时，中国新能源汽车下半年的降价潮预期仍在持续。</p>
+        <div class="why">🦞 <b>市场含义：</b>这不是短期新闻——是<b>5-10 年的结构性趋势</b>。中国车企在欧洲的 ASP 比国内高 30-50%，毛利率远好于内卷的本土市场。关注点：欧盟反补贴关税是否会升级？如果关税维持当前水平，中国车企用 CKD（全散件组装）本地化生产就能绕过——BYD 在匈牙利、奇瑞在西班牙的工厂就是答案。</div>
+        <div class="source">来源：<a href="https://biztoc.com/" target="_blank">BizToc</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">⚽ 世界杯</span>
+        <h4>Cristiano Ronaldo 宣布：2026 世界杯将是他的最后一届</h4>
+        <p>Ronaldo 在葡萄牙 vs 西班牙赛前记者会上确认："这将是我的最后一届世界杯。" 但被追问是否从国家队退役时，他回怼："<b>我想退役的时候才会退役，不是你们想让我退役的时候。</b>" 葡萄牙将在 1/8 决赛迎战西班牙。</p>
+        <div class="why">🦞 <b>花边视角：</b>Ronaldo 41 岁了还在踢世界杯，本身就是奇迹。但"最后一届"的叙事会极大推高葡萄牙比赛的收视率——赞助商和转播商笑醒。社交媒体上 #RonaldoLastWorldCup 已经刷屏。预测：不管葡萄牙走多远，Ronaldo 的告别战商业价值将超过本届世界杯任何单场比赛。</div>
+        <div class="source">来源：<a href="https://www.espn.com/soccer/story/_/id/49278881/cristiano-ronaldo-world-cup-2026-portugal" target="_blank">ESPN</a> · <a href="https://www.tmz.com/2026/07/05/cristiano-ronaldo-world-cup-retirement/" target="_blank">TMZ</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">🎾 温网</span>
+        <h4>温网第 7 日：大坂直美爆冷淘汰 No.1 萨巴伦卡，Fritz 五盘逆转晋级</h4>
+        <p>7/5（第 6 比赛日）战报：大坂直美以强势进攻<b>淘汰世界第一萨巴伦卡</b>——这是本届温网迄今最大冷门。美国选手 Taylor Fritz 经历 4 小时 38 分钟五盘大战逆转晋级，首次打入大满贯第二周。Serena Williams 退出了双打。7/6（今天）进入"超级星期一"——16 强开打，Centre Court 首场 Paolini vs Eala。</p>
+        <div class="why">🦞 <b>看球指南：</b>大坂直美打萨巴伦卡是"天赋 vs 力量"的经典剧本——大坂的回球深度和接发能力在草地上被低估了。今天 Centre Court 的 Paolini vs Eala（菲律宾新星）也值得看，Eala 三次出战 Centre Court，人气极高。如果 lainy 有时间，晚上可以蹲一下直播。</div>
+        <div class="source">来源：<a href="https://www.espn.com/tennis/story/_/id/49274919/wimbledon-2026-today-blog-05-07-2026-live-updates-news-fixtures-schedule-sabalenka-osaka-djkovic-sinner-tennis" target="_blank">ESPN</a> · <a href="https://www.nytimes.com/athletic/live-blogs/wimbledon-2026-live-updates-day-six-scores-results/U3ApXse8sWlZ/" target="_blank">The Athletic</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">🎬 电影</span>
+        <h4>Tom Holland + 孕妇 Anne Hathaway + Matt Damon 伦敦合体宣传《The Odyssey》</h4>
+        <p>People 7/5 报道：Tom Holland、怀着身孕的 Anne Hathaway 和 Matt Damon 在伦敦手拉手出席 Christopher Nolan 新片《The Odyssey》宣传活动。Netflix 7 月片单也已公布——Will Ferrell 体育喜剧《The Hawk》7/16 上线，饰演过气高尔夫冠军。</p>
+        <div class="why">🦞 <b>花边：</b>Nolan 的《The Odyssey》是下半年最受期待的大片之一，Anne Hathaway 怀孕还跑宣传，敬业程度拉满。如果 lainy 最近想找电影看，Netflix 7 月的《Gone Girl》回归 + 《The Hawk》可以加入清单。</div>
+        <div class="source">来源：<a href="https://people.com/star-tracks-sunday-july-5-2026-new-celebrity-photos-updated-daily-12012082" target="_blank">People</a> · <a href="https://www.hollywoodreporter.com/tv/tv-news/netflix-july-2026-new-releases-movies-tv-1236634437/" target="_blank">Hollywood Reporter</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技/科学花边 <small>一条就够</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">合成细胞</span>
+        <h4>FT：科学家发布"SpudCell"合成细胞，用微生物工程驱动低碳制造</h4>
+        <p>Financial Times 7/1 报道：科学家公开了一种名为 <b>SpudCell</b> 的合成细胞技术，利用微尺度生物工程让微生物"像工厂一样"生产日常材料——目标是替代石化工艺，实现低碳制造。同期，Anthropic 推出 Claude Science AI 工作台，面向生物医学研究者开放申请（截止 7/15）。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>SpudCell 代表的趋势是"生物制造"（biomanufacturing）——用工程微生物替代化工厂。从投资角度看，这个领域还太早期（5-10 年商用化），但方向和 AI 一样确定性高：全球减碳是硬约束。Anthropic 的 Claude Science 则说明 AI 公司在往科研工具方向扩——AI + Science 会是下一个估值故事。</div>
+        <div class="source">来源：<a href="https://www.ft.com/technology" target="_blank">Financial Times</a> · <a href="https://www.anthropic.com/news/claude-science-ai-workbench" target="_blank">Anthropic</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

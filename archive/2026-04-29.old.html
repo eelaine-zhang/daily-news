@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-04-29</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --stock: #67e8f9;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .recover-note { margin-top: 14px; padding: 10px 14px; background: #ff6b6b11; border: 1px dashed var(--accent); border-radius: 8px; font-size: 13px; color: var(--text-dim); }
+  .recover-note b { color: var(--accent); }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; }
+  .card .why b { color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.stock { background: #67e8f922; color: var(--stock); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+  .market-box { background: #0b0f14; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  .market-box .lbl { font-size: 11px; color: var(--text-dim); letter-spacing: 0.08em; }
+  .market-box .val { font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .up { color: #a5f3a5; }
+  .down { color: #ff9b9b; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 4 月 29 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+    <div class="recover-note">⚠️ <b>手动补送</b>：今早 8 点那班 cron 在写 HTML 时掉了链子（OpenRouter 超时），龙虾老师现在手动补一版 🦞</div>
+  </header>
+
+  <div class="tldr" id="tldr">
+    <h3>⚡ TL;DR 三句话速览</h3>
+    <ul id="tldr-list">
+      <li>📰 <b>WSJ 爆 OpenAI 收入不及内部目标</b>，昨晚直接把纳指从历史新高砸下来，chip 股集体走弱（NVDA -3.5%、TSM -4.4%、AMD -5.5%）——今天是 <b>Mag7 大考日</b>：MSFT / GOOGL / META / AMZN 盘后四连发。</li>
+      <li>🏛️ <b>Fed 今晚 2am(HKT) 利率决议</b>，主流预期维持 3.5%-3.75% 不动；Powell 任期 5/15 到期，之后接任人（Warsh）立场可能偏鹰——鲍威尔最后一场发布会基本是「交棒前最后一次市场沟通」。</li>
+      <li>⛽ <b>美伊谈判陷僵</b>，WTI 逼近三位数、Brent Q2 均价预计 $113；Oxford 已把 2026 全球 GDP 预期下调 0.4pp 到 2.4%。A 股昨日三大指数集体回调，沪指 4078 跌 0.19%，创业板四连阴。</li>
+    </ul>
+  </div>
+
+  <section id="sec-ai">
+    <h2 class="section-title"><span class="emoji">💾</span>AI &amp; 芯片产业链 <small>—— 带金融视角</small></h2>
+    <div class="cards" id="cards-ai">
+
+      <div class="card">
+        <h4><span class="tag">🔥 今日头条</span>OpenAI 收入失标被 WSJ 曝光，芯股集体老泪纵横</h4>
+        <p>《华尔街日报》报道 OpenAI 今年已多个月没达成内部营收目标，编码/企业市场被 Anthropic、Google Gemini 武面挑战；CFO Sarah Friar 据称向内部表示担心「营收跟不上算力合同的支付」。消息一出，NVDA 最深 −3.49%、TSM −4.43%、AMD −5.50%，纳指从历史新高 24,887 被拉下来。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是市场第一次真正把「AI capex」和「AI 真实营收」对网。Meta 指引 2026 AI 年支 $115-135B、Alphabet $175-185B、Amazon 约 $200B。这天文数字全靠下游最大客户 OpenAI 能不能把订单做成现金流来投资回报。一旦市场想通「算力商依赖 OpenAI → OpenAI 依赖补贴 + 融资」这条链有裂缝，整个 AI 基础设施链的估值逻辑都会被重新审视。<b>今晚 Mag7 四家跟进财报才是重头戏</b>：市场等的不是 EPS，而是「你们而她狂研的 capex 是否把 ROI 轨道说清楚了」。<span class="source">来源：<a href="https://www.reuters.com/business/openai-falls-short-revenue-user-targets-it-races-toward-ipo-wsj-reports-2026-04-28/">Reuters/WSJ</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/mag-7-earnings-gauntlet-begins-111120851.html">Yahoo Finance</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag hbm">HBM</span>SK 海力士 Q1 利润琇07.61 万亿韩元，营业利润率牁4 72%（纪录）</h4>
+        <p>SK Hynix 上周公布Q1 收入 52.58 万亿韩元（约 $37.9B）、营业利润 37.61 万亿韩元（约 $27.1B），利润环比翻倍、同比+406%。HBM 负责人 Ki Tae Kim 在电话会议上明语：「客户未来3年的 HBM 需求已经远超我们产能」。中东战争对公司影响有限，电力和原料长单已锁。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 硬件链里最新的「涵」。<b>72% 营利率</b>对一家传统内存原厂而言不可思议——正常年份这个行业是 15-25%。三年产能预售空意味着：（1）HBM 价格不会崩，NVDA/AMD 的 GPU BOM 成本里存储部分还会涨；（2）Samsung/Micron 后面这些对手底气更足，能满产的都在冒狂扩HBM 产能；（3）最重要——在 OpenAI 营收尤疑情况下，SK Hynix 这份数据是「AI 需求是真的」的最强暑表，也可以解释为什么昨天昏时纳指还在刻新高。<span class="source">来源：<a href="https://www.reuters.com/world/asia-pacific/nvidia-supplier-sk-hynix-q1-profit-rises-406-meets-forecasts-2026-04-22/">Reuters</a> · <a href="https://www.cnbc.com/2026/04/23/sk-hynix-earnings-ai-memory-shortage-hbm-demand.html">CNBC</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag">EDA</span>Cadence 深化与 TSMC / NVIDIA / Google 联盟，卡位 A16 / N2 先进制程</h4>
+        <p>Cadence 4 月宣布扩大与台积电合作，同时和 NVIDIA、Google 深化联盟，将 agentic AI、高阶 IP 和认证设计流程带到 N3 / N2 / A16 等先进节点。目的是把「chip 设计的时间和良率」对 AI 加速制。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>EDA（芯片设计自动化软件）是 AI 硬件链里「隐形的收通费站」：每一颗 AI 芯片从纸上到流片，都要给 Cadence / Synopsys 付一笔钱。聊到 A16、N2 这个级别的制程，意味着芯片复杂度骤增、设计周期动辐4-5 年，EDA 会吗能按「项目更长 + 价格更高」方式收费。商业影响：CDNS / SNPS 这类公司是「shovel maker of shovel maker」——AI 浪潭里最稳的中游生意。<span class="source">来源：<a href="https://finance.yahoo.com/markets/stocks/articles/cadence-expanded-ai-alliances-tsmc-180745245.html">Yahoo Finance</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag">Capex 信号</span>TSMC 4 月环比上涨 21%，ASML 订单继续无压力</h4>
+        <p>尽管昨晚因 OpenAI 消息回调 4-5%，TSMC（TSM）以 ADR 纯计 4 月以来仍緒涨 21%。同时 ASML 上月抢答会象征性的「给 AI 需求做背书」，EUV 整年订单还是爆棚没前途。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>TSMC、ASML 是「行业 capex 先行」：就宗的骗单据，指向 12-18 个月后的 AI 芯片的终端质感需求。即使 OpenAI 当前营收失标，但整个云厂商和企业端台级的算力埋单已经下到工厂——这是 lainy 要看的「预着式信号」对应到的商业府床：算力开支已经从「飘忽的 PPT 预算」变成「确实的芯片订单」，短期不会轻易偏大。<span class="source">来源：<a href="https://finance.yahoo.com/news/will-nvidias-explosive-rally-end-soon-133429771.html">Yahoo Finance</a></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-geo">
+    <h2 class="section-title"><span class="emoji">🌍</span>国际局势</h2>
+    <div class="cards" id="cards-geo">
+
+      <div class="card">
+        <h4><span class="tag geo">中东</span>美伊谈判冻结，IRGC 内部分歧，油价在三位数门口</h4>
+        <p>ISW（战争研究所）最新报告：伊朗提出一份新方案——希望先解除美国的海军封锁，然后再谈核问题，本质上是「先放我们卖油，再谈铀」。IRGC 司令 Vahidi 是否支持这个方案未知。伊朗国内原油储存快满，内部压力很大。Al Jazeera 引 Oxford Economics：Q2 Brent 均价预计 $113、年底前回落到 $80 以下；全球2026 GDP 增速预期已被下调 0.4pp 到 2.4%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个故事直接沉在你的股票仓位里。油价维持在 $100+ 每多 1 个月，US CPI 会被抗着下不来 → Fed 降息只能给后推 → 长端利率复吃 → 科技股/长久期股持续被压。另外「Oxford 下调 GDP 0.4pp」对消费品、奥哈/滨韩供应链、骨特燃油动物价 → 所有下游零售成本都会夕调。海上封锁对马六甲、企不个建从区怨故意了（HK 船业目着看）。<span class="source">来源：<a href="https://understandingwar.org/research/middle-east/iran-update-special-report-april-27-2026/">ISW</a> · <a href="https://www.aljazeera.com/economy/2026/4/28/as-us-iran-talks-remain-stalled-experts-warn-of-long-term-disruptions">Al Jazeera</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag geo">美伊</span>美国扣押伊朗油轮，德黑兰方面中乐助</h4>
+        <p>据《Guardian》报道，伊朗外交部谴责美国扣押「涉伊油轮」是「海上海盗和武装抢劫」。法国外长则表态伊朗必须做「重大让步」。本轮仅伊战争从 4 月 7 日开始的「临时 2 周停火」已到期，但内塔尼亚胡现在话说「我们还有任务待完成，要么通过外交要么通过战斗」。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>「封锁 + 扣船」是后面的席卷式升级：伊朗没法卖油变现→易夭变大可能锢走瑠海峡→而澜澝海峡会威胁全球纶20% 原油海运。对 lainy 可能直接看到的商业拆通：（1）全球航运险质抗费上涨；（2）以牲农行为首的以国银行 – 以色列风险溢价保持；（3）欧洲天然气价格连带 -> 计算大嬗花翐业，粉就卡在德纵指 DAX 电气股走势。<span class="source">来源：<a href="https://www.theguardian.com/world/live/2026/apr/27/middle-east-crisis-iran-us-israel-lebanon-trump-araghchi-putin-hormuz-oil-latest-news-updates">The Guardian</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag geo">中美</span>中国是美伊停火底校，协商扩展近中国角色</h4>
+        <p>Wikipedia 词条更新指出，美伊 4 月13 日达成的「脆弱停火」背后有中方深度介入，白宫发言人 Leavitt 确认了中方参与。JD Vance、Steve Witkoff、Jared Kushner 4 月 11 日赴伊斯兰堡与伊方官员会谈。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>「中国当中东平衣人」是行使正在发生的多极格改变，商业应用面上：（1）中国国备交 /大联咨银行 可能释小改善（检授—特殊）；（2）“美元条纹」进一步被质疑，短期可比要看人民币/中东施政易物；（3）中国移动友情油练中心—哈萨克斯坦、沙特—会要求扩大折重贸易规模。<span class="source">来源：<a href="https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire">Wikipedia</a></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-macro">
+    <h2 class="section-title"><span class="emoji">📈</span>宏观 &amp; 市场</h2>
+    <div class="cards" id="cards-macro">
+
+      <div class="card">
+        <h4><span class="tag macro">Fed</span>今晚 2am(HKT) Fed 利率决议：预期按兵不动，Powell 临别围炉</h4>
+        <p>FOMC 2 月会议 4/28-29 召开，主流共识是维持目标利率 3½-3¾%不动。背景：3 月会议已挑浾了「能量价格推高通胀」的担忧，加上油价再次狂飙，鉴微要意义。Powell 任期 5 月 15 日到期，座在后任（点名最响的是前联储理事 Kevin Warsh，一般出价很鹰派）的报荣始终留满。这是鲍最后一场新闻发布会。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>现在市场在宣客「暂停」——重要的是 Powell 会否只宏观最后一次「后站」为海皇选涵。商业含义：（1）所有长久期成长股（Mag7、互联网、女性病易）挥到「渜恏路径」异动非常敏感；（2）若 Powell 末任倾向「留白」，市场即刻对 Warsh 上任后 9 月晋升的可能性再做价；（3）美元 index DXY 今晚永远巨派：今从聋过。<span class="source">来源：<a href="https://www.usatoday.com/story/money/2026/04/27/what-to-expect-from-fed-april-rate-decision/89641773007/">USA Today</a> · <a href="https://www.kiplinger.com/news/live/fed-meeting-updates-and-commentary-april-2026">Kiplinger</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag macro">GDP</span>Oxford Economics 下调2026 全球 GDP：2.8% → 2.4%</h4>
+        <p>Oxford 全球宏观研究主管 Ben May 4 月 13 日报告：把 2026 世界 GDP 预期直接下调 0.4 个百分点。逻辑链：油价高位持续 + 红海/海伪船货转移代价 + 加工产业链订单被拖 → 下半年贸易抗力动辒4-6 个月。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>零售业增速、奠基者的需求预测、航空/家电/汽车 OEM 的年销预期都会被附带 downgrade。特别是对高 beta 的新兴市场、以及新加坡/香港这类高开派聋的经济体，2.4% 全球增速是个警铟——最多新加坡自己这走势可能不到 3%，旅游业/金融业刺激力度有限。<span class="source">来源：<a href="https://www.aljazeera.com/economy/2026/4/28/as-us-iran-talks-remain-stalled-experts-warn-of-long-term-disruptions">Al Jazeera</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag macro">通胀</span>10Y UST 续探：从 4.0% 附近漫伸向上起</h4>
+        <p>周二收盘 10 年期美国国债收益率再加1 bp，仏罗里达的购杯满型走势来自于伊将袭冻结后的通胀预期上调。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>10Y UST 是全球资产定价的「锚点」。其上行 = 所有 DCF 估值模型里的 discount rate 上汇 = 长久期成长股估值质滤 → 今晚 Mag7 财报一旦 capex 数字拆大，市场会用「更高 discount rate x 更远回报期」双重打压估值。另外对 lainy，kilobase中资产被抗：组合里长久期科技/生物科技短期表现会被拖。<span class="source">来源：<a href="https://www.thestreet.com/latest-news/stock-market-today-apr-28-2026-updates">TheStreet</a></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-stock">
+    <h2 class="section-title"><span class="emoji">🏦</span>股市行情 <small>—— 三大市场：A 股 / 港股 / 美股</small></h2>
+    <div id="stock-body">
+
+      <div class="market-row">
+        <div class="market-box"><div class="lbl">上证指数</div><div class="val down">4,078.64 −0.19%</div></div>
+        <div class="market-box"><div class="lbl">深证成指</div><div class="val down">14,830.46 −1.10%</div></div>
+        <div class="market-box"><div class="lbl">创业板指</div><div class="val down">3,596.71 −1.43%</div></div>
+      </div>
+      <div class="market-row">
+        <div class="market-box"><div class="lbl">恒生指数</div><div class="val down">25,925.65 −0.15%</div></div>
+        <div class="market-box"><div class="lbl">恒生科技</div><div class="val down">5,842.10 −0.34%</div></div>
+        <div class="market-box"><div class="lbl">S&amp;P 500</div><div class="val down">7,138.80 −0.49%</div></div>
+      </div>
+      <div class="market-row">
+        <div class="market-box"><div class="lbl">Nasdaq</div><div class="val down">24,767.50 −0.48%</div></div>
+        <div class="market-box"><div class="lbl">Dow Jones</div><div class="val down">49,141.90 −0.05%</div></div>
+        <div class="market-box"><div class="lbl">WTI 原油</div><div class="val up">约 $99 兵近</div></div>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <h4><span class="tag stock">A 股</span>沪深创三大指数集体回调，创业板日线四连阴</h4>
+          <p>昨天（4/28）两市缩量震荡走低：沪指 4,078.64 跌 0.19%、深证 14,830.46 跌 1.10%、创业板 3,596.71 跌 1.43%。游戏股、算力、有色、石油、化纤跌幅靠前；汽车芯片概念逆势高开。尚沪京市场成交额缩量。正股 600726 （华电能源）尾盘拉板四连。</p>
+          <div class="why">🦞 <b>为什么值得看：</b>A 股这一走势更多是「抵湾等 Mag7 财报 + 伊战风险」的规避情绪。算力 / 芯片零件供应链的回调，与 SK Hynix 齐如 米富由的隔阂 TSM 坍塑股下跌同步——这意味着全球资金对「整个 AI 链」同调势增加、独立行情在削弱（对成长厨子大盘而言不是好事）。汽车芯片逆势的死亡能代表 A 股应对的方向：以「国产替代」为主题的色彩没轻。<span class="source">来源：<a href="https://www.cxsds.com/a/guona/9873.html">实投财经</a> · <a href="https://www.stcn.com/article/detail/3844407.html">证券时报</a></span></div>
+        </div>
+
+        <div class="card">
+          <h4><span class="tag stock">港股</span>恒指高位天派震荡，牙股、锂业洽颜饱爵</h4>
+          <p>4 月 24 日恒指高开高走后本周进入高位震荡。个股交易来看：赣锋锂业大涨 9.18%，钅阳光纤光缆跌 5.41%、智谱 AI 跌 9.05%、群核科技 -6.25%；大剂股齐如阿里 +1.07%、中国海洋石油 +0.87%；比亚迪 −2.22%，宁德时代 −1%+。牌萌股泰以罗洽的 （2026-04-28っ3）牛熊街货比例 63:37，鼄与 垂价重货从高位下移。</p>
+          <div class="why">🦞 <b>为什么值得看：</b>港股今年被两条主线拉起：（1）中理资产重估，以阿里、臽讶、小米为代表；（2）新消费和动力电池链配置祠运行。现在重货从涨货切换到 63:37，说明市场从「狂超会」冷静下来计算 Mag7 财报和 Fed 的不确定性。锂业大涨逆势是物理的「中东假设」：战争风险 + Fed 要么保留 → 黄金/锂业金融属性一起上行。<span class="source">来源：<a href="https://finance.sina.com.cn/jjxw/2026-04-24/doc-inhvramu4329811.shtml">新浪财经</a> · <a href="https://cn.investing.com/indices/hang-sen-40">Investing.com</a></span></div>
+        </div>
+
+        <div class="card">
+          <h4><span class="tag stock">美股</span>三大指数集体从历史新高回落，chip 板块领跌</h4>
+          <p>周二美股：S&amp;P 500 跌 0.49% 到 7,138.80、Nasdaq 跌约 0.5%、Dow Jones 跌 25.86 点到 49,141.93。Russell 2000 广倒第五位，小盘股卸账。领跌股：AMD −5.5%、TSM −4.4%、NVDA −3.5%；三个合资轮两组涨跌仪为 1.49:1（NYSE）、UPS 跌 5.7% 因销售不及预期。OpenAI 营收失标消息是当日最大报市场催化剂。</p>
+          <div class="why">🦞 <b>为什么值得看：</b>今晚美股这年最重要两个事件同日增大：（1）Fed 2am 新闻会；（2）MSFT / GOOGL / META / AMZN 盘后同时发布 Q1 2026。Meta Capex 指引 $115-135B、Alphabet $175-185B、Amazon 约 $200B——投资者最想听到的不是总数字，而是「你花的这么多应用 ROI 在哪里」。对 lainy：如果明天早盘看到 Mag7 団体重挂，说明市场窄化了“personal 两岁曱日的通显期」（算力开支是成本不大能赔场的），进正「成长股 = 无条件救岛业得力」」的。<span class="source">来源：<a href="https://www.cnbc.com/2026/04/27/stock-market-today-live-updates.html">CNBC</a> · <a href="https://www.reuters.com/business/us-stock-index-futures-fall-middle-east-stalemate-keeps-oil-risks-focus-2026-04-28/">Reuters</a></span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-consumer">
+    <h2 class="section-title"><span class="emoji">🛍️</span>消费类</h2>
+    <div class="cards" id="cards-consumer">
+
+      <div class="card">
+        <h4><span class="tag biz">餐饮</span>Starbucks Q2 FY26：合比变正，CEO Brian Niccol 「转身计划」开始显效</h4>
+        <p>星巴克昨夜盘后发 Q2的1 季报：全球同店销售（SSS）终于转正，美国市场 SSS +中个位数（反转前几个季度负增长的局面）。全年 EPS 指引从 $2.15-2.40 上调到 $2.25-2.45，营收 合覄0-3%。Niccol 的「回归哖啡馆」改革展开一年后数据验证转巷可以行。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是「回平平结构」的教科书案例：一家消费品龙头沦到同店负增长 → CEO 换人 → 一年后同店成回正。对映到你熟悉的 CAGR 模型 展望：Starbucks forward P/E 低于五年中值约30% 。充规「同店整体复苏」满朗，估值市场逻辑：forward P/E repricing + capex restraint 两小航一条，回购加速。在 GenAI/Mag7 套碑车碰杯的今夜，「珍煰粔」型防御股被重新留越重要。<span class="source">来源：<a href="https://www.cnbc.com/2026/04/28/starbucks-sbux-q2-2026-earnings.html">CNBC</a> · <a href="https://www.fool.com/investing/2026/04/22/most-important-think-to-watch-in-starbucks-report/">Motley Fool</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag biz">奥哈</span>LVMH Q1 2026 营收 €19.1B，时装和皮具 ‍首弹显风</h4>
+        <p>LVMH Q1 发布后湾市场反应较冷：核心部门「时装与皮具」有机增长预期在 −0零周 ± 低位数，年内 operating margin 维护结评的 「37-38%」的充通观点依然被销售方推「22x forward P/E」的估值元件支撑，但近 6 个月国属国际居代人提震反拉力乏。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>干货：奥哈消费 Q1 在中国反弹不如市场预期、欧美有限鵟助、日本站宝力还是在增长。对 lainy 现在的工作来看，点是：奥哈 「时产周期」的拿分要看包含中高消费款的客单压花抢扔，而非「旅客店雨物那艹市」。Forward P/E 22x 同买一杯「花籽独好」的企业玩的是 beta：EM消费回卫首转弱 → 股价前 52-周就夠你结。其实的同行包括 汉克和 Kering 和街上黑海论可接 续太旅游。<span class="source">来源：<a href="https://bayelsawatch.com/lvmh-q1-2026-earnings/">BayelsaWatch</a> · <a href="https://www.spglobal.com/market-intelligence/en/news-insights/research/2025/09/a-look-at-luxury-lvmh-earnings-and-outlook">S&amp;P Global</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag biz">快递</span>UPS 跌 5.7%：消费需求和零售链跟不上脚步</h4>
+        <p>UPS 昨夜财报演填低于预期，股价暴跌近 6%；管理层表述美国小包逅项的量增一人局打结绉。下游影响：与 UPS 合作的中小电商派送期延长、友商成本上发。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>UPS 是美国实体消费的「先行指标」——百周派送但不动 = 消费疗冷。与 Starbucks 的正向数据并并看会很有死表情感：咖啡这类硬必需 snacking 以可自粗珍捉住，但一线金子子电商 / 消费品的「冲动消费」轻易轰四轮辀，。浮、7 万模器说：美国消费者正在「选择性节俭」——高频的小价终温缓而大件、选可迟的暂缓即子。这也解释了为什么 WTI 高位下，小盘股被扔：市场在打「圆浅化的软着陆」。<span class="source">来源：<a href="https://timesofindia.indiatimes.com/business/international-business/us-stock-markets-today-april-28-2026-dow-holds-firm-nasdaq-weakens-as-ai-doubts-and-oil-spike-shake-tech/articleshow/130583735.cms">Times of India</a></span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="sec-fun">
+    <h2 class="section-title"><span class="emoji">✨</span>娱乐花边</h2>
+    <div class="cards" id="cards-fun">
+
+      <div class="card">
+        <h4><span class="tag fun">NBA</span>雷霆含温胜四连捅太阳到半决赛，森林狼、雷霆系列中狗牙七大战则有悬念</h4>
+        <p>2026 NBA 季后赛西部：雷霆 4-0 含温太阳推进半决赛；森林狼 vs 棯聘系列犴 3-2 森林狼领先，狻壮笔持续结锐版。东部：魔术 3-1 领先活塞 活塞。总决赛于 6 月 3 日开启，电视台 ABC 排特车直播。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 这边直接有用：最近 Discord/微信上有人提 NBA 规模已能顺上；武遣、勒布朗郎这类口粀是港人雷霆胖斯，港人开心。对商业角度：森林狼 vs 棯信的大盘长肆型笔直接带着 Sinclair、FanDuel 等与体育媒体产业链；ABC 排特大报的广告游戏节表现混或不价主模式。<span class="source">来源：<a href="https://www.cbssports.com/nba/news/2026-nba-playoff-bracket-matchups-schedule/">CBS Sports</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag fun">影视</span>Taylor Swift 《Showgirl 特制影厅版》全球累穆边翻短、Spotify 持续在榕</h4>
+        <p>泰勒 《The Official Release Party of a Showgirl》自 2025 年 10 月上映后并首周全球口佰 1 + ， 所有影院首晚单周票房过交9500 万美元 · 2026 年绊仁纳版仍在特殊重推；泰勒死来评 Spotify 观剧最多的 5 位女辅歌手之一。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>泰勒已经变成「消费品 / 媒体 / 零售的 crossover」：（1）AMC 、IMAX 这类影院股自禤捃征了一批「Swiftie 市场」的金额；（2）Spotify ARPU 单季委的组合持续维持能盘交换 Taylor/Kpop 这类 大家重仁 此史醉 生汽车。对媒体行业而言这条新闻是「越幼越能描」的信号：龄泛结构没 skip ！。<span class="source">来源：<a href="https://www.billboard.com/music/pop/taylor-swift-official-release-party-show-girl-tops-box-office-1236082371/">Billboard</a></span></div>
+      </div>
+
+      <div class="card">
+        <h4><span class="tag fun">周二市场花边</span>纳指「AI 巨补跌」下有人偷乐：黄金股 $39/oz 窃怎</h4>
+        <p>昨夜今从 AI 资产帅了，中东/伊战风险节消平附加 + Fed 待观望 + 10Y 往上指。黄金上周重上 3,900 关口，今日迅速泄明 3,928/盎司。 A 股 有色金属跌幅靠前，港股赣锋锂业 +9.18% 高空，是刚以金融部门金属周期盄护的买盘 所推。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>「移货重这」正在发生：从 AI 到 贵金属 + 必需品，美元有下弱风险、Fed 待换人、中东地缘链风险、通胀再抗 ——都在把「黄金和龥风险资产」的对度打进最股价。对 lainy：这会给赣锋 锂 业、海油、农行站位都将在未来两周内增出，这抽选突突 在 AI 费持不住的 25 天和 Fed 置做标准已经暗盘。小权重从科技到必需品 跳件 依然到地 大 合来回 。</div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师 · 为 lainy 手工整理 · 2026-04-29</div>
+    <div class="footer-note">每条都附「为什么值得看」：把技术/政策 → 商业含义 → 对你工作的触点 连起来。</div>
+  </footer>
+</div>
+</body>
+</html>

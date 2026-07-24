@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-13</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --mkt: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; color: var(--text-dim);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px; margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px;
+    background: var(--accent-soft); color: var(--accent);
+    margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.mkt { background: #fcd34d22; color: var(--mkt); }
+  .mkt-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  .mkt-summary {
+    background: #0b1118; border: 1px dashed var(--border); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 8px;
+    font-size: 13px; color: var(--text-dim);
+  }
+  .mkt-summary b { color: var(--text); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 13px; text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 13 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>地缘软化：</b>美伊战争"接近达成停战协议"（Reuters 周五消息），油价应声跳水——WTI 单日 -3.20% 跌到 <b>$84.90</b>，最近一个月跌 16%，全球风险偏好整体回暖。</li>
+      <li><b>市场盛事：</b>SpaceX 周五登陆纳斯达克，首日 <b>+19% 收 $160.95</b>，市值冲过 <b>2 万亿美元</b>，成为美股第六大公司，马斯克身价跨过 <b>一万亿美元</b>——人类第一位 trillionaire。</li>
+      <li><b>港 A 双升：</b>恒指 <b>+1.93% 报 24,718</b> 止步七连跌，周大福因财报亮眼飙 15.2%；A 股上证 <b>+1.12%</b> 重回 4000 点，但深证、创业板本周仍承压。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">COMPUTEX 2026</span>
+        <h4>黄仁勋台北放话："AI 对 TSMC 来说，已经 insanely profitable"</h4>
+        <p>英伟达 CEO 黄仁勋本周在台北 COMPUTEX 2026 致辞，明确把"AI 的赚钱机器"奖颁给了 TSMC。同期 Insider Monkey 报道：<b>TSMC 现在面临的不是订单问题，而是供不应求</b>——AI 定制芯片订单从英伟达到全球所有 AI 公司都在涌入，TSMC 正在悄悄上调代工报价。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 价值链定价权的转折信号。两年前的 AI 暴利集中在 GPU 厂（英伟达毛利 70%+），但现在产能瓶颈卡在制程 + 先进封装，<b>TSMC 开始有"涨价"底气</b>。供给侧紧 = 终端 AI 算力成本下不来 = AI 应用公司的毛利压力起码再持续 1-2 年。看 TSMC 接下来一两个季度的毛利率（市场预期 55-58%），这是验证定价权是否真的转移的关键。</div>
+        <div class="source">来源：<a href="https://www.barchart.com/story/news/2440474/nvidia-ceo-jensen-huang-calls-ai-insanely-profitable-for-tsmc-how-to-play-tsm-stock-here" target="_blank">Barchart</a> · <a href="https://www.insidermonkey.com/blog/taiwan-semiconductor-tsm-sees-ai-chip-demand-outpacing-supply-1780399/" target="_blank">Insider Monkey</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">代工争夺</span>
+        <h4>Samsung Foundry 盯上 Google 下一代 AI 芯片订单</h4>
+        <p>Bloomingbit 援引韩国半导体业界消息：因 TSMC 在 AI 定制芯片的供应短缺达到"前所未有"的程度，Google 内部开始重新评估把下一代 TPU 部分代工外移到 <b>三星晶圆代工</b>。如果成事，将是三星过去 5 年最重要的高端代工订单回流。</p>
+        <div class="why">🦞 <b>商业含义：</b>三星代工此前在 3nm 良率上长期被 TSMC 拉开身位，市场基本判它"出局"。Google 这单是给三星的救命稻草——只要 TSMC 涨价 + 排队足够久，二线代工就有翻身机会。<b>这条产业链最大的不是技术故事，是"备胎价值"</b>。看好的话：三星电子 + 配套设备（韩国半导体 SI 链）；看空的话：TSMC 单点风险溢价开始被市场重新计价。</div>
+        <div class="source">来源：<a href="https://en.bloomingbit.io/feed/news/114102" target="_blank">Bloomingbit / 韩媒</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">存储链</span>
+        <h4>美韩存储狂飙：三星电子、SK 海力士两倍做多 ETF 涨近 15%</h4>
+        <p>6/12 早盘，韩国存储芯片股集体爆发，传导到港股存储概念早盘高开。<b>南方两倍做多三星电子、南方两倍做多海力士两只 ETF 均涨近 15%</b>。背景：AI 推理需求把 HBM、DDR5 库存吃干净，下半年合约价已被预定上调。</p>
+        <div class="why">🦞 <b>映射到产业链：</b>HBM 现在是 AI 卡的"瓶颈中的瓶颈"——一颗 H200/B200 卡里 HBM 成本能占到 BOM 的 30-40%。SK 海力士 + 三星几乎吃下了 HBM3E/HBM4 的全部产能。<b>这波涨势的逻辑是 ASP（单价）+ 出货量双升</b>，比单纯的 AI 概念叙事更扎实。同时观察国内长江存储/长鑫存储进展，国产替代是 2-3 年维度的故事。</div>
+        <div class="source">来源：<a href="http://stock.10jqka.com.cn/usstock/mgscfx_list/" target="_blank">同花顺财经</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价 + 全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · 停火信号</span>
+        <h4>Reuters：美伊"接近达成结束战争的协议"</h4>
+        <p>6/12（周五）路透社引一名美国高级官员：美伊双方释放信号，<b>结束当前战争的协议已经接近</b>。AP 同日民调显示，特朗普在美国经济议题上的支持率因战争而下滑，给了白宫加快谈判的政治动机。CSIS 同期分析：中国一直在密切关注这场战争对霍尔木兹海峡和全球秩序的冲击，担忧自己也被卷进去。</p>
+        <div class="why">🦞 <b>市场含义：</b>"和平交易"开始定价——这正是周五美股冲高、油价跳水的核心驱动。但要警惕：这种"接近达成"的措辞在过去两个月已经出现过好几次，每次都被新一轮事件打回去。短期看油价、航空、新兴市场消费在反弹；中期看，<b>真正落地的停战协议要看伊朗对核计划的让步深度</b>，那才决定油价能不能站稳 $80 下方。</div>
+        <div class="source">来源：<a href="https://www.reuters.com/" target="_blank">Reuters</a> · <a href="https://apnews.com/hub/iran" target="_blank">AP News</a> · <a href="https://www.csis.org/programs/latest-analysis-war-iran" target="_blank">CSIS</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价 · 跳水</span>
+        <h4>WTI 单日跌 3.20% 报 $84.90，一个月已跌 16%</h4>
+        <p>6/12 收盘 WTI 报 <b>$84.90 / 桶，-3.20%</b>（vs 6/11 早盘的 $95.15）。过去一个月累跌 15.96%，但同比仍 +16.34%。Polymarket 上"WTI 6 月达到 X 价位"的合约也在大幅重新定价，钱开始往"和平 + 油价回归 80 美元"的方向押。</p>
+        <div class="why">🦞 <b>传导链（反向）：</b>之前我们讲"油价高 = 通胀粘 = 美联储不能降息 = 成长股压力"。这周反转——<b>油价跌 → 通胀二阶预期下修 → 美联储 6/9 月降息概率重新抬升 → 美股科技 + 港股消费 + 新兴市场货币全线反弹</b>。今天港股大消费板块全面回暖（航空 / 周大福 / 理想），就是这个链条的体现。盯紧下周 FOMC 会议措辞，那会是 confirmation。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://polymarket.com/event/what-price-will-wti-hit-in-june-2026" target="_blank">Polymarket</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>降息预期 + 通胀方向</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>油价回落 + 就业数据偏强 = 美联储路径再起拉锯</h4>
+        <p>NYSE 周报指出：周五的强月度就业报告 + 国债收益率走高，给科技股带来短暂压力。Polymarket "6 月降息" 合约目前仍倾向"不降息"，但下周 CPI 公布后概率会再调整。Cleveland Fed 通胀 Nowcasting 模型本周显示，<b>核心 CPI 同比走势已经从 3 月油价冲击的高点开始回落</b>。</p>
+        <div class="why">🦞 <b>解读：</b>美联储现在面对的不是"二选一"，而是"双向不舒服"——就业强（不想降息）+ 油价跌（通胀下修，应该考虑降息）。这种状态下，2026 年降息节奏会从原来预期的 2-3 次压缩到 1-2 次，每次降息的"先决条件"会越来越苛刻。对市场来说：<b>波动率会上升，板块轮动加快</b>。配置上，"长久期成长股 + 大宗下游消费"的剪刀差是核心交易。</div>
+        <div class="source">来源：<a href="https://www.nyse.com/index" target="_blank">NYSE</a> · <a href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting" target="_blank">Cleveland Fed</a> · <a href="https://polymarket.com/event/fed-decision-in-june-825" target="_blank">Polymarket</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="mkt-summary">
+      <b>本周三大市场关键词：</b>美股=SpaceX IPO 庆典、油价跳水拉成长股；港股=止跌反弹、大消费爆发；A 股=情绪修复 + 风格剧烈切换（金银海运 vs AI 半导体）。
+    </div>
+
+    <div class="cards">
+      <!-- A 股 -->
+      <div class="card">
+        <span class="tag mkt">🇨🇳 A 股</span>
+        <h4>上证重回 4000 点，但深 / 创全周仍跌</h4>
+        <p>6/12 收盘：<b>上证指数 +1.12% 报 4031.51 点</b>（重回 4000）；深证成指 +0.75%；创业板 +0.5%；科创综指微跌 0.24%。但拉长到本周：<b>深证成指 -2.29%、创业板指 -3.22%</b>——风格从 AI / 半导体切到金银 + 海运 + 贵金属。天齐锂业（002466）+2.46% 收 62.5 元，主力净买入 6.77 亿。资金从科技短期撤场，转去"避险 + 大宗"。</p>
+        <div class="why">🦞 <b>金融视角：</b>A 股本周给我们演了一个完整的"风格切换"剧本——油价下跌 + 美联储路径不明 → 资金从"高估值长久期 AI"切到"低估值大宗周期"。这种切换通常持续 2-4 周，然后再回归。<b>看是不是"换手洗筹" vs "趋势性 derate"，关键看周大盘成交</b>：本周两市合计成交还在 1.6 万亿以上，说明是结构调仓而不是恐慌出逃。</div>
+        <div class="source">来源：<a href="https://m.10jqka.com.cn/20260612/c677434635.shtml" target="_blank">同花顺</a> · <a href="https://www.stcn.com/" target="_blank">证券时报</a></div>
+      </div>
+
+      <!-- 港股 -->
+      <div class="card">
+        <span class="tag mkt">🇭🇰 港股</span>
+        <h4>恒指 +1.93% 报 24,718，七连跌终结；周大福飙 15%</h4>
+        <p>6/12 港股三大指数全线反弹：<b>恒生指数 +1.93% 报 24,718 点</b>，国企指数 +1.91% 报 8,374，恒生科技指数 +1.06%。<b>七连跌终结</b>。最大亮点是大消费板块：周大福（01929）<b>+15.2%</b>，因 2026 财年营收 +5.3% / 净利润 +52.2% 远超预期；中国东方航空（00670）+8.92%、理想汽车 W（02015）+7.24%、上美股份（02145）+6.05%、中国国航（00753）+5.71%、普拉达（01913）+3.79%。科技股相对滞涨。</p>
+        <div class="why">🦞 <b>逻辑读给你：</b>港股是全球资本对"中国资产"风险偏好的最敏感温度计。这一波反弹是<b>地缘软化（油价跌）+ 大消费业绩证伪（周大福证明高端珠宝/出行需求没崩）</b>的双重催化。特别看周大福——净利率从去年的 7% 跳到 10%，<b>不是销量驱动，是黄金 ASP 上行 + 高端定制占比提升</b>。这是典型的"高毛利消费升级"故事，比"折扣战 / 价格战"链条值钱。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/bxjj/2026-06-12/doc-iniccwvu8928831.shtml" target="_blank">新浪财经</a> · <a href="https://www.finet.com.cn/news/6a2bc79f23082921bb2c40f0.html" target="_blank">财华智库网</a></div>
+      </div>
+
+      <!-- 美股 -->
+      <div class="card">
+        <span class="tag mkt">🇺🇸 美股</span>
+        <h4>三大指数周线翻红，SpaceX 首日 +19% 抢镜</h4>
+        <p>6/12（周五）收盘：<b>S&amp;P 500 +0.5%、Nasdaq Composite +0.6%、Dow Jones +0.7%</b>，三大指数同步收复上周失地。最大焦点：<b>SpaceX 纳斯达克首日 +19% 收 $160.95，市值冲过 2 万亿美元，成为美股第六大公司</b>，IPO 规模为美国史上最大。马斯克身价突破一万亿美元成为人类首位 trillionaire。Reuters 注：SpaceX 估值已逼近亚马逊。恒生指数公司同日宣布将 SpaceX 纳入"恒生港美科技指数"美国成分股名单（取代或扩充"科技七巨头"）。</p>
+        <div class="why">🦞 <b>市场含义：</b>SpaceX 上市本身就是一场流动性盛宴——美国本月最大 IPO 抽走可用资金的同时，也把"太空经济"从概念股拉到主板核心配置。对二级市场短期是利好（财富效应 + 卫星 / 火箭产业链股全线上涨），中期要警惕：<b>$2T 估值对应的隐含增长假设非常激进</b>（PE 远超亚马逊），如果 Starlink 业务现金流验证不及预期，这种巨头一旦回调，会对 Nasdaq 整体形成拖累。建议关注首周 SPCX 的资金流向 + 期权 IV 走势。</div>
+        <div class="source">来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06122026-11996464" target="_blank">Investopedia</a> · <a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/legal/transactional/after-record-ipo-musks-spacex-faces-next-test-market-debut-2026-06-12/" target="_blank">Reuters</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>白酒 / 黄金 / 新能源车</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">高端珠宝</span>
+        <h4>周大福 FY2026 报：营收 +5.3%、净利 +52.2%——黄金 ASP 撑起利润</h4>
+        <p>周大福（01929.HK）6/12 公布 2026 财年（截止 3 月）业绩：营业总收入同比 +5.3%，<b>净利润同比 +52.2%</b>，远超市场预期。市场解读：营收个位数增长 + 利润五成跳升 = 利润率显著扩张。背后逻辑是金价中枢上移让定价权回到品牌方，加上高端定制系列占比提升、低毛利的纯金条业务被主动收缩。</p>
+        <div class="why">🦞 <b>金融视角：</b>这是一个非常经典的"<b>毛利率 + ASP</b>"故事——同样的销量数据，因为产品组合升级和金价中枢，让单位克黄金的销售毛利大幅提升。对比同行：六福、老凤祥的利润弹性应该会跟着出现，但品牌力 / 渠道力较弱的玩家可能只吃到 ASP 提升的"被动一半"。<b>看金价能不能在 $3,800 / 盎司上方站稳</b>，这是高端珠宝 2026 后半场的命脉。</div>
+        <div class="source">来源：<a href="https://www.finet.com.cn/news/6a2bc79f23082921bb2c40f0.html" target="_blank">财华智库网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">新能源车</span>
+        <h4>中国 5 月 NEV 渗透率破 62.9% 创新高，但乘用车整体零售跌 23%</h4>
+        <p>中国乘联会 5 月数据：新能源车（NEV）零售渗透率创纪录达到 <b>62.9%</b>，但整体乘用车零售大跌 <b>-23% YoY 到 151 万辆</b>——燃油车（ICE）份额仅剩 37.1%，约 56 万辆（同比腰斩）。BYD 单月 NEV 市占 21.8% 居首，特斯拉中国零售反弹至 <b>47,281 辆 +22.53% YoY</b>，重回前十。</p>
+        <div class="why">🦞 <b>读法：</b>"渗透率创新高 + 总量跌 23%" 这两个数同时存在，其实是行业内部加速洗牌——<b>NEV 没有把蛋糕做大，而是把燃油车的饭一口口吞掉</b>。意味着传统车厂（含合资）2026 全年压力是结构性而非周期性，没有政策红利能救。配置上：纯电独立品牌（BYD / 理想 / 小米）继续吃市占，但毛利会被价格战压；上游电池 / 锂矿（天齐这周资金净流入 6.77 亿是信号）反而比整车厂更具刚性。</div>
+        <div class="source">来源：<a href="https://carnewschina.com/2026/06/10/electric-cars-occupied-62-9-of-the-market-share-in-may-2026-in-china/" target="_blank">CarNewsChina</a> · <a href="https://cnevpost.com/2026/06/08/tesla-ends-two-month-retail-slump-china-may-2026/" target="_blank">CnEVPost</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>世界杯 + 名流</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">FIFA World Cup 2026</span>
+        <h4>世界杯开幕：墨西哥点燃，Salma Hayek、Shakira、Bublé 齐齐站台</h4>
+        <p>FIFA World Cup 2026 在墨美加三国共同举办。6/11 墨西哥城开幕式中，<b>Salma Hayek 身着 Gucci + Boucheron 胸针出任官方大使</b>，领衔 Parade of Nations；Shakira 也现身在墨西哥 vs 南非首战的开幕现场。6/12 加拿大赛区，Alanis Morissette 和 Michael Bublé 在加拿大 vs 波黑的比赛上演出。</p>
+        <div class="why">🦞 <b>话题彩蛋：</b>世界杯是个全球消费风向标——开幕周朋友圈 / 社媒讨论度直接拉满。看接下来一个月：① 全球啤酒 / 体育饮料 / 短视频平台广告费会冲一波高峰；② 北美零售商已经把世界杯主题营销当核心预算。聊天可以接："Salma Hayek 这次穿 Gucci + Boucheron 胸针出场，Kering 集团 + 历峰系都借了一波流量。"</div>
+        <div class="source">来源：<a href="https://www.eonline.com/news" target="_blank">E! News</a> · <a href="https://www.usmagazine.com/hot-pics/" target="_blank">Us Weekly</a> · <a href="https://people.com/" target="_blank">People</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">硅谷 · 富豪榜</span>
+        <h4>马斯克身价破 1 万亿美元——人类第一位 trillionaire</h4>
+        <p>SpaceX 周五挂牌后，《纽约时报》盖章："Elon Musk Becomes World's First Trillionaire on SpaceX's First Day of Trading"。马斯克的总身家（特斯拉 + xAI + SpaceX 持股 + 其他）跨过 <b>1 万亿美元</b> 门槛，超越亚马逊创始人贝索斯成为人类历史上第一位 trillionaire。</p>
+        <div class="why">🦞 <b>聊天可以用的角度：</b>"trillion"（万亿）这个量级，过去只在国家级 GDP 或公司市值里出现，现在第一次出现在"个人净资产"。从金融视角看，这种纸面财富的 99%+ 是未变现的股权，股价稍微一回调能瞬间蒸发一千亿——所以富豪榜数字的"含金量"也越来越像 mark-to-market 的波动指标，而不是真实购买力。</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/06/12/business/spacex-ipo-elon-musk" target="_blank">New York Times</a> · <a href="https://www.npr.org/2026/06/12/nx-s1-5855004/stock-ai-spacex-ipo-elon-musk" target="_blank">NPR</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>聊天用得上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">量子计算</span>
+        <h4>日本 RIKEN：单向量子同步，让量子计算机更稳</h4>
+        <p>日本 RIKEN 研究所发表论文，提出"单向量子同步"机制——让量子系统像"声音粒子的单行道"一样只朝一个方向同步，理论上能大幅降低量子计算机的退相干（decoherence）问题。这是量子纠错以外的另一个稳定性进路。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>量子计算"何时能实用"的答案，过去几年一直被三个变量卡住——比特数、纠错效率、稳定性。这个研究攻的是稳定性方向，离商用还很远，但是给一个长期信号：<b>2030 年前的"量子优势"故事正在变成"有路径可走"</b>。聊天里可以说："量子计算不是 AI 的下一个泡沫，是 AI 之后的另一座山，而且这座山的路线图正在慢慢清晰。"</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>

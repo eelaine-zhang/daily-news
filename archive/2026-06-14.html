@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-06-14</title>
+<style>
+  :root {
+    --bg: #0e1117;
+    --card: #161b22;
+    --card-hover: #1c232c;
+    --border: #2a313c;
+    --text: #e6edf3;
+    --text-dim: #9198a1;
+    --accent: #ff6b6b;
+    --accent-soft: #ff6b6b22;
+    --hbm: #ffb454;
+    --geo: #7dd3fc;
+    --macro: #a5f3a5;
+    --biz: #c084fc;
+    --fun: #f9a8d4;
+    --mkt: #fcd34d;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    padding: 28px 0 20px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 14px; color: var(--text-dim);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr {
+    background: linear-gradient(135deg, var(--accent-soft), transparent);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 24px 0 36px;
+  }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 20px; margin: 0 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: background 0.15s, transform 0.15s;
+  }
+  .card.closed { opacity: 0.85; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+  }
+  .tag {
+    display: inline-block; font-size: 11px;
+    padding: 2px 8px; border-radius: 4px;
+    background: var(--accent-soft); color: var(--accent);
+    margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle;
+  }
+  .tag.hbm { background: #ffb45422; color: var(--hbm); }
+  .tag.geo { background: #7dd3fc22; color: var(--geo); }
+  .tag.macro { background: #a5f3a522; color: var(--macro); }
+  .tag.biz { background: #c084fc22; color: var(--biz); }
+  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.mkt { background: #fcd34d22; color: var(--mkt); }
+  .mkt-grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  .mkt-summary {
+    background: #0b1118; border: 1px dashed var(--border); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 8px;
+    font-size: 13px; color: var(--text-dim);
+  }
+  .mkt-summary b { color: var(--text); }
+  .holiday-banner {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; letter-spacing: 0.08em;
+    background: #fcd34d22; color: var(--mkt);
+    margin-bottom: 6px;
+  }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim); font-size: 13px; text-align: center;
+  }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 6 月 14 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美伊周日"签字"信号：</b>Trump 周六放话美伊和平协议<b>今天（周日）就要签</b>，伊朗官方称草案 <b>14 点</b>包括立即停火、解冻 $240 亿资产、解除海上封锁；油价 WTI 已跌破 $84 / 桶，<b>8 周新低</b>。</li>
+      <li><b>三星完成对英伟达"全套通关"：</b>HBM4 已经在量产供应 Vera Rubin，HBM4E / HBM5 + 自动驾驶芯片代工 + Groq LP40 推理芯片代工同步开谈——SK 海力士在 HBM 端独大的局面正式被打破。</li>
+      <li><b>NBA + 世界杯双盛事：</b>Knicks 主场今晚（HKT 周日早上 8:30）打 G5 可能锁定 17 年来首冠；世界杯小组赛首战美国 <b>4-1 巴拉圭</b>、墨西哥 <b>3-1 南非</b> 完胜东道主开门红。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">HBM 格局</span>
+        <h4>三星"全员通关"英伟达：HBM4 已在量产供应，HBM4E / HBM5 + LP40 推理芯片代工同步谈定</h4>
+        <p>过去一周确定的进展：（1）三星 HBM4 已经正式开始为 Nvidia 下一代 AI 平台 <b>Vera Rubin</b> 出货，三星电子副会长全永贤 6/9 与黄仁勋首尔会面后官宣；（2）Nvidia 同步确认 <b>三星、SK 海力士、Micron 三家都通过了 HBM4 认证</b>；（3）双方启动 HBM4E、HBM5 联合路线图谈判；（4）三星晶圆代工开始竞标 Nvidia 旗下推理芯片 <b>Groq LP40</b> 的代工订单，同时洽谈自动驾驶芯片代工。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>去年三星因为 HBM3 良率问题被 Nvidia "黑名单"，把价值上千亿美元的 HBM 订单拱手让给 SK 海力士。今年这一波"全套通关"意味着 <b>HBM 不再是单一供应商垄断</b>——Nvidia 拿到议价权，能压低 BOM 成本里的 HBM 占比（目前 30-40%）。映射到金融视角：（1）SK 海力士的"超额利润"故事见顶，估值有 derate 风险；（2）三星电子和 Micron 是受益者，但价格战会压利润率；（3）对 Nvidia 自己是利好——AI 卡毛利可以更扎实地撑住 70%+。</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/318015/20260609/samsung-pursues-nvidia-hbm4e-supply-lp40-foundry-work-after-seoul-bilateral.htm" target="_blank">TechTimes</a> · <a href="https://www.digitimes.com/news/a20260609PD200/samsung-nvidia-chips-sk-hynix-business.html" target="_blank">DigiTimes</a> · <a href="https://www.sammobile.com/2026/06/09/nvidia-approves-samsungs-hbm4-for-its-next-gen-ai-accelerators/" target="_blank">SamMobile</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">软件侧 AI 战</span>
+        <h4>苹果 WWDC 2026 复盘：Siri AI 跑在自家 5 个基础模型上，Gemini 只是"外挂"</h4>
+        <p>WWDC 2026 已经过去快一周，市场对苹果 AI 路径开始有更清晰认识。PCMag 拆解："Siri AI 不是 Gemini 套壳"——它跑在一个被苹果叫 <b>AFM（Apple Foundational Models）</b>的家族上，分 5 个层级，从端侧到云端都有，Gemini 只在"需要复杂推理 / 联网"时被调用。iOS 27、macOS 27 Golden Gate 秋季发布。Apple 服务器 AI 推理用自研 M-Series + 部分 Nvidia GPU 混合。</p>
+        <div class="why">🦞 <b>产业含义：</b>这给"AI 价值链"画出三种角色：（1）模型提供商（OpenAI / Anthropic / Google）；（2）模型部署 / 集成商（苹果就是典型，用 5 个自家模型+ Gemini 备份）；（3）算力卖水人（Nvidia / TSMC）。苹果走的"自家模型 + 外接 Gemini" 路线，<b>不会把所有数据流到 Google</b>，但确保最强能力可以借用——这是商业上最稳的搭配。对 lainy 关注的产业链：苹果训练 + 推理仍然要买卡，但买的量不会失控，<b>AI 资本开支的边际增量在 hyperscaler 而不是苹果</b>。</div>
+        <div class="source">来源：<a href="https://www.pcmag.com/opinions/i-went-into-wwdc-2026-expecting-a-gemini-clone-but-apples-new-siri-proved" target="_blank">PCMag</a> · <a href="https://www.wired.com/story/everything-apple-announced-at-wwdc-2026/" target="_blank">WIRED</a> · <a href="https://www.cnbc.com/2026/06/08/apple-wwdc-2026-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">设备短缺</span>
+        <h4>AI 供应链短缺从"芯片"扩散到"设备"——被动元件、封装机台都开始涨价</h4>
+        <p>DigiTimes 调查显示，AI 服务器拉动的需求正在从"芯片"扩散到"周边"：松下宣布上调 <b>SP-Cap</b>（应用于 AI 服务器的高端钽电容）报价，应对被动元件供不应求；台积电 CoWoS 封装设备也出现 3-6 个月交期。整体看法：2026 年下半年 AI 算力建设的"瓶颈"已经从 HBM、GPU 卡，外扩到电容、封装机、HBM 测试机等"非旗舰"环节。</p>
+        <div class="why">🦞 <b>读法：</b>这个故事比"Nvidia 涨多少"更值钱——<b>AI 价值链每往下游一节，估值都被市场低估</b>。被动元件（村田 / 国巨 / 三环）、封装设备（Disco / ASMPT / 中微）、HBM 测试机（爱德万 / 长川）这几个细分赛道，订单还在加速，但市值还远没到 Nvidia / TSMC 的"AI 溢价"水平。这就是配置上的"挖深"机会——当主线龙头估值已经透支，资金会找下一节去 derate 修复。</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260609PD200/samsung-nvidia-chips-sk-hynix-business.html" target="_blank">DigiTimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价 + 全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊 · "周日签字"</span>
+        <h4>Trump 称美伊和平协议"今天周日就要签"——14 点草案曝光</h4>
+        <p>CBS News 周六（6/13）独家报道：Trump 公开表示美伊和平协议"将于周日（6/14）签署"。伊朗外长 Araghchi 在记者会上称<b>"美伊和平从未如此接近"</b>。伊朗国家媒体 Mehr 同步公布 14 点协议草案要点：（1）所有战线立即停火；（2）取消对伊朗的海上封锁和石油制裁；（3）释放被冻结的 <b>$240 亿美元</b>资产，其中一半先解冻 $120 亿；（4）后续 60 天延期谈判仅限核问题和制裁；（5）伊朗承诺重开霍尔木兹海峡，恢复全球油运。<b>Iran International 称协议可"远程签约"（双方不必同地）</b>。</p>
+        <div class="why">🦞 <b>市场含义：</b>这次比过去几次"接近"都要硬——草案细节、双方表态、媒体定档全部到位。如果今天周日确认签字：（1）油价继续下杀，WTI 可能跌穿 $80；（2）航空 / 旅游 / 新兴市场货币 / 美股科技继续反弹；（3）黄金会回吐部分避险溢价，但美元未必跟着走强（因为降息空间反而被打开）。最大风险点是 <b>核问题让步深度</b>——伊朗坚持"和平利用核能权利"，美方要"完全去核化"，这一条说不准会不会在最后关头爆雷。</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-peace-deal-agreement/" target="_blank">CBS News</a> · <a href="https://www.iranintl.com/en/liveblog/202606062776" target="_blank">Iran International</a> · <a href="https://apnews.com/article/iran-war-us-pakistan-ceasefire-what-to-know-949710df39e3f1033cbb6beda3955814" target="_blank">AP News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价 · 8 周新低</span>
+        <h4>WTI 跌穿 $84 / 桶，最近 8 周累跌 21%——"和平交易"还在加码</h4>
+        <p>Trading Economics 6/13 数据：WTI 收 $83.95，跌穿 $84 关口，<b>创 8 周新低</b>。回看最近 8 周，WTI 从 4 月下旬的 $106 一路下跌到现在，<b>累计 -21%</b>。Brent 同步跌到 $88 下方。原油下跌的驱动从单纯"OPEC+ 增产"变成"OPEC+ 增产 + 美伊和谈"双重利空。市场把 6 月 FOMC 之后的"年内 1-2 次降息"概率重新调上。</p>
+        <div class="why">🦞 <b>金融视角传导链：</b>油价 $20+ 的下跌，会通过下面几个机制传导到全球资产价格：（1）通胀二阶预期下修 → Fed 降息空间打开 → 长久期成长股估值修复；（2）航空 / 物流 / 化工等"油价成本占比 > 15%" 的行业毛利率改善 1-2 个点；（3）能源生产国（沙特 / 俄罗斯 / 加拿大）汇率承压；（4）新兴市场进口国（印度 / 土耳其 / 中国）贸易项改善 → 货币 + 股市同步反弹。所以这一波港股 + A 股大消费的强势，<b>底层逻辑就是"中国是大宗的净进口国，油价跌 = 直接利好"</b>。</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire" target="_blank">Wikipedia / 2026 Iran War Ceasefire</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>降息预期 + 通胀方向</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储 · 降息博弈</span>
+        <h4>Polymarket：6 月 FOMC "不降息"概率仍占优，但油价跳水让 9 月降息合约重新升温</h4>
+        <p>Polymarket 周末数据：6 月 FOMC（6/17-18）"维持利率 3.50-3.75%" 概率<b>稳在 85% 以上</b>；但 9 月 FOMC "降息 25bp" 合约在油价跌穿 $84 之后，从 32% 跳到 <b>48%</b>。Cleveland Fed 通胀 Nowcasting 模型 6/13 数据：6 月核心 CPI 同比预测从此前 2.95% 微降到 <b>2.87%</b>。市场正在为"通胀 + 就业齐降"的"软着陆"剧本重新定价。</p>
+        <div class="why">🦞 <b>解读：</b>美联储 5 月那次 8-4 的分裂投票（自 1992 年以来首次出现 4 票反对）已经说明内部对降息时机分歧很大。<b>油价跌 + 美伊和谈，相当于给鸽派提供弹药</b>——通胀的"二阶导"在向下，鲍威尔有空间在 9 月开始降。但要警惕：（1）就业还很强（5 月失业率 4.3%），鹰派会用就业数据反推"暂时不降"；（2）如果 9 月真降息，长端美债收益率反而可能因为"通胀预期重燃"而上行——这是市场最近反复在交易的"鲍威尔 chicken game"。</div>
+        <div class="source">来源：<a href="https://polymarket.com/event/fed-decision-in-june-825" target="_blank">Polymarket</a> · <a href="https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting" target="_blank">Cleveland Fed</a> · <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金 + 比特币</span>
+        <h4>金价 $4,100 关口横盘、比特币站上 $64,000——风险偏好"分裂式回暖"</h4>
+        <p>6/13 周六：现货金价在 $4,100 / 盎司附近反复，全周累跌 1.2%；比特币周六交易在 <b>$64,000 上方</b>，ETF 净流入达到一个月最强。Coinbase 引述："Bitcoin 因美伊和谈推进 + ETF 资金流入双重利好上行。" 与此同时美元指数小幅走弱，10 年期美债收益率从 4.55% 回到 4.41%。</p>
+        <div class="why">🦞 <b>对比读：</b>这是个典型的"和平交易 + 风险偏好回暖" 配置剧本。黄金的"避险溢价"被打折扣，但又因为美元走弱 + 利率下行而没有真正崩盘——所以横盘。比特币更纯粹：<b>它对降息预期 + 风险偏好的 beta 远大于黄金</b>，所以一有降息合约重定价就跳得比金价快。对 lainy 的金融视角：如果你想观察"市场对鸽派 Fed 押注的强度"，比特币比标普 500 信号还干净——因为它不掺杂业绩、回购、政策这些干扰项。</div>
+        <div class="source">来源：<a href="https://www.coinbase.com/price/bitcoin" target="_blank">Coinbase</a> · <a href="http://www.kitco.com/" target="_blank">Kitco Gold</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="mkt-summary">
+      <b>本周末关键词：</b>A 股 / 港股 / 美股全部进入周末休市状态。本周收官三大主线——美股 SpaceX IPO 抢戏（首日 +19% 收 $160.95）、港股大消费板块爆发（周大福 +15.2%）、A 股风格切换从 AI 切回大宗 + 金银。本周值得提前盯：6/17-18 FOMC + 6/20 美股期权大到期日。
+    </div>
+
+    <div class="cards">
+      <!-- A 股 -->
+      <div class="card closed">
+        <span class="tag mkt">🇨🇳 A 股</span>
+        <div class="holiday-banner">周末休市 · 下周一 6/15 开市</div>
+        <h4>本周收官：上证 +0.3%、深 -2.3% / 创业 -3.2%——风格剧烈切换</h4>
+        <p>本周（6/8-6/12）A 股大盘维度走平偏弱，但内部结构剧烈分化。<b>申万宏源最新研报</b>定调："本周 A 股结构有变、内部分化"：半导体材料周四还人气冲天，周五就高位跳水；低位的有色 / 黄金 / 券商正好相反，<b>从冷门资金回流</b>。乘联会 5 月数据另一面：燃油车零售 -39%、新能源车渗透率破 63%、整体乘用车零售 -23%，<b>汽车板块下周一应该会承压</b>。</p>
+        <div class="why">🦞 <b>下周一看点：</b>关注三个维度——（1）金价走势对应的有色 / 黄金股能不能延续；（2）汽车 / 锂电下跌后估值修复机会（天齐锂业上周已经吸引主力净流入 6.77 亿）；（3）AI 半导体的"高位回踩 vs 风格 confirmation"——如果美股周一夜盘走稳，A 股 AI 链条有可能再启动一次。<b>本周二市日均成交 1.6 万亿是健康水位</b>，结构调仓而不是恐慌出逃。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001906p8zu.html" target="_blank">新浪财经</a> · <a href="https://carnewschina.com/2026/06/10/electric-cars-occupied-62-9-of-the-market-share-in-may-2026-in-china/" target="_blank">CarNewsChina</a></div>
+      </div>
+
+      <!-- 港股 -->
+      <div class="card closed">
+        <span class="tag mkt">🇭🇰 港股</span>
+        <div class="holiday-banner">周末休市 · 下周一 6/15 开市</div>
+        <h4>恒指本周 +1.1% 止跌回稳——周大福领衔的大消费成为新主线</h4>
+        <p>本周（6/8-6/12）港股回稳。恒生指数全周 <b>+1.1%</b> 终结 5 周连跌；恒生科技指数全周 -0.4% 相对滞涨。最大的故事在大消费板块——周大福（01929）FY2026 净利 +52.2% 远超预期，<b>给"消费升级 + 高端 ASP"叙事提供了硬数据</b>。其它强势：中国东方航空 +8.92%、理想 +7.24%、上美股份 +6.05%、普拉达 +3.79%。AI 双雄（智谱 / MiniMax）解禁压力周三已经消化完。</p>
+        <div class="why">🦞 <b>下周一看点：</b>港股的反弹要不要继续，核心看周末美伊签字。如果 Trump 周日确认协议落地：（1）港股早盘极大概率跳空高开，大消费 + 航空继续抬高；（2）科技股有可能补涨，但要看美股周一夜盘；（3）金价如果继续横盘 → 周大福这种"金价 ASP" 叙事会被部分计入。如果协议又"晚 24 小时"——周一可能高开低走。</div>
+        <div class="source">来源：<a href="https://www.finet.com.cn/news/6a2bc79f23082921bb2c40f0.html" target="_blank">财华智库网</a></div>
+      </div>
+
+      <!-- 美股 -->
+      <div class="card closed">
+        <span class="tag mkt">🇺🇸 美股</span>
+        <div class="holiday-banner">周末休市 · 下周一 6/15 开市</div>
+        <h4>三大指数本周翻红，但下周大事在 6/17-18 FOMC</h4>
+        <p>本周（6/8-6/12）美股三大指数集体周线收红：S&amp;P 500 +0.9%、Nasdaq +1.4%、Dow +0.6%。最大彩蛋仍然是 <b>SpaceX 周五 IPO 首日 +19% 收 $160.95</b>，市值冲过 2 万亿美元，成为美股第六大公司。本周一直被市场提及的下周事件：<b>6/17-18 FOMC + 6/20 美股期权三大到期</b>，VIX 周五已经从前周高点 19.87 回到 16.42，市场用脚投票认为短期波动率会被压住。</p>
+        <div class="why">🦞 <b>下周看点：</b>美股本周的反弹结构很"健康"——并非单纯科技股领涨，而是科技 + 金融 + 能源（注意：能源是逆向回稳）三轨同步。这种走势比"七巨头单独抗大盘"更有持续性。下周三个关键节点：（1）6/15-16 周一 / 周二开盘，看美伊协议是否真签；（2）6/17-18 FOMC 会议措辞——只要鲍威尔不强行"鹰派 walk-back"，市场会继续 reprice 9 月降息；（3）6/20 期权大到期，<b>可能引发短期"轧空 + 砸单"双向波动</b>，提前减仓的策略已经被很多机构预设。</div>
+        <div class="source">来源：<a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-06122026-11996464" target="_blank">Investopedia</a> · <a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>燃油车崩盘 + 奢侈品涨价见顶</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">燃油车 · 加速死亡</span>
+        <h4>5 月燃油车零售 -39%——中国 NEV 渗透率破 63% 不是惊喜，是燃油车被"踩刹车踩到地板"</h4>
+        <p>36Kr / 虎嗅周末复盘：乘联分会 5 月数据给出三个数字的"完整意思"——（1）整体乘用车零售 -23%；（2）新能源车（NEV）渗透率创纪录 <b>62.9%</b>；（3）<b>燃油车零售 -39%（去年同期 1093.5 万辆 → 今年减半），同比腰斩。</b>"燃油车贡献了乘用车市场同比减量的 82%"。秘书长崔东树点名：<b>油价是直接推手——燃油车 5 年总持有成本（TCO）已经被纯电拉开 1.5-2 倍</b>。</p>
+        <div class="why">🦞 <b>金融视角：</b>NEV 渗透率每提升 1 个百分点，对应的是约 25 万辆 / 月的存量市场被换手。这一波最受伤的不是合资品牌（早就预期）而是<b>独立燃油车经销商</b>——4S 店 30 天 / 库存周转 → 60 天 → 90 天，金融成本压死。下周一开盘建议盯：（1）庞大集团 / 中升控股这类纯燃油经销商；（2）反方向——上游电池 / 锂矿（天齐 / 赣锋）的资金回流逻辑还在；（3）NEV 头部（BYD / 理想 / 小米）继续吃份额。<b>这是一个"行业级 derate" 的故事，不是"价格战暂时拖累"</b>。</div>
+        <div class="source">来源：<a href="https://www.36kr.com/p/3847184364718601" target="_blank">36Kr</a> · <a href="https://www.huxiu.com/article/4866993.html" target="_blank">虎嗅</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品 · 涨价见顶</span>
+        <h4>爱马仕都"降速涨价"——2026 年涨幅从 6-7% 调到 5-6%，整个行业的"涨价驱动增长"剧本走到头</h4>
+        <p>36Kr 援引 Houlihan Lokey 报告：<b>2020-2025 年间，整个奢侈品行业约 80% 的增长来自涨价而非销量提升</b>。最坚挺的爱马仕，CEO Axel Dumas 现在公开承认 2026 年的涨幅将从去年 6-7% 降到 5-6%。同时 The Robin Report 数据：LVMH 时尚皮具（占集团营收近一半）2025 年下滑 8% 到 <b>$440 亿</b>，利润 -13%，所有报告板块除一项之外全跌。</p>
+        <div class="why">🦞 <b>读法：</b>这是奢侈品行业 5 年来最重要的转折信号。过去的"涨价 + 限量 = 保值"剧本依赖三件事：（1）通胀环境给"涨价"合理化叙事；（2）中国新富 / 中产消费升级承接；（3）二手市场流动性维持。现在三件事都在退潮：通胀回归 + 中国消费分化 + 二手价跌。爱马仕主动降速 = 行业最敏感的玩家在调整。<b>对应到投资逻辑：LVMH / Kering / Burberry 短期 EPS 仍有压力，但"低预期 + 估值打到位"会从下半年开始进入抄底窗口</b>。比较稳的是<b>能转型做"轻奢 + 高频"的玩家（Ralph Lauren / Coach / Hugo Boss）</b>，反而比真奢侈品更抗周期。</div>
+        <div class="source">来源：<a href="https://36kr.com/p/3804964881489664" target="_blank">36Kr · 爱马仕香奈儿</a> · <a href="https://therobinreport.com/lvmh-fall-from-grace/" target="_blank">The Robin Report</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>世界杯 + NBA</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">FIFA World Cup 2026</span>
+        <h4>世界杯小组赛首日：美国 4-1 巴拉圭、墨西哥 3-1 南非——三个东道主全部开门红</h4>
+        <p>6/13（周六）三个东道主在主场全部赢球：（1）<b>美国 4-1 巴拉圭</b>（西雅图 Lumen Field）；（2）<b>墨西哥 3-1 南非</b>（墨西哥城阿兹特克体育场，揭幕战）；（3）加拿大 1-1 波黑（多伦多 BMO Field）。<b>韩国 2-1 逆转捷克</b>，黄仁范传射 + 吴贤揆制胜球，但比赛出现两个进球三张红牌的火爆场面。这是史上首次三国联办、48 支球队参赛的世界杯。</p>
+        <div class="why">🦞 <b>聊天用得上：</b>三个东道主全主场开门红，这种"开局气氛"对赛事赞助商（Visa / Adidas / Coca-Cola / 海信）来说是最佳剧本。<b>北美零售商已经把世界杯营销当核心预算</b>，开局气势好 = 后续广告费可以更激进。聊天里可以接："这届世界杯北美三地联办，光转播权 + 商业赞助就锁了 110 亿美元，超过 2022 卡塔尔世界杯 60% 以上。" 比赛之外，开幕式的 Salma Hayek + Shakira + Bublé 的全明星阵容已经把社媒讨论量拉到顶。</div>
+        <div class="source">来源：<a href="https://worldcup.cctv.com/2026/" target="_blank">CCTV 世界杯</a> · <a href="https://www.sohu.com/a/1036083124_163278" target="_blank">搜狐体育</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA Finals</span>
+        <h4>今晚 G5 Knicks 主场可能锁定首冠——3-1 领先 Spurs，Brunson vs Wemby MVP 之争</h4>
+        <p>2026 NBA Finals 已经打到 G5：<b>纽约 Knicks 3-1 领先圣安东尼奥 Spurs</b>。今晚（HKT 周日 6/15 早 8:30）麦迪逊广场花园开打，<b>赢一场 Knicks 就锁定 17 年来首个 NBA 总冠军</b>（上一次是 2009 年 Lakers 在 MSG 阻击 Knicks 之后再没回过总决赛）。G4 Knicks 完成 NBA 总决赛历史上最大逆转——客场 0-29 落后翻盘 105-104，OG Anunoby 1.2 秒补篮绝杀。MVP 之争：Brunson 平均 28+7、Wemby 平均 26+11+4 block，<b>但赢家定夺冠</b>。</p>
+        <div class="why">🦞 <b>商业含义角度：</b>Knicks 拿冠军这个事，<b>对纽约的消费经济贡献远超想象</b>——MSG Sports（MSGS）股价过去 6 个月已经涨了 41%；纽约餐饮 / 酒店 / 出租车 6 月的"事件营收"会被显著拉高。ABC 收视：G4 全美 1500+ 万观众，本周末 G5 预测能冲到 <b>1800 万</b>，是过去 10 年最高的 NBA 总决赛收视。MSG 体育之夜 + 上 trillion 美元的马斯克富豪席位（昨天 SpaceX IPO 后他亲自飞纽约）让今晚成为体育 + 商业的双盛事。</div>
+        <div class="source">来源：<a href="https://www.espn.com/nba/story/_/id/49029549/2026-nba-finals-game-5-preview-predictions-new-york-knicks-san-antonio-spurs-wembanyama-brunson-mvp" target="_blank">ESPN</a> · <a href="https://www.sportingnews.com/us/nba/news/knicks-spurs-live-score-highlights-2026-nba-finals-game-5/13300cfb54117ec7eab74d51" target="_blank">Sporting News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title"><span class="emoji">🎨</span> 科技 / 科学花边 <small>聊天用得上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI · 写作进入"无 ECHO"时代</span>
+        <h4>AI 写作工具开始攻克"AI 痕迹检测"——下一个被 derate 的将是"AI 检测器"赛道</h4>
+        <p>本周关注度起来的小新闻：多家厂商发布的最新版本 AI 写作工具（含 OpenAI 的 GPT 系列、Anthropic 的 Claude 系列）通过"风格扰动 + 句法多样化"训练，<b>在主流 AI 检测器（GPTZero / Turnitin / Copyleaks）上的检出率已经从去年的 92% 降到 14% 左右</b>。学术界出现 vocal 反对——但教育产品厂商已经在悄悄调整定价策略。</p>
+        <div class="why">🦞 <b>科技 + 商业彩蛋：</b>"AI 检测"过去三年是 Turnitin / Copyleaks 等公司一个利润高速增长点，<b>SaaS ARR 增速 60%+</b>。但本质上这是个"猫鼠游戏"——只要生成模型每升级一次，检测器就必须重建训练集，<b>检测一定是滞后的</b>。和"杀毒软件"一样，这是个长期会被压缩到极薄毛利的细分市场。聊天可以接："凡是依赖'对手不进步'的商业模式，长期都不可投——AI 检测就是一个很好的例子。"</div>
+        <div class="source">来源：综合社媒 / Reddit r/ArtificialIntelligence 本周讨论 · GPTZero 官方博客</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
