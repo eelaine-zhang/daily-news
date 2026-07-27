@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-26</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .target { margin-top: 6px; font-size: 13px; color: var(--hbm); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block .target { margin-top: 6px; font-size: 13px; color: var(--hbm); }
+  .chain { margin-top: 10px; padding: 8px 12px; background: var(--card-hover); border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+
+  /* v2 视觉升级 */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-dim); font-size: 13px; text-decoration: none;
+    margin-bottom: 16px; padding: 6px 12px; border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+
+  .section-title {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    border-bottom: none !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+
+  .card .why {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px; border-top: none;
+    font-style: normal;
+  }
+  .card .why::before {
+    content: "💡 "; font-style: normal;
+  }
+
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+
+  .tldr {
+    box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04);
+    border-left: 4px solid var(--macro);
+  }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 26 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 硬件：</b>英伟达与 SK 集团宣布 $5000 亿+ AI 基础设施合作——锁定 SK Hynix 下代 HBM 供应、共建 2GW AI 工厂；同时投资 $10 亿入股 Naver 在韩国建国家级 AI 数据中心。</li>
+      <li><b>市场：</b>美股周五道指 +0.46% 但纳指 -0.64% 芯片股普跌，三大指数周线连跌；A 股沪指 -1.61% 跌破 3850，成交跌破 2 万亿；港股恒指 -0.98% 失守 25000。长鑫科技 7/27 科创板上市，5800 亿估值 IPO 巨型抽水效应引发市场担忧。</li>
+      <li><b>国际：</b>美伊战争第 13 天持续空袭，中国斡旋促和谈消息致油价周五大跌 4%+，但 Brent 周内仍破 $100；乌克兰向俄罗斯发射 300+ 无人机，俄弹道导弹击中基辅武器展览致 10 死。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">英伟达 · SK 集团</span>
+        <h4>$5000 亿史诗级合作：英伟达锁定 SK Hynix 下代 HBM 供应 + 2GW AI 工厂</h4>
+        <p>7/25，英伟达与韩国 SK 集团在旧金山 AI Summit 上签署总价值超 <strong>$5000</strong> 亿的战略合作协议。核心内容包括：(1) SK Hynix 与英伟达建立长期 AI 内存合作关系，锁定下代 HBM 供应并共同开发优化方案；(2) SK Telecom 建设最高 2GW 的 AI 工厂；(3) 英伟达获得 SK Hynix 下代 HBM 的"共同开发权"。黄仁勋在签约后的酒会上要了"再来一杯啤酒"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是普通的采购合同——"共同开发权"意味着英伟达从"买方"升级为"技术合作伙伴"，深度介入 HBM 设计阶段。这直接回应了市场对 HBM 供应瓶颈的最大担忧，也进一步巩固了 SK Hynix 在 HBM 市场对三星、美光的领先优势。对产业链来说：HBM 供应紧张短期不会缓解，但英伟达锁定了产能 = 竞争对手（AMD、自研 ASIC 厂商）更难拿到高端 HBM。</div>
+        <div class="target">📌 关联标的：NVDA（受益）、000660 SK Hynix（核心受益）、512760 半导体ETF（受益）、AMD（相对受损—HBM获取难度加大）</div>
+        <div class="source">🔗 来源：<a href="https://www.cnbc.com/2026/07/25/nvidia-locks-down-memory-from-sk-hynix-as-part-of-500-billion-ai-deal.html" target="_blank">CNBC</a> · <a href="https://news.skhynix.com/en/skhynix-nvidia-partnership-2026/" target="_blank">SK Hynix 官方</a> · <a href="https://hothardware.com/news/nvidia-secures-sk-hynix-hbm-memory-500b-ai-infrastructure-deal" target="_blank">HotHardware</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达 · Naver</span>
+        <h4>英伟达投资 $10 亿入股 Naver，共建韩国"国家级 AI 工厂"</h4>
+        <p>同日，英伟达宣布投资 <strong>$10</strong> 亿入股韩国 Naver，与 Naver 和 Brookfield 合作扩建韩国国家级 AI 工厂基础设施，融资规模可达 <strong>$100</strong> 亿。采用英伟达 DSX 平台（端到端 AI 工厂栈，涵盖芯片、系统、软件、设施），目标最小化 token 成本。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>英伟达正在从"卖芯片"转向"投资+建设+运营 AI 工厂"的全栈模式。投资 Naver = 在亚洲建立一个不依赖中国市场的 AI 基础设施枢纽。对 Naver 来说，拿到英伟达股权投资 = 成为韩国 AI 基础设施的"国家队"。市场含义：英伟达的资本支出在扩大，但每一笔都在加固护城河。</div>
+        <div class="target">📌 关联标的：NVDA（受益）、035420 Naver（核心受益）、Brookfield BAM（受益）</div>
+        <div class="source">🔗 来源：<a href="https://www.globenewswire.com/news-release/2026/07/25/3333160/0/en/NAVER-NVIDIA-and-Brookfield-to-Expand-Korea-s-National-AI-Factory-Infrastructure-Buildout.html" target="_blank">GlobeNewswire</a> · <a href="https://www.gurufocus.com/news/8979002/nvidia-partners-with-naver-and-brookfield-for-ai-data-center-expansion" target="_blank">GuruFocus</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">长鑫科技</span>
+        <h4>长鑫科技 7/27 科创板上市：5800 亿估值、579 亿募资，2026 年 A 股最大 IPO</h4>
+        <p>中国 DRAM 第一股长鑫科技（688825）将于 7/27（周一）登陆科创板，发行价 8.66 元/股，对应约 5800 亿元估值，募资总额约 579 亿元。市场争议焦点：抽水效应——600 亿级别的 IPO 在当前 A 股缩量环境下（日成交已跌破 2 万亿）可能引发流动性压力。但也有观点认为，长鑫是国产存储芯片替代的关键标的，上市后有望吸引增量资金入场。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>长鑫是中国唯一量产 DRAM 的公司，对标三星、SK Hynix、美光。它的上市不只是一次 IPO——是国产存储芯片产业链的"定价锚"。如果上市后表现稳健，将提振整个国产替代板块；如果破发或爆炒后回落，则打击后续明星科技股的上市节奏。对 lainy 来说：这是本周 A 股最重要的事件，没有之一。</div>
+        <div class="target">📌 关联标的：688825 长鑫科技（新股）、512760 半导体ETF（关联）、600584 长电科技（封测关联）、300142 沃森生物（无关联，但同属科创板权重）</div>
+        <div class="source">🔗 来源：<a href="https://finance.sina.com.cn/roll/2026-07-25/doc-iniiyptp4564764.shtml" target="_blank">新浪财经</a> · <a href="https://news.qq.com/rain/a/20260725A04J7F00" target="_blank">腾讯新闻</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [SK Hynix HBM / 长鑫 DRAM] → 中游 [英伟达 GPU / DSX 平台] → 下游 [AI 工厂 / 云厂商] — 当前受益环节：SK Hynix（内存锁单）、长鑫科技（国产替代定价锚）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊 · 乌俄 · 中美</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊战争</span>
+        <h4>美伊战争第 13 天：持续空袭 + 中国斡旋促和，油价周五大跌 4%+</h4>
+        <p>美军中央司令部宣布 7/23 晚完成对伊朗第 13 天空袭。与此同时，彭博报道美国政府在国内筹措军事行动资金方面遭遇阻力。关键转折：中国开始斡旋，推动恢复美伊和谈，消息导致布伦特原油周五暴跌超 4%。但特朗普表示"可以继续按现有方式行动，也可以更迅速地加强打击"，语气依然强硬。巴基斯坦也呼吁双方停火。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是本周市场最大的变量。中国斡旋 = 第一次有非西方大国正式介入调停，如果成功将大幅压低油价。但美国国内资金受阻 + 特朗普强硬表态 = 不确定性仍在。对市场来说：油价回落 → 通胀预期降温 → Fed 加息压力减轻 → 风险资产反弹。这条逻辑链下周还会继续交易。</div>
+        <div class="target">📌 关联标的：Brent 原油（下行风险）、COMEX 黄金（避险溢价回落）、USO 原油ETF、XLE 能源股（受损）、航空股 JETS（受益于油价下跌）</div>
+        <div class="source">🔗 来源：<a href="https://sputniknews.cn/20260725/1072481667.html" target="_blank">卫星通讯社</a> · <a href="https://www.ntdtv.com/gb/2026/07/24/a104118372.html" target="_blank">新唐人</a> · <a href="https://www.energyupdate.com.pk/2026/07/25/oil-prices-slide-over-4-on-hopes-of-renewed-us-iran-peace-talks-despite-weekly-surge/" target="_blank">Energy Update</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄战争</span>
+        <h4>俄弹道导弹击中基辅武器展览致 10 死；乌克兰向俄发射 300+ 无人机</h4>
+        <p>7/25，俄罗斯弹道导弹袭击基辅附近的一个国防工业展览现场，造成至少 10 人死亡、近 100 人受伤——泽连斯基称该展览"本不该举行"。同日，乌克兰向俄罗斯发射超过 300 架无人机，击中别尔哥罗德（2 人死亡）并远达叶卡捷琳堡的 Wildberries 仓库。俄方还报告称俄占区度假营地被袭，5 名儿童在内的 12 人死亡。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>双方都在升级打击力度——乌克兰用 300+ 无人机深入俄罗斯本土，俄罗斯用弹道导弹打武器展览。战争正在从"前线消耗"转向"纵深打击"。市场含义：欧洲安全格局持续恶化，北约军费开支预期上行，国防股（LMT、RTX、欧洲空客防务）受益。</div>
+        <div class="target">📌 关联标的：LMT 洛克希德·马丁（受益）、RTX 雷神技术（受益）、02357 航天控股（受益）、布伦特原油（地缘溢价维持）</div>
+        <div class="source">🔗 来源：<a href="https://kyivindependent.com/" target="_blank">Kyiv Independent</a> · <a href="https://www.theguardian.com/world/2026/jul/25/ukraine-war-briefing-ten-killed-russian-attack-weapons-exhibition-near-kyiv" target="_blank">The Guardian</a> · <a href="https://www.themoscowtimes.com/2026/07/25/ukrainian-attacks-kill-2-in-belgorod-and-target-wildberries-warehouse-in-urals-a93338" target="_blank">Moscow Times</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [原油/天然气供应] → 中游 [运输/航运保险] → 下游 [炼化/航空/化工] — 当前受损环节：航运（霍尔木兹封锁保险费飙升）、航空（燃油成本）；受益环节：国防军工、油气替代（美国页岩油）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed · IMF · 大宗商品</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>FOMC 7/28-29 会议：市场预计按兵不动，但油价飙升让加息预期升温</h4>
+        <p>下周三-四 FOMC 会议是本周最大宏观事件。市场共识：不加息。但 CBS 报道，油价飙升促使投资者大幅提高对未来加息的押注。新任 Fed 主席 Kevin Warsh 6 月会议上拒绝参与 SEP（经济预测摘要），被解读为"制度变革"信号。6 月 CPI <strong>3.5%</strong> 显示通胀粘性，但较 5 月有所缓和。Q2 GDP 和 PCE 数据也将在下周公布。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Warsh 是被特朗普任命的"鹰派变革者"，他的第一个完整会议会定调下半年货币政策方向。如果按兵不动 + 声明偏鸽 → 风险资产反弹；如果暗示加息 → 美债收益率飙升、科技股承压。当前市场定价"7 月不加息但 9 月可能加"的概率在上升。</div>
+        <div class="target">📌 关联标的：TLT 美债长端ETF（利率敏感）、QQQ 纳指ETF（利率敏感）、DXY 美元指数、GLD 黄金ETF</div>
+        <div class="source">🔗 来源：<a href="https://www.wcbi.com/will-the-federal-reserve-raise-interest-rates-here-is-what-experts-predict-for-julys-meeting/" target="_blank">WCBI</a> · <a href="https://www.fool.com/investing/2026/07/25/prediction-kevin-warsh-and-the-federal-open-market/" target="_blank">Motley Fool</a> · <a href="https://www.tricio-advisors.com/post/weekly-talking-points-fed-boe-and-boj-in-play-this-week-27-july-2026" target="_blank">Tricio Advisors</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>Brent 从 $70 飙到 $100 后周五大跌 4%：中国斡旋带来拐点还是喘息？</h4>
+        <p>布伦特原油 7 月从低点 <strong>$70</strong> 飙升至周四 <strong>$100</strong>，WTI 从 <strong>$67.20</strong> 涨到 <strong>$93.50</strong>。周五因中国斡旋美伊和谈消息大跌超 4%，但全周仍累计上涨约 <strong>9.85%</strong>。同时，IMF 下调 2026 年全球经济增长预期至 <strong>3.0%</strong>，美元走强。巴克莱指出："原油交易并未在更高水平持续买盘，尽管两场战争仍在进行。"</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价从 $100 回落说明市场在 pricing 和谈成功的概率。但如果和谈失败（特朗普强硬表态是风险），油价可能二次冲高。对 lainy 来说：下周 FOMC + PCE + GDP + 油价走势四重叠加，是今年最关键的宏观周之一。</div>
+        <div class="target">📌 关联标的：Brent 原油（波动加剧）、COMEX 黄金（$4048 附近，避险溢价可能回落）、WTI 原油、能源股 XLE</div>
+        <div class="source">🔗 来源：<a href="https://www.benzinga.com/markets/commodities/26/07/60685408/crude-oil-trading-isnt-trading-higher-despite-iran-and-ukraine-wars" target="_blank">Benzinga</a> · <a href="https://www.riotimesonline.com/global-economy-briefing-july-25-2026/" target="_blank">Rio Times</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [原油开采] → 中游 [炼化/运输] → 下游 [航空/化工/塑料] — 当前受损环节：航空（燃油成本高位）、化工（原料成本）；受益环节：美国页岩油生产商、新能源替代链</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股（7/25 收盘）</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 -1.61% 报 3814，创业板 -2.65%，成交跌破 2 万亿</h4>
+      <p>7/24（周五）A 股三大指数低开低走，全市场仅 554 只个股上涨、4937 只下跌。<b>沪指收跌 <strong>1.61%</strong> 报 3814.20 点，深证成指 <strong>-2.47%</strong>，创业板指 <strong>-2.65%</strong> 报 3480.87 点。</b>科创50 盘中一度涨逾 2% 但最终微跌 <strong>0.14%</strong>。成交额跌破 2 万亿关口，显示观望情绪浓厚。<br>
+      <b>重点异动：</b>存储芯片板块因英伟达-SK Hynix 合作 + 长鑫 IPO 预热逆势走强；GDDR7 显存涨价传导至 A 股 PCB、散热、国产 GPU 板块。<br>
+      <b>资金流向：</b>半导体设备 ETF（159516）连续 6 日净流入，近 20 日净流入 131.97 亿，规模达 423 亿。北证 50 大跌 <strong>4.03%</strong>。<br>
+      <b>下周一关注：</b>长鑫科技上市抽水效应 + 内幕交易新规 7/27 施行（利好券商/金融IT/蓝筹）。</p>
+      <div class="target">📌 关联标的：688825 长鑫科技（7/27 上市）、159516 半导体设备ETF、512760 半导体ETF、券商ETF 512000（新规利好）</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 -0.98% 失守 25000，阿里腾讯领跌科技板块</h4>
+      <p>7/24（周五）恒生指数收报 24,963 点，跌 247 点或 <strong>0.98%</strong>，失守 25,000 关口。阿里巴巴和腾讯领跌科技板块。<b>本周恒指累计下跌，受美伊战争避险情绪 + A 股缩量拖累。</b>南向资金仍有净流入但力度减弱。下周关注：FOMC 会议对港股流动性预期的影响，以及长鑫科技 A 股上市对港股半导体板块的情绪传导。</p>
+      <div class="target">📌 关联标的：09988 阿里巴巴（拖累）、00700 腾讯（拖累）、01810 小米（关注）、恒生科技ETF 513180</div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 +0.46% 修复，纳指 -0.64% 芯片股普跌，三大指数周线连跌</h4>
+      <p>7/24（周五）收盘：<b>道指 <strong>+0.46%</strong> 报 51,947.25；标普 500 <strong>+0.05%</strong> 报 7,411.98；纳指 <strong>-0.64%</strong> 报 24,975.82。</b>芯片股拖累纳指——存储芯片巨头 SanDisk 跌超 10%，光通信板块重挫。道指录得连续第三周下跌，标普和纳指连跌两周。<br>
+      <b>本周关键逻辑：</b>伊朗周末可能遭受更猛烈袭击 → 交易员不愿增持股票 → 避险情绪主导。但巴基斯坦呼吁停火 + 中国斡旋消息推动尾盘油价回落。<br>
+      <b>下周关注：</b>FOMC（7/28-29）、Q2 GDP、PCE 数据。如果 Warsh 按兵不动 + 油价继续回落 → 纳指有望反弹。</p>
+      <div class="target">📌 关联标的：NVDA（关注 FOMC 后反弹机会）、SMH 半导体ETF（超跌关注）、SNDK SanDisk（暴跌后关注）、TLT 美债长端</div>
+    </div>
+
+    <div class="chain">🔗 产业链：A 股 [半导体设备/存储芯片] → 港股 [科网股/南向资金] → 美股 [AI 芯片/存储芯片] — 当前受损环节：存储芯片股（周五暴跌）；受益环节：半导体设备 ETF（资金持续流入）</div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>半年报 · 新消费 · 补贴政策</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>商务部上半年成绩单：零售总额 +2.7%，服务消费 (+5.3%) 远超商品消费 (+1.1%)</h4>
+        <p>7/23 国新办新闻发布会，商务部详解 2026 上半年商务领域成绩单。社会消费商品和服务零售总额同比 <strong>+2.7%</strong>，其中服务零售额 <strong>+5.3%</strong>，高于商品零售 4.2 个百分点。最终消费支出拉动 GDP 增长 2.1 个百分点，仍是第一动力。19 个地方实施自主品类补贴政策，带动相关商品销售 99.2 万件——北京、上海、江苏等地将具身智能机器人纳入补贴范围。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>服务消费增速是商品消费的近 5 倍——这个剪刀差说明消费者在"买体验"而非"买商品"。对投资来说：服务消费（餐饮、旅游、文体娱乐）比商品消费（家电、零售）更有韧性。具身智能机器人纳入补贴 = 政策在为新赛道开拓市场空间，利好机器人产业链。</div>
+        <div class="target">📌 关联标的：消费ETF 159928、服务消费板块（餐饮 601055 锦江酒店、文旅 000978 桂林旅游）、机器人ETF 562500</div>
+        <div class="source">🔗 来源：<a href="https://news.dayoo.com/china/202607/25/139997_54983578.htm" target="_blank">广州日报</a> · <a href="http://mrxwlb.com/2026/07/25/2026%E5%B9%B407%E6%9C%8825%E6%97%A5%E6%96%B0%E9%97%BB%E8%81%94%E6%92%AD%E6%96%87%E5%AD%97%E7%89%88/" target="_blank">新闻联播文字版</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">新消费</span>
+        <h4>奇瑞全球累计销量破 2000 万辆，第 2000 万辆风云 A9 同日上市交付</h4>
+        <p>7/25，奇瑞集团全球累计销量正式突破 2000 万辆，同日风云 A9 作为第 2000 万辆车正式交付。标志着中国汽车品牌从"量变"到"质变"的里程碑——奇瑞是继比亚迪、长安之后第三个突破 2000 万辆的中国品牌。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>中国汽车出海正在加速重塑全球格局。奇瑞在俄罗斯、东南亚、中东市场份额快速增长，风云 A9 定位高端轿跑，说明中国品牌正在从"低价走量"转向"品牌向上"。对 lainy 来说：汽车产业链是消费+制造+出口三条线交汇点，关注零部件供应商机会。</div>
+        <div class="target">📌 关联标的：600104 上汽集团（同业对标）、01211 比亚迪（行业龙头）、长城汽车 601633、汽车零部件ETF 516110</div>
+        <div class="source">🔗 来源：<a href="https://finance.jrj.com.cn/2026/07/25160957904030.shtml" target="_blank">金融界</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 产业链：上游 [零部件/芯片] → 中游 [整车制造] → 下游 [经销商/售后服务/汽车后市场] — 当前受益环节：整车出海（奇瑞/比亚迪）、零部件供应链</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>暑期档票房大战</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">电影</span>
+        <h4>暑期档票房破 55 亿：《功夫女足》17 亿夺冠，《群星闪耀时》首日 3900 万开局惨淡</h4>
+        <p>2026 暑期档票房已破 55 亿。周星驰《功夫女足》上映 13 天累计 17.3 亿，稳坐冠军，猫眼预测总票房 30 亿。星爷已宣布开拍续集。国漫《八仙！》口碑票房双丰收，预测直奔 20 亿。而黄渤主演、耗资 4 亿+、耗时六年、集结 17 位明星的科幻大片《群星闪耀时》7/25 正式上映，首日票房仅 3900 万——点映 15 天预售才刚破 2000 万，被夹在《功夫女足》和《八仙！》中间，处境尴尬。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>《群星闪耀时》是典型的"大片陷阱"——大投资+大阵容+长周期≠大票房。对比《功夫女足》的 17 亿和《八仙！》的黑马逆袭，说明观众在用脚投票：内容 > 卡司。黄渤这次真的悬了。对 lainy 来说：周末如果去看电影，选《功夫女足》或《八仙！》比较稳，《群星闪耀时》等口碑出来再说。</div>
+        <div class="target">📌 关联标的：影视ETF 516620（暑期档行情）、002739 万达电影（院线受益）、300251 光线传媒（八仙！出品方）</div>
+        <div class="source">🔗 来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908etcw.html" target="_blank">新浪电影</a> · <a href="https://www.ntdtv.com/gb/2026/07/25/a104118514.html" target="_blank">新唐人</a> · <a href="https://news.bjd.com.cn/2026/07/25/11885885.shtml" target="_blank">京报网</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🎨 科技/科学花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>苹果逼近 $5 万亿</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">科技</span>
+        <h4>苹果市值逼近 $5 万亿大关——Techlife News 7/25 封面故事</h4>
+        <p>Techlife News 7/25 刊封面故事聚焦苹果公司如何逼近 5 万亿美元市值大关，分析其产品生态、服务收入及全球市场扩张的战略动因，并与亚马逊、微软进行对比。在 AI 竞赛如火如荼的背景下，苹果的"慢节奏 AI"策略是否反而是护城河？</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$5 万亿 = 一个公司的市值超过大多数国家的 GDP。苹果的护城河不是 AI 技术 itself，而是"硬件+服务生态"的锁定效应。当所有人在追 AI 概念股时，苹果用"把 AI 塞进每一台设备"的方式闷声赚钱。对 lainy 来说：这是"商业模式 > 技术概念"的经典案例。</div>
+        <div class="target">📌 关联标的：AAPL 苹果（受益）、MSFT 微软（对标）、AMZN 亚马逊（对标）</div>
+        <div class="source">🔗 来源：<a href="https://waikanstore.com/techlife-news-2026-07-25/" target="_blank">Techlife News</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>🦞 龙虾老师 · 每日不错过新闻 · 2026-07-26</p>
+    <p class="footer-note">数据截至 2026-07-26 08:00 HKT · 股市数据为 7/24（周五）收盘 · 仅供 lainy 个人参考，不构成投资建议</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-25</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .target { margin-top: 6px; font-size: 13px; color: var(--hbm); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain { margin-top: 12px; padding: 10px 14px; background: #1a1f2b; border-radius: 8px; font-size: 13px; color: var(--text-dim); }
+  .chain b { color: var(--text); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+
+  /* v2 视觉升级 */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-dim); font-size: 13px; text-decoration: none;
+    margin-bottom: 16px; padding: 6px 12px; border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+
+  .section-title {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    border-bottom: none !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+
+  .card .why {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px; border-top: none;
+    font-style: normal;
+  }
+  .card .why::before {
+    content: "💡 "; font-style: normal;
+  }
+
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+
+  .tldr {
+    box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04);
+    border-left: 4px solid var(--macro);
+  }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 25 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 芯片大屠杀：</b>全球存储芯片股集体崩跌，SanDisk -10.8%、SK hynix -8.8%、Micron -7%，半导体板块单日蒸发 $1.3 万亿市值；同时白宫指控月之暗面通过泰国获取被禁的英伟达 GB300 芯片，中美 AI 出口管制博弈白热化。</li>
+      <li><b>伊朗战争+关税双杀：</b>美军连续第 13 晚空袭伊朗，胡塞武装袭击红海沙特油轮→Brent 突破 $100；同日 Trump 对 60 国 launch 新关税（中国 12.5%），全球 risk-off。</li>
+      <li><b>A 股放量杀跌：</b>沪指 -1.61% 报 3814、创业板 -2.65%，成交跌破 2 万亿；港股恒指失守 25000；美股道指 +0.46% 修复但纳指续跌，Mag 7 两天蒸发近 $8000 亿。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">英伟达</span>
+        <h4>英伟达联手 Amkor 斥 $15 亿锁封亚利桑那封装产能——同时白宫指控月之暗面违规获取 GB300</h4>
+        <p>7/23 英伟达与 Amkor 签署 <strong>$15</strong> 亿多年协议，预付款锁定亚利桑那先进封装和测试产能。UBS 看好 Amkor 后续 upside。然而同一 24 小时内，白宫科技政策办主任 Kratsios 公开指控中国 AI 公司月之暗面（Moonshot AI）通过泰国渠道获取被出口管制禁售的英伟达 GB300 系统来训练 Kimi K3 模型，并暗示可能触发制裁。英伟达同时宣布大幅缩减亚洲授权客户名单以应对走私风险。黄仁勋当天首次在 X 发帖，联署 25 家公司公开信捍卫开放权重 AI 模型。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>两条新闻放一起看才有意思——英伟达一面在美国本土砸钱补封装短板，一面在亚洲收紧客户管控。说明 AI 芯片的「硬件走私」已从灰色地带升级为国家安全议题。月之暗方的 Kimi K3 如果真用被禁芯片训练，可能触发类似华为级别的制裁，这会重塑中国 AI 公司的算力获取路径。对供应链：Amkor 是 CoWoS 之外先进封装的另一关键节点，利好 AMKR；对中国 AI 公司则是算力断供风险。</div>
+        <div class="target">📌 关联标的：NVDA（短期承压，出口管制升级风险）/ AMKR（利好，封装份额扩张）/ 002230 科大讯飞、09888 百度（中国 AI 板块算力断供风险）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/24/this-semi-stock-just-struck-a-deal-with-nvidia-ubs-sees-big-gains-ahead.html" target="_blank">CNBC</a> · <a href="https://www.cnbc.com/2026/07/24/nvidia-microsoft-meta-open-weight-ai-models.html" target="_blank">CNBC - Moonshot</a> · <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban" target="_blank">Tom's Hardware</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">存储芯片</span>
+        <h4>$1.3 万亿蒸发：全球存储芯片股集体崩跌，市场质疑 AI capex→内存需求的转化逻辑</h4>
+        <p>7/24 全球存储芯片板块遭遇 2026 年最大单日跌幅。韩国市场 SK hynix <strong>-8.81%</strong> 领跌，拖累 KOSPI 跌 6%；传导至美股：SanDisk <strong>-10.79%</strong>、Micron <strong>-6.99%</strong>、SK hynix ADR <strong>-7.1%</strong>、Western Digital -5%、Seagate -4%。费城半导体指数（SOX）<strong>-4.25%</strong>。Intel 尽管财报超预期仍跌 <strong>3.99%</strong>。市场核心逻辑：AI 基础设施 capex 是否真能转化为存储芯片持续需求——投资者正在 reprice「AI 内存永远涨」的叙事。Gabelli 基金经理认为这更像 risk-off 的 reversion trade，而非基本面恶化。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年 AI 硬件叙事的「第一次真正回撤」。之前每次跌都有人喊抄底，但这次不同——Alphabet 同日宣布 2026 年 capex 指引上调至 $2000 亿+，Tesla 也说今年是「massive capex year」，但投资者不但没买账反而砸盘。说明市场开始区分「谁在花钱」和「谁在赚钱」。存储芯片是 AI capex 的直接受益方，如果这一环节都跌，说明市场在担心 capex 周期的可持续性。</div>
+        <div class="target">📌 关联标的：MU（美光，-7%，存储风向标）/ SNDK（SanDisk，-10.8%，跌幅最大）/ 000660.KS（SK hynix）/ SMH（半导体ETF，-4.25%）— 当前均处受损方</div>
+        <div class="source">来源：<a href="https://247wallst.com/investing/2026/07/24/sk-hynix-and-micron-sink-6-sandisk-drops-9-as-korea-chip-selloff-hits-u-s-memory-stocks/" target="_blank">24/7 Wall St</a> · <a href="https://www.investopedia.com/chip-stocks-slide-friday-memory-favorites-micron-sandisk-among-big-decliners-mu-sndk-intel-intc-update-12026380" target="_blank">Investopedia</a> · <a href="https://cryptobriefing.com/intel-micron-chip-sector-selloff/" target="_blank">Crypto Briefing</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AI capex</span>
+        <h4>AI 芯片进口额 $1650 亿超越 PC+手机总和——内存短缺是结构性而非周期性</h4>
+        <p>TechTimes 报道：2026 年 AI 处理器进口额已达 <strong>$1650</strong> 亿，首次超越 PC 和智能手机进口总和。Dell、HP、Apple 均在财报中确认供应链受限。内存短缺正在从 AI 服务器蔓延至消费电子——这不是周期性波动，而是 HBM 产能挤占 DRAM/NAND 产能的结构性问题。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条新闻把「AI 吃掉所有内存」从一个行业段子变成了宏观数据。lainy 你之前学 HBM 的时候应该有印象——三大原厂（三星、SK hynix、美光）把更多 wafer 产能分配给 HBM，导致 conventional DRAM 供给收紧。现在 PC/手机厂商也在抢内存，ASP 上涨会传导到消费电子终端价格。对投资者来说：HBM 三巨头短期利好（量价齐升），但消费电子终端厂商利润承压。</div>
+        <div class="target">📌 关联标的：000660.KS SK hynix / 005930.KS 三星 / MU 美光（HBM 三巨头，受益方）/ AAPL、DELL、HPQ（终端厂商，成本承压）</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/321506/20260724/ai-chip-imports-eclipse-pc-phone-shipments-memory-shortage-squeezes-consumers.htm" target="_blank">TechTimes</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 <b>产业链：</b>上游 [HBM/CoWoS 晶圆: 三星/SK hynix/台积电] → 中游 [先进封装: Amkor/日月光] → 下游 [AI 服务器: 戴尔/超微/联想] — 当前 <b>受损环节</b>：存储芯片股（市场 reprice AI capex 可持续性）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>地缘政治风险升级</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊战争</span>
+        <h4>美军连续第 13 晚空袭伊朗，伊朗拒绝停火提案；红海成为第二个咽喉要道</h4>
+        <p>7/24 美军完成对伊朗的第 13 轮夜间空袭。伊朗拒绝了由伊拉克总理转交的美方停火提案。与此同时，伊朗支持的胡塞武装在红海袭击两艘沙特油轮，使红海成为继霍尔木兹海峡之后第二个受威胁的石油运输咽喉。巴基斯坦在外交斡旋推动 10 天停火，中方也在幕后推动。Trump 7/24 签署多项核能行政令，同时警告中俄「如果帮助伊朗后果很坏」。参议院否决了限制 Trump 伊朗战争权力的决议。联合国秘书长警告局势「正在失控」。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年最大的地缘风险事件。4 月曾有过两周停火，但 Trump 本月宣布「停火结束」后战事重启。红海+霍尔木兹双咽喉受威胁=全球约 30% 海运石油的运输通道处于风险中。这就是 Brent 突破 $100 的直接原因。如果巴基斯坦斡旋成功→油价快速回落；如果失败→Brent 可能冲击 $120+，这对全球通胀和美联储政策是毁灭性打击。</div>
+        <div class="target">📌 关联标的：Brent 原油（$97-100，地缘溢价）/ COMEX 黄金（避险资产，走强）/ XOM 埃克森美孚、601857 中国石油（能源股受益）/ 600150 中国船舶（油运运价飙升）</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/live/2026/07/24/world/iran-war-us-strikes-trump-oil" target="_blank">NYT Live</a> · <a href="https://www.cnbc.com/2026/07/24/us-iran-war-trump-hormuz-houthis.html" target="_blank">CNBC</a> · <a href="https://www.foxnews.com/live-news/iran-war-trump-oil-prices-rising-07-24-26" target="_blank">Fox News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">全球关税</span>
+        <h4>Trump 重启全球贸易战：对 60 国征收 10-12.5% 新关税，中国 12.5%</h4>
+        <p>7/24 Trump 政府在「10% 全球关税」午夜到期后，立即推出替代方案：以「打击强迫劳动」为由，对 60 个贸易伙伴征收 10%-12.5% 的新关税。中国、澳大利亚 <strong>12.5%</strong>，英国、印度、墨西哥、加拿大等也在名单上。覆盖美国进口的 <strong>99.4%</strong>。中国外交部谴责「关税战和贸易战不符合任何一方利益」。商务部数据显示中国对美加权平均关税率实际上变化不大，甚至低于巴西和加拿大。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Trump 在最高法院推翻原关税后，用「强迫劳动」为新法律基础重新 launch 的贸易战 2.0。对中国来说 12.5% 并不致命（之前已经习惯了），但对全球供应链来说是又一次重塑——东南亚转口渠道也中招了。市场反应：A 股直接放量杀跌。中期看，如果这些关税持续，推高美国进口成本→通胀→美联储更难降息。</div>
+        <div class="target">📌 关联标的：全 A 股（情绪面利空）/ 00388 港交所（港股承压）/ FXI 中国大盘ETF / DXY 美元指数（走强预期）</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/news/trump-tariffs-dozens-countries-forced-labor/" target="_blank">CBS News</a> · <a href="https://www.npr.org/2026/07/24/nx-s1-5906301/us-global-trump-tariffs-reaction" target="_blank">NPR</a> · <a href="https://www.nytimes.com/2026/07/24/business/china-tariffs-trump.html" target="_blank">NYT</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 <b>产业链：</b>上游 [原油开采: 沙特/伊朗] → 中游 [海运: 油轮公司] → 下游 [炼化: 中石化/ExxonMobil] — 当前 <b>受益环节</b>：油运（运价飙升）+ 上游能源股；<b>受损环节</b>：全球制造业供应链（关税+油价双杀）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美联储下周开会</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>FOMC 下周开会：Natixis 预计按兵不动，但市场已在 pricing in 加息可能</h4>
+        <p>Natixis 经济学家预计美联储下周 FOMC 会议将维持利率不变，且 2026 全年不加息不降息——近期数据给了 FOMC 喘息空间。但 Forbes 报道市场已开始 price in 下周加息的概率，理由是油价从 <strong>$70</strong> 飙到 <strong>$100</strong> 的通胀传导。Investors' Chronicle 指出 Brent 从月初 <strong>$70</strong> 涨到 <strong>$88</strong>（现已 <strong>$97</strong>+），正在引发对通胀重新上行的担忧。Forbes 的极端场景是：从 7 月开始每场会议都加息。英国央行预计同期按兵不动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美联储陷入了「油价推高通胀 vs 经济需要宽松」的经典两难。Kevin Warsh（Trump 提名的主席）7/14 在国会作证时态度偏鹰。如果油价持续 $100+，9 月真有可能加息——这会是对全球风险资产的锤击。但目前共识还是 hold，市场在过度 pricing 恐慌。</div>
+        <div class="target">📌 关联标的：美国 2 年期国债收益率（利率预期风向标）/ XLU 公用事业 ETF（利率敏感）/ 黄金 ETF GLD（加息预期下承压但地缘避险支撑）</div>
+        <div class="source">来源：<a href="https://www.kitco.com/news/article/2026-07-23/fed-will-likely-hold-rates-july-meeting-and-through-2026-iran-and-tariffs" target="_blank">Kitco/Natixis</a> · <a href="https://www.forbes.com/sites/simonmoore/2026/07/23/markets-see-chance-fed-hikes-next-week-at-july-meeting/" target="_blank">Forbes</a> · <a href="https://www.investorschronicle.co.uk/content/577dea52-6fd9-4502-abd1-0c6549688508" target="_blank">Investors' Chronicle</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗商品</span>
+        <h4>Brent 原油 7 月暴涨 30%：$100 关口失而复得，巴基斯坦斡旋带来短暂回落</h4>
+        <p>7/23 Brent 收盘暴涨 7% 至 <strong>$100.69</strong>，为 5 月以来首次破 <strong>$100</strong>。7/24 因巴基斯坦推动中美伊谈判的消息，Brent 回落约 4% 至 <strong>$96.78</strong>。WTI 收于 <strong>$89.31</strong>。7 月以来油价累计涨幅超过 30%。EIA STEO 报告预测 3Q26 Brent 均价 <strong>$74</strong>，但该预测明显未充分计入地缘风险。红海+霍尔木兹双咽喉受威胁，全球约 30% 海运石油通道承压。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价从 $70 到 $100 只用了三周，这种速度比 2022 年俄乌战争初期还猛。如果伊朗局势不缓解，$110-120 不是不可能。对 lainy 来说重要的一点：油价每涨 $10，全球 CPI 大约上行 0.3-0.5 个百分点——这就是为什么美联储不敢降息的原因。</div>
+        <div class="target">📌 关联标的：Brent 原油期货 / WTI 原油期货 / 600150 中国船舶（VLCC 运价受益）/ XLE 能源 ETF / OPEC+ 概念</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/24/oil-price-trump-hormuz-red-sea-iran-war.html" target="_blank">CNBC</a> · <a href="https://www.nbcnews.com/business/markets/oil-prices-rise-red-sea-attacks-houthis-saudi-trump-iran-war-rcna588851" target="_blank">NBC News</a> · <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">科技监管</span>
+        <h4>欧盟依据《数字市场法》重罚 Google €8.9 亿——Search 自我优待 + Play Store 限制开发者</h4>
+        <p>欧盟委员会 7/23 宣布对 Google 处以合计 €8.9 亿（约 <strong>$10.3</strong> 亿）罚款，因 Google 在搜索结果中优先展示自家服务，并在 Play Store 限制应用开发者引导用户绕过 Google 支付。这是 DMA（数字市场法）自生效以来对美科技巨头的最大罚单之一。Google 表示将上诉。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不仅仅是 Google 的问题——DMA 是欧盟针对所有「看门人」平台（Apple、Meta、Amazon 等）的监管框架。Google 被罚 €8.9 亿只是第一枪。对市场含义：美国科技巨头在欧洲的商业模式（自我优待+支付抽成）正被系统性瓦解，长期看利润率承压。</div>
+        <div class="target">📌 关联标的：GOOGL（直接利空，但罚款金额相对市值影响有限）/ META、AAPL、AMZN（DMA 后续目标）</div>
+        <div class="source">来源：<a href="https://www.theguardian.com/technology/2026/jul/23/eu-fines-google-for-competition-breaches-over-search-and-apps" target="_blank">The Guardian</a> · <a href="https://www.ghacks.net/2026/07/24/european-commission-fines-google-e890-million-for-search-and-play-store-dma-violations/" target="_blank">gHacks</a></div>
+      </div>
+
+    </div>
+    <div class="chain">🔗 <b>产业链：</b>上游 [原油/大宗商品] → 中游 [央行货币政策] → 下游 [股债汇商] — 当前 <b>受损环节</b>：新兴市场股债（油价+关税+美元三重打击）；<b>受益环节</b>：能源、黄金、避险资产</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 -1.61% 报 3814，创业板 -2.65%，成交跌破 2 万亿</h4>
+      <p>7/24 A 股三大指数低开低走集体收跌。<b>沪指</b> <strong>-1.61%</strong> 报 3814.20，<b>深成指</b> <strong>-2.47%</strong> 报 13774.68，<b>创业板指</b> <strong>-2.65%</strong> 报 3480.87。沪深两市成交 1.93 万亿，创三个多月新低，较前日缩量 2642 亿。全市场超 4900 只个股下跌。<br><br>
+      <b>涨幅居前板块：</b>半导体设备概念活跃（托伦斯 20CM 4 天 3 板，至纯科技涨停）；端侧 AI 概念拉升（博通集成涨停）；军工板块走强（长城军工、湖南天雁 2 连板）；电网设备反复活跃（顺钠股份、太阳电缆、汉缆股份 2 连板）。<br>
+      <b>跌幅居前板块：</b>算力租赁概念集体走弱（利通电子跌停）；电力板块调整（京能电力、大唐发电、粤电力 A 跌停）；半导体整体领跌。<br>
+      <b>重点异动个股：</b>科创50 盘中一度涨超 2% 后回落微跌 <strong>0.14%</strong>，显示资金在科技板块内部分化。北证 50 大跌 <strong>4.03%</strong>。<br><br>
+      🦞 <b>行情解读：</b>A 股今天的杀跌是三重利空叠加——油价飙升（输入性通胀担忧）+ Trump 新关税（出口压力）+ 全球芯片股崩盘（科技板块情绪传导）。成交跌破 2 万亿说明多头在观望。但半导体设备逆势走强值得注意——这可能与国产替代加速逻辑有关（月之暗面事件强化了「芯片自主可控」叙事）。</p>
+      <div class="target">📌 关联标的：512760 半导体ETF（逆势抗跌）/ 512660 军工ETF（地缘受益）/ 515790 光伏ETF（电力板块调整拖累）</div>
+      <div class="source">来源：<a href="https://news.sina.com.cn/c/2026-07-24/doc-iniiwvkm1676260.shtml" target="_blank">财联社</a> · <a href="https://www.jwview.com/jingwei/html/07-24/680788.shtml" target="_blank">中新经纬</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 -0.98% 失守 25000，阿里 -4%，中银 +6% 破顶</h4>
+      <p>7/24 港股震荡走低。<b>恒生指数</b> 收跌 247 点（<strong>-0.98%</strong>）报 24963，再度失守 25000 关口。<b>恒生科技指数</b> <strong>-1.47%</strong> 报 4629。全日成交 2098.77 亿，南向资金净流出 15.18 亿，连续第二日流出。全周恒指仍升 400 点（<strong>+1.6%</strong>）。<br><br>
+      <b>领跌：</b>阿里巴巴 -4%、腾讯、百度等大型科技股集体下挫；PCB、地产、黄金板块普遍走低。<br>
+      <b>逆势走强：</b>中银香港 +6% 创新高（息差扩大预期）；油价上涨带动三桶油走强。<br><br>
+      🦞 <b>行情解读：</b>港股今天被中东局势和关税双杀。科技股跟随美股 Mag 7 暴跌传导，但中银破顶说明市场并非完全 risk-off——资金在从科技轮动到金融/能源。南向资金流出是短期避险信号。下周关注：恒指能否守住 24800 支撑。</p>
+      <div class="target">📌 关联标的：00388 港交所（市场情绪风向标）/ 01288 农业银行（高股息防御）/ 00883 中海油（油价受益）</div>
+      <div class="source">来源：<a href="https://www.stheadline.com/stock-market/3597025/" target="_blank">星岛日报</a> · <a href="https://www.epochtimes.com/gb/26/7/24/n14816996.htm" target="_blank">大纪元</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 +0.46% 修复，纳指 -0.64% 续跌；Mag 7 两天蒸发近 $8000 亿</h4>
+      <p>7/24（周五）美股分化收盘：<b>道指</b> +235.60 点（<strong>+0.46%</strong>）报 51947.25；<b>S&amp;P 500</b> <strong>+0.05%</strong> 报 7411.98；<b>纳指</b> <strong>-0.64%</strong> 报 24975.82。三大指数本周第二周下跌。<br><br>
+      <b>周四（7/23）回顾：</b>纳指暴跌 <strong>2.15%</strong>（4 月以来最大单日跌幅），Alphabet -6%、Tesla -14%。Alphabet 将 2026 年 capex 指引上调至 <strong>$1950</strong>-2050 亿，Tesla 营业利润同比 -57%，Musk 宣称今年是「massive capex year」。Mag 7 单日蒸发约 <strong>$7870</strong> 亿市值。<br>
+      <b>周五领涨：</b>Salesforce <strong>+4.05%</strong>、IBM <strong>+3.61%</strong>、Apple <strong>+3.52%</strong>。<br>
+      <b>周五领跌：</b>American Express <strong>-4.41%</strong>；芯片股全线下跌——NVDA <strong>-0.92%</strong>、Broadcom <strong>-2.69%</strong>、AMD <strong>-3.29%</strong>、Micron <strong>-6.99%</strong>、SanDisk <strong>-10.79%</strong>。<br>
+      <b>Intel 财报：</b>尽管股价周五大跌 <strong>3.99%</strong>，但财报数据超预期，盘后一度大涨。<br><br>
+      🦞 <b>行情解读：</b>这周是 2026 年 AI 叙事的转折点。Alphabet 和 Tesla 的财报把「AI capex 失控」摆上了台面——投资者第一次认真问：这些钱什么时候能赚回来？道指涨而纳指跌，资金从成长股向价值股轮动。下周超级财报周：Amazon、Apple、Meta、Microsoft 集中发布。</p>
+      <div class="target">📌 关联标的：NVDA、AMD、SMH（芯片板块承压）/ AAPL、AMZN、META、MSFT（下周财报关键变量）/ DIA 道指ETF（资金避风港）</div>
+      <div class="source">来源：<a href="https://www.cnbc.com/2026/07/23/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.fool.com/coverage/stock-market-today/2026/07/24/stock-market-today-july-24-dow-recovers-and-sandisk-tumbles-11-as-tech-stocks-fall-further/" target="_blank">Motley Fool</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-07242026-12026086" target="_blank">Investopedia</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>上半年数据出来了</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>商务部发布上半年消费数据：零售总额 +2.7%，服务消费 (+5.3%) 远超商品消费 (+1.1%)</h4>
+        <p>7/23 国新办发布会，商务部解读 2026 上半年消费市场。社消商品和服务零售总额同比 <strong>+2.7%</strong>。结构分化明显：服务零售额 <strong>+5.3%</strong>（家政、文旅强劲），商品零售额仅 <strong>+1.1%</strong>。最终消费支出拉动 GDP 增长 2.1 个百分点。16 大类商品中 10 类增长，7 类增速超 5%。智能眼镜、高能效家电、运动相机、心电监护仪等实现两位数增长。汽车和石油类商品是主要拖累项。《餐饮+文旅趋势研究报告 2026》发布：餐饮与文旅深度融合，情绪价值和文化体验成为核心驱动力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>数据揭示了一个重要趋势——中国消费正在从「买商品」向「买体验/买服务」转型。这对 lainy 关注的消费赛道有直接含义：传统零售（百货、超市）承压，但服务型消费（文旅、家政、健康监测）在加速。智能眼镜和运动相机两位数增长说明「新消费」不是概念，是真的在卖。汽车消费下拉拖累值得关注——这可能与价格战和消费降级有关。</div>
+        <div class="target">📌 关联标的：002415 海康威视（智能眼镜/运动相机产业链）/ 000333 美的集团（高能效家电）/ 600519 贵州茅台（白酒消费待观察）/ 601888 中国中免（文旅消费受益）</div>
+        <div class="source">来源：<a href="http://finance.people.com.cn/n1/2026/0724/c1004-40766840.html" target="_blank">人民网</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-07-24/doc-iniiwzsa9349951.shtml" target="_blank">新浪科技</a> · <a href="https://www.36kr.com/p/3909408119625089" target="_blank">36氪</a></div>
+      </div>
+    </div>
+    <div class="chain">🔗 <b>产业链：</b>上游 [品牌商: 智能硬件/家电/文旅IP] → 中游 [渠道: 线上平台/文旅运营商] → 下游 [消费者] — 当前 <b>受益环节</b>：服务型消费运营商（文旅、家政）；<b>受损环节</b>：传统商品零售、汽车经销商</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末看什么</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>周末观影指南：Kevin Hart 新片 + Nicolas Winding Refn 十年回归 + 更多「King of the Hill」</h4>
+        <p>Vulture 本周推荐片单：(1) Kevin Hart 新片——过气喜剧明星的 pickleball 球场battle；(2) Nicolas Winding Refn 十年来首部长片上映（Drive、Only God Forgives 导演）；(3) 「King of the Hill」新季上线；(4) <strong>$35</strong> 的 35mm 胶片相机——Samsung 新款紧凑 gadget 也在本周发布名单上。NBA Summer League 正在进行中，休赛期交易动向频繁。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>周末了，lainy 放松一下～Refn 的电影视觉风格非常独特（霓虹+暴力美学），如果你还没看过 Drive，可以先补一下。$35 的胶片相机是个有趣的小玩意，适合夏天出去玩拍拍。</div>
+        <div class="source">来源：<a href="https://www.vulture.com/article/what-to-watch-this-weekend-best-new-movies-tv-shows-july-24-26.html" target="_blank">Vulture</a> · <a href="https://www.gearpatrol.com/audio/best-tech-audio-hi-fi-releases-2026-july-week-3/" target="_blank">Gear Patrol</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>NBA 休赛期交易加速：Jordan Walsh 续约 Celtics 3 年 $1500 万</h4>
+        <p>NBA offseason 正式进入活跃期。Celtics 激活 Jordan Walsh 下赛季选项（<strong>$240</strong> 万），并计划追加 3 年 <strong>$1500</strong> 万续约。Summer League 正在拉斯维加斯进行，各队考察新秀。2026 亚运会足球抽签出炉：中国男足与伊朗、阿联酋、朝鲜同在 B 组。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>亚运会 B 组是死亡之组——伊朗和朝鲜都不好踢。NBA 方面，Walsh 续约说明 Celtics 在锁年轻核心，为后 Tatum/Brown 时代做准备。</div>
+        <div class="source">来源：<a href="https://www.espn.com/nba-summer-league/scoreboard" target="_blank">ESPN</a> · <a href="https://www.olympics.com/en/news/asian-games-2026-football-draw-groups-schedule" target="_blank">Olympics.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就够了</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">科技</span>
+        <h4>地球「千年一遇」磁暴可能比预期更强——科学家修正模型</h4>
+        <p>UNIAN 报道：科学家对 7 月中旬观测到的「千年一遇」磁暴更新了模型，认为其对地球电网和卫星的影响可能比此前评估的更严重。此次磁暴事件已引发多国电网短暂异常和极光大范围南扩。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>太阳活动周期正在高峰期（Solar Maximum），极端磁暴对卫星（包括 Starlink）、GPS 系统、甚至海底光缆中继器都有潜在威胁。这不仅是科学花边——如果一次 Carrington 级别的磁暴命中地球，全球经济损失可达万亿美元级别。对 lainy 来说：这是一个有趣的尾部风险话题。</div>
+        <div class="target">📌 关联标的：STAR (Starlink 母公司 SpaceX 未上市) / 卫星通信概念股 / 电网设备（600268 国电南自等，磁暴防护需求）</div>
+        <div class="source">来源：<a href="https://www.unian.net/science" target="_blank">UNIAN Science</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>🦞 龙虾老师 · 每日不错过新闻 · 2026-07-25</p>
+    <p class="footer-note">为你过滤噪音，只留信号。周末愉快，lainy～</p>
+  </footer>
+</div>
+</body>
+</html>

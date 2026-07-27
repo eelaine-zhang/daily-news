@@ -6,9 +6,9 @@
 <title>每日不错过新闻 · 2026-07-27</title>
 <style>
   :root {
-    --bg: #0e1117; --card: #161b22; --card-hover: #1c232c; --border: #2a313c;
-    --text: #e6edf3; --text-dim: #9198a1; --accent: #ff6b6b; --accent-soft: #ff6b6b22;
-    --hbm: #ffb454; --geo: #7dd3fc; --macro: #a5f3a5; --biz: #c084fc; --fun: #f9a8d4;
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
   }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
@@ -34,11 +34,11 @@
   .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
   .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
   .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
-  .tag.hbm { background: #ffb45422; color: var(--hbm); }
-  .tag.geo { background: #7dd3fc22; color: var(--geo); }
-  .tag.macro { background: #a5f3a522; color: var(--macro); }
-  .tag.biz { background: #c084fc22; color: var(--biz); }
-  .tag.fun { background: #f9a8d422; color: var(--fun); }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
   .source { font-size: 12px; color: var(--text-dim); }
   .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
   .source a:hover { color: var(--text); }
@@ -48,6 +48,54 @@
   .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
   .footer-note { margin-top: 6px; font-size: 12px; }
+
+  /* v2 视觉升级 */
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--text-dim); font-size: 13px; text-decoration: none;
+    margin-bottom: 16px; padding: 6px 12px; border-radius: 6px;
+    transition: all 0.15s;
+  }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+
+  .section-title {
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    border-bottom: none !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+
+  .card .why {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px; border-top: none;
+    font-style: normal;
+  }
+  .card .why::before {
+    content: "💡 "; font-style: normal;
+  }
+
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+
+  .tldr {
+    box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04);
+    border-left: 4px solid var(--macro);
+  }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+
+  .market-block { padding: 18px 20px; }
 </style>
 </head>
 <body>
@@ -68,12 +116,12 @@
   </div>
 
   <section>
-    <h2 class="section-title"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag hbm">三星 × Broadcom</span>
         <h4>$2000 亿史诗级联盟：三星拿下 Broadcom 五年全面合作大单，2nm 代工 + HBM + 先进封装一条龙</h4>
-        <p>7/25 三星电子与 Broadcom 签署 MOU，五年合作规模超 $2000 亿（截至 2030 年），涵盖：① 2nm 工艺代工（三星平泽 Campus）；② 下一代 HBM 联合开发；③ 先级封装。Seoul Economic Daily 透露，Broadcom 选择三星而非 TSMC 的核心原因——"TSMC too costly, too slow"（太贵太慢），三星 2nm 良率已升至 60%，配合"一站式 turnkey"能力（设计→制造→封装→内存）打动了客户。</p>
+        <p>7/25 三星电子与 Broadcom 签署 MOU，五年合作规模超 <strong>$2000</strong> 亿（截至 2030 年），涵盖：① 2nm 工艺代工（三星平泽 Campus）；② 下一代 HBM 联合开发；③ 先级封装。Seoul Economic Daily 透露，Broadcom 选择三星而非 TSMC 的核心原因——"TSMC too costly, too slow"（太贵太慢），三星 2nm 良率已升至 60%，配合"一站式 turnkey"能力（设计→制造→封装→内存）打动了客户。</p>
         <div class="why">🦞 <b>为什么值得看：</b>这是三星代工业务近年来最大突破。Broadcom 是全球第三大芯片设计公司（仅次于英伟达、高通），其 AI 定制芯片（XPU）需求巨大。$2000 亿/5 年 = 年均 $400 亿，相当于三星代工当前年收入的 ~60%。对 lainy 的金融视角：① TSMC 的"独家议价权"开始被挑战——N3 产能被英伟达和 Google 塞满，Broadcom 被挤出去找三星；② 三星股价（005930.KS）有重估空间；③ HBM 格局：三星此前在 HBM3E 输给 SK Hynix，但这次绑定 Broadcom 联合开发下一代 HBM，可能扭转份额。</div>
         <div class="ticker">📌 关联标的：SSNLF（三星电子 OTC）/ AVGO（Broadcom）/ TSM（TSMC，短期承压）/ 000938 紫光股份（国产替代情绪）— 三星受益，TSMC 短期情绪受损</div>
         <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/07/27/why-broadcom-entrusted-samsung-with-200-billion-order-tsmc" target="_blank">Seoul Economic Daily</a> · <a href="https://www.benzinga.com/markets/tech/26/07/60685628/samsung-broadcom-ink-200-billion-ai-chip-pact-through-2030-as-foundry-race-with-tsmc-heats-up" target="_blank">Benzinga</a> · <a href="https://www.businesstimes.com.sg/companies-markets/telcos-media-tech/samsung-electronics-wins-us200-billion-broadcom-ai-chip-partnership-boosting-foundry-push" target="_blank">Business Times</a></div>
@@ -91,7 +139,7 @@
       <div class="card">
         <span class="tag hbm">SK Hynix × Microsoft</span>
         <h4>SK Hynix 将 HBM4 供应扩展至 Microsoft——韩国存储双雄一周签下 $9500 亿大单</h4>
-        <p>继上周英伟达-SK Hynix $5000 亿合作后，SK Hynix 又将 HBM4 供应协议扩展至 Microsoft。加上三星-Broadcom 的 $2000 亿，韩国两大存储巨头在一周内与美科技巨头签署了总计约 $9500 亿的 AI 合作协议。SK Hynix 同时通过 TSMC 逻辑基础裸片制造 HBM4/HBM4E，并供应 Solidigm QLC eSSD。</p>
+        <p>继上周英伟达-SK Hynix <strong>$5000</strong> 亿合作后，SK Hynix 又将 HBM4 供应协议扩展至 Microsoft。加上三星-Broadcom 的 <strong>$2000</strong> 亿，韩国两大存储巨头在一周内与美科技巨头签署了总计约 <strong>$9500</strong> 亿的 AI 合作协议。SK Hynix 同时通过 TSMC 逻辑基础裸片制造 HBM4/HBM4E，并供应 Solidigm QLC eSSD。</p>
         <div class="why">🦞 <b>商业含义：</b>HBM 已经从"内存厂的配角"变成"AI 军备竞赛的核心弹药"。SK Hynix 几乎锁定了英伟达 + Microsoft 两大买家，三星则绑定 Broadcom。对 lainy 的框架：这验证了"AI capex → 内存利润传导"的逻辑——不是 GPU 一家赚钱，而是整条链都在分肉。HBM 双寡头格局（三星 + SK Hynix）的定价权远超传统 DRAM 周期。</div>
         <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星）/ MSFT（Microsoft）— HBM 双寡头受益，美光 MU 被边缘化风险上升</div>
         <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/07/26/samsung-strikes-200-billion-ai-chip-deal-sk-extends-hbm4" target="_blank">Seoul Economic Daily</a></div>
@@ -110,7 +158,7 @@
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag geo">里海冲突</span>
@@ -124,7 +172,7 @@
       <div class="card">
         <span class="tag geo">霍尔木兹 · 油价</span>
         <h4>Brent 破 $100 后回落至 $96.78；胡塞武装袭击沙特油轮，红海成为第二咽喉</h4>
-        <p>本周 Brent 原油从 $80s 飙升至 $100+（自 5 月以来首次），周涨幅近 10%。核心驱动：胡塞武装在曼德海峡袭击两艘沙特油轮——这是沙特绕开霍尔木兹的主要替代出口路线。WTI 从 $80 涨至 $92+。周五 Brent 回落至 $96.78（-3.88%），因阿曼与伊朗接近达成霍尔木兹海峡通行协议。但胡塞对沙特 Red Sea 港口的袭击意味着"绕行路线也不安全"。</p>
+        <p>本周 Brent 原油从 $80s 飙升至 <strong>$100</strong>+（自 5 月以来首次），周涨幅近 10%。核心驱动：胡塞武装在曼德海峡袭击两艘沙特油轮——这是沙特绕开霍尔木兹的主要替代出口路线。WTI 从 <strong>$80</strong> 涨至 <strong>$92</strong>+。周五 Brent 回落至 <strong>$96.78</strong>（<strong>-3.88%</strong>），因阿曼与伊朗接近达成霍尔木兹海峡通行协议。但胡塞对沙特 Red Sea 港口的袭击意味着"绕行路线也不安全"。</p>
         <div class="why">🦞 <b>龙虾老师说：</b>上周龙虾老师还在说"Brent $72 vs EIA 预测 $105 的缺口"——现在缺口已经大幅收窄。市场正在重新定价地缘风险。两个关键变量：① 阿曼-伊朗协议能否真正恢复霍尔木兹通行？如果可以，油价有 $10-15 的回落空间；② 胡塞是否继续打沙特 Red Sea 设施？如果持续，$100+ 可能是新常态。对 lainy：高油价 = 通胀粘性 = 美联储难降息 = 科技股估值承压。这条链你得记住。</div>
         <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源 ETF）— 高油价受益；但 JETS（航空 ETF）/ XLY（可选消费）受损</div>
         <div class="source">来源：<a href="https://www.economist.com/finance-and-economics/2026/07/26/oil-markets-are-on-edge-again" target="_blank">Economist</a> · <a href="https://oilprice.com/Energy/Crude-Oil/Oil-Markets-Glut-Narrative-Just-Blew-Up.html" target="_blank">OilPrice</a> · <a href="https://www.fxempire.com/forecasts/article/oil-news-can-wti-and-brent-extend-the-rally-as-hormuz-supply-risk-persists-1612879" target="_blank">FXEmpire</a></div>
@@ -143,12 +191,12 @@
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 超级周 · GDP · PCE</small></h2>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 超级周 · GDP · PCE</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag macro">FOMC 超级周</span>
         <h4>FOMC 7/28-29 议息会议 + Q2 GDP + PCE 通胀——本周三大事件定方向</h4>
-        <p>本周是 2026 年迄今最关键的一周：① 美联储 FOMC 会议 7/28-29，市场预计按兵不动（维持当前利率），但油价飙升让加息预期升温——Kalshi 显示约 1/3 概率加息；② Q2 GDP 数据周五公布；③ Core PCE 通胀（美联储最看重的通胀指标）同步发布。上周黄金在 $4,000-4,100 间剧烈震荡，最终收于 $4,000 附近。FedWatch 显示官员对"年内可能加息"的支持在增强。</p>
+        <p>本周是 2026 年迄今最关键的一周：① 美联储 FOMC 会议 7/28-29，市场预计按兵不动（维持当前利率），但油价飙升让加息预期升温——Kalshi 显示约 1/3 概率加息；② Q2 GDP 数据周五公布；③ Core PCE 通胀（美联储最看重的通胀指标）同步发布。上周黄金在 <strong>$4</strong>,000-4,100 间剧烈震荡，最终收于 <strong>$4</strong>,000 附近。FedWatch 显示官员对"年内可能加息"的支持在增强。</p>
         <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要关注的宏观事件。三种情景：① 按兵不动 + 鸽派发言 → 风险资产大涨、黄金回调；② 按兵不动 + 鹰派发言（暗示加息可能）→ 科技股承压、黄金走强；③ 意外加息 → 全球资本市场剧烈震荡。当前市场共识是情景 ①，但油价 $100+ 让情景 ② 的概率在上升。对 A 股影响有限（不在美元周期内），但港股会敏感。</div>
         <div class="ticker">📌 关联标的：SPY / QQQ（美股，FOMC 结果直接驱动）/ GLD 黄金（$4000 关口攻防）/ 513130 港股通科技ETF — 鸽派利好科技，鹰派利空</div>
         <div class="source">来源：<a href="https://www.babypips.com/analysis/fundies-cheat-sheet-2026-07-27-live-fomc-core-pce-hormuz-megacap-earnings" target="_blank">BabyPips</a> · <a href="https://growbeansprout.com/tools/fedwatch" target="_blank">FedWatch</a> · <a href="https://www.moneycontrol.com/news/business/commodities/a-high-stakes-week-ahead-for-commodities-as-red-sea-risks-and-fed-policy-collide-13983648.html" target="_blank">Moneycontrol</a></div>
@@ -157,7 +205,7 @@
       <div class="card">
         <span class="tag macro">黄金</span>
         <h4>黄金守 $4000 关口：中国进口创 15 个月新高，央行买盘 + 地缘避险双支撑</h4>
-        <p>黄金上周在 $4,000-4,100 间剧烈震荡，最终收于 $4,000 附近。周初美国通胀数据偏软一度推升金价至 $4,100+，但随后美元反弹打压。FX Leaders 指出：中国黄金进口创 15 个月新高——中国买家在金价回调时反手抢金。关键支撑 $4,021，阻力 $4,083-4,120。本周 FOMC + GDP + PCE 将决定方向。</p>
+        <p>黄金上周在 <strong>$4</strong>,000-4,100 间剧烈震荡，最终收于 <strong>$4</strong>,000 附近。周初美国通胀数据偏软一度推升金价至 <strong>$4</strong>,100+，但随后美元反弹打压。FX Leaders 指出：中国黄金进口创 15 个月新高——中国买家在金价回调时反手抢金。关键支撑 <strong>$4</strong>,021，阻力 <strong>$4</strong>,083-4,120。本周 FOMC + GDP + PCE 将决定方向。</p>
         <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4000 反复拉锯，本质是两股力量对撞：地缘避险（买）vs 美元走强（卖）。中国央行连续 18 个月增持黄金储备——这是结构性的，不受短期利率影响。对 lainy 的配置框架：黄金是"高通胀+地缘混乱"环境下的核心配置，但 FOMC 后如果鸽派，短期可能回调到 $3,900——那是加仓机会，不是止损信号。</div>
         <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— 央行持续买入，中长期看涨</div>
         <div class="source">来源：<a href="https://www.fxleaders.com/news/2026/07/26/gold-forecast-xau-usd-defends-4000-as-china-imports-soar-ahead-of-fed-gdp-and-pce-inflation/" target="_blank">FX Leaders</a> · <a href="https://www.fxempire.com/forecasts/article/gold-news-warshs-tone-could-break-the-gold-markets-five-week-range-1612885" target="_blank">FXEmpire</a></div>
@@ -176,31 +224,31 @@
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
 
     <div class="market-block">
       <h4>🇨🇳 A 股 — 上周五沪指 -1.61% 报 3814 / 深成指 -2.47% / 创业板 -2.65% / 成交跌破 2 万亿</h4>
-      <p>7/24 收盘三大指数普跌，仅 554 只个股上涨，4937 只下跌。<b>周线来看：</b>上证 +1.33%、深成指 +0.49%、创业板 +1.52%（前半周反弹、周五回吐）。主力资金本周净流入 1266 亿元，24 个行业获净流入。<b>亮点：</b>宁德时代半年报炸裂（营收 2769 亿 +54.8%，净利 432.8 亿 +42%，日赚 2.4 亿），同时宣布 A 股史上最大规模回购（400 亿）+ 中期分红 64.9 亿。<b>长鑫科技 7/27 科创板上市</b>（5800 亿估值、579 亿募资，2026 年 A 股最大 IPO），可能吸走短期资金。<b>今日关注：</b>内幕交易新规首日效应 + 长鑫上市对流动性的虹吸。</p>
+      <p>7/24 收盘三大指数普跌，仅 554 只个股上涨，4937 只下跌。<b>周线来看：</b>上证 <strong>+1.33%</strong>、深成指 <strong>+0.49%</strong>、创业板 <strong>+1.52%</strong>（前半周反弹、周五回吐）。主力资金本周净流入 1266 亿元，24 个行业获净流入。<b>亮点：</b>宁德时代半年报炸裂（营收 2769 亿 <strong>+54.8%</strong>，净利 432.8 亿 +42%，日赚 2.4 亿），同时宣布 A 股史上最大规模回购（400 亿）+ 中期分红 64.9 亿。<b>长鑫科技 7/27 科创板上市</b>（5800 亿估值、579 亿募资，2026 年 A 股最大 IPO），可能吸走短期资金。<b>今日关注：</b>内幕交易新规首日效应 + 长鑫上市对流动性的虹吸。</p>
     </div>
 
     <div class="market-block">
       <h4>🇭🇰 港股 — 恒指上周五 -0.98% 失守 25000（收 24963）/ 周末期货报 25020（小幅回升）</h4>
-      <p>7/24 恒指失守 25000 关口，阿里 -4% 领跌科技板块。美债收益率上升 + 油价飙升 = 港股双重压力（资金外流 + 估值下调）。etnet 分析指出：布兰特期油重上 $100，今年加息机会显著增加，若趋势持续港股面临"资金外流+估值下调"双重考验。<b>本周关注：</b>FOMC 结果对港股流动性至关重要——鸽派则恒指有望收复 25000，鹰派则可能下探 24000。</p>
+      <p>7/24 恒指失守 25000 关口，阿里 -4% 领跌科技板块。美债收益率上升 + 油价飙升 = 港股双重压力（资金外流 + 估值下调）。etnet 分析指出：布兰特期油重上 <strong>$100</strong>，今年加息机会显著增加，若趋势持续港股面临"资金外流+估值下调"双重考验。<b>本周关注：</b>FOMC 结果对港股流动性至关重要——鸽派则恒指有望收复 25000，鹰派则可能下探 24000。</p>
     </div>
 
     <div class="market-block">
       <h4>🇺🇸 美股 — 道指 51947 (+0.46%) / S&amp;P 7412 (+0.05%) / 纳指 24976 (-0.64%) / 周末期货大涨</h4>
-      <p>7/25 收盘：道指小涨但纳指续跌，SOXX 芯片 ETF 跌超 4%——AI 需求质疑 + Trump 关税冲击。周线三大指数连跌。但周日晚期货大涨：道指期货 +294 点 (+0.6%)，纳指 100 期货 +1.2%——特朗普暂停轰炸伊朗触发 risk-on。<b>本周超级周：</b>FOMC + Megacap 财报（MSFT/META/AMZN 均本周公布）+ GDP + PCE。CNBC 指出芯片股反弹失败是纳指承压主因。</p>
+      <p>7/25 收盘：道指小涨但纳指续跌，SOXX 芯片 ETF 跌超 4%——AI 需求质疑 + Trump 关税冲击。周线三大指数连跌。但周日晚期货大涨：道指期货 +294 点 (<strong>+0.6%</strong>)，纳指 100 期货 <strong>+1.2%</strong>——特朗普暂停轰炸伊朗触发 risk-on。<b>本周超级周：</b>FOMC + Megacap 财报（MSFT/META/AMZN 均本周公布）+ GDP + PCE。CNBC 指出芯片股反弹失败是纳指承压主因。</p>
     </div>
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag biz">宁德时代</span>
         <h4>宁德时代半年报：营收 2769 亿 +54.8%，日赚 2.4 亿，启动 A 股史上最大回购 400 亿</h4>
-        <p>7/24 晚宁德时代发布 2026 中报：营收 2769.17 亿（+54.80%），归母净利 432.84 亿（+41.98%），折合日赚 2.4 亿。同时公告：① 中期分红每 10 股派 14.11 元（合计 64.93 亿）；② 启动 A 股史上最大规模回购（400 亿）；③ 全球动力电池市占率继续提升。储能业务增长迅猛，海外市场毛利高于国内。上半年全球 10 大车企利润加起来不如宁德一家。</p>
+        <p>7/24 晚宁德时代发布 2026 中报：营收 2769.17 亿（<strong>+54.80%</strong>），归母净利 432.84 亿（<strong>+41.98%</strong>），折合日赚 2.4 亿。同时公告：① 中期分红每 10 股派 14.11 元（合计 64.93 亿）；② 启动 A 股史上最大规模回购（400 亿）；③ 全球动力电池市占率继续提升。储能业务增长迅猛，海外市场毛利高于国内。上半年全球 10 大车企利润加起来不如宁德一家。</p>
         <div class="why">🦞 <b>为什么值得看：</b>这不只是一份财报，是"中国制造在新能源链条里赚最多钱"的证明。400 亿回购 = 管理层认为股价被低估 = 给市场注入信心。对 lainy 的消费-产业映射框架：宁德不是"消费股"，但它的财报是新能源产业链的"锚"——上游锂矿、下游车企都看它的脸色。储能业务高增长 = 第二增长曲线已经跑通。</div>
         <div class="ticker">📌 关联标的：300750 宁德时代（核心受益）/ 002460 赣锋锂业（上游）/ 002594 比亚迪（下游客户）— 新能源全链情绪利好</div>
         <div class="source">来源：<a href="https://news.pedaily.cn/202607/566823.shtml" target="_blank">投资界</a> · <a href="https://www.cls.cn/detail/2437150" target="_blank">财联社</a></div>
@@ -209,7 +257,7 @@
       <div class="card">
         <span class="tag biz">消费趋势</span>
         <h4>中国消费换轨：上半年服务零售 +5.3% 远超商品零售 +1.1%——"买服务"替代"买商品"</h4>
-        <p>《财经》杂志分析国家统计局数据：2026 上半年社零总额 +2.7%，但结构剧变——服务零售额 +5.3%，商品零售仅 +1.1%，差距 4.2 个百分点。消费者从"买东西"转向"买体验"（旅游、餐饮、文娱）。同期家电上游零部件商面临转型挑战——2025 年冰箱价格战压缩利润，涨价信号未传导至终端。</p>
+        <p>《财经》杂志分析国家统计局数据：2026 上半年社零总额 <strong>+2.7%</strong>，但结构剧变——服务零售额 <strong>+5.3%</strong>，商品零售仅 <strong>+1.1%</strong>，差距 4.2 个百分点。消费者从"买东西"转向"买体验"（旅游、餐饮、文娱）。同期家电上游零部件商面临转型挑战——2025 年冰箱价格战压缩利润，涨价信号未传导至终端。</p>
         <div class="why">🦞 <b>龙虾老师的解读：</b>这个数据对消费股投资非常重要。"服务 > 商品"意味着：① 传统零售（百货、超市）承压；② 餐饮/旅游/文娱受益；③ 白酒两极分化——高端宴请（服务场景）韧性强，低端光瓶酒（商品场景）下滑。家电方面，价格战 + 原材料涨价 = 零部件商利润被两头挤压。对 lainy：消费股选股要看"服务属性"强弱——海底捞 > 呷哺呷哺，茅台 > 洋河。</div>
         <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 002511 顺网科技（文娱服务）/ 000651 格力电器（家电承压）— 服务消费受益，商品消费承压</div>
         <div class="source">来源：<a href="https://www.mycaijing.com/article/detail/575325" target="_blank">财经</a> · <a href="https://news.china.com/socialgd/10000169/20260726/49634106.html" target="_blank">中华网</a></div>
@@ -219,7 +267,7 @@
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag fun">漫威</span>
@@ -248,7 +296,7 @@
   </section>
 
   <section>
-    <h2 class="section-title"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
     <div class="cards">
       <div class="card">
         <span class="tag fun">科学</span>
