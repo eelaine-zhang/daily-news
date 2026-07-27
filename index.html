@@ -156,36 +156,92 @@
     letter-spacing: 1px;
   }
 
-  .sentiment-block {
-    margin-top: 32px;
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }
+  .market-block {
     text-align: left;
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 12px;
-    border-left: 3px solid var(--sage);
   }
-  .sentiment-label {
-    color: var(--sentiment-main);
-    font-size: 15px;
+  .market-name {
+    color: var(--text-main);
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 4px;
+    padding-left: 10px;
+    border-left: 3px solid var(--sage);
+    margin-bottom: 6px;
   }
-  .sentiment-note {
-    color: var(--sentiment-sub);
+  .market-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    padding-left: 13px;
+  }
+  .market-label {
+    color: var(--sentiment-main);
     font-size: 13px;
-    margin-bottom: 4px;
+    font-weight: 500;
   }
-  .sentiment-detail {
+  .market-avg {
+    color: var(--text-muted);
+    font-size: 11px;
+  }
+  .market-detail {
     color: var(--sentiment-sub);
-    font-size: 12px;
-    margin-bottom: 8px;
+    font-size: 11px;
+    padding-left: 13px;
   }
+
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .industry-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(183, 192, 163, 0.08);
+    border-radius: 6px;
+  }
+  .industry-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #F7F5EF;
+    flex-shrink: 0;
+  }
+  .industry-name {
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .industry-detail {
+    color: var(--text-muted);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
   .sentiment-events {
     color: var(--sentiment-sub);
     font-size: 12px;
     line-height: 1.6;
     font-style: italic;
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: rgba(183, 192, 163, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid var(--sage);
   }
 
   .calendar-section {
@@ -193,8 +249,8 @@
   }
   .cal-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
     margin-top: 16px;
   }
   .cal-month {
@@ -262,7 +318,7 @@
   }
   @media (max-width: 600px) {
     .today-date { font-size: 32px; }
-    .cal-grid { grid-template-columns: repeat(2, 1fr); }
+    .cal-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .bar-label { font-size: 10px; max-width: 60px; }
   }
 </style>
@@ -357,12 +413,70 @@
         </div></div>
     <div class="chart-caption">统计每个关键词在近 30 天日报中出现的期数</div>
 
-    <div class="sentiment-block">
-      <div class="sentiment-label">📉 偏悲观</div>
-      <div class="sentiment-note">近 30 天利空消息主导</div>
-      <div class="sentiment-detail">涨 7 天 · 跌 9 天 · 震荡 10 天</div>
-      <div class="sentiment-events">主要事件：⚡ 今日三句话；$2000 亿史诗级联盟：三星拿下 Broadcom 五年全面合作大单，2nm 代工 + HBM + 先进封装一条龙；Intel 数据中心部门裁员持续：2025 年以来已裁 5000+ 美国员工，AI 时代掉队代价</div>
+    <div style="margin-top: 40px;">
+      <div class="section-title">各市场情绪（近 30 天）</div>
+      <div class="market-grid">
+        
+        <div class="market-block">
+          <div class="market-name" style="border-left-color:#B7C0A3;">A 股</div>
+          <div class="market-data">
+            <span class="market-label">📈 偏乐观</span>
+            <span class="market-avg">平均 -0.45%</span>
+          </div>
+          <div class="market-detail">涨 6 天 · 跌 5 天 · 震荡 1 天</div>
+        </div>
+        <div class="market-block">
+          <div class="market-name" style="border-left-color:#B7C0A3;">港股</div>
+          <div class="market-data">
+            <span class="market-label">📈 偏乐观</span>
+            <span class="market-avg">平均 +0.33%</span>
+          </div>
+          <div class="market-detail">涨 12 天 · 跌 6 天 · 震荡 0 天</div>
+        </div>
+        <div class="market-block">
+          <div class="market-name" style="border-left-color:#D5A0A2;">美股</div>
+          <div class="market-data">
+            <span class="market-label">📉 偏悲观</span>
+            <span class="market-avg">平均 -0.20%</span>
+          </div>
+          <div class="market-detail">涨 4 天 · 跌 6 天 · 震荡 2 天</div>
+        </div>
+      </div>
     </div>
+
+    <div style="margin-top: 32px;">
+      <div class="section-title">各行业情绪（近 30 天）</div>
+      <div class="industry-grid">
+        
+        <div class="industry-item">
+          <span class="industry-icon" style="background:#B7C0A3;">📈</span>
+          <span class="industry-name">AI/芯片</span>
+          <span class="industry-detail">↑11 ↓10 −102</span>
+        </div>
+        <div class="industry-item">
+          <span class="industry-icon" style="background:#B7C0A3;">📈</span>
+          <span class="industry-name">宏观/利率</span>
+          <span class="industry-detail">↑9 ↓8 −39</span>
+        </div>
+        <div class="industry-item">
+          <span class="industry-icon" style="background:#A9BACB;">➖</span>
+          <span class="industry-name">消费</span>
+          <span class="industry-detail">↑4 ↓4 −26</span>
+        </div>
+        <div class="industry-item">
+          <span class="industry-icon" style="background:#A9BACB;">➖</span>
+          <span class="industry-name">新能源/汽车</span>
+          <span class="industry-detail">↑1 ↓1 −2</span>
+        </div>
+        <div class="industry-item">
+          <span class="industry-icon" style="background:#B7C0A3;">📈</span>
+          <span class="industry-name">地缘/国际</span>
+          <span class="industry-detail">↑2 ↓0 −27</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sentiment-events">近期主要事件：⚡ 今日三句话；$2000 亿史诗级联盟：三星拿下 Broadcom 五年全面合作大单，2nm 代工 + HBM + 先进封装一条龙；Intel 数据中心部门裁员持续：2025 年以来已裁 5000+ 美国员工，AI 时代掉队代价</div>
   </div>
 
   <div class="calendar-section">
@@ -387,7 +501,7 @@
   </div>
 
   <footer>
-    共 85 期 · 更新于 2026-07-27 15:33 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 85 期 · 更新于 2026-07-27 15:40 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
 </body>

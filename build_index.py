@@ -66,6 +66,27 @@ KEYWORD_LIST = [
 UP_WORDS = ["涨", "大涨", "飙升", "暴涨", "涨停", "创新高", "突破", "上涨", "反弹", "利好", "回升"]
 DOWN_WORDS = ["跌", "大跌", "暴跌", "崩盘", "崩跌", "重挫", "下跌", "创新低", "杀跌", "利空", "蒸发", "失守"]
 
+# 行业分类（按每天 HTML 里的板块 emoji + 关键词）
+INDUSTRY_SECTIONS = {
+    "AI/芯片": ["💾", "AI", "芯片", "半导体", "HBM", "DRAM", "GPU", "算力", "存储"],
+    "宏观/利率": ["📈", "美联储", "FOMC", "CPI", "PCE", "GDP", "降息", "加息", "黄金", "油价"],
+    "消费": ["🛍️", "消费", "零售", "餐饮", "白酒", "家电", "奢侈品", "茶饮"],
+    "新能源/汽车": ["宁德时代", "比亚迪", "特斯拉", "Tesla", "锂电", "电动车", "光伏", "储能"],
+    "地缘/国际": ["🌍", "伊朗", "以色列", "乌克兰", "俄罗斯", "中东", "红海", "台海", "朝鲜"],
+}
+
+
+def parse_market_pct(text: str):
+    """Extract main percentage move from a market h4 title. Returns float or None."""
+    # Match patterns like "沪指 -1.61%" or "恒指 +0.98%" or "道指 51947 (+0.46%)"
+    m = re.search(r"([+\-]\s*\d+\.\d+)%", text)
+    if m:
+        try:
+            return float(m.group(1).replace(" ", ""))
+        except ValueError:
+            return None
+    return None
+
 
 def format_date_cn(date_str: str) -> str:
     dt = datetime.strptime(date_str, "%Y-%m-%d")
@@ -138,12 +159,82 @@ def analyze_keywords(dates: list, days: int = 30) -> list:
     return counter.most_common(10)
 
 
+def analyze_market_sentiment(dates: list, days: int = 30):
+    """Analyze each market (A股/港股/美股) by actual % moves from h4 titles.
+    Returns dict: {market_key: {"up":N, "down":N, "flat":N, "avg":float, "days":N}}
+    """
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+
+    market_patterns = {
+        "A 股": re.compile(r"🇨🇳|A 股|沪指|上证"),
+        "港股": re.compile(r"🇭🇰|港股|恒指|恒生"),
+        "美股": re.compile(r"🇺🇸|美股|纳指|标普|道指|S&P"),
+    }
+
+    result = {}
+    for name, pattern in market_patterns.items():
+        up = down = flat = 0
+        pct_sum = 0.0
+        pct_count = 0
+        for d in recent:
+            titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+            for t in titles:
+                if pattern.search(t):
+                    pct = parse_market_pct(t)
+                    if pct is not None:
+                        pct_sum += pct
+                        pct_count += 1
+                        if pct >= 0.3:
+                            up += 1
+                        elif pct <= -0.3:
+                            down += 1
+                        else:
+                            flat += 1
+                    break  # only count first matching title per day
+        avg = round(pct_sum / pct_count, 2) if pct_count > 0 else 0.0
+        result[name] = {"up": up, "down": down, "flat": flat, "avg": avg, "days": pct_count}
+    return result
+
+
+def analyze_industry_sentiment(dates: list, days: int = 30):
+    """Analyze each industry by counting up/down words in its titles.
+    Returns dict: {industry: {"up":N, "down":N, "flat":N}}
+    """
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+
+    result = {name: {"up": 0, "down": 0, "flat": 0} for name in INDUSTRY_SECTIONS}
+
+    for d in recent:
+        # Read whole HTML, split by section header
+        try:
+            content = (ARCHIVE_DIR / f"{d}.html").read_text(encoding="utf-8", errors="ignore")
+        except Exception:
+            continue
+        # Get all h3/h4 titles in this day
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        for title in titles:
+            for industry, keywords in INDUSTRY_SECTIONS.items():
+                if any(kw in title for kw in keywords):
+                    up_score = sum(1 for w in UP_WORDS if w in title)
+                    down_score = sum(1 for w in DOWN_WORDS if w in title)
+                    if up_score > down_score:
+                        result[industry]["up"] += 1
+                    elif down_score > up_score:
+                        result[industry]["down"] += 1
+                    else:
+                        result[industry]["flat"] += 1
+                    break  # one title only counts for one industry
+    return result
+
+
 def analyze_sentiment(dates: list, days: int = 30):
-    """Count up/down/flat days from titles in the last N days."""
+    """Legacy overall sentiment — kept for compat. Use analyze_market_sentiment instead."""
     cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
     recent = sorted([d for d in dates if d >= cutoff], reverse=True)
     up_days = down_days = flat_days = 0
-    recent_events = []  # collect recent 7-day titles for "major events"
+    recent_events = []
     for d in recent:
         titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
         joined = " ".join(titles)
@@ -155,11 +246,9 @@ def analyze_sentiment(dates: list, days: int = 30):
             down_days += 1
         else:
             flat_days += 1
-        # Collect event titles from recent 7 days
         if d >= (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d"):
-            recent_events.extend(titles[:3])  # top 3 titles per day
+            recent_events.extend(titles[:3])
     total = up_days + down_days + flat_days
-    # Pick top 3 representative events (most recent first, dedupe)
     seen = set()
     major_events = []
     for ev in recent_events:
@@ -265,29 +354,65 @@ def main():
     top10 = analyze_keywords(dates, days=30)
     bar_chart_html = render_bar_chart(top10)
     up_days, down_days, flat_days, sentiment_total, major_events = analyze_sentiment(dates, days=30)
+    market_sent = analyze_market_sentiment(dates, days=30)
+    industry_sent = analyze_industry_sentiment(dates, days=30)
 
-    # 市场情绪文字
-    if sentiment_total > 0:
-        up_pct = round(up_days / sentiment_total * 100)
-        if up_days > down_days:
-            sentiment_label = "📈 偏乐观"
-            sentiment_note = "近 30 天利好消息主导"
-        elif down_days > up_days:
-            sentiment_label = "📉 偏悲观"
-            sentiment_note = "近 30 天利空消息主导"
+    # 主要事件（近 7 天）
+    events_html = ""
+    if major_events:
+        events_str = "；".join(major_events)
+        events_html = f'<div class="sentiment-events">近期主要事件：{events_str}</div>'
+
+    # 按市场渲染
+    def render_market_block(name: str, data: dict) -> str:
+        up, down, flat, avg, days = data["up"], data["down"], data["flat"], data["avg"], data["days"]
+        if days == 0:
+            return ""
+        if up > down:
+            label = "📈 偏乐观"
+            color = "#B7C0A3"
+        elif down > up:
+            label = "📉 偏悲观"
+            color = "#D5A0A2"
         else:
-            sentiment_label = "➖ 震荡"
-            sentiment_note = "近 30 天多空分歧"
-        sentiment_detail = f"涨 {up_days} 天 · 跌 {down_days} 天 · 震荡 {flat_days} 天"
-        events_html = ""
-        if major_events:
-            events_str = "；".join(major_events)
-            events_html = f'<div class="sentiment-events">主要事件：{events_str}</div>'
-    else:
-        sentiment_label = "📊 数据不足"
-        sentiment_note = ""
-        sentiment_detail = ""
-        events_html = ""
+            label = "➖ 震荡"
+            color = "#A9BACB"
+        avg_str = f"{avg:+.2f}%" if avg != 0 else "0%"
+        return f'''
+        <div class="market-block">
+          <div class="market-name" style="border-left-color:{color};">{name}</div>
+          <div class="market-data">
+            <span class="market-label">{label}</span>
+            <span class="market-avg">平均 {avg_str}</span>
+          </div>
+          <div class="market-detail">涨 {up} 天 · 跌 {down} 天 · 震荡 {flat} 天</div>
+        </div>'''
+
+    market_blocks = "".join(render_market_block(name, data) for name, data in market_sent.items())
+
+    # 按行业渲染
+    def render_industry_block(name: str, data: dict) -> str:
+        up, down, flat = data["up"], data["down"], data["flat"]
+        total = up + down + flat
+        if total == 0:
+            return ""
+        if up > down:
+            label = "📈"
+            color = "#B7C0A3"
+        elif down > up:
+            label = "📉"
+            color = "#D5A0A2"
+        else:
+            label = "➖"
+            color = "#A9BACB"
+        return f'''
+        <div class="industry-item">
+          <span class="industry-icon" style="background:{color};">{label}</span>
+          <span class="industry-name">{name}</span>
+          <span class="industry-detail">↑{up} ↓{down} −{flat}</span>
+        </div>'''
+
+    industry_items = "".join(render_industry_block(name, data) for name, data in industry_sent.items())
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -447,36 +572,92 @@ def main():
     letter-spacing: 1px;
   }}
 
-  .sentiment-block {{
-    margin-top: 32px;
+  .market-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+  }}
+  .market-block {{
     text-align: left;
-    max-width: 560px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 12px;
-    border-left: 3px solid var(--sage);
   }}
-  .sentiment-label {{
-    color: var(--sentiment-main);
-    font-size: 15px;
+  .market-name {{
+    color: var(--text-main);
+    font-size: 14px;
     font-weight: 600;
-    margin-bottom: 4px;
+    padding-left: 10px;
+    border-left: 3px solid var(--sage);
+    margin-bottom: 6px;
   }}
-  .sentiment-note {{
-    color: var(--sentiment-sub);
+  .market-data {{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+    padding-left: 13px;
+  }}
+  .market-label {{
+    color: var(--sentiment-main);
     font-size: 13px;
-    margin-bottom: 4px;
+    font-weight: 500;
   }}
-  .sentiment-detail {{
+  .market-avg {{
+    color: var(--text-muted);
+    font-size: 11px;
+  }}
+  .market-detail {{
     color: var(--sentiment-sub);
-    font-size: 12px;
-    margin-bottom: 8px;
+    font-size: 11px;
+    padding-left: 13px;
   }}
+
+  .industry-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }}
+  .industry-item {{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(183, 192, 163, 0.08);
+    border-radius: 6px;
+  }}
+  .industry-icon {{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #F7F5EF;
+    flex-shrink: 0;
+  }}
+  .industry-name {{
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 500;
+    flex: 1;
+  }}
+  .industry-detail {{
+    color: var(--text-muted);
+    font-size: 11px;
+    white-space: nowrap;
+  }}
+
   .sentiment-events {{
     color: var(--sentiment-sub);
     font-size: 12px;
     line-height: 1.6;
     font-style: italic;
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: rgba(183, 192, 163, 0.06);
+    border-radius: 6px;
+    border-left: 3px solid var(--sage);
   }}
 
   .calendar-section {{
@@ -484,8 +665,8 @@ def main():
   }}
   .cal-grid {{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
     margin-top: 16px;
   }}
   .cal-month {{
@@ -553,7 +734,7 @@ def main():
   }}
   @media (max-width: 600px) {{
     .today-date {{ font-size: 32px; }}
-    .cal-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    .cal-grid {{ grid-template-columns: repeat(2, 1fr); gap: 20px; }}
     .bar-label {{ font-size: 10px; max-width: 60px; }}
   }}
 </style>
@@ -578,12 +759,21 @@ def main():
     {bar_chart_html}
     <div class="chart-caption">统计每个关键词在近 30 天日报中出现的期数</div>
 
-    <div class="sentiment-block">
-      <div class="sentiment-label">{sentiment_label}</div>
-      <div class="sentiment-note">{sentiment_note}</div>
-      <div class="sentiment-detail">{sentiment_detail}</div>
-      {events_html}
+    <div style="margin-top: 40px;">
+      <div class="section-title">各市场情绪（近 30 天）</div>
+      <div class="market-grid">
+        {market_blocks}
+      </div>
     </div>
+
+    <div style="margin-top: 32px;">
+      <div class="section-title">各行业情绪（近 30 天）</div>
+      <div class="industry-grid">
+        {industry_items}
+      </div>
+    </div>
+
+    {events_html}
   </div>
 
   <div class="calendar-section">
