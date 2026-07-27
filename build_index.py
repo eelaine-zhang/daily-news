@@ -4,7 +4,7 @@ import os
 import re
 from pathlib import Path
 from datetime import datetime, date, timedelta
-from collections import defaultdict
+from collections import defaultdict, Counter
 import calendar
 
 REPO_ROOT = Path(__file__).parent
@@ -13,7 +13,6 @@ INDEX_HTML = REPO_ROOT / "index.html"
 
 DATE_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2})\.html$")
 
-# Morandi palette
 COLORS = {
     "page_bg": "#F8F6EE",
     "text_main": "#4A4640",
@@ -32,7 +31,41 @@ COLORS = {
     "calendar_fill": "#B7BEA3",
     "calendar_ring": "#D7A1A1",
     "calendar_empty": "#D8D1C5",
+    "sentiment_main": "#7F8A6A",
+    "sentiment_sub": "#A59B8D",
+    "grid": "#E9E0D2",
+    "axis_text": "#9C9386",
 }
+
+BAR_COLORS = [
+    COLORS["rose"], COLORS["sage"], COLORS["bluegray"], COLORS["mustard"],
+    COLORS["mauve"], COLORS["mint"], COLORS["beige"], COLORS["lavender"],
+    COLORS["powder"], COLORS["sand"],
+]
+
+# 关键词候选词表（每天扫描这些词的出现频次）
+KEYWORD_LIST = [
+    "英伟达", "NVIDIA", "NVDA", "AMD", "Intel", "英特尔", "台积电", "TSMC",
+    "三星", "Samsung", "SK海力士", "SK Hynix", "海力士", "美光", "Micron",
+    "Broadcom", "博通", "高通", "Qualcomm", "苹果", "Apple", "微软", "Microsoft",
+    "谷歌", "Google", "Alphabet", "Meta", "亚马逊", "Amazon", "特斯拉", "Tesla",
+    "OpenAI", "Anthropic", "Claude", "ChatGPT", "GPT", "DeepSeek", "月之暗面",
+    "Kimi", "阿里", "阿里巴巴", "腾讯", "字节", "字节跳动", "华为", "小米",
+    "比亚迪", "宁德时代", "中芯国际", "SMIC", "长江存储", "长鑫",
+    "HBM", "HBM4", "HBM3", "DRAM", "NAND", "存储芯片", "AI芯片", "GPU",
+    "算力", "数据中心", "先进制程", "2nm", "3nm", "7nm", "CoWoS", "封装",
+    "美联储", "FOMC", "加息", "降息", "CPI", "PCE", "GDP", "非农",
+    "油价", "Brent", "WTI", "OPEC", "黄金", "美元", "人民币", "日元",
+    "特朗普", "Trump", "关税", "出口管制", "制裁", "伊朗", "以色列", "乌克兰",
+    "俄罗斯", "中东", "红海", "胡塞", "朝鲜", "台湾", "台海",
+    "A股", "港股", "美股", "上证", "恒生", "纳指", "标普", "道指",
+    "IPO", "并购", "财报", "半年报", "年报", "营收", "净利润",
+]
+
+# 情绪判断关键词
+UP_WORDS = ["涨", "大涨", "飙升", "暴涨", "涨停", "创新高", "突破", "上涨", "反弹", "利好", "回升"]
+DOWN_WORDS = ["跌", "大跌", "暴跌", "崩盘", "崩跌", "重挫", "下跌", "创新低", "杀跌", "利空", "蒸发", "失守"]
+
 
 def format_date_cn(date_str: str) -> str:
     dt = datetime.strptime(date_str, "%Y-%m-%d")
@@ -40,24 +73,23 @@ def format_date_cn(date_str: str) -> str:
     wd = weekdays[dt.weekday()]
     return f"{dt.year}年{dt.month}月{dt.day}日 {wd}"
 
+
 def format_date_big(date_str: str) -> str:
     dt = datetime.strptime(date_str, "%Y-%m-%d")
     weekdays = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
     wd = weekdays[dt.weekday()]
     return f"{dt.month}月{dt.day}日 · {wd}"
 
+
 def extract_summary(html_path: Path, max_len: int = 90) -> str:
-    """Extract first meaningful line from <h4> or first <p> in the daily HTML."""
     try:
         content = html_path.read_text(encoding="utf-8", errors="ignore")
-        # Try to grab TL;DR or first h4
         m = re.search(r"<h4[^>]*>(.*?)</h4>", content, re.DOTALL)
         if m:
             text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
             text = re.sub(r"\s+", " ", text)
             if len(text) > 10:
                 return text[:max_len] + ("…" if len(text) > max_len else "")
-        # Fallback: first <p>
         m = re.search(r"<p[^>]*>(.*?)</p>", content, re.DOTALL)
         if m:
             text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
@@ -68,30 +100,114 @@ def extract_summary(html_path: Path, max_len: int = 90) -> str:
         pass
     return "今日早报已更新"
 
+
+def extract_titles(html_path: Path) -> list:
+    """Extract all <h3> and <h4> title texts from a daily HTML."""
+    try:
+        content = html_path.read_text(encoding="utf-8", errors="ignore")
+        titles = []
+        for tag in ["h3", "h4"]:
+            for m in re.finditer(rf"<{tag}[^>]*>(.*?)</{tag}>", content, re.DOTALL):
+                text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+                text = re.sub(r"\s+", " ", text)
+                if 4 < len(text) < 200:
+                    titles.append(text)
+        return titles
+    except Exception:
+        return []
+
+
+def analyze_keywords(dates: list, days: int = 30) -> list:
+    """Count keyword frequency over the last N days. Returns top 10."""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = [d for d in dates if d >= cutoff]
+    counter = Counter()
+    for d in recent:
+        html_path = ARCHIVE_DIR / f"{d}.html"
+        try:
+            content = html_path.read_text(encoding="utf-8", errors="ignore")
+            text = re.sub(r"<[^>]+>", " ", content)
+            counted_in_doc = set()
+            for kw in KEYWORD_LIST:
+                if kw in text and kw not in counted_in_doc:
+                    # Count each doc once per keyword (avoid one article dominating)
+                    counter[kw] += 1
+                    counted_in_doc.add(kw)
+        except Exception:
+            continue
+    return counter.most_common(10)
+
+
+def analyze_sentiment(dates: list, days: int = 30):
+    """Count up/down/flat days from titles in the last N days."""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+    up_days = down_days = flat_days = 0
+    recent_events = []  # collect recent 7-day titles for "major events"
+    for d in recent:
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        joined = " ".join(titles)
+        up_score = sum(1 for w in UP_WORDS if w in joined)
+        down_score = sum(1 for w in DOWN_WORDS if w in joined)
+        if up_score > down_score and up_score >= 2:
+            up_days += 1
+        elif down_score > up_score and down_score >= 2:
+            down_days += 1
+        else:
+            flat_days += 1
+        # Collect event titles from recent 7 days
+        if d >= (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d"):
+            recent_events.extend(titles[:3])  # top 3 titles per day
+    total = up_days + down_days + flat_days
+    # Pick top 3 representative events (most recent first, dedupe)
+    seen = set()
+    major_events = []
+    for ev in recent_events:
+        if ev not in seen and len(major_events) < 3:
+            seen.add(ev)
+            major_events.append(ev)
+    return up_days, down_days, flat_days, total, major_events
+
+
+def render_bar_chart(top10: list) -> str:
+    """Render vertical bar chart with 10 morandi colors."""
+    if not top10:
+        return ""
+    max_count = top10[0][1] if top10 else 1
+    bars_html = []
+    for i, (kw, count) in enumerate(top10):
+        height_pct = int(count / max_count * 100)
+        color = BAR_COLORS[i % len(BAR_COLORS)]
+        bars_html.append(f'''
+        <div class="bar-item">
+          <div class="bar-value">{count}</div>
+          <div class="bar-track">
+            <div class="bar-fill" style="height:{height_pct}%; background:{color};"></div>
+          </div>
+          <div class="bar-label">{kw}</div>
+        </div>''')
+    return f'<div class="bar-chart">{"".join(bars_html)}</div>'
+
+
 def build_calendar_html(dates_set: set, today_str: str) -> str:
-    """Build monthly calendar grid with circle markers. Latest 4 months."""
     if not dates_set:
         return ""
-    # Group dates by (year, month)
     by_month = defaultdict(set)
     for d in dates_set:
         dt = datetime.strptime(d, "%Y-%m-%d").date()
         by_month[(dt.year, dt.month)].add(dt.day)
 
-    # Sort months descending, take latest 4
     sorted_months = sorted(by_month.keys(), reverse=True)[:4]
-    sorted_months = sorted(sorted_months)  # ascending for display
+    sorted_months = sorted(sorted_months)
 
     today = datetime.strptime(today_str, "%Y-%m-%d").date() if today_str else None
 
     month_blocks = []
     for (y, m) in sorted_months:
-        # Build calendar for this month
         cal = calendar.monthcalendar(y, m)
         active_days = by_month[(y, m)]
 
         rows_html = []
-        # Weekday header
         rows_html.append('<div class="cal-row cal-header">' + ''.join(f'<span>{d}</span>' for d in ["一","二","三","四","五","六","日"]) + '</div>')
 
         for week in cal:
@@ -125,6 +241,7 @@ def build_calendar_html(dates_set: set, today_str: str) -> str:
 
     return f'<div class="cal-grid">{"".join(month_blocks)}</div>'
 
+
 def main():
     dates = []
     for f in ARCHIVE_DIR.iterdir():
@@ -137,14 +254,40 @@ def main():
     total = len(dates)
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
-    # Extract summary for latest
     summary = ""
     if latest:
         summary = extract_summary(ARCHIVE_DIR / f"{latest}.html")
 
-    # Build calendar
     dates_set = set(dates)
     calendar_html = build_calendar_html(dates_set, latest)
+
+    # 近 30 天数据分析
+    top10 = analyze_keywords(dates, days=30)
+    bar_chart_html = render_bar_chart(top10)
+    up_days, down_days, flat_days, sentiment_total, major_events = analyze_sentiment(dates, days=30)
+
+    # 市场情绪文字
+    if sentiment_total > 0:
+        up_pct = round(up_days / sentiment_total * 100)
+        if up_days > down_days:
+            sentiment_label = "📈 偏乐观"
+            sentiment_note = "近 30 天利好消息主导"
+        elif down_days > up_days:
+            sentiment_label = "📉 偏悲观"
+            sentiment_note = "近 30 天利空消息主导"
+        else:
+            sentiment_label = "➖ 震荡"
+            sentiment_note = "近 30 天多空分歧"
+        sentiment_detail = f"涨 {up_days} 天 · 跌 {down_days} 天 · 震荡 {flat_days} 天"
+        events_html = ""
+        if major_events:
+            events_str = "；".join(major_events)
+            events_html = f'<div class="sentiment-events">主要事件：{events_str}</div>'
+    else:
+        sentiment_label = "📊 数据不足"
+        sentiment_note = ""
+        sentiment_detail = ""
+        events_html = ""
 
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -163,6 +306,10 @@ def main():
     --calendar-fill: {COLORS["calendar_fill"]};
     --calendar-ring: {COLORS["calendar_ring"]};
     --calendar-empty: {COLORS["calendar_empty"]};
+    --sentiment-main: {COLORS["sentiment_main"]};
+    --sentiment-sub: {COLORS["sentiment_sub"]};
+    --grid: {COLORS["grid"]};
+    --axis-text: {COLORS["axis_text"]};
   }}
   * {{ margin: 0; padding: 0; box-sizing: border-box; }}
   body {{
@@ -236,6 +383,102 @@ def main():
     margin-bottom: 20px;
     text-align: center;
   }}
+
+  /* Insights section (TOP10 + sentiment) */
+  .insights-section {{
+    margin: 32px 0 48px;
+  }}
+  .bar-chart {{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 8px;
+    height: 220px;
+    padding: 16px 8px 0;
+    border-bottom: 1px solid var(--grid);
+    margin-bottom: 8px;
+  }}
+  .bar-item {{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    max-width: 60px;
+  }}
+  .bar-value {{
+    color: var(--text-main);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }}
+  .bar-track {{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+  }}
+  .bar-fill {{
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    transition: opacity 0.15s;
+  }}
+  .bar-fill:hover {{
+    opacity: 0.85;
+  }}
+  .bar-label {{
+    color: var(--axis-text);
+    font-size: 11px;
+    margin-top: 8px;
+    transform: rotate(-30deg);
+    transform-origin: center;
+    white-space: nowrap;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }}
+  .chart-caption {{
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+  }}
+
+  .sentiment-block {{
+    margin-top: 32px;
+    text-align: left;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    border-left: 3px solid var(--sage);
+  }}
+  .sentiment-label {{
+    color: var(--sentiment-main);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }}
+  .sentiment-note {{
+    color: var(--sentiment-sub);
+    font-size: 13px;
+    margin-bottom: 4px;
+  }}
+  .sentiment-detail {{
+    color: var(--sentiment-sub);
+    font-size: 12px;
+    margin-bottom: 8px;
+  }}
+  .sentiment-events {{
+    color: var(--sentiment-sub);
+    font-size: 12px;
+    line-height: 1.6;
+    font-style: italic;
+  }}
+
   .calendar-section {{
     margin-top: 32px;
   }}
@@ -311,6 +554,7 @@ def main():
   @media (max-width: 600px) {{
     .today-date {{ font-size: 32px; }}
     .cal-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    .bar-label {{ font-size: 10px; max-width: 60px; }}
   }}
 </style>
 </head>
@@ -329,6 +573,19 @@ def main():
     <div class="today-summary">{summary}</div>
   </div>
 
+  <div class="insights-section">
+    <div class="section-title">近 30 天 TOP 10 高频关键词</div>
+    {bar_chart_html}
+    <div class="chart-caption">统计每个关键词在近 30 天日报中出现的期数</div>
+
+    <div class="sentiment-block">
+      <div class="sentiment-label">{sentiment_label}</div>
+      <div class="sentiment-note">{sentiment_note}</div>
+      <div class="sentiment-detail">{sentiment_detail}</div>
+      {events_html}
+    </div>
+  </div>
+
   <div class="calendar-section">
     <div class="section-title">历史日报</div>
     {calendar_html}
@@ -343,6 +600,8 @@ def main():
 """
     INDEX_HTML.write_text(html, encoding="utf-8")
     print(f"✅ Generated {INDEX_HTML} with {total} entries (latest: {latest})")
+    print(f"   TOP 10: {[kw for kw, _ in top10]}")
+    print(f"   Sentiment: 涨{up_days} 跌{down_days} 震荡{flat_days}")
 
 if __name__ == "__main__":
     main()
