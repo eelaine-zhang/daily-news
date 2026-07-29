@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-29</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 29 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>全球芯片股"黑色星期二"：</b>SK Hynix 暴跌 14.65%、Samsung -13.4%、SOXX -5%、A股创业板 -7.35%。核心触发：中国长鑫存储 IPO 首日暴涨 466% + 国产 DUV 光刻机量产消息 + 英伟达 $7500 亿"循环融资"恐慌。CDS 利差飙至历史新高。</li>
+      <li><b>油价崩塌：</b>Brent 从 $96 跌至 <strong>$84</strong>（-5.2%），WTI 跌破 <strong>$80</strong>。特朗普宣布暂停对伊朗军事打击，称美伊"正在谈判"；同时对中国等 60 国加征 10-12.5% 关税（援引"强迫劳动"）。</li>
+      <li><b>FOMC 今日揭晓：</b>美联储 7/28-29 议息会议今日公布结果，市场预期"鹰派按兵不动"——不加息但通胀警告。黄金守 <strong>$4,026</strong>，可口可乐 Q2 财报超预期上调全年指引。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>全球芯片抛售 · 中国突围</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">全球芯片黑色星期二</span>
+        <h4>全球半导体股遭遇"黑色星期二"：SK Hynix -14.65%、Samsung -13.4%、SOXX -5%、A 股创业板 -7.35%</h4>
+        <p>7/28 全球半导体板块遭遇 2026 年最惨烈单日跌幅。韩国方面，SK Hynix 暴跌 <strong>14.65%</strong>，Samsung Electronics 跌超 <strong>13.4%</strong>，Samsung SDI -11.37%，LG Innotek -16.29%。美国方面，iShares 半导体 ETF (SOXX) 收跌约 <strong>5%</strong>，Roundhill Memory ETF (DRAM) 跌 <strong>9%</strong>；美光 -8.3%，AMD -6.8%，Applied Materials -7.1%。A 股方面，创业板指暴跌 <strong>7.35%</strong>，科创50 -6.33%，算力硬件股全线下挫——新易盛、中际旭创跌超 10%，剑桥科技跌停，兆易创新跌停。路透社/彭博/纽约时报均指出三大触发因素：① 中国长鑫存储 IPO 首日暴涨 466% 引发竞争恐慌；② 英伟达 $7500 亿基础设施交易引发"循环融资"担忧；③ AI capex 回报率质疑持续发酵。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 需要理解的"AI 叙事裂痕"时刻。过去两年 AI 芯片是全球最强主线，现在三大支柱同时动摇：中国国产替代突破（供给侧竞争）、英伟达循环融资质疑（需求侧真实性）、AI capex ROI 质疑（估值侧压力）。对 lainy 的金融视角：这不是"AI 泡沫破裂"——而是"从一致看多到分歧出现"的转折信号。历史上超级周期都会经历 20-30% 的中期回调，但趋势不变。短期承压 ≠ 长期看空，但追高的风险窗口打开了。</div>
+        <div class="ticker">📌 关联标的：SOXX（半导体 ETF，-5%）/ SMH（VanEck 半导体 ETF，-2.6%）/ 159992 半导体ETF（A 股）/ 000660.KS（SK Hynix，-14.65%）/ NVDA（英伟达，循环融资压力）— 全产业链短期承压，中国国产替代标的逆势受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/28/sk-hynix-plunges-semiconductor-selloff-deepens-samsung-softbank.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/2026/07/28/business/stocks-ai-chips.html" target="_blank">NYT</a> · <a href="https://www.reuters.com/world/china/china-starts-production-home-grown-immersion-duv-chipmaking-tools-source-2026-07-28/" target="_blank">Reuters</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-07282026-12028107" target="_blank">Investopedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">长鑫存储 IPO</span>
+        <h4>长鑫存储科创板首日暴涨 466%：市值破 3.28 万亿登顶 A 股，237 名员工跻身千万富豪</h4>
+        <p>7/27 中国唯一 DRAM 规模化量产企业长鑫科技（688825.SH）登陆科创板，发行价 8.66 元，首日收盘 49.00 元，涨幅 <strong>465.82%</strong>，总市值突破 <strong>3.28 万亿元</strong>，超越工商银行成为 A 股市值最高公司。本次 IPO 募资 579 亿元（全额行使后上限 666 亿元），创科创板纪录。雷军旗下顺为资本早年投资，账面浮盈超 7 亿元。237 名员工持股市值超千万。长鑫存储是中国唯一、全球第四的 DRAM IDM 厂商，"内地版海力士"。但上市第二日（7/28）股价回落 <strong>4.08%</strong>，有投资者首日卖出锁定利润。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>长鑫上市是"中国半导体国产替代"的里程碑事件——DRAM 是半导体最难攻克的领域之一，此前全球只有三星、SK Hynix、美光三家能做。长鑫的量产能力意味着中国存储芯片"卡脖子"突破。但 3.28 万亿的市值意味着市场已经 price in 了极度乐观的预期——以长鑫当前营收体量，这个估值隐含的市销率远超全球同行。首日暴涨后回调是健康的。对 lainy：长期看长鑫是国产替代核心标的，但短期估值过高，不宜追涨。</div>
+        <div class="ticker">📌 关联标的：688825 长鑫科技（国产 DRAM 龙头，短期估值过高）/ 000660.KS SK Hynix（-14.65%，竞争压力）/ MU 美光（-8.3%，中国竞争风险）— 长鑫受益，海外存储芯片承压</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.cn/tech/2026-07-28/detail-inikkhki6340932.d.html?fromtech=1&vt=4" target="_blank">新浪科技</a> · <a href="https://www.moomoo.com/hans/community/feed/ai-memory-stocks-repricing-cxmt-s-record-a-share-debut-116995908960262" target="_blank">moomoo</a> · <a href="https://global.hk01.com/%E5%8D%B3%E6%97%B6%E4%B8%AD%E5%9B%BD/60374311/" target="_blank">香港01</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">国产 DUV 光刻机</span>
+        <h4>路透独家：中国开始量产国产浸没式 DUV 光刻机——目标供货 SMIC、华虹、长鑫</h4>
+        <p>路透社 7/28 独家报道，一家国有的上海公司已开始量产国产浸没式深紫外（DUV）光刻机。据 The Information 报道，预计今年产出约 5 台，目标客户为中芯国际（SMIC）、华虹和长鑫存储。这是北京推动减少对 ASML 依赖的关键一步。浸没式 DUV 光刻机是先进制程芯片制造的核心设备，此前全球只有荷兰 ASML 能生产。CNBC 分析指出，中国光刻机突破仍有"重大保留意见"——量产良率和精度与 ASML 仍有差距，但标志着国产替代进入新阶段。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是引发全球芯片股抛售的"第二只靴子"。如果中国能自主生产 DUV 光刻机，意味着 ASML 和整个西方芯片设备商的"护城河"在收窄。对 lainy 的产业映射框架：① ASML 的垄断溢价正在被侵蚀（长期看，不是短期）；② 中国芯片自主化进程比市场预期更快——从"不可能"到"量产中"只用了 5 年；③ 这解释了为什么韩国存储双雄暴跌——中国有了自己的设备和 DRAM 产能，它们的"独家供给"地位不保。</div>
+        <div class="ticker">📌 关联标的：ASML（光刻机垄断受挑战）/ 688981 中芯国际（国产替代受益）/ 600641 国电南瑞（设备链情绪外溢）— 国产替代受益，ASML 海外垄断承压</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/world/china/china-starts-production-home-grown-immersion-duv-chipmaking-tools-source-2026-07-28/" target="_blank">Reuters</a> · <a href="https://www.cnbc.com/2026/07/28/china-chipmaking-duv-tool-asml-explained.html" target="_blank">CNBC</a> · <a href="https://hardware.slashdot.org/story/26/07/27/1827257/china-begins-mass-production-of-homegrown-duv-chip-tools" target="_blank">Slashdot</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达循环融资</span>
+        <h4>英伟达 $7500 亿 AI 交易引发"循环融资"恐慌：CDS 利差飙至历史新高</h4>
+        <p>彭博社 7/28 报道，英伟达正在推进新一轮 AI 基础设施交易，总规模超 <strong>$7500 亿</strong>，涉及 SK Group、OpenAI、Naver 等客户。但这引发了一个尖锐质疑：这些客户是否能独立偿还投资？批评者指出形成了"循环融资"模式——英伟达借钱给客户买芯片，客户用芯片产生的收入还贷，但 AI 应用收入远未兑现。英伟达的信用违约掉期（CDS）利差飙升至历史新高。黄仁勋回应称"循环"说法不准确，但市场并不买账。</p>
+        <div class="why">🦞 <b>市场含义：</b>CDS 飙升意味着市场开始为"英伟达可能违约"定价——这不是说英伟达真的要违约，而是市场在重新评估 AI capex 链条的信用风险。如果这些 $7500 亿的交易最终回报不及预期，英伟达的营收增长假设会被下修。对 lainy：这跟 2000 年思科的故事很像——"基础设施投资永远涨"的叙事最终遇到了"谁来买单"的问题。短期不会崩，但市场已经从"无条件看多"变成"有条件看多"了。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，CDS 飙升承压）/ MSFT / GOOG / META（AI capex 大户，投资回报被审视）— AI capex 链条信用风险重定价</div>
+        <div class="source">🔗 Source: <a href="https://thenextweb.com/news/nvidia-announced-750bn-of-ai-deals-its-own-credit-market-flinched" target="_blank">The Next Web</a> · <a href="https://www.ibtimes.co.uk/nvidia-ai-financing-deals-market-concerns-1811093" target="_blank">IBTimes</a> · <a href="https://news.bloomberglaw.com/tech-and-telecom-law/nvidias-750-billion-in-deals-reignite-circular-ai-fears-1" target="_blank">Bloomberg Law</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [光刻机 — ASML/国产SMEE] → 中游 [代工 — TSMC/Samsung/中芯国际] → 下游 [存储 — SK Hynix/长鑫/美光] → 终端 [AI芯片设计 — NVDA/AVGO/华为] — 当前受损环节：海外中游代工+下游存储（中国国产替代加速侵蚀份额），受益环节：国产设备+国产存储（长鑫/SMEE）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价崩塌 · 关税升级</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">油价崩塌</span>
+        <h4>Brent 从 $96 崩至 $84（-5.2%），WTI 跌破 $80——美伊暂停互相攻击，特朗普称"正在谈判"</h4>
+        <p>7/28 油价大幅下跌。Brent 原油期货收跌约 5.2% 至 <strong>$83.75</strong>/桶，盘中一度跌破 <strong>$84</strong>；WTI 跌约 4.9% 至 <strong>$80</strong> 以下。这是自上周 Brent 破 $100 后连续第二个交易日大跌。核心驱动：① 特朗普宣布暂停美军对伊朗的军事打击，称美国与伊朗"正在就结束中东冲突展开谈判"；② 伊朗与沙特、阿曼正就霍尔木兹海峡通行协议进行谈判；③ 乌克兰无人机此前袭击的里海输油管黑海码头恢复作业。麦格理警告油市年底前可能重回供应过剩。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>上周龙虾老师还在说"Brent $100 vs EIA 预测 $74 的矛盾"——现在矛盾正在快速收窄。如果美伊谈判取得实质进展，Brent 有可能快速回落到 $75-80 区间。但要注意：谈判可能破裂、胡塞可能继续袭击红海航线。当前油价回落 = 短期通胀压力下降 = 美联储今日 FOMC 可以更鸽派。这是油价和利率的联动链——lainy 要记住这个传导机制。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（-5.2%）/ WTI 原油（-4.9%）/ 600028 中国石化 / XLE（能源 ETF，油价回落承压）— 高油价受益板块回吐，航空/消费受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/28/oil-price-today-wti-brent-us-iran-hormuz.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-27/latest-oil-market-news-and-analysis-for-july-28" target="_blank">Bloomberg</a> · <a href="https://cn.investing.com/news/stock-market-news/article-3481272" target="_blank">智通财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">新关税</span>
+        <h4>特朗普对中国等 60 国加征 10-12.5% 关税——援引"强迫劳动"理由，Section 122 到期后新工具上场</h4>
+        <p>白宫 7/25 宣布对 60+ 个贸易伙伴加征 <strong>10%</strong> 至 <strong>12.5%</strong> 的进口关税，理由是这些国家"未能有效禁止强迫劳动"。中国被加征 <strong>12.5%</strong> 税率（与其他"未有效配合"国家同档），欧盟国家为 10%。此前最高法院推翻了基于 Section 122 的关税后，特朗普政府改用 Section 301（贸易法）重新加征。商务部回应：敦促美方纠正霸权思维，停止对中国企业的抹黑和制裁威胁。Tax Foundation 估算 2026 年关税平均每户美国家庭增税 $700。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>新关税直接影响中国出口企业——12.5% 税率意味着中国商品在美国市场的价格竞争力被进一步削弱。对 lainy 的映射：① A 股出口导向型企业（纺织、家电、消费电子）利润承压；② 中国反制可能瞄准美国农产品/科技企业；③ 这也给 FOMC 增加通胀压力——关税 = 进口品涨价 = 消费者买单 = 通胀粘性。所以今天 FOMC 的措辞尤为关键。</div>
+        <div class="ticker">📌 关联标的：关税敏感出口股（600433 华纺股份 / 002508 老板电器）/ SPY（关税推升通胀→美联储鹰派→科技股承压）— 出口链承压</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/28/trump-tariffs-trade-election-advertising.html" target="_blank">CNBC</a> · <a href="https://www.grantthornton.com/insights/newsletters/tax/2026/hot-topics/jul-28/new-tariffs-imposed-on-countries-as-section-122-expires" target="_blank">Grant Thornton</a> · <a href="https://taxfoundation.org/research/all/federal/trump-tariffs-trade-war/" target="_blank">Tax Foundation</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特/伊朗] → 中游 [航运 — 波斯湾/红海] → 下游 [炼化/消费 — 全球] — 当前：油价回落减轻下游成本压力，但关税升级增加贸易链摩擦成本</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 今日揭晓 · 黄金守 $4000</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC 今日揭晓</span>
+        <h4>FOMC 7/28-29 议息会议今日公布结果：Warsh 美联储首考——市场预期"鹰派按兵不动"</h4>
+        <p>美联储 FOMC 7/28-29 会议今日（7/29 美东时间下午 2:00）公布利率决议。市场普遍预期维持利率不变——这是 Warsh 接任主席后的第二次议息会议。Oxford Financial Group 预测最可能结果是"鹰派按兵不动"：不加息，但 Warsh 会重申 2% 通胀承诺。The Conference Board 同样预计不变。但通胀仍处高位——油价此前飙升、新关税推升进口成本——让部分分析师认为 9 月加息不能排除。Kalshi 预测市场显示约 1/3 概率加息。本周五还将发布 Q2 GDP 和 Core PCE 通胀数据。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是今天最重要的事件。三种情景：① 鸽派 hold（通胀可控 + 经济放缓担忧）→ 风险资产大涨、芯片股反弹；② 鹰派 hold（通胀警告 + 不排除未来加息）→ 科技股继续承压、黄金走强；③ 意外加息 → 全球震荡。当前共识是情景 ②。对 lainy：如果 Warsh 措辞鸽于预期，昨天暴跌的芯片股可能反弹——这是一个短期交易机会。但如果鹰于预期，创业板可能继续探底。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，FOMC 直接驱动）/ 513130 港股通科技ETF / GLD 黄金（$4,026 守 $4,000 关口）— FOMC 结果决定短期方向</div>
+        <div class="source">🔗 Source: <a href="https://www.conference-board.org/research/global-economy-briefs/rapid-response-fomc-preview-july-2026" target="_blank">Conference Board</a> · <a href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-july-2026" target="_blank">Kiplinger</a> · <a href="https://ofgltd.com/newsletters/cio-macro-trends-back-to-the-strait/" target="_blank">Oxford Financial</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金守 $4,026：FOMC 前夜测试 $4,000 关口，CDS 与地缘风险双支撑</h4>
+        <p>7/28 黄金现货收于 <strong>$4,026</strong>/盎司，日跌 1.25%，盘中一度测试 <strong>$4,000</strong> 支撑。COMEX 8 月黄金期货开于 <strong>$4,083</strong>。Kitco 分析指出，黄金在 $4,000-4,100 区间反复拉锯已持续两周。如果 FOMC 鹰派，黄金可能下探 $3,900-3,950；如果鸽派，可能突破 $4,100 向 $4,200 进发。白银在 $60 附近挣扎。Trading Economics 数据显示黄金同比仍涨 <strong>21%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,000 反复拉锯 = 避险需求（买）vs 美元走强（卖）的平衡。油价回落 + 美伊谈判 = 避险需求下降，但 FOMC 不确定性 + 关税通胀 = 支撑还在。对 lainy 的配置框架：黄金是"高通胀+地缘混乱+美元信用动摇"环境下的核心配置。如果今天 FOMC 后回调到 $3,900 附近，是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— $4,000 攻防战，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.usatoday.com/story/money/personalfinance/2026/07/28/gold-price-on-july-28-2026/91074123007/" target="_blank">USA Today</a> · <a href="https://www.kitco.com/opinion/2026-07-28/gold-price-outlook-4200-spike-or-3800-test" target="_blank">Kitco</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价/关税] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：FOMC 结果 + GDP + PCE 将决定未来 1 个月方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 -1.16%（险守 3800）/ 深成指 -4.52% / 创业板 -7.35% / 科创50 -6.33% / 成交 2.03 万亿</h4>
+      <p>7/28 A 股遭遇"黑色星期二"。三大指数全天低开低走，创业板指暴跌 <strong>7.35%</strong> 创 7 月调整以来新低。全市场超 2700 只个股下跌。<b>亮点：</b>白酒、乳业等大消费板块逆势走强——金种子酒涨停，迎驾贡酒、皇台酒业、今世缘、泸州老窖逆势上涨；脑机接口概念延续强势（创新医疗 4 天 3 板）；光刻机概念盘中活跃（波长广电、张江高科涨停）。<b>重挫：</b>算力硬件股全线下挫——新易盛、中际旭创跌超 10%，剑桥科技跌停；存储芯片集体调整，兆易创新跌停；长鑫存储上市第二日回落 4.08%。资金面：沪深两市成交 2.03 万亿，缩量 508 亿。食品饮料板块市盈率 20 倍（白酒 19 倍），创近二十年新低，险资已悄悄进场加仓。<b>今日关注：</b>FOMC 结果对 A 股科技板块情绪影响 + 消费板块能否延续逆势行情。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 +0.41% 报 25310.85 / 科指 +0.61% / 成交 2506 亿港元 / 南向净流出 25 亿</h4>
+      <p>7/28 港股三大指数集体收涨。恒指涨 <strong>0.41%</strong> 报 25310.85，恒生科技涨 <strong>0.61%</strong>，国企指数涨 <strong>0.85%</strong>。科网股多数上涨——网易、京东涨超 4%，腾讯、阿里涨近 1%。但存储概念股大跌——南方二倍做多海力士跌超 30%（反映 SK Hynix 暴跌），老铺黄金单日大跌近 24%。人工智能、黄金珠宝板块领跌。全日成交 2506.33 亿港元，较前日小幅放量。南向资金净流出近 25 亿港元。<b>今日关注：</b>FOMC 结果对港股流动性至关重要——鸽派则恒指有望向上突破 25500，鹰派则可能下探 24800。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 +0.51% 报 52210 / S&amp;P +0.02% 报 7413 / 纳指 -0.18% 报 24932 / SOXX -5%</h4>
+      <p>7/28 美股收盘涨跌不一：道指涨 263 点（<strong>+0.51%</strong>）至 52210，S&amp;P 基本持平报 7413，纳指小跌 44 点（<strong>-0.18%</strong>）报 24932。芯片股是主要拖累——SOXX 跌 <strong>5%</strong>，SMH 跌 2.6%，美光 -8.3%，AMD -6.8%，Applied Materials -7.1%，Intel -4.1%。但已从盘中低点反弹（SOXX 盘中一度跌 9%）。道指上涨得益于可口可乐 Q2 财报超预期（营收 $133.8 亿 +7%，上调全年指引），股价创历史新高。康宁 Q3 指引逊预期，AI 光通信业务增速放缓，盘中跌近 20%。半导体股抛售始于隔夜亚洲市场——韩国 KOSPI 暴跌触发熔断。但可口可乐强劲业绩 + 油价回落提振了非科技板块。市场分化明显：道指涨而纳指跌，反映资金从 AI 概念向防御性消费轮动。<b>今日关注：</b>FOMC 下午 2:00 公布 + 微软/Meta/亚马逊本周财报。
+    </p>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>可口可乐超预期 · A 股消费逆势走强</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">可口可乐 Q2</span>
+        <h4>可口可乐 Q2 财报超预期：营收 $133.8 亿 +7%，EPS $0.97 +11%，世界杯提振全球需求，上调全年指引</h4>
+        <p>7/28 可口可乐（KO）发布 Q2 财报：净营收 <strong>$133.8 亿</strong>（<strong>+7%</strong> YoY），超越华尔街预期；有机营收增长 <strong>6%</strong>；全球单箱销量增长 <strong>5%</strong>——所有市场均实现增长，部分受益于世界杯带动。可比 EPS <strong>$0.97</strong>（<strong>+11%</strong>）。公司宣布上调全年利润指引。股价创历史新高。管理层称 Q2 反映了"全球广泛动能"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>可口可乐是"防御性消费"的代表——当 AI/科技股暴跌时，资金会向确定性强的消费品轮动。可口可乐在所有市场都增长 + 世界杯催化 = 消费韧性比市场担忧的更强。对 lainy 的消费框架：可口可乐提价权 + 全球分销网络 = 通胀环境下的定价能力。A 股白酒板块昨日逆势走强也是同一逻辑——资金从科技向消费轮动。可口可乐创新高 = 防御性消费在"AI 回调期"是避风港。</div>
+        <div class="ticker">📌 关联标的：KO（可口可乐，创新高）/ 600519 贵州茅台（A 股白酒逆势走强）/ 519995 食品饮料ETF — 防御性消费受益于资金轮动</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/28/coca-cola-ko-q2-2026-earnings.html" target="_blank">CNBC</a> · <a href="https://investors.coca-colacompany.com/news-events/press-releases/detail/1168/coca-cola-reports-second-quarter-2026-results-and-raises-full-year-guidance" target="_blank">Coca-Cola IR</a> · <a href="https://stockstory.org/us/stocks/nyse/ko/news/earnings/coca-cola-nyseko-exceeds-q2-cy2026-expectations" target="_blank">StockStory</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">A 股消费逆势</span>
+        <h4>A 股消费板块逆势走强：白酒领涨，食品饮料估值创 20 年新低，险资悄悄进场</h4>
+        <p>7/28 在创业板暴跌 7.35% 的背景下，白酒、乳业等大消费板块逆势走强。金种子酒涨停，迎驾贡酒、皇台酒业、今世缘、泸州老窖逆势上涨。上证报记者统计：截至 7/26，食品饮料板块市盈率 20 倍，白酒板块仅 19 倍——相对全 A 股估值创近 <strong>20 年</strong> 新低。广发证券食品饮料中期策略标题为"罕见的底部"。2026 年一季度，险资主要加仓家电、食品饮料和医药，社保基金同步回补消费。但公募基金二季度仍在减仓消费。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>消费板块"公募减、险资加"是典型信号——公募追热点（AI），险资捡便宜（消费）。当 AI 板块回调时，资金就会回流估值洼地。食品饮料 20 倍 PE = 近 20 年最低相对估值，这个数据非常重要。对 lainy：如果 FOMC 鹰派导致科技股继续跌，消费板块的"避风港"效应会更明显。白酒 19 倍 PE 是历史级别的低估——不是说明天就涨，但中长期风险回报比很好。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（19 倍 PE 历史低位）/ 600809 山西汾酒 / 519995 食品饮料ETF — 消费板块估值洼地，中长期配置窗口</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/roll/2026-07-28/doc-inikimee8101497.shtml" target="_blank">新浪财经</a> · <a href="https://www.cnfin.com/gs-lb/detail/20260728/4447106_1.html" target="_blank">新华财经</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [农产品/包装材料] → 中游 [食品饮料制造 — 茅台/可口可乐] → 下游 [渠道/餐饮/零售] — 当前受益环节：下游品牌消费（定价权强），受损环节：出口导向制造（关税+成本上升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">侃爷婚姻</span>
+        <h4>侃爷与 Bianca Censori 婚姻亮红灯：知情人士称"再失信一次就走人"</h4>
+        <p>7/28 多家外媒报道，Kanye West 的妻子 Bianca Censori 据称已对侃爷的"空头支票"失去耐心。知情人士透露："如果 Kanye 再让她失望一次，这段婚姻将没有太多留恋。" Bianca 近期开始独立推进个人项目——7/11 在 Instagram 预告与创意平台 Biuro 合作的"The Very Br-ast of BIANCA"。另有报道称侃爷发出"最后通牒"：要求 Bianca 尽快怀孕，否则将"找别的女人"。</p>
+        <div class="why">🦞 <b>花边点评：</b>侃爷的婚姻状况一直是全球吃瓜前线。这次的核心信号是 Bianca 开始独立搞事业——不再是"侃爷的缪斯"，开始做自己的品牌。不管婚姻结局如何，Bianca 的人气已经独立于侃爷存在了。lainy 如果刷到这条热搜，这就是背景。</div>
+        <div class="source">🔗 Source: <a href="https://www.yahoo.com/entertainment/celebrity/articles/kanye-west-wife-bianca-censori-173000604.html" target="_blank">Yahoo Entertainment</a> · <a href="https://theblast.com/826216/bianca-censori-reaching-limit-kanye-west/" target="_blank">The Blast</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">吴京谢楠</span>
+        <h4>吴京谢楠马来西亚被偶遇：52 岁吴京身材健硕，夫妻低调度假"活人感"拉满</h4>
+        <p>7/27 多名中国游客在马来西亚街头偶遇吴京、谢楠夫妇。52 岁吴京身材健硕状态好，对谢楠宠溺互动被称"太好磕"。此前，"谢楠的一夫一妻在马来西亚见面了"热搜话题刷屏——指的是吴京在马来西亚国际电影节上从妻子谢楠的闺蜜李心洁手中接过奖杯，并调侃对方是自己的"梦中情敌"。夫妻俩的幽默互动被赞"硬汉也有反差萌"。</p>
+        <div class="why">🦞 <b>轻松一下：</b>"谢楠的一夫一妻在马来西亚见面了"这个热搜标题龙虾老师看了三遍才懂——原来是谢楠在《乘风2026》中和李心洁结下闺蜜情，然后吴京在电影节从李心洁手里拿奖杯，完成了"妻子闺蜜→丈夫"的闭环。夫妻低调度假被偶遇，比精修硬照更接地气。</div>
+        <div class="source">🔗 Source: <a href="https://tags.sina.com.cn/%E5%90%B4%E4%BA%AC" target="_blank">新浪娱乐</a> · <a href="https://www.mybb.com.hk/210737/" target="_blank">MyBB</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Jelly Roll 离婚</span>
+        <h4>Jelly Roll 与 Bunnie Xo 近十年婚姻告终：离婚后他爬山，她买 $50 万劳斯莱斯</h4>
+        <p>美国乡村歌手 Jelly Roll 与妻子 Bunnie Xo 在结婚近 10 年后于 7 月正式离婚。离婚后两人走向截然不同的道路：Jelly Roll 开始爬山健身，Bunnie Xo 则购入一辆 $50 万的劳斯莱斯。这对曾被认为"最不可能分开"的伴侣最终分手，引发社交媒体热议。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>离婚后一个去爬山一个买劳斯莱斯——这就是"同一件事，两种活法"的最好注脚。lainy 周末如果刷到这条，这就是为什么全网在讨论。</div>
+        <div class="source">🔗 Source: <a href="https://www.foxnews.com/entertainment/jelly-roll-bunnie-xo-different-paths-divorce-climbs-mountains-buys-500k-rolls-royce" target="_blank">Fox News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">EIA 油价预测</span>
+        <h4>EIA 大幅下调油价预测：Brent 3Q26 预测降至 $74——承认地缘溢价不可持续</h4>
+        <p>美国能源信息署（EIA）7/28 发布短期能源展望，大幅下调油价预测：预计 3Q26 Brent 均价 <strong>$74</strong>/桶（此前预测 $105），承认"供应增加和库存适度下降预期"导致油价回落。EIA 指出 6 月 Brent 均价已从 4 月峰值下降 $32/桶。这个预测与市场实际走势一致——7/28 Brent 已跌至 $84。EIA 认为 2026 全年 Brent 均价 $68-72。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这不是纯科技新闻，但 EIA 下调预测本身就是"官方认错"——5 月预测 $105 时油价在 $72，现在油价在 $84 但 EIA 反而预测 $74。这提醒我们：官方预测往往落后于市场。对 lainy：如果 EIA 是对的，油价回落将给全球通胀"减负"，美联储今日 FOMC 可以更鸽派——这对科技股反弹是利好。</div>
+        <div class="source">🔗 Source: <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
