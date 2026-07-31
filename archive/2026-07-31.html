@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-07-31</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #f5f0e8; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 7 月 31 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Fed 史诗级鹰派分歧：</b>7/29 美联储维持利率 3.5%-3.75% 不变，但三位委员（Hammack、Kashkari、Logan）罕见投了加息赞成票——2016 年以来最分裂的 FOMC 投票，9 月加息概率升至 63%。</li>
+      <li><b>微软单日涨 $4500 亿拯救美股：</b>Q4 营收 $900 亿（+18%），Azure 增速 43% 远超预期且未上调 capex 指引，股价暴涨 16%；亚马逊紧随其后——AWS 增速 37%，capex 上调至 $2200 亿。芯片股全线反弹：Intel/AMD +13%，TSM +7%，Lam Research +18%。</li>
+      <li><b>A 股科技崩白酒狂：</b>7/30 沪指 -0.62%（3804）、创业板 -3.97%、科创50 -5.38%，CPO 概念批量跌停、中际旭创 598 亿天量成交；另一边白酒集体大涨——舍得酒业涨停、茅台涨 3% 创 3 月新高，基金仓位降至 2012 年来最低。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">微软 Q4 财报</span>
+        <h4>微软 Q4 营收 $900 亿（+18%），Azure 增速 43% 超预期，capex 指引不升反降——单日市值暴涨 $4500 亿</h4>
+        <p>7/29 盘后微软发布 FY2026 Q4 财报：营收 <strong>$900</strong> 亿（<strong>+18%</strong> YoY），Azure 及云服务增速 <strong>+43%</strong>，远超公司自身 39-40% 的指引。全年 Azure 收入首次突破 <strong>$1000</strong> 亿。关键信号：capex 指引从 4 月的 $1900 亿下调至 <strong>$1750</strong> 亿（反映数据中心折旧年限调整），并非"缩减"而是"会计调整"。7/30 美股开盘微软暴涨 <strong>16%</strong>，单日增加约 <strong>$4500</strong> 亿市值——史上单只股票最大单日市值增长。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>微软这份财报是本周全球资本市场最重要的一件事。市场此前最担心的是"AI capex 无底洞"——Alphabet 上调 capex 指引后股价大跌，而微软偏偏反其道行之：Azure 加速增长 + capex 不加码 = "AI 投入开始产生回报"的信号。这对 lainy 的框架很重要：AI 产业链不是所有环节都在烧钱，云厂开始收割了。</div>
+        <div class="ticker">📌 关联标的：MSFT（微软，核心受益）/ NVDA（英伟达，Azure 增速验证 AI 需求）/ SMH（半导体 ETF，情绪回暖）— 微软"自律"利好全链情绪</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/29/microsoft-msft-q4-earnings-report-2026.html" target="_blank">CNBC</a> · <a href="https://www.businessinsider.com/microsoft-stock-price-q2-earnings-meta-ai-trade-azure-spending-2026-7" target="_blank">Business Insider</a> · <a href="https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4" target="_blank">Microsoft IR</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星 Q2 史录</span>
+        <h4>三星 Q2 营业利润 89.5 万亿韩元（~$620 亿），同比增 1814%——芯片利润暴增 250 倍，手机部门首次亏损</h4>
+        <p>7/30 三星电子发布 Q2 2026 业绩：营收 KRW 171.5 万亿（<strong>+28%</strong> QoQ），营业利润 KRW 89.5 万亿（<strong>+1814%</strong> YoY），连续三个季度创历史新高。半导体（DS）部门利润 KRW 89.2 万亿——几乎是公司全部利润来源。HBM/AI 内存供不应求，三星称"芯片紧缺将持续到 2028 年"。但移动（DX）部门首次录得 KRW 0.7 万亿运营亏损——Galaxy 手机被中国品牌挤压。净利润同比飙升 <strong>14 倍</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>三星的 Q2 把"AI 内存印钞机"的故事展现到了极致——芯片利润 250 倍增长，但手机亏钱。这验证了一个 lainy 之前学过的逻辑：AI 算力浪潮的赢家不是"做终端的"，而是"卖铲子的"。三星 vs TSMC vs SK Hynix 三方格局：三星靠内存赚最多，TSMC 靠代工赚最多，SK Hynix 靠 HBM 独家供应英伟达。注意三星说"紧缺到 2028"——这意味着 HBM 价格至少 2 年内不会跌。</div>
+        <div class="ticker">📌 关联标的：SSNLF（三星 OTC）/ 005930.KS（三星韩国）/ 000660.KS（SK Hynix）/ MU（美光，被边缘化风险）— HBM 双寡头持续受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/technology/articles/samsung-q2-2026-earnings-record-115328985.html" target="_blank">Yahoo Finance</a> · <a href="https://www.cnbc.com/2026/07/30/samsung-q2-earnings-ai-chip-.html" target="_blank">CNBC</a> · <a href="https://easternherald.com/2026/07/30/samsung-chip-profit-ai-memory-demand-q2-2026/" target="_blank">Eastern Herald</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">亚马逊 AWS</span>
+        <h4>亚马逊 Q2 营收 +20%，AWS 增速 37% 创 18 个季度最快，capex 上调至 $2200 亿——AI 芯片部门年化收入 $250 亿</h4>
+        <p>7/30 盘后亚马逊发布 Q2 2026 财报：营收同比 <strong>+20%</strong>，运营利润 <strong>+43%</strong>。AWS 营收超 <strong>$420</strong> 亿（<strong>+37%</strong>），为 18 个季度最快增速。亚马逊将 2026 年资本开支指引上调至 <strong>$2200</strong> 亿（高于此前 $2000 亿），称"AI 需求预计到 2027 年都将超过供给"。公司 AI 芯片和芯片部门各自达到年化 <strong>$250</strong> 亿收入，三位数增速。</p>
+        <div class="why">🦞 <b>商业含义：</b>亚马逊和微软形成了鲜明对比——微软"克制 capex"，亚马逊"加码 capex"。但市场对两者的反应都是正面的，因为关键不在于"花不花"，而在于"花了有没有回报"。AWS 37% 增速 + AI 芯片 $250 亿年化 = 亚马逊不只是用英伟达的芯片，还在自研 Trainium 芯片分食蛋糕。lainy 的框架里可以加一条：云巨头正在从"买 GPU 转售"进化到"自研 AI 芯片"——这是英伟达长期定价权的潜在威胁。</div>
+        <div class="ticker">📌 关联标的：AMZN（亚马逊，AWS 加速受益）/ NVDA（英伟达，云厂自研芯片长期分流风险）/ AVGO（Broadcom，定制 AI 芯片受益）— 亚马逊 capex 链条最受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html" target="_blank">CNBC</a> · <a href="https://www.tradingview.com/news/urn:summary_document_transcript:quartr.com:3935956:0-amzn-q2-revenue-up-20-and-aws-growth-accelerates-with-ai-and-cloud-demand-driving-record-capex/" target="_blank">TradingView</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">芯片股大反弹</span>
+        <h4>芯片股全线暴力反弹：Intel/AMD +13%、TSM +7%、Lam Research +18%、Astera Labs +20%——微软财报点燃 AI 信心</h4>
+        <p>7/30 美股芯片板块在经历 7/29"黑色星期二"后强势反弹。Intel 涨 <strong>13%</strong> 至 $92.67，AMD 涨 <strong>13%</strong> 至 $483.55，TSM 涨 <strong>7%</strong> 至 $399.36，Lam Research 涨 <strong>18%</strong> 至 $297.72，Astera Labs 涨 <strong>20%</strong> 至 $299.69。纳指 100 涨 <strong>3.4%</strong>。CNBC 指出芯片股是 AI 浪潮最大受益者，微软财报验证了 AI 基建需求"不是泡沫"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>7/29 全球半导体暴跌（SK Hynix -14.65%、三星 -13.4%、SOXX -5%），7/30 立刻 V 型反弹——说明市场对"AI 需求是否真实"的分歧很大，但财报一出就站队了。Intel +13% 的反弹幅度值得关注：它最近一直在裁员掉队，但估值低 + AI 主题情绪回暖就弹得猛。Lam Research +18% 说明设备厂也在受益——不只芯片设计赚钱，"卖铲子的铲子"也在赚。</div>
+        <div class="ticker">📌 关联标的：SMH（半导体 ETF）/ INTC（Intel，低估值反弹）/ AMD / LRCX（Lam Research）/ ALAB（Astera Labs）— 全线反弹，但注意是否只是"死猫跳"</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/stocks/articles/intel-amd-soar-13-taiwan-155109625.html" target="_blank">Yahoo Finance</a> · <a href="https://www.cnbc.com/2026/07/30/chip-stock-rally-lam-research-micron-amd.html" target="_blank">CNBC</a> · <a href="https://thebull.com.au/us-news/nasdaq-jumps-as-memory-and-semiconductor-stocks-stage-powerful-comeback-rally/" target="_blank">The Bull</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/自研芯片] → 终端 [云厂 — MSFT/AWS/GOOG] — 当前受益环节：中游代工 + HBM 内存 + 设备（Lam Research），终端云厂开始"收割"</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>沙特提议组建海上联军护航霍尔木兹，Brent 回落至 $89——但伊朗称两艘油轮在海峡起火后折返</h4>
+        <p>7/30 油价回落：Brent 原油收跌约 1.6% 至 <strong>$89.03</strong>/桶，WTI 跌至 <strong>$83.90</strong>/桶。回落原因：沙特阿拉伯提议组建海军联盟保护通行船只。但 OilPrice 报道，伊朗声称两艘油轮在尝试通过霍尔木兹海峡南航道时，其中一艘起火后被迫折返——实际通航风险仍在。本周 Brent 曾因美伊互轰一度飙升 7.9% 至 $92+，目前地缘溢价仍在但有所收敛。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价的核心矛盾现在是"沙特外交解决方案"vs"伊朗实际封锁行动"。沙特组建海上联军 = 想用多国海军护航来对冲伊朗封锁威胁。但如果伊朗真开始拦截油轮（两艘折返是第一个信号），$90 可能只是起步价。对 lainy 的传导链：油价高 = 通胀粘性 = Fed 难降息（甚至加息）= 科技股估值承压。这条链这周已经被三位 FOMC 投票委员验证了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / XLE（能源 ETF）/ JETS（航空 ETF，高油价受损）— 油价高位震荡，短期偏多</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/30/oil-prices-us-iran-war.html" target="_blank">CNBC</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/Iran-Says-Two-Oil-Tankers-Ditched-Attempt-to-Transit-Hormuz.html" target="_blank">OilPrice</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">俄乌</span>
+        <h4>俄罗斯警告：乌克兰持续袭击扎波罗热核电站，"正逼近危险红线"或引发辐射事故</h4>
+        <p>7/31 俄罗斯外交部发言人扎哈罗娃表示，基辅政权不断袭击扎波罗热核电站，正日益逼近危险红线，可能引发辐射事故并给欧洲造成危害。同时，美国参议院通过针对俄罗斯能源买家的关税制裁法案程序性表决，泽连斯基赴美国国会寻求"爱国者"导弹军援。日本熊本同日发生 7.1 级强震，百年神社倒塌。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>扎波罗热核电站是欧洲最大核电站，如果出事影响远超切尔诺贝利。但这类信息来源单一（俄方说法），目前信息有限，待跟进。美参议院通过俄能源买家关税制裁 = 对中国买家也有潜在传导效应。日本地震 7.1 级值得关注——可能影响半导体供应链（熊本台积电工厂附近）。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘风险溢价）/ 512660 军工ETF / 日本半导体供应链 — 核电站风险暂无法定量评估</div>
+        <div class="source">🔗 Source: <a href="https://sputniknews.cn/20260731/1072575930.html" target="_blank">俄罗斯卫星通讯社</a> · <a href="https://www.voachinese.com/" target="_blank">美国之音</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹海峡通行] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹通航风险仍在），沙特试图用海上联军对冲</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed 鹰派分歧 · PCE 降温</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">Fed 9-3 分裂</span>
+        <h4>Fed 维持利率 3.5%-3.75% 不变，三位委员罕见投加息赞成票——2016 年以来最鹰派 FOMC 分裂，Warsh 被批"含糊其辞"</h4>
+        <p>7/29 美联储 FOMC 会议以 <strong>9-3</strong> 投票决定维持联邦基金利率在 <strong>3.50%-3.75%</strong> 不变。三位反对者——Hammack（纽约联储）、Kashkari（明尼阿波利斯联储）、Logan（达拉斯联储）——均主张加息 25 个基点。这是自 2016 年以来最分裂的 FOMC 投票。新任主席 Warsh 在新闻发布会上拒绝透露未来利率路径，被《纽约时报》批评为"含糊其辞、自相矛盾"，市场质疑其抗击通胀的决心。30 年期国债收益率触及 <strong>19 年新高</strong>。CME FedWatch 显示 9 月加息概率升至 <strong>63%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 本周必须搞懂的最重要宏观事件。9-3 的投票意味着 Fed 内部"主战派"已经接近三分之一——再来 2-3 票就能翻盘加息。Warsh 的表现被市场解读为"不敢明确说要加息，也不敢说不要"= 缺乏领导力。PGIM 经济学家预测 9 月将连续三次加息。对 lainy 的传导：如果 9 月真加息，全球科技股估值将再下一台阶，A 股/港股虽然"不在美元周期内"但情绪面也会受冲击。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，加息预期直接打压）/ GLD 黄金（避险+抗通胀）/ 513130 港股通科技ETF — 鹰派利空科技，利空黄金短线（实际利率上行）但利空美元计价资产</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/2026/07/30/business/dealbook/fed-warsh-credibility-shock.html" target="_blank">NYT</a> · <a href="https://www.techtimes.com/articles/322145/20260729/three-fed-dissenters-signal-september-hike-live-after-most-hawkish-fomc-vote-nearly-ten-years.htm" target="_blank">TechTimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">PCE 降温</span>
+        <h4>Fed 最看重通胀指标 PCE 6 月降温——但能否阻止 9 月加息？</h4>
+        <p>CNN 报道，美联储最看重的通胀指标——核心 PCE 物价指数——在 6 月出现降温迹象。这与 Warsh 在发布会上强调的"通胀仍远高于 2% 目标"形成微妙张力。Investopedia 指出，CME FedWatch 已将 9 月至少加息 25bp 的概率从一周前的 82% 降至 <strong>63%</strong>。但三位 dissenters 的存在意味着任何通胀反弹都可能加速加息。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>PCE 降温是好消息，但不够好——因为油价还在 $89，如果霍尔木兹封锁升级，7-8 月通胀数据可能重新恶化。 lainy 记住一个框架：Fed 看的不是"过去一个月"的通胀，而是"未来三个月趋势"。6 月 PCE 降温 → 7 月油价飙升 → 8 月数据才是关键变量。所以 9 月是否加息，本质上取决于油价。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / GLD / TLT（长债 ETF，PCE 降温利好但 30Y 收益率已 19 年新高）— PCE 降温=短期 risk-on，但油价是变量</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/markets" target="_blank">CNN Markets</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-07302026-12030671" target="_blank">Investopedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">国内油价</span>
+        <h4>今晚 24 时国内油价年内第十涨：每升涨约 0.53-0.8 元，加满一箱多花 27-40 元</h4>
+        <p>7/31 24 时国内成品油调价窗口开启，多家机构预计汽柴油每吨上调约 <strong>680-800</strong> 元，折合每升上涨 <strong>0.53-0.80</strong> 元。这是 2026 年以来第 15 次调价、第 10 次上涨。7 月至今已有两次上调。以 50 升油箱计算，加满一箱 92 号汽油将多花约 <strong>27</strong> 元；70 升油箱则多花约 <strong>40</strong> 元。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>国内油价紧跟国际 Brent 走势——7 月中东战火推高国际油价 → 传导到国内零售端。对消费的影响：物流成本上升 → 快递/外卖/出行成本增加 → CPI 中枢上移。对 lainy：如果油价持续高位，三季度中国 CPI 可能超预期回升，限制央行宽松空间。</div>
+        <div class="ticker">📌 关联标的：600028 中国石化（油价受益）/ 601857 中国石油 / 002353 杰瑞股份 — 油价高位利好上游，利空物流/航空</div>
+        <div class="source">🔗 Source: <a href="https://news.qq.com/rain/a/20260730A02NSF00" target="_blank">腾讯新闻</a> · <a href="https://finance.sina.com.cn/roll/2026-07-30/doc-inikqcsh9685024.shtml" target="_blank">新浪财经</a> · <a href="https://www.163.com/news/article/L333JAEK0001899O.html" target="_blank">网易</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：9 月是否加息取决于 8 月 PCE + 油价走势</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 7/30 沪指 -0.62% 报 3804.69 / 深成指 -2.73% / 创业板 -3.97% / 科创50 -5.38% / 成交 2.34 万亿</h4>
+      <p>7/30 A 股全天震荡下行，全市场超 <strong>3600</strong> 只个股下跌。科技硬件成重灾区：CPO 概念批量跌停，中际旭创 A+H 落地后 598 亿天量成交（A 股收盘跌停），半导体、通信设备、存储芯片板块全线重挫。但大消费逆势走强：<b>白酒板块领涨</b>，舍得酒业（600702）涨停，古井贡酒 +8%，酒鬼酒 +7%，贵州茅台 +3% 创 3 个月新高。<b>基金持仓信号：</b>华泰指出白酒板块基金持仓已降至 2012 年以来最低，由超配转为低配，筹码出清充分。<b>异动 TOP 3：</b>① 舍得药业 +10% 涨停（白酒底部反转信号）② 古井贡酒 +8%（区域白酒复苏）③ 新东方-S 港股 +18.84%（教育股利好）。<b>资金流向：</b>科技板块主力净流出 TOP 1，消费/银行板块净流入 TOP 1。<b>今日关注：</b>7/31 是周五收盘日，科创板连续大跌后是否有抄底资金进场。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 7/30 恒指 +0.2% 报 25858.88 / 科指 -1.25% / 成交 3048.94 亿港元 / 南向净卖出近 86 亿</h4>
+      <p>7/30 港股三大指数涨跌互现。AI 硬件持续退潮：剑桥科技 -12.9%，长飞光纤 -10.51%，华虹宏力 -8.26%，中芯国际 -7.74%。中际旭创 H 股上市首日跌超 7%（定价 980 港元）。但五大行齐创历史新高，农业银行 +3.01%；教育股涨幅居前，新东方-S +18.84%；烟草概念走高，华宝国际 +7.77%。油气股上扬，中海油 +2.89%。南向资金大幅净卖出近 <strong>86</strong> 亿港元——科技板块被抛售，银行/消费板块获加仓。<b>今日关注：</b>美联储鹰派分裂对港股流动性的传导——如果 9 月加息预期升温，恒指可能下探 25000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 7/30 道指 +1.2% 报 52208 / S&amp;P +1.7% 报 7437 / 纳指 +2.8% 报 25122 / 微软单日 +$4500 亿</h4>
+      <p>7/30 美股大幅反弹。前一天（7/29）Fed 决议后道指暴跌 <strong>-2.2%</strong>（-1153 点）至 51594，创 2025 年 4 月以来最差单日。7/30 在微软财报催化下 V 型反转：纳指 <strong>+2.8%</strong>，标普 <strong>+1.7%</strong>，道指 <strong>+1.2%</strong>（+614 点）。微软暴涨 <strong>16%</strong>，单日市值增加约 <strong>$4500</strong> 亿——史上最大单只股票单日市值增长。<b>盘后：</b>亚马逊 AWS 增速 37% 带动盘后继续走高。<b>本周回顾：</b>周初全球半导体"黑色星期二"暴跌 → 微软财报救场 → 芯片股全线反弹。Apple 财报营收超预期但供应链限制压低指引。<b>关键变量：</b>9 月加息概率 63%，PCE 降温是缓冲垫，但油价仍在 $89 附近。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>白酒逆袭 · 油价传导</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">白酒板块</span>
+        <h4>A 股白酒集体大涨：舍得涨停、茅台创 3 月新高——基金持仓降至 2012 年来最低，"三重底"信号共振</h4>
+        <p>7/30 A 股白酒板块全线上涨：舍得酒业涨停，古井贡酒 +8%，酒鬼酒 +7%，迎驾贡酒/口子窖 +6%，洋河/今世缘/老白干/金徽酒/山西汾酒/水井坊 +5%+，贵州茅台 +3% 创 4 月 30 日以来新高。华泰指出白酒基金持仓降至 2012 年以来最低水位，由超配转为低配；中金表示食品饮料估值已回落至历史低位，安全边际充足。开源证券称"三重底部信号共振"——机构持仓底部 + 估值底部 + 悲观情绪释放。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>白酒板块的暴涨和科技板块的暴跌是同一天发生的——这就是典型的"高低切换"。当科技股涨太多、估值太贵时，资金会去找"被遗忘的低位板块"。白酒基金持仓 12 年最低 = 该卖的都卖完了 = 下方没有抛压。对 lainy 的配置思路：如果你关注消费股，现在机构对白酒的态度从"嫌弃"转向"重新审视"——但不是所有白酒都买，高端（茅台/五粮液）和区域龙头（古井贡/山西汾酒）更安全。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（龙头标杆）/ 600702 舍得酒业（弹性最大）/ 000858 五粮液 / 512690 酒ETF（白酒一篮子）— 白酒底部反转信号，但需确认持续性</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/stock/wbstock/2026-07-30/doc-inikqiyp1953401.shtml" target="_blank">新浪财经</a> · <a href="https://finance.sina.com.cn/jjxw/2026-07-30/doc-inikqqhi5174192.shtml" target="_blank">新浪财经</a> · <a href="https://news.qq.com/rain/a/20260730A04BIE00" target="_blank">腾讯新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">汽车零售</span>
+        <h4>7 月乘用车零售同比 -18%，但新能源渗透率升至 65.7%——传统燃油车加速退出</h4>
+        <p>乘联分会 7/29 数据：7 月 1-26 日全国乘用车零售 112.3 万辆，同比 <strong>-18%</strong>，环比 -13%；新能源零售 73.8 万辆，同比 -2%，新能源渗透率达 <strong>65.7%</strong>。年内累计零售 982.4 万辆（<strong>-20%</strong> YoY），新能源累计 -13%。国务院发布《扩大消费"十五五"规划》，强调"供需适配"。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>整体零售下滑 18% 看起来很糟，但拆开看：燃油车暴跌 + 新能源仅微降 -2% = 渗透率 65.7% 意味着三分之二的新车买家已经选新能源。对 lainy：汽车消费数据是"总量弱、结构变"的典型——传统车企（上汽、广汽）压力巨大，新能源（比亚迪、理想、零跑）正在抢占最后一块燃油车份额。</div>
+        <div class="ticker">📌 关联标的：002594 比亚迪（新能源龙头）/ 02015 理想汽车 / 9866 蔚来 — 渗透率提升受益新能源，传统车企持续承压</div>
+        <div class="source">🔗 Source: <a href="https://www.163.com/dy/article/L32UK3UL05198CJN.html" target="_blank">网易</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-07-30/doc-inikqiye9646323.shtml" target="_blank">新浪科技</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 粮食/包装] → 中游 [白酒酿造/汽车制造] → 下游 [渠道 — 电商/超市/餐饮/4S 店] — 当前受益环节：白酒底部复苏（机构重新审视），受损环节：传统燃油车零售（-18%）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">蜘蛛侠</span>
+        <h4>《蜘蛛侠：Brand New Day》今日全球公映！预售破 $2 亿，有望创 2026 最大开画纪录（$2.8-3 亿）</h4>
+        <p>索尼/漫威《Spider-Man: Brand New Day》7/31 全球公映（印度 7/30 提前一天）。Tom Holland 主演，预测北美首周末 <strong>$2.8-3</strong> 亿，有望成为 2026 年迄今最大开画。截至 7/29，全球预售及早期放映已收 <strong>$2</strong> 亿，超越《复仇者联盟：无限战争》同期的速度。Hollywood Reporter 称其"可能超越《超人》全周票房仅需一个周末"。此前 2026 年第三大开画为《奥德赛》$1.245 亿。</p>
+        <div class="why">🦞 <b>花边点评：</b>蜘蛛侠 IP 是漫威"最不会翻车"的角色——即使观众对超级英雄电影疲劳，Peter Parker 的故事依然有号召力。Sony 和 Marvel 的合作模式（Sony 出钱、Marvel 出创意）再次证明是双赢。lainy 周末如果看电影，这部是大概率不会踩雷的选择。注意：影片设定是"被遗忘的 Peter Parker"——没有复仇者联盟、没有 MJ，全新的孤独叙事。</div>
+        <div class="source">🔗 Source: <a href="https://variety.com/2026/film/news/spider-man-brand-new-day-box-office-opening-records-1236822094/" target="_blank">Variety</a> · <a href="https://www.hollywoodreporter.com/movies/movie-news/spider-man-brand-new-day-box-office-opening-tom-holland-1236659734/" target="_blank">Hollywood Reporter</a> · <a href="https://www.boxofficepro.com/weekend-preview-spider-man-brand-new-day-could-potentially-score-second-biggest-opening-weekend-of-all-time/" target="_blank">Boxoffice Pro</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Kavinsky 去世</span>
+        <h4>Kavinsky 去世享年 50 岁——《Drive》主题曲 Nightcall 传奇、2024 巴黎奥运表演者</h4>
+        <p>法国电子音乐人 Kavinsky 去世，享年 50 岁。他因 2011 年电影《Drive》中的标志性配乐"Nightcall"闻名全球，并在 2024 年巴黎奥运会闭幕式上表演。EW 报道将其列入 2026 年名人逝世纪念。其音乐风格深刻影响了 2010 年代以来的 Synthwave/Retrowave 运动。</p>
+        <div class="why">🦞 <b>轻松一下：</b>如果你看过 Ryan Gosling 的《Drive》，你一定记得 Nightcall 那个开场——霓虹灯 + 合成器 + 孤独驾驶。Kavinsky 的音乐不是流行，但影响了整整一代电子音乐人。lainy 如果听过 Nightcall，这就是那个"午夜公路感"的来源。RIP 🕯️</div>
+        <div class="source">🔗 Source: <a href="https://ew.com/" target="_blank">Entertainment Weekly</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🎨 科技花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">光子芯片</span>
+        <h4>科学家研制出"光驱动芯片"：一个设备集成光信号生成、操控和读取——AI 与量子计算的新路径</h4>
+        <p>ScienceDaily 报道，研究团队研制出一种微型芯片，能在单个设备中生成、操控和读取光信号——这是迈向超高速、低功耗计算的重大突破。当前 AI 计算受限于电子传输的功耗和速度瓶颈，光子芯片可绕过这一限制。该成果发表于 2026 年 6 月，本周重新引发关注。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>光子芯片是"后摩尔时代"最被看好的技术路径之一——如果电子芯片的制程红利到 1nm 就基本到头了，光子芯片就是"换赛道"的新故事。对 lainy：这离商业化还有距离（5-10 年），但解释了为什么台积电、三星都在投先进封装——因为"光+电混合封装"可能是过渡方案。</div>
+        <div class="source">🔗 Source: <a href="https://www.sciencedaily.com/releases/2026/06/260601025343.htm" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
