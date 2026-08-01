@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-01</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 1 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 大反攻：</b>微软 Q4 营收 $900 亿 + Azure 跨 $1000 亿年收，单日暴涨 15%（18 年最大）；亚马逊 AWS 增速 37%、营收首破 $2000 亿。但苹果因内存短缺暴跌近 10%——存储芯片紧缺正在重塑科技股分化格局。</li>
+      <li><b>韩国 KOSPI 史诗级反弹：</b>7/31 单日涨 <strong>17.91%</strong>（历史最大涨幅），SK Hynix 涨停 +30%、三星 +27%。TSMC 同步开发"类 EMIB"封装技术对标 Intel，先进封装成 AI 供应链新瓶颈。</li>
+      <li><b>美伊冲突升级 + 油价：</b>伊朗革命卫队击中两艘美军护航油轮，霍尔木兹海峡日通航量从 800 万桶骤降至不足 200 万桶；Brent 站上 <strong>$90</strong>。FOMC 3 票反对维持利率不变，9:3 投票暗示加息压力上升。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AI 反攻周 · 财报 + 封装战</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">微软 Q4 财报</span>
+        <h4>微软 Q4 营收 $900 亿创纪录，Azure 年收首破 $1000 亿，单日暴涨 15% 为 18 年最大涨幅</h4>
+        <p>7/29 盘后微软发布 FY2026 Q4 财报：营收 <strong>$900</strong> 亿（<strong>+18%</strong>，超预期 $24 亿），non-GAAP EPS $4.74（超预期 11.8%），运营利润 $406 亿（<strong>+18%</strong>）。Azure 云服务年化收入首次突破 <strong>$1000</strong> 亿，季度增速 <strong>43%</strong>。全财年 capex 达 <strong>$1160</strong> 亿（翻倍），但市场认为 AI 投入终于开始兑现——$6780 亿合同积压支撑了"capex 值得"的叙事。7/30 微软股价暴涨 <strong>15%</strong>，市值单日增加约 $4500 亿（美股历史记录）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年 AI 叙事的"分水岭时刻"。此前市场质疑巨头 AI capex 是否能换来回报，微软用 Azure 43% 增速 + $6780 亿积压订单回答了这个问题。对 lainy 的框架：① AI capex → 云收入传导的链条已被验证；② 但 capex 翻倍 = 供应链（HBM、先进封装、电源）的产能瓶颈会持续更久；③ 苹果暴跌 vs 微软暴涨 = "AI 受益者"和"AI 受害者"的分化开始。</div>
+        <div class="ticker">📌 关联标的：MSFT（微软，核心受益）/ NVDA（英伟达，Azure 增速验证 GPU 需求）/ SMH（半导体 ETF）— Azure 验证 AI 变现路径</div>
+        <div class="source">来源：<a href="https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast" target="_blank">Microsoft Investor Relations</a> · <a href="https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html" target="_blank">CNBC</a> · <a href="https://seekingalpha.com/article/4928857-microsoft-azure-just-made-the-ai-spending-argument-easier" target="_blank">Seeking Alpha</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">亚马逊 AWS</span>
+        <h4>亚马逊营收首破 $2000 亿，AWS 增速 37% 连续 5 季加速，capex 上调至 $2200 亿</h4>
+        <p>7/30 亚马逊发布 Q2 财报：营收 <strong>$2006</strong> 亿（<strong>+20%</strong>，超预期 $41 亿），运营利润 $275 亿（<strong>+43%</strong>），EPS $5.75（超预期 216%）。AWS 营收增速 <strong>36.7%</strong>，连续 5 个季度加速增长。广告业务 $198 亿（<strong>+26%</strong>）。公司上调 2026 全年 capex 至约 <strong>$2200</strong> 亿（此前约 $2000 亿），理由是 AI 需求旺盛但产能仍受限。Q3 营收指引 $1970-2020 亿（略低于预期 $2041 亿，因 Prime Day 移至 6 月）。自由现金流转负。</p>
+        <div class="why">🦞 <b>商业含义：</b>亚马逊和微软同周验证了"AI 云收入在加速"——这不再是一个故事，而是财务数据。但注意两个风险信号：① capex 从 $2000 亿上调到 $2200 亿，意味着供应链价格压力（HBM、内存、组件涨价）在传导；② 自由现金流转负 = "all in AI"的代价。苹果暴跌恰恰因为它是这条链上的"买方"——内存短缺挤压了苹果的利润率。</div>
+        <div class="ticker">📌 关联标的：AMZN（亚马逊，核心受益）/ 000660.KS（SK Hynix，AWS HBM 供应商）/ INTC（Intel，EMIB 封装潜在受益于 AWS 需求）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/30/amazon-amzn-q2-earnings-report-2026.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-30/amazon-reports-fifth-straight-quarter-of-cloud-sales-growth" target="_blank">Bloomberg</a> · <a href="https://www.forbes.com/sites/petercohan/2026/07/31/amazon-stock-pops-108-on-aws-growth-payoff-from-ai-capex/" target="_blank">Forbes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">苹果暴跌</span>
+        <h4>苹果暴跌近 10%：Tim Cook 任内最后一份财报被内存短缺"砸场"，供应链约束成新常态</h4>
+        <p>7/30 盘后苹果发布 Q3 财报：营收 <strong>$1094</strong> 亿（<strong>+16%</strong>，超预期），净利 $298 亿（<strong>+27%</strong>），iPhone 和 Mac 销量强劲。但盘后股价暴跌超 <strong>10%</strong>，7/31 收跌约 <strong>9.6%</strong>——创 16 个月最大跌幅。核心原因：① 下季度营收指引不及预期，Tim Cook 明确警告"内存短缺的影响在加大"；② 服务业务收入略低于预期；③ 中国市场销售仍疲软。这是 Cook 任内最后一份财报。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>苹果的暴跌和微软的暴涨是同一枚硬币的两面——存储芯片（DRAM/NAND）短缺。微软/亚马逊是存储的"买方"（建数据中心），它们可以把成本转嫁给云客户；但苹果也是存储的"买方"（造手机/电脑），它很难把成本转嫁给消费者（iPhone 涨价 = 销量下滑）。 lainy 的映射框架：HBM/DRAM 供应紧张 → 存储厂（三星、SK Hynix、美光）议价权上升 → 下游硬件厂（苹果、手机厂）利润被挤压。这是一条清晰的传导链。</div>
+        <div class="ticker">📌 关联标的：AAPL（苹果，受损）/ MU（美光，受益于存储涨价）/ 000660.KS（SK Hynix）/ 002475 立讯精密（苹果链承压）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/30/apple-earnings-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-30/apple-s-sales-disappoint-in-china-unit-services-business" target="_blank">Bloomberg</a> · <a href="https://9to5mac.com/2026/07/31/apple-stock-opens-down-roughly-10-following-mixed-q3-2026-results/" target="_blank">9to5Mac</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC vs Intel 封装战</span>
+        <h4>TSMC 紧急开发"类 EMIB"封装技术，联手 Kinsus 防止客户流向 Intel；先进封装成 AI 瓶颈</h4>
+        <p>7/31 据 The Information 报道，TSMC 正在开发一种内部代号为"类 EMIB"的先进封装技术，与台湾景硕科技（Kinsus）合作，模仿 Intel 的 EMIB（嵌入式多芯片互连桥）方案。背景：TSMC 的 CoWoS 产能严重不足，CEO 在 7 月财报电话会上承认"封装产能限制正在制约客户增长"。Nvidia 已在评估 Intel EMIB 用于其 Feynman 代处理器；MediaTek 已宣布同时支持 TSMC CoWoS 和 Intel EMIB。TSMC ADR 7/31 涨超 <strong>7%</strong>，Intel 盘前涨 <strong>4.6%</strong>。但 Unimicron 表示 Intel EMIB-T 要到 2027 年才能真正量产。</p>
+        <div class="why">🦞 <b>读给你听：</b>先进封装已从"后端工序"变成"AI 军备竞赛的核心战场"。简单说：AI 芯片不再是"一颗大芯片"，而是"多颗小芯片拼在一起"——怎么拼、谁来拼，就是封装技术。TSMC 的 CoWoS 排队太长，客户等不及去找 Intel。这对 lainy 的意义：① TSMC 的"独家地位"在封装环节出现裂缝；② Intel 的代工翻身终于有了实质进展（EMIB 技术被 Nvidia 评估）；③ 2027 年是关键时间节点——Intel EMIB-T 量产 vs TSMC 类 EMIB 谁先落地。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ INTC（Intel，EMIB 受益）/ 2362 景硕（Kinsus，TSMC 合伙方）/ NVDA（Nvidia，封装选择方）</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260731VL207/tsmc-packaging-intel-competition-ai-chip.html" target="_blank">DIGITIMES</a> · <a href="https://www.benzinga.com/markets/tech/26/07/60829355/tsmc-is-reportedly-developing-advanced-chip-packaging-tech-to-challenge-intels-dominance" target="_blank">Benzinga</a> · <a href="https://www.trendforce.com/news/2026/07/31/news-tsmc-reportedly-develops-emib-like-packaging-with-kinsus-to-prevent-potential-customer-shift-to-intel/" target="_blank">TrendForce</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">KOSPI 史诗级反弹</span>
+        <h4>韩国 KOSPI 单日涨 17.91% 创历史纪录：SK Hynix +30% 涨停、三星 +27%，AI 悲观预期逆转</h4>
+        <p>7/31 韩国 KOSPI 指数暴涨 <strong>17.91%</strong> 至 6595.45 点——历史上最大单日涨幅，从 7 月累计下跌 22.4% 的深坑中反弹。SK Hynix 涨停 <strong>+29.95%</strong>，三星电子 <strong>+26.81%</strong>。驱动因素：① 前夜美股 AI 芯片股暴涨（美光 +18%、微软 +15%）带动全球存储芯片情绪反转；② 外资大幅净买入；③ 杠杆 ETF 重新调仓（7/31 新保证金规则生效推升再平衡）；④ 三星和 SK Hynix 近期财报好于悲观预期。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是 2026 年最戏剧性的单日行情之一。KOSPI 上半年翻倍（全球第一），7 月暴跌 22%，然后一天涨 18%——波动率极高。对 lainy 的启示：① AI 叙事的"拥挤交易"特性意味着大幅波动将成为常态；② 韩国市场（三星 + SK Hynix 占 KOSPI 权重超 40%）是"AI 存储链"的高弹性 proxy；③ 但杠杆 ETF 新规则意味着部分涨幅是机械性再平衡，不一定代表基本面改善。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星）/ KWEB（中概互联 ETF，情绪外溢）/ 159992 半导体ETF（A 股，情绪联动）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/31/south-korea-kospi-samsung-sk-hynix-meltdown-record-rebound.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-30/sk-hynix-shares-surge-in-seoul-on-us-peer-rally-chey-purchase" target="_blank">Bloomberg</a> · <a href="https://www.nytimes.com/2026/07/31/business/korea-stocks-chips-kospi.html" target="_blank">New York Times</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 — TSMC/三星/Intel + 先进封装] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂 — MSFT/AMZN/GOOG] — 当前受益环节：中游存储（HBM 双寡头）+ 先进封装（TSMC/Intel 竞争加剧）；受损环节：下游硬件厂（苹果，内存短缺挤压利润）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊冲突升级 · 霍尔木兹封锁</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹封锁</span>
+        <h4>伊朗革命卫队击中两艘美军护航油轮，霍尔木兹海峡日通航量从 800 万桶骤降至不足 200 万桶</h4>
+        <p>7/31 伊朗革命卫队宣布在霍尔木兹海峡击中两艘试图在美军护航下强行通过的无视警告油轮，另有四艘油轮在警告后掉头返回。伊朗议会发言人警告美国将"付出代价"，革命卫队宣称已对驻科威特、约旦、巴林的美军基地发动打击，并重申霍尔木兹海峡将继续关闭。据腾讯新闻报道，每天经由霍尔木兹的原油从 7 月初的 <strong>800 多万桶</strong>锐减至近几日的<strong>不足 200 万桶</strong>。伊朗天然气设施也遭到美方打击。特朗普在戴维营召开内阁会议敲定后续策略。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年地缘风险的最高点——霍尔木兹海峡承载全球约 20% 的石油运输，通航量下降 75% 意味着实际供给冲击已经发生（不再是"风险溢价"而是"供给中断"）。摩根大通警告：供应中断每延长一个月将使每桶油价上涨 $7-8。Wood Mackenzie 指出极端情境下油价可能冲 $120-150。对 lainy：这是"高油价 → 通胀粘性 → 美联储难降息 → 科技股估值承压"这条链的源头。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（供给中断，看涨）/ 600028 中国石化 / 601857 中国石油 / XLE（能源 ETF）— 油价每涨 $10，三桶油利润弹性 15-20%</div>
+        <div class="source">来源：<a href="https://www.nbd.com.cn/articles/2026-07-31/4528840.html" target="_blank">每日经济新闻</a> · <a href="https://www.cnbc.com/2026/07/31/oil-prices-today-brent-wti-hormuz-trump-iran-.html" target="_blank">CNBC</a> · <a href="https://news.qq.com/rain/a/20260731A0300P00" target="_blank">腾讯新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>美国与以色列拟对伊朗能源基建发动最大规模轰炸；俄方向伊朗提供军事支持</h4>
+        <p>据 Sputnik 及多家媒体 8/1 报道，美国和以色列正在评估对伊朗能源基础设施实施"迄今最大规模"轰炸的方案。同时，越来越多美国情报显示俄罗斯正向伊朗提供关键金融、情报和军事支持，利用全球能源价格上涨和制裁缓解来稳定自身战争经济。乌克兰方面 7/29 远程打击了俄罗斯两座最大炼油厂。Rubio 与 Lavrov 在马尼拉会面但无成果。全球冲突正在互联化。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>美伊冲突正在从"局部对抗"升级为"多线战争"——伊朗打霍尔木兹、打美军基地，美国打伊朗能源设施，俄罗斯在背后支持伊朗，乌克兰趁机打俄罗斯炼油厂。这意味着：① 油价底部在不断抬高；② 全球供应链的"去全球化"压力加剧；③ 中国的"调停者"角色更加尴尬——需要在伊朗关系和能源安全之间找平衡。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / COMEX 黄金（避险需求）/ 600028 中国石化 / 601318 中国平安（地缘风险偏好下降压估值）</div>
+        <div class="source">来源：<a href="https://www.voachinese.com/z/1746" target="_blank">美国之音</a> · <a href="https://www.singtaousa.com/2026/07/31/news/usa/news-us-iran-conflict-drives-energy-prices-oil-giants-massive-profits/" target="_blank">星岛日报</a> · <a href="https://www.ilfattoquotidiano.it/2026/07/31/iran-russia-ucraina-conflitti-notizie/8464007/" target="_blank">Il Fatto Quotidiano</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹/红海航线，通航量 -75%] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [消费者 — 油价上涨传导至 CPI] — 当前受损环节：中游航运（霍尔木兹+红海双封锁）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC · 油价 · 黄金</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC 9:3 投票</span>
+        <h4>FOMC 维持利率 3.50-3.75% 不变，但 3 票反对主张加息——Warsh 任内第二次会议出现罕见分歧</h4>
+        <p>7/28-29 FOMC 会议以 <strong>9:3</strong> 投票维持联邦基金利率在 <strong>3.50-3.75%</strong> 区间不变，3 位票委主张加息。这是 Warsh 担任主席以来第二次会议，也是 10 年来首次出现 3 票反对。Warsh 在记者会上表示"美联储不会对通胀手软"，但也承认"不能像变魔术一样快速降通胀"。债券市场对美联储的政策信心出现动摇——国债收益率上行，反映了通胀预期上升（而非仅仅是油价推动）。CNN 报道指出，美联储 2026 年已连续 5 次会议维持利率不变。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>3 票反对是一个非常鹰派的信号——意味着委员会内部对"通胀是否需要更激进应对"存在实质分歧。对 lainy 的三种情景：① 9 月会议如果油价仍在 $90+，加息概率显著上升；② 债市已经在"替美联储加息"（收益率上行），所以 Warsh 可能选择观望；③ 但如果通胀预期脱锚，被迫加息将冲击科技股估值。这是未来 1-2 个月最关键的宏观变量。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，加息预期压制估值）/ TLW（美债，收益率上行）/ 513130 港股通科技ETF — 鸽派利好，鹰派利空</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/07/29/fed-meeting-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.cnn.com/2026/07/31/business/fed-interest-rates-dissents" target="_blank">CNN</a> · <a href="https://www.nytimes.com/2026/07/31/business/economy/inflation-fed-dissent-interest-rates.html" target="_blank">New York Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">油价 &amp; 黄金</span>
+        <h4>Brent 站上 $90 月涨 20%，OPEC+ 准备停止增产；黄金 $4077，日元疑似干预推升金价</h4>
+        <p>Brent 原油 7/31 收于约 <strong>$90</strong>/桶，7 月累计涨幅约 <strong>20%</strong>。OPEC+ 据报正准备停止提高产量目标。WTI 收于约 <strong>$84</strong>。与此同时，黄金在 <strong>$4</strong>,045-4,112 区间剧烈震荡，7/31 日内一度突破 <strong>$4100</strong>。美元指数跌至 <strong>100</strong> 附近——日本疑似再次干预汇市推升日元，美元走弱间接支撑金价。央行 Q2 买入 289 吨黄金。BoJ 维持利率 1% 不变。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>油价和黄金同涨意味着市场在同时定价"通胀风险"和"地缘避险"——这两个信号通常互斥（避险时油价跌），但霍尔木兹封锁让它们同时出现。对 lainy 的配置框架：高油价 + 美联储鹰派 = 利率上行 = 成长股承压；但黄金在央行买盘 + 地缘混乱下有结构性支撑。OPEC+ 停止增产意味着供给侧不再对冲地缘风险。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— 央行持续买入，中长期看涨</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics</a> · <a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics</a> · <a href="https://oilprice.com/Energy/Crude-Oil/Saudis-Push-Maritime-Coalition-as-Oil-Finds-Support.html" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：霍尔木兹通航量 + 9 月 FOMC 加息预期</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 · 7/31 收盘</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 7/31 七月收官：沪指 +0.72% 报 3832 / 深成指 +2.21% / 创业板 +3.06% / 超百股涨停 0 跌停</h4>
+      <p>7/31 A 股三大指数集体上涨收官七月。截至收盘，上证指数 <strong>+0.72%</strong> 报 3832.26 点，深成指 <strong>+2.21%</strong> 报 13578.93 点，创业板指 <strong>+3.06%</strong> 报 3343.96 点，北证50 <strong>+3.26%</strong>。三市成交额 2.56 万亿（放量 2014 亿），近 4700 只个股上涨，涨停 101 只、跌停 0 只。<b>亮点板块：</b>AI 应用全线爆发——中文在线、昆仑万维、福昕软件涨停；人形机器人集体上涨——奥比中光 20cm 涨停；CPO 板块反弹，罗博特科 +16%；半导体活跃，盛景微涨停。<b>下跌：</b>银行、保险逆势调整，农业银行、交通银行跌超 2%，中国平安跌幅居前。<b>月线：</b>双创指数（科创 + 创业板）本月跌幅超 20%，但最后一天强势反弹。<b>今日（8/1 周六）休市。</b></p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 +0.10% 报 25884 / 恒科 +0.53% / 7 月恒指累涨 13.1% "七翻身"兑现</h4>
+      <p>7/31 港股三大指数涨跌不一，恒指微涨 <strong>0.10%</strong> 收报 25884.43 点，恒生科技 <strong>+0.53%</strong> 报 4829.22 点，国企指数 -0.38%。成交额 3282 亿港元。盘面上，AI 应用股普涨，存储概念股暴力反弹——南方两倍做多海力士暴涨近 <strong>60%</strong>，兆易创新 +25%，智谱 +22%。大型科网股表现分化。石油股回调，中石油跌超 1%（隔夜 WTI 跌 1%）。<b>7 月回顾：</b>恒指累涨 <strong>3003 点或 13.1%</strong>，国企指数 +13.9%，科技指数 +7.9%，主要受惠于内地政策预期改善。<b>今日休市。</b></p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 7/31 收盘：道指 52208 (+1.19%) / 标普 7437 (+1.66%) / 纳指 25122 (+2.78%)</h4>
+      <p>7/31 美股三大指数集体大涨，AI 叙事强势回归。<b>领涨：</b>微软 <strong>+15%</strong>（18 年最大单日涨幅，市值单日增 $4500 亿），美光 <strong>+18%</strong>，闪迪 <strong>+26%</strong>，亚马逊 <strong>+9%</strong>（盘后继续涨），费城半导体指数 <strong>+8.19%</strong>。<b>领跌：</b>苹果 <strong>-9.6%</strong>（16 个月最大跌幅），因内存短缺警告影响下季度指引。<b>7 月线：</b>道指连涨四个月，但纳指月线仍有波动。<b>盘后：</b>亚马逊财报超预期，AWS 增速 37%。本周为超级财报周——MSFT、AMZN、AAPL、META 集中发布。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>暑期文旅 · 旺丁不旺财</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">暑期文旅</span>
+        <h4>2026 暑期文旅"旺丁不旺财"：客流 +5-8% 但人均消费 -3.2%，民宿均价下滑 5-20%</h4>
+        <p>据凤凰网、虎嗅等多家媒体 7/31 报道，国铁集团预计暑运发送旅客 10.1 亿人次（<strong>+7.1%</strong>），但游客人均消费同比下滑 <strong>3.2%</strong>，全国民宿均价同比下滑 <strong>5-20%</strong>。近 20 位文旅从业者反映：客流增长但全行业盈利下滑，游客普遍收紧预算、比价意愿增强、短时决策成为主流。川西、黄山、银川等避暑目的地热度增长超 50%，但传统热门景区（乌兰布统、三亚、景德镇）反映生意远低于预期，有景德镇店主称 7 月可能"血本无归"。酒店行业非核心区域普遍降价争夺客源。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>"旺丁不旺财"是 2026 年消费市场的核心特征——人出去了，但花钱少了。这和上半年"服务零售 +5.3% vs 商品零售 +1.1%"的结构一致，但连服务消费的客单价也在下降。对 lainy 的消费股框架：① 消费降级不是"不消费"而是"精打细算"，性价比品牌（如瑞幸、名创优品）相对受益；② 高端旅游/酒店承压（三亚、乌兰布统）；③ 避暑/小众目的地有结构性增长（川西、黄山），但总量有限。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性待验证）/ 002714 牧原股份（餐饮链上游）/ 601888 中国中免（旅游零售承压）— 消费降级主题持续</div>
+        <div class="source">来源：<a href="https://news.ifeng.com/c/8vDRq4CslSb" target="_blank">凤凰网</a> · <a href="https://www.huxiu.com/article/4879854.html" target="_blank">虎嗅</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-07-31/doc-iniksxpc0865304.shtml" target="_blank">新浪科技</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [交通 — 高铁/航空，客流 +7%] → 中游 [住宿 — 民宿/酒店，均价 -5~20%] → 下游 [餐饮/景区 — 客单价下降] — 当前受损环节：中游住宿（价格战压缩利润）+ 下游餐饮（消费降级）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Ted Lasso</span>
+        <h4>Ted Lasso 第四季 8 月回归！Apple TV+ 八月片单还有这些值得看</h4>
+        <p>Apple TV+ 宣布 Ted Lasso 第四季将于 2026 年 8 月回归——距离第三季已超过三年。同时 8 月流媒体片单密集发布：Netflix 推出 Mourinho 纪录片系列（讲述穆里尼奥的执教生涯）；Prime Video 的 Reacher 第四季回归，并上架《低俗小说》和《机械战警》系列；HBO Max 上线多部 CNN 纪录片和经典影片。</p>
+        <div class="why">🦞 <b>花边点评：</b>Ted Lasso 回归是 8 月最值得期待的流媒体事件——如果你之前追过，这次可以直接续上。Mourinho 纪录片也值得一看，狂人穆帅的故事永远不缺戏剧性。lainy 周末如果宅家，可以挑一部开始追。</div>
+        <div class="source">来源：<a href="https://www.yardbarker.com/entertainment/articles/new_to_apple_tv_in_august_2026/s1_17706_44122178" target="_blank">Yardbarker</a> · <a href="https://clutchpoints.com/entertainment/new-to-netflix-in-august-2026" target="_blank">ClutchPoints</a> · <a href="https://www.aboutamazon.com/news/entertainment/prime-video-august-movies-shows-music-sports-2026" target="_blank">Amazon</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">英联邦运动会</span>
+        <h4>2026 格拉斯哥英联邦运动会闭幕在即，LA28 奥运门票价格引争议：最贵 $5519</h4>
+        <p>2026 年格拉斯哥英联邦运动会即将闭幕。与此同时，2028 洛杉矶奥运会门票价格曝光引发巨大争议——票价从 $28 到 $5519 不等（开幕式下层座位），整体价格远超 2024 巴黎奥运（已在法国引发争议），多项票价为巴黎的 2 倍以上。LA 组委会的定价逻辑与 FIFA 2026 世界杯相似——"市场定价"。El País 报道指出，洛杉矶在举办完世界杯 8 场比赛后，正加速筹备 2028 奥运，但尚未完全准备好。</p>
+        <div class="why">🦞 <b>轻松一下：</b>奥运门票 $5519 一个座位——这价格可以买一部 iPhone 了。但这就是"体育经济"的趋势：顶级赛事的现场体验正在被定价为"奢侈品"。对 lainy：如果想看 2028 奥运，现在可以开始攒钱了。</div>
+        <div class="source">来源：<a href="https://sports.yahoo.com/articles/commonwealth-games-closing-ceremony-watch-141108976.html" target="_blank">Yahoo Sports</a> · <a href="https://www.nytimes.com/athletic/7480645/2026/07/31/2028-la-olympics-ticket-prices-fees-most-expensive-games/" target="_blank">The Athletic / NYT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Ariana Grande</span>
+        <h4>Ariana Grande 新专辑《Petal》发布，乐评："美丽的流行绽放，但话很多"</h4>
+        <p>Ariana Grande 于 8/1 发布新专辑《Petal》，Republic Records 出品。Mint 乐评称其为"a beautiful pop bloom with a lot to get off its chest"——评价偏向正面，认为旋律优美但内容密集。这是 Grande 继《Eternal Sunshine》后的最新作品。</p>
+        <div class="why">🦞 <b>彩蛋：</b>lainy 如果是 Ariana 粉丝，周末可以听听新专辑。龙虾老师不评价流行乐，但"a lot to get off its chest"这个评价听起来很像她的风格——永远有话要说。</div>
+        <div class="source">来源：<a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-1-2026-live-updates-11785529895417.html" target="_blank">Livemint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI 产能瓶颈</span>
+        <h4>AI 产能短缺蔓延至 MLCC：最不起眼的元器件也缺了，供应商转向高端产能</h4>
+        <p>据 DIGITIMES 7/30 报道，AI 基建的快速扩张正在重塑半导体行业最不起眼的组件市场——多层陶瓷电容器（MLCC）。高端 MLCC 需求飙升，促使供应商重新分配产能，从消费电子向 AI 服务器切换。同时，AI 需求正在收紧 TSMC 先进制程以外的成熟工艺产能和后端封装产能，芯片设计师面临"有订单无供应"的困境。Omdia 预测 2026 年半导体收入将增长 <strong>94%</strong>，内存 IC 将占芯片收入一半以上，HBM、先进封装和领先节点的瓶颈将持续到 2027 年。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>MLCC 是电子产品里的"螺丝钉"——不起眼但缺了就不行。当连螺丝钉都缺的时候，说明 AI capex 的"虹吸效应"已经到了末端。对 lainy：这验证了"AI capex → 全产业链产能紧张 → 价格上涨 → 通胀传导"的链条。从 HBM 到封装到 MLCC，AI 正在"吃掉"整个半导体供应链的产能。</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260730VL235/mlcc-ai-server-capacity-infrastructure-expansion.html" target="_blank">DIGITIMES</a> · <a href="https://semiengineering.com/chip-industry-week-in-review-149/" target="_blank">SemiEngineering</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
