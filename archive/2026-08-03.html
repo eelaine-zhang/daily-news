@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-03</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 3 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美伊谈判今日重启：</b>特朗普称取消周末对伊朗的大规模空袭，决定通过中介方周一开始与伊朗谈判，目标是重新开放霍尔木兹海峡；伊朗-阿曼海峡通行协议进入"最终阶段"。</li>
+      <li><b>油价暴跌 + OPEC+ 继续增产：</b>Brent 从 $91 跌至 $84，WTI 跌破 $80；OPEC+ 同意 9 月再增产 18.8 万桶/日，完成自愿减产的全面回退，但 Q4 暂停增产。</li>
+      <li><b>三星 Q2 利润创纪录 + 内存短缺延至 2028：</b>三星 Q2 运营利润 KRW 89.5 万亿超预期，AI 存储需求推动；公司警告内存短缺将贯穿 2027 并持续到 2028，前沿 AI 实验室正直接向三星提交中长期需求预测以锁定供应。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>AI 军备竞赛最新</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">三星 Q2 财报</span>
+        <h4>三星 Q2 运营利润 KRW 89.5 万亿创纪录，AI 内存需求推动；警告内存短缺将延至 2028</h4>
+        <p>三星电子发布 Q2 2026 财报：运营利润 <strong>KRW 89.5 万亿</strong>，超分析师预期 KRW 88.13 万亿；营收 KRW 171.5 万亿。芯片业务是核心驱动力，AI 内存需求推动 HBM 和 DRAM 价格持续走高。但手机及网络业务出现亏损，零部件成本上升挤压利润。三星在财报电话会上表示：<strong>内存短缺预计将贯穿 2027 年并持续到至少 2028 年</strong>——前沿 AI 实验室正直接向三星提交中长期需求预测，以锁定未来 HBM 和 DRAM 供应。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>三星这份财报验证了"AI 内存超级周期"的核心判断——不是短期的涨价，而是 AI 实验室"抢货"导致的需求结构变化。对 lainy 的金融视角：① HBM 寡头格局（三星 + SK Hynix）的定价权进一步强化；② 内存短缺 = AI capex 的瓶颈从 GPU 转向内存，这会推高内存厂利润但压缩 AI 实验室的利润率；③ 三星股价有重估空间，此前市场低估了其代工 + 内存双线受益的弹性。</div>
+        <div class="ticker">📌 关联标的：SSNLF（三星电子）/ 000660.KS（SK Hynix）/ MU（美光，边缘化风险上升）/ 512760 半导体ETF（A 股）— HBM 双寡头持续受益</div>
+        <div class="source">来源：<a href="https://samsung.gadgethacks.com/news/samsung-q2-2026-earnings-galaxy-s26-fe-and-tab-s12-costs/" target="_blank">Gadget Hacks / CNBC</a> · <a href="https://www.resetera.com/threads/samsung-expects-memory-shortage-to-worsen-through-2027-and-last-until-at-least-2028-in-latest-earnings-call.1593271/" target="_blank">ResetEra（财报电话会摘要）</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Sandisk / Micron</span>
+        <h4>Sandisk 单日暴涨 26%、Micron 涨 18%：存储股全线飙升，Sandisk 8/5 发布财报</h4>
+        <p>AI 存储需求扩散到非 HBM 领域，Sandisk（西部数据拆分后的存储公司）单日暴涨 <strong>26%</strong>，Micron 涨 <strong>18%</strong>。即使经过回调，Sandisk 2026 年累涨超 <strong>400%</strong>，Micron 累涨超 <strong>200%</strong>。Sandisk 将于 8 月 5 日发布 Q4 财报，市场预期乐观。分析认为，AI 数据中心对 NAND 和 DRAM 的需求远超此前预期，存储行业正进入"全面短缺"阶段。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Sandisk 400% 的涨幅说明市场正在重新定价"AI 存储链"——不只是 HBM，NAND、DDR5、eSSD 全线受益。对 lainy：这是"AI capex → 存储利润传导"的扩散阶段，类似 2023 年 GPU 先涨、随后散热/电源/PCB 跟涨的逻辑。但要注意——Sandisk 8/5 财报是验证时刻，如果指引不及预期，高涨幅股的回调风险很大。</div>
+        <div class="ticker">📌 关联标的：SANDISK（WDC 拆分上市）/ MU（美光）/ 000938 紫光股份 / 002049 紫光国微 — 存储全链受益但高涨幅需验证</div>
+        <div class="source">来源：<a href="https://memeburn.com/why-ai-sandisk-stock-and-micron-stock-surged/" target="_blank">Memeburn</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Broadcom</span>
+        <h4>Broadcom AI 芯片收入 +143% 但股价跌 15%：AI 营收创纪录，市场却"用脚投票"</h4>
+        <p>Broadcom（AVGO）公布 Q2 财报，AI 半导体收入同比 <strong>+143%</strong>，营收、运营利润、自由现金流均创公司纪录。但股价在财报后下跌 <strong>15%</strong>。原因：① 两项关键指引不及市场预期——定制 AI 芯片（XPU）客户增速放缓，且毛利率指引略低；② 市场对 AI 芯片估值已极度拥挤，任何不够"超预期"的业绩都会触发抛售。Broadcom 是仅次于英伟达、高通的全球第三大芯片设计公司。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Broadcom 的"业绩好但股价跌"是 AI 芯片板块估值泡沫的信号——当 +143% 的增长都不能让市场满意时，说明预期已经被打得过高。对 lainy 的框架：① AI 芯片从"普涨"进入"分化"阶段，只有真正超预期的公司才能维持估值；② Broadcom 的下跌可能反而是布局机会（基本面没变），但需要等 Q3 指引确认。</div>
+        <div class="ticker">📌 关联标的：AVGO（Broadcom，短期承压但基本面强）/ NVDA（英伟达，同板块情绪拖累）/ SMH（半导体 ETF）— AI 芯片从普涨转分化</div>
+        <div class="source">来源：<a href="https://www.top1markets.com/news/broadcom-avgo-stock-analysis" target="_blank">TOPONE Markets</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中美 AI 竞争</span>
+        <h4>CNBC 观点：美国对中国的 AI 领先优势"几乎消失"，需要改变国家战略</h4>
+        <p>CNBC 8/2 发表评论文章指出，美国在 AI 领域对中国的领先优势"几乎消失"。文章分析了中国的策略：在国内加强关键技术控制，同时鼓励国际采纳中国 AI 平台。美国商务部长 Lutnick 在英伟达芯片出口禁令辩论中引用了英伟达 CEO 黄仁勋的观点，称目标是"让世界其他地区对中国技术栈上瘾"。文章呼吁美国需要新的国家 AI 战略来应对竞争。</p>
+        <div class="why">🦞 <b>读给你听：</b>这篇 CNBC 的观点文章反映了华盛顿政策圈正在重新审视中美 AI 格局。对 lainy：① 这不是纯学术讨论——它直接影响芯片出口禁令的松紧，进而影响英伟达、AMD 等公司的中国市场收入；② 中国 AI 平台（如 DeepSeek、智谱）的海外扩张确实在加速，尤其东南亚和中东市场；③ 国产 AI 芯片（寒武纪、华为昇腾）在政策保护下份额持续提升。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，出口禁令风险）/ 688256 寒武纪（国产 AI 芯片受益）/ 002230 科大讯飞（国产 AI 平台）— 地缘竞争双面影响</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/02/ai-model-competition-us-china.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游存储（HBM/NAND 全面短缺延至 2028），受损环节：下游 AI 实验室（存储成本上升压缩利润率）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊谈判 · 油价 · OPEC+</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>特朗普宣布今日（周一）启动与伊朗新谈判，取消周末大规模空袭计划</h4>
+        <p>特朗普 8/2 表示，经与沙特、阿联酋、卡塔尔和伊朗沟通后，决定取消原定周五对伊朗的"大规模攻击"，转为通过中介方启动谈判。谈判预计 <strong>周一（8/3）开始</strong>，目标是达成重新开放霍尔木兹海峡的协议。特朗普称协议"迫在眉睫"，但同时表示美军将保持最高战备状态。伊朗此前否认谈判存在，并拒绝了美国提出的 15 点和平方案。伊朗坚持黎巴嫩停火须纳入整体协议。</p>
+        <div class="why">🦞 <b>市场含义：</b>这是本周末最大的地缘信号。市场反应——美股期货周日晚大涨（纳指 100 期货 <strong>+1.2%</strong>），油价暴跌（WTI 跌破 $80）。三种情景：① 谈判达成 → 油价快速回落至 $70s，风险资产大涨；② 谈判破裂 → 空袭恢复，油价可能飙至 $120+；③ 拖延 → 当前状态延续，油价在 $80-90 区间震荡。对 lainy：本周是"地缘降温 + 数据潮"的组合，如果谈判有进展，市场焦点会快速转向 ISM 和非农。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，风险偏好回暖）/ Brent 原油（谈判成功则回落至 $70s）/ 600028 中国石化（油价下跌短期承压但需求端利好）</div>
+        <div class="source">来源：<a href="https://www.aljazeera.com/news/liveblog/2026/8/2/iran-war-live-tehran-warns-of-decisive-response-to-any-us-aggression" target="_blank">Al Jazeera</a> · <a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-strait-of-hormuz-kuwait-jordan-air-base/" target="_blank">CBS News</a> · <a href="https://www.timesofisrael.com/liveblog_entry/trump-says-talks-with-iran-will-start-monday-on-deal-to-reopen-hormuz/" target="_blank">Times of Israel</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹协议</span>
+        <h4>伊朗-阿曼霍尔木兹海峡谈判进入"最终阶段"，新海上通道即将敲定</h4>
+        <p>伊朗外长 Araghchi 8/2 表示，伊朗与阿曼关于霍尔木兹海峡的谈判已进入<strong>"最终阶段"</strong>，即将达成一项关于新海上通行路线的协议。伊朗强调霍尔木兹海峡"不会回到战前状态"。外交消息人士称，阿曼已同意框架方案，但要求伊朗澄清外长立场是否也代表革命卫队。卡塔尔方面继续斡旋以确保各方支持。据 The Week 报道，从伊朗角度看这是一次"完全胜利"——伊朗将能对拒绝支付通行费的船只实施"扣押"。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>如果协议达成，意味着霍尔木兹从"国际通行"变成"伊朗收过路费"——这是地缘格局的实质变化。对市场：短期利好（油价回落、航运恢复），但中长期意味着伊朗对波斯湾航运的控制力增强。对 lainy：关注协议细节——如果通行费不高，市场会解读为"风险降温"；如果伊朗要求高额费用或保留随时封锁权，油价溢价不会完全消退。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / TNK（油轮公司，通航恢复则运费下降）/ 600028 中国石化 — 协议达成短期利空油价，但需看细节</div>
+        <div class="source">来源：<a href="https://www.aljazeera.com/amp/news/2026/8/2/iran-says-negotiations-with-oman-over-strait-of-hormuz-in-final-stages" target="_blank">Al Jazeera</a> · <a href="https://www.theweek.in/news/middle-east/2026/08/02/did-iran-agree-to-open-the-strait-of-hormuz-state-media-clears-air-on-compromise-proposal.html" target="_blank">The Week</a> · <a href="https://www.arabnews.com/node/2653142/middle-east" target="_blank">Arab News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">OPEC+ 增产</span>
+        <h4>OPEC+ 9 月再增产 18.8 万桶/日，完成自愿减产全面回退；Q4 暂停增产</h4>
+        <p>OPEC+ 八国（沙特、俄罗斯等）8/2 在线上会议中同意 9 月增产 <strong>18.8 万桶/日</strong>，这是连续第六个月同等幅度增产，完成了 2023 年自愿减产的全面回退。但声明同时表示 <strong>Q4 将暂停增产</strong>，保留约 200 万桶/日的减产余额作为"安全垫"。增产决定在中东战争导致供应中断的背景下做出，显示 OPEC+ 希望填补缺口。Brent 从周高 <strong>$91</strong> 跌至 <strong>$84</strong>，WTI 跌破 <strong>$80</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>OPEC+ 的策略很清晰："渐进增产填补缺口 + 保留弹药"。Q4 暂停增产 = 如果伊朗谈判破裂导致油价飙升，OPEC+ 可以随时释放剩余产能。对 lainy：① 短期油价下行空间有限——Q4 暂停增产 + 地缘风险未消 = Brent 在 $75-85 区间筑底；② 如果美伊谈判成功，OPEC+ 可能加速增产压制油价，届时 Brent 可能跌至 $65-70。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / XLE（能源 ETF）/ 601857 中国石油 — 油价短期承压但 Q4 有底</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/02/opec-agrees-september-oil-hike-completing-rollback-of-voluntary-cuts.html" target="_blank">CNBC</a> · <a href="https://reuters.com/business/energy/opec-has-agreement-principle-september-quota-increase-pause-thereafter-source-2026-08-02" target="_blank">Reuters</a> · <a href="https://www.benzinga.com/markets/commodities/26/08/60862086/crude-oil-price-dives-as-opec-agrees-to-another-supply-hike" target="_blank">Benzinga</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 波斯湾航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前转折点：美伊谈判结果将决定中游航运是否恢复 + OPEC+ Q4 是否释放剩余产能</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>ISM 数据周 · 非农 · 美联储</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">本周数据潮</span>
+        <h4>本周美国经济数据密集：ISM 制造业（周一）+ ISM 服务业（周三）+ 7 月非农就业（周五）</h4>
+        <p>本周是美国 2026 年迄今数据最密集的一周。关键事件：① <strong>周一 ISM 制造业 PMI</strong>（预期 54.0，前值 53.3），五家地方联储的区域制造业调查确认 ISM 读数大概率偏强；② <strong>周三 ISM 服务业 PMI</strong>；③ <strong>周五 7 月非农就业报告</strong>（前值待确认，预期 +85K）。上周美联储维持利率 <strong>3.50-3.75%</strong> 不变，但 3 票反对主张加息——Warsh 任内第二次会议出现罕见分歧。30 年期国债收益率升至 <strong>5.25%</strong>，2007 年以来最高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>上周 FOMC 的 3 票异议 + 30 年期国债 5.25% = 市场正在替美联储做"紧缩"工作（债券义警）。如果本周 ISM 和非农数据偏强，加息预期会进一步升温，科技股承压；如果数据偏弱，市场会重新定价降息，风险资产反弹。对 lainy：ISM 制造业 PMI 是今晚最重要的数据——如果超 54，美元走强、黄金承压；如果低于 53，风险偏好回暖。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股）/ GLD 黄金（$4,000 关口攻防）/ TLT（长期国债 ETF，5.25% 收益率引关注）— 数据决定短期方向</div>
+        <div class="source">来源：<a href="https://www.yardeniquicktakes.com/economic-week-ahead-august-3-7/" target="_blank">Yardeni</a> · <a href="https://features.financialjuice.com/2026/07/31/week-ahead-economic-indicators-3rd-7th-august-us/" target="_blank">FinancialJuice</a> · <a href="https://www.kitco.com/news/article/2026-07-31/wall-street-trisected-golds-near-term-prospects-main-street-bulls-minority" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金守 $4,000 关口：分析师视 $4,000 为"价值区间"，央行买盘 + 地缘双支撑</h4>
+        <p>黄金上周在 <strong>$4,000-4,100</strong> 区间震荡，最终收于 <strong>$4,000</strong> 附近。Kitco 报道，尽管美联储维持利率不变且 3 票异议倾向加息，分析师开始将 $4,000 视为"有吸引力的价值区间"。支撑因素：① 央行持续买盘（中国央行连续 18 个月增持）；② 地缘风险溢价；③ 30 年期国债 5.25% 吸引避险资金。阻力 <strong>$4,083-4,120</strong>，支撑 <strong>$4,021</strong>。本周非农数据将决定短期方向。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,000 的攻防战本质是"高利率压制 vs 地缘+央行支撑"的拔河。如果美伊谈判成功、地缘溢价消退，短期可能回调至 $3,900——但央行买盘是结构性的，回调就是加仓机会。对 lainy 的配置框架：黄金是"高通胀+地缘混乱"环境的核心配置，不需要择时，定投即可。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— $4,000 是多空分水岭</div>
+        <div class="source">来源：<a href="https://www.kitco.com/news/article/2026-07-31/gold-has-value-4000-investors-look-beyond-fed-hawkishness" target="_blank">Kitco News</a> · <a href="https://www.fxstreet.com/analysis/gold-weekly-forecast-bull-hesitancy-persists-despite-weaker-us-dollar-202607311454" target="_blank">FXStreet</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：美伊谈判结果 + ISM/非农数据将决定未来 1 个月方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 7 月惨烈收官：沪指 3832 / 月跌 6.4% / 创业板月跌 23% / 科创综指月跌 27.8%</h4>
+      <p>7/31 收盘：沪指 <strong>+0.72%</strong> 报 3832.26，深成指 <strong>+2.21%</strong> 报 13578.93，创业板指 <strong>+3.06%</strong> 报 3343.96。当日超百股涨停、0 跌停，但月度表现惨烈：<strong>沪指月跌 6.4%，深成指月跌 16.21%，创业板月跌 23%（历史第二大单月跌幅），科创综指月跌 27.8%</strong>。中证 1000 月跌 19.69%。成交额从月初 2 万亿以上萎缩。<b>本周关注：</b>① 宇树科技 8/10 申购（人形机器人第一股，688836），8/5 询价；② ISM 数据对外围影响。国信证券研报建议关注医药、券商、白酒等低位内需板块，科技内部向 AI 应用环节扩散。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 7 月"七翻身"：恒指 25884 / 月涨 13.13% 领涨全球 / 恒科月涨 7.98%</h4>
+      <p>7/31 收盘：恒指 <strong>+0.10%</strong> 报 25884.43，恒生科技 <strong>+0.53%</strong> 报 4829.22，国企指数 -0.38%。7 月恒指累涨 <strong>13.13%</strong>，领涨全球重要指数（韩国 KOSPI 月跌 22.19%，日经 225 月跌 8%+，深成指月跌 16%+）。盘面：阿里 +4%，腾讯 +0.72%，中芯国际 +2%，兆易创新 +7%。存储概念股走强，南方两倍做多海力士涨近 60%。<b>今日关注：</b>美伊谈判若推进，风险偏好有望进一步修复，恒指有望上攻 26000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/1 收盘全线收涨：道指 52485 (+0.53%) / S&P 7490 (+0.70%) / 纳指 25374 (+1.0%)</h4>
+      <p>8/1 收盘：道指 <strong>+276.97</strong> 点报 52485.03，S&P <strong>+0.70%</strong> 报 7489.72，纳指 <strong>+1.0%</strong> 报 25373.85。Amazon 单日 <strong>+14%</strong> 领涨（营收首破 $2000 亿，AWS 增速 37%）。但 7 月纳指累跌 <strong>3.2%</strong>，道指微涨，标普微跌。<b>周日晚期货大涨：</b>纳指 100 期货 <strong>+1.2%</strong>，道指期货 <strong>+0.6%</strong>——特朗普取消空袭伊朗 + 美伊谈判今日启动触发 risk-on。<b>本周关注：</b>ISM 制造业（今晚）、非农就业（周五），以及 SpaceX 首次财报。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 & 产业 <small>新能源 · 机器人</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">宇树科技 IPO</span>
+        <h4>宇树科技 8/10 申购：A 股"人形机器人第一股"来了，科创板最快审核纪录</h4>
+        <p>"杭州六小龙"之一宇树科技（688836）确定 <strong>8 月 10 日</strong>网上/网下申购，<strong>8 月 5 日</strong>初步询价。拟发行 4044.64 万股（发行后总股本 4.04 亿股），从 3 月 20 日获受理到 7 月注册生效仅用 <strong>104 天</strong>，创下科创板最快审核纪录。宇树 2025 年营收 17 亿元，2026 Q1 营收同比 <strong>+68.49%</strong>，但扣非净利同比 <strong>-52.55%</strong>（研发投入加大）。本次募资用于智能机器人模型研发、机器人本体研发、制造基地建设等。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 A 股"人形机器人"主题的标志性事件——从"概念炒作"进入"资本验证"阶段。对 lainy：① 宇树的估值定价将直接影响整个机器人板块的估值锚；② 2026 Q1 营收 +68% 但扣非利润 -52%，说明行业还在"烧钱换规模"阶段，短期不盈利但增长迅猛；③ 关注 8/5 询价结果——如果定价偏高，可能吸走市场资金，对其他板块形成虹吸。</div>
+        <div class="ticker">📌 关联标的：688836 宇树科技（8/10 申购）/ 002747 埃斯顿（机器人概念）/ 688169 石头科技（机器人概念外溢）/ 512760 半导体ETF — 人形机器人主题催化</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/zqgd/2026-07-31/doc-iniksaik9284852.shtml" target="_blank">新浪财经</a> · <a href="https://finance.eastmoney.com/a/202607303827079993.html" target="_blank">东方财富</a> · <a href="https://www.stcn.com/article/detail/4050857.html" target="_blank">证券时报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">人形机器人产业</span>
+        <h4>比亚迪人形机器人 8 月首发 + 世界人形机器人运动会 8/22-26 北京举办</h4>
+        <p>比亚迪确认 <strong>8 月初</strong>在"迪空间"发布自研人形机器人（代号"尧舜禹"），成为首家跨界人形机器人的车企。车企集体布局机器人——感知、执行、计算等核心技术与汽车同源。均胜电子在 WAIC 已发布全栈式具身智能方案（灵巧手、电子皮肤、AI 大脑等）。此外，第二届世界人形机器人运动会将于 <strong>8 月 22-26 日</strong>在北京国家速滑馆"冰丝带"举办，首次纳入武术项目，机器人将跳双人华尔兹。工信部 6 月发文要求年底形成万台级落地能力。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>8 月是人形机器人的"超级月"——宇树 IPO + 比亚迪发布 + 运动会举办，三重催化密集落地。对 lainy 的产业框架：人形机器人正从"主题炒作"切换至"订单验证"阶段，但量产爬坡 + 成本下降是关键瓶颈。车企入局是重要变量——比亚迪的制造能力 + 供应链管理可能大幅降低机器人成本。</div>
+        <div class="ticker">📌 关联标的：002594 比亚迪（机器人首发催化）/ 688836 宇树科技 / 300124 汇川技术（伺服系统核心）— 8 月人形机器人三重催化</div>
+        <div class="source">来源：<a href="https://www.36kr.com/p/3915047658525828" target="_blank">36氪</a> · <a href="https://www.beijing.gov.cn/ywdt/yaowen/202607/t20260728_4793534.html" target="_blank">首都之窗</a> · <a href="https://news.china.com/socialgd/10000169/20260729/49640720.html" target="_blank">中华网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">AIDC 储能</span>
+        <h4>AI 数据中心储能需求爆发：2026 年全球 AIDC 储能出货量达 10GWh，已超去年全年</h4>
+        <p>AI 基建投资正撬动储能需求。2026 年全球 AIDC（AI 数据中心）储能系统出货量已达 <strong>10GWh</strong>，超过 2025 年全年。预计 2026-2030 年 AIDC 配储将带动美国储能需求增量 10/27/39GWh，分别占美国储能总需求的 <strong>15%/38%/40%</strong>。多家券商将 AIDC 储能列为下半年首推方向。全球头部电池及储能企业纷纷布局——宁德时代、比亚迪、阳光电源等产业链全面铺开。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条新闻把 lainy 正在学的 AI 产业链和新能源产业链连起来了——AI 数据中心不仅需要 GPU，还需要巨量电力和储能。对 lainy 的框架：① AI capex 的受益环节正在扩散，从芯片 → 电力 → 储能；② 储能行业的"第二增长曲线"已出现——传统电网储能 + AIDC 储能双轮驱动；③ 宁德时代、比亚迪等中国储能企业在全球 AIDC 市场的份额有望提升。</div>
+        <div class="ticker">📌 关联标的：300750 宁德时代（储能 + AIDC 双受益）/ 002594 比亚迪（储能 + 机器人双催化）/ 300274 阳光电源（储能逆变器）— AIDC 储能打开第二增长曲线</div>
+        <div class="source">来源：<a href="https://c.m.163.com/news/a/L3ASSSRE05118K7K.html" target="_blank">网易</a> · <a href="https://www.nea.gov.cn/20260730/6c60113d8ba5471eb0045cb7b314dee8/c.html" target="_blank">国家能源局</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [电池 — 宁德/比亚迪/亿纬] → 中游 [储能系统集成 — 阳光电源/Fluence] → 下游 [AI 数据中心 — Microsoft/Meta/Google] — 当前受益环节：中游储能集成（AIDC 需求 2026-2030 年复合增速 >100%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">暑期档</span>
+        <h4>暑期档票房破 70 亿：《功夫女足》21 亿领跑，《八仙！》成黑马破 10 亿</h4>
+        <p>2026 暑期档票房突破 <strong>70 亿</strong>（截至 8/1）。周星驰《功夫女足》以 <strong>21 亿</strong>票房领跑，豆瓣 6.5 分——好评说"笑点十足、有周星驰风格"，差评说"烂梗多、演技差"。最大黑马是动画电影《八仙！》，票房稳步走高突破 <strong>10 亿</strong>，口碑持续发酵。8 月还有多部新片上映，包括《特立独行》（科幻乡土喜剧）、《魔方小姐》等。杨紫琼编剧制片的新片《Nak Muay》8/2 在泰国开拍，泰拳王子播求参演。</p>
+        <div class="why">🦞 <b>花边点评：</b>《功夫女足》21 亿 vs 豆瓣 6.5 分，说明"情怀 IP + 周星驰"的票房号召力依然能打，但口碑争议不小。《八仙！》10 亿才是真正的惊喜——国产动画连续两年的票房突破，说明这个赛道已经不是"偶然"而是"趋势"了。lainy 周末如果还没去影院，《八仙！》可能比《功夫女足》更值得看。</div>
+        <div class="source">来源：<a href="https://www.chinanews.com.cn/cul/2026/08-01/10670580.shtml" target="_blank">中新网</a> · <a href="https://www.ctdsb.net/c1742_202608/2818933.html" target="_blank">极目新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">科技花边</span>
+        <h4>SpaceX 首次财报本周公布：马斯克的火箭公司终于要向市场交账了</h4>
+        <p>Investopedia 报道，本周市场最受关注的事件之一是 SpaceX 的首次财报发布。这标志着马斯克旗下航天公司从"私人独角兽"正式进入公开市场披露阶段。同时，本周还有多家芯片和存储巨头发布财报（Sandisk 8/5、AMD 等），市场将高度关注 AI 收入指引。7 月纳指累跌 3.2%，但道指微涨——"冰火两重天"的格局仍在延续。</p>
+        <div class="why">🦞 <b>轻松一下：</b>SpaceX 发财报这件事本身就很有戏剧性——马斯克一边在推特上搞政治，一边火箭公司要向华尔街交账。对 lainy：如果 SpaceX 财报强劲，可能带动"太空经济"主题，利好卫星通信、商业航天相关标的。8 月真的是"超级月"——美伊谈判 + 非农 + SpaceX 财报 + 宇树 IPO + 人形机器人运动会，每周都有大事件。</div>
+        <div class="source">来源：<a href="https://www.investopedia.com/what-to-expect-in-markets-this-week-spacex-s-first-earnings-report-earnings-from-chip-and-memory-giants-spcx-elon-musk-12031285" target="_blank">Investopedia</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
