@@ -286,7 +286,7 @@ def build_calendar_html(dates_set: set, today_str: str) -> str:
         dt = datetime.strptime(d, "%Y-%m-%d").date()
         by_month[(dt.year, dt.month)].add(dt.day)
 
-    sorted_months = sorted(by_month.keys(), reverse=True)[:4]
+    sorted_months = sorted(by_month.keys(), reverse=True)
     sorted_months = sorted(sorted_months)
 
     today = datetime.strptime(today_str, "%Y-%m-%d").date() if today_str else None
