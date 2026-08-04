@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-04</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 4 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>油价暴跌 5%：</b>特朗普取消对伊朗大规模空袭、宣布今日启动新谈判，Brent 回落至 <strong>$83.70</strong>、WTI <strong>$78.50</strong>；但伊朗外交部否认与美方有任何对话，霍尔木兹仍封锁。</li>
+      <li><b>美股道指创历史新高：</b>8/3 道指暴涨 <strong>+1.32%</strong> 收 53,178，S&P +1.48%，纳指 +2.13%；Meta +6% 领涨，Big Tech 反弹 + 油价下跌推动 risk-on。港股六连升收 26,009。</li>
+      <li><b>蜘蛛侠破影史开画纪录：</b>《Spider-Man: Brand New Day》首周末 <strong>$3.6</strong> 亿（超越复联 4），全球 <strong>$9.32</strong> 亿；与诺兰《奥德赛》合力缔造影史最高周末票房。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC 2nm</span>
+        <h4>TSMC 2nm 月产能冲刺 10 万片：英伟达、AMD 等客户倒逼加速扩产，3nm 月产也将达 18 万片</h4>
+        <p>经济日报报道，TSMC 在 NVIDIA、AMD、Broadcom 等客户需求推动下，2nm 工艺月产能在 2026 年底前有望达到 <strong>10 万</strong>片/月，提前于 Q4 目标达成。同时 3nm 月产能目标从 17.5 万片上调至 <strong>18 万</strong>片，同样提前达标。Wccftech 评级为"Plausible"（50%），指出 AI 客户将大规模转向 2nm 以追求更高推理性能和更低功耗。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>TSMC 的 2nm 扩产速度直接反映 AI 算力需求的紧迫程度。关键信号：① 3nm 产能从"不够分"到 18 万片/月，说明 TSMC 在拼命扩产但仍被客户塞满；② 2nm 从"试产"转向"量产冲刺"，意味着 2027 年 AI 芯片将迎来新一轮性能跃升。对 lainy 的框架：TSMC 产能 = AI 行业的上限阀门，扩产越快说明下游需求越旺盛。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ NVDA / AMD / 005930.KS（三星，2nm 竞争对手）— TSMC 扩产利好设备供应商 ASML、AMAT</div>
+        <div class="source">来源：<a href="https://wccftech.com/tsmc-2nm-production-milestone-100k-wafers-2026/" target="_blank">Wccftech</a> · <a href="https://www.digitimes.com/news/a20260803VL206/intel-tsmc-2nm-ddr4-samsung.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Olix 光子芯片</span>
+        <h4>英国 Olix 融 $3.12 亿做"不用 HBM 的 AI 芯片"：光子互联 + 片上 SRAM，估值 $33 亿创欧洲半导体最大 VC 轮</h4>
+        <p>伦敦 AI 芯片创业公司 Olix 8/3 完成 B 轮融资 <strong>$3.12</strong> 亿，估值 <strong>$33</strong> 亿——欧洲半导体史上最大 VC 轮。投资方包括 Arm、Hudson River Trading、Netflix 创始人 Reed Hastings 及英国政府主权 AI 基金。技术路线：用硅光子（光互联）替代铜线在芯片间传数据，模型权重存在片上 SRAM 而非 HBM，声称单用户推理速度超 <strong>10,000</strong> tokens/秒。核心赌注：AI 推理瓶颈不是算力，而是内存带宽。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是 AI 芯片架构层面的"另类路线"——如果推理阶段是 memory-bound（内存瓶颈），那解决方案可能不是堆更多 HBM，而是绕过它。对 lainy 的产业链框架：① HBM 双寡头（三星+SK Hynix）的定价权可能面临新技术路线的长期挑战；② 硅光子已是数据中心网络成熟技术，延伸到芯片内部是合理下一步；③ 但 Olix 还在早期，量产和生态是最大挑战。短期不影响 HBM 格局，长期值得关注。</div>
+        <div class="ticker">📌 关联标的：ARM（Arm 投资 Olix）/ NVDA（长期潜在竞争）/ 000660.KS（SK Hynix，长期技术替代风险）— 概念阶段，短期无实质影响</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/322816/20260803/olix-raises-312m-photonic-ai-chip-that-ditches-hbm-britains-biggest-semiconductor-bet.htm" target="_blank">TechTimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中微公司</span>
+        <h4>中微公司 H1 净利预增 282-311%：半导体设备景气持续走高，A 股设备链业绩爆发</h4>
+        <p>中微公司 8/3 晚发布 2026 半年度业绩预告：预计上半年营收约 <strong>66.91</strong> 亿元（<strong>+34.89%</strong>），归母净利 <strong>27-29</strong> 亿元（<strong>+282%-311%</strong>），扣非净利 10-12 亿元（<strong>+86%-123%</strong>）。上证报指出 2026 年半导体设备行业景气度持续走高，产业链上市公司上半年业绩增幅明显。同时，存储龙头兆易创新股价"腰斩"——自 6/29 创历史新高后一个多月跌超 50%，北向资金、机构、游资均出现巨大分歧。</p>
+        <div class="why">🦞 <b>读给你听：</b>中微公司的业绩爆发验证了一个逻辑——AI 芯片需求不只有 GPU 厂商赚钱，上游设备供应商也在分肉。但另一边兆易创新（存储芯片设计）股价腰斩说明市场在"分蛋糕"过程中极度分化：有产能的设备商在赚扩产的钱，但存储设计公司面临价格回落和中国产能竞争压力。对 lainy：半导体投资不是"一刀切"，要分清设备（受益扩产）vs 设计（面临降价）。</div>
+        <div class="ticker">📌 关联标的：688012 中微公司（核心受益）/ 002371 北方华创（设备链）/ 603986 兆易创新（存储设计，承压）— 设备受益，设计承压</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/y/2026-08-04/doc-inimawmr4267367.shtml" target="_blank">新浪财经/上证报</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星 vs TSMC</span>
+        <h4>三星 2nm 设计订单料翻倍：Broadcom/云厂商/HPC 客户评估三星先进节点，HBM4 整合是最大优势</h4>
+        <p>Digitimes 周报指出，三星代工的复苏越来越依赖"TSMC 产能溢出效应"——2nm 设计订单预计将翻倍以上，Broadcom、云厂商和 HPC 客户正在评估三星先进节点。三星最大优势是 HBM4 跨内存/逻辑/封装的一站式整合能力，其德州 Taylor 工厂瞄准与 Intel 18A 相同的多元化产能需求。</p>
+        <div class="why">🦞 <b>商业含义：</b>这是上周三星-Broadcom $2000 亿合作的后续深化：三星的"turnkey"模式（设计→代工→封装→HBM 一条龙）开始对 TSMC 的"纯代工"模式构成差异化竞争。对 lainy：TSMC 仍领先但护城河不再只有良率——客户也在乎"能不能同时解决内存和封装"。三星份额提升 = TSMC 定价权减弱 = 长期毛利天花板可能下移。</div>
+        <div class="ticker">📌 关联标的：005930.KS（三星）/ TSM（TSMC，长期毛利承压风险）/ AVGO（Broadcom，三星客户）— 三星受益，TSMC 短期无碍但长期面临竞争</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260803VL206/intel-tsmc-2nm-ddr4-samsung.html" target="_blank">Digitimes</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/光罩 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游代工（TSMC 2nm 扩产 + 三星份额提升）+ 上游设备（中微公司业绩爆发）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>特朗普取消对伊朗大规模空袭，宣布今日启动新谈判；但伊朗外交部否认与美方有任何对话</h4>
+        <p>特朗普 8/3 在 Truth Social 发帖称"伊朗和其他中东国家要求我们推迟攻击，因为协议框架已经达成"，并表示协议将包括"霍尔木兹海峡立即全面开放"和"结束伊朗核威胁"。特朗普称原计划攻击将是"二战以来最大规模打击"。但伊朗外交部发言人 Baghaie 当日否认正与美国进行任何关于霍尔木兹的对话，称德黑兰仅与阿曼就水道问题保持沟通。特朗普随后在白宫称霍尔木兹可能"明天就开放"，称谈判"并不复杂"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是地缘风险降温的信号——但"信号"和"事实"之间有巨大鸿沟。关键矛盾点：特朗普说"协议框架已达成"，伊朗说"没有对话"——要么特朗普在虚张声势给国内选民看，要么双方通过阿曼秘密渠道沟通但伊朗不愿公开承认。对市场：只要"谈判预期"存在，油价就会下行；一旦谈判破裂信号出现，油价会立刻反弹。本周是非农周，如果就业数据强劲 + 油价维持低位 → risk-on 持续；如果谈判破裂 → 油价飙升 + risk-off。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（谈判成功则回 $70s）/ SPY（risk-on 受益）/ 600028 中国石化（油价回落短期承压，但下游炼化成本改善）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/03/oil-prices-today-wti-brent-hormuz-trump-iran.html" target="_blank">CNBC</a> · <a href="https://www.theguardian.com/world/live/2026/aug/03/us-iran-trump-strait-of-hormuz-talks-israel-gaza-lebanon-latest-news-updates" target="_blank">The Guardian</a> · <a href="https://apnews.com/hub/middle-east" target="_blank">AP News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>油价暴跌近 5%：Brent 回落至 $83.70，WTI 跌至 $78.50——地缘溢价回吐但霍尔木兹仍封锁</h4>
+        <p>受特朗普取消对伊空袭 + 释放谈判信号影响，周一油价大幅下跌：WTI 跌 <strong>7.4%</strong> 至约 <strong>$78.50</strong>，Brent 回落至约 <strong>$83.70</strong>。此前 Brent 曾在冲突高峰触及 <strong>$120</strong>/桶。但分析指出霍尔木兹海峡实质仍处于封锁状态，伊朗仅与阿曼讨论"临时安全通道"，实质性通航尚未恢复。Reuters 报道指出"伊朗战争催生炼油黄金时代"——炼油利润在油价高波动中反而受益。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价从 $120 跌到 $83，回吐了约 30% 的地缘溢价——但这部分"溢价回吐"完全建立在"谈判预期"上，而非实际通航恢复。如果伊朗外交部"否认对话"才是真相，油价随时可能反弹 $10-15。对 lainy 的传导链：油价 ↓ → 通胀预期 ↓ → 美联储加息压力 ↓ → 科技股估值 ↑。这就是为什么周一美股大涨——不只是 risk-on，是"通胀压力缓解"的预期在定价。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / XLE（能源 ETF，承压）/ JETS（航空 ETF，受益于油价下跌）/ 601857 中国石油 — 油价下跌短期利空上游开采，利好下游炼化和航空</div>
+        <div class="source">来源：<a href="https://www.foxbusiness.com/markets/oil-slides-trump-delays-iran-strikes-signals-peace-talks" target="_blank">Fox Business</a> · <a href="https://www.fxstreet.com/news/wti-stays-lower-near-7850-ahead-of-us-iran-peace-talks-20-202608031109" target="_blank">FXStreet</a> · <a href="https://www.independent.co.uk/news/business/donald-trump-iran-brent-strait-of-hormuz-middle-east-b3026606.html" target="_blank">The Independent</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹/红海航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前状态：地缘溢价回吐中，但实质通航未恢复；炼油环节在油价高波动中反而受益</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>非农周 · Fed 鹰派按兵不动 · 日元干预</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed 鹰派按兵</span>
+        <h4>Fed 上周鹰派维持利率 3.50-3.75%（3 票反对加息），10 年期国债收益率创 2026 新高 4.74%；本周非农定方向</h4>
+        <p>美联储上周三维持联邦基金利率 <strong>3.50%-3.75%</strong> 不变，但 9:3 的投票结果中有 3 票主张加息 25bp——主席 Warsh 的"鹰派按兵"解读而非鸽派暂停。10 年期国债收益率收 <strong>4.74%</strong>（2025 年 1 月以来最高）。6 月核心 PCE 环比仅 <strong>+0.13%</strong>（2025 年 3 月以来最小增幅），同比 <strong>+3.29%</strong>；Q2 GDP 初值 <strong>1.5%</strong>（低于预期），但最终销售增速 <strong>3.9%</strong>（2023 年初以来最强）。本周关键：ISM 制造业（周一）、JOLTS（周二）、ADP（周三）、ISM 服务业（周四）、7 月非农就业（周五）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>lainy 最需要关注的宏观框架：通胀在降温（核心 PCE 环比 0.13% 很好），但核心通胀同比 3.3% 仍远高于 2% 目标 → Fed 不敢降息。3 票主张加息说明内部鹰派势力在增强。本周非农数据是关键变量：如果就业强劲 → 9 月加息概率上升 → 科技股承压；如果就业弱 → 加息预期降温 → 风险资产继续反弹。当前市场定价 9 月加息概率约 2/3。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（非农结果直接驱动）/ TLT（长期国债 ETF，收益率上升则价格下跌）/ 513130 港股通科技ETF — 鸽派利好，鹰派利空</div>
+        <div class="source">来源：<a href="https://www.pennmutualam.com/market-insights-news/blogs/monday-morning-perspectives/2026-08-03-us-treasury-yields-setting-fresh-2026-highs" target="_blank">Penn Mutual AM</a> · <a href="https://www.kitco.com/news/article/2026-08-03/fed-hawkish-hold-nonfarm-payrolls-risks-keep-metals-range-bound-kitco-am" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">NY Fed Williams</span>
+        <h4>纽约联储 Williams：通胀可能"正在拐角处"好转，但 Fed 准备好了必要时再次加息</h4>
+        <p>纽约联储主席 John Williams 8/3 表示通胀可能终于"正在拐角处"（turning the corner），但警告美联储"准备好在必要时再次采取行动"以确保通胀回到 2% 目标。这与上周 Warsh 的鹰派立场一致——核心信息是"通胀在好转但还不够，我们不会过早降息"。Benzinga 报道指出，Williams 的措辞暗示 Fed 对当前利率水平有信心，但保留加息选项。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Williams 是 Fed 内部偏鸽的声音，连他都说"准备好再加息"——说明 3 票反对加息不是极端少数派，而是有广泛共鸣的立场。对 lainy：Fed 的底线是"宁可多加一次也不要让通胀预期脱锚"。对市场含义：如果本周非农弱 + 通胀继续降温 → "鹰派按兵"可以维持但不加息 → 风险资产松一口气；如果非农强 → 9 月加息概率升至 80%+ → 科技股回调。</div>
+        <div class="ticker">📌 关联标的：SPY / IEF（国债 ETF）/ 511260 国债ETF（A 股）— 非农数据将决定 9 月加息预期</div>
+        <div class="source">来源：<a href="https://www.benzinga.com/markets/macro-economic-events/26/08/60870485/ny-feds-williams-says-inflation-could-finally-be-turning-the-corner-but-warns-the-fed-is-prepared-to-act-again-if-it-doesnt-reach-2" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">日元干预</span>
+        <h4>美日联合干预日元买入——2011 年以来首次协同汇率干预；黄金 ~$4,048</h4>
+        <p>美国财政部和日本上周联合执行日元买入干预——这是 <strong>2011</strong> 年以来首次美日协同汇率干预行动。日元此前持续贬值至高位，联合干预后日元反弹。黄金方面，现货金 <strong>$4,047.90</strong>（+0.15%），受美元走弱 + 油价回落的双重影响：油价下跌减轻通胀压力（利空黄金避险需求），但美元走弱和收益率回落利多黄金。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美日联合干预日元是大事——说明美国对强势美元的容忍度到头了。强势美元 → 美国出口竞争力下降 + 新兴市场资本外流。联合干预 = 美国在说"够了"。对 lainy 的框架：① 日元升值 → 日股短期承压（出口企业利润受损）；② 弱美元 → 新兴市场（包括港股/A股）资金回流受益；③ 黄金在 $4,000 上方的"新平衡"正在形成，地缘溢价消退但央行买盘和弱美元托底。</div>
+        <div class="ticker">📌 关联标的：FXY（日元 ETF）/ 518880 黄金ETF（A 股）/ GLD（美股黄金）— 日元升值利多港股/A股资金面，黄金 $4,000 新平衡</div>
+        <div class="source">来源：<a href="https://www.pennmutualam.com/market-insights-news/blogs/monday-morning-perspectives/2026-08-03-us-treasury-yields-setting-fresh-2026-highs" target="_blank">Penn Mutual AM</a> · <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向/汇率] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：周五非农就业数据将决定 9 月加息预期，是本周全球资本市场最重要数据点</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/4 今日关注：兆易创新"腰斩"后的资金分歧 + 中微公司业绩爆发 + 第 12 批药品集采</h4>
+      <p>今日四大证券报头条：① 存储龙头兆易创新股价自 6/29 历史新高后一个多月已"腰斩"，8/3 再次跌停，龙虎榜显示北向资金、机构、游资均出现巨大分歧——存储芯片设计端面临价格回落和中国产能竞争双重压力；② 中微公司 H1 净利预增 <strong>282-311%</strong>，半导体设备链业绩爆发，与存储设计端形成鲜明对比；③ 近 30 家药企公告拟中选第 12 批国家药品集采，药品集采持续扩面；④ 四川证监局处罚用 AI 编造纯碱虚假"小作文"并交易获利 8.5 万元行为——AI 造谣进场执法第一例。<b>昨日（8/1）A 股七月收官：</b>沪指 <strong>+0.72%</strong> 报 3832，但 7 月月跌 <strong>6.4%</strong>，创业板月跌 <strong>23%</strong>，科创综指月跌 <strong>27.8%</strong>——7 月 A 股惨烈。今日开盘关注：半导体设备（中微业绩利好）vs 存储设计（兆易承压）的结构分化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/3 恒指 +0.48% 收 26,009 / 六连升 / 互联网打头阵，阿里 +7%</h4>
+      <p>港股 8 月开门红，恒指涨 <strong>+0.48%</strong> 收 26,009.4 点，国企指数 +0.46% 收 8,652。全日主板成交 2551.79 亿港元。<b>亮点：</b>阿里巴巴异动大涨 <strong>+7%</strong>，腾讯、快手涨超 3%，美团、哔哩哔哩跟涨逾 1%。港股互联网 ETF 华宝（513770）涨 <strong>+2.11%</strong>。自 7 月修复以来，中证港股通互联网指数累计上涨 <strong>18.81%</strong>，领涨全球主要科技指数。<b>本周关注：</b>周五非农数据对港股流动性的间接影响（强非农 → 美联储鹰派 → 港股资金外流压力）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/3 道指创历史新高 +1.32% 收 53,178 / S&P +1.48% / 纳指 +2.13% / Meta +6% 领涨</h4>
+      <p>周一美股大涨：道指 <strong>+693</strong> 点（<strong>+1.32%</strong>）收 53,178.41 创历史新高，S&P <strong>+1.48%</strong> 收 7,600.50（距 6 月初历史高点仅差 0.3%），纳指 <strong>+2.13%</strong> 收 25,913.90。通讯服务 + 科技板块领涨，Meta 暴涨 <strong>+6%</strong>，Amazon 延续上周强势。<b>驱动力：</b>① 特朗普取消伊朗空袭 → 油价暴跌 → 通胀压力缓解；② 美日联合干预日元 → 弱美元利好跨国企业盈利；③ Big Tech 财报季继续（本周 Palantir、AMD、Sandisk 等）。<b>本周关注：</b>周五非农 + 持续财报季（Palantir Q1 美国营收 +104%，Snap Q2 超预期全面 beat）。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">跨国消费</span>
+        <h4>跨国巨头逆势增长：可口可乐、阿迪达斯、欧莱雅、苹果在中国 H1 录双位数或近双位数增长</h4>
+        <p>SCMP 和人民日报报道，尽管中国整体消费数据疲软（上半年社零 +2.7%），全球品牌在最新季度财报中录得亮眼中国成绩：阿迪达斯中国 H1 销售额 <strong>+16%</strong>（叠加世界杯效应），欧莱雅中国各品类全增长，可口可乐加大中国市场投入并上调全年盈利指引（EPS 增长 <strong>9-10%</strong>），苹果中国营收恢复增长。分析师指出"K 型复苏"中，品质消费和自我犒赏消费在分化中受益。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这验证了"K 型消费复苏"的判断——整体数据弱，但头部品牌/中高端品类在抢份额。对 lainy 的消费选股框架：① 品牌力强的跨国公司在中国还有增长空间，但靠的是"份额提升"而非"市场扩大"；② 国产替代品牌（李宁、安踏 vs 阿迪）在低端承压，高端被跨国品牌压制；③ 可口可乐"接受毛利下降换取中国市场扩张" = 典型的"long-term play"——短期利润让位，长期份额为王。</div>
+        <div class="ticker">📌 关联标的：KO（可口可乐）/ ADS（阿迪达斯 OTC）/ 600519 贵州茅台（高端消费韧性）— 跨国品牌受益份额提升，本土中低端承压</div>
+        <div class="source">来源：<a href="https://www.scmp.com/business/china-business/article/3362787/multinational-giants-defy-chinas-sluggish-retail-market-strong-2026-sales" target="_blank">SCMP</a> · <a href="http://en.people.cn/n3/2026/0803/c90000-20484448.html" target="_blank">People's Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">可口可乐</span>
+        <h4>可口可乐接受毛利压力换取中国扩张：上调全年盈利指引 EPS +9-10%，股价涨超 6%</h4>
+        <p>可口可乐 Q2 财报显示在中国市场加大投入导致毛利受压，但公司同时上调全年盈利指引——预计 2026 年可比 EPS 增长 <strong>9-10%</strong>。可口可乐股价 8/3 涨超 <strong>6%</strong>。TheStreet 报道指出，可口可乐的策略信号是"不怕在中国多花钱换份额"，管理层相信投入不会失控。Q2 营收 <strong>$133.8</strong> 亿，盈利 <strong>$44.2</strong> 亿。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>可口可乐的逻辑很清晰：中国是第二大消费市场，现在不投入，以后就被本土品牌抢走了。毛利短期承压但 EPS 指引上调 = 管理层有信心投入产出比是正的。对比 PepsiCo 同期盈利不及预期（美国消费者收紧预算），可口可乐押注中国 vs 百事依赖北美 = 两条完全不同的路径。</div>
+        <div class="ticker">📌 关联标的：KO（可口可乐，+6%）/ PEP（百事，盈利不及预期，对比标的）— 可口可乐中国扩张策略验证</div>
+        <div class="source">来源：<a href="https://www.thestreet.com/investing/stocks/ko-coca-cola-margin-hit-china-expansion" target="_blank">TheStreet</a> · <a href="https://www.cnbc.com/food-and-beverage/" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料/农产品] → 中游 [品牌制造 — 可口可乐/阿迪/欧莱雅] → 下游 [渠道 — 电商/超市/免税店] — 当前受益环节：中游品牌端（头部品牌份额提升），受损环节：本土中低端品牌（价格竞争 + 跨国品牌挤压）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>影史纪录 · 流媒体回归</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">蜘蛛侠</span>
+        <h4>《Spider-Man: Brand New Day》创影史最高开画纪录！首周末 $3.6 亿超越复联 4，全球 $9.32 亿</h4>
+        <p>Rotten Tomatoes 最终统计：Spider-Man: Brand New Day 首周末北美票房攀升至 <strong>$3.6</strong> 亿，超越《复仇者联盟 4：终局之战》的 $3.571 亿，成为影史最高北美开画票房。首日（含提前场）<strong>$1.68</strong> 亿同样创纪录。全球首周末 <strong>$9.32</strong> 亿，仅次于复联 4 的 $12.23 亿。烂番茄新鲜度 90%。与诺兰《奥德赛》合力缔造影史最高周末票房——两片合计北美超 <strong>$4</strong> 亿。Spider-Man 8/7 将登陆 IMAX 屏幕（Vacating The Odyssey 之后）。</p>
+        <div class="why">🦞 <b>花边点评：</b>Tom Holland 今年夏天真的是"开挂"——蜘蛛侠破影史纪录 + The Odyssey 持续热映。"漫威疲劳"喊了几年，但 A 级角色 + 好故事照样炸场。lainy 周末如果还没看，Spider-Man 值得 IMAX 走起。对中国市场的启示：好内容永远不缺观众，"消费降级"不影响真正的好电影——暑期档国内票房已破 70 亿。</div>
+        <div class="source">来源：<a href="https://editorial.rottentomatoes.com/article/weekend-box-office-spider-man-brand-new-day-climbs-to-spectacular-355-million-debut/" target="_blank">Rotten Tomatoes</a> · <a href="https://variety.com/2026/film/box-office/spider-man-brand-new-day-box-office-opening-weekend-1236825953/" target="_blank">Variety</a> · <a href="https://www.bbc.com/news/articles/c3w052le2elo" target="_blank">BBC</a> · <a href="https://www.nbcnews.com/pop-culture/pop-culture-news/spider-man-odyssey-biggest-box-office-weekend-history-rcna590477" target="_blank">NBC News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">流媒体</span>
+        <h4>本周流媒体：Ted Lasso 第四季回归 Apple TV+ / Billie Eilish 与 James Cameron 联合执导演唱会电影登 Paramount+</h4>
+        <p>AP 报道本周流媒体亮点：① <b>Ted Lasso 第四季</b> 8 月回归 Apple TV+，Jason Sudeikis 继续饰演那位乐观的英式足球教练；② <b>Billie Eilish 演唱会电影</b>由 Billie 与 James Cameron 联合执导，在 Paramount+ 首播——这是 Cameron 继《阿凡达》系列后的首个非虚构类项目；③ <b>Futurama 第 14 季</b> Hulu 开播；④ 威廉王子与凯特王妃携三个孩子出席格拉斯哥英联邦运动会（8/1），成为王室家庭少有的全家公开亮相。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Ted Lasso 回归是今年最让人开心的流媒体消息之一——"相信自己"的鸡汤在这个乱糟糟的世界里正好管用。Billie Eilish + James Cameron 的组合就很离谱，但也很有想象力。lainy 周末如果需要放松，Ted Lasso 是首选。</div>
+        <div class="source">来源：<a href="https://apnews.com/article/august-2026-streaming-music-movies-tv-dfa7f10a03a09dfd0a044f1c30aebba9" target="_blank">AP News</a> · <a href="https://www.eonline.com/news" target="_blank">E! Online</a></div>
+      </div>
+    </div>
+  </section>
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
