@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-05</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #f0ede5; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 5 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>SpaceX 首份财报炸裂又烧钱：</b>Q2 营收 $69.3 亿（<strong>+92%</strong>），但净亏损 $49 亿，盘后暴跌 7%——AI 基建和火箭研发烧钱太快，投资者用脚投票。</li>
+      <li><b>美伊停火谈判"最后机会"：</b>财长 Bessent 称霍尔木兹协议"今明两天"可达成的消息推动油价暴跌 5%，Brent 回落至 <strong>$83</strong> 区间，美股道指 +1.71%、S&P +1.79% 双双创历史新高。</li>
+      <li><b>中国 AI 价格战白热化：</b>阿里 Qwen3.8-Max（2.4 万亿参数）与 DeepSeek V4-Flash 同日发布，DeepSeek 每百万 token 仅 $0.14——中国 AI 模型正以"十分之一价格"逼抢美国同行市场。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>AI 模型 · 芯片 · 代工</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">阿里 Qwen3.8-Max</span>
+        <h4>阿里发布 2.4 万亿参数 Qwen3.8-Max，同日 DeepSeek V4-Flash 以十分之一价格开战——中国 AI 价格战全面升级</h4>
+        <p>8/3 阿里巴巴发布 Qwen3.8-Max，基于 <strong>2.4 万亿参数</strong>，为公司迄今最大最强 AI 模型，在多项基准测试中超越 Moonshot 的 Kimi K3，接近 Anthropic Claude 水平。定价：输入 $2/百万 token，输出 $6/百万 token。同日，DeepSeek 发布 V4-Flash，定价仅 <strong>$0.14/百万输入 token、$0.28/百万输出</strong>，基准测试平均成本仅 $0.03。作为对比：OpenAI GPT-5.6 Sol $1.86、Kimi K3 $0.86。Forbes 评论称"中美 AI 已成双寡头格局，不再是单赛道"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 关注的"中国 AI 产业"核心信号。两层逻辑：① 模型能力——Qwen3.8-Max 和 Kimi K3 已逼近美国前沿模型，差距收窄到几个百分点；② 价格战——DeepSeek 以 $0.14 的价格碾压所有人，意味着中国 AI 正走"规模换利润"路线。对市场含义：阿里云收入增速会加快（模型好用→调用多→云收入涨），但利润率会被价格战压缩。中长期看，中国 AI 模型的低成本策略可能倒逼 OpenAI/Anthropic 降价。</div>
+        <div class="ticker">📌 关联标的：BABA（阿里）/ 09988.HK（阿里港股）/ DeepSeek（未上市）/ MSFT（OpenAI 合作方，被压价风险）— 阿里受益于云用量增长，OpenAI/Anthropic 面临降价压力</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-08-03/alibaba-drops-another-china-ai-model-with-breakthrough-performance" target="_blank">Bloomberg</a> · <a href="https://www.digitimes.com/news/a20260804VL205/alibaba-deepseek-cost-anthropic-claude.html" target="_blank">DigiTimes</a> · <a href="https://www.forbes.com/sites/ashishbhatia/2026/08/04/the-china-ai-thesis/" target="_blank">Forbes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SpaceX 首份财报</span>
+        <h4>SpaceX 上市后首份财报：Q2 营收 $69.3 亿（+92%）但净亏 $49 亿，盘后跌 7%——Musk 的 AI+火星烧钱速度吓退投资者</h4>
+        <p>SpaceX 6/12 以 $750 亿估值上市（史上最大 IPO），8/4 发布首份财报：Q2 营收 <strong>$69.3 亿</strong>（<strong>+92%</strong> YoY），超预期；但每股亏损 $0.26，全年净亏损 <strong>$49 亿</strong>，主要来自 Starlink 部署、Starship 研发和 AI 基础设施投入。收盘价 $125.33（+9.4%，上市以来最佳单日），但盘后跌 <strong>7%</strong>。Axios 指出：Musk 的投资者号召力正在衰减，SpaceX 的表现是 Anthropic/OpenAI 未来 IPO 的"前车之鉴"。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>SpaceX 是 2026 年最受关注的 IPO，但首份财报告诉市场一个残酷现实——营收翻倍的同时亏损也在扩大。核心矛盾：Starlink 收入增长很快（卫星互联网商业化），但 Musk 同时在烧三件事——Starship（火星）、xAI（AI 算力）、Starlink Gen3（下一代卫星）。对 lainy 的视角：这是"愿景型公司"的典型困境——故事很性感，但现金流跟不上。Anthropic 和 OpenAI 如果 IPO，可能也会遇到同样的问题。</div>
+        <div class="ticker">📌 关联标的：SPCX（SpaceX，短期承压）/ LMT（洛克希德，太空防务竞争对手）/ RKLB（Rocket Lab，小火箭竞争者）— SpaceX 短期承压，但 Starlink 长期价值仍在</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/04/spacex-spcx-earnings-live-updates-q2-2026.html" target="_blank">CNBC</a> · <a href="https://www.cnn.com/2026/08/04/business/spacex-earnings-q2-2026" target="_blank">CNN</a> · <a href="https://www.axios.com/2026/08/03/spacex-stock-lockup-earnings" target="_blank">Axios</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD Q2 财报</span>
+        <h4>AMD Q2 营收创纪录 $115 亿（+50%），数据中心业务暴增 107%，但"超预期不够多"盘后跌 9%</h4>
+        <p>AMD 8/4 发布 Q2 财报：营收 <strong>$115 亿</strong>（<strong>+50% YoY</strong>），创公司历史纪录；EPS $1.66（超预期 7%）。数据中心业务收入 <strong>$67.2 亿</strong>，<strong>+107%</strong> YoY，占总收入 58%。SemiAnalysis 分析指出，AMD MI455 采用 TSMC CoWoS-L 封装（5.5 倍光罩面积，12 个 HBM4 堆栈），是目前最大的 CoWoS 模块。但盘后跌 <strong>9%</strong>——市场认为"只是 modest beat"，对 AI 芯片竞争加剧的担忧压过了业绩利好。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>AMD 数据中心翻倍增长验证了"AI 算力需求不止英伟达一家吃"的逻辑。但盘后跌 9% 的市场反应说明：市场对 AMD 的期望已经很高——"创纪录"不够，要"大幅超预期"才行。对 lainy 的框架：英伟达→AMD→国产算力，这条链上每一家都在增长，但市场给每家的"及格线"都在提高。TSMC CoWoS 产能满载意味着整个封装链都在受益。</div>
+        <div class="ticker">📌 关联标的：AMD（短期承压但长期受益）/ NVDA（英伟达，AI 芯片龙头）/ TSM（TSMC，CoWoS 满载受益）/ 688256 寒武纪（国产替代）— 全链受益但估值已高</div>
+        <div class="source">来源：<a href="https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results" target="_blank">AMD IR</a> · <a href="https://www.cnbc.com/2026/08/04/amd-earnings-report-q2-2026.html" target="_blank">CNBC</a> · <a href="https://newsletter.semianalysis.com/p/can-amd-break-the-cuda-moat-amd-advancing" target="_blank">SemiAnalysis</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC CoWoS 满载</span>
+        <h4>TSMC CoWoS 先进封装产能接近满载，扩产外包赶工——黄仁勋称半导体业可达 $7.9 万亿</h4>
+        <p>市场消息指出，因英伟达和 AMD 持续追加订单，TSMC 现有 CoWoS 先进封装产能<strong>接近满载</strong>，盘前涨近 3%。同期，英伟达 CEO 黄仁勋在公开场合预测：受 Agentic AI 驱动，半导体行业规模十年内可从当前约 <strong>$7900 亿</strong> 增长至 <strong>$7.9 万亿</strong>。英伟达预计 2026 年底 CPU 独立营收达 $200 亿。Druckenmiller Q1 仍持有价值 $1.67 亿的 TSMC 股份（第三大持仓）。</p>
+        <div class="why">🦞 <b>市场含义：</b>CoWoS 满载 = 先进封装是 AI 芯片链条最紧的瓶颈。TSMC 不只做晶圆，还控制了"封装"这个关键环节——这是英伟达和 AMD 都必须依赖的。黄仁勋的 $7.9 万亿预测相当于"半导体行业要长 10 倍"——如果这个预测哪怕对一半，TSMC 是最大受益者。Druckenmiller 继续持有说明顶级投资者仍然看好。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC，核心受益）/ NVDA（英伟达）/ AMD / 002049 紫光国微（国产封装设备替代）— TSMC 是 AI 产业链"收过路费"的角色</div>
+        <div class="source">来源：<a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262073648-tsm-nvda-ai-chip-tsm-stock-price-rose-3-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.fool.com/investing/2026/08/04/nvidias-ceo-jensen-huang-said-the-semiconductor-in/" target="_blank">Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">RTX 50 涨价</span>
+        <h4>英伟达 RTX 50 显卡全球涨价 20-40%：TSMC 晶圆 + GDDR7 内存成本双杀，技嘉取消已接预订单</h4>
+        <p>因 TSMC 晶圆价格上涨和 GDDR7 内存持续涨价，英伟达 RTX 50 系列显卡在韩国涨价高达 <strong>30%</strong>（RTX 5090 约 $5,087），日本技嘉涨价 <strong>20-40%</strong>，部分零售商取消已接预订单。RTX 50 SUPER 系列因 3GB GDDR7 定价问题暂停上市。这反映了 AI 需求挤占消费级芯片产能的传导效应——HBM 和 GDDR7 同属内存产业链，AI 数据中心吃掉了大部分产能。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这条新闻看起来是"显卡涨价"的小事，其实是"AI 吃掉一切内存产能"的下游信号。HBM 用于 AI 芯片，GDDR7 用于消费级显卡，两者共享三星/美光的产线。AI 需求太强→HBM 优先→GDDR7 产量下降→显卡涨价。对 lainy：这就是"AI 基建投资传导到消费电子"的典型案例——下一阶段可能传导到手机内存、SSD 等更广泛的消费电子。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，消费端涨价但 AI 端利润更大）/ MU（美光，内存受益）/ 000938 紫光股份（国产存储替代情绪）— 内存产业链全面受益于 AI 产能挤占</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260804PD236/rtx-nvidia-geforce-graphics-card-tsmc.html" target="_blank">DigiTimes</a> · <a href="https://www.tweaktown.com/news/112987/nvidia-geforce-rtx-50-series-gpus-get-up-to-30-percent-more-expensive-in-south-korea/index.html" target="_blank">TweakTown</a> · <a href="https://wccftech.com/gigabyte-hikes-gpu-prices-by-up-to-40-japanese-retailer-cancels-pre-orders-it-can-no-longer-honor/" target="_blank">WCCFTech</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/晶圆 — TSMC/三星] → 中游 [封装 — TSMC CoWoS/三星] → 下游 [AI 芯片 — NVDA/AMD/华为] → 终端 [云厂 — MSFT/GOOG/Meta/阿里] — 当前受益环节：中游先进封装（CoWoS 满载）+ 内存（HBM/GDDR7 涨价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊谈判 · 油价 · 军工</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>特朗普称"最后机会"：Bessent 称霍尔木兹协议"今明两天"可达成，伊朗否认正在谈判</h4>
+        <p>8/4 美国财长 Bessent 在 CNBC 表示霍尔木兹海峡协议可能"今天或明天"达成，推动油价下跌 <strong>2%</strong>。特朗普称此轮谈判是"最后机会"，称伊朗"求着谈判"。但伊朗外交部否认与美方有直接谈判，称仅与阿曼讨论"新的霍尔木兹通行路线"。华盛顿邮报报道称，特朗普政府"声称"谈判积极进行，伊朗"否认"——双方各说各话。一艘货船在阿曼海岸附近被不明弹体击中，显示海峡仍不安全。</p>
+        <div class="why">🦞 <b>市场含义：</b>"最后机会"是外交辞令中的高危信号——要么很快达成协议（油价暴跌），要么谈判破裂（油价暴涨）。Bessent 的"今明两天"推动美股创新高，但如果 8/5 没有协议落地，市场情绪可能反转。关键变量：伊朗坚持只跟阿曼谈"新路线"，不跟美国谈停火——这说明伊朗在拖延，不急于妥协。对 lainy：今天（8/5）是关键观察日，如果协议达成，油价可能再跌 5-8%；如果没消息，地缘溢价会回吐。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（谈判成功→$75-78，破裂→$90+）/ SPY（美股，风险偏好直接驱动）/ 600028 中国石化 — 今天是最关键的时间窗口</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/04/us-iran-war-trump-hormuz.html" target="_blank">CNBC</a> · <a href="https://www.theguardian.com/world/2026/aug/04/us-qatar-progress-iran-ceasefire-hormuz-strait" target="_blank">Guardian</a> · <a href="https://www.washingtonpost.com/national-security/2026/08/03/trump-claims-active-ceasefire-talks-iran-denies-direct-negotiations/" target="_blank">Washington Post</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价回落</span>
+        <h4>Brent 原油从 $87 暴跌至 $83 区间：停火乐观预期驱动，EIA 预测 Q3 均价 $74</h4>
+        <p>受 Bessent "协议临近"言论影响，WTI 从 <strong>$87</strong> 跌至 <strong>$80-81</strong>，Brent 从 <strong>$89</strong> 跌至 <strong>$83-84</strong>，日内跌幅 <strong>5%</strong>。EIA 最新月报预测：Brent Q3 均价 <strong>$74/桶</strong>，较 4 月 $117 峰值已回落 $32。阿曼与伊朗就"新霍尔木兹路线"进行谈判。CNBC 分析指出：地缘政治驱动的油价交易正变得越来越难做——on-again/off-again 的伊朗战争让多头和空头都在"赚一波就跑"。
+        </p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价从 4 月的 $117 跌到现在 $83，已大幅回吐地缘溢价。EIA 预测 Q3 均价 $74——如果协议达成，可能更快到这个水平。但要注意：即使停火，霍尔木兹"通行"恢复需要时间（水雷清除、保险费回落），油价不会一夜回到战前。对 lainy：高油价→通胀粘性→Fed 难降息这条链条目前正在松动，是近期美股创新高的核心驱动。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI / XLE（能源 ETF，油价回落承压）/ JETS（航空 ETF，油价利好）— 油价回落利好消费和航空，能源股承压</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a> · <a href="https://www.cnbc.com/2026/08/02/oil-prices-iran-war-energy-market.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">军工大单</span>
+        <h4>洛克希德 $586 亿爱国者导弹大单 + 五角大楼再签 $30 亿 THAAD 合同——美军库存接近耗尽</h4>
+        <p>7/29 五角大楼授予洛克希德马丁价值高达 <strong>$586.2 亿</strong>的爱国者 PAC-3 拦截弹多年生产合同（史上最大军工合同之一）。8/4 五角大楼又与诺斯罗普签署 <strong>$30 亿</strong> THAAD 导弹部件生产合同。Wikipedia 报道称：截至 8/4，美军远程导弹库存"已消耗近全部"。伊朗准备对乌克兰 3 处目标发动攻击（报复 7 月里海商船被袭），中东和俄乌两条战线同时消耗美军弹药。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$586 亿的军火大单意味着两件事：① 美军库存确实快打空了——伊朗战争 + 俄乌战争 + 台海威慑，三条线同时消耗；② 军工股是"地缘混乱"环境的确定性受益者。对 lainy 的配置框架：洛克希德（LMT）、雷神（RTX）、诺斯罗普（NOC）在地缘紧张时是"不管谁赢都赚钱"的标的。中国军工同理（中航沈飞、航天电子）。</div>
+        <div class="ticker">📌 关联标的：LMT（洛克希德，$586 亿大单核心受益）/ NOC（诺斯罗普）/ RTX（雷神）/ 600760 中航沈飞（中国军工对标）— 军工是地缘混乱的确定性受益板块</div>
+        <div class="source">来源：<a href="https://www.scmp.com/news/world/united-states-canada/article/3362841/us-signs-deal-boost-patriot-and-thaad-missile-parts-production" target="_blank">SCMP</a> · <a href="https://www.nwaonline.com/news/2026/aug/04/us-inks-another-deal-to-boost-missile-production/" target="_blank">Arkansas Democrat-Gazette</a> · <a href="https://en.wikipedia.org/wiki/2026_Iran_war" target="_blank">Wikipedia</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹航线] → 下游 [炼化 — 中石化/ExxonMobil] → 军工 [LMT/NOC/RTX] — 当前关键变量：霍尔木兹协议是否在 8/5 达成</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>美股新高 · 黄金 · Fed</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美股创新高</span>
+        <h4>道指 +1.71% / S&P +1.79% / 纳指 +2.59% 三大指数齐创新高——Bessent "协议临近" + 超级财报周驱动</h4>
+        <p>8/4 美股收盘：道指 <strong>+1.71%</strong>、S&P 500 <strong>+1.79%</strong>（收于 7751 点，历史新高）、纳指 <strong>+2.59%</strong>。Caterpillar +11% 领跑道指，Cisco +3.89%，Goldman Sachs +2.97%。盘后 SpaceX 跌 7%（AI 烧钱担忧）、AMD 跌 9%（业绩"仅 modest beat"）。8/5 关注：Eli Lilly、Disney、Uber、AppLovin 财报。S&P 500 一个月涨 <strong>2.83%</strong>，一年涨 <strong>23.04%</strong>。Fed 官员 Paulson 8/4 表示对利率政策"保持开放心态"，但通胀仍高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美股在油价回落+财报超预期双驱动下创新高，但盘后 SpaceX 和 AMD 的下跌说明市场在"分化"——业绩好的涨，烧钱/不及格的跌。这是典型的"选股市场"。Fed 仍预计维持利率不变（3.50-3.75%），通胀接近目标但不急于降息——"既不加息也不降息"的 Goldilocks 状态，对股市有利但不利于估值进一步扩张。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，创新高但盘后分化）/ 513130 港股通科技ETF — Fed 按兵不动 = 港股流动性中性偏好</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-04/stock-market-today-dow-s-p-live-updates" target="_blank">Bloomberg</a> · <a href="https://reuters.com/business/feds-paulson-keeps-open-mind-rate-policy-outlook-amid-high-inflation-2026-08-04" target="_blank">Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金 $4,073：COMEX 金价涨 $61 至 $4,151 日内高点，地缘避险与 Fed 按兵不动双支撑</h4>
+        <p>8/4 COMEX 黄金期货涨 <strong>$61</strong> 至日内高点 <strong>$4,151</strong>，现货金 <strong>$4,073</strong>（<strong>+0.44%</strong>）。白银期货涨至 $60.24。驱动：① 美伊停火预期→美元走弱→金价涨；② Fed Paulson 鸽派表态→降息预期小幅升温。LiteFinance 预测 8 月黄金区间 $3,580-$4,645，年底可能达 $4,084-$4,120。中国黄金进口创 15 个月新高——中国买家在金价回调时抢金。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,000 附近反复拉锯，本质是两股力量对撞：地缘避险 + Fed 鸽派（买）vs 油价回落 + 美股创新高（卖）。中国央行持续增持黄金是结构性支撑。如果霍尔木兹协议达成，短期可能回调到 $3,950——那是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— 中长期看涨，短期受地缘缓和可能回调</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.livemint.com/market/commodities/gold-silver-prices-today-comex-gold-jumps-61-silver-tops-60-on-us-iran-de-escalation-hopes-11785863108924.html" target="_blank">LiveMint</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前状态：Goldilocks + 地缘缓和 = 风险偏好高位</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/4 创业板暴涨 5.64%！AI+CPO 概念大面积涨停，联讯仪器 20CM 涨停成"2000 亿股王"</h4>
+      <p>8/4 收盘：上证 <strong>+0.33%</strong> 报 3822，深成指 <strong>+3.25%</strong>，创业板 <strong>+5.64%</strong>，科创综指 <strong>+4.77%</strong>。成交 22284 亿（放量 2174 亿），超 3600 只上涨。<b>亮点：</b>AI 算力租赁概念延续强势，美利云 3 连板，传智教育 7 连板；CPO 概念大面积涨停——光库科技 20CM 涨停，光迅科技、永鼎股份等十余股涨停，受英伟达副总裁 Shainer 宣布 CPO 量产推动。联讯仪器 20CM 涨停报 1948.8 元，市值 2000 亿成 A 股第一高价股（H1 净利预增 801-926%）。CRO 概念活跃，药明康德涨停。大金融回落，四大行均跌超 3%。<b>8/5 关注：</b>涨停家数可能从 140 只回落至 80-110 只，连板股传智教育能否 8 连板是情绪风向标。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 -0.6% 失守 26000（收 25853）结束六连升，内银股拖累，HSBC 财报超预期但股价微跌</h4>
+      <p>8/4 恒指高开 81 点后转跌，收 25853（<strong>-0.6%</strong>），结束六日连升。内银股显著受压。HSBC 发布 H1 财报：税前利润 <strong>$195 亿</strong>（<strong>+23%</strong> YoY），超预期，Q2 利润 $103 亿（<strong>+13%</strong>），宣布 $10 亿回购，但股价仍微跌——市场担心高利率环境不可持续。World Bank 预测中国 2026 年 GDP 增速放缓至 <strong>4.4%</strong>。中东不确定性仍压制港股风险偏好。<b>本周关注：</b>港股能否在美股创新高带动下重拾 26000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 +1.71% / S&P +1.79% / 纳指 +2.59% 三大指数齐创历史新高</h4>
+      <p>8/4 收盘：道指 <strong>+1.71%</strong>、S&P 500 <strong>+1.79%</strong>（7751 点，新高）、纳指 <strong>+2.59%</strong>。Caterpillar +11% 领跑，Cisco +3.89%，Goldman Sachs +2.97%，Meta +6%。英伟达涨近 3%，市值重返 5 万亿美元上方。盘后：SpaceX 跌 7%（AI 烧钱），AMD 跌 9%（"只是 modest beat"）。8/5 关注：Eli Lilly、Disney、Uber、AppLovin 财报。亚洲期货指向高开（Bloomberg 称亚洲股市将跟随华尔街走高）。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 中国品牌出海 · 汽车</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">中国奢侈品</span>
+        <h4>中国奢侈品市场"企稳但难增长"：TD Cowen 称"stabilization, not growth"，高端美妆跑赢皮包</h4>
+        <p>Forbes 8/4 报道，TD Cowen 对 2000 名中国消费者调查后指出：中国奢侈品市场出现"早期企稳信号"，但并非增长。核心发现：① <b>硬奢侈品</b>（珠宝、手表）好于<b>软奢侈品</b>（时装、皮具）；② <b>高端美妆</b>跑赢高端包袋——Estée Lauder、L'Oréal 增长，LVMH "大致持平"；③ 中国消费者"仍然缺乏消费动力"，零售增速为 2022 年底以来最慢。McKinsey 预测中国奢侈品 2030 年前年增 4-6%，但需品牌提升中国策略。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 的消费股框架：中国奢侈品"企稳不增长"意味着——高端消费（茅台、珠宝）有韧性但不弹性，中端消费承压最大。高端美妆跑赢皮包是消费降级的信号——消费者愿意花小钱买"看得见的品质"，不愿意花大钱买"看得见的 logo"。对投资：欧莱雅 > LVMH，珠宝（周大福）> 皮具。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 01929 周大福（硬奢侈品受益）/ OR FP（欧莱雅，美妆跑赢）— 软奢侈品承压，硬奢侈品+美妆相对受益</div>
+        <div class="source">来源：<a href="https://www.forbes.com/sites/pamdanziger/2026/08/04/chinas-luxury-market-is-stabilizing-but-changing-consumer-psychology-will-shape-its-future/" target="_blank">Forbes</a> · <a href="https://reuters.com/business/retail-consumer/prestige-beauty-outpaces-high-end-bags-chinas-luxury-spending-evolves-2026-08-04" target="_blank">Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国品牌出海</span>
+        <h4>中国本土品牌成全球游客新吸引力：手袋品牌 Songmont 在 Instagram 积累 60 万粉丝</h4>
+        <p>新华社 8/4 报道，中国本土品牌正成为吸引全球游客来华的新因素。社交媒体在连接中国品牌与海外消费者方面作用日益突出——手袋品牌 Songmont 在 Instagram 吸引超 <strong>60 万</strong>粉丝，帮助吸引国际游客到店。法国游客在上海定制服装、外国游客在街头体验中国品牌的场景越来越常见。同期，中国品牌汽车在墨西哥上半年销量突破 <strong>10.1 万辆</strong>（+30%），尽管 1 月起加征关税。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>两条线索：① 中国品牌从"世界工厂"向"世界品牌"转型——Songmont、SHEIN、名创优品等代表"中国品牌出海 2.0"；② 中国汽车在墨西哥 +30% 销量意味着：即使有关税，中国车的性价比优势仍然碾压。对 lainy：中国消费股的"出海逻辑"是新增长点——国内消费增速放缓至 2.7%，但出海品牌增速 30%+。</div>
+        <div class="ticker">📌 关联标的：09896 名创优品（出海零售龙头）/ 002594 比亚迪（出海汽车龙头）/ Songmont（未上市）— 中国品牌出海是消费板块的新增长极</div>
+        <div class="source">来源：<a href="https://english.news.cn/20260804/62bcc963f5b347189e5cd6f2c4e33dd2/c.html" target="_blank">新华社</a> · <a href="https://www.cronista.com/mexico/finanzas-economia/las-marcas-chinas-superan-las-100-mil-ventas-en-mexico-y-aceleran-la-reconfiguracion-del-mercado/" target="_blank">El Cronista</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 锂/铜/皮革] → 中游 [制造 — 电池/家电/服装] → 下游 [渠道 — 电商/出海零售/免税] — 当前受益环节：出海品牌（+30% 增长），受损环节：国内中端零售（增速 1.1%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>Spider-Man · Rihanna · SpaceX 上市</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Spider-Man</span>
+        <h4>《Spider-Man: Brand New Day》六天破 $10 亿！影史第二快达此里程碑，暑期档已超 $35.8 亿</h4>
+        <p>Variety 8/4 报道，《Spider-Man: Brand New Day》上映六天票房突破 <strong>$10 亿</strong>，成为影史第二快达到此里程碑的电影（仅次于《Avengers: Endgame》）。首周末全球 $9.27 亿为影史第二大开画，国内 $3.6 亿创影史最高开画纪录。中国市场 $1.21 亿领衔海外。2026 年暑期档（5 月至 8 月初）累计 <strong>$35.79 亿</strong>，Hollywood Reporter 称 2026 年有望成为疫情后最大票房年。《The Odyssey》（诺兰执导）17 天累计 $3.94 亿，有望成诺兰最高票房作品。</p>
+        <div class="why">🦞 <b>花边点评：</b>Spider-Man 的 $10 亿速度说明两件事：① 超级 IP 在"后疫情时代"依然是最可靠的票房保障；② 中国市场 $1.21 亿贡献了很大比例——中国观众对漫威的热爱没有因为疫情后减档而消退。lainy 周末如果还没看，《The Odyssey》也在热映，两条线都值得看。</div>
+        <div class="source">来源：<a href="https://variety.com/2026/film/box-office/spider-man-brand-new-day-billion-dollars-six-days-1236826658/" target="_blank">Variety</a> · <a href="https://www.theguardian.com/film/2026/aug/03/spiderman-brand-new-day-global-box-office" target="_blank">Guardian</a> · <a href="https://www.hollywoodreporter.com/movies/movie-news/box-office-2026-spider-man-odyssey-1236663643/" target="_blank">Hollywood Reporter</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Rihanna</span>
+        <h4>Rihanna 回老家巴巴多斯狂欢节：满身珠宝羽毛几乎认不出，Grand Kadooment Day 照片刷屏</h4>
+        <p>Rihanna 8/3 回到家乡巴巴多斯参加 Carnival 狂欢节 Grand Kadooment Day 游行，全身珠宝+羽毛装几乎认不出。38 岁的 Robyn Rihanna Fenty 穿着镶满珠宝的化装服在游行队伍中跳舞，照片和视频在社交媒体刷屏。TMZ、E! News、People 等多家媒体报道。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Rihanna 每年都回巴巴多斯过节，这是她"不管多有钱多忙都要回家"的仪式感。说实话她现在的身份是亿万富翁企业家（Fenty Beauty），但一到 Carnival 就变回那个来自巴巴多斯的女孩。lainy 如果刷到照片，真的很惊艳——全身珠宝镶满的 costume，完全认不出是 Rihanna。</div>
+        <div class="source">来源：<a href="https://www.tmz.com/2026/08/03/rihanna-in-costume-for-barbados-kadooment-day/" target="_blank">TMZ</a> · <a href="https://www.eonline.com/news/1434638/rihannas-carnival-2026-outfit-see-masquerade-costume-in-barbados" target="_blank">E! News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">天文学</span>
+        <h4>天文学家首次捕捉到恒星死亡的"第一爆炸瞬间"：5 亿光年外 X 射线闪爆，20 年来仅第二例</h4>
+        <p>2026 年 3 月 21 日，Einstein Probe X 射线太空望远镜（中欧合作）在 5 亿光年外星系探测到一次短暂软 X 射线闪爆（编号 EP260321a），随即触发全球观测。这被确认为罕见的"X 射线激波突破"事件——恒星塌缩成超新星的最初爆炸瞬间发出的 X 射线。这是过去 20 年来第二例被确认的此类事件。该超新星被编号为 SN 2026gzf，Popular Science 称其"异常罕见"。Einstein Probe 由中国科院、ESA 和德国马普研究所联合运营。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>恒星死亡的"第一瞬间"被捕捉到——就像在 5 亿光年外装了一个延时摄影。X 射线闪爆只持续几秒钟，能在对的时间"看"到它，运气成分极大。这也是中国参与的太空科研项目产出前沿成果的案例——Einstein Probe 有中国中科院的深度参与。</div>
+        <div class="source">来源：<a href="https://phys.org/news/2026-08-astronomers-massive-star-death-explosive.html" target="_blank">Phys.org</a> · <a href="https://www.popsci.com/science/rare-supernova-death/" target="_blank">Popular Science</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
