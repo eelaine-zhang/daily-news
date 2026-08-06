@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-06</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 6 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AMD 财报炸但股价跌：</b>Q2 营收 $115.4 亿（+50%），数据中心翻倍至 $67 亿，但 Musk 选了英伟达、盘后跌 9%；同日 Anthropic 宣布自研芯片团队，AI 硬件军备再升级。</li>
+      <li><b>霍尔木兹协议"今明天"：</b>美财长 Bessent 称伊朗-阿曼海峡通行协议即将敲定，Brent 三天暴跌 11% 至 $79；但胡塞打沙特油轮提醒市场"还没完"。</li>
+      <li><b>Fed 鹰派升温 + 黄金暴涨：</b>美联储理事 Cook 明确"准备好加息"，Polymarket 年内加息概率 63.5%；黄金单日暴涨 4.5% 至 $4,255，市值单日增 $1.3 万亿。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">AMD Q2</span>
+        <h4>AMD Q2 营收创纪录 $115.4 亿（+50%），数据中心翻倍至 $67 亿——但 Musk 选了英伟达，盘后跌 9%</h4>
+        <p>8/5 AMD 发布 Q2 2026 财报：营收 <strong>$115.4</strong> 亿（<strong>+50%</strong> YoY），连续 6 季增速超 30%；GAAP EPS $1.38（vs 去年 $0.54）。数据中心业务 <strong>$67.2</strong> 亿（<strong>+107%</strong> YoY），占总收入 58%，Instinct AI 加速器销量翻倍、EPYC 服务器 CPU 增长 70%+。Q3 指引营收约 <strong>$130</strong> 亿（+41% YoY）。但盘后股价跌近 <strong>9%</strong>——核心原因：Elon Musk 在 xAI "Helios" 超算项目上选择了英伟达而非 AMD，市场担忧 AMD 在 AI 加速器赛道"拿了最好成绩但仍不够好"。BofA 维持买入，目标价 $640（隐含 23% 上行），但承认 66x 远期 PE 远贵于英伟达 23x。</p>
+        <div class="why"><b>🦞 为什么值得看：</b>AMD 的财报本身非常强——数据中心翻倍、连续 6 季高增长——但市场给的反应是"超预期不够多"。这反映 AI 芯片赛道的残酷定价：英伟达的护城河太深，连 107% 增速都"不够"。Lisa Su 在电话会直接回应 Musk 选择："我们与 xAI 有合作，但客户会选最适合的方案。"对 lainy 的金融视角：AMD 估值 66x PE vs 英伟达 23x，说明市场给 AMD 的是"成长预期溢价"，一旦预期被打破，回撤会很猛。</div>
+        <div class="ticker">📌 关联标的：AMD（短期承压）/ NVDA（Musk 背书，受益）/ SMH（半导体 ETF，AMD 权重约 5%）/ 159992 半导体ETF（A 股）— AMD 短期受损，英伟达巩固地位</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/05/amd-stock-today-earnings-q2.html" target="_blank">CNBC</a> · <a href="https://www.benzinga.com/analyst-stock-ratings/analyst-color/26/08/60939483/how-intels-earnings-turned-amds-beat-into-a-sell-off" target="_blank">Benzinga</a> · <a href="https://www.investing.com/news/company-news/amd-q2-2026-slides-data-center-revenue-doubles-stock-falls-after-hours-93CH-4836240" target="_blank">Investing.com</a> · <a href="https://www.benzinga.com/markets/tech/26/08/60956830/amd-stock-musk-nvidia-bofa-ignore-noise-ai-helios" target="_blank">Benzinga BofA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Anthropic 自研芯片</span>
+        <h4>Anthropic 首次确认：正在组建自研芯片团队，"软硬协同设计"目标砍掉 Claude 一半推理成本</h4>
+        <p>8/5 Anthropic 向 Business Insider 确认，正在组建内部硅芯片团队，为 Claude AI 模型设计定制芯片。这是 Anthropic 首次公开承认自研芯片计划。招聘信息显示，公司正在寻找"跨硬件和软件"的工程师，目标是"让硅芯片和模型共同进化"。TechTimes 报道称，Anthropic 的策略是"co-design"（协同设计）——芯片和模型一起优化，目标是将 per-token 推理成本降低约 <strong>50%</strong>。同时，Anthropic 将继续使用 AWS、Google Cloud、Nvidia 和 AMD 硬件。</p>
+        <div class="why"><b>🦞 龙虾老师的解读：</b>这是 AI 公司自研芯片趋势的最新信号——Google 有 TPU、Amazon 有 Trainium、Meta 有 MTIA，现在 Anthropic 也入场了。逻辑很清楚：推理成本是 AI 公司最大的开支，自研芯片可以把成本砍一半。但对英伟达的含义复杂——短期不影响（Anthropic 仍大量采购 Nvidia GPU），长期看是"客户变竞争对手"的趋势。对 lainy：关注"AI 推理成本下降"链条——更便宜的推理 = 更多 AI 应用落地 = 算力需求总量可能不降反升。</div>
+        <div class="ticker">📌 关联标的：NVDA（短期不受影响，长期客户变竞争者风险）/ ANTLTC（未上市）/ GOOG（TPU 先行者）/ AMZN（Trainium + Anthropic 大股东）— 自研芯片趋势加速</div>
+        <div class="source">🔗 Source: <a href="https://www.businessinsider.com/anthropic-in-house-silicon-chip-team-claude-2026-8" target="_blank">Business Insider</a> · <a href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/" target="_blank">TechCrunch</a> · <a href="https://www.techtimes.com/articles/323238/20260805/anthropic-confirms-house-chip-team-co-design-bet-could-cut-claude-inference-costs-half.htm" target="_blank">TechTimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星 × SK Hynix × 中国设备</span>
+        <h4>Reuters 独家：三星和 SK Hynix 正在测试中国 AMEC 芯片制造设备，对冲美国出口管制风险</h4>
+        <p>8/5 Reuters 独家报道：三星电子和 SK Hynix 正在评估中国 AMEC（中微半导体设备）的刻蚀设备，考虑在其中国工厂中使用，以对冲美国出口管制收紧风险。三位知情人士称，韩国巨头担心如果美国进一步收紧对西方设备的出口管制，他们在中国的工厂可能面临设备维护和零部件供应中断。三星对 Reuters 表示"未测试 AMEC 设备也未考虑这样做"，SK Hynix 拒绝评论。但 Reuters 引多个信源称测试已在进行。</p>
+        <div class="why"><b>🦞 读给你听：</b>这是一个"去美国化"的信号——即使三星和 SK Hynix 总部在韩国，他们在中国的工厂也需要 Plan B。美国设备（Applied Materials、Lam Research）如果被禁运维护，产线就会停。中国 AMEC 的刻蚀设备近年来技术进步很快，尤其在成熟制程上已经可以替代部分西方设备。对 lainy：① 中国半导体设备国产替代逻辑再获验证；② 中微公司（688012）等设备股有持续催化；③ 但要注意三星官方否认，说明此事敏感度高。</div>
+        <div class="ticker">📌 关联标的：688012 中微公司（国产设备龙头）/ 002747 埃斯顿（设备链）/ 005930.KS 三星 / 000660.KS SK Hynix — 国产设备替代受益</div>
+        <div class="source">🔗 Source: <a href="https://reuters.com/world/asia-pacific/exclusive-samsung-sk-hynix-test-chinese-chip-tools-hedge-against-us-risks-2026-08-05" target="_blank">Reuters</a> · <a href="https://seekingalpha.com/news/4625595-samsung-sk-hynix-test-chinese-chip-tools-to-hedge-against-us-risks-reuters" target="_blank">Seeking Alpha</a> · <a href="https://technode.com/2026/08/05/samsung-sk-hynix-reportedly-evaluate-chinese-amec-tools-for-china-fabs/" target="_blank">TechNode</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [设备 — AMAT/Lam/AMEC 国产替代] → 代工 [TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/AMD/Anthropic 自研] — 当前受益环节：国产设备替代（AMEC）+ AI 推理芯片自研趋势加速</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价 & 地缘风险</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹协议</span>
+        <h4>Bessent 称霍尔木兹协议"今明两天"可达成；伊朗-阿曼已就航线达成初步一致，Brent 三天暴跌 11%</h4>
+        <p>8/5 美国财长 Scott Bessent 对 CNBC 表示，伊朗与阿曼关于霍尔木兹海峡通行的协议可能"今天或明天"敲定。伊朗已与阿曼就拟定航线达成初步一致，目前"第二阶段"细节仍在谈判中。Bloomberg 报道称双方联合声明正在审查中，如果有第三方参与则可能延迟。受此影响，WTI 跌至约 <strong>$75</strong>/桶（近一个月新低），Brent 收于约 <strong>$79</strong>/桶。油价三天内累计下跌约 <strong>11%</strong>。特朗普周一称这是伊朗的"最后机会 before decapitation"，延续"威胁+谈判"双轨策略。</p>
+        <div class="why"><b>🦞 市场含义：</b>油价从 7 月底的 $100+ 暴跌至 $79，地缘溢价正在快速回吐。如果协议最终敲定，Brent 可能回到 $70-75 区间（EIA 预测 Q3 均价 $74），对全球通胀预期是大利好——Fed 加息压力减轻、消费者实际收入提升。但要注意两个风险：① 胡塞武装不归伊朗管，可能继续在红海搞事；② 伊朗内部强硬派可能反对协议。lainy 的框架：油价回落 = 通胀预期降温 = Fed 鸽派空间增大 = 科技股估值支撑。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（下行风险）/ WTI 原油 / XLE（能源 ETF，承压）/ 600028 中国石化 / JETS（航空 ETF，受益）— 油价回落利好通胀预期</div>
+        <div class="source">🔗 Source: <a href="https://www.france24.com/en/middle-east/20260805-us-says-iran-hormuz-deal-could-come-today-or-tomorrow-as-oil-prices-plunge" target="_blank">France24</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-05/latest-oil-market-news-and-analysis-for-aug-6" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/08/05/oil-prices-iran-war-houthis-saudi-tanker.html" target="_blank">CNBC</a> · <a href="https://www.rigzone.com/news/wire/oil_extends_losses_on_hormuz_talks-05-aug-2026-184306-article/" target="_blank">Rigzone</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">红海 · 胡塞</span>
+        <h4>胡塞武装袭击沙特油轮——红海"第二咽喉"仍不安全，油价短暂反弹后继续跌</h4>
+        <p>8/5 也门胡塞武装宣布在曼德海峡袭击了两艘沙特油轮。TradingEconomics 报道，WTI 一度反弹至 $76 附近，但随后继续回落至 $75。这表明市场对霍尔木兹协议的乐观情绪压过了红海袭击的影响。但如果胡塞持续打击沙特红海港口设施（Jeddah/Yanbu），绕行霍尔木兹的替代路线也将不安全，可能重新推高油运保险费和运价。</p>
+        <div class="why"><b>🦞 龙虾老师说：</b>霍尔木兹和曼德海峡是中东石油出口的"两个咽喉"——如果霍尔木兹通了但曼德海峡还堵着，油价下行空间有限。胡塞武装与伊朗的关系微妙——伊朗能影响但不完全控制。对 lainy：关注油运板块（VLCC 油轮运价）和保险费率，这两个指标比油价本身更早反映"通行安全"。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（短期波动）/ TNK/FRO（油轮股，运价受益）/ 600026 中远海能 — 红海不安全 = 油轮绕行好望角 = 运价支撑</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics</a> · <a href="https://www.cnbc.com/2026/08/05/oil-prices-iran-war-houthis-saudi-tanker.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [油运 — VLCC/红海航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前关键变量：霍尔木兹协议若敲定，地缘溢价快速回吐，但红海风险仍在</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed 鹰派 · 黄金暴涨 · 油价回落</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed 鹰派</span>
+        <h4>美联储理事 Cook："准备好加息"——通胀高于目标时间越长，加息可能性越大</h4>
+        <p>8/5 美联储理事 Lisa Cook 在讲话中明确表示，如果通胀回落的趋势不能恢复，她"准备好行动"支持加息。她警告"通胀高于目标的时间越长，这种情景（加息）就越可能成为现实"，认为价格风险已经大于就业市场风险。Reuters/Bloomberg/CNBC 均报道了这一鹰派表态。与此同时，明尼阿波利斯联储的 Kashkali（鹰派）主张 9 月启动渐进加息周期，而部分鸽派委员则认为当前利率已足够紧缩。Polymarket 显示市场对 2026 年至少一次加息的概率升至 <strong>63.5%</strong>。但霍尔木兹协议预期推动油价回落，市场对加息押注从此前的 2 次下调至 1 次。</p>
+        <div class="why"><b>🦞 为什么值得看：</b>Cook 是上周 FOMC 会议上 3 票支持加息的委员之一。她的表态意味着 Fed 内部鹰派声音在增强。但对 lainy 来说，真正关键的是这个矛盾：Fed 想加息（通胀粘性）vs 油价正在回落（霍尔木兹协议）——如果油价真的回到 $70s，通胀预期会自动降温，Fed 可能就不需要加息了。市场已经在"抢跑"这个逻辑：黄金暴涨（降息预期回升）、美股创新高。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，加息预期降温利好）/ GLD 黄金（暴涨）/ US10Y（10 年期美债收益率，若回落则利好成长股）— 油价回落 vs Fed 鹰派，市场选择了"相信油价"</div>
+        <div class="source">🔗 Source: <a href="https://reuters.com/business/feds-cook-says-ready-raise-rates-if-inflation-doesnt-start-easing-2026-08-05" target="_blank">Reuters</a> · <a href="https://www.cnbc.com/2026/08/05/fed-governor-cook-says-shes-prepared-to-act-on-rate-hike-to-address-inflation.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-05/fed-s-cook-says-ready-to-raise-rates-if-inflation-doesn-t-cool" target="_blank">Bloomberg</a> · <a href="https://www.fx678.com/202608060054138813.shtml" target="_blank">FX678</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金暴涨</span>
+        <h4>黄金单日暴涨 4.5% 至 $4,255，市值单日增 $1.3 万亿——霍尔木兹乐观 + 加息押注下调双驱动</h4>
+        <p>8/5 COMEX 黄金期货暴涨 <strong>4.5%</strong> 至 <strong>$4,255</strong>/盎司，市值单日增加 <strong>$1.3</strong> 万亿美元。TradingEconomics 数据显示黄金收于 $4,250 附近。驱动因素：① 霍尔木兹协议预期推动油价回落 → 市场将 Fed 加息押注从 2 次下调至 1 次 → 降息预期回升 → 黄金利好；② 美元走弱；③ 地缘不确定性仍在。21 财经报道指出，德意志银行等机构将 2026 Q4 黄金目标价设在 $4,000 中高位区间，如果 Fed 更鸽派或地缘风险加剧，可能突破 $5,000。</p>
+        <div class="why"><b>🦞 龙虾老师的解读：</b>黄金这波暴涨的逻辑链非常清晰：油价跌 → 通胀预期降 → Fed 加息压力减 → 实际利率下行 → 黄金升值。这是"反直觉"的——地缘缓和本来应该利空黄金（避险需求降），但因为市场更关注"加息押注下调"这个利好，黄金反而大涨。对 lainy 的配置框架：如果霍尔木兹协议最终敲定 + Fed 按兵不动，黄金可能回调到 $4,000 附近——那是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 513130 港股通科技ETF — 黄金短期暴涨后有回调风险</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics</a> · <a href="https://watcher.guru/news/gold-price-surges-4-50-today-adds-1-3t-to-market-cap" target="_blank">Watcher.Guru</a> · <a href="https://m.21jingji.com/article/20260805/herald/b89911d09a61e4051e17ada06c71bced.html" target="_blank">21财经</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [通胀预期/实际利率] → 下游 [资产配置 — 股/债/金/油] — 当前关键矛盾：Fed 鹰派表态 vs 油价回落，市场选择了"相信油价回落 = 通胀降温"</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/5 沪指 +1.47% 收 3878 / 深成指 +1.86% / 创业板 +1.32% / 科创 50 暴涨 4.78% / 成交 2.66 万亿</h4>
+      <p>8/5 A 股全天低开高走，市场普涨，逾 3700 只个股上涨。<b>科创 50 指数大涨 4.78%</b>，半导体产业链全线爆发，智能驾驶概念涨停潮。沪深两市成交 <strong>2.66 万亿</strong>，较前日放量 <strong>4460 亿</strong>。<b>亮点个股：</b>工业富联（601138）涨停，万亿巨头封板带动算力硬件板块；中巨芯 20CM 涨停；金海通 2 连板。板块方面：半导体、智能驾驶、算力租赁领涨；CPO 板块低开高走。<b>资金流向：</b>主力资金净流入超 1200 亿，科技板块成最大吸金口。<b>今日关注：</b>隔夜美股 AMD 跌 9% 可能拖累 A 股半导体情绪，但黄金暴涨利好贵金属板块。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/5 恒指 +0.24% 收 25,916 / 连续两天站稳 25,900 / 内地资金持续流入</h4>
+      <p>8/5 恒生指数微涨 0.24% 收于 25,916 点。ChinaPulse 报道，内地投资者 7 月连续第二个月净买入港股，从 A 股 AI 概念动荡中"逃向"估值更低的港股避风港。恒指是全球主要基准指数中估值最低的之一，部分原因是其对 AI 狂热的敞口较低。<b>本周关注：</b>霍尔木兹协议若敲定，油价回落将减轻港股"资金外流+估值下调"双重压力——恒指有望冲击 26,000。反之若谈判破裂，可能下探 25,500。<b>今日期货：</b>恒指期货 25,674（低于收盘 241 点），盘前小幅承压。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/5 S&amp;P 7,724 (-0.17%) / 道指 54,428 (+0.63%) / 纳指 -0.49% / AMD 盘后跌 9%</h4>
+      <p>8/5 美股分化：道指连续第五天上涨创历史新高（<strong>+0.63%</strong> 收 54,428），但标普从纪录高位小幅回落（<strong>-0.17%</strong> 收 7,724），纳指跌 <strong>0.49%</strong>。Alphabet 大跌 <strong>4.58%</strong> 成最大拖累。Amgen +5.16%、Nvidia +3.84%、Disney +3.83% 领涨道指。8/4 标普收于 7,736 创新高后，8/5 出现正常的获利了结。<b>盘后焦点：</b>AMD 财报超预期但盘后跌 9%（Musk 选 Nvidia），可能拖累今天纳指开盘。<b>亚洲市场昨日表现：</b>KOSPI +3.76%（SK Hynix +7%、Samsung +5%），日经 +3.66%，SoftBank +13%——半导体全线反弹。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>直播电商新规 · 蜘蛛侠联名消费</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">直播电商新规</span>
+        <h4>直播电商监管新规落地：AI 生成内容首次纳入监管，平台压实三方责任</h4>
+        <p>据《新闻联播》报道，国家近期发布直播电商监管新规，针对假货、虚假营销等顽疾设定明确底线。核心变化：① 平台、主播、商家三方责任压实；② <strong>AI 生成内容首次纳入监管视野</strong>，要求明确标注；③ 建立"流量即监管"硬核惩戒体系——对违规行为实施流量限制、账号降权等处罚。新规目标是推动直播电商从野蛮生长转向高质量发展。</p>
+        <div class="why"><b>🦞 龙虾老师的解读：</b>这是中国对 AI 生成内容监管的进一步延伸——7 月《人工智能拟人化互动服务管理暂行办法》导致大厂下线 800 万 AI 角色后，现在直播电商里的 AI 工具（AI 换脸、AI 虚拟主播、AI 生成商品描述）也被纳入监管。对 lainy：① 合规成本上升，小平台和中小主播出清，利好头部平台（抖音、淘宝直播）；② AI 标注要求可能影响"AI 数字人直播"赛道的商业模式。</div>
+        <div class="ticker">📌 关联标的：09888 宝尊电商（直播代运营）/ 01058 粤海投资 / 002594 比亚迪（直播营销大客户）— 合规成本上升利好头部</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908i8js.html?from=tech" target="_blank">新浪科技</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">蜘蛛侠联名</span>
+        <h4>《蜘蛛侠：崭新之日》全球票房破 $11.55 亿登顶 2026 年冠军，联名已进入咖啡、游戏和汽车消费场景</h4>
+        <p>8/6 最新数据：上映不到一周的《蜘蛛侠：崭新之日》全球票房 <strong>$11.55</strong> 亿，直接登顶 2026 年全球票房榜首。每经报道，蜘蛛侠的生意已越过银幕，进入餐饮（咖啡联名）、数码、游戏和汽车等消费场景。8 月全国票房已破 <strong>10 亿</strong>，暑期档总票房达 <strong>77 亿</strong>。IMAX 中国迎来高光周末，业绩改善曙光显现。新华网指出北美首周末 $3.55 亿，逼近《复联 4》的 $3.57 亿纪录。</p>
+        <div class="why"><b>🦞 消费视角：</b>蜘蛛侠已经不只是电影——是一个跨消费场景的 IP 变现机器。联名咖啡、联名汽车、联名游戏……每个联名都是一条收入链。对 lainy 的消费框架：IP 联名正在成为中国消费品牌获客的核心手段——从瑞幸×茅台到瑞幸×蜘蛛侠，"联名 = 流量"的公式在 2026 年仍然有效。IMAX 中国的业绩改善也说明高端观影体验在下沉市场渗透加速。</div>
+        <div class="ticker">📌 关联标的：002739 万达电影（院线龙头）/ 9701.IMAX China / 002027 分众传媒（联名广告投放受益）— IP 消费链受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/roll/2026-08-06/doc-inimhxzv4927860.shtml" target="_blank">新浪科技</a> · <a href="https://www.nbd.com.cn/articles/2026-08-05/4533083.html" target="_blank">每经</a> · <a href="http://www.xinhuanet.com/ent/20260805/4b0ba616aa9041788819fcc6f17bfbe8/c.html" target="_blank">新华网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [IP 创造 — 漫威/索尼] → 中游 [院线/流媒体 — 万达/IMAX] → 下游 [联名消费 — 咖啡/游戏/汽车] — 当前受益环节：下游联名消费（蜘蛛侠 IP 跨场景变现）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">电影票房</span>
+        <h4>《蜘蛛侠：崭新之日》6 天 $11.55 亿创影史第二快达 $10 亿——落点预测 $15-20 亿</h4>
+        <p>据 BoR 全球票房榜，《蜘蛛侠：崭新之日》上映不足一周即以 <strong>$11.55</strong> 亿登顶 2026 年全球票房冠军。IGN 报道其首周末全球票房 $9.27 亿，为年内最高，两天超越公映两周的《奥德赛》。21 财经报道，外界估计其票房落点可能达到 <strong>$15-20 亿</strong>。新华网上映前报道，制作费 $2.25 亿，北美首周末 $3.55 亿（超 2400 万北美观众 3 天进影院），逼近《复联 4》的 $3.57 亿纪录。影片讲述被遗忘的 Peter Parker 独居全职做蜘蛛侠的故事。</p>
+        <div class="why"><b>🦞 轻松一下：</b>这是后漫威宇宙时代最强的票房信号——观众不是不爱超级英雄了，而是要"好"的超级英雄。索尼+漫威合作的蜘蛛侠系列已经成为最稳的票房 IP。lainy 周末如果还没看，可以去看 IMAX 版——据说动作场面是系列最佳。</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/roll/2026-08-06/doc-inimhxzv4927860.shtml" target="_blank">新浪科技</a> · <a href="https://m.21jingji.com/article/20260805/herald/9f1f5d435bae4c8a08c107340e159d17.html" target="_blank">21财经</a> · <a href="http://www.xinhuanet.com/ent/20260805/4b0ba616aa9041788819fcc6f17bfbe8/c.html" target="_blank">新华网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">双台风</span>
+        <h4>双台风"白海豚""鲸鱼"逼近华东沿海，四预警齐发——关注沿海消费/出行影响</h4>
+        <p>8/5 18 时，台风蓝色预警、暴雨蓝色预警、橙色山洪灾害气象预警和橙色地质灾害气象风险预警四预警齐发。双台风"白海豚"和"鲸鱼"影响多个海域，将有 10 级大风，逐渐向华东沿海靠近。日本冲绳也受台风 13 号影响。可能影响沿海地区出行、餐饮和零售消费。</p>
+        <div class="why"><b>🦞 花边提醒：</b>双台风对沿海消费有短期影响——外卖订单可能暴增（利好美团/饿了么），但到店餐饮、旅游、线下零售会受冲击。lainy 如果这几天在香港，注意关注天气。投资角度：台风影响是短期的，不做交易依据，但可以关注灾后基建/防水材料板块的脉冲。</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/jjxw/2026-08-05/doc-inimhpni1248401.shtml" target="_blank">新浪财经</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 科技/科学花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag sci">台海科技</span>
+        <h4>台湾调查局侦办 17 家中企非法挖角高科技人才——半导体/AI 人才争夺战白热化</h4>
+        <p>8/6 报道，台湾调查局经缜密搜证后，于 7/13-8/4 同步侦办 17 家中国企业来台非法从事挖角高科技人才案件。中企主要通过"假台资/假侨外资、真陆资来台设点"方式绕过监管。涉及领域以半导体和 AI 人才为主。调查局表示将持续打击此类"灰色挖角"行为。</p>
+        <div class="why"><b>🦞 彩蛋视角：</b>这条新闻折射出半导体人才已经成了"战略资源"——中美科技博弈的前线不只是设备出口管制，还有人才争夺。台湾是全球半导体人才最密集的地区之一（台积电培养了数万工程师），中企绕道挖角说明大陆半导体人才缺口仍然很大。对 lainy：这是"半导体国产替代"叙事的另一面——设备可以买/仿，但人才需要时间培养。</div>
+        <div class="source">🔗 Source: <a href="https://www.bannedbook.org/bnews/worldnews/20260806/2345988.html" target="_blank">禁闻网</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
