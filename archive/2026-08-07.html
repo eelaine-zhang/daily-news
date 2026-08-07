@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-07</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 7 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>芯片超级日：</b>Tesla+SpaceX 斥 $168 亿建"Terafab"芯片厂（德州 Grimes County，含 Intel/xAI 合资）；AMD 同日收购 AI 推理芯片初创 Taalas——把 AI 模型直接刻进硅片。</li>
+      <li><b>存储股崩盘连锁：</b>Western Digital 财报超预期但指引不及预期，暴跌 16% 拖累 SanDisk -11%、Micron -6%；韩国 KOSPI 触发熔断，SK Hynix -10%、三星 -6%，存储/AI 硬件板块全球抛售。</li>
+      <li><b>资源+关税风暴：</b>刚果（金）禁止铜钴精矿出口，全球铜钴供应链震动；特朗普签行政令对多晶硅加征 15% 关税（232 条款），半导体+太阳能供应链再添变数；Brent 原油单日飙 3.83% 至 $82.49。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Terafab</span>
+        <h4>Tesla + SpaceX 斥 $168 亿建"Terafab"芯片厂：德州 Grimes County，Intel/xAI 合资，100M 平方英尺规模</h4>
+        <p>8/6 Tesla 与 SpaceX 正式宣布，合资先进半导体工厂"Terafab"将建于德州 Grimes County（休斯顿以北），首期投资 <strong>$168 亿</strong>（约 1200 亿人民币），计划雇佣至少 3000 人。工厂最终规模达 1 亿平方英尺——约为 Gigafactory Texas 主体的 10 倍。合资方包括 Tesla、SpaceX、xAI 及代工合作方 Intel。Musk 称全球芯片产能将无法满足未来 AI 算力需求，"Terafab 旨在弥合当前全球芯片供应与未来算力需求之间的鸿沟"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Musk 产业链的"垂直整合"终局——不再依赖英伟达/TSMC，而是自建芯片产能。对 lainy 的金融视角：① <strong>$168 亿</strong>首期投资规模≈台积电亚利桑那厂第一期的 1.5 倍，Musk 在用"真金白银"押注 AI 算力自主可控；② Intel 作为代工合作方出现，说明 Intel 代工业务终于拿到一个标志性客户；③ 对英伟达的长期影响需关注——Musk 体系（Tesla FSD + xAI Grok + SpaceX 卫星）如果自给自足，将减少对 NVDA 芯片的依赖。</div>
+        <div class="ticker">📌 关联标的：TSLA（Tesla）/ SPCX（SpaceX）/ INTC（Intel，代工合作受益）/ NVDA（英伟达，长期需求分流风险）— Musk 体系自建芯片产能，Intel 代工获标志性客户</div>
+        <div class="source">来源：<a href="https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/" target="_blank">TechCrunch</a> · <a href="https://www.statesman.com/business/article/elon-musk-terafab-spacex-grimes-county-22375537.php" target="_blank">Austin Statesman</a> · <a href="https://electrek.co/2026/08/06/tesla-spacex-terafab-grimes-county-16-8-billion/" target="_blank">Electrek</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD × Taalas</span>
+        <h4>AMD 收购 AI 推理芯片初创 Taalas：把 AI 模型直接刻进硅片，推理速度达 17,000 tokens/秒</h4>
+        <p>8/6 AMD 宣布收购多伦多初创公司 Taalas，后者专注于将 AI 模型权重直接"刻"进硅片（hardwire models into silicon），针对单个 AI 模型定制芯片。早期演示显示其模型专用集成电路可达 <strong>17,000 tokens/秒</strong>。Taalas 当前芯片可运行 Meta Llama 3.1 小版本，正在开发更大模型的芯片。此举发生在英伟达以约 <strong>$200 亿</strong>收购 Groq 推理技术之后，AMD 正加速布局 AI 推理市场。交易条款未披露。</p>
+        <div class="why">🦞 <b>市场含义：</b>AI 芯片竞争从"通用 GPU"转向"模型专用芯片"。对 lainy 的框架：① AI 推理（而非训练）是下一个战场——训练用 GPU 需求趋于集中，推理用芯片需求更分散且量更大；② AMD 收购 Taalas = 继英伟达收购 Groq 后的跟进，大厂在"买推理技术"而非自研；③ "把模型刻进硅片"意味着推理成本可能大幅下降——长期利好 AI 应用端，但对通用 GPU 定价权是潜在威胁。</div>
+        <div class="ticker">📌 关联标的：AMD（收购方，推理能力补强）/ NVDA（英伟达，先已收购 Groq）/ META（Meta，Llama 模型生态受益于专用推理芯片）— 推理芯片赛道加速整合</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html" target="_blank">CNBC</a> · <a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank">The Register</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-06/advanced-micro-devices-to-buy-startup-taalas-for-new-ai-chips" target="_blank">Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">存储股崩盘</span>
+        <h4>Western Digital 暴跌 16%、SanDisk -11%：财报超预期但指引不及预期，存储/AI 硬件板块全球连锁抛售</h4>
+        <p>8/6 Western Digital 发布 FY2026 Q4 财报：EPS $3.56（预期 $3.29），营收 $37.5 亿（超预期），但下季度指引毛利率展望不及华尔街极高预期，盘前暴跌 <strong>-15.46%</strong> 至 $438.92。同日 SanDisk（SNDK）Q4 营收激增 372% 至 $89.6 亿、EPS $39.25 均超预期，但指引同样令市场失望，股价跌 <strong>-11%</strong>。连锁反应：Micron -6%、Roundhill 存储 ETF -4%、铠侠ADR -6%、闪迪 -6%。亚洲市场连锁崩盘——KOSPI 触发 SIDECAR 熔断机制，SK Hynix 收跌 <strong>-10.37%</strong>、三星 <strong>-6%</strong>、Kioxia -8.84%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是典型的"buy the rumor, sell the news"——存储芯片是 2026 年最热板块之一，市场预期已打到天上。财报超预期不够，要"大幅超预期"才能维持股价。对 lainy 的关键框架：① AI 硬件投资不是"线性增长故事"，而是"预期 vs 实际"的博弈；② 存储股的周期性没有消失——即使 AI 需求强劲，短期供需错配仍会导致价格波动；③ 韩国市场熔断说明全球资金在"去杠杆"，不是基本面恶化，是持仓拥挤后的踩踏。</div>
+        <div class="ticker">📌 关联标的：WDC（Western Digital，-16%）/ SNDK（SanDisk，-11%）/ MU（Micron，-6%）/ 000660.KS（SK Hynix，-10%）/ SMH（半导体ETF）— 存储板块短期承压，但AI需求基本面未变</div>
+        <div class="source">来源：<a href="https://www.investopedia.com/market-update-western-digital-and-sandisk-both-topped-wall-streets-estimates-the-stocks-are-tumbling-anyway-wdc-sndk-12035512" target="_blank">Investopedia</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/western-digital-sinks-16-sandisk-132639389.html" target="_blank">Yahoo Finance</a> · <a href="https://www.tradingkey.com/analysis/stocks/more/262081743-japan-south-korea-stocks-kospi-nikkei-softbank-sk-hynix-kioxia-tradingkey" target="_blank">TradingKey</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Jeff Dean 离职</span>
+        <h4>谷歌首席科学家 Jeff Dean 效力 27 年后离职创业：联合 3 位 Google 高管创立 Discovery Loop，Alphabet 参投</h4>
+        <p>8/5 Google 首席科学家 Jeff Dean 宣布离职，与 Sanjay Ghemawat、Oriol Vinyals、Quoc Le 三位 Google 同事共同创立 Discovery Loop——一家"公共利益公司"（Public Benefit Corporation），使命是用 AI 自动化科学研究和工程实验。Dean 在 X 上称："我们的目标是同时启动成千上万个'思维线程'，从任意信息中学习，自动化完整的实验流程。" Alphabet 参与了 Discovery Loop 的融资。同日，Google DeepMind CEO Demis Hassabis 转任董事长，Koray Kavukcuoglu 升任 SVP。</p>
+        <div class="why">🦞 <b>读给你听：</b>Jeff Dean 是 Google AI 的"灵魂人物"，他离开说明两个信号：① Google 内部 AI 研究可能正在经历重组——DeepMind 同日换帅不是巧合；② "AI 自动化科学研究"正在成为新赛道——不是让 AI 写文章，而是让 AI 做实验、跑假设、验证理论。对 lainy：这和 lainy 工作中关注的"AI 对产业效率提升"直接相关——AI 不再只是"聊天工具"，而是"科研助手"。</div>
+        <div class="ticker">📌 关联标的：GOOGL（Alphabet，人才流失短期情绪偏空）/ 私募市场（Discovery Loop 未上市）— Google AI 人才外流，长期需关注 Google 的 AI 竞争力</div>
+        <div class="source">来源：<a href="https://www.businessinsider.com/jeff-dean-new-startup-discovery-loop-google-facts-2026-8" target="_blank">Business Insider</a> · <a href="https://en.wikipedia.org/wiki/Jeff_Dean" target="_blank">Wikipedia</a> · <a href="https://economictimes.indiatimes.com/tech/technology/googles-jeff-dean-launches-ai-startup-discovery-loop/articleshow/132955389.cms" target="_blank">Economic Times</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel/Terafab] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂+AI应用 — MSFT/GOOG/Meta/xAI] — 当前受益环节：中游代工（Intel 获 Terafab 合作）+ 推理芯片（AMD/Taalas 整合），受损环节：存储芯片（预期过高，全球抛售）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>资源 · 关税 · 地缘</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">刚果（金）禁令</span>
+        <h4>刚果（金）禁止铜精矿与钴精矿出口：全球铜钴供应链震动，洛阳钼业等采冶一体化公司成赢家</h4>
+        <p>8/6 路透社报道，刚果（金）政府 6/29 签署行政指令，立即禁止铜精矿与钴精矿出口，同时推出新税收框架（矿业副产品计税估值系数 55%，三个月后生效）。禁令仅针对精矿等初级产品，阴极铜、粗铜等冶炼产品仍可出口。符合战略性条件的项目可申请最长一年出口豁免。刚果（金）是全球最大钴生产国、非洲最大铜生产国。紫金矿业回应"公司在当地产品不在禁止出口之列"。新浪财经分析指出，洛阳钼业等 5 家已在刚果布局采冶一体化的公司将受益。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>刚果（金）产全球 70%+ 的钴、大量铜——这条禁令直接冲击新能源电池供应链。对 lainy 的框架：① 矿产资源国"资源民族主义"在加速（继印尼镍出口禁令后，刚果跟进）；② 短期铜钴价格有上涨压力，利好已布局当地冶炼的企业（洛阳钼业、紫金矿业）；③ 长期推动中国企业加速海外冶炼产能布局。</div>
+        <div class="ticker">📌 关联标的：603993 洛阳钼业（采冶一体化受益）/ 601899 紫金矿业（回应不受影响）/ 600028 中国石化 / 碳酸锂（钴替代逻辑）— 铜钴供给收缩，采冶一体化受益</div>
+        <div class="source">来源：<a href="https://www.guancha.cn/internation/2026_08_06_826417.shtml" target="_blank">观察者网</a> · <a href="https://finance.eastmoney.com/a/202608063834081735.html" target="_blank">东方财富</a> · <a href="https://www.cls.cn/detail/2447429" target="_blank">财联社</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">多晶硅关税</span>
+        <h4>特朗普签行政令对多晶硅加征 15% 关税 + 设最低进口价：半导体+太阳能供应链再受冲击</h4>
+        <p>8/6 特朗普签署行政令，依据《1962 年贸易扩展法》第 232 条，对进口多晶硅及其衍生产品采取最低进口价格和额外 <strong>15%</strong> 关税措施，以支持美国国内多晶硅、半导体和太阳能供应链。措施自 <strong>2026 年 12 月 4 日</strong>生效。多晶硅是半导体晶圆和太阳能面板的关键原材料，中国目前主导全球多晶硅生产。Bloomberg 报道，特朗普政府正考虑数月的延迟征收期，以允许可再生能源企业抢进口。</p>
+        <div class="why">🦞 <b>市场含义：</b>232 条款 = "国家安全"关税，和钢铁/铝同级别。对 lainy 的分析框架：① 多晶硅是中国光伏产业链最具优势的环节（全球份额 >80%），美国关税短期难以替代中国供应；② 12 月生效意味着抢出口效应——未来几个月多晶硅进口可能激增；③ 对中国光伏企业影响有限（多数已非直接对美出口），但情绪上压制光伏板块估值。</div>
+        <div class="ticker">📌 关联标的：通威股份 600438（多晶硅龙头）/ 大全新能源 DQ / CLSK（美国本土多晶硅受益） — 短期抢出口效应，长期看美国本土产能替代</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-08-06/trump-signed-order-on-tariffs-trade-actions-on-polysilicon" target="_blank">Bloomberg</a> · <a href="https://www.nytimes.com/2026/08/06/us/politics/trump-tariffs-solar-panels.html" target="_blank">NYT</a> · <a href="https://qz.com/trump-tariff-price-floors-polysilicon-solar-panels-080626" target="_blank">Quartz</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹 · 油价</span>
+        <h4>霍尔木兹协议"最后阶段"但未正式达成；Brent 单日飙 3.83% 至 $82.49，油价博弈加剧</h4>
+        <p>8/6 伊朗表示与阿曼就霍尔木兹海峡通行达成协议处于"最后阶段"，但特朗普称"尚不能说已经正式达成"。油价走势矛盾：日间 Brent 一度回落至 <strong>$79</strong> 区间，但收盘飙升 <strong>+3.83%</strong> 至 <strong>$82.49</strong>，WTI 涨 <strong>+2.75%</strong> 至 $77.29。霍尔木兹协议的"最后-mile"仍有分歧（管控权和货物费）。分析指出：即使霍尔木兹恢复通行，胡塞对沙特红海港口的袭击意味着"绕行路线也不安全"。VIX 跌 4.17% 至 15.15，显示华尔街对地缘风险的定价仍然温和。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价在 $79-82 之间反复拉锯，本质是两股力量对撞：霍尔木兹乐观预期（卖）vs 胡塞红海袭击 + 供应风险（买）。对 lainy 的关键变量：① 协议如果正式达成，Brent 有 $5-8 回落空间；② 如果再出意外（胡塞新袭击/谈判破裂），$85+ 很快；③ 下周美联储 Warsh 的表态可能比油价更重要——如果通胀预期升温，加息话题将重回桌面。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源ETF）— 油价博弈加剧，霍尔木兹协议是短期关键变量</div>
+        <div class="source">来源：<a href="https://investinglive.com/commodities/oil-surges-as-strait-of-hormuz-shipping-fears-lift-risk-premium/" target="_blank">InvestingLive</a> · <a href="https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-august-6-crude-oil-dips-below-80-on-hopes-iran-oman-deal-could-end-iran-war-what-are-experts-saying/articleshow/132979497.cms" target="_blank">Economic Times</a> · <a href="https://gulfnews.com/world/mena/iran-oman-hormuz-deal-in-final-stage-oil-holds-near-80-as-us-redirects-48-ships-houthis-strike-saudi-tanker-1.500632133" target="_blank">Gulf News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [铜钴矿 — 刚果(金)/多晶硅 — 中国] → 中游 [冶炼/加工] → 下游 [电池/半导体/太阳能] — 当前受损环节：上游精矿出口（刚果禁令）+ 多晶硅对美出口（232 关税），受益环节：中游采冶一体化企业</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>美联储 · 油价 · 黄金</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储 · Warsh</span>
+        <h4>美联储主席 Warsh "准备好加息"：若通胀数据偏热且市场提高加息预期，将采取行动</h4>
+        <p>据新浪财经 8/7 操盘必读引述知情人士，若未来几周公布的通胀数据偏热，且市场进一步提高对加息的预期，美联储主席 Warsh 已准备好加息。Annex Wealth Management 分析指出，9 月加息仍有可能，8/27-29 Jackson Hole 研讨会是 Warsh 解释美联储立场的下一个重要窗口。6 月 Core PCE 通胀已降温，但油价飙升可能逆转这一趋势。FedWatch 显示官员对"年内可能加息"的支持在增强。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是本周最重要的宏观信号。对 lainy 的三种情景：① 通胀持续降温 → Warsh 按兵不动 → 风险资产上涨；② 油价推高通胀 → Warsh 加息 → 全球资本市场剧烈震荡；③ Jackson Hole 前市场可能"抢先定价"加息预期，导致 8 月下旬波动加剧。当前市场共识是"按兵不动"，但 Warsh 的鹰派倾向意味着情景 ② 的概率不可忽视。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，加息直接利空）/ GLD 黄金（$4,298 避险需求）/ 513130 港股通科技ETF — Warsh 鹰派立场压制估值</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/cpbd/2026-08-07/doc-inimmtwt3400767.shtml" target="_blank">新浪财经</a> · <a href="https://blog.annexwealth.com/2026/08/06/4m-monthly-macro-market-musings-stocks-absorbed-the-shocks/" target="_blank">Annex Wealth</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>COMEX 黄金 $4,298.7（-0.15%）：油价飙升+地缘风险支撑，但美元走强压制涨幅</h4>
+        <p>8/6 COMEX 黄金期货微跌 <strong>-0.15%</strong> 报 <strong>$4,298.7</strong>/盎司，COMEX 白银 -0.81% 报 $61.78。黄金在 $4,200-4,300 区间震荡：油价飙升提供避险支撑，但美元走强和霍尔木兹乐观预期压制涨幅。美国已退还约 <strong>$1000 亿</strong>违法关税（占 IEEPA 项下 $1650 亿总额的 60%），退款速度超预期，市场流动性增加。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,300 关口反复拉锯。关键变量仍然是油价和 Warsh 的态度——如果加息预期升温，美元走强将压制黄金；如果霍尔木兹协议达成+地缘降温，避险需求减弱也将打压金价。但 <strong>$1000 亿</strong>关税退还 = 市场流动性增加 = 长期支撑黄金和风险资产。对 lainy：黄金当前处于"等待方向"阶段，Jackson Hole 后可能明确趋势。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金ETF）— 短期震荡，中长期央行买盘+地缘风险支撑</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/cpbd/2026-08-07/doc-inimmtwt3400767.shtml" target="_blank">新浪财经</a> · <a href="https://sputniknews.cn/20260806/1072659727.html" target="_blank">卫星通讯社</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">宇树科技 IPO</span>
+        <h4>宇树科技 8/7 科创板上市：定价 150.8 元，市值 610 亿，DeepSeek/腾讯参与战配，73 天最快审核纪录</h4>
+        <p>A 股"人形机器人第一股"宇树科技（688836.SH）8/7 披露科创板发行公告：发行价 <strong>150.80</strong> 元/股，发行数量 4044.6 万股，募资约 <strong>60.99 亿</strong> 元，超募约 17 亿。从 3/20 获受理到 6/1 过会仅 <strong>73 天</strong>，创 2026 年迄今最快 IPO 审核纪录。战配方面，DeepSeek（杭州深度求索）获配 93.3 万股（约 1.41 亿元，限售 36 个月），中石油昆仑资本、南方电网产融控股、天翼资本（中国电信）均参与。发行后市盈率 219.23 倍，远高于行业 38.56 倍。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 A 股"人形机器人"赛道的标志性 IPO。对 lainy 的框架：① DeepSeek 参与战配且限售 36 个月 = "AI 大模型 + 机器人硬件"的生态绑定；② 219 倍市盈率说明市场对机器人赛道的估值已经"透支"了相当多预期；③ 60 亿募资可能对 A 股短期流动性有虹吸效应，但长期利好科创板的"硬科技"定位。</div>
+        <div class="ticker">📌 关联标的：688836 宇树科技（今日上市）/ 002747 埃斯顿（机器人概念）/ 688169 石头科技 — 人形机器人赛道标志性 IPO</div>
+        <div class="source">来源：<a href="https://finance.eastmoney.com/a/202608063834171687.html" target="_blank">东方财富</a> · <a href="http://www.china.com.cn/txt/2026-08/07/content_118637234.shtml" target="_blank">中国网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：Warsh 加息态度 + 霍尔木兹协议 = 8 月方向决定因素</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/6 沪指 +0.57% 报 3900.35 / 深成指 -0.24% / 创业板 -0.55% / 成交 2.53 万亿（缩量 1309 亿）</h4>
+      <p>三大指数震荡分化，沪指较强。煤炭板块集体走强，昊华能源、潞安环能等近 10 股涨停；数字货币概念活跃，飞天诚信、翠微股份涨停；电子特气概念持续走强，中巨芯 20cm 涨停；PCB 概念回升，宝鼎科技 5 天 4 板。跌幅方面：电力板块领跌，立新能源逼近跌停；教育股下挫，中公教育、凯文教育跌超 7%。<b>今日关注：</b>宇树科技上市对流动性的虹吸 + 内幕交易新规效应 + 美股存储股崩盘对 A 股半导体情绪的传导。<b>机构观点：</b>中信建投称 AI 算力产业链进入"下游需求倒逼上游产能"的深度爆发期，Lumentum 产能已售至 2028 年；中金指核聚变形成中美双强格局，投资占全球 80%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/6 恒指 -1.49% / 恒科 -2.28% / 成交 2552 亿港元（资金面收缩）</h4>
+      <p>科网股集体走弱拖累大市：百度 -4%+，阿里、小米、快手、腾讯均跌近 3%，京东 -2%。保险全线重挫，电信、地产、油气蓝筹齐跌。AI 主线内部分化：存储/半导体概念走跌，但光通信/PCB 概念因供给短缺延续反弹。煤炭、黄金等防御资产逆势走强。<b>沽空：</b>总沽空 273.88 亿港元（占恒指成交 10.73%），宁德时代、友邦、小米沽空金额居前。<b>机构判断：</b>国元国际指出港股大幅下行空间有限，但趋势性上涨条件不充分——海外 AI 基建进入财报验证期、油价/利率风险、美联储加息窗口打开等因素压制估值修复。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/6 道指 -0.85% / S&P -0.18% / 纳指 -0.06% / 存储股崩盘 + SpaceX 涨 6%</h4>
+      <p>三大指数集体收跌，暂停本周强势反弹。道指从记录高位 54,428 回落。存储股领跌：Roundhill 存储 ETF -4%+，西部数据 -13%+，铠侠ADR/闪迪 -6%+，SK 海力士ADR -5%。但 SpaceX 涨逾 <strong>+6%</strong>，总市值重回 $1.5 万亿上方；微软涨超 <strong>+2%</strong> 创去年 11 月以来新高。欧洲主要股指多数上涨，德国 DAX30 +0.15%。<b>关键：</b>WTI 原油 +2.75%、Brent +3.83%，国债收益率上行。利弗莫尔中概股龙头指数微涨 0.13%。今晚关注非农就业数据（Reuters 预期 +8 万人）。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>白酒 · 家电 · 政策</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">五粮液</span>
+        <h4>第八代五粮液批价跳涨至 745 元（+15 元），五粮液集团增持 2 亿元——白酒龙头释放价格+信心双信号</h4>
+        <p>第三方报价平台显示，自 8/4 起第八代五粮液市场批价从 730 元攀升至 <strong>745 元</strong>，引发市场关注。同日五粮液公告，五粮液集团累计增持公司股份约 <strong>2 亿元</strong>。批价上涨+集团增持同步进行，释放管理层对股价被低估的信号。但行业层面，虎嗅分析指出白酒行业库存超万亿，五粮液在建工程 7 年涨 8 倍至 70.34 亿元，经销商陷入亏损困境。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>批价是白酒行业的"晴雨表"——批价上涨说明渠道需求回暖或控量保价见效。对 lainy 的框架：① 五粮液批价从 730 涨到 745 是积极信号，但行业整体库存压力仍在；② 集团增持 2 亿 = "真金白银"看好，但金额不算大；③ 对比茅台（批价稳定在 2200+），五粮液的批价修复更关键——如果能持续到 800 元，估值有重估空间。关注中秋旺季验证。</div>
+        <div class="ticker">📌 关联标的：000858 五粮液（批价修复+增持利好）/ 600519 贵州茅台（行业锚）— 白酒龙头释放价格信号，但行业库存仍承压</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/cpbd/2026-08-07/doc-inimmtwt3400767.shtml" target="_blank">新浪财经</a> · <a href="https://www.huxiu.com/article/4881134.html" target="_blank">虎嗅</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">以旧换新</span>
+        <h4>2026 上半年以旧换新带动销售 1.1 万亿元、惠及 1.5 亿人次——家电/3C 消费政策效果持续释放</h4>
+        <p>商务部数据显示，2026 年上半年消费品以旧换新累计带动相关商品销售额 <strong>1.1 万亿元</strong>，惠及 <strong>1.5 亿人次</strong>。政策叠加暑期消费旺季，在广西南宁等地掀起家电、3C 产品换新消费热潮。新华网报道指出，多举措提升消费体验、释放夏日经济活力成为当前消费政策主线。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>1.1 万亿的以旧换新规模说明政策刺激效果显著——这是"用财政补贴撬动消费"的典型路径。对 lainy：① 家电龙头（美的、海尔、格力）直接受益；② 3C 产品换新利好小米、华为生态链；③ 但需注意——以旧换新是"前置消费"，可能透支下半年需求，Q4 数据可能回落。</div>
+        <div class="ticker">📌 关联标的：000333 美的集团 / 600690 海尔智家 / 000651 格力电器 / 1810.HK 小米集团 — 以旧换新政策持续受益</div>
+        <div class="source">来源：<a href="https://www.news.cn/fortune/20260806/71a33846c2f44ee2a77c72ec03180691/c.html" target="_blank">新华网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料] → 中游 [家电/白酒制造] → 下游 [渠道/零售/餐饮] — 当前受益环节：下游以旧换新政策驱动，受损环节：中游白酒制造（库存压力+在建工程过剩）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">周杰伦</span>
+        <h4>周杰伦"私生子"传闻登热搜第一：卓伟式爆料遭官方辟谣，杰威尔声明"已委托律师证据保全"</h4>
+        <p>8/5 狗仔卓伟友人通过视频爆料称"华语乐坛三字歌唱天王"疑育有十余岁私生子，未点名、未出示实锤证据。网友根据"西安公司""刘姓女股东"等线索关联周杰伦，话题冲上热搜第一。8/6 周杰伦公司在社媒晒网球照回应"照打"，杰威尔音乐发声明称"均属不实信息，刻意影射以博取流量，已委托律师进行证据保全"。歌迷会官微发文批评"网络造谣成本太低"。公开记录显示，被关联的刘若雪 2014 年退出西安某餐饮公司，周杰伦 2021 年退出，两人退出时间相差 7 年。</p>
+        <div class="why">🦞 <b>花边点评：</b>典型的"谜语式爆料"——不点名、不举证，靠网友"对号入座"传播。周杰伦方面的回应很聪明：晒网球照="我没在怕"，声明="我会告你"。lainy 如果刷到这个热搜，现在知道结论了：无实锤，已进入法律程序。</div>
+        <div class="source">来源：<a href="https://news.sina.com.cn/c/2026-08-06/doc-inimiqxt4074950.shtml" target="_blank">新浪新闻</a> · <a href="https://news.ifeng.com/c/8vMa6HPCDvA" target="_blank">凤凰网</a> · <a href="https://www.stheadline.com/zh-hans/film-drama/3601534/" target="_blank">星岛头条</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>王安宇古装骑共享电动车路透刷屏：网友直呼"起猛了看见古人骑电驴"</h4>
+        <p>演员王安宇在古装剧《一念江南》片场被拍到身着宋制古装长衫、头戴古风发冠，却骑着一辆共享电动车穿行街巷，后视镜里还意外露出一张萌脸。这一古今混搭画面 8/2-3 曝光后迅速刷屏热搜，网友评论"起猛了看见古人骑电驴"。该剧正在拍摄中，路透话题持续发酵。</p>
+        <div class="why">🦞 <b>轻松一下：</b>这种"古今穿越"的路透比精修剧照更有传播力——因为它"不完美"但真实。lainy 如果在热搜刷到"古人骑电驴"，就是这位了。古装剧路透刷屏通常是播出前的免费营销。</div>
+        <div class="source">来源：<a href="https://tags.sina.com.cn/star_wanganyu" target="_blank">新浪娱乐</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">字节跳动</span>
+        <h4>字节跳动 CEO 梁汝波年中全员会：大模型坚持自研，"接受短期落后，坚持优化长期"</h4>
+        <p>8/6 字节跳动举办 2026 年度年中全员会。CEO 梁汝波表示，字节跳动大语言模型会坚持自研，"做好基本功，接受短期落后，坚持优化长期，最重要的是动作不要变形"。这番表态被解读为：字节不会因为 DeepSeek/阿里 Qwen 的价格战而急于跟降，将走"长期主义"路线。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>"动作不要变形"这句话很字节——意思是不会为了追赶对手而打乱自己的节奏。对 lainy 的行业视角：中国 AI 大模型赛道正在分化——DeepSeek 走"低价 API"路线，阿里走"开源+参数规模"路线，字节走"长期自研"路线。不同策略意味着不同商业化时间表。</div>
+        <div class="source">来源：<a href="https://finance.sina.com.cn/stock/cpbd/2026-08-07/doc-inimmtwt3400767.shtml" target="_blank">新浪财经</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NASA</span>
+        <h4>NASA PUNCH 任务突破：太阳风暴预报精度提升 10 倍，CME 抵达时间误差控制在 30 分钟内</h4>
+        <p>NASA 的 PUNCH（日冕与日球层统一偏振成像仪）任务团队宣布突破性成果：首次借助连续追踪的太阳观测影像，将一次日冕物质抛射（CME）抵达地球的时间预测精度控制在了 <strong>30 分钟</strong> 以内——较此前精度提升约 <strong>10 倍</strong>。该结果已在"空间研究委员会科学大会"上公布，论文正在《空间天气》期刊接受同行评审。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>太阳风暴不只是科幻——1859 年的"卡灵顿事件"如果发生在今天，可能导致全球电网瘫痪。30 分钟的预报精度意味着电网和卫星运营商有足够时间采取保护措施。对 lainy：这是"基础科学→实用技术"的典型案例，NASA 的投资正在产生可量化的回报。</div>
+        <div class="source">来源：<a href="https://tech.ifeng.com/c/8vNKKmrjMiU" target="_blank">凤凰科技</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
