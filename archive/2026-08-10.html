@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-10</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 10 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>SpaceX+Tesla 斥 $168 亿建 Terafab 芯片厂：</b>德州 Grimes County，1 亿平方英尺，垂直整合 AI 芯片+内存+封装+测试，Musk 称"将是地球上最大最值钱的建筑"；同周 AMD 收购推理芯片创业公司 Taalas，Anthropic 自建芯片团队——AI 芯片"去英伟达化"三条线同时加速。</li>
+      <li><b>五角大楼要求军工 21 天内提交加速生产方案：</b>伊朗战争消耗大量弹药库存，美军武器储备告急；霍尔木兹海峡仍实质关闭（第 162 天），Brent 在 $83-84 区间震荡，伊朗开出通行长清单——美军撤封锁、解制裁、还资产。</li>
+      <li><b>7 月非农意外转负 -2.3 万：</b>远逊预期 +8.3 万，加息预期骤降温；标普 500 创历史新高 7,757，三大指数创 4 月以来最佳周涨幅；中国 7 月出口 +23%，贸易顺差 $1125 亿连续三个月破千亿。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">SpaceX × Tesla · Terafab</span>
+        <h4>$168 亿史诗级芯片厂落地：SpaceX+Tesla 联合建 Terafab，德州 1 亿平方英尺垂直整合</h4>
+        <p>8/6 SpaceX 和 Tesla 正式确认，合资半导体工厂 Terafab 将建于德州 Grimes County（休斯顿北部）。首期投资 <strong>$168 亿</strong>，规划面积 <strong>1 亿平方英尺</strong>（约 9.3 平方公里），创造 3,000+ 就业岗位。工厂覆盖 AI 芯片制造、内存、先进封装、测试全链条——Musk 称其"将是地球上最大最值钱的建筑"。德州州长 Abbott 宣布 SpaceX 获 <strong>100% 房产税豁免</strong>。Terafab 将使用天然气发电（非 Tesla 太阳能），Bloomberg 报道称 SpaceX 承认"买不到足够的芯片用于轨道 AI"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是美国芯片本土化最激进的一步——不走 TSMC/三星路线，而是从零自建垂直整合。对 lainy 的金融视角：① Musk 的逻辑是"AI 算力 = 新石油"，他要把制造端也攥在手里，和当年 Ford 造 River Rouge 工厂一个思路；② $168 亿只是首期，最终投资可能达 $550 亿（Tom's Hardware 报道）；③ 天然气供电而非太阳能——说明 AI 算力能耗已大到新能源供电跟不上；④ 对英伟达不是直接威胁（SpaceX 自用），但长期看更多大厂走自研芯片路线是趋势。</div>
+        <div class="ticker">📌 关联标的：TSLA（Tesla）/ SpaceX（未上市）/ NVDA（英伟达，长期自研趋势的受损方）/ LRC（Lam Research，设备商受益）— Musk 自建芯片厂利好半导体设备商</div>
+        <div class="source">来源：<a href="https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/" target="_blank">TechCrunch</a> · <a href="https://www.usatoday.com/story/news/state/texas/2026/08/07/elon-musk-spacex-tesla-terafab-texas-16-billion-chip-factory-investment/91212702007/" target="_blank">USA Today</a> · <a href="https://www.tomshardware.com/tech-industry/semiconductors/terafab-starts-to-take-shape-100-million-square-feet-of-manufacturing-space-and-usd16-8b-initial-capital-investment" target="_blank">Tom's Hardware</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD × Taalas</span>
+        <h4>AMD 收购 AI 推理芯片创业公司 Taalas：把 AI 模型"刻进"硅片，推理性能提升 10 倍</h4>
+        <p>8/6 AMD 宣布收购多伦多创业公司 Taalas，后者核心技术是将 AI 模型权重直接刻入硅片（hardwire），实现推理性能数量级提升，功耗降至传统 GPU 的 1/10。Taalas 的加速器为单一 AI 模型定制——不走通用 GPU 路线，而是"一模型一芯片"。Bloomberg 称这是 AMD 在推理市场挑战英伟达的最新动作。AMD 股价今年已涨 <strong>125%</strong>（YTD）。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>AI 芯片市场正在分化为"训练"和"推理"两条赛道。训练端英伟达 GPU 仍垄断，但推理端——把训练好的模型跑起来——可能不需要 GPU 的通用性。Taalas 的路线是"专用化到极致"，每个模型一个芯片，功耗降 90%。如果这条路走通，英伟达在推理市场的定价权会被挑战。对 lainy：关注 AMD vs NVDA 的"推理替代"叙事，这是未来 1-2 年芯片行业最大的变量。</div>
+        <div class="ticker">📌 关联标的：AMD（收购方，推理市场突围）/ NVDA（英伟达，推理端定价权长期承压风险）/ SOXX（半导体 ETF）— AMD 受益，NVDA 推理端份额承压</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/06/amd-buys-taalas-startup-that-hardwires-ai-models-into-its-silicon.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-06/advanced-micro-devices-to-buy-startup-taalas-for-new-ai-chips" target="_blank">Bloomberg</a> · <a href="https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market" target="_blank">AMD IR</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Anthropic 自建芯片</span>
+        <h4>Anthropic 组建自研芯片团队：Claude 要跑在自己的硅片上，AI 巨头"去英伟达化"加速</h4>
+        <p>8/5 Anthropic 确认正在组建内部芯片团队，为 Claude 模型设计定制硅片。公司同时继续使用 AWS、Google、Nvidia、AMD 硬件。这是继 Google（TPU）、Meta（MTIA）、OpenAI（传自研）后，第四家大 AI 实验室走自研芯片路线。Forbes 指出，Anthropic 的目标是降低 token 成本、提升推理效率，同时继续大规模采购 Google TPU 和 Broadcom 定制芯片。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>AI 实验室纷纷自研芯片，核心逻辑是"推理成本 = AI 时代的运营成本"——谁控制了芯片，谁就控制了单位经济效益。对 lainy 的投资框架：① 英伟达的"独占"正在被多方向侵蚀（SpaceX 自建、AMD 收购 Taalas、Anthropic/OpenAI/Google/Meta 自研）；② 但短期内英伟达仍是训练端唯一选择；③ Broadcom 是隐形受益者——Google TPU、Meta MTIA 都由 Broadcom 协助设计。</div>
+        <div class="ticker">📌 关联标的：NVDA（短期训练端垄断不变，长期推理端承压）/ AVGO（Broadcom，多客户定制芯片设计受益）/ AMD（推理市场突围）</div>
+        <div class="source">来源：<a href="https://www.forbes.com/sites/jonmarkman/2026/08/06/anthropic-enters-the-ai-chip-race-with-in-house-chip-team/" target="_blank">Forbes</a> · <a href="https://www.businessinsider.com/anthropic-in-house-silicon-chip-team-claude-2026-8" target="_blank">Business Insider</a> · <a href="https://techcrunch.com/2026/08/05/anthropic-is-hiring-an-ai-chip-design-team/" target="_blank">TechCrunch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Jeff Dean 离开 Google</span>
+        <h4>Jeff Dean 离开 Google 27 年创办 Discovery Loop：用 AI 自动化科学研究流程</h4>
+        <p>8/5 Jeff Dean（Google 第 30 号员工、首席科学家）与 Sanjay Ghemawat、Oriol Vinyals、Quoc Le 四人同时离开 Google，创办 Discovery Loop——一家用 AI 自动化科学发现流程的公共受益公司。计划用"高辛烷值算法"同时启动和迭代数千个实验，部分自动化研究过程。Google 确认是其创始投资方和 Cloud 合作伙伴。同日，Demis Hassabis 退任 Google DeepMind 日常管理，转任董事长，Koray Kavukcuoglu 升任 SVP。WIRED 比喻："像 Mick Jagger 和 Keith Richards 离开滚石另组乐队"。</p>
+        <div class="why">🦞 <b>读给你听：</b>Jeff Dean 是 Google AI 的"教父"级人物——MapReduce、BigTable、TensorFlow 都出自他手。他离开意味着 Google AI 的人才壁垒出现裂缝。但更值得关注的是 Discovery Loop 的方向："AI 自动化科学"——如果 AI 能自动做实验、发现规律，那科研产业的效率会指数级提升。对 lainy：这是"AI 从工具变科学家"的早期信号，长期看制药、材料、能源行业都会被重塑。</div>
+        <div class="ticker">📌 关联标的：GOOGL（Google，人才流失短期利空）/ 私募市场（Discovery Loop，Google 作为创始投资方）— Google 生态系统的"内部创业"模式</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/08/05/technology/google-researchers-ai-startup.html" target="_blank">New York Times</a> · <a href="https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/" target="_blank">TechCrunch</a> · <a href="https://www.wired.com/story/jeff-dean-google-discovery-loop-startup/" target="_blank">WIRED</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [设备 — ASML/Lam Research] → 中游 [代工 — TSMC/三星/SpaceX Terafab] → 下游 [芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂/AI 实验室 — MSFT/GOOG/Anthropic] — 当前趋势：下游大厂自研芯片 + SpaceX 跨界自建代工 = 垂直整合加速，英伟达中间环节长期定价权受侵蚀</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">五角大楼 · 武器库存</span>
+        <h4>五角大楼要求军工企业 21 天内提交加速生产方案：伊朗战争消耗大量弹药库存</h4>
+        <p>8/8-8/9 据 Washington Post、Bloomberg、AP 等多家报道，美国国防部副部长向主要军工企业发出备忘录，要求在 <strong>21 天内</strong>提交大幅加速武器生产和交付的方案。核心背景：伊朗战争消耗了大量精确制导弹药，美军库存"严重短缺"。CNN 周日直播称 Trump 对武器供应问题"非常沮丧"，因为这影响他在谈判中的筹码。五角大楼确认正在通过中间人与伊朗进行"信息传递"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是伊朗战争进入"后勤消耗阶段"的信号——战争持续 5 个月，美国军工产能跟不上消耗速度。对 lainy 的金融视角：① 军工股短期利好（LMT/RTX/NOC 拿到更多订单）；② 但也暴露了"美国军事工业基础不足以支撑长期高强度冲突"的结构性问题；③ 如果武器库存紧张迫使美国更早寻求停战，油价可能有 $10-15 的回落空间。</div>
+        <div class="ticker">📌 关联标的：LMT（洛克希德·马丁）/ RTX（雷神技术）/ NOC（诺斯罗普·格鲁曼）— 军工订单受益；Brent 原油（停战预期则回落）</div>
+        <div class="source">来源：<a href="https://www.washingtonpost.com/politics/2026/08/08/iran-war-weapons-stockpile-pentagon-defense-industry/40384f66-9396-11f1-9fdc-0a725c989a7b_story.html" target="_blank">Washington Post</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-08/pentagon-asks-defense-firms-to-boost-production-of-key-systems" target="_blank">Bloomberg</a> · <a href="https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump" target="_blank">CNN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹 · 油价</span>
+        <h4>霍尔木兹海峡第 162 天实质关闭：Brent $83.55，伊朗发布通行限制草案开长清单</h4>
+        <p>据 straits.live 实时追踪，截至 8/9 霍尔木兹海峡仍对商业航运实质关闭（第 162 天），8/2 仅 2 艘船通过 vs 正常日均 73 艘。伊朗国家通讯社 Fars 发布海峡通行管理草案，包含限制性条件。Brent 周四涨 <strong>3.8%</strong> 至 $82.49，周五继续涨至 <strong>$83.55</strong>（+1%+），全周在 $81-84 区间震荡。伊朗-阿曼谈判"接近达成"但未签署最终协议，伊朗开出条件清单：美军撤封锁、解除制裁、归还在美资产。同时，大量伊朗油轮仍停在伊朗海岸，美国封锁仍物理执行中。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>市场对霍尔木兹的定价出现了"钝化"——海峡关闭 5 个月了，油价却从 3 月高点 $118 回落到 $83 区间。这说明市场已经 price in 了"长期关闭但不会升级"的预期。但风险在于：如果伊朗-阿曼谈判彻底破裂，或者发生新的军事摩擦，油价可能快速重返 $100+。对 lainy：当前油价区间 ($80-85) 对全球通胀影响中性，但如果突破 $90，美联储加息压力会回来。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / XLE（能源 ETF）— 油价区间震荡，军工摩擦升级则上行</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/06/oil-price-iran-war-strait-hormuz-oman-deal.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/business/energy/oil-rises-concerns-over-strait-hormuz-reopening-plans-2026-08-07/" target="_blank">Reuters</a> · <a href="https://straits.live/" target="_blank">Straits.live 实时追踪</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>美伊通过中间人传递信息：停战谈判仍在进行，但前景仍不确定</h4>
+        <p>ABC News 周日报道，美国与伊朗目前通过中间人传递信息，特朗普称停战协议"接近达成"但尚未签署。伊朗方面表示谈判仍有"不确定性"。World Economic Forum 月度总结指出：美伊战争已"深化为能源、财政和政治危机"，同时 Hamas 同意解除武装、乌克兰任命新军事总指挥。Conference Board 8 月政策报告称"这是一个地缘政治的 8 月"——中东冲突更激烈、霍尔木兹和红海航线均受威胁。</p>
+        <div class="why">🦞 <b>市场含义：</b>停战谈判"在推进但不确定"是最让市场纠结的状态——既不能完全 price in 和平（所以油价有溢价），又不能完全 price in 升级（所以股市不崩）。本周美股期货周日夜间小幅走低（CNBC 报道），反映的就是这种"谈判疲劳+不确定性"情绪。如果谈判在未来 2 周内有实质突破，全球风险资产可能迎来一轮 risk-on。</div>
+        <div class="ticker">📌 关联标的：SPY（美股，停战利好风险偏好）/ Brent 原油（停战则快速回落至 $70s）/ GLD 黄金（避险需求降温）</div>
+        <div class="source">来源：<a href="https://abcnews.com/International/live-updates/iran-live-updates-trump-deal-imminent-iran-oman/?id=135317231" target="_blank">ABC News</a> · <a href="https://www.weforum.org/stories/geo-economics-and-politics/iran-us-war-and-other-geopolitical-stories-to-know-this-month/" target="_blank">World Economic Forum</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹海峡实质关闭 162 天] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [军工消耗 — LMT/RTX 弹药库存告急] — 当前受损环节：中游航运（海峡关闭，tanker 可用率极低）+ 美军弹药库存</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>非农转负 · 加息预期降温 · 中国出口强势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">7 月非农</span>
+        <h4>7 月非农意外转负 -2.3 万！远逊预期 +8.3 万，加息预期骤降温</h4>
+        <p>8/7 美国 BLS 公布 7 月就业数据：非农就业 <strong>-23,000</strong> 人（预期 +83,000），6 月数据被下修至 +20,000。失业率微降至 <strong>4.1%</strong>（但主要因劳动力退出）。时薪同比涨 <strong>3.2%</strong>，低于 CPI 的 3.5%，实际工资仍在缩水。BLS 称这是"变化不大"的月份，但方向从正转负。市场解读：劳动力市场终于松动，美联储 9 月加息概率从 62% 降至 40% 以下。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要关注的宏观数据。7 月非农转负 = 劳动力市场转折信号。对美联储的影响：① Warsh 主席在 7/29 FOMC 以 9-3 投票维持利率 3.50-3.75%（三人异议支持加息），但非农转负给了"按兵不动"更强理由；② Kashkari 仍在说"该加息"，但弱就业让他声音变弱；③ 如果 8 月非农继续为负，9 月降息讨论会出现。对 lainy 的框架：就业走弱 = 消费走弱 = 经济放缓 = 利率下行预期 = 成长股估值受益。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（弱就业 = 低利率预期 = 成长股受益）/ TLT（长债，降息预期受益）/ DXY 美元（走弱）</div>
+        <div class="source">来源：<a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS 官方</a> · <a href="https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/2026/08/07/business/economy/jobs-report-interest-rates-fed.html" target="_blank">New York Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">中国出口</span>
+        <h4>中国 7 月出口 +23%：贸易顺差 $1125 亿连续三个月破千亿，全年或破去年纪录</h4>
+        <p>8/7 中国海关公布 7 月贸易数据：出口同比增长 <strong>+23%</strong>，进口增长 <strong>+27.5%</strong>（较 6 月 +36% 放缓），贸易顺差 <strong>$1125 亿</strong>（预期更高）。这是连续第三个月顺差超千亿美元，中国正以年均 <strong>$1.19 万亿</strong> 的步伐运行——有望超过去年创纪录的贸易顺差。NYT 指出，尽管全球贸易保护主义上升，中国出口机器仍在全速运转。Fortune 报道称高科技产品出口是主要驱动力。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>中国出口持续超预期，核心原因是：① AI 硬件需求拉动电子产业链出口（芯片、服务器零部件）；② 新能源车/电池/光伏出口保持高增长；③ 全球对"中国制造"的依赖在高利率环境下加深（便宜好用）。但风险在于：贸易顺差越大，越多国家会搞关税壁垒。对 lainy：出口强势 = 人民币有支撑 = A 股基本面有底。但需关注美国大选后关税升级风险。</div>
+        <div class="ticker">📌 关联标的：513100 纳指 ETF（中国出口强 = 全球需求尚可）/ 600028 中国石化 / 300750 宁德时代（新能源出口受益）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/07/china-july-trade-exports-imports-surplus-imbalance-tariffs-.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/2026/08/07/business/china-trade-exports.html" target="_blank">New York Times</a> · <a href="https://fortune.com/2026/08/07/china-export-engine-high-tech/" target="_blank">Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美联储 · 利率</span>
+        <h4>FOMC 7/29 以 9-3 投票维持利率 3.50-3.75%：三名官员异议支持加息，"分裂的美联储"</h4>
+        <p>Crestwood Advisors 8 月报告指出，7/29 FOMC 会议以 9-3 投票维持联邦基金利率 <strong>3.50-3.75%</strong> 不变——这是连续第五次按兵不动。三名异议者（Hammack/Kashkari/Logan）支持加息。主席 Warsh 引述说"我要一场激烈的家庭辩论，我得到了"。Core PCE 6 月同比 <strong>3.3%</strong>（较 5 月 3.4% 回落），但仍远高于 2% 目标。CME FedWatch 显示 9 月加息概率在非农数据后从 62% 降至 40% 以下。下一次 FOMC 会议：9/16。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"分裂的美联储"是当前全球资产定价的最大变量。对 lainy 的框架：① 3 名异议者 = 内部鹰派声音不小，如果 8 月通胀数据反弹，9 月加息不是不可能；② 但非农转负 + 油价回落 = 通胀压力减轻 = 鸽派弹药增加；③ 市场共识：9 月维持不变概率 ~60%，加息概率 ~30%，降息概率 ~10%。如果 9 月真的加息，美股可能回调 5-8%。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（利率方向直接驱动）/ GLD 黄金（加息则承压，按兵不动则受益）/ 513130 港股通科技ETF</div>
+        <div class="source">来源：<a href="https://www.crestwoodadvisors.com/august-2026-economic-and-market-update-a-divided-fed-meets-a-divided-market/" target="_blank">Crestwood Advisors</a> · <a href="https://www.cnbc.com/2026/08/05/feds-kashkari-says-now-is-the-time-to-start-slowly-moving-rates-up.html" target="_blank">CNBC</a> · <a href="https://growbeansprout.com/tools/fedwatch" target="_blank">FedWatch</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [就业/通胀数据] → 中游 [美联储利率决策] → 下游 [风险偏好/资金流向/汇率] — 当前关键变量：8 月非农 + CPI 数据将决定 9/16 FOMC 方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/7（上周五）沪指 +1.02% 报 3940 / 深成指 +1.42% / 创业板 +1.35% / 成交 2.66 万亿</h4>
+      <p>8/7 四大指数全线收涨，沪指收复 3900 关口。CSI 300 涨 <strong>+0.93%</strong> 报 4,694。Wind 数据显示沪市成交 2.66 万亿，量能保持在高位。本周来看，沪指累计涨 <strong>+2.81%</strong>、深成指 <strong>+5.39%</strong>、创业板 <strong>+6.55%</strong>——AI 回暖 + 消费以旧换新政策加码为主要驱动。中证证券称近期 A 股回调为"技术性修正"而非"去杠杆冲击"，与韩国 Kospi 7 月暴跌 22% 性质不同。<b>重点异动：</b>医疗服务板块涨停潮、半导体 ETF 连续净流入。今日 A 股周末，关注周一开盘对周末国际消息的消化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/7（上周五）恒指 +0.54% 报 25,668 / 科指 +0.78% / 周线 -0.84%</h4>
+      <p>8/7 恒指收 <strong>25,668</strong>，涨 137 点 (+0.54%)，受中国出口数据超预期提振。阿里涨超 2% 带动科技板块。但周线仍跌 <strong>-0.84%</strong>——主因内地对港险征税消息冲击保险股（AIA/HSBC 全周承压）。上周恒指在 25,000-26,000 区间反复。<b>本周关注：</b>① 美联储利率预期变化对港股流动性的影响（鸽派利好港股反弹）；② 周末美伊谈判进展。Panthere Group 指出港股过去 3 个交易日中有 2 日收跌，此前 7 连涨（+1,050 点/4.2%）的势头已断。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/7（上周五）道指 54,036 (+0.28%) / S&amp;P 7,758 (+0.62%) 创新高 / 纳指 26,691 (+1.30%) / 周涨 4 月以来最佳</h4>
+      <p>8/7 标普 500 创历史新高 <strong>7,757.64</strong>，纳指大涨 <strong>+1.30%</strong> 报 26,690，道指小涨 <strong>+0.28%</strong> 报 54,036。三大指数录得 4 月以来最佳周涨幅。核心驱动：7 月非农转负 → 加息预期降温 → 软件和 mega-cap tech 领涨（Salesforce +2.47% 领跑道指）。周日夜 S&amp;P 期货小幅走低，投资者消化伊朗谈判不确定性。Reuters 指出本周通胀数据（CPI/PCE）将是下一考验。Schwab 评论："报告应给美联储更多信心维持利率不变。"</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>以旧换新 · 消费趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">以旧换新</span>
+        <h4>消费品以旧换新半年带动销售 1.1 万亿、惠及 1.5 亿人次：绿色智能换新潮持续</h4>
+        <p>商务部数据显示，2026 上半年消费品以旧换新累计带动相关商品销售额 <strong>1.1 万亿元</strong>，惠及 <strong>1.5 亿人次</strong>。全年 2000 亿设备更新资金已全部下达，支持 22 个领域约 1.1 万个项目。南京等城市数据显示，1 级能效空调以旧换新占比达 <strong>96%</strong>，折扣店零售额增速超 <strong>40%</strong>。重庆将家电购新补贴范围从 6 类扩至 14 类，新增投影仪、空气净化器等。电商平台实现"无感补贴、即时兑现"——结算页面自动减免。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>1.1 万亿的以旧换新规模，相当于上半年社零总额的 ~5%——这不是"刺激消费"，是"用财政补贴撬动存量替换需求"。对 lainy 的消费股框架：① 家电龙头（美的/海尔/格力）直接受益，但价格战仍在压缩利润；② 绿色智能升级 = 1 级能效产品占比提升 = 产品结构升级 = ASP 提升的逻辑成立；③ 折扣店 +40% 增速 = 消费降级趋势确认，拼多多/奥乐齐类业态受益。</div>
+        <div class="ticker">📌 关联标的：000333 美的集团 / 600690 海尔智家 / 000651 格力电器（以旧换新直接受益）— 但价格战压缩利润，需看 ASP 提升 vs 降价幅度</div>
+        <div class="source">来源：<a href="https://www.news.cn/fortune/20260806/71a33846c2f44ee2a77c72ec03180691/c.html" target="_blank">新华网</a> · <a href="http://finance.people.com.cn/n1/2026/0806/c1004-40775131.html" target="_blank">人民网</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-08-05/doc-inimfmym3693931.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费结构</span>
+        <h4>服务零售 +5.3% 远超商品零售 +1.1%：中国消费换轨趋势延续，"买体验"替代"买东西"</h4>
+        <p>新浪/中华网报道，2026 上半年社零总额 <strong>+2.7%</strong>，但服务零售额 <strong>+5.3%</strong>，商品零售仅 <strong>+1.1%</strong>，差距 4.2 个百分点。文旅消费持续升温——非遗手作、文博研学、大漠观星等深度体验产品订单大幅走高。演唱会/体育赛事催生跨城出行热潮，拉动餐饮、住宿、零售全链条。影片《给阿嬷的情书》带火潮汕游，折射"影视+文旅"融合效应。BBC 同期报道指出，消费者信心疲弱仍是中国经济主要挑战，房地产低迷和青年失业率居高不下导致家庭倾向储蓄而非消费。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>消费结构换轨的趋势在延续——"服务 > 商品"意味着传统零售承压、餐饮文娱受益。对 lainy 的选股框架：① 高端白酒（服务场景=宴请）韧性强于低端光瓶酒（商品场景=自饮）；② 餐饮/旅游标的（海底捞、同程旅行）优于传统百货；③ BBC 指出的"储蓄 > 消费"倾向是政策需要解决的痛点——如果房地产企稳，消费信心会显著修复。重庆暑期消费报告提到"票根经济"——演唱会/赛事拉动跨城消费，这是新增长点。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端服务消费韧性）/ 002511 顺网科技（文娱服务）/ 00700 腾讯（数字消费）— 服务消费受益，商品消费承压</div>
+        <div class="source">来源：<a href="https://news.sina.com.cn/gov/xlxw/2026-08-07/doc-inimnrac4058802.shtml" target="_blank">新浪新闻</a> · <a href="https://www.bbc.com/zhongwen/articles/c5yv09l9k9po/simp" target="_blank">BBC 中文</a> · <a href="https://www.cqnews.net/web/content_1535191387783553024.html" target="_blank">华龙网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 铜/铝/锂] → 中游 [制造 — 家电/食品加工] → 下游 [渠道 — 电商/超市/餐饮/文旅] — 当前受益环节：下游服务型消费（文旅/餐饮），受损环节：中游家电制造（价格战+原材料涨价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">诺兰 · 奥德赛</span>
+        <h4>《奥德赛》全球票房破 $11 亿：成为 Christopher Nolan 职业生涯票房最高电影</h4>
+        <p>8/9 Variety 报道，Christopher Nolan 执导的《The Odyssey》全球票房突破 <strong>$11 亿</strong>，超越《黑暗骑士崛起》($10.8 亿) 成为诺兰生涯最高。上映仅三周，北美 $4.3 亿 + 国际 $5.8 亿。Matt Damon 主演奥德修斯，Anne Hathaway 饰 Penelope。影片成为 2026 年第五部破 $10 亿的电影。Britannica 记录其全球首映票房 <strong>$2.64 亿</strong>，为诺兰黑暗骑士三部曲之外最大开画。IMAX 票房也创纪录。</p>
+        <div class="why">🦞 <b>花边点评：</b>诺兰终于重回"10 亿俱乐部"——上一次还是 2012 年的《黑暗骑士崛起》。《奥德赛》证明了一个命题：原创大IP（非续集/非超级英雄）仍然能在影院时代爆卖。对 lainy：如果你还没看，这是 2026 年影院首选。Nolan 用 IMAX 65mm 拍的希腊史诗，视觉效果是"在影院看 vs 在家看"差距最大的电影之一。</div>
+        <div class="source">来源：<a href="https://variety.com/2026/film/box-office/the-odyssey-christopher-nolan-biggest-movie-imax-record-1236830867/" target="_blank">Variety</a> · <a href="https://deadline.com/2026/08/box-office-the-odyssey-christopher-nolan-record-1237029568/" target="_blank">Deadline</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">八月院线</span>
+        <h4>8 月院线片单：从吉卜力到 Jason Statham，恐怖/动画/动作一应俱全</h4>
+        <p>PopCultureWeekly 盘点 8 月院线片单：PAW Patrol 恐龙版、Jason Statham 动作片、Coyote vs Acme 终于上法庭、吉卜力新作《The Last Blossom》（限定放映后 9 月扩映）、Dakota Fanning 主演《The Sun Never Sets》。类型从恐怖到文艺覆盖全年龄段。多部限定放映影片让本地艺术影院"排片表看起来需要度个假"。</p>
+        <div class="why">🦞 <b>轻松一下：</b>8 月是传统"爆米花月"——大片避开暑期档前半段拥挤，选 8 月空档上映。吉卜力新作是亚洲观众关注点，《The Last Blossom》限定放映后扩映策略类似《苍鹭与少年》。lainy 周末如果需要放松，这就是选择。</div>
+        <div class="source">来源：<a href="https://podcast.popcultureweekly.com/blog/movies-coming-to-theaters-august-2026/" target="_blank">PopCultureWeekly</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">KATSEYE</span>
+        <h4>KATSEYE 的 Sophia 宣布休团专注心理健康：专辑发布前夕的人员变动</h4>
+        <p>8/8 LiveMint 报道，全球女团 KATSEYE 成员 Sophia 宣布因心理健康原因休团，此时正值团体新专辑发布前夕。NBC 新闻同日报道 Paris Hilton 正在接受医疗护理。娱乐行业心理健康话题持续受到关注。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>心理健康话题在娱乐行业已经不是禁忌——从 KATSEYE 的 Sophia 到 Paris Hilton 接受医疗护理，公众人物越来越坦诚。这也折射出"高压曝光行业"对心理健康的关注正在从"个人问题"变成"行业责任"。</div>
+        <div class="source">来源：<a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-8-2026-live-updates-11786133612986.html" target="_blank">LiveMint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">量子材料</span>
+        <h4>科学家首次在室温下实现量子态光的分选和传输：量子计算"走出冰箱"的关键一步</h4>
+        <p>8/8 ScienceDaily 报道，科学家创造了首个能在<strong>室温</strong>下分选和传输不同量子态光的量子材料——可能消除对笨重超低温制冷系统的需求。同周，UCLA 科学家展示了热量在晶体中以聚焦波束方式传播（而非随机扩散），可用于芯片内热路由。Live Science 同期报道了世界首台便携式金刚石量子计算机——>10 qubits、室温运行、插电即用、可放入标准服务器机架。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>量子计算一直是"极低温+极端精密"的代名词，离商业化很远。但室温量子材料的突破可能改变游戏规则——如果量子计算不需要液氦制冷，成本和部署门槛会大幅降低。对 lainy：这是"量子计算从实验室走向应用"的早期信号，但离商业化仍有 5-10 年。不过金刚石量子计算机已经能放进服务器机架了，这是实打实的进展。</div>
+        <div class="source">来源：<a href="https://www.sciencedaily.com/releases/2026/08/260806050706.htm" target="_blank">ScienceDaily</a> · <a href="https://www.sciencedaily.com/releases/2026/08/260805082506.htm" target="_blank">ScienceDaily UCLA</a> · <a href="https://www.livescience.com/technology/quantum/scientists-built-a-room-temperature-quantum-computer-with-diamond-based-qubits" target="_blank">Live Science</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
