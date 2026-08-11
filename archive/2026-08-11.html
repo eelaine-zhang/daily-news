@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-11</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 11 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>TSMC 7 月营收暴涨 44.7%</b>至 NT$4676 亿（约 $14.5 亿），AI 硬件需求无视市场波动持续爆发；同日 Nvidia 宣布向 Texas 电力基础设施公司 Lancium 投资最高 $30 亿，AI 瓶颈从芯片转向能源。</li>
+      <li><b>霍尔木兹谈判停滞推高油价</b>：Brent 升至 $84+，美股周一微跌（S&P 7753 / 纳指 26605），Intel $150 亿增发拖累芯片板块；中国 7 月 CPI 同比 +0.5% 温和上涨。</li>
+      <li><b>暑期档票房破 86 亿</b>：《功夫女足》逼近 22 亿、《八仙》破 12 亿，今日沈腾《欢迎来龙餐馆》正式上映，点映票房已超 1.15 亿。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>AI 硬件需求 + 能源瓶颈</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC 7 月营收</span>
+        <h4>TSMC 7 月营收 NT$4676 亿（$14.5B），同比 +44.7%，AI 硬件需求"无视市场波动"持续爆发</h4>
+        <p>台积电 8/10 公布 7 月营收 NT$467.58 亿新台币（约 <strong>$14.5</strong> 亿），同比 <strong>+44.7%</strong>，环比 +5.6%，超过公司自身 40% 的全年增长目标。Bloomberg 指出，高性能计算（HPC）占营收 66%，英伟达和 Google 是最大驱动力。TSMC 同时将 2026 年资本开支指引上调至 <strong>$600-640</strong> 亿。Yahoo Finance 评："TSMC 从不评论月度营收，只发一个数字，整个半导体行业读它如读圣经。"</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个数字是 AI 产业需求的"实时晴雨表"。44.7% 的增速意味着市场对"AI 投资见顶"的担忧被证伪——TSMC 产能满载，客户还在排队。对 lainy 的框架：① TSMC 是整条 AI 链的"锚"，它涨=英伟达、AMD、Broadcom 都在出货；② 资本开支 $600-640 亿意味着设备供应商（ASML、Applied Materials、KLA）订单有保障；③ CoWoS 先进封装产能仍是瓶颈，TSMC 是唯一能大规模量产的厂商。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ NVDA（英伟达）/ ASML（光刻机）/ AMAT（Applied Materials，本周财报）— 全链受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/10/tsmc-revenue-surge-ai-chip-big-tech.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-10/tsmc-sales-rise-45-after-ai-spending-roars-on-despite-jitters" target="_blank">Bloomberg</a> · <a href="https://finance.yahoo.com/technology/ai/articles/tsmc-revenue-surges-ai-chip-130445040.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia × Lancium</span>
+        <h4>Nvidia 向 Texas 电力公司 Lancium 投资 $30 亿：AI 瓶颈从芯片转向能源</h4>
+        <p>Reuters/Quartz 8/10 报道，Nvidia 计划向 Texas 电力基础设施公司 Lancium 投资 <strong>$20-30</strong> 亿，获得 20-30% 股权。Lancium 在德州 Abilene 运营 <strong>1000</strong> 英亩 Stargate AI 数据中心园区——这是首个投入运营的 Stargate 站点。投资分两期：首期 $20 亿，后续 $10 亿随产能扩张释放。此举标志着 Nvidia 从"芯片供应商"向"AI 基础设施合作伙伴"转型。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这个投资信号比数字本身更重要——AI 产业的瓶颈正在从"芯片不够"转移到"电不够"。一个大型 AI 数据中心耗电量相当于一个中小城市，Texas 有丰富的风电和独立电网优势。Nvidia 向上游延伸 = ① 保障自己芯片客户的电力供应；② 控制数据中心选址节奏；③ 开辟新的收入维度。BlackRock 同期报告指出，2026 年超大规模厂商资本开支共识已上调至 <strong>$7200</strong> 亿，半年内上调了 30%。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia）/ CRWV（CoreWeave，今晚财报）/ VST（Vistra，Texas 电力公司）— AI 基础设施链受益</div>
+        <div class="source">🔗 Source: <a href="https://qz.com/nvidia-lancium-investment-stargate-power-081026" target="_blank">Quartz</a> · <a href="https://www.digitimes.com/news/a20260810VL207/nvidia-infrastructure-texas-data-center-electricity.html" target="_blank">DigiTimes</a> · <a href="https://finance.yahoo.com/technology/ai/articles/nvidia-investing-3-billion-lancium-130640802.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">CoreWeave 财报</span>
+        <h4>CoreWeave 今夜发布 Q2 财报：预期营收 $25.5 亿（+111% YoY），但亏损扩大，AI 算力租赁生意能否自证？</h4>
+        <p>CoreWeave（CRWV）将于 8/11 美股盘后发布 Q2 2026 财报。市场预期：营收 <strong>$25.5</strong> 亿（同比 <strong>+111%</strong>），但每股亏损 <strong>$1.17-1.22</strong>，亏损同比扩大。CoreWeave 是 Nvidia 支持的 AI 算力租赁龙头，今年 1 月获 Nvidia <strong>$20</strong> 亿投资。期权市场定价财报后波动 <strong>14.8%</strong>。过去 3 个月股价已跌 <strong>21%</strong>。分析师关注三大指标：① 收入增速是否维持 100%+；② 毛利率能否改善；③ 债务压力（数据中心重资产模式）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CoreWeave 是"AI 算力即服务"模式的温度计。它从 Nvidia 买 GPU，建数据中心，租给 AI 应用公司。如果它收入高增但亏损扩大，说明"卖铲人"也需要"借钱买铲"。对 lainy：关注它对 Nvidia 的指引意义——CoreWeave 如果指引疲软，会影响市场对 AI capex 可持续性的信心。</div>
+        <div class="ticker">📌 关联标的：CRWV（CoreWeave）/ NVDA（Nvidia，核心供应商）— 财报结果可能影响 AI 板块短期情绪</div>
+        <div class="source">🔗 Source: <a href="https://www.tipranks.com/news/crwv-stock-3-things-to-watch-in-coreweave-earnings-tomorrow" target="_blank">TipRanks</a> · <a href="https://seekingalpha.com/news/4629968-coreweave-q2-2026-earnings-preview" target="_blank">Seeking Alpha</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">半导体行业报告</span>
+        <h4>Omdia：2026 全球半导体营收预测创新高，HBM + 先进封装成"双重瓶颈"</h4>
+        <p>Omdia 最新报告指出，AI 加速器（NVIDIA、AMD、Intel、Google）全部依赖 HBM 内存堆叠，而 TSMC 的 CoWoS 先进封装产线已 <strong>满负荷</strong> 运转。报告将 HBM 和先进封装并列为 AI 供应链的两大瓶颈。同时，台积电亚利桑那工厂加速建设，CFO 称 AI 是"多年大趋势"。</p>
+        <div class="why">🦞 <b>市场含义：</b>HBM 之前龙虾老师讲过——三星 + SK Hynix 双寡头。现在先进封装（CoWoS）也成瓶颈，而 CoWoS 是 TSMC 独家。这意味着 TSMC 的议价权比市场想象的更强。对 lainy 的产业链框架：上游（ASML 光刻机）→ 中游（TSMC 代工+CoWoS）→ 下游（NVDA/AMD 设计）→ 终端（MSFT/GOOG 云），每一环都在涨价。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ 000660.KS（SK Hynix）/ 005930.KS（三星）— HBM + CoWoS 双瓶颈利好代工和内存双寡头</div>
+        <div class="source">🔗 Source: <a href="https://cyprus-mail.com/2026/08/10/ai-boom-drives-record-semiconductor-revenue-forecast" target="_blank">Cyprus Mail / Omdia</a> · <a href="https://topics.amcham.com.tw/2026/08/why-tsmc-remains-indomitable/" target="_blank">Taiwan Business TOPICS</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [光刻机/硅片 — ASML/SUMCO] → 中游 [代工+先进封装 — TSMC CoWoS 满载] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂+能源 — MSFT/GOOG/Lancium] — 当前受益环节：中游代工（TSMC 产能满载+涨价权）+ 能源基础设施（Lancium 获投）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹停滞 · 油价上行</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>霍尔木兹谈判停滞：Brent 升至 $84+，伊朗通过中间人与美国传话但分歧仍大</h4>
+        <p>周末伊朗-阿曼关于霍尔木兹海峡通行的谈判未取得进展。Brent 原油周一大涨近 <strong>5%</strong> 至约 <strong>$88</strong>，随后回落至 <strong>$84.42</strong>；WTI 升至 <strong>$78.83</strong>。ABC News 报道，伊朗表示正通过中间人与美国"传递信息"，但特朗普称美国"只是半谈判中"。NYT 8/9 报道 Brent 周五曾涨 5% 至 $88。伊朗军方上周四攻击了邻国海湾国家的美军设施，停火协议签订三周后再度紧张。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>和上周（8/8）早报对比——当时 Brent 在 $83-86 区间，现在已突破 $84 且趋势向上。核心矛盾：伊朗要的是"解除制裁 + 归还资产"，美国要的是"先开放海峡再谈"。谈判停滞 = 油价溢价不会消退 = 通胀预期升温 = 美联储 9 月加息概率虽从 67% 降至 44%，但仍有不确定性。对 lainy：油价→通胀→利率→科技股估值，这条链是当前市场最核心的传导路径。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / XLE（能源 ETF，受益）/ JETS（航空 ETF，受损）/ 600028 中国石化 — 油价每涨 $10，三桶油利润弹性 15-20%</div>
+        <div class="source">🔗 Source: <a href="https://abcnews.com/International/live-updates/iran-live-updates-trump-deal-imminent-iran-oman/?id=135317231" target="_blank">ABC News</a> · <a href="https://www.nytimes.com/2026/08/09/business/oil-stocks-iran-war.html" target="_blank">NYT</a> · <a href="https://www.euronews.com/business/2026/08/10/oil-prices-rise-as-traders-assess-us-iran-talks-on-strait-of-hormuz-deal" target="_blank">Euronews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">Brookings 分析</span>
+        <h4>Brookings：伊朗战争"反噬效应"——亚洲经济安全"极度脆弱"，霍尔木兹封锁引发历史性油冲击</h4>
+        <p>Brookings 学会发布系列分析指出，2026 年伊朗战争及霍尔木兹封锁对亚洲经济造成严重冲击。战争自 2/28 爆发以来，已导致全球 <strong>20%</strong> 原油供应和大量 LNG 运输受阻。分析师预测，如果中断持续，油价可能达到 $100/桶，全球通胀将增加 <strong>0.8%</strong>。即便停火后，油价已从 4 月高峰回落 42%，但恢复至战前水平仍需时间。</p>
+        <div class="why">🦞 <b>市场含义：</b>Brookings 是顶级智库，这份报告的信号是"亚洲比美国更受伤"。中国进口原油约 50% 经过霍尔木兹，日本和韩国更高达 80%+。对 lainy 的投资框架：① 亚洲货币承压（日元、韩元、人民币）；② 中国"能源安全"主题长期受益（新能源替代 + 战略储备）；③ 美国能源独立优势凸显——这也是为什么 TSMC 加速在亚利桑那建厂。</div>
+        <div class="ticker">📌 关联标的：600028 中国石化 / 601857 中国石油 / 新能源替代链（300750 宁德时代 / 隆基绿能）— 油价高企利好三桶油 + 加速新能源替代</div>
+        <div class="source">🔗 Source: <a href="https://www.brookings.edu/collection/blowback-how-the-iran-war-may-change-the-world/" target="_blank">Brookings</a> · <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">Wikipedia</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹海峡通行量骤降] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [消费者 — 通胀传导] — 当前受损环节：中游航运（通行量骤降）+ 亚洲下游（高进口成本）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>CPI 数据 · 本周通胀 + 财报周</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">中国 CPI/PPI</span>
+        <h4>中国 7 月 CPI 同比 +0.5%（环比 -0.1%），PPI 同比 +3.5%（环比 -0.7%），通胀温和但工业品价格回落</h4>
+        <p>国家统计局 8/9 发布 7 月物价数据：CPI 同比 <strong>+0.5%</strong>（前值 +1%），环比 <strong>-0.1%</strong>；核心 CPI 环比 <strong>+0.3%</strong>，同比 <strong>+0.9%</strong>。PPI 同比 <strong>+3.5%</strong>（前值 +4.1%），环比 <strong>-0.7%</strong>。CPI 低于市场预期的 0.8%，PPI 也低于预期的 4%。分析指出，受国际输入性因素影响，7 月 CPI 环比小幅下降，但 AI 消费电子和暑期服务价格上行。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CPI 从 1% 降到 0.5% 说明消费需求仍偏弱——这不是"通胀"，是"通缩压力残留"。但核心 CPI +0.9% 说明去掉食品和能源后，服务端价格在温和修复。PPI 从 4.1% 降到 3.5% 说明工业品出厂价格在回落——对中游制造业是好事（原材料成本下降）。对 lainy：低通胀 = 货币政策有宽松空间 = 利好 A 股估值修复，特别是成长股。</div>
+        <div class="ticker">📌 关联标的：512760 半导体 ETF（低通胀利好成长股估值）/ 600519 贵州茅台（核心 CPI 修复，消费温和回暖）— 低通胀环境利好 A 股成长风格</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/roll/2026-08-11/doc-inimwuhv7722906.shtml" target="_blank">新浪财经</a> · <a href="https://www.news.cn/fortune/20260810/e24206d2a5504b71864ddd40fe96df15/c.html" target="_blank">新华网</a> · <a href="http://finance.people.com.cn/n1/2026/0810/c1004-40776470.html" target="_blank">人民网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">本周财报+通胀周</span>
+        <h4>本周"通胀 + AI 财报"双超级周：美国 7 月 CPI/PPI + Applied Materials + Cisco + CoreWeave 财报</h4>
+        <p>本周（8/11-15）是 2026 下半年最关键的一周之一：① 美国 7 月 CPI 周三公布、PPI 周四公布——市场预期通胀从 3.5% 回落，但油价回升可能带来上行风险；② Applied Materials（AMAT）周三财报——半导体设备龙头，TSMC capex 上调直接受益；③ Cisco（CSCO）周三财报——AI 网络设备；④ CoreWeave（CRWV）今夜盘后财报——AI 算力租赁。Trading Economics 显示市场对 9 月加息 25bp 的概率从 67% 降至 <strong>44%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>上周美国 7 月非农意外转负（-2.3 万），已经让加息预期大幅降温。如果本周 CPI 也低于预期，9 月加息基本可以排除——那是美股再创新高的催化剂。但如果油价推动 CPI 超预期，"通胀粘性"叙事回归，科技股可能回调。对 lainy：这是"宏观决定方向"的一周，比个股财报更重要。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股整体方向）/ AMAT（Applied Materials，周三财报）/ CRWV（CoreWeave，今夜财报）— CPI 低于预期则全面利好</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Charles Schwab</a> · <a href="https://www.marketscreener.com/news/weekly-earnings-calendar-cisco-adyen-cerebras-and-applied-materials-to-announce-ce7f50d3df81f421" target="_blank">MarketScreener</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金升至 $4,378 创两个月新高：非农疲软 + 地缘避险 + 加息预期降温三重支撑</h4>
+        <p>黄金 8/10 升至 <strong>$4,378.76</strong>/盎司，创两个月新高，月涨幅 <strong>+9.42%</strong>，同比 <strong>+30.98%</strong>。驱动因素：① 7 月非农意外转负，加息预期降温；② 霍尔木兹谈判停滞，地缘避险需求上升；③ 油价回升但美元走弱。LiteFinance 预测 8/11 XAU/USD 继续看涨。EIA 下调 Brent 预测至 3Q26 均价 $74（当前 $84 远高于此）。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金从 7 月底的 $4,053 升到 $4,378，两周涨了 <strong>$325</strong>，速度很快。核心逻辑：非农转负 → 加息预期降温 → 美元走弱 → 黄金走强。如果本周 CPI 也低于预期，黄金可能冲 $4,500。对 lainy 的配置框架：黄金是"通胀回落 + 地缘混乱"环境下的核心配置。注意 EIA 预测 $74 vs 实际 $84 的差距——如果霍尔木兹问题解决，油价回落会拖累黄金。但在那之前，趋势向上。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF（A 股）/ GLD（美股黄金 ETF）— 央行持续买入 + 加息预期降温，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [通胀预期/风险偏好] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：本周 CPI 数据 + 霍尔木兹谈判进展</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/10 沪指 +0.67% 报 3966 / 深成指 +0.04% 报 14317 / 创业板 -0.73% 报 3537</h4>
+      <p>8/10（周一）A 股分化：沪指小涨，创业板回落。<b>消费和地产板块领涨</b>，科技股回调。四大证券报头版关注暑期档消费活力释放，影视板块走强。同日长鑫科技（CXMT, 688825）报 51.88 元。今日关注：7 月 CPI 已公布（+0.5%，温和），低通胀环境利好成长股估值修复。<b>资金面：</b>两市成交维持活跃，但结构分化——资金从科技转向消费和地产。沪深 300 消费板块涨幅居前。<b>重点关注：</b>本周 Applied Materials 财报对半导体设备股的指引。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/10 恒指 +1.05% 报 25937 / 恒生科技 +1.26% 报 4919 / 黄金股领涨</h4>
+      <p>8/10 港股三大指数集体上涨，恒指收复 25900 关口。盘面上：<b>黄金珠宝概念走强</b>（谢瑞麟、老铺黄金、周大福多只大涨），煤炭、食品饮料、医药、汽车、地产普涨；半导体和硬件设备逆市下跌。科网股普涨：联想 <strong>+3%</strong> 创新高 29.12，京东、哔哩哔哩、阿里巴巴齐涨。国泰君安国际获国泰海通溢价 44.2% 私有化，复牌高开 37%。主板成交 2403 亿。恒指上探 26000 关口遇阻，缩量反弹持续性待观察。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/10 S&P 7753 (-0.06%) / 纳指 26605 (-0.32%) / 道指 53976 (-0.11%) / Intel 拖累芯片</h4>
+      <p>8/10（周一）美股三大指数微跌，从历史高位回落。<b>核心拖累：</b>Intel 宣布 $150 亿普通股增发，股价跌 <strong>-4.6%</strong>，拖累整个芯片板块。SOXX 芯片 ETF 跑输大盘。<b>能源股逆势上涨</b>，受油价回升提振。<b>上周五（8/8）收盘：</b>S&P <strong>+0.60%</strong> 至 7756 创新高，纳指 <strong>+1.29%</strong> 至 26691，道指 <strong>+0.28%</strong> 至 54036——连续两周上涨，周涨幅 3-5%。<b>本周关注：</b>CPI（周三）+ PPI（周四）+ Applied Materials/Cisco/CoreWeave 财报。Bloomberg 周一早报指出 Sydney 和 Hong Kong 期货基本持平，Tokyo 因假期休市。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>暑期档 · 电视出货 · 消费新业态</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">暑期档票房</span>
+        <h4>2026 暑期档票房破 86 亿！《功夫女足》逼近 22 亿、《八仙》破 12 亿，沈腾《欢迎来龙餐馆》今日上映</h4>
+        <p>截至 8/10，2026 暑期档总票房（含预售）突破 <strong>86 亿</strong>，单日票房连续 <strong>30</strong> 天破亿，观影人次超 <strong>2.36</strong> 亿，总场次超 <strong>3072</strong> 万。头部影片：《功夫女足》总票房逼近 <strong>22 亿</strong>（上映第 24 天逆势上扬，单日 3650 万）；《八仙！》上映 17 天破 <strong>12 亿</strong>，登顶 2026 国产动画票房榜；《蜘蛛侠·崭新之日》超 <strong>8.92 亿</strong>。今日（8/11）沈腾新片《欢迎来龙餐馆》正式上映，点映+预售已破 <strong>1.15 亿</strong>，口碑大爆。电影全产业链产值已突破 <strong>3800 亿</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>暑期档是消费复苏的"肉眼可见"指标。86 亿 + 30 天单日破亿 = 消费者愿意为"体验型消费"花钱。对 lainy 的消费框架：① "服务消费 > 商品消费"趋势持续验证；② 影视院线板块估值有望修复（今天四大证券报头版都在提这个）；③ IP 衍生授权成为新增长点——《八仙》联名授权矩阵比银幕上还热闹。lainy 周末如果看电影，《欢迎来龙餐馆》今天上了，沈腾+战争题材，口碑不错。</div>
+        <div class="ticker">📌 关联标的：002739 万达电影（院线龙头）/ 300251 光线传媒（《八仙》出品方）/ 600977 中国电影 — 暑期档票房催化影视板块</div>
+        <div class="source">🔗 Source: <a href="https://m.21jingji.com/article/20260810/herald/431d4d4d9e87084cda6ea8a642e6af8f.html" target="_blank">21财经</a> · <a href="https://www.guandian.cn/article/20260810/582770.html" target="_blank">观点网</a> · <a href="https://news.qq.com/rain/a/20260810A08Q1L00" target="_blank">腾讯新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">电视出货</span>
+        <h4>7 月国内电视出货环比大跌 25.6%：前 7 月累计同比 -9.1%，头部品牌市占率超 95%</h4>
+        <p>洛图科技最新数据：2026 年 7 月中国电视市场品牌整机出货量 <strong>185 万台</strong>，同比微降 0.5%，环比 6 月大幅下降 <strong>25.6%</strong>。1-7 月累计 <strong>1679.7 万台</strong>，同比 <strong>-9.1%</strong>。头部品牌（海信、TCL、小米、创维）市占率合计超 <strong>95%</strong>，行业集中度极高。这与上周罗永浩炮轰"智能电视套娃收费"话题形成呼应——用户体验恶化 + 消费者换机周期拉长。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>电视出货 -9.1% 不只是"家电消费疲软"，而是"电视机正在失去家庭中心位置"。手机、平板、投影都在抢屏幕时间。加上罗永浩上周吐槽的"长辈模式形同虚设 + 套娃收费"——用户体验在恶化，换机动力更弱。对消费股框架：家电板块短期承压，但"以旧换新"政策可能提供阶段性脉冲。关注小米（电视+手机+汽车生态闭环）的抗周期能力。</div>
+        <div class="ticker">📌 关联标的：000100 TCL 科技 / 01810 小米集团 / 000651 格力电器 — 电视出货下滑，头部品牌集中度提升但总量承压</div>
+        <div class="source">🔗 Source: <a href="https://article.pchome.net/content-2197452.html" target="_blank">PChome / 洛图科技</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费新业态</span>
+        <h4>消费新业态试点撬动 3000 亿社会投资：演艺+文旅、赛事+商业跨界融合破圈</h4>
+        <p>经济日报、中国网等多家媒体 8/10 报道，消费新业态新模式新场景试点深入推进，已撬动超 <strong>3000 亿</strong> 社会投资。新趋势包括：① 传统商圈向沉浸式复合空间转型；② "演艺+文旅""赛事+商业"跨界融合——一场草根赛事可带动县域餐饮住宿增长近 <strong>五成</strong>；③ 数字技术拓展体验消费想象空间。上半年服务消费品质升级"出新"、动能转换"上新"、业态模式"焕新"。</p>
+        <div class="why">🦞 <b>市场含义：</b>这个趋势和龙虾老师之前讲的"服务消费 > 商品消费"完全一致。3000 亿社会投资进入消费新业态 = 政策在用"供给创造需求"。一场草根赛事带动县域餐饮住宿增长 50% = "赛事经济"下沉到县域。对 lainy：消费股选股要看"体验属性"和"跨界融合"能力——做内容的公司（如光线传媒）比做渠道的（如传统百货）更有成长性。</div>
+        <div class="ticker">📌 关联标的：002511 顺网科技（文娱服务）/ 002739 万达电影（影视+院线）/ 600059 首旅酒店（文旅消费）— 服务消费新业态受益</div>
+        <div class="source">🔗 Source: <a href="http://www.ce.cn/xwzx/gnsz/gdxw/202608/t20260810_3137026.shtml" target="_blank">中国经济网</a> · <a href="http://news.china.com.cn/2026-08/10/content_118640806.shtml" target="_blank">中国网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [内容/IP — 影视/赛事制作] → 中游 [渠道 — 院线/商圈/平台] → 下游 [体验消费 — 餐饮/住宿/文创] — 当前受益环节：下游体验型消费（演艺+文旅+赛事跨界融合），受损环节：传统商品零售（电视等耐用品出货下滑）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>暑期档 · 明星八卦</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">暑期档动画</span>
+        <h4>《八仙！》票房破 12 亿登顶 2026 国产动画，但 AI 争议缠身；《争洛阳》撤档收场仅 9000 万</h4>
+        <p>36 氪深度分析 2026 暑期档动画电影：《八仙！》一骑绝尘，截至 8/7 票房破 <strong>13 亿</strong>，登顶 2026 国产动画票房榜。但陷入"AI 制作争议"——被质疑使用 AI 生成画面。另一边，追光动画《三国第一部：争洛阳》（《长安三万里》原班人马历时三年）上映途中无奈撤档，票房止步 <strong>9000 万</strong>。光线新作《去你的岛》8/7 上映，后续还有《大唐妖探》改期 8/22。IP 衍生授权牌桌比银幕上还热闹。</p>
+        <div class="why">🦞 <b>花边点评：</b>《八仙》的 AI 争议是整个动画行业的缩影——AI 降本增效 vs 观众对"手工制作"的情感期待。撤档潮继续——不是片子不好，是档期太挤。lainy 如果带小朋友去看动画，《八仙》是票房冠军但 AI 争议需自行判断。沈腾《欢迎来龙餐馆》今天上了，更适合大人口味。</div>
+        <div class="source">🔗 Source: <a href="https://www.36kr.com/p/3933134948596871" target="_blank">36氪</a> · <a href="https://news.china.com/socialgd/10000169/20260810/49664799.html" target="_blank">中华网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">明星八卦</span>
+        <h4>Cristiano Ronaldo 回应"万人迷认错人"乌龙事件；《Paper Tiger》预告发布（Adam Driver × Scarlett Johansson 2026）</h4>
+        <p>周末热搜：Cristiano Ronaldo 回应一则"认错人"乌龙事件——数千人误将一名 41 岁的葡萄牙男子认成了 Ronaldo 本人。另外，Adam Driver 和 Scarlett Johansson 主演的《Paper Tiger》官方先导预告发布，引发影迷期待。JLo 被拍到在 Malibu 与长期合作声乐教练 Stevie Mackey 散步。前帮派领袖周一在拉斯维加斯开庭，涉及一位知名说唱歌手数十年前的谋杀案。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Ronaldo 被认错这件事在国外社交媒体上传疯了——一个普通大叔被几千人围堵要签名，Ronaldo 本人也忍不住回应。《Paper Tiger》是 Adam Driver 和 Scarlett Johansson 的组合，2026 年值得期待的电影之一。lainy 刷手机的时候可以留意。</div>
+        <div class="source">🔗 Source: <a href="https://www.justjared.com/" target="_blank">Just Jared</a> · <a href="https://www.etonline.com/" target="_blank">ET Online</a> · <a href="https://torontosun.com/category/entertainment/" target="_blank">Toronto Sun</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">AI 架构</span>
+        <h4>Nvidia CMX 架构落地：GPU 集群 AI 推理瓶颈从算力转向内存，Supermicro 举办 Open Storage Summit 讨论</h4>
+        <p>TechTimes 8/10 报道，Supermicro 本周举办 Open Storage Summit，核心议题是"GPU 集群运行 AI Agent 时瓶颈在内存而非算力"。行业正在收敛的方案：将 KV Cache 从 GPU HBM 卸载到专用存储层——即 Nvidia 在 2026 年 1 月正式化的 Inference Context Memory Storage Platform（CMX），由 BlueField-4 DPU 管理。这标志着 AI 推理基础设施正从"堆 GPU"转向"优化内存层级"。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>对 lainy 这是个很好的"技术→商业"映射案例。GPU 算力再强，如果内存跟不上，推理速度也提不上去。Nvidia 从卖 GPU 到卖"GPU+内存+DPU"整套方案 = 客单价提升 + 客户粘性增强。存储厂商（如 Pure Storage、NetApp）也可能受益。这也是为什么今天 TSMC 营收暴涨——不只是 GPU 在卖，整个配套基础设施都在出货。</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/323713/20260810/gpu-clusters-running-ai-agents-bottleneck-memory-not-compute-supermicro-open-storage-summit.htm" target="_blank">TechTimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
