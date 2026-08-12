@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-12</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; padding-bottom: 4px; border-left: 4px solid var(--accent); border-bottom: none; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 12 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Nvidia $5000 亿金融化：</b>英伟达联手 Apollo、BlackRock、Blackstone、Brookfield、高盛、KKR 六大金融巨头，把 AI 算力基础设施包装成"可抵押资产类别"，融资规模 $5000 亿——AI 算力正式变成"新房地产"。</li>
+      <li><b>Intel $200 亿增发今日收盘：</b>定价 $95/股，收到约 $1000 亿订单需求（5 倍超额认购），Dan Niles 预告"大代工客户即将官宣"；同日 TSMC 披露 CoWoS 5.5-reticle 良率达 99%，14-reticle 版 2028 年量产。</li>
+      <li><b>今日 CPI 日：</b>美国 7 月 CPI 数据今晚 20:30 HKT 公布，预期环比 +0.1%/同比 3.4%，核心 +0.2%/2.9%——结果将直接决定美联储 9 月是否加息；Brent 升至 $89，霍尔木兹希望渺茫。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Nvidia × 华尔街</span>
+        <h4>Nvidia 联手六大金融巨头启动 $5000 亿 AI 基础设施融资计划——算力正式成为"可抵押资产"</h4>
+        <p>8/10-11，英伟达宣布与 Apollo Global Management、Blackstone、BlackRock、Brookfield Asset Management、Goldman Sachs、KKR 六大资产管理公司签署 MOU，建立融资平台，目标动员 <strong>$5000</strong> 亿资金用于 AI 基础设施建设。核心创新：将算力基础设施类比商业地产和收费公路，使其具备<strong>抵押贷款资格</strong>——GPU 集群产生的现金流成为底层资产。Nvidia 股价 8/11 盘中一度涨 <strong>+1.5%</strong> 至 $222.40，但收盘接近平盘。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这标志着 AI 从"烧钱买卡"进入"金融化"阶段。以前企业买 GPU 要自掏腰包，现在可以"抵押算力"贷款——类似 2000s 房地产的"按揭模式"。对 lainy 的金融视角：① $5000 亿的规模意味着 AI capex 周期远未见顶；② Nvidia 不再只是"卖芯片"的，它正在成为 AI 基础设施的"资产管理者"；③ 六大金融巨头集体入场 = 华尔街对 AI 回报有信心，但也意味着如果 AI 收益不及预期，金融传导风险会放大。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，核心受益）/ APO（Apollo）/ BX（Blackstone）/ BLK（BlackRock）— AI 基础设施金融化全链受益</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-10/nvidia-to-team-with-wall-street-on-500-billion-package-ft-says" target="_blank">Bloomberg</a> · <a href="https://theaiinsider.tech/2026/08/11/nvidia-partners-with-wall-street-giants-on-500b-push-to-turn-ai-chips-into-new-asset-class/" target="_blank">The AI Insider</a> · <a href="https://www.gurufocus.com/news/9024212/nvidia-nvda-launches-500-billion-financing-plan-for-ai-infrastructure" target="_blank">GuruFocus</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC CoWoS</span>
+        <h4>TSMC CoWoS 5.5-reticle 良率达 99%！14-reticle 版 2028 年量产，内存与 ABF 基板成 AI 新瓶颈</h4>
+        <p>8/11，TSMC 副总裁何军在 2026 OCP APAC Summit 上披露：① 5.5-reticle-size CoWoS 已进入量产，良率稳定在 <strong>98%+</strong>，部分产品达 <strong>99%</strong>；② 14-reticle CoWoS（可集成约 10 个大计算 die + 20 个 HBM 堆栈）计划 <strong>2028</strong> 年量产，2029 年超越 14-reticle；③ CoWoS 产能近三年每年翻倍，目前运营 10 座先进封装设施；④ <strong>内存和 ABF 基板</strong>被明确指为 AI 供应链关键瓶颈。SoIC 混合键合间距 2025 年达 6µm，2029 年缩至 4.5µm。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>CoWoS 良率 99% 是个里程碑——意味着良率不再是产能瓶颈，瓶颈转移到了上游材料（HBM 内存、ABF 基板）。对 lainy 的产业链框架：TSMC 说"产能快赶上需求了"，但上游材料厂商（味之素 ABF 覆铜板、SK Hynix HBM）才是下一阶段的卡口。ABF 基板供应商味之素（Ajinomoto）和 HBM 双寡头（三星 + SK Hynix）的议价权会继续上升。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ 000660.KS（SK Hynix，HBM 瓶颈受益）/ AJINOF（味之素 ABF，OTC）— 瓶颈从封装转向材料</div>
+        <div class="source">🔗 Source: <a href="https://www.trendforce.com/news/2026/08/11/news-tsmcs-5-5-reticle-cowos-reportedly-tops-99-yield-flags-memory-abf-as-ai-bottlenecks/" target="_blank">TrendForce</a> · <a href="https://technews.tw/2026/08/11/ocp-apac-summit-2026-tsmc/" target="_blank">TechNews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Microsoft Maia 300</span>
+        <h4>Microsoft 向 TSMC 要 30 万片 Maia 300 AI 加速器产能，Nvidia 独占 CoWoS 60% 队列</h4>
+        <p>据 The Information/Reuters 8/10 报道，Microsoft 正与 TSMC 谈判锁定 <strong>30 万片</strong> Maia 300 AI 加速器产能，目标 2027 年交付，最早 9 月公开。核心障碍：所有 AI 加速器都依赖 TSMC CoWoS 封装，而 Nvidia 独占约 <strong>60%</strong> CoWoS 产能配额（约 59.5 万片/年），前三名客户（Nvidia、Broadcom、AMD）占 <strong>85%+</strong>。CoWoS 排队周期 <strong>52-78 周</strong>。Microsoft 30 万片需要从剩余 15% 份额中挤出来。</p>
+        <div class="why">🦞 <b>市场含义：</b>这解释了为什么 Nvidia 要做 $5000 亿融资——锁定 CoWoS 产能就是锁定 AI 算力霸权。Microsoft 不得不"排队"说明：即使有钱有技术，没有封装产能也白搭。对 lainy：CoWoS 是 AI 产业链的"收费站"，TSMC 的定价权短期不可挑战。Microsoft 自研芯片 = 减少 Nvidia 依赖的长期战略，但中期仍被 TSMC 卡脖子。</div>
+        <div class="ticker">📌 关联标的：MSFT（Microsoft，自研芯片降本）/ NVDA（Nvidia，CoWoS 霸权）/ TSM（TSMC，收费站）— Microsoft 长期降本，短期被卡</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/323878/20260811/microsoft-maia-300-seeks-300000-tsmc-units-nvidia-controls-60-packaging-queue.htm" target="_blank">TechTimes</a> · <a href="https://finance.yahoo.com/technology/ai/articles/microsoft-plans-maia-300-chip-140432692.html" target="_blank">Yahoo Finance / The Information</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Intel $200 亿增发</span>
+        <h4>Intel $200 亿增发今日收盘：$95/股定价，$1000 亿订单涌入（5 倍超额），Dan Niles 预告"大代工客户将官宣"</h4>
+        <p>Intel 8/11 宣布将增发规模从 $150 亿上调至 <strong>$200</strong> 亿，定价 $95/股，预计 8/12 收盘。 institutional 订单需求约 <strong>$1000</strong> 亿（5 倍超额认购）。知名科技投资人 Dan Niles 认为，Intel 扩大融资规模暗示其接近签下"重要代工客户"。Intel 股价 8/11 续跌 <strong>-1.5%</strong>（前一日已跌 4%），市场担忧稀释。Cybersecurity News 分析指出，此次增发还涉及芯片供应链安全层面的战略考量。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$1000 亿订单追 $200 亿额度——机构不是在"救"Intel，是在赌 Intel 代工翻身。Dan Niles 的"大客户"暗示可能是 NVIDIA 或 Apple 把部分订单分流到 Intel 18A。对 lainy：如果 Intel 真签下大代工客户，股价有反弹空间；但 $200 亿稀释 = 短期每股收益被摊薄 15-20%。这是一场"押注未来 vs 稀释现在"的博弈。</div>
+        <div class="ticker">📌 关联标的：INTC（Intel，赌代工翻身）/ NVDA（Nvidia，可能分散代工）/ AAPL（Apple，可能成为 Intel 大客户）— Intel 短期承压，中期看客户官宣</div>
+        <div class="source">🔗 Source: <a href="https://www.benzinga.com/markets/equities/26/08/61099809/intel-upsizes-stock-offering-to-20-billion-dan-niles-predicts-major-foundry-deals-are-near" target="_blank">Benzinga</a> · <a href="https://www.techtimes.com/articles/323957/20260811/intel-prices-20-billion-stock-offering-wall-street-sends-100-billion-orders.htm" target="_blank">TechTimes</a> · <a href="https://newsroom.intel.com/corporate/intel-announces-upsize-and-pricing-of-20-billion-common-stock-offering" target="_blank">Intel Newsroom</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Manus AI</span>
+        <h4>Manus AI 恢复独立运营：中国监管叫停 Meta $20 亿收购，AI Agent 独苗重回赛道</h4>
+        <p>8/11，中国 AI Agent 创业公司 Manus 宣布"即将恢复独立运营"，标志其与 Meta 的分离进入最终阶段。Meta 于 2025 年 12 月宣布以约 <strong>$20</strong> 亿收购 Manus，但中国监管机构今年 4 月要求撤销交易，双方随即启动复杂的业务和数据分离。Manus 是中国领先的通用 AI Agent 开发商，分离后需重建独立技术栈和客户关系。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>中国监管叫停 Meta 收购 Manus = AI 版的"字节跳动式"保护。逻辑很清晰：AI Agent 是下一代人机交互入口，中国不会让本土领先的 AI Agent 公司被美企收购。对 lainy 的投资视角：① 中国 AI Agent 赛道仍有独立发展空间；② Manus 恢复独立后可能寻求国内融资/IPO；③ 中美科技"脱钩"在 AI 应用层也在加速。</div>
+        <div class="ticker">📌 关联标的：META（Meta，收购失败短期无影响）/ 中国 AI Agent 概念股（如 002230 科大讯飞、688111 金山办公）— Manus 独立利好国内 AI Agent 生态</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/11/manus-china-meta-acquisition.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/world/china/ai-startup-manus-resume-independent-operations-deal-with-meta-unwinds-2026-08-11/" target="_blank">Reuters</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越/味之素 ABF] → 中游 [代工+封装 — TSMC CoWoS/Intel Foundry] → 下游 [AI 芯片设计 — NVDA/MSFT/AVGO] → 终端 [云厂+金融化 — BlackRock/Apollo/GS] — 当前瓶颈环节：上游材料（HBM + ABF 基板），当前受益环节：中游代工（TSMC 收费站 + Intel 赌翻身）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹 · 油价</span>
+        <h4>霍尔木兹希望渺茫：Brent 升至 $89.24，EIA 上调 2026 年均价预测至 $87，海上袭击持续</h4>
+        <p>CNN 8/11 实时更新标题："海上袭击威胁区域，霍尔木兹协议希望渺茫"。Brent 原油 8/11 收 <strong>$89.24</strong>/桶（<strong>+1.73%</strong>），月内涨幅 7.13%，同比涨 34.96%。EIA 同日将 2026 年 Brent 均价预测上调至 <strong>$87</strong>/桶。OilPrice 分析指出，伊朗出口崩溃正推动 Brent 走向 $100。阿曼-伊朗霍尔木兹通行协议框架虽达成，但伊朗开出的条件清单（美军撤封锁、解除制裁、归还在美资产）与美方底线差距巨大。胡塞武装同期在红海/曼德海峡持续袭击商船。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>上次早报报 Brent $84，现在已经 $89——地缘溢价在加速。两个关键变量没变：① 霍尔木兹协议远未落地（伊朗条件太苛刻）；② 胡塞在红海打商船 = 绕行路线也不安全。对 lainy：高油价 → 通胀粘性 → 美联储难降息 → 科技股估值承压，这条链今天因为 CPI 数据会更敏感。如果 CPI 因为能源价格超预期，9 月加息概率会跳升。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / XLE（能源 ETF）/ 600028 中国石化 — 油价受益；JETS（航空 ETF）/ XLY（可选消费）— 受损</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/08/11/world/live-news/iran-war-trump" target="_blank">CNN</a> · <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">TradingEconomics</a> · <a href="https://oilprice.com/Energy/Energy-General/Brent-Could-Hit-100-as-Hormuz-Crisis-Flares-Again.html" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 波斯湾/红海航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹+红海双封锁持续），当前受益环节：上游油企（高油价利润）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>CPI 日 · 中国消费政策</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美国 7 月 CPI</span>
+        <h4>今日 CPI 日：美国 7 月 CPI 今晚 20:30 HKT 公布，预期环比 +0.1%/同比 3.4%，核心 2.9%——9 月加息与否的裁决日</h4>
+        <p>Newsquawk/FOREX.com 预览：7 月 headline CPI 预期环比 <strong>+0.1%</strong>（6 月为 -0.4%），同比 <strong>3.4%</strong>（前值 3.5%）；核心 CPI 环比 <strong>+0.2%</strong>，同比 <strong>2.9%</strong>（维持不变）。Polymarket 隐含 ≥0.1% 月度 CPI 概率 63%。Cleveland Fed Nowcasting 模型亦指向温和反弹。6 月 CPI 环比 -0.4% 是 2020 年 5 月以来首次下降，7 月反弹在预期内。关键看点：能源分项因油价飙升可能上行，服务通胀是否回落是核心信号。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 今天最需要关注的数据。三种情景：① CPI ≤ 预期（核心 2.9% 或更低）→ 9 月加息概率下降，风险资产大涨；② CPI 符合预期 → 维持现状，市场波动有限；③ CPI 超预期（核心 3.0%+ 或环比 0.3%+）→ 9 月加息概率跳升，美股承压、美元走强、黄金回落。当前油价 $89 的背景让能源分项成为最大上行风险。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，CPI 直接驱动）/ GLD 黄金（避险+利率博弈）/ DXY 美元指数 — CPI 低于预期利好风险资产，高于预期利好美元/做空科技</div>
+        <div class="source">🔗 Source: <a href="https://www.newsquawk.com/headlines/preview-us-cpi-due-wednesday-12th-august-2026-at-1330bst0830edt" target="_blank">Newsquawk</a> · <a href="https://www.forex.com/en-sg/news-and-analysis/us-cpi-preview-will-inflation-tip-the-scales-on-a-fed-rate-hike-next-month/" target="_blank">FOREX.com</a> · <a href="https://polymarket.com/event/july-inflation-us-monthly-20260714151042665" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">中国政策</span>
+        <h4>Politburo 新策略：不再以"刺激 household 消费"为主线，转向"供给侧适配 + 服务消费"</h4>
+        <p>Foreign Policy 8/11 深度分析：中国政治局 7/30 会议设定下半年经济政策，数据不乐观——H1 零售仅 <strong>+1.3%</strong>，GDP +4.7%，CPI +1%。但 2026 年报告不再要求官员直接"刺激家庭消费"，而是转向"通过提供更好供给适配不同消费群体 + 促进服务消费"——呼应 4 月政治局的说法。同日 Reuters 报道，中国 6 月青年失业率降至 12 个月新低，但仍为整体失业率（约 <strong>5%</strong>）的三倍。DW 分析指出全球青年就业危机正在蔓延。</p>
+        <div class="why">🦞 <b>读给你听：</b>这个政策转向很重要——北京放弃了"直接发钱/消费券"的思路，改为"供给创造需求"。逻辑是：中国消费者不是没钱，是没好东西买。对 lainy 的消费股框架：① 政策利好"服务消费"（旅游、文娱、餐饮）多于"商品消费"（家电、百货）；② "供给侧适配" = 高端化、差异化品牌受益，低端同质化品牌承压；③ 青年失业率虽降但仍高 = 消费回暖弹性有限。</p>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费）/ 002747 埃斯顿（服务消费概念外溢）/ 000651 格力电器（商品消费承压）— 服务消费政策受益，商品消费中性</div>
+        <div class="source">🔗 Source: <a href="https://foreignpolicy.com/2026/08/11/china-politburo-xi-jinping-household-consumption-economy/" target="_blank">Foreign Policy</a> · <a href="https://www.reuters.com/world/china/" target="_blank">Reuters</a> · <a href="https://www.dw.com/en/why-the-youth-jobs-crisis-is-now-hitting-the-west/a-77991886" target="_blank">DW</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：今日 CPI 结果将决定 9 月 FOMC 加息预期</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/11 沪指 -0.82% 报 3934 / 深成指 -0.40% / 创业板 +0.34% / 止步五连阳</h4>
+      <p>8/11 收盘市场冲高回落，沪指终结六连阳。全市场超 3100 只个股下跌，北向资金与杠杆资金合计净流出约 <strong>120</strong> 亿元。风格切换明显：高位科技回调，低位消费/医药逆势上涨。机器人概念午后爆发，2026 世界机器人大会即将举办，中央企业机器人创新联合体将成立。<b>涨停 58 家</b>，最高 6 连板。创业板逆势微涨，存量博弈特征突出。今日关注：CPI 数据对北向资金流向的影响 + 机器人大会催化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/11 恒指 -1.10% 报 25,653 / 恒生科技 -1.3% 报 4,911 / 外资减仓快于内资</h4>
+      <p>恒指跌破 25,700，科技板块跌 1.3%。24/7 Wall St 分析指出："香港跌幅是上海的两倍多——外资比内资更快削减中国敞口"。成交额缩至 HK$2403 亿（约 $306 亿）。小米跌超 3%，但太古股份创历史新高。Shein 下周启动 HK IPO 路演（目标 $300-350 亿估值），可能带来增量资金关注。本周关注：CPI 后美股期货方向 + Shein IPO 订单簿热度和对港股流动性的虹吸。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/11 道指 -0.34% 报 53,792 / S&P -0.32% 报 7,725 / 纳指 -0.60% 报 26,445 / 连跌两日</h4>
+      <p>三大指数连续第二日下跌，CPI 前观望情绪浓厚。Nvidia 盘中一度 +1.5%（$500B 金融化利好），但收盘接近平盘。Chevron 涨 <strong>+4.38%</strong> 领涨道指（油价受益），Salesforce +2.71%、Merck +1.71% 防御股走强。Nvidia -2.79%、Travelers -2.21% 领跌。Investopedia 指出："所有目光聚焦明天 CPI"。SOX 芯片 ETF 跌，但记忆体股逆势上涨（SK Hynix ADR +4.7%）。SpaceX 私市场跌约 4%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/11 KOSPI +0.73% 报 6,346 / 三星 +4.13% 报 239,500 韩元 / SK Hynix +0.35% 报 1,425,000 韩元</h4>
+      <p>KOSPI 连涨两日，芯片股引领反弹。三星电子涨 <strong>+4.13%</strong>（市场最大亮点），三星 C&T +3.5%，三星生命 +2.6%，SK Hynix +0.35%，三星生物 +2.0%。日本休市（山之日），区域流动性集中在韩国。SK Hynix 加速 EUV 技术升级 + 引入 Phase Shift Mask 新材料，推进下一代 DRAM 研发。韩国政府计划一年内通过"超级特区立法"支持半导体集群 mega-projects。KOSDAQ 同步走强。韩元兑美元持稳。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · IPO · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Shein IPO</span>
+        <h4>Shein 下周启动香港 IPO 路演：目标估值 $300-350 亿，8/19 可能开簿</h4>
+        <p>Reuters/SCMP 8/11 报道，Shein 计划最快 8/19 启动香港 IPO 订单收集，目标估值 <strong>$300-350</strong> 亿。此前内部目标接近 $300 亿（Dimsum Daily），SCMP 称 $350 亿。Shein 已通过港交所上市聆讯，进入 pre-roadshow 阶段。这将是 2026 年港股最大 IPO 之一。背景：全球快时尚行业面临关税压力 + ESG 质疑，Shein 选择香港而非纽约上市，也反映中概股回归趋势。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Shein 选择香港 = 港股 IPO 市场的强心剂。$300-350 亿估值 vs 上一轮融资估值 $660 亿（2023），缩水近半——反映关税压力 + 地缘风险。对 lainy：① Shein IPO 可能带动港股消费板块情绪；② 但 $350 亿估值意味着 Shein 的增长叙事不再"无懈可击"；③ 值得关注 Shein 上市后对安踏、波司登等国产服装股的竞争压力。</p>
+        <div class="ticker">📌 关联标的：Shein（IPO 后可关注）/ 02020 安踏体育 / 03998 波司登 — Shein 上市短期利好港股 IPO 情绪，中期加剧行业竞争</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/world/asia-pacific/shein-plans-launch-hong-kong-ipo-soon-next-wednesday-sources-say-2026-08-11/" target="_blank">Reuters</a> · <a href="https://www.scmp.com/business/banking-finance/article/3363623/shein-set-take-orders-hong-kong-ipo-next-week-eyeing-us35b-valuation-sources" target="_blank">SCMP</a> · <a href="https://www.dimsumdaily.hk/shein-opens-hong-kong-ipo-pre-roadshow-internal-valuation-target-near-us30-billion/" target="_blank">Dimsum Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">Gap 中国扩张</span>
+        <h4>Gap 逆势中国扩张：今年开 50 家新店 + 重返香港，外资快时尚"退潮"中反向操作</h4>
+        <p>SCMP 8/11 报道，在众多外资快时尚品牌关闭中国门店之际（H&M、Zara 等收缩），美国服饰品牌 Gap 反向操作：计划今年在内地新开 <strong>50</strong> 家门店，并重返香港市场。Gap 同时推进本地化策略，包括更多亚洲尺码、中国设计师团队、本地供应链。同期 Gap/Banana Republic/Athleta 也将进入中东 GCC 市场。Gap 母公司股价 2026 年迄今涨超 30%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>外资快时尚退潮 = 中国本土品牌（UR、太平鸟）抢份额的机会。但 Gap 的逆势扩张说明"中国市场仍有空间，关键看本地化"。对 lainy：① Gap 本地化成功 = 国产服饰品牌面临国际品牌"二次竞争"；② 但 Gap 50 家店的规模在中国市场仍属小众；③ 这个故事的核心是"本地化能力"——谁更懂中国消费者谁赢。</p>
+        <div class="ticker">📌 关联标的：GPS（Gap，美股）/ 02020 安踏体育 / 2331.HK 李宁 — Gap 扩张短期对国产品牌影响有限，长期看本地化竞争</div>
+        <div class="source">🔗 Source: <a href="https://www.scmp.com/business/companies/article/3363647/gap-bucks-retail-headwinds-massive-china-expansion-amid-localisation-drive" target="_blank">SCMP</a> · <a href="https://www.just-style.com/news/gap-chalhoub-gcc-partnership/" target="_blank">Just-Style</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">Unitree IPO</span>
+        <h4>宇树科技科创板 IPO 超额认购 8000 倍：$9.04 亿融资，$90 亿估值，首家 A 股人形机器人上市公司</h4>
+        <p>QZ/Bloomberg/ChinaPulse 8/10-11 报道，宇树科技（Unitree Robotics）科创板 IPO 发行价 150.80 元/股，融资 61 亿元（约 <strong>$9.04</strong> 亿），估值约 <strong>$90</strong> 亿（人民币约 640 亿）。散户超额认购 <strong>8000</strong> 倍（Bloomberg 称 5526 倍）。宇树成为首家 A 股上市的人形机器人制造商。同期 Daily Sabah 分析指出，中国人形机器人企业正集体冲刺上市，政府政策支持力度持续加大。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>8000 倍超额认购 = A 股市场对"人形机器人"概念的狂热。宇树是 lainy 之前学过的 WAIC 2026 亮点企业——GD01 载人变形机甲就是它做的。对 lainy 的金融视角：① $90 亿估值 vs 2024 年收入可能不到 10 亿 = 9x+ P/S，典型的"概念溢价"；② 但宇树是目前唯一有商业化量产能力的人形机器人公司（Go2 机器狗已全球销售）；③ A 股机器人概念短期有泡沫风险，但中长期赛道确定。</p>
+        <div class="ticker">📌 关联标的：宇树科技（上市后关注）/ 002747 埃斯顿（机器人概念）/ 688169 石头科技（机器人外溢）— 短期概念热度高，中长期赛道确定</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-10/unitree-s-shanghai-ipo-5-526-times-subscribed-by-retail-buyers" target="_blank">Bloomberg</a> · <a href="https://qz.com/unitree-robotics-ipo-oversubscribed-shanghai-081126" target="_blank">QZ</a> · <a href="https://www.chinapulse.com/data-news/2026/08/11/chinas-humanoid-robot-industry-unitree-leads-the-ipo-race" target="_blank">ChinaPulse</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [机器人零部件 — 减速器/伺服电机] → 中游 [本体制造 — 宇树/优必选/智元] → 下游 [应用场景 — 工业/消费/服务] — 当前受益环节：中游本体制造（IPO 融资 + 政策红利），受损环节：无（全链景气向上）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Reacher S4</span>
+        <h4>Reacher 第四季今日首播！Alan Ritchson 回归，前 3 集一次性放出，改编自《Gone Tomorrow》</h4>
+        <p>Amazon Prime Video 8/12 全球首播 Reacher 第四季，前 3 集同步放出，此后每周一集至 9/16。本季改编自 Lee Child 系列第 13 本小说《Gone Tomorrow》——Jack Reacher 在费城地铁上遇到一位陌生人的偶然交谈，将他卷入一场致命谜案。Tom's Guide/Yahoo Entertainment 确认首播时间：美国 12am PT / 3am ET，英国 8am BST。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Reacher 是 Amazon 最受欢迎的动作剧集之一，Alan Ritchson 那个 1.93m 的大块头就是"行走的正义"。lainy 如果今天下班想看点什么，前 3 集已经放出了，一口气刷完正好。</div>
+        <div class="source">🔗 Source: <a href="https://www.tomsguide.com/entertainment/streaming/watch-reacher-season-4" target="_blank">Tom's Guide</a> · <a href="https://www.yahoo.com/entertainment/tv/articles/reacher-season-4-release-schedule-133309504.html" target="_blank">Yahoo Entertainment</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Disney</span>
+        <h4>Disney 宣布《Lilo & Stitch 2》和《The Incredibles 3》上映日期——两部续集锁定未来档期</h4>
+        <p>IMDb/Deadline 8/11 报道，迪士尼公布两部重磅续集的上映日期：① <strong>Lilo & Stitch 2</strong>——2025 年真人版全球票房破 $10 亿，续集已在开发；② <strong>The Incredibles 3</strong>——皮克斯经典动画续集。具体日期待公布。迪士尼同日宣布《Zootopia 2》全球票房突破 $10 亿（17 天达成，动画电影最快纪录）。</p>
+        <div class="why">🦞 <b>花边点评：</b>迪士尼的 IP 续集策略很清晰——把每一个破 $10 亿的 IP 都拍续集。Lilo & Stitch 真人版今年大火，续集稳赚。Incredibles 3 更是等了快 20 年。lainy 如果喜欢动画/合家欢电影，这两部值得期待。另外暑期档全球票房刚破 $40 亿，是疫情后第二次——好莱坞在回暖。</div>
+        <div class="source">🔗 Source: <a href="https://www.imdb.com/news/celebrity/" target="_blank">IMDb</a> · <a href="https://deadline.com/gallery/highest-grossing-animated-movies-all-time/" target="_blank">Deadline</a> · <a href="https://variety.com/2026/film/box-office/summer-box-office-4-billion-odyssey-spiderman-obsession-backrooms-1236831246/" target="_blank">Variety</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 科技/科学花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag sci">SpaceXAI</span>
+        <h4>Elon Musk 的 SpaceXAI 发布 Grok Bot 企业级 AI Agent：跨应用协作团队，缩小与 OpenAI 差距</h4>
+        <p>TradingKey 8/11 报道，Musk 旗下 SpaceXAI 发布新产品 Grok Bot，定位为企业级 AI Agent 协作团队。核心能力：① 登录应用程序和网站；② 保留之前任务信息；③ 跨不同 Agent 共享上下文，帮助用户持续处理工作。这是 Musk 在企业 AI Agent 市场的首次正式布局，直面对标 OpenAI 的企业级产品。SpaceX 私市场股价同期跌约 4%。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>Musk 终于把 Grok 从"Twitter 上的嘴炮机器人"升级成"能干活的 Agent"了。企业 AI Agent 是 2026 年最火的赛道之一（OpenAI、Anthropic、Manus 都在打），Grok Bot 的差异化在于"跨应用协作"——如果一个 Agent 能同时操作邮件、日历、CRM、浏览器，那它就是"数字员工"。对 lainy：AI Agent 赛道竞争白热化 = 应用层估值泡沫风险，但也是生产力的真正革命。</div>
+        <div class="source">🔗 Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262096826-spacex-xai-grok-bot-enterprise-ai-agent-tradingkey" target="_blank">TradingKey</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
