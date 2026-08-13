@@ -13,6 +13,87 @@ ARCHIVE_DIR = REPO_ROOT / "archive"
 INDEX_HTML = REPO_ROOT / "index.html"
 SEARCH_JSON = REPO_ROOT / "search_index.json"
 
+# 页面底部 JS（Tab 切换 + 全站搜索）
+# 注意：这是普通字符串不是 f-string，JS 里的 ${} 和 {} 不需要转义
+JS_SNIPPET = r"""<script>
+// Tab 切换
+(function() {
+  const btns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      btns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('tab-' + target);
+      if (panel) panel.classList.add('active');
+      const r = document.getElementById('search-results-global');
+      if (r) r.innerHTML = '';
+      const i = document.getElementById('search-input');
+      if (i) i.value = '';
+    });
+  });
+})();
+
+// 全站搜索
+(async function() {
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results-global');
+  if (!input || !results) return;
+  let index = [];
+  try {
+    const r = await fetch('search_index.json');
+    index = await r.json();
+  } catch (e) {
+    results.innerHTML = '<div class="sr-empty">搜索索引加载失败</div>';
+    return;
+  }
+  function escapeRegex(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  function highlight(text, kw) {
+    const re = new RegExp(escapeRegex(kw), 'gi');
+    return text.replace(re, m => '<span class="sr-highlight">' + m + '</span>');
+  }
+  let timer;
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const q = input.value.trim();
+      if (!q || q.length < 2) {
+        results.innerHTML = q ? '<div class="sr-empty">请输入至少 2 个字</div>' : '';
+        return;
+      }
+      const out = [];
+      const qLower = q.toLowerCase();
+      for (const day of index) {
+        for (const title of day.titles) {
+          if (title.toLowerCase().includes(qLower)) {
+            out.push({ date: day.date, title: title });
+          }
+        }
+      }
+      if (out.length === 0) {
+        results.innerHTML = '<div class="sr-empty">没有找到「' + q + '」相关的报道</div>';
+        return;
+      }
+      const max = 30;
+      const items = out.slice(0, max).map(r =>
+        '<div class="sr-item">' +
+          '<span class="sr-date">' + r.date.slice(5).replace('-', '/') + '</span>' +
+          '<a href="archive/' + r.date + '.html">' + highlight(r.title, q) + '</a>' +
+        '</div>'
+      ).join('');
+      const more = out.length > max
+        ? '<div class="sr-empty">共 ' + out.length + ' 条结果，仅显示前 ' + max + ' 条</div>'
+        : '<div class="sr-empty">共 ' + out.length + ' 条结果</div>';
+      results.innerHTML = items + more;
+    }, 200);
+  });
+})();
+</script>"""
+
 DATE_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2})\.html$")
 
 COLORS = {
@@ -1592,78 +1673,7 @@ def main():
     共 {total} 期 · 更新于 {now} · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
-<script>
-// Tab 切换
-(function() {{
-  const btns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.tab-panel');
-  btns.forEach(btn => {{
-    btn.addEventListener('click', () => {{
-      const target = btn.dataset.tab;
-      btns.forEach(b => b.classList.remove('active'));
-      panels.forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('tab-' + target)?.classList.add('active');
-      // 清空搜索结果
-      const r = document.getElementById('search-results-global');
-      if (r) r.innerHTML = '';
-      const i = document.getElementById('search-input');
-      if (i) i.value = '';
-    }});
-  }});
-}})();
-
-// 全站搜索
-(async function() {{
-  const input = document.getElementById('search-input');
-  const results = document.getElementById('search-results-global');
-  if (!input || !results) return;
-  let index = [];
-  try {{
-    const r = await fetch('search_index.json');
-    index = await r.json();
-  }} catch (e) {{
-    results.innerHTML = '<div class="sr-empty">搜索索引加载失败</div>';
-    return;
-  }}
-  function highlight(text, kw) {{
-    const re = new RegExp(kw.replace(/[.*+?^${{}}()|[\]\\]/g, '\\$&'), 'gi');
-    return text.replace(re, m => `<span class="sr-highlight">${{m}}</span>`);
-  }}
-  let timer;
-  input.addEventListener('input', () => {{
-    clearTimeout(timer);
-    timer = setTimeout(() => {{
-      const q = input.value.trim();
-      if (!q || q.length < 2) {{
-        results.innerHTML = q ? '<div class="sr-empty">请输入至少 2 个字</div>' : '';
-        return;
-      }}
-      const out = [];
-      for (const day of index) {{
-        for (const title of day.titles) {{
-          if (title.toLowerCase().includes(q.toLowerCase())) {{
-            out.push({{ date: day.date, title }});
-          }}
-        }}
-      }}
-      if (out.length === 0) {{
-        results.innerHTML = `<div class="sr-empty">没有找到「${{q}}」相关的报道</div>`;
-        return;
-      }}
-      const max = 30;
-      const items = out.slice(0, max).map(r => `
-        <div class="sr-item">
-          <span class="sr-date">${{r.date.slice(5).replace('-', '/')}}</span>
-          <a href="archive/${{r.date}}.html">${{highlight(r.title, q)}}</a>
-        </div>
-      `).join('');
-      const more = out.length > max ? `<div class="sr-empty">共 ${{out.length}} 条结果，仅显示前 ${{max}} 条</div>` : `<div class="sr-empty">共 ${{out.length}} 条结果</div>`;
-      results.innerHTML = items + more;
-    }}, 200);
-  }});
-}})();
-</script>
+""" + JS_SNIPPET + """
 </body>
 </html>
 """

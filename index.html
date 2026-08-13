@@ -1022,7 +1022,7 @@
   </div>
 
   <footer>
-    共 104 期 · 更新于 2026-08-13 11:01 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 104 期 · 更新于 2026-08-13 11:06 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
 <script>
@@ -1036,8 +1036,8 @@
       btns.forEach(b => b.classList.remove('active'));
       panels.forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById('tab-' + target)?.classList.add('active');
-      // 清空搜索结果
+      const panel = document.getElementById('tab-' + target);
+      if (panel) panel.classList.add('active');
       const r = document.getElementById('search-results-global');
       if (r) r.innerHTML = '';
       const i = document.getElementById('search-input');
@@ -1059,9 +1059,12 @@
     results.innerHTML = '<div class="sr-empty">搜索索引加载失败</div>';
     return;
   }
+  function escapeRegex(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
   function highlight(text, kw) {
-    const re = new RegExp(kw.replace(/[.*+?^${}()|[\]\]/g, '\$&'), 'gi');
-    return text.replace(re, m => `<span class="sr-highlight">${m}</span>`);
+    const re = new RegExp(escapeRegex(kw), 'gi');
+    return text.replace(re, m => '<span class="sr-highlight">' + m + '</span>');
   }
   let timer;
   input.addEventListener('input', () => {
@@ -1073,25 +1076,28 @@
         return;
       }
       const out = [];
+      const qLower = q.toLowerCase();
       for (const day of index) {
         for (const title of day.titles) {
-          if (title.toLowerCase().includes(q.toLowerCase())) {
-            out.push({ date: day.date, title });
+          if (title.toLowerCase().includes(qLower)) {
+            out.push({ date: day.date, title: title });
           }
         }
       }
       if (out.length === 0) {
-        results.innerHTML = `<div class="sr-empty">没有找到「${q}」相关的报道</div>`;
+        results.innerHTML = '<div class="sr-empty">没有找到「' + q + '」相关的报道</div>';
         return;
       }
       const max = 30;
-      const items = out.slice(0, max).map(r => `
-        <div class="sr-item">
-          <span class="sr-date">${r.date.slice(5).replace('-', '/')}</span>
-          <a href="archive/${r.date}.html">${highlight(r.title, q)}</a>
-        </div>
-      `).join('');
-      const more = out.length > max ? `<div class="sr-empty">共 ${out.length} 条结果，仅显示前 ${max} 条</div>` : `<div class="sr-empty">共 ${out.length} 条结果</div>`;
+      const items = out.slice(0, max).map(r =>
+        '<div class="sr-item">' +
+          '<span class="sr-date">' + r.date.slice(5).replace('-', '/') + '</span>' +
+          '<a href="archive/' + r.date + '.html">' + highlight(r.title, q) + '</a>' +
+        '</div>'
+      ).join('');
+      const more = out.length > max
+        ? '<div class="sr-empty">共 ' + out.length + ' 条结果，仅显示前 ' + max + ' 条</div>'
+        : '<div class="sr-empty">共 ' + out.length + ' 条结果</div>';
       results.innerHTML = items + more;
     }, 200);
   });
