@@ -766,10 +766,50 @@ def build_calendar_html(dates_set: set, today_str: str) -> str:
     return f'<div class="cal-grid">{"".join(month_blocks)}</div>'
 
 
+def highlight_keywords(text: str) -> str:
+    """给关键词加粗/上色。避免嵌套 span——先匹配长的，后匹配短的。"""
+    # 收集所有需要高亮的区间，避免重叠
+    spans = []  # (start, end, replacement)
+    # 匹配 $ + 数字 + 可选单位
+    for m in re.finditer(r"\$\d+(?:\.\d+)?(?:\s*(?:亿|万亿|万|billion|million|B|M))?", text):
+        spans.append((m.start(), m.end(), f'<span class="kw-num">{m.group(0)}</span>'))
+    # 匹配 数字+% 或 数字+单位（不在 $span 重叠区）
+    for m in re.finditer(r"\d+(?:\.\d+)?%", text):
+        if not any(s <= m.start() < e for s, e, _ in spans):
+            spans.append((m.start(), m.end(), f'<span class="kw-num">{m.group(0)}</span>'))
+    for m in re.finditer(r"\d+(?:\.\d+)?\s*(?:亿|万亿|万|倍|台|个|次|条|位|家)", text):
+        if not any(s <= m.start() < e for s, e, _ in spans):
+            spans.append((m.start(), m.end(), f'<span class="kw-num">{m.group(0)}</span>'))
+    # 从后往前替换，避免位置偏移
+    spans.sort(reverse=True)
+    for s, e, rep in spans:
+        text = text[:s] + rep + text[e:]
+    # 2. 关键动词加粗（简单替换，避免与 span 重叠）
+    for kw in ["纪录", "创纪录", "创新高", "创新低", "首次", "首度", "爆发", "暴涨", "暴跌", "飙升", "突破", "落地", "收购", "签署", "发布", "紧急", "宣布", "爆表", "超预期", "打压", "联手", "反弹"]:
+        # 只在不在 <span> 内部时替换
+        pattern = rf'(?<![>/\\w]){re.escape(kw)}(?![^<]*</span>)'
+        text = re.sub(pattern, f'<span class="kw-verb">{kw}</span>', text)
+    # 3. 主体加粗（公司/品牌/产品）——同样在不在 span 内才替换
+    subjects = set()
+    for alias in TOPIC_ALIAS:
+        if len(alias) >= 2:
+            subjects.add(alias)
+    # 加上大写英文品牌（排除太泛的）
+    skip_subjects = {"YoY", "QoQ", "MoM", "EPS", "CEO", "CFO", "AI", "IT", "US", "USA", "UK", "EU", "UN", "IPO", "GDP", "CPI", "PPI", "Q1", "Q2", "Q3", "Q4", "NYT", "CNN", "CNBC", "BBC", "FT", "WSJ"}
+    for m in re.finditer(r"\b[A-Z][a-zA-Z0-9&-]{2,15}\b", text):
+        if m.group(0) not in skip_subjects:
+            subjects.add(m.group(0))
+    # 按长度降序（避免 "AMD" 先替换造成 "AMD 收购" 后面那个不被识别）
+    for subj in sorted(subjects, key=len, reverse=True):
+        pattern = rf'(?<![>/\\w]){re.escape(subj)}(?![^<]*</span>)(?![^<]*</strong>)'
+        text = re.sub(pattern, f'<strong class="kw-subject">{subj}</strong>', text, count=1)
+    return text
+
+
 def build_weekly_highlights(dates: list, days: int = 7) -> str:
-    """本周大事记：横向时间轴布局，每天一列，显示当天 1-3 条重要事件。"""
+    """本周大事记：竖向时间轴，每天一行，事件里关键词高亮。"""
     cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    recent = sorted([d for d in dates if d >= cutoff])
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)  # 最新在前
     if not recent:
         return ""
     
@@ -779,7 +819,6 @@ def build_weekly_highlights(dates: list, days: int = 7) -> str:
         return sum(2 for kw in KEYWORD_IMPORTANCE if kw in t) + len(re.findall(r"\d+%|\$\d+|\d+\s*亿", t))
     
     def get_subject(t: str) -> str:
-        """抽事件主体用于同日去重。"""
         for alias in TOPIC_ALIAS:
             if alias in t:
                 return normalize_topic(alias)
@@ -789,46 +828,44 @@ def build_weekly_highlights(dates: list, days: int = 7) -> str:
         m = re.search(r"([一-龥]{2,4})(?:科技|集团|汽车|机器人|半导体|医药|银行|证券|影视|娱乐|游戏)", t)
         if m:
             return m.group(0)
-        return t[:20]  # 兜底
+        return t[:20]
     
-    # 按天分组 + 同天内部去重 + 按重要性排序
-    day_columns = []
     weekdays_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+    day_rows = []
     for d in recent:
         titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
         if not titles:
             continue
-        # 同天内部按主体去重 + 按重要性排序
         seen = {}
         for t in titles:
             subj = get_subject(t)
             score = score_title(t)
             if subj not in seen or score > seen[subj][0]:
                 seen[subj] = (score, t)
-        top_titles = sorted(seen.values(), key=lambda x: -x[0])[:3]  # 每天最多 3 条
+        top_titles = sorted(seen.values(), key=lambda x: -x[0])[:3]
         
         dt = datetime.strptime(d, "%Y-%m-%d")
         weekday = weekdays_cn[dt.weekday()]
         date_label = f"{dt.month}/{dt.day}"
         
-        items_html = "".join(
-            f'<div class="day-event"><a href="archive/{d}.html">{t}</a></div>'
+        events_html = "".join(
+            f'<div class="day-event">• <a href="archive/{d}.html">{highlight_keywords(t)}</a></div>'
             for _, t in top_titles
         )
-        day_columns.append(f'''
-    <div class="day-column">
-      <div class="day-header">
-        <div class="day-date">{date_label}</div>
-        <div class="day-weekday">{weekday}</div>
+        day_rows.append(f'''
+    <div class="day-row">
+      <div class="day-meta">
+        <div class="day-date-v">{date_label}</div>
+        <div class="day-weekday-v">{weekday}</div>
       </div>
-      <div class="day-events">{items_html}</div>
+      <div class="day-events-v">{events_html}</div>
     </div>''')
     
     return f'''
   <div class="weekly-section">
-    <div class="section-title">📅 本周大事记（近 {len(day_columns)} 天）</div>
-    <div class="weekly-timeline">
-      {"".join(day_columns)}
+    <div class="section-title">📅 本周大事记（近 {len(day_rows)} 天）</div>
+    <div class="weekly-vertical">
+      {"".join(day_rows)}
     </div>
   </div>'''
 
@@ -1360,54 +1397,47 @@ def main():
     border-left: 3px solid var(--sage);
   }}
 
-  /* 本周大事记横向时间轴 */
-  .weekly-timeline {{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 12px;
-    margin-top: 16px;
+  /* 本周大事记竖向时间轴 */
+  .weekly-vertical {{
+    margin-top: 12px;
   }}
-  .day-column {{
-    background: var(--card, #fff);
-    border: 1px solid var(--line-soft);
-    border-radius: 8px;
-    overflow: hidden;
+  .day-row {{
     display: flex;
-    flex-direction: column;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px dashed var(--line-soft);
   }}
-  .day-header {{
-    background: linear-gradient(135deg, var(--rose) 0%, #d4a64a 100%);
-    color: white;
-    padding: 10px 12px;
-    text-align: center;
+  .day-row:last-child {{
+    border-bottom: none;
   }}
-  .day-date {{
+  .day-meta {{
+    flex-shrink: 0;
+    width: 70px;
+    text-align: right;
+    padding-top: 2px;
+  }}
+  .day-date-v {{
     font-size: 16px;
     font-weight: 700;
+    color: var(--rose);
+    line-height: 1.2;
+  }}
+  .day-weekday-v {{
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
     letter-spacing: 0.5px;
   }}
-  .day-weekday {{
-    font-size: 11px;
-    opacity: 0.9;
-    margin-top: 2px;
-    letter-spacing: 1px;
-  }}
-  .day-events {{
-    padding: 10px 12px;
+  .day-events-v {{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
   }}
   .day-event {{
-    font-size: 12px;
-    line-height: 1.5;
-    padding-bottom: 8px;
-    border-bottom: 1px dashed var(--line-soft);
-  }}
-  .day-event:last-child {{
-    border-bottom: none;
-    padding-bottom: 0;
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-main);
   }}
   .day-event a {{
     color: var(--text-main);
@@ -1416,10 +1446,18 @@ def main():
   .day-event a:hover {{
     color: var(--rose);
   }}
-  @media (max-width: 800px) {{
-    .weekly-timeline {{
-      grid-template-columns: repeat(2, 1fr);
-    }}
+  /* 关键词高亮 */
+  .kw-num {{
+    color: #D4A64A;
+    font-weight: 700;
+  }}
+  .kw-verb {{
+    color: var(--rose);
+    font-weight: 600;
+  }}
+  .kw-subject {{
+    color: var(--text-main);
+    font-weight: 700;
   }}
   /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
   .weekly-section, .geo-section, .topic-reverse-section, .search-section {{
