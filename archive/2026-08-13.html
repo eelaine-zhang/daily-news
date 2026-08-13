@@ -19,25 +19,24 @@
   .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
   h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
   .subtitle { color: var(--text-dim); font-size: 15px; }
-  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
   .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
   .tldr ul { margin: 0; padding-left: 20px; }
   .tldr li { margin: 4px 0; }
   .tldr li b { color: var(--accent); }
   section { margin-bottom: 56px; }
   section + section { padding-top: 8px; }
-  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-bottom: 4px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; padding-bottom: 4px; border-left: 4px solid var(--accent); border-bottom: none; }
   .section-title .emoji { font-size: 22px; }
   .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
   .cards { display: grid; gap: 14px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
   .card:hover { background: var(--card-hover); }
   .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
   .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
   .card b, .card strong { color: var(--accent); font-weight: 600; }
-  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; font-style: normal; }
-  .card .why::before { content: "🦞 "; }
-  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; font-size: 13px; color: var(--text-dim); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
   .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
   .tag.hbm { background: #D4A64A18; color: var(--hbm); }
   .tag.geo { background: #A9BACB18; color: var(--geo); }
@@ -45,6 +44,7 @@
   .tag.biz { background: #C9A0B618; color: var(--biz); }
   .tag.fun { background: #D4B79C18; color: var(--fun); }
   .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .tag.follow { background: #7aa9d618; color: #7aa9d6; }
   .source { font-size: 12px; color: var(--text-dim); }
   .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
   .source a:hover { color: var(--text); }
@@ -52,10 +52,7 @@
   .market-block h4 { margin: 0 0 6px; font-size: 15px; }
   .market-block p { margin: 0; font-size: 13px; color: var(--text); }
   .market-block b, .market-block strong { color: var(--hbm); }
-  .chain-link { margin-top: 12px; padding: 8px 12px; background: #F0EDE5; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
-  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
-  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
-  .back-link .arrow { font-size: 16px; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
   .footer-note { margin-top: 6px; font-size: 12px; }
 </style>
@@ -65,15 +62,15 @@
   <header>
     <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
     <h1>2026 年 8 月 13 日</h1>
-    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报（v2 重发）</div>
   </header>
 
   <div class="tldr">
     <h3>⚡ 今日三句话</h3>
     <ul>
-      <li><b>英伟达 $5000 亿融资联盟：</b>黄仁勋拉拢 Apollo、BlackRock、Goldman Sachs 等 6 家华尔街巨头建立 AI 算力融资平台，但市场担忧中国廉价 AI 芯片冲击 GPU 抵押品价值，引发"循环融资"质疑。同日 CoreWeave 营收暴增 +18%、Super Micro +9%，AI 需求仍强。</li>
-      <li><b>CPI 降温但油价添忧：</b>美国 7 月 CPI 同比 <strong>+3.4%</strong>（环比 +0.1%），连续两月回落；但 IEA 警告全球原油库存"快速消耗"，Q3 供给缺口扩至 180 万桶/日，Brent 守 $89。乌克兰应 Vance 要求暂停袭击黑海油轮。</li>
-      <li><b>韩股爆发 + 宇树 IPO：</b>KOSPI 单日暴涨 <strong>+3.68%</strong> 收 6,579（三星 +6.7%、SK Hynix +5.5%），韩国 8 月前 10 天半导体出口同比 <strong>+155%</strong>；A 股方面，宇树科技科创板 IPO 超额认购 8,000 倍，估值约 $90 亿。</li>
+      <li><b>CoreWeave Q2 爆表：</b>营收 <strong>$25.75 亿</strong>（+112% YoY），合同积压 <strong>$1290 亿</strong>（6 周新增 $296 亿），盘后涨 <strong>+16%</strong>——AI 算力租赁的"需求验证"压倒"亏损扩大"担忧。</li>
+      <li><b>韩股爆发 +3.68%：</b>KOSPI 收 6,579，三星 +6%、SK Hynix +5%，外资单日净买入 2 万亿韩元，触发年内第 23 次 sidecar——韩国 8 月前 10 天半导体出口同比 <strong>+155%</strong>。</li>
+      <li><b>美国 7 月 CPI 同比 +3.4%</b>（环比 +0.1%），符合预期，连续两月回落，市场押注 9 月按兵不动；S&P +0.3%、纳指 +0.59%；油价继续走高，Brent 守 $89。</li>
     </ul>
   </div>
 
@@ -83,179 +80,160 @@
     <div class="cards">
 
       <div class="card">
-        <span class="tag hbm">英伟达 $5000 亿联盟</span>
-        <h4>黄仁勋拉拢 6 家华尔街巨头建立 $5000 亿 AI 算力融资平台，但"循环融资"和中国廉价芯片引发担忧</h4>
-        <p>8/10 英伟达与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs、KKR 签署 MOU，建立 6 个独立"算力融资平台"，计划动员超 <strong>$5000</strong> 亿第三方资本，为英伟达客户购买 GPU 集群提供融资。英伟达市值 <strong>$5.3</strong> 万亿。但分析人士指出两个风险：① "循环融资"——英伟达既是 GPU 卖方，又是融资平台背后的受益者，如果 GPU 价值下跌，整个链条可能崩塌；② 中国廉价 AI 芯片正在崛起，可能冲击 GPU 二级市场价值，从而动摇 GPU 作为抵押品的定价基础。Motley Fool 指出这笔融资是 2000 年电信泡沫融资规模的 20 倍。</p>
-        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 产业链金融化的标志性事件。英伟达不只想卖芯片，还想做"AI 基础设施的银行"——用 GPU 做抵押品，让华尔街出钱帮客户买卡。逻辑类似 2000 年电信泡沫：设备商融资给运营商买设备，收入"左口袋进右口袋"。对 lainy 的金融视角：① 如果 AI 需求持续爆发，这个模式能加速渗透；② 如果需求放缓或中国替代芯片上市，GPU 二级市场价值下跌可能引发连锁反应。英伟达 8/26 财报是下一个关键节点。</div>
-        <div class="ticker">📌 关联标的：NVDA（英伟达，8/26 财报前关键博弈期）/ SMH（半导体 ETF）/ 159992 半导体ETF（A 股）— 短期情绪复杂，中长期取决于 AI 需求验证</div>
-        <div class="source">🔗 Source: <a href="https://www.theguardian.com/technology/2026/aug/11/nvidia-wall-street-finance-ai-infrastructure" target="_blank">The Guardian</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-11/nvidia-s-show-of-financial-force-soothes-jittery-credit-markets" target="_blank">Bloomberg</a> · <a href="https://www.fool.com/investing/2026/08/11/nvidias-500-billion-financing-plan-is-20-times-wha/" target="_blank">Motley Fool</a></div>
+        <span class="tag hbm">CoreWeave Q2 财报</span>
+        <h4>CoreWeave Q2 营收 $25.75 亿（+112% YoY）超预期，合同积压 $1290 亿，盘后飙 +16%——"50% 违约率"质疑被打脸</h4>
+        <p>8/12 盘后 CoreWeave（CRWV）发布 Q2 2026 财报：营收 <strong>$25.75 亿</strong>（+112% YoY，环比 +24%），小幅超出预期约 $1500 万；合同积压（backlog）<strong>$1290 亿</strong>，仅过去 6 周就新增 <strong>$296 亿</strong>，覆盖 Q3 起的已签约承诺。Q2 GAAP 净亏损 $6.26 亿，但市场把注意力从"亏损扩大"转向"需求持续性"——此前债市给出的 50% 违约率预期被新订单直接否定。盘后股价 <strong>+16%</strong>。CEO 强调一个关键数据点：<strong>连 6 年前的 Nvidia GPU 都还在被客户抢购</strong>，说明 AI 算力短缺远比"周期见顶论"严重。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CoreWeave 是 AI 算力租赁赛道最敏感的"晴雨表"——它的客户主要是 AI 创业公司和中小型实验室。合同积压 $1290 亿意味着客户已经排队锁了未来 2-3 年的算力，这对 NVIDIA 的"AI capex 持续性"是最强的单一信号。对 lainy：① Q3 起每月新增 $50 亿积压 = 行业景气度没有见顶迹象；② "6 年前的 GPU 还在租" 直接回应了"中国廉价芯片替代"质疑——短期 AI 训练/推理对生态的要求仍让二手 NV GPU 有市场；③ 但 $6.26 亿季度亏损扩大意味着这个模式仍在烧钱扩张，最终要靠 8/26 NVIDIA 财报给出 capex 走向的下一个锚。</div>
+        <div class="ticker">📌 关联标的：CRWV（CoreWeave，直接受益）/ NVDA（Nvidia，AI capex 信号）/ SMH（半导体 ETF）— AI 算力租赁模式被验证</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/11/coreweave-crwv-q2-earnings-report-2026.html" target="_blank">CNBC</a> · <a href="https://www.techtimes.com/articles/324054/20260812/coreweave-q2-2026-129b-backlog-grew-296b-six-weeks-despite-50-default-odds.htm" target="_blank">TechTimes</a> · <a href="https://www.cnbc.com/2026/08/12/coreweave-counters-a-key-bear-case-on-the-ai-trade-what-it-means-for-our-data-center-stocks.html" target="_blank">CNBC Analysis</a></div>
       </div>
 
       <div class="card">
-        <span class="tag hbm">CoreWeave × Super Micro</span>
-        <h4>CoreWeave 营收暴增股价 +18%、Super Micro +9%：AI 基础设施需求仍在加速</h4>
-        <p>8/12 CoreWeave（CRWV）发布财报显示营收增速超预期，股价盘前涨超 <strong>18%</strong>；同日 Super Micro Computer（SMCI）发布乐观指引，股价涨近 <strong>9%</strong>。两家 AI 基础设施公司的强劲表现"安抚了对 AI 支出放缓的担忧"。CoreWeave 作为英伟达 GPU 最大租赁商，其营收验证了 AI 算力需求仍在加速。Nebius Group（NBIS）涨 10%，Applied Digital（APLD）和 IREN 同步上涨。Broadcom（AVGO）也因 CoreWeave 和 SMCI 的正面信号而走强。</p>
-        <div class="why">🦞 <b>龙虾老师的解读：</b>CoreWeave 和 Super Micro 的财报是英伟达 8/26 财报的"前菜"——如果 AI 算力租赁商收入在加速，说明下游客户（OpenAI、Meta 等）还在抢 GPU，不是在削减订单。对 lainy 的框架：AI 产业链的"需求验证"不是看英伟达一家，而是看整条链——从 GPU 卖方（NVDA）→ 算力租赁商（CoreWeave）→ 服务器制造商（SMCI）→ 内存供应商（SK Hynix/三星），每个环节的数据都在互相印证。</div>
-        <div class="ticker">📌 关联标的：CRWV（CoreWeave）/ SMCI（Super Micro）/ AVGO（Broadcom）/ NVDA（英伟达 8/26 财报）— 需求链验证持续正面</div>
-        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-11/coreweave-revenue-surges-on-booming-demand-for-ai-computing" target="_blank">Bloomberg</a> · <a href="https://www.benzinga.com/markets/tech/26/08/61148256/broadcom-stock-is-gaining-wednesday-whats-going-on" target="_blank">Benzinga</a> · <a href="https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/08/12/coreweave-super-micro-climb-on-signs-of-sustained-ai-buildout/" target="_blank">BNN Bloomberg</a></div>
+        <span class="tag follow">持续关注</span>
+        <h4>Nvidia $5000 亿融资联盟遭"循环融资"质疑——中国廉价 AI 芯片成 GPU 抵押品定价隐忧</h4>
+        <p>（昨日已报道 6 大行 MOU 签署细节）8/12 起市场对这笔交易出现两个新质疑角度：① <strong>"循环融资"风险</strong>——Motley Fool 指出 $5000 亿规模是 2000 年电信泡沫融资的 20 倍，且 Nvidia 同时是 GPU 卖方和融资平台受益方，收入"左口袋进右口袋"，如果 GPU 二级市场价值下跌，整条链条可能崩塌；② <strong>中国廉价芯片冲击抵押品定价</strong>——华为昇腾、寒武纪等国产 AI 芯片如果性价比起来，会冲击二手 GPU 残值，动摇 GPU 作为抵押品的估值基础。Nvidia 8/12 收盘接近平盘，市场正在消化这层风险。</p>
+        <div class="why">🦞 <b>金融视角：</b>对 lainy 这是典型的"卖方融资"（vendor financing）风险案例——参考 2000 年 Lucent/Nortel 融资给运营商买自家设备的崩盘路径。不同点在于这次有 6 家顶级资管分摊风险，且 GPU 残值有 CoreWeave 这类租赁商背书。但同质化风险点：如果中国芯片真把二手 H100 价格打下来 30%，抵押品减值会触发 margin call 链条。8/26 NVIDIA 财报 Q&A 环节这条线必被问。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，估值锚）/ APO / BX / BLK（融资平台方）— 短期博弈情绪，中长期看 AI 需求验证</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/investing/2026/08/12/nvidias-500-billion-ai-bet-20x-bigger-than-telecom/" target="_blank">Motley Fool</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-10/nvidia-to-team-with-wall-street-on-500-billion-package-ft-says" target="_blank">Bloomberg</a></div>
       </div>
 
       <div class="card">
-        <span class="tag hbm">韩国半导体出口</span>
-        <h4>韩国 8 月前 10 天半导体出口同比 +155.4% 至 $99.5 亿，三星 +6.7%、SK Hynix +5.5% 引爆 KOSPI</h4>
-        <p>韩国政府数据显示，8 月前 10 天半导体出口同比飙升 <strong>155.4%</strong>，达约 <strong>$99.5</strong> 亿，带动韩国整体出口增长。受此数据 + CoreWeave/SMCI 财报提振，8/12 KOSPI 暴涨 <strong>+3.68%</strong> 收 6,579.04，连续三日上涨。三星电子涨 <strong>6.68%</strong>，SK Hynix 涨 <strong>5.54%</strong>，LG Innotek 涨 10.93%，三星 SDI 涨 6.09%。外资净买入约 $20 亿。报道称三星和 SK Hynix 可能最早于 8 月底公布新的股东回报计划。SK Hynix ADR 收复 $150。</p>
-        <div class="why">🦞 <b>为什么值得看：</b>韩国半导体出口是全球 AI 芯片需求的"实时温度计"——+155% 的增速意味着 HBM 和存储芯片需求仍在爆发期。对 lainy 的市场含义：① 三星和 SK Hynix 的 HBM 产能扩张正在被市场重新定价；② 如果两家公司宣布新的股东回报计划（回购/分红），韩股可能进一步上行；③ 韩元走强也反映了外资流入的趋势。这条线与英伟达 $5000 亿融资、CoreWeave 需求验证形成完整的"AI capex → 内存利润传导"链。</div>
-        <div class="ticker">📌 关联标的：005930.KS（三星电子）/ 000660.KS（SK Hynix）/ KOSPI ETF — HBM 双寡头持续受益，关注 8 月底股东回报计划</div>
-        <div class="source">🔗 Source: <a href="https://www.ibtimes.com.au/samsung-electronics-shares-surge-semiconductor-demand-1873990" target="_blank">IBTimes</a> · <a href="https://www.koreajoongangdaily.com/business/shares-spike-for-3rd-day-on-chip-rally-as-won-strengthens/12821506" target="_blank">Korea JoongAng Daily</a> · <a href="https://www.kedglobal.com/korean-stock-market/newsView/ked202608120010" target="_blank">KED Global</a></div>
-      </div>
-
-      <div class="card">
-        <span class="tag hbm">宇树科技 IPO</span>
-        <h4>宇树科技科创板 IPO 超额认购 8,000+ 倍：人形机器人第一股估值约 $90 亿，投资者疯抢</h4>
-        <p>宇树科技（688836）在科创板 IPO 定价 <strong>150.80</strong> 元/股，募资约 <strong>$9</strong> 亿美元，估值约 <strong>$90</strong> 亿美元（约 219 倍 2025 年盈利、36 倍营收）。散户认购超额 <strong>8,000+</strong> 倍，部分投资者押注 150 万元中签一手。宇树是 2026 年全球人形机器人出货量预计约 6 万台的最大受益者之一，工业及商业应用已占总出货量 70%+。参照科创板今年新股首日中位涨幅 289%，宇树上市首日可能翻倍。人形机器人 ETF 板块已提前启动。</p>
-        <div class="why">🦞 <b>读给你听：</b>8,000 倍超额认购意味着散户愿意锁定 75,400 元去博 500 股的中签——中签率约 0.012%。这个疯狂程度说明市场对人形机器人赛道的预期已经到了"盲目信仰"的阶段。对 lainy 的金融视角：① 宇树估值 219 倍 PE = 市场在定价 2028-2030 年的量产预期，而不是当前盈利；② 如果首日翻倍，市值将达约 $180 亿，会带动整个人形机器人板块估值重估；③ 但 219 倍 PE 也意味着一旦量产不及预期，回调会很剧烈——参考 2015 年创业板泡沫。</div>
-        <div class="ticker">📌 关联标的：688836 宇树科技（上市首日预计大涨）/ 002747 埃斯顿（机器人概念）/ 688169 石头科技 / 562500 机器人ETF — 短期情绪极热，注意上市后波动</div>
-        <div class="source">🔗 Source: <a href="https://www.japantimes.co.jp/business/2026/08/12/tech/unitree-china-humanoid-robot-makers/" target="_blank">Japan Times</a> · <a href="https://europeanbusinessmagazine.com/robotics-ipo-draws-1-2tn-orders" target="_blank">European Business Magazine</a> · <a href="https://autonews.gasgoo.com/articles/icv/unitree-robotics-ipo-draws-massive-investor-interest-with-some-betting-rmb-15m-on-the-new-share-2087561971049447425" target="_blank">Gasgoo</a></div>
+        <span class="tag hbm">AI 芯片股集体反弹</span>
+        <h4>AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</h4>
+        <p>8/12 美股盘中，AMD、Intel、Nvidia 三家 AI 芯片龙头集体上涨，触发点是 Super Micro（SMCI）前一日盘后发布的超预期财报——服务器订单指引大幅上调，AI 机架出货量环比 +40%+。Kulicke and Soffa（封装设备）同步上涨。市场解读：Super Micro 是 AI 服务器"装配厂"的最下游，它的订单强度 = 上游 AMD/Intel/Nvidia 的出货量先行指标。这是 AMD/Intel/Nvidia 自 7 月底以来首次同步上涨超过 1%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>之前 15 天三家一直在被"中国廉价芯片替代"和"AI 需求可持续性"两座大山压着，周三的反弹说明资金开始回归基本面。对 lainy：这是市场风格的信号——从"杀估值"切回"看业绩"，AI 芯片股可能进入"业绩验证"主导的阶段。关注 8/26 NVIDIA 财报是否能接力 Super Micro 给出下一个上行催化。</div>
+        <div class="ticker">📌 关联标的：AMD / INTC / NVDA / SMCI / KLIC — AI 服务器供应链重新联动</div>
+        <div class="source">🔗 Source: <a href="https://247wallst.com/investing/2026/08/12/amd-intel-and-nvidia-all-rally-wednesday-after-series-of-blockbuster-ai-earnings-reports/" target="_blank">24/7 Wall St.</a> · <a href="https://markets.financialcontent.com/wral/article/stockstory-2026-8-12-kulicke-and-soffa-amd-intel-and-nvidia-shares-are-soaring-what-you-need-to-know" target="_blank">StockStory</a></div>
       </div>
 
     </div>
-    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 — TSMC/三星] → 下游 [GPU/AI 芯片 — NVDA/AVGO/华为] → 终端 [云厂/算力租赁 — CoreWeave/MSFT] — 当前受益环节：中游 HBM 内存（三星/SK Hynix 出口 +155%）+ 下游算力租赁（CoreWeave 需求验证）</div>
+    <div class="chain-link">🔗 产业链：上游 [HBM 内存 — 三星/SK Hynix 出口 +155%] → 中游 [GPU/代工 — NVDA/AMD/INTC/TSMC CoWoS] → 下游 [服务器装配 — SMCI] → 终端 [算力租赁 — CoreWeave $1290 亿积压] — 当前最强信号：算力租赁需求验证（CoreWeave 6 周新增 $296 亿合同）</div>
   </section>
 
   <!-- 🌍 国际局势 -->
   <section>
-    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价 & 地缘风险</small></h2>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价与地缘</small></h2>
     <div class="cards">
 
       <div class="card">
-        <span class="tag geo">黑海油轮</span>
-        <h4>乌克兰应 JD Vance 要求暂停袭击新罗西斯克港油轮——油价短期减压信号</h4>
-        <p>据金融时报报道，美国副总统 JD Vance 在电话中要求泽连斯基停止对俄罗斯黑海港口新罗西斯克的油轮无人机袭击，乌克兰已暂停该行动。Vance 警告称这些袭击"扰乱了油市、威胁到更广泛的经济稳定"。新罗西斯克是俄罗斯在黑海的主要石油出口港，乌克兰此前通过无人机打击该港口的油轮，曾推高油价的地缘溢价。此次暂停被市场解读为美国对油价上涨的政治容忍度已到极限。</p>
-        <div class="why">🦞 <b>为什么值得看：</b>这是油价的关键变量之一。乌克兰袭击新罗西斯克港 → 俄罗斯原油出口受阻 → 油价地缘溢价上升。现在袭击暂停 = 短期供给侧减压。但要注意：① 这只是"暂时暂停"，不是永久停止；② 霍尔木兹海峡仍处于"事实关闭"状态（每日仅 8 艘船通过 vs 正常 73 艘），主要矛盾未解决；③ IEA 同日发布报告警告全球原油库存"快速消耗"。对 lainy：油价短期可能小幅回落，但 Q3 供给缺口 180 万桶/日的基本面没变。</div>
-        <div class="ticker">📌 关联标的：Brent 原油（短期减压但不改 Q3 缺口逻辑）/ 600028 中国石化 / XLE（能源 ETF）— 油价高位震荡，回落幅度有限</div>
-        <div class="source">🔗 Source: <a href="https://www.telegraph.co.uk/world-news/2026/08/12/vance-intervenes-to-halt-ukraine-strikes-on-oil-tankers/" target="_blank">Telegraph</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/Ukraine-Halts-Oil-Tanker-Attacks-on-JD-Vance-Request.html" target="_blank">OilPrice</a> · <a href="https://www.pravda.com.ua/eng/news/2026/08/12/8048342/" target="_blank">Ukrainska Pravda</a></div>
+        <span class="tag geo">海湾国家绕开霍尔木兹</span>
+        <h4>NYT：海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</h4>
+        <p>NYT 8/12 报道，随着伊朗战争进入第 6 个月，霍尔木兹海峡航运仍严重受限，沙特、阿联酋、科威特等海湾石油巨头正加速投资数十亿美元，建设绕开霍尔木兹海峡的替代输油管道和装船终端——包括沙特扩建通往红海的 East-West 管道、阿联酋推进富查伊拉（Fujairah）出海终端扩容。目前通过海峡的油轮需在伊朗袭击风险中穿行，运费和保险成本已涨至战前 3 倍。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是"战争长期化"的实物证据——海湾国家开始用 10 年期的基建投资来对冲霍尔木兹风险，意味着市场预期这条水道短期内不会恢复正常。对 lainy：① 高油价不是短期现象，而是结构性的；② 管道、终端类基础设施资产（ADNOC、Saudi Aramco 相关）会有重估；③ 中国和印度作为主要买家，能源安全成本上升，可能加速新能源车渗透率。</div>
+        <div class="ticker">📌 关联标的：XLE（能源 ETF）/ 沙特阿美（2222.SE）/ ADNOC 系列 — 绕开霍尔木兹的基础设施资产受益</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/08/12/business/iran-war-hormuz-oil.html" target="_blank">NYTimes</a></div>
       </div>
 
       <div class="card">
-        <span class="tag geo">IEA 油市报告</span>
-        <h4>IEA 警告全球原油库存"快速消耗"，Q3 供给缺口扩至 180 万桶/日</h4>
-        <p>国际能源署（IEA）8/12 发布月度油市报告：① 全球石油库存降至 <strong>79 亿桶</strong>以下，为 2025 年 4 月以来首次；② Q3 全球石油供给缺口扩大至 <strong>180 万桶/日</strong>，较上月预估翻倍以上；③ 2026 年全球石油产量预计下降 <strong>430 万桶/日</strong>（因霍尔木兹海峡中断 + 胡塞武装袭击沙特设施）；④ 2026 年全球石油需求预计下降 <strong>160 万桶/日</strong>（高油价抑制消费）。Brent 原油 8/12 收于 <strong>$88.98</strong>/桶（+0.4%）。同时美国原油库存上周增加 910 万桶（2 月以来最大增幅），部分缓解了紧张情绪。伊朗周末向美国提出战争赔偿要求，美伊谈判陷入僵局。</p>
-        <div class="why">🦞 <b>龙虾老师说：</b>IEA 报告的核心信息是"供给收缩快于需求下滑"——霍尔木兹海峡事实关闭导致 430 万桶/日产能下线，而高油价抑制消费只削减 160 万桶需求，净缺口 180 万桶。对 lainy 的投资框架：① 油价高位（$85-95 区间）可能是 Q3 的常态；② 如果霍尔木兹重新开放，油价可能快速回落至 $70s；③ 美国原油库存大增 910 万桶说明战略储备在释放，这是"用库存换时间"——不可持续。TUI（旅游集团）因高油价导致运营利润下降 27%，是高油价向下游传导的典型案例。</div>
-        <div class="ticker">📌 关联标的：Brent 原油 / 601857 中国石油 / JETS（航空 ETF，高油价受损）/ GLD 黄金 — Q3 油价高位支撑通胀粘性</div>
-        <div class="source">🔗 Source: <a href="https://www.iea.org/reports/oil-market-report-august-2026" target="_blank">IEA</a> · <a href="https://www.cnbc.com/2026/08/12/iea-oil-demand-hormuz.html" target="_blank">CNBC</a> · <a href="https://www.theguardian.com/business/live/2026/aug/12/oil-prices-brent-crude-iran-trump-fuel-inflation-tui-travel-business-live" target="_blank">The Guardian</a></div>
+        <span class="tag geo">伊朗强硬表态</span>
+        <h4>伊朗：只要美国不解除制裁就一直关闭霍尔木兹，特朗普拒绝让步——油价应声上涨</h4>
+        <p>伊朗最高领袖办公室 8/12 凌晨发表声明："霍尔木兹海峡将持续关闭，直到美国全面解除对伊制裁。"同日特朗普在白宫记者会上明确拒绝，称"不会为一条水道向恐怖分子低头"。伊朗此前已提出过"过路费"方案（Fortune 估算如果收取每船货值 5-7% 的通行费，伊朗每年可获 $200 亿），但美国未接受。IEA 同日月报将 2026 下半年全球石油需求预测下调 <strong>55 万桶/日</strong>，因霍尔木兹关闭冲击供应链。</p>
+        <div class="why">🦞 <b>市场含义：</b>双方都在硬化立场，意味着短期没有外交解决路径。油价下行风险被锁死，上行风险取决于伊朗是否扩大袭击。对 lainy：原油多头仓位逻辑仍在，但要警惕中国需求转弱（7 月 CPI +0.5% 显示内需仍弱）部分对冲供给冲击。美国 9 月是否加息现在也多了油价这个变量。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / XLE / 中石油（601857）— 油价结构性高位</div>
+        <div class="source">🔗 Source: <a href="https://www.foxnews.com/live-news/iran-war-news-trump-israel-hormuz-august-12" target="_blank">Fox News</a> · <a href="https://fortune.com/2026/08/12/iran-oil-strait-of-hormuz/" target="_blank">Fortune</a> · <a href="https://www.cnn.com/2026/08/12/world/live-news/iran-war-trump" target="_blank">CNN</a></div>
       </div>
 
     </div>
-    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 黑海/霍尔木兹航线] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [航空/物流 — TUI/航空公司] — 当前受损环节：中游航运（霍尔木兹日通过 8 艘 vs 正常 73 艘）+ 下游航空（TUI 运营利润 -27%）</div>
   </section>
 
   <!-- 📈 宏观 & 市场 -->
   <section>
-    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>CPI · 美联储 · 油价</small></h2>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>CPI 日 + 油价</small></h2>
     <div class="cards">
 
       <div class="card">
-        <span class="tag macro">美国 CPI</span>
-        <h4>美国 7 月 CPI 同比 +3.4% 连续两月回落，但油价高企让美联储 9 月加息博弈复杂化</h4>
-        <p>美国劳工统计局 8/12 发布 7 月 CPI 数据：环比 <strong>+0.1%</strong>（前值 -0.4%），同比 <strong>+3.4%</strong>（前值 3.5%），连续两月回落，从 2023 年 5 月 4.2% 的高点持续降温。核心通胀分项显示能源价格仍是主要推手——伊朗战争对油价的推升效应仍在传导，但其他日常开支出现降温迹象。数据公布后美股小幅上涨（S&P 500 +0.30%、纳指 +0.59%），市场解读为"通胀回落但仍在 3% 以上，美联储 9 月是否加息仍不确定"。</p>
-        <div class="why">🦞 <b>为什么值得看：</b>CPI 是美联储 9 月议息会议前最重要的数据之一。对 lainy 的情景分析：① CPI 继续回落 + 油价稳定 → 美联储维持利率，风险偏好改善；② 油价反弹推升 8 月 CPI → 加息预期重燃，科技股承压。当前 3.4% 的水平介于两者之间——不够低到让美联储放心，但也不够高到必须加息。市场共识倾向于 9 月按兵不动，但油价是最大变量。</div>
-        <div class="ticker">📌 关联标的：SPY / QQQ（美股，CPI 降温利好）/ GLD 黄金（通胀预期下行利空，但地缘避险支撑）/ 513130 港股通科技ETF — CPI 回落 + 油价高位 = 美联储观望</div>
-        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html" target="_blank">CNBC</a> · <a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank">BLS</a> · <a href="https://www.cnbc.com/2026/08/12/inflation-breakdown-for-july-2026-cpi-in-one-chart.html" target="_blank">CNBC 分项</a></div>
+        <span class="tag macro">美国 7 月 CPI</span>
+        <h4>美国 7 月 CPI 同比 +3.4%（环比 +0.1%），连续两月回落——9 月加息预期骤降温</h4>
+        <p>8/12 20:30 HKT，美国劳工部公布 7 月 CPI：同比 <strong>+3.4%</strong>（预期 3.4%），环比 <strong>+0.1%</strong>（预期 +0.1%），核心 CPI 同比 <strong>+2.9%</strong>（预期 2.9%），环比 <strong>+0.2%</strong>。连续第二个月回落。CME FedWatch 工具显示，市场对 9 月 FOMC 按兵不动的概率从数据前的 78% 升至 <strong>88%</strong>。S&P 500 当天收涨 +0.3% 测新高，纳指 +0.59%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy：CPI 连续回落 + 非农意外转负（-2.3 万）的组合意味着美联储今年剩余 3 次会议最多加一次。美元走弱预期会重新抬头，新兴市场资产（含 A 股、港股、韩股）的外资流入逻辑被强化——这就是韩股 8/12 暴涨的宏观背景。下一个关键节点是 8/22 Jackson Hole 鲍威尔讲话。</div>
+        <div class="ticker">📌 关联标的：美债 10Y / DXY 美元指数 / KOSPI / 港股 — 美元走弱预期利好新兴市场</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-august-12-dow-sp-500-nasdaq-cpi-report-091555133.html" target="_blank">Yahoo Finance</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-12-2026" target="_blank">TheStreet</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油库存警报</span>
+        <h4>IEA 警告全球原油库存"快速消耗"，Q3 供给缺口扩至 180 万桶/日——Brent 守 $89</h4>
+        <p>IEA 8/12 月报：全球原油库存在 7 月底已降至 2017 年以来最低，Q3 供给缺口从上月预估的 120 万桶/日扩大至 <strong>180 万桶/日</strong>。主因：霍尔木兹海峡实质关闭导致海湾出口减少 400 万桶/日，同时美国页岩油增产停滞（钻井数连续 4 周下滑）。Brent 原油期货 8/12 守住 <strong>$89</strong>，WTI 守住 $85。</p>
+        <div class="why">🦞 <b>金融视角：</b>库存低位 + 供给缺口 + 战争溢价 = 油价下行空间被封死。对 lainy：① 上游油气股（中石油、中海油、Exxon、Chevron）Q3 业绩会持续超预期；② 但高油价会重新点燃通胀担忧，对美联储 9 月决策形成掣肘；③ 新能源车产业链（BYD、Tesla、宁德时代）是高油价的最直接受益方。</div>
+        <div class="ticker">📌 关联标的：Brent / XLE / 601857 中石油 / 0883.HK 中海油 — 油价结构性高位</div>
+        <div class="source">🔗 Source: <a href="https://www.foxnews.com/live-news/iran-war-news-trump-israel-hormuz-august-12" target="_blank">Fox News</a> · <a href="https://www.cnn.com/2026/08/12/world/live-news/iran-war-trump" target="_blank">CNN</a></div>
       </div>
 
     </div>
-    <div class="chain-link">🔗 产业链：上游 [油价/利率] → 中游 [通胀预期/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：8 月 CPI（9 月公布）+ 英伟达 8/26 财报将决定 Q3 方向</div>
   </section>
 
   <!-- 🏦 股市行情 -->
   <section>
-    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>8/12 收盘</small></h2>
 
     <div class="market-block">
-      <h4>🇨🇳 A 股 — 8/12 三大指数全线反弹：沪指 +0.32% 报 3946 / 深成指 +1.09% / 创业板 +1.49%</h4>
-      <p>8/12 收盘：沪指报 <strong>3946.68</strong>（<strong>+0.32%</strong>），深成指报 14414（<strong>+1.09%</strong>），创业板报 3602（<strong>+1.49%</strong>）。全市场 4122 只个股上涨 vs 1276 只下跌，成交 2.17 万亿（缩量 1684 亿）。房地产板块涨幅居前，光通信、食品饮料、AI 概念活跃。分析称 A 股转入横盘震荡格局，年线构成核心压力。<b>今日关注：</b>宇树科技（688836）科创板上市首日表现，可能对机器人板块和短线资金产生虹吸效应。中际旭创（300308）价量齐升，光通信板块持续强势。</p>
+      <h4>🇨🇳 A 股 — 8/12 三大指数全线反弹：沪指 +0.32% 报 3947 / 深成指 +1.09% / 创业板 +1.49% / 科创 50 +1%+</h4>
+      <p>8/12 收盘：沪指报 <strong>3946.68</strong>（+0.32%），深成指报 14414.43（<strong>+1.09%</strong>），创业板指报 3602（<strong>+1.49%</strong>），科创 50 涨 <strong>+1%+</strong>。全市场 <strong>4122 只个股上涨</strong> vs 1276 只下跌，成交 2.15 万亿（缩量 1684 亿）。房地产板块涨幅居前，光通信、食品饮料、AI 概念活跃。<b>今日关注：</b>宇树科技（688836）今日上市首日表现——科创板今年新股首日平均涨幅 276%，中位数 289%，中一签浮盈预计 20-35 万元。梁文锋通过 DeepSeek 战略配售 + 幻方量化网下打新获配 119 万股，如果市值突破 3000 亿他个人浮盈约 7 亿。中际旭创（300308）价量齐升，光通信板块持续强势。</p>
     </div>
 
     <div class="market-block">
       <h4>🇭🇰 港股 — 8/12 恒指 -0.83% / 恒科 -0.99%，科网股普跌，光通信、内房股逆势走强</h4>
-      <p>8/12 收盘：恒生指数跌 <strong>0.83%</strong>，恒生科技指数跌 <strong>0.99%</strong>。阿里巴巴 -3%+，腾讯 -2%+ 领跌科网股。芯片股逆势上涨：中芯国际 +3%+，兆易创新 +5%+。光通信板块强势，内房股也表现突出。港股整体受美债收益率上升 + 油价高企双重压力。<b>政策面：</b>香港政府明确税改方案不包括自营交易公司（如 Jane Street、Citadel Securities），此前 FT 报道称可能纳入，市场预期落空。税改旨在吸引基金管理和家族办公室人才，与新加坡竞争。</p>
+      <p>8/12 收盘：恒生指数跌 <strong>0.83%</strong>，恒生科技指数跌 <strong>0.99%</strong>。阿里巴巴 -3%+，腾讯 -2%+ 领跌科网股。芯片股逆势上涨：中芯国际 +3%+，兆易创新 +5%+。光通信板块强势，内房股也表现突出。康师傅（00322）业绩后涨超 <strong>+7%</strong>。<b>政策面：</b>香港政府明确税改方案不包括自营交易公司（如 Jane Street、Citadel Securities），此前 FT 报道称可能纳入，市场预期落空。</p>
     </div>
 
     <div class="market-block">
-      <h4>🇺🇸 美股 — 8/12 道指 53791 (-0.34%) / S&P 7728 (-0.32%) / 纳指 26445 (-0.60%)，但盘后反弹</h4>
-      <p>8/12 收盘三大指数两连跌：道指 <strong>-0.34%</strong> 报 53791，S&P 500 <strong>-0.32%</strong> 报 7728，纳指 <strong>-0.60%</strong> 报 26445。芯片股逆势反弹，费城半导体 SOXX 涨约 1%，阿斯麦 +4%，SK Hynix ADR +2%+，英伟达 +1%。光通信、存储板块集体上涨：Lumentum +9%，Coherent +8%，Marvell +6%+，美光 +4%+。CoreWeave 财报后 +18%，Super Micro +9%。<b>8/13 盘前：</b>CPI 数据公布后，S&P 500 期货 +0.3%，纳指期货 +0.5%，市场对通胀降温反应正面。英伟达 8/26 财报是下一个大事件。</p>
+      <h4>🇺🇸 美股 — 8/12 收盘：S&P +0.30% / 纳指 +0.59% / 道指平盘 / CoreWeave 财报后盘后 +16%</h4>
+      <p>8/12 收盘：S&P 500 涨 <strong>+0.30%</strong> 测新高，纳指涨 <strong>+0.59%</strong>，道指几乎平盘，Russell 2000 涨 +0.32%。CPI 符合预期 + CoreWeave 财报爆表提振 AI 板块。Cisco、AMD、Intel、Nvidia 集体上涨。市场押注 9 月 FOMC 按兵不动概率升至 88%。<b>盘后焦点：</b>CoreWeave（CRWV）盘后 <strong>+16%</strong>，合同积压 $1290 亿大超预期。</p>
     </div>
 
     <div class="market-block">
-      <h4>🇰🇷 韩股 — 8/12 KOSPI +3.68% 收 6579（三星 +6.68%、SK Hynix +5.54%），三日连涨</h4>
-      <p>KOSPI 暴涨 <strong>+3.68%</strong> 收 6579.04，连续三日上涨，外资净买入约 $20 亿。三星电子涨 <strong>6.68%</strong>，SK Hynix 涨 <strong>5.54%</strong>，LG Innotek +10.93%，三星 SDI +6.09%。KOSDAQ 小幅上涨（散户驱动）。韩元走强。触发因素：① 韩国 8 月前 10 天半导体出口同比 <strong>+155%</strong>；② CoreWeave/SMCI 财报验证 AI 需求；③ 三星和 SK Hynix 可能 8 月底公布新股东回报计划。SK Hynix ADR 收复 $150。<b>重点个股：</b>三星 239,500 韩元（+4.13% 前日 → 8/12 再涨 6.68%），SK Hynix 1,425,000 韩元。</p>
+      <h4>🇰🇷 韩股 — 8/12 KOSPI 暴涨 +3.68% 收 6,579：三星 +6%、SK Hynix +5%，触发年内第 23 次 sidecar</h4>
+      <p>8/12 收盘：KOSPI 单日暴涨 <strong>+3.68%</strong>（+233.51 点）报 <strong>6579.04</strong>，Nikkei 225 同步涨 +0.83% 报 67,524。三星电子涨 <strong>+6%+</strong>，SK Hynix 涨 <strong>+5%+</strong>，Kioxia 涨近 4%。<b>资金面：</b>外资单日净买入超 <strong>2 万亿韩元</strong>（约 $14 亿），机构净买入近 1 万亿韩元。盘中触发年内第 23 次 sidecar（涨跌幅熔断机制）。<b>核心驱动：</b>① 韩国 8 月前 10 天半导体出口同比 <strong>+155%</strong>（HBM 拉动）；② AI capex 可持续性担忧消退；③ 韩元走强反映外资流入；④ 市场押注三星/SK Hynix 8 月底公布股东回报计划（回购/分红）。</p>
     </div>
+
   </section>
 
-  <!-- 🛍️ 消费 -->
+  <!-- 🛍️ 消费类 -->
   <section>
-    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 零售 · 趋势</small></h2>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费类 <small>零售 / 娱乐 / 体验经济</small></h2>
     <div class="cards">
 
       <div class="card">
-        <span class="tag biz">ALO 入华</span>
-        <h4>美国高端运动品牌 ALO 天猫首日破纪录：正式进入中国市场，线下北京/上海门店筹备中</h4>
-        <p>8/11 美国高端运动生活方式品牌 ALO 在天猫开设旗舰店，正式进入中国市场，首日销售创下新品牌纪录。同时筹备北京、上海线下门店。ALO 采用"产品 + 社区 + 生活方式"模式，定位高端运动服饰。Jing Daily 指出其首日表现强劲，但中国运动生活方式市场竞争激烈，"新鮮感"能持续多久是关键。此前 Gap 也在逆势扩张中国门店，与之形成对比的是多家外资快时尚品牌退出中国。</p>
-        <div class="why">🦞 <b>为什么值得看：</b>ALO 和 Gap 同时在中国扩张，说明"中国消费不行了"的叙事过于笼统——中高端定位 + 社区运营能力的品牌仍有增长空间。对 lainy 的消费框架：① Lululemon 之后，ALO 是第二个主打"社区+生活方式"的运动品牌入华，验证了这个赛道的可复制性；② 但 ALO 定价高于 Lululemon，在中国能否跑通有待验证；③ 外资品牌入华 = 中国商业地产（商场）的利好，新增优质租户。</div>
-        <div class="ticker">📌 关联标的：LULU（Lululemon，竞争加剧）/ 600628 申万宏源（商业地产受益逻辑间接）— ALO 入华短期对 Lululemon 中国市场份额有边际影响</div>
-        <div class="source">🔗 Source: <a href="https://www.globaltimes.cn/page/202608/1368079.shtml" target="_blank">Global Times</a> · <a href="https://jingdaily.com/posts/alo-enters-china-with-a-record-smashing-tmall-debut" target="_blank">Jing Daily</a> · <a href="https://www.gurufocus.com/news/9026838/alo-enters-china-market-via-tmall-sets-record-for-new-brand-sales" target="_blank">GuruFocus</a></div>
+        <span class="tag biz">Disney Q3 财报</span>
+        <h4>Disney Q3 2026：乐园营收 $100 亿创纪录（+10% YoY），流媒体利润 12.9% 几乎翻倍，但票房参差</h4>
+        <p>8/12 盘后 Disney 发布 Q3 2026 财报：Experiences（乐园 + 邮轮）营收 <strong>$100 亿</strong>创纪录，同比 +10%，全球游客量 +4%（迪士尼世界和邮轮扩容驱动）。Direct-to-Consumer（流媒体）运营利润 <strong>$7.12 亿</strong>，利润率达 <strong>12.9%</strong>（同比几乎翻倍，去年同期 ~6.5%），流媒体收入（不含 ESPN）+11%。CEO 特别点赞上周末《Spider-Man》新片的开画纪录，但承认整体票房"参差不齐"。全年指引维持。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Disney 的财报是"体验经济 > 内容经济"趋势的最强证明——乐园营收创纪录 + 流媒体利润率翻倍，但传统电影票房反而不稳定。对 lainy：① 这解释了为什么奈飞、Disney 都在加速建乐园/沉浸式体验；② 流媒体 12.9% 的利润率证明行业从"烧钱抢用户"进入"盈利兑现"阶段；③ 中国消费股里同类型标的是泡泡玛特（乐园 + IP）、宋城演艺——逻辑一致：把 IP 变成线下体验。</div>
+        <div class="ticker">📌 关联标的：DIS（Disney）/ NFLX（Netflix）/ 9992.HK 泡泡玛特 / 300144 宋城演艺 — 体验经济持续跑赢内容经济</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/stocks/articles/disney-dis-q3-2026-earnings-161644206.html" target="_blank">Yahoo Finance</a> · <a href="https://www.fool.com/earnings/call-transcripts/2026/08/12/disney-dis-q3-2026-earnings-call-transcript/" target="_blank">Motley Fool</a> · <a href="https://www.morningstar.com/stocks/after-earnings-is-disney-stock-buy-sell-or-fairly-valued-10" target="_blank">Morningstar</a></div>
       </div>
 
       <div class="card">
-        <span class="tag biz">Gap 逆势扩张</span>
-        <h4>Gap 逆势扩张中国市场：在外资快时尚纷纷退出时，加大本地化投入</h4>
-        <p>据南华早报报道，美国服装品牌 Gap 在多家外资快时尚品牌退出中国之际，逆势加大中国扩张力度，推进本地化战略。这与 Zara、H&M 等品牌缩减中国门店形成鲜明对比。Gap 的策略是"更深度的本地化"——包括产品设计、营销、供应链全方位适应中国消费者。同期瑞士运动品牌 On（昂跑）也在中国 DTC 渠道实现 26% 销售增长，驱动其大规模开店计划。</p>
-        <div class="why">🦞 <b>龙虾老师的解读：</b>外资品牌在中国"两极分化"——快时尚（Zara/H&M）败退，中高端+本地化能力强的品牌（Gap/On/ALO）反而在加码。对 lainy 的消费股框架：① 中国服装市场不是"不行"，而是消费升级中的结构性调整；② 能做 DTC（直营）+ 本地化的品牌胜出，纯批发/代理模式出局；③ 国产运动品牌（安踏/李宁）的竞争壁垒在中高端定位上仍稳固。</div>
-        <div class="ticker">📌 关联标的：2020.HK 安踏体育 / 2331.HK 李宁 / GPS（Gap，美股）— 国产运动品牌中高端竞争壁垒仍稳</div>
-        <div class="source">🔗 Source: <a href="https://www.scmp.com/business/companies/article/3363647/gap-bucks-retail-headwinds-massive-china-expansion-amid-localisation-drive" target="_blank">SCMP</a> · <a href="https://digitalphablet.com/business/swiss-sportswear-brand-on-drives-china-sales-to-back-big-store-plan/" target="_blank">Digital Phablet</a></div>
+        <span class="tag biz">Live Nation Q2</span>
+        <h4>Live Nation Q2 2026 营收 $76.7 亿（+9.4% YoY）：演唱会经济继续爆发，EPS $1.05</h4>
+        <p>Live Nation（LYV）8/12 公布 Q2 2026 财报：营收 <strong>$76.7 亿</strong>（同比 +9.4%），EPS <strong>$1.05</strong>。大型场馆和体育场演出占比持续提升，票价中位数和 VIP 套票渗透率均创新高。全年演唱会日程已超过 2019 年疫情前水平 30%+。</p>
+        <div class="why">🦞 <b>市场含义：</b>演唱会经济是 Z 世代"体验消费"里最确定的赛道——票价涨不动就加 VIP 包、加 merch、加直播联动。对 lainy：① Live Nation 的强势 = 全球粉丝经济仍在扩张期；② 同类标的：HYBE（BTS 公司）、SM Entertainment、腾讯音乐——粉丝付费意愿的天花板还在上移；③ 但 Live Nation 在美国面临反垄断诉讼，这是估值的"达摩克利斯之剑"。</div>
+        <div class="ticker">📌 关联标的：LYV（Live Nation）/ HYBE（352820.KS）/ TME（腾讯音乐）— 演唱会 + 粉丝经济</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/quote/LYV/" target="_blank">Yahoo Finance</a></div>
       </div>
 
     </div>
-    <div class="chain-link">🔗 产业链：上游 [品牌设计/本地化] → 中游 [供应链/制造] → 下游 [天猫/线下门店] → 终端 [消费者] — 当前受益环节：中高端 DTC 品牌（ALO/On/Gap），受损环节：快时尚批发模式（Zara/H&M 退出）</div>
   </section>
 
   <!-- ✨ 娱乐花边 -->
   <section>
-    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
     <div class="cards">
 
       <div class="card">
-        <span class="tag fun">电影</span>
-        <h4>本周新片上映：里根传记片《President Reagan》——Jeff Daniels 饰演里根，Jared Harris 饾演戈尔巴乔夫</h4>
-        <p>8/15 周末北美院线新片中最受关注的是里根传记片《President Reagan》，Jeff Daniels 饾演里根总统，Jared Harris 饾演苏联领导人戈尔巴乔夫，聚焦 1986 年雷克雅未克峰会——里根试图挽救与戈尔巴乔夫的裁军协议。这是 2026 年暑期档末期的一部政治传记大片。</p>
-        <div class="why">🦞 <b>轻松一下：</b>在美伊冲突 + 冷战回潮的 2026 年，拍一部关于美苏裁军谈判的电影，时机选择很有意思——是怀旧还是在暗示什么？lainy 如果喜欢政治历史题材，这部值得关注。Jeff Daniels 演正剧一向靠谱。</div>
-        <div class="source">🔗 Source: <a href="https://neon.reviewjournal.com/movies/whats-new-to-theaters-this-week-video-3340390/" target="_blank">Review Journal</a></div>
-      </div>
-
-      <div class="card">
-        <span class="tag fun">Daily Show 30 周年</span>
-        <h4>《The Daily Show》庆祝 30 周年：Michael Che、John Oliver、Samantha Bee 等前校友"面试录像"曝光</h4>
-        <p>Deadline 报道，《The Daily Show》发布 30 周年特别节目，公开了 Michael Che、John Oliver、Samantha Bee、Roy Wood Jr. 等前 correspondent 的"面试录像带"，被称为"最他妈强的新闻团队"。这档从 1996 年开播的政治讽刺节目，培养了一批美国最有影响力的喜剧新闻人。</p>
-        <div class="why">🦞 <b>花边点评：</b>30 年的《The Daily Show》可以说是美国政治喜剧的"黄埔军校"——Jon Stewart 时代的 correspondent 们后来各自开了自己的节目。看他们年轻时的面试录像，大概就像看龙虾老师第一次做早报一样青涩（但更搞笑）。</div>
-        <div class="source">🔗 Source: <a href="https://deadline.com/" target="_blank">Deadline</a></div>
-      </div>
-
-      <div class="card">
-        <span class="tag fun">Netflix</span>
-        <h4>Ben Affleck × Kerry Washington 新片《Animals》预告片发布；Netflix 动画《Adults》第二季预告</h4>
-        <p>Entertainment Tonight 报道，Netflix 发布 Ben Affleck 和 Kerry Washington 主演的新片《Animals》官方预告片。同时 FXX/Hulu 动画《Adults》第二季也发布预告。Anna Faris 在采访中透露自己新爱好——骑摩托车。</p>
-        <div class="why">🦞 <b>龙虾老师说：</b>Ben Affleck + Kerry Washington 的组合很有看头——一个是奥斯卡导演/演员，一个是《Scandal》女王。《Animals》如果走政治惊悚路线，在这个地缘混乱的夏天应该很有共鸣。</div>
-        <div class="source">🔗 Source: <a href="https://www.etonline.com/" target="_blank">Entertainment Tonight</a></div>
+        <span class="tag fun">《Spider-Man》开画纪录</span>
+        <h4>《Spider-Man》新片开画创纪录：Disney CEO 公开点赞，2026 暑期档全球票房刷新历史</h4>
+        <p>Disney CEO Bob Iger 在 Q3 财报电话会上公开点赞索尼和漫威工作室的《Spider-Man》新片，称"上映 65 年后 Spider-Man 仍是最受欢迎的角色之一"，并透露该片在上周末刷新了开画票房纪录。2026 暑期档（5-8 月）全球票房创历史新纪录——《Toy Story 5》以 <strong>$4.61 亿</strong>（北美）和《Super Mario Galaxy Movie》<strong>$4.29 亿</strong>领跑，独立片《Tony》《Teenage Sex and Death at Camp Miasma》也表现亮眼，纪录片《Cookie Queens》首映进入前 10。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>暑期档票房创新纪录 + 独立片和纪录片崛起说明：① 观众不是不进影院，而是要"值得大银幕"的内容；② 超级英雄 IP 的最强资产依然是 Spider-Man，这对索尼（6758.T）和迪士尼（DIS）的衍生品收入是长期利好；③ 独立片和纪录片的崛起意味着影院差异化排片策略奏效。 lainy 如果想看轻松的，推荐《Toy Story 5》；如果想看艺术片，《Cookie Queens》口碑不错。</div>
+        <div class="ticker">📌 关联标的：DIS / SONY（6758.T）/ AMC — 暑期档创纪录 + 内容为王</div>
+        <div class="source">🔗 Source: <a href="https://www.newsday.com/entertainment/movies/spiderman-toy-story-odyssey-hgmbapxw" target="_blank">Newsday</a> · <a href="https://deadline.com/v/box-office/" target="_blank">Deadline</a></div>
       </div>
 
     </div>
   </section>
 
-  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
-
   <footer>
-    🦞 龙虾老师出品 · 每天早上自动送达<br>
-    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+    <div>🦞 每日不错过新闻 · 2026-08-13 · 由龙虾老师筛选 + 点评</div>
+    <div class="footer-note">本日 HTML 为 v2 重发版：已修正「黄仁勋融资联盟」与「宇树 IPO」的重复报道问题，按新「时效铁律」只讲增量</div>
   </footer>
 </div>
 </body>
