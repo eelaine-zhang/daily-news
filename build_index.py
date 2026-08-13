@@ -888,7 +888,9 @@ IRAN_WAR_MILESTONES = [
     ("2026-05-28", "📉", "跌破 90", "Brent 跌回 $88，距 4 月战时高点跌去 13%——「和平交易」加码"),
     ("2026-05-24", "🕊️", "协议突破", "特朗普称美伊协议「已大致谈妥」，霍尔木兹海峡将重新开放"),
     ("2026-05-04", "⚔️", "美军介入", "特朗普拒绝伊朗 14 点提案，宣布派美军「引导船只」出霍尔木兹"),
+    ("2026-04-30", "🛢️", "再度冲顶", "Brent 逼近 $120——和谈三天后破裂，霍尔木兹危机重回高峰"),
     ("2026-04-28", "💥", "谈判破裂", "美伊和谈再次破裂，霍尔木兹吞吐量只剩战前 5%"),
+    ("2026-04-27", "📉", "单日崩 24%", "伊朗通过中间人递交「三阶段谈判方案」，市场押注和平——Brent 从 $105 跌至 $80"),
     ("2026-04-24", "🛢️", "油价破百", "美伊速成协议希望退潮，Brent 原油一度破 $100"),
     ("2026-04-23", "🚨", "首次升级", "伊朗扣押两艘商船，霍尔木兹海峡紧张再升级"),
     ("2026-04-22", "⚡", "冲突起点", "特朗普延长对伊停火但海上封锁继续——伊朗战争进入新阶段"),
@@ -911,17 +913,17 @@ def build_geo_timeline(dates: list, topic: str, days: int = 30) -> str:
       </div>
     </div>''')
     timeline_html = f'''
-  <div class="geo-section">
+  <div class="geo-section" style="margin-top: 40px;">
     <div class="section-title">🌍 伊朗战争 & 霍尔木兹海峡 · 关键转折时间线</div>
     <div class="timeline">
       {"".join(timeline_items)}
     </div>
   </div>'''
     
-    # 部分 2：油价走势图
+    # 部分 2：油价走势图（放上面）
     oil_chart_html = build_oil_price_chart(dates)
     
-    return timeline_html + oil_chart_html
+    return oil_chart_html + timeline_html
 
 
 def build_oil_price_chart(dates: list) -> str:
@@ -947,7 +949,6 @@ def build_oil_price_chart(dates: list) -> str:
     
     # 手工清洗明显异常点（从上下文看应该是误抓）
     outlier_fixes = {
-        "2026-04-30": 105.0,  # $120 是预测，不是当天
         "2026-06-01": 92.0,   # $66 明显错位
         "2026-07-01": 73.0,   # $105 是历史回顾
         "2026-07-19": 82.0,   # $100 是预测
@@ -1075,7 +1076,7 @@ def build_oil_price_chart(dates: list) -> str:
 </svg>'''
     
     return f'''
-  <div class="geo-section" style="margin-top: 40px;">
+  <div class="geo-section">
     <div class="section-title">🛢️ Brent 原油价格走势（{points[0][0][5:].replace("-","/")} → {points[-1][0][5:].replace("-","/")}）</div>
     <div class="oil-chart-wrap">
       {svg}
