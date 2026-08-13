@@ -221,40 +221,62 @@ def extract_topics_from_title(title: str) -> list:
     return [t for t in topics if 2 <= len(t) <= 25]
 
 
-def analyze_keywords(dates: list, days: int = 30) -> list:
-    """从 h4 标题提取「话题」并统计近 N 天被热议的天数。返回 top 10。
+def analyze_keywords(dates: list, days: int = 30) -> tuple:
+    """从 h4 标题提取「话题」并统计近 N 天被热议的天数。
     
-    关键区别：不是数固定词典里的词，而是从每天标题里抽出事件性短语，
-    看哪些话题在过去 30 天被反覆提及。"""
+    返回 (top10, topic_context) 元组：
+    - top10: [(topic, days), ...] 按出现天数排序
+    - topic_context: {topic: {"titles": [最近 3 个标题], "sentiment": "bullish/bearish/mixed"}}
+    """
     cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    recent = [d for d in dates if d >= cutoff]
-    topic_days = defaultdict(set)  # topic -> set of dates it appeared in
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)  # 最新的在前
+    topic_days = defaultdict(set)
+    topic_titles = defaultdict(list)  # topic -> [(date, title), ...] 最新的在前
     for d in recent:
         html_path = ARCHIVE_DIR / f"{d}.html"
         try:
             content = html_path.read_text(encoding="utf-8", errors="ignore")
-            titles = extract_titles_from_html(content) if "extract_titles_from_html" in dir() else []
-            # 如果没有 extract_titles_from_html，现场抽一次
-            if not titles:
-                for tag in ["h3", "h4"]:
-                    for m in re.finditer(rf"<{tag}[^>]*>(.*?)</{tag}>", content, re.DOTALL):
-                        text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
-                        text = re.sub(r"\s+", " ", text)
-                        if 4 < len(text) < 200:
-                            titles.append(text)
+            titles = []
+            for tag in ["h3", "h4"]:
+                for m in re.finditer(rf"<{tag}[^>]*>(.*?)</{tag}>", content, re.DOTALL):
+                    text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+                    text = re.sub(r"\s+", " ", text)
+                    if 4 < len(text) < 200:
+                        titles.append(text)
             seen_in_doc = set()
             for title in titles:
                 for topic in extract_topics_from_title(title):
                     if topic not in seen_in_doc:
                         topic_days[topic].add(d)
                         seen_in_doc.add(topic)
+                        # 记录标题，取最近 3 个
+                        if len(topic_titles[topic]) < 3:
+                            topic_titles[topic].append((d, title))
         except Exception:
             continue
-    # 转换为 counter 风格
     counter = Counter({topic: len(days_set) for topic, days_set in topic_days.items()})
-    # 话题必须在过去 30 天被提及 >= 3 天才算"被热议"，且 <= 15 天避免变为频道词
     filtered = [(t, c) for t, c in counter.items() if 3 <= c <= 15]
-    return sorted(filtered, key=lambda x: -x[1])[:10]
+    top10 = sorted(filtered, key=lambda x: -x[1])[:10]
+    
+    # 为每个话题计算市场情绪（看涨/看跌/混合）
+    topic_context = {}
+    for topic, _ in top10:
+        titles = [t for _, t in topic_titles.get(topic, [])]
+        joined = " ".join(titles)
+        up_score = sum(1 for w in UP_WORDS if w in joined)
+        down_score = sum(1 for w in DOWN_WORDS if w in joined)
+        if up_score > down_score and up_score >= 2:
+            sentiment = "bullish"
+        elif down_score > up_score and down_score >= 2:
+            sentiment = "bearish"
+        else:
+            sentiment = "mixed"
+        topic_context[topic] = {
+            "titles": topic_titles.get(topic, []),
+            "sentiment": sentiment,
+        }
+    
+    return top10, topic_context
 
 
 def analyze_market_sentiment(dates: list, days: int = 30):
@@ -356,8 +378,68 @@ def analyze_sentiment(dates: list, days: int = 30):
     return up_days, down_days, flat_days, total, major_events
 
 
-def render_bar_chart(top10: list) -> str:
-    """Render vertical bar chart with 10 morandi colors."""
+# 话题上下文生成（给 TOP10 话题生成「被热议的理由」）
+TOPIC_EXPLAIN = {
+    "Hynix": {
+        "reason": "HBM 内存缺货 + 韩国 8 月前 10 天半导体出口同比 +155%，双寡头之一（另一个是三星），连续多天被外资追买",
+        "context": "AI 服务器对 HBM3E/HBM4 需求爆发，SK Hynix 作为 HBM 龙头产能被锁到 2027，市场重新定价其议价权",
+        "angle": "AI 硬件「内存瓶颈」主赛道的核心标的"
+    },
+    "功夫女足": {
+        "reason": "暑期档国产体育片黑马，票房近 22 亿，连续多天占据单日票房榜首",
+        "context": "疫情后国产体育片首次突破 20 亿量级，口碑驱动 + 女性观众占比高，社交媒体话题发酵",
+        "angle": "2026 暑期档最大黑马 + 中国电影复苏信号"
+    },
+    "Warsh": {
+        "reason": "美联储主席人选博弈——市场押注鹰派 Kevin Warsh 可能接替 Powell",
+        "context": "特朗普多次暗示要换美联储主席，Warsh 作为前理事 + 尖锐批评者成为市场焦点",
+        "angle": "2026 下半年货币政策不确定性的最大变量"
+    },
+    "Spider-Man": {
+        "reason": "索尼《Spider-Man: Brand New Day》开画创纪录，Disney CEO 财报电话会公开点赞",
+        "context": "上映 65 年后 Spider-Man 仍是超级英雄最强 IP，索尼+漫威共享版权模式持续验证",
+        "angle": "暑期档全球票房创纪录的核心驱动"
+    },
+    "Brand New Day": {
+        "reason": "《Spider-Man: Brand New Day》新片开画纪录",
+        "context": "同上——Spider-Man IP 最新续集",
+        "angle": "Sony 影业 2026 年度重点片"
+    },
+    "SpaceX": {
+        "reason": "SpaceX 与 Tesla 联合建 $168 亿 Terafab 芯片厂 + Starlink 收入爆发",
+        "context": "Elon Musk 把 SpaceX 从火箭公司变成「太空+芯片+通信」综合平台",
+        "angle": "SpaceX 估值重估 + 马斯克生态闭环的关键一环"
+    },
+    "Taalas": {
+        "reason": "AMD 收购 AI 推理芯片创业公司 Taalas，把模型「刻进」硅片",
+        "context": "AI 推理性能提升 10 倍，意味着推理成本可能大幅下降，AMD 在推理侧追赶 Nvidia",
+        "angle": "AI 芯片「训练→推理」战场切换的标志性收购"
+    },
+    "宇树科技": {
+        "reason": "A 股人形机器人第一股 IPO，超额认购 8000 倍创科创板纪录",
+        "context": "散户 978 万户抢购，中签率 0.018% 创历史新低，梁文锋 7 亿浮盈",
+        "angle": "A 股对人形机器人赛道的「信仰级」定价"
+    },
+    "八仙！": {
+        "reason": "国产动画《八仙！》票房破 12 亿登顶 2026 国产动画",
+        "context": "中国动画崛起从《哪吒》延续到《八仙》，IP 改编+视觉升级路径被验证",
+        "angle": "中国动画电影工业化的新样本"
+    },
+    "Billie Eilish": {
+        "reason": "Billie Eilish 新专辑 + 巡回演唱会双重热点",
+        "context": "粉丝经济驱动，演唱会票房+流媒体播放量同步爆发",
+        "angle": "Z 世代粉丝经济的头部标的"
+    },
+}
+
+SENTIMENT_LABEL = {
+    "bullish": ("📈", "市场偏多"),
+    "bearish": ("📉", "市场偏空"),
+    "mixed": ("⚖️", "多空混合"),
+}
+
+def render_bar_chart(top10: list, topic_context: dict = None) -> str:
+    """Render vertical bar chart with 10 morandi colors + clickable topic cards."""
     if not top10:
         return ""
     max_count = top10[0][1] if top10 else 1
@@ -373,7 +455,63 @@ def render_bar_chart(top10: list) -> str:
           </div>
           <div class="bar-label">{kw}</div>
         </div>''')
-    return f'<div class="bar-chart">{"".join(bars_html)}</div>'
+    
+    # 生成可点击的话题卡片
+    cards_html = []
+    topic_context = topic_context or {}
+    for i, (kw, count) in enumerate(top10):
+        color = BAR_COLORS[i % len(BAR_COLORS)]
+        ctx = topic_context.get(kw, {})
+        sentiment_key = ctx.get("sentiment", "mixed")
+        sentiment_emoji, sentiment_label = SENTIMENT_LABEL.get(sentiment_key, SENTIMENT_LABEL["mixed"])
+        
+        # 最近标题样本
+        titles = ctx.get("titles", [])
+        titles_html = ""
+        if titles:
+            titles_html = "<ul class='topic-titles'>" + "".join(
+                f"<li><span class='topic-date'>{d}</span> {t}</li>" for d, t in titles[:3]
+            ) + "</ul>"
+        
+        # 手写解释（如果有）
+        explain = TOPIC_EXPLAIN.get(kw, {})
+        reason = explain.get("reason", "")
+        context_txt = explain.get("context", "")
+        angle = explain.get("angle", "")
+        
+        explain_html = ""
+        if reason:
+            explain_html += f"<div class='topic-reason'><strong>🔥 为什么被热议：</strong>{reason}</div>"
+        if context_txt:
+            explain_html += f"<div class='topic-context'><strong>📖 背景：</strong>{context_txt}</div>"
+        if angle:
+            explain_html += f"<div class='topic-angle'><strong>🎯 视角：</strong>{angle}</div>"
+        if not explain_html and titles_html:
+            explain_html = f"<div class='topic-context'><strong>📖 近期报道：</strong></div>{titles_html}"
+        elif explain_html and titles_html:
+            explain_html += f"<div class='topic-context' style='margin-top:10px'><strong>📰 近期相关标题：</strong></div>{titles_html}"
+        
+        cards_html.append(f'''
+        <details class="topic-card" style="border-left-color:{color}">
+          <summary>
+            <span class="topic-rank" style="background:{color}">#{i+1}</span>
+            <span class="topic-name">{kw}</span>
+            <span class="topic-meta">
+              <span class="topic-days">{count} 天被提及</span>
+              <span class="topic-sentiment">{sentiment_emoji} {sentiment_label}</span>
+            </span>
+            <span class="topic-toggle">▼</span>
+          </summary>
+          <div class="topic-detail">
+            {explain_html}
+          </div>
+        </details>''')
+    
+    return f'''<div class="bar-chart">{"".join(bars_html)}</div>
+<div class="topic-cards">
+  <div class="topic-cards-hint">👇 点击话题展开「为什么被热议」</div>
+  {"".join(cards_html)}
+</div>'''
 
 
 def build_calendar_html(dates_set: set, today_str: str) -> str:
@@ -449,8 +587,8 @@ def main():
     calendar_html = build_calendar_html(dates_set, latest)
 
     # 近 30 天数据分析
-    top10 = analyze_keywords(dates, days=30)
-    bar_chart_html = render_bar_chart(top10)
+    top10, topic_context = analyze_keywords(dates, days=30)
+    bar_chart_html = render_bar_chart(top10, topic_context)
     up_days, down_days, flat_days, sentiment_total, major_events = analyze_sentiment(dates, days=30)
     market_sent = analyze_market_sentiment(dates, days=30)
     industry_sent = analyze_industry_sentiment(dates, days=30)
@@ -661,6 +799,110 @@ def main():
     max-width: 80px;
     overflow: hidden;
     text-overflow: ellipsis;
+  }}
+  /* 话题卡片（点击展开） */
+  .topic-cards {{
+    margin-top: 20px;
+  }}
+  .topic-cards-hint {{
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+    margin-bottom: 12px;
+  }}
+  .topic-card {{
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    transition: background 0.15s;
+  }}
+  .topic-card summary {{
+    padding: 12px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    user-select: none;
+  }}
+  .topic-card summary::-webkit-details-marker {{
+    display: none;
+  }}
+  .topic-card summary:hover {{
+    background: var(--card-hover, #f8f6f2);
+  }}
+  .topic-card[open] summary {{
+    border-bottom: 1px solid var(--border);
+  }}
+  .topic-card[open] .topic-toggle {{
+    transform: rotate(180deg);
+  }}
+  .topic-rank {{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 4px;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+  }}
+  .topic-name {{
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text-main);
+  }}
+  .topic-meta {{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-dim);
+  }}
+  .topic-sentiment {{
+    font-weight: 500;
+  }}
+  .topic-toggle {{
+    color: var(--text-dim);
+    font-size: 11px;
+    transition: transform 0.2s;
+  }}
+  .topic-detail {{
+    padding: 14px 18px;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text-main);
+  }}
+  .topic-detail .topic-reason {{
+    margin-bottom: 8px;
+  }}
+  .topic-detail .topic-context {{
+    margin-bottom: 8px;
+    color: var(--text-dim);
+  }}
+  .topic-detail .topic-angle {{
+    color: var(--accent);
+    font-style: italic;
+  }}
+  .topic-detail .topic-titles {{
+    margin: 4px 0 0;
+    padding-left: 18px;
+    color: var(--text-dim);
+    font-size: 12px;
+  }}
+  .topic-detail .topic-titles li {{
+    margin: 2px 0;
+  }}
+  .topic-detail .topic-date {{
+    color: var(--accent);
+    font-weight: 500;
+    margin-right: 6px;
   }}
   .chart-caption {{
     text-align: center;
