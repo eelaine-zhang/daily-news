@@ -1012,8 +1012,9 @@ def main():
     padding: 40px 20px;
   }}
   .container {{
-    max-width: 760px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
   }}
   header {{
     text-align: center;
@@ -1064,7 +1065,7 @@ def main():
     color: var(--text-muted);
     font-size: 14px;
     line-height: 1.7;
-    max-width: 480px;
+    max-width: 720px;
     margin: 0 auto;
   }}
   .section-title {{
@@ -1525,9 +1526,15 @@ def main():
   }}
   .cal-grid {{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-top: 16px;
+  }}
+  @media (max-width: 1100px) {{
+    .cal-grid {{ grid-template-columns: repeat(3, 1fr); }}
+  }}
+  @media (max-width: 800px) {{
+    .cal-grid {{ grid-template-columns: repeat(2, 1fr); gap: 20px; }}
   }}
   .cal-month {{
     text-align: center;
