@@ -766,19 +766,14 @@ def build_geo_timeline(dates: list, topic: str, days: int = 30) -> str:
 
 
 def build_search_index(dates: list) -> str:
-    """全站搜索：生成 search_index.json + 搜索框。"""
+    """全站搜索：生成 search_index.json（搜索框已嵌在顶栏）。"""
     index = []
     for d in sorted(dates, reverse=True)[:90]:  # 最近 90 天
         titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
         index.append({"date": d, "titles": titles})
     SEARCH_JSON.parent.mkdir(exist_ok=True)
     SEARCH_JSON.write_text(json.dumps(index, ensure_ascii=False), encoding="utf-8")
-    return f'''
-  <div class="search-section">
-    <div class="section-title">🔍 全站搜索</div>
-    <input type="text" id="search-input" placeholder="搜关键词（例如：宇树 / Nvidia / 伊朗 / HBM…）" />
-    <div id="search-results"></div>
-  </div>'''
+    return ""
 
 
 def build_topic_reverse_index(top10: list, dates: list, days: int = 30) -> str:
@@ -845,7 +840,7 @@ def main():
     # 新增：本周大事记 + 话题反向索引 + 全站搜索 + 地缘事件时间轴
     weekly_html = build_weekly_highlights(dates, days=7)
     topic_reverse_html = build_topic_reverse_index(top10, dates, days=30)
-    search_html = build_search_index(dates)
+    build_search_index(dates)  # 生成 search_index.json（搜索框在顶栏）
     geo_html = build_geo_timeline(dates, "霍尔木兹海峡/伊朗战争", days=30)
 
     # 主要事件（近 7 天）
@@ -1320,40 +1315,89 @@ def main():
   .topic-reverse .weekly-list {{
     padding: 12px 16px;
   }}
-  /* 搜索 */
-  .search-section {{
-    background: var(--card, #fff);
-    border: 1px solid var(--line-soft);
-    border-radius: 8px;
-    padding: 16px 20px;
+  /* 顶部 Tab 栏 */
+  .tab-bar {{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding: 0 4px;
+    border-bottom: 1px solid var(--line-soft);
+    flex-wrap: wrap;
   }}
-  #search-input {{
-    width: 100%;
+  .tab-buttons {{
+    display: flex;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }}
+  .tab-btn {{
+    background: none;
+    border: none;
     padding: 10px 14px;
-    font-size: 14px;
+    font-size: 13px;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.15s;
+    font-family: inherit;
+    letter-spacing: 0.3px;
+  }}
+  .tab-btn:hover {{
+    color: var(--text-main);
+  }}
+  .tab-btn.active {{
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+    font-weight: 600;
+  }}
+  .tab-search {{
+    flex-shrink: 0;
+    width: 220px;
+  }}
+  .tab-search input {{
+    width: 100%;
+    padding: 7px 12px;
+    font-size: 13px;
     border: 1px solid var(--line-soft);
-    border-radius: 6px;
-    background: var(--page-bg);
+    border-radius: 16px;
+    background: var(--card, #fff);
     color: var(--text-main);
     outline: none;
     transition: border-color 0.15s;
   }}
-  #search-input:focus {{
+  .tab-search input:focus {{
     border-color: var(--rose);
   }}
-  #search-results {{
-    margin-top: 12px;
+  /* Tab 面板 */
+  .tab-panel {{
+    display: none;
+  }}
+  .tab-panel.active {{
+    display: block;
+  }}
+  /* 全局搜索结果（跨 Tab 显示在 tab 栏下方） */
+  #search-results-global {{
+    margin-bottom: 16px;
+  }}
+  #search-results-global:not(:empty) {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 12px 18px;
     max-height: 400px;
     overflow-y: auto;
   }}
-  #search-results .sr-item {{
+  /* 搜索项 */
+  #search-results-global .sr-item {{
     padding: 8px 0;
     border-bottom: 1px dashed var(--line-soft);
     font-size: 13px;
     line-height: 1.6;
   }}
-  #search-results .sr-item:last-child {{ border-bottom: none; }}
-  #search-results .sr-date {{
+  #search-results-global .sr-item:last-child {{ border-bottom: none; }}
+  #search-results-global .sr-date {{
     display: inline-block;
     min-width: 70px;
     color: var(--rose);
@@ -1361,27 +1405,39 @@ def main():
     font-size: 12px;
     margin-right: 8px;
   }}
-  #search-results .sr-item a {{
+  #search-results-global .sr-item a {{
     color: var(--text-main);
     text-decoration: none;
     border-bottom: 1px dotted var(--line-soft);
   }}
-  #search-results .sr-item a:hover {{
+  #search-results-global .sr-item a:hover {{
     color: var(--rose);
     border-bottom-color: var(--rose);
   }}
-  #search-results .sr-empty {{
+  #search-results-global .sr-empty {{
     color: var(--text-muted);
     font-size: 12px;
-    padding: 12px 0;
+    padding: 8px 0;
     text-align: center;
   }}
-  #search-results .sr-highlight {{
+  #search-results-global .sr-highlight {{
     background: rgba(212, 166, 74, 0.25);
     padding: 0 2px;
     border-radius: 2px;
     font-weight: 600;
   }}
+  /* 响应式 */
+  @media (max-width: 640px) {{
+    .tab-bar {{
+      flex-direction: column;
+      align-items: stretch;
+      gap: 8px;
+    }}
+    .tab-search {{
+      width: 100%;
+    }}
+  }}
+
 
   .calendar-section {{
     margin-top: 32px;
@@ -1469,47 +1525,67 @@ def main():
     <div class="subtitle">每天 08:00 · 世界新闻 / 行业宏观 / 国际局势</div>
   </header>
 
-  <div class="today-section">
-    <div class="today-label">今日早报</div>
-    <div class="today-date">
-      <a href="archive/{latest}.html">{format_date_big(latest) if latest else '暂无'}</a>
+  <!-- 顶部 Tab 栏：左侧话题反向索引 / 地缘事件时间轴，右侧搜索框 -->
+  <nav class="tab-bar">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="main">📰 今日总览</button>
+      <button class="tab-btn" data-tab="topics">🔗 话题反向索引</button>
+      <button class="tab-btn" data-tab="geo">🌍 事件时间轴</button>
     </div>
-    <div class="today-summary">{summary}</div>
+    <div class="tab-search">
+      <input type="text" id="search-input" placeholder="🔍 搜关键词…" />
+    </div>
+  </nav>
+  <div id="search-results-global"></div>
+
+  <!-- Tab 1: 今日总览（默认） -->
+  <div class="tab-panel active" id="tab-main">
+    <div class="today-section">
+      <div class="today-label">今日早报</div>
+      <div class="today-date">
+        <a href="archive/{latest}.html">{format_date_big(latest) if latest else '暂无'}</a>
+      </div>
+      <div class="today-summary">{summary}</div>
+    </div>
+
+    {weekly_html}
+
+    <div class="insights-section">
+      <div class="section-title">近 30 天被热议的新话题 TOP 10</div>
+      {bar_chart_html}
+      <div class="chart-caption">从每天标题提取事件性话题（板块名/标的代码已过滤），按被提及天数排序</div>
+
+      <div style="margin-top: 40px;">
+        <div class="section-title">各市场情绪（近 30 天）</div>
+        <div class="market-grid">
+          {market_blocks}
+        </div>
+      </div>
+
+      <div style="margin-top: 32px;">
+        <div class="section-title">各行业情绪（近 30 天）</div>
+        <div class="industry-grid">
+          {industry_items}
+        </div>
+      </div>
+
+      {events_html}
+    </div>
+
+    <div class="calendar-section">
+      <div class="section-title">历史日报</div>
+      {calendar_html}
+    </div>
   </div>
 
-  {search_html}
-
-  {weekly_html}
-
-  <div class="insights-section">
-    <div class="section-title">近 30 天被热议的新话题 TOP 10</div>
-    {bar_chart_html}
-    <div class="chart-caption">从每天标题提取事件性话题（板块名/标的代码已过滤），按被提及天数排序</div>
-
+  <!-- Tab 2: 话题反向索引 -->
+  <div class="tab-panel" id="tab-topics">
     {topic_reverse_html}
-
-    {geo_html}
-
-    <div style="margin-top: 40px;">
-      <div class="section-title">各市场情绪（近 30 天）</div>
-      <div class="market-grid">
-        {market_blocks}
-      </div>
-    </div>
-
-    <div style="margin-top: 32px;">
-      <div class="section-title">各行业情绪（近 30 天）</div>
-      <div class="industry-grid">
-        {industry_items}
-      </div>
-    </div>
-
-    {events_html}
   </div>
 
-  <div class="calendar-section">
-    <div class="section-title">历史日报</div>
-    {calendar_html}
+  <!-- Tab 3: 地缘事件时间轴 -->
+  <div class="tab-panel" id="tab-geo">
+    {geo_html}
   </div>
 
   <footer>
@@ -1517,9 +1593,30 @@ def main():
   </footer>
 </div>
 <script>
+// Tab 切换
+(function() {{
+  const btns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.tab-panel');
+  btns.forEach(btn => {{
+    btn.addEventListener('click', () => {{
+      const target = btn.dataset.tab;
+      btns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + target)?.classList.add('active');
+      // 清空搜索结果
+      const r = document.getElementById('search-results-global');
+      if (r) r.innerHTML = '';
+      const i = document.getElementById('search-input');
+      if (i) i.value = '';
+    }});
+  }});
+}})();
+
+// 全站搜索
 (async function() {{
   const input = document.getElementById('search-input');
-  const results = document.getElementById('search-results');
+  const results = document.getElementById('search-results-global');
   if (!input || !results) return;
   let index = [];
   try {{
