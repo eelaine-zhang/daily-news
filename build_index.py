@@ -138,25 +138,123 @@ def extract_titles(html_path: Path) -> list:
         return []
 
 
+# 「频道词 / 板块词」黑名单——这些词是新闻板块名或常规标的代码，不算"新话题"
+CHANNEL_WORD_BLACKLIST = {
+    # 板块/标的代码
+    "NVDA", "NVIDIA", "英伟达", "AMD", "Intel", "英特尔", "TSMC", "台积电",
+    "A股", "港股", "美股", "韩股", "上证", "恒生", "纳指", "标普", "道指", "KOSPI",
+    "沪指", "深成指", "创业板", "恒指", "恒科", "S&P", "Russell",
+    # 宏观常规词
+    "CPI", "PCE", "GDP", "非农", "PPI", "FOMC", "美联储", "加息", "降息",
+    "油价", "Brent", "WTI", "OPEC", "黄金", "美元", "人民币", "日元",
+    "财报", "半年报", "年报", "营收", "净利润", "IPO", "并购",
+    # 常规主体
+    "特朗普", "Trump", "关税", "出口管制", "制裁", "伊朗", "以色列",
+    "乌克兰", "俄罗斯", "中东", "红海", "胡塞", "朝鲜", "台湾", "台海",
+    # 技术/常规
+    "AI", "GPU", "CPU", "HBM", "DRAM", "NAND", "存储芯片", "AI芯片",
+    "算力", "数据中心", "先进制程", "CoWoS", "封装", "芯片",
+    # 公司品牌（除非是具体事件主体，否则不算话题）
+    "Meta", "Apple", "Google", "Alphabet", "Microsoft", "Amazon", "Tesla",
+    "Samsung", "Micron", "OpenAI", "Anthropic", "Broadcom", "Nvidia",
+    # 常规机构/媒体
+    "Fed", "FOMC", "EIA", "IEA", "OPEC", "COMEX", "SEC", "FDA",
+    "恒生科技", "恒生指数", "上证", "深证",
+    # 常见后缀
+    "YoY", "QoQ", "MoM",
+}
+
+
+# 太泛的中文词黑名单（这些词会出现在任何新闻标题里）
+GENERIC_CN_WORDS = {
+    "今天", "明天", "昨天", "市场", "公司", "股价", "涨幅", "跌幅", "上市", "交易", "投资", "分析师",
+    "中国", "美国", "韩国", "日本", "欧洲", "全球", "国际", "世界",
+    "万亿", "千亿", "百亿", "亿美元", "亿元", "万元",
+    "收盘", "开盘", "盘中", "早盘", "午后", "尾盘",
+    "科创", "创业", "主板", "指数", "板块", "个股", "股票", "基金",
+    "成交", "点", "涨", "跌", "涨超", "跌超", "上涨", "下跌", "反弹", "回落",
+    "新高", "新低", "记录", "纪录", "历史", "首次", "首度",
+    "宣布", "表示", "透露", "报道", "消息", "公布", "发布",
+    "同比", "环比", "预期", "实际", "数据", "显示",
+    "成为", "进入", "推出", "发起", "推进", "启动",
+}
+
+
+def extract_topics_from_title(title: str) -> list:
+    """从 h4 标题里抽取「新话题」事件短语。
+    
+    策略：只挑「带数字 / 大写英文 / 书名号」的专有名词，或
+    与已知热门实体词典匹配的短语。过滤太泛的板块词。"""
+    topics = set()
+    # 1. 书名号《...》里的作品名
+    for m in re.finditer(r"《([^》]{2,20})》", title):
+        topics.add(m.group(1))
+    # 2. 品牌+产品型号组合（如 "CoreWeave", "Unitree", "Spider-Man", "Grok Bot", "Maia 300", "Terafab"）
+    for m in re.finditer(r"\b[A-Z][a-zA-Z0-9&-]{2,20}(?:\s+[A-Z0-9][a-zA-Z0-9&-]{0,15}){0,2}\b", title):
+        phrase = m.group(0).strip()
+        if phrase in CHANNEL_WORD_BLACKLIST:
+            continue
+        if len(phrase) < 3:
+            continue
+        # 过滤 "Q2", "Q3" 这种纯季度
+        if re.fullmatch(r"Q[1-4](\s+\d{4})?", phrase):
+            continue
+        # 过滤 S&P / NYT / IEA / CNN 这种媒体/机构名
+        if phrase in {"NYT", "IEA", "CNN", "CNBC", "BBC", "FT", "WSJ", "S&P", "Bloomberg", "Reuters", "S&amp", "EPS", "IPO", "GDP", "CEO", "CFO", "AI", "IT", "US", "USA", "UK", "EU", "UN"}:
+            continue
+        # 过滤 "FOMC 7", "Warsh" 这种部分匹配
+        if re.fullmatch(r"[A-Z]+\s*\d+", phrase):
+            continue
+        topics.add(phrase)
+    # 3. 中文带数字的事件短语（如 "8000 倍超额认购", "$5000 亿融资", "第 23 次 sidecar"）
+    # 提出数字前后的中文短语
+    for m in re.finditer(r"([一-龥]{2,6}?)(\d+(?:\.\d+)?(?:\s*(?:亿|万亿|万|%|倍|台|个|次|条|部|位|家|人|股|贵|雫)))", title):
+        cn_part = m.group(1)
+        if cn_part and cn_part not in CHANNEL_WORD_BLACKLIST and cn_part not in GENERIC_CN_WORDS:
+            topics.add(cn_part)
+    # 4. 中文公司/品牌名（几个字中文 + 后面跟着 "科技"、"集团"、"汽车"、"动漫"、"机器人"、"半导体"、"医药"、"能源" 等后缀）
+    for m in re.finditer(r"([一-龥]{2,4})(?:科技|集团|汽车|动漫|机器人|半导体|医药|生物|能源|银行|证券|基金|影视|娱乐|游戏|餐饮|茶饮|咖啡|美妆)", title):
+        phrase = m.group(0)
+        if phrase not in CHANNEL_WORD_BLACKLIST and m.group(1) not in GENERIC_CN_WORDS:
+            topics.add(phrase)
+    # 5. 过滤：出现《》的作品名 与 太短/太长的项
+    return [t for t in topics if 2 <= len(t) <= 25]
+
+
 def analyze_keywords(dates: list, days: int = 30) -> list:
-    """Count keyword frequency over the last N days. Returns top 10."""
+    """从 h4 标题提取「话题」并统计近 N 天被热议的天数。返回 top 10。
+    
+    关键区别：不是数固定词典里的词，而是从每天标题里抽出事件性短语，
+    看哪些话题在过去 30 天被反覆提及。"""
     cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
     recent = [d for d in dates if d >= cutoff]
-    counter = Counter()
+    topic_days = defaultdict(set)  # topic -> set of dates it appeared in
     for d in recent:
         html_path = ARCHIVE_DIR / f"{d}.html"
         try:
             content = html_path.read_text(encoding="utf-8", errors="ignore")
-            text = re.sub(r"<[^>]+>", " ", content)
-            counted_in_doc = set()
-            for kw in KEYWORD_LIST:
-                if kw in text and kw not in counted_in_doc:
-                    # Count each doc once per keyword (avoid one article dominating)
-                    counter[kw] += 1
-                    counted_in_doc.add(kw)
+            titles = extract_titles_from_html(content) if "extract_titles_from_html" in dir() else []
+            # 如果没有 extract_titles_from_html，现场抽一次
+            if not titles:
+                for tag in ["h3", "h4"]:
+                    for m in re.finditer(rf"<{tag}[^>]*>(.*?)</{tag}>", content, re.DOTALL):
+                        text = re.sub(r"<[^>]+>", "", m.group(1)).strip()
+                        text = re.sub(r"\s+", " ", text)
+                        if 4 < len(text) < 200:
+                            titles.append(text)
+            seen_in_doc = set()
+            for title in titles:
+                for topic in extract_topics_from_title(title):
+                    if topic not in seen_in_doc:
+                        topic_days[topic].add(d)
+                        seen_in_doc.add(topic)
         except Exception:
             continue
-    return counter.most_common(10)
+    # 转换为 counter 风格
+    counter = Counter({topic: len(days_set) for topic, days_set in topic_days.items()})
+    # 话题必须在过去 30 天被提及 >= 3 天才算"被热议"，且 <= 15 天避免变为频道词
+    filtered = [(t, c) for t, c in counter.items() if 3 <= c <= 15]
+    return sorted(filtered, key=lambda x: -x[1])[:10]
 
 
 def analyze_market_sentiment(dates: list, days: int = 30):
@@ -755,9 +853,9 @@ def main():
   </div>
 
   <div class="insights-section">
-    <div class="section-title">近 30 天 TOP 10 高频关键词</div>
+    <div class="section-title">近 30 天被热议的新话题 TOP 10</div>
     {bar_chart_html}
-    <div class="chart-caption">统计每个关键词在近 30 天日报中出现的期数</div>
+    <div class="chart-caption">从每天标题提取事件性话题（板块名/标的代码已过滤），按被提及天数排序</div>
 
     <div style="margin-top: 40px;">
       <div class="section-title">各市场情绪（近 30 天）</div>
