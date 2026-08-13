@@ -1741,6 +1741,7 @@ def main():
       <button class="tab-btn active" data-tab="main">📰 今日总览</button>
       <button class="tab-btn" data-tab="topics">🔗 话题反向索引</button>
       <button class="tab-btn" data-tab="geo">🌍 事件时间轴</button>
+      <button class="tab-btn" data-tab="history">📅 历史日报</button>
     </div>
     <div class="tab-search">
       <input type="text" id="search-input" placeholder="🔍 搜关键词…" />
@@ -1782,10 +1783,6 @@ def main():
       {events_html}
     </div>
 
-    <div class="calendar-section">
-      <div class="section-title">历史日报</div>
-      {calendar_html}
-    </div>
   </div>
 
   <!-- Tab 2: 话题反向索引 -->
@@ -1796,6 +1793,14 @@ def main():
   <!-- Tab 3: 地缘事件时间轴 -->
   <div class="tab-panel" id="tab-geo">
     {geo_html}
+  </div>
+
+  <!-- Tab 4: 历史日报 -->
+  <div class="tab-panel" id="tab-history">
+    <div class="calendar-section">
+      <div class="section-title">历史日报</div>
+      {calendar_html}
+    </div>
   </div>
 
   <footer>
