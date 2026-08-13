@@ -360,6 +360,67 @@
     border-left: 3px solid var(--sage);
   }
 
+  /* 本周大事记横向时间轴 */
+  .weekly-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .day-column {
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .day-header {
+    background: linear-gradient(135deg, var(--rose) 0%, #d4a64a 100%);
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .day-date {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .day-weekday {
+    font-size: 11px;
+    opacity: 0.9;
+    margin-top: 2px;
+    letter-spacing: 1px;
+  }
+  .day-events {
+    padding: 10px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .day-event {
+    font-size: 12px;
+    line-height: 1.5;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--line-soft);
+  }
+  .day-event:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .day-event a {
+    color: var(--text-main);
+    text-decoration: none;
+  }
+  .day-event a:hover {
+    color: var(--rose);
+  }
+  @media (max-width: 800px) {
+    .weekly-timeline {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
   /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
   .weekly-section, .geo-section, .topic-reverse-section, .search-section {
     margin-top: 32px;
@@ -662,7 +723,58 @@
     
   <div class="weekly-section">
     <div class="section-title">📅 本周大事记（近 7 天）</div>
-    <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">CoreWeave Q2 营收 $25.75 亿（+112% YoY）超预期，合同积压 $1290 亿，盘后飙 +16%——"50% 违约率"质疑被打脸</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">🇰🇷 韩股 — 8/12 KOSPI 暴涨 +3.68% 收 6,579：三星 +6%、SK Hynix +5%，触发年内第 23 次 sidecar</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">Disney Q3 2026：乐园营收 $100 亿创纪录（+10% YoY），流媒体利润 12.9% 几乎翻倍，但票房参差</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">Live Nation Q2 2026 营收 $76.7 亿（+9.4% YoY）：演唱会经济继续爆发，EPS $1.05</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">《Spider-Man》新片开画创纪录：Disney CEO 公开点赞，2026 暑期档全球票房刷新历史</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Microsoft 向 TSMC 要 30 万片 Maia 300 AI 加速器产能，Nvidia 独占 CoWoS 60% 队列</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Intel $200 亿增发今日收盘：$95/股定价，$1000 亿订单涌入（5 倍超额），Dan Niles 预告"大代工客户将官宣"</a></li></ul>
+    <div class="weekly-timeline">
+      
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/7</div>
+        <div class="day-weekday">周五</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-07.html">🇨🇳 A 股 — 8/6 沪指 +0.57% 报 3900.35 / 深成指 -0.24% / 创业板 -0.55% / 成交 2.53 万亿（缩量 1309 亿）</a></div><div class="day-event"><a href="archive/2026-08-07.html">宇树科技 8/7 科创板上市：定价 150.8 元，市值 610 亿，DeepSeek/腾讯参与战配，73 天最快审核纪录</a></div><div class="day-event"><a href="archive/2026-08-07.html">AMD 收购 AI 推理芯片初创 Taalas：把 AI 模型直接刻进硅片，推理速度达 17,000 tokens/秒</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/8</div>
+        <div class="day-weekday">周六</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-08.html">🇨🇳 A 股 — 8/7 沪指 +1.02% 报 3940 / 深成指 +1.42% / 创业板 +1.35% / 科创50 +2.51% / 成交 2.66 万亿</a></div><div class="day-event"><a href="archive/2026-08-08.html">🇭🇰 港股 — 8/7 恒指 +0.54% / 科指 +0.78% / 拿森科技 IPO 首日 +64%</a></div><div class="day-event"><a href="archive/2026-08-08.html">🇺🇸 美股 — 8/7 道指 54,036 (+0.28%) / S&P 7,756 (+0.60%) 创新高 / 纳指 26,691 (+1.29%)</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/9</div>
+        <div class="day-weekday">周日</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-09.html">室温量子材料突破：科学家首次创造出能在室温下分选和传输不同量子态光的量子材料</a></div><div class="day-event"><a href="archive/2026-08-09.html">黄金期货突破 $4400 创阶段新高：中国机构买盘 + 地缘避险 + 加息预期降温三重支撑</a></div><div class="day-event"><a href="archive/2026-08-09.html">🇨🇳 A 股 — 本周沪指 +2.81% 报 3940 / 深成指 +5.39% / 创业板 +6.55% / 周五成交 2.66 万亿</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/10</div>
+        <div class="day-weekday">周一</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-10.html">🇨🇳 A 股 — 8/7（上周五）沪指 +1.02% 报 3940 / 深成指 +1.42% / 创业板 +1.35% / 成交 2.66 万亿</a></div><div class="day-event"><a href="archive/2026-08-10.html">🇺🇸 美股 — 8/7（上周五）道指 54,036 (+0.28%) / S&amp;P 7,758 (+0.62%) 创新高 / 纳指 26,691 (+1.30%) / 周涨 4 月以来最佳</a></div><div class="day-event"><a href="archive/2026-08-10.html">$168 亿史诗级芯片厂落地：SpaceX+Tesla 联合建 Terafab，德州 1 亿平方英尺垂直整合</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/11</div>
+        <div class="day-weekday">周二</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-11.html">TSMC 7 月营收 NT$4676 亿（$14.5B），同比 +44.7%，AI 硬件需求"无视市场波动"持续爆发</a></div><div class="day-event"><a href="archive/2026-08-11.html">CoreWeave 今夜发布 Q2 财报：预期营收 $25.5 亿（+111% YoY），但亏损扩大，AI 算力租赁生意能否自证？</a></div><div class="day-event"><a href="archive/2026-08-11.html">🇨🇳 A 股 — 8/10 沪指 +0.67% 报 3966 / 深成指 +0.04% 报 14317 / 创业板 -0.73% 报 3537</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/12</div>
+        <div class="day-weekday">周三</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-12.html">宇树科技科创板 IPO 超额认购 8000 倍：$9.04 亿融资，$90 亿估值，首家 A 股人形机器人上市公司</a></div><div class="day-event"><a href="archive/2026-08-12.html">🇨🇳 A 股 — 8/11 沪指 -0.82% 报 3934 / 深成指 -0.40% / 创业板 +0.34% / 止步五连阳</a></div><div class="day-event"><a href="archive/2026-08-12.html">Shein 下周启动香港 IPO 路演：目标估值 $300-350 亿，8/19 可能开簿</a></div></div>
+    </div>
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">8/13</div>
+        <div class="day-weekday">周四</div>
+      </div>
+      <div class="day-events"><div class="day-event"><a href="archive/2026-08-13.html">CoreWeave Q2 营收 $25.75 亿（+112% YoY）超预期，合同积压 $1290 亿，盘后飙 +16%——"50% 违约率"质疑被打脸</a></div><div class="day-event"><a href="archive/2026-08-13.html">Disney Q3 2026：乐园营收 $100 亿创纪录（+10% YoY），流媒体利润 12.9% 几乎翻倍，但票房参差</a></div><div class="day-event"><a href="archive/2026-08-13.html">🇨🇳 A 股 — 8/12 三大指数全线反弹：沪指 +0.32% 报 3947 / 深成指 +1.09% / 创业板 +1.49% / 科创 50 +1%+</a></div></div>
+    </div>
+    </div>
   </div>
 
     <div class="insights-section">
@@ -1043,7 +1155,7 @@
   </div>
 
   <footer>
-    共 104 期 · 更新于 2026-08-13 11:25 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 104 期 · 更新于 2026-08-13 12:03 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
 <script>

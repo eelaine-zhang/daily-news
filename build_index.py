@@ -767,58 +767,69 @@ def build_calendar_html(dates_set: set, today_str: str) -> str:
 
 
 def build_weekly_highlights(dates: list, days: int = 7) -> str:
-    """本周大事记：从近 N 天早报中挑出影响力最大的 5-8 条事件，跨天去重。"""
+    """本周大事记：横向时间轴布局，每天一列，显示当天 1-3 条重要事件。"""
     cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+    recent = sorted([d for d in dates if d >= cutoff])
     if not recent:
         return ""
-    # 收集每天所有标题
-    all_entries = []  # [(date, title)] 
-    for d in recent:
-        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
-        for t in titles:
-            all_entries.append((d, t))
-    # 按「事件主体」去重：同主体只留最近 + 最重要的一条
-    seen_subjects = {}
-    KEYWORD_IMPORTANCE = ["纪录", "创", "首次", "首", "爆发", "暴涨", "飙升", "突破", "落地", "收购", "签署", "发布", "IPO", "紧急", "宣布", "爆表", "超预期", "签署"]
-    for d, t in all_entries:
-        # 抽主体关键词（优先别名）
-        subj = None
+    
+    KEYWORD_IMPORTANCE = ["纪录", "创", "首次", "爆发", "暴涨", "飙升", "突破", "落地", "收购", "签署", "发布", "IPO", "紧急", "宣布", "爆表", "超预期"]
+    
+    def score_title(t: str) -> int:
+        return sum(2 for kw in KEYWORD_IMPORTANCE if kw in t) + len(re.findall(r"\d+%|\$\d+|\d+\s*亿", t))
+    
+    def get_subject(t: str) -> str:
+        """抽事件主体用于同日去重。"""
         for alias in TOPIC_ALIAS:
             if alias in t:
-                subj = normalize_topic(alias)
-                break
-        if not subj:
-            m = re.search(r"\b[A-Z][a-zA-Z0-9&-]{2,15}\b", t)
-            if m:
-                subj = normalize_topic(m.group(0))
-        if not subj:
-            # 中文主体（人名/公司名）
-            m = re.search(r"([一-龥]{2,4})(?:科技|集团|汽车|机器人|半导体|医药|银行|证券|影视|娱乐|游戏)", t)
-            if m:
-                subj = m.group(0)
-        if not subj:
+                return normalize_topic(alias)
+        m = re.search(r"\b[A-Z][a-zA-Z0-9&-]{2,15}\b", t)
+        if m:
+            return normalize_topic(m.group(0))
+        m = re.search(r"([一-龥]{2,4})(?:科技|集团|汽车|机器人|半导体|医药|银行|证券|影视|娱乐|游戏)", t)
+        if m:
+            return m.group(0)
+        return t[:20]  # 兜底
+    
+    # 按天分组 + 同天内部去重 + 按重要性排序
+    day_columns = []
+    weekdays_cn = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
+    for d in recent:
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        if not titles:
             continue
-        # 计算重要性分数
-        score = sum(2 for kw in KEYWORD_IMPORTANCE if kw in t) + len(re.findall(r"\d+%|\$\d+|\d+\s*亿", t))
-        if subj not in seen_subjects or score > seen_subjects[subj][0] or d > seen_subjects[subj][1]:
-            # 同主体：如果分数更高 或 是更新日期的，替换
-            if subj not in seen_subjects:
-                seen_subjects[subj] = (score, d, t)
-            elif score > seen_subjects[subj][0]:
-                seen_subjects[subj] = (score, d, t)
-    # 按日期倒序 + 重要性排序
-    items = sorted(seen_subjects.values(), key=lambda x: x[1], reverse=True)[:8]  # 取最近 8 条不同主体的
-    if not items:
-        return ""
-    lis = "".join(
-        f'<li><span class="hl-date">{d[5:].replace("-", "/")}</span> <a href="archive/{d}.html">{t}</a></li>'
-        for _, d, t in items
-    )
+        # 同天内部按主体去重 + 按重要性排序
+        seen = {}
+        for t in titles:
+            subj = get_subject(t)
+            score = score_title(t)
+            if subj not in seen or score > seen[subj][0]:
+                seen[subj] = (score, t)
+        top_titles = sorted(seen.values(), key=lambda x: -x[0])[:3]  # 每天最多 3 条
+        
+        dt = datetime.strptime(d, "%Y-%m-%d")
+        weekday = weekdays_cn[dt.weekday()]
+        date_label = f"{dt.month}/{dt.day}"
+        
+        items_html = "".join(
+            f'<div class="day-event"><a href="archive/{d}.html">{t}</a></div>'
+            for _, t in top_titles
+        )
+        day_columns.append(f'''
+    <div class="day-column">
+      <div class="day-header">
+        <div class="day-date">{date_label}</div>
+        <div class="day-weekday">{weekday}</div>
+      </div>
+      <div class="day-events">{items_html}</div>
+    </div>''')
+    
     return f'''
   <div class="weekly-section">
-    <div class="section-title">📅 本周大事记（近 {days} 天）</div>
-    <ul class="weekly-list">{lis}</ul>
+    <div class="section-title">📅 本周大事记（近 {len(day_columns)} 天）</div>
+    <div class="weekly-timeline">
+      {"".join(day_columns)}
+    </div>
   </div>'''
 
 
@@ -921,7 +932,7 @@ def main():
     industry_sent = analyze_industry_sentiment(dates, days=30)
 
     # 新增：本周大事记 + 话题反向索引 + 全站搜索 + 地缘事件时间轴
-    weekly_html = build_weekly_highlights(dates, days=7)
+    weekly_html = build_weekly_highlights(dates, days=6)  # 7 天（含今天）
     topic_reverse_html = build_topic_reverse_index(top10, dates, days=30)
     build_search_index(dates)  # 生成 search_index.json（搜索框在顶栏）
     geo_html = build_geo_timeline(dates, "霍尔木兹海峡/伊朗战争", days=30)
@@ -1349,6 +1360,67 @@ def main():
     border-left: 3px solid var(--sage);
   }}
 
+  /* 本周大事记横向时间轴 */
+  .weekly-timeline {{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }}
+  .day-column {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }}
+  .day-header {{
+    background: linear-gradient(135deg, var(--rose) 0%, #d4a64a 100%);
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+  }}
+  .day-date {{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }}
+  .day-weekday {{
+    font-size: 11px;
+    opacity: 0.9;
+    margin-top: 2px;
+    letter-spacing: 1px;
+  }}
+  .day-events {{
+    padding: 10px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }}
+  .day-event {{
+    font-size: 12px;
+    line-height: 1.5;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed var(--line-soft);
+  }}
+  .day-event:last-child {{
+    border-bottom: none;
+    padding-bottom: 0;
+  }}
+  .day-event a {{
+    color: var(--text-main);
+    text-decoration: none;
+  }}
+  .day-event a:hover {{
+    color: var(--rose);
+  }}
+  @media (max-width: 800px) {{
+    .weekly-timeline {{
+      grid-template-columns: repeat(2, 1fr);
+    }}
+  }}
   /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
   .weekly-section, .geo-section, .topic-reverse-section, .search-section {{
     margin-top: 32px;
