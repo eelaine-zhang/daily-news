@@ -870,26 +870,28 @@ def build_weekly_highlights(dates: list, days: int = 7) -> str:
   </div>'''
 
 
-# 伊朗战争关键转折点（手工策展）
+# 伊朗战争关键转折点（手工策展，时间倒序，最新在前）
 IRAN_WAR_MILESTONES = [
-    ("2026-04-22", "⚡", "冲突起点", "特朗普延长对伊停火但海上封锁继续——伊朗战争进入新阶段"),
-    ("2026-04-23", "🚨", "首次升级", "伊朗扣押两艘商船，霍尔木兹海峡紧张再升级"),
-    ("2026-04-24", "🛢️", "油价破百", "美伊速成协议希望退潮，Brent 原油一度破 $100"),
-    ("2026-04-28", "💥", "谈判破裂", "美伊和谈再次破裂，霍尔木兹吞吐量只剩战前 5%"),
-    ("2026-05-04", "⚔️", "美军介入", "特朗普拒绝伊朗 14 点提案，宣布派美军「引导船只」出霍尔木兹"),
-    ("2026-05-24", "🕊️", "协议突破", "特朗普称美伊协议「已大致谈妥」，霍尔木兹海峡将重新开放"),
-    ("2026-06-08", "💣", "停火崩溃", "伊朗首次直接攻击以色列北部，US-Israel 同步空袭黎巴嫩"),
-    ("2026-06-16", "📝", "签字协议", "美伊正式签字，霍尔木兹海峡当日重开"),
-    ("2026-06-23", "🛢️", "油价触底", "霍尔木兹复航 + 伊朗石油 60 天豁免，Brent 跌至 $78"),
-    ("2026-06-26", "🔥", "停火受考验", "伊朗再袭商船，霍尔木兹海峡紧张重燃"),
-    ("2026-07-09", "⚔️", "战火重燃", "特朗普宣布伊朗停火「已终结」，美军发动新一轮 80 目标打击"),
-    ("2026-07-15", "🚨", "封锁升级", "特朗普重启霍尔木兹军事封锁 + 20% 过路费，Brent 飙至 $86"),
-    ("2026-07-24", "🛢️", "油价重上百", "美伊战争第 12 夜，胡塞武装袭击沙特油轮，Brent 重回 $100"),
-    ("2026-07-28", "📉", "快速消退", "美伊暂停军事打击，Brent 从 $100 暴跌至 $90 以下"),
-    ("2026-08-02", "⚠️", "UN 暂停护航", "伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中"),
-    ("2026-08-06", "🕊️", "协议接近", "伊朗-阿曼就航线达成初步一致，Brent 三天暴跌 11%"),
-    ("2026-08-12", "🛢️", "市场现实", "EIA 上调 2026 年均价至 $87，Brent 守 $89——谈判依然遥遥"),
     ("2026-08-13", "🏗️", "长期化信号", "海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道"),
+    ("2026-08-12", "🛢️", "市场现实", "EIA 上调 2026 年均价至 $87，Brent 守 $89——谈判依然遥遥"),
+    ("2026-08-06", "🕊️", "协议接近", "伊朗-阿曼就航线达成初步一致，Brent 三天暴跌 11%"),
+    ("2026-08-02", "⚠️", "UN 暂停护航", "伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中"),
+    ("2026-07-28", "📉", "快速消退", "美伊暂停军事打击，Brent 从 $100 暴跌至 $90 以下"),
+    ("2026-07-24", "🛢️", "油价重上百", "美伊战争第 12 夜，胡塞武装袭击沙特油轮，Brent 重回 $100"),
+    ("2026-07-15", "🚨", "封锁升级", "特朗普重启霍尔木兹军事封锁 + 20% 过路费，Brent 飙至 $86"),
+    ("2026-07-09", "⚔️", "战火重燃", "特朗普宣布伊朗停火「已终结」，美军发动新一轮 80 目标打击"),
+    ("2026-06-26", "🔥", "停火受考验", "伊朗再袭商船，霍尔木兹海峡紧张重燃"),
+    ("2026-06-24", "💥", "单日崩 11%", "特朗普宣布美伊停火 + 霍尔木兹「完全开放」，油价单日崩 11%"),
+    ("2026-06-23", "🛢️", "油价触底", "霍尔木兹复航 + 伊朗石油 60 天豁免，Brent 跌至 $78"),
+    ("2026-06-16", "📝", "签字协议", "美伊正式签字，霍尔木兹海峡当日重开"),
+    ("2026-06-08", "💣", "停火崩溃", "伊朗首次直接攻击以色列北部，US-Israel 同步空袭黎巴嫩"),
+    ("2026-05-28", "📉", "跌破 90", "Brent 跌回 $88，距 4 月战时高点跌去 13%——「和平交易」加码"),
+    ("2026-05-24", "🕊️", "协议突破", "特朗普称美伊协议「已大致谈妥」，霍尔木兹海峡将重新开放"),
+    ("2026-05-04", "⚔️", "美军介入", "特朗普拒绝伊朗 14 点提案，宣布派美军「引导船只」出霍尔木兹"),
+    ("2026-04-28", "💥", "谈判破裂", "美伊和谈再次破裂，霍尔木兹吞吐量只剩战前 5%"),
+    ("2026-04-24", "🛢️", "油价破百", "美伊速成协议希望退潮，Brent 原油一度破 $100"),
+    ("2026-04-23", "🚨", "首次升级", "伊朗扣押两艘商船，霍尔木兹海峡紧张再升级"),
+    ("2026-04-22", "⚡", "冲突起点", "特朗普延长对伊停火但海上封锁继续——伊朗战争进入新阶段"),
 ]
 
 
@@ -971,24 +973,32 @@ def build_oil_price_chart(dates: list) -> str:
     p_min = min(prices) - 5
     p_max = max(prices) + 5
     
-    # 时间范围（转为索引）
-    n = len(points)
+    # 按实际日期均匀分布 X 轴（避免月份间隔被数据点密度扭曲）
+    from datetime import date as _date
+    def parse_d(s):
+        y, m, dd = s.split("-")
+        return _date(int(y), int(m), int(dd))
+    first_d = parse_d(points[0][0])
+    last_d = parse_d(points[-1][0])
+    total_days = (last_d - first_d).days or 1
     
-    def xy(i, price):
-        x = pad_l + (i / max(n-1, 1)) * chart_w
+    def xy(date_str, price):
+        d = parse_d(date_str)
+        days_offset = (d - first_d).days
+        x = pad_l + (days_offset / total_days) * chart_w
         y = pad_t + chart_h - ((price - p_min) / (p_max - p_min)) * chart_h
         return x, y
     
     # 生成 path
-    path_d = "M " + " L ".join(f"{xy(i, p)[0]:.1f} {xy(i, p)[1]:.1f}" for i, (_, p) in enumerate(points))
+    path_d = "M " + " L ".join(f"{xy(d, p)[0]:.1f} {xy(d, p)[1]:.1f}" for d, p in points)
     
     # 转折点 = IRAN_WAR_MILESTONES 里有价格数据的日期
     milestone_set = {d: (icon, tag, desc) for d, icon, tag, desc in IRAN_WAR_MILESTONES}
     turning_points = []
-    for i, (d, p) in enumerate(points):
+    for d, p in points:
         if d in milestone_set:
             icon, tag, desc = milestone_set[d]
-            x, y = xy(i, p)
+            x, y = xy(d, p)
             turning_points.append((x, y, d, p, tag, desc, icon))
     
     # Y 轴刻度
@@ -997,18 +1007,29 @@ def build_oil_price_chart(dates: list) -> str:
     p_start = int(p_min // step) * step
     for pv in range(p_start, int(p_max) + step, step):
         if p_min <= pv <= p_max:
-            _, ty = xy(0, pv)
+            _, ty = xy(points[0][0], pv)
             y_ticks.append((pv, ty))
     
-    # X 轴月份标签
+    # X 轴月份标签——按当月 1 号均匀布局，且首个月始终于第一个数据点位置
+    from datetime import date as _date2
     month_labels = []
-    last_month = None
-    for i, (d, _) in enumerate(points):
-        m = d[5:7]  # MM
-        if m != last_month:
-            x, _ = xy(i, points[0][1])
-            month_labels.append((x, f"{int(m)}月"))
-            last_month = m
+    # 首个月标签放在第一个数据点（带起点日避免误导）
+    first_x, _ = xy(points[0][0], points[0][1])
+    month_labels.append((first_x, f"{first_d.month}/{first_d.day}"))
+    # 后续每月 1 号
+    cur = _date2(first_d.year, first_d.month, 1)
+    if cur.month == 12:
+        cur = _date2(cur.year + 1, 1, 1)
+    else:
+        cur = _date2(cur.year, cur.month + 1, 1)
+    while cur <= last_d:
+        days_offset = (cur - first_d).days
+        x = pad_l + (days_offset / total_days) * chart_w
+        month_labels.append((x, f"{cur.month}月"))
+        if cur.month == 12:
+            cur = _date2(cur.year + 1, 1, 1)
+        else:
+            cur = _date2(cur.year, cur.month + 1, 1)
     
     # 渲染
     y_axis_svg = "".join(f'''
@@ -1035,7 +1056,7 @@ def build_oil_price_chart(dates: list) -> str:
     
     # 最新价格标注
     last_d, last_p = points[-1]
-    last_x, last_y = xy(n-1, last_p)
+    last_x, last_y = xy(last_d, last_p)
     
     svg = f'''
 <svg viewBox="0 0 {W} {H}" class="oil-chart" xmlns="http://www.w3.org/2000/svg">
