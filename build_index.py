@@ -949,7 +949,7 @@ def main():
             label = "➖ 震荡"
             color = "#A9BACB"
         if low_sample:
-            label += " <span class='low-sample'>(样本仅 {days} 天)</span>"
+            label += f" <span class='low-sample'>(样本仅 {days} 天)</span>"
         avg_str = f"{avg:+.2f}%" if avg != 0 else "0%"
         return f'''
         <div class="market-block">
