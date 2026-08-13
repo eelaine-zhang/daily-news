@@ -2,6 +2,7 @@
 """Generate index.html for daily-news site (v6 Morandi minimal style)."""
 import os
 import re
+import json
 from pathlib import Path
 from datetime import datetime, date, timedelta
 from collections import defaultdict, Counter
@@ -10,6 +11,7 @@ import calendar
 REPO_ROOT = Path(__file__).parent
 ARCHIVE_DIR = REPO_ROOT / "archive"
 INDEX_HTML = REPO_ROOT / "index.html"
+SEARCH_JSON = REPO_ROOT / "search_index.json"
 
 DATE_PATTERN = re.compile(r"^(\d{4}-\d{2}-\d{2})\.html$")
 
@@ -681,6 +683,139 @@ def build_calendar_html(dates_set: set, today_str: str) -> str:
     return f'<div class="cal-grid">{"".join(month_blocks)}</div>'
 
 
+def build_weekly_highlights(dates: list, days: int = 7) -> str:
+    """本周大事记：从近 N 天早报中挑出影响力最大的 5-8 条事件，跨天去重。"""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+    if not recent:
+        return ""
+    # 收集每天所有标题
+    all_entries = []  # [(date, title)] 
+    for d in recent:
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        for t in titles:
+            all_entries.append((d, t))
+    # 按「事件主体」去重：同主体只留最近 + 最重要的一条
+    seen_subjects = {}
+    KEYWORD_IMPORTANCE = ["纪录", "创", "首次", "首", "爆发", "暴涨", "飙升", "突破", "落地", "收购", "签署", "发布", "IPO", "紧急", "宣布", "爆表", "超预期", "签署"]
+    for d, t in all_entries:
+        # 抽主体关键词（优先别名）
+        subj = None
+        for alias in TOPIC_ALIAS:
+            if alias in t:
+                subj = normalize_topic(alias)
+                break
+        if not subj:
+            m = re.search(r"\b[A-Z][a-zA-Z0-9&-]{2,15}\b", t)
+            if m:
+                subj = normalize_topic(m.group(0))
+        if not subj:
+            # 中文主体（人名/公司名）
+            m = re.search(r"([一-龥]{2,4})(?:科技|集团|汽车|机器人|半导体|医药|银行|证券|影视|娱乐|游戏)", t)
+            if m:
+                subj = m.group(0)
+        if not subj:
+            continue
+        # 计算重要性分数
+        score = sum(2 for kw in KEYWORD_IMPORTANCE if kw in t) + len(re.findall(r"\d+%|\$\d+|\d+\s*亿", t))
+        if subj not in seen_subjects or score > seen_subjects[subj][0] or d > seen_subjects[subj][1]:
+            # 同主体：如果分数更高 或 是更新日期的，替换
+            if subj not in seen_subjects:
+                seen_subjects[subj] = (score, d, t)
+            elif score > seen_subjects[subj][0]:
+                seen_subjects[subj] = (score, d, t)
+    # 按日期倒序 + 重要性排序
+    items = sorted(seen_subjects.values(), key=lambda x: x[1], reverse=True)[:8]  # 取最近 8 条不同主体的
+    if not items:
+        return ""
+    lis = "".join(
+        f'<li><span class="hl-date">{d[5:].replace("-", "/")}</span> <a href="archive/{d}.html">{t}</a></li>'
+        for _, d, t in items
+    )
+    return f'''
+  <div class="weekly-section">
+    <div class="section-title">📅 本周大事记（近 {days} 天）</div>
+    <ul class="weekly-list">{lis}</ul>
+  </div>'''
+
+
+def build_geo_timeline(dates: list, topic: str, days: int = 30) -> str:
+    """地缘事件时间轴：某个持续事件在近 N 天里的演进。"""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff])
+    entries = []
+    # 该事件相关的所有话题别名
+    related_aliases = [a for a, n in TOPIC_ALIAS.items() if n == topic] + [topic]
+    for d in recent:
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        for t in titles:
+            if any(a in t for a in related_aliases):
+                entries.append((d, t))
+                break  # 一天一条代表
+    if len(entries) < 2:
+        return ""
+    lis = "".join(
+        f'<li><span class="hl-date">{d[5:].replace("-", "/")}</span> <a href="archive/{d}.html">{t}</a></li>'
+        for d, t in entries
+    )
+    return f'''
+  <div class="geo-section">
+    <div class="section-title">🌍 「{topic}」事件演进时间轴（近 {days} 天）</div>
+    <ul class="weekly-list">{lis}</ul>
+  </div>'''
+
+
+def build_search_index(dates: list) -> str:
+    """全站搜索：生成 search_index.json + 搜索框。"""
+    index = []
+    for d in sorted(dates, reverse=True)[:90]:  # 最近 90 天
+        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+        index.append({"date": d, "titles": titles})
+    SEARCH_JSON.parent.mkdir(exist_ok=True)
+    SEARCH_JSON.write_text(json.dumps(index, ensure_ascii=False), encoding="utf-8")
+    return f'''
+  <div class="search-section">
+    <div class="section-title">🔍 全站搜索</div>
+    <input type="text" id="search-input" placeholder="搜关键词（例如：宇树 / Nvidia / 伊朗 / HBM…）" />
+    <div id="search-results"></div>
+  </div>'''
+
+
+def build_topic_reverse_index(top10: list, dates: list, days: int = 30) -> str:
+    """话题反向索引：点击话题看过去 N 天所有相关标题。"""
+    if not top10:
+        return ""
+    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
+    recent = sorted([d for d in dates if d >= cutoff], reverse=True)
+    blocks = []
+    for topic, _count in top10:
+        related_aliases = [a for a, n in TOPIC_ALIAS.items() if n == topic] + [topic]
+        entries = []
+        for d in recent:
+            titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
+            for t in titles:
+                if any(a in t for a in related_aliases):
+                    entries.append((d, t))
+        if not entries:
+            continue
+        lis = "".join(
+            f'<li><span class="hl-date">{d[5:].replace("-", "/")}</span> <a href="archive/{d}.html">{t}</a></li>'
+            for d, t in entries
+        )
+        blocks.append(f'''
+      <details class="topic-reverse">
+        <summary><strong>{topic}</strong> · {len(entries)} 条相关报道</summary>
+        <ul class="weekly-list">{lis}</ul>
+      </details>''')
+    if not blocks:
+        return ""
+    return f'''
+  <div class="topic-reverse-section">
+    <div class="section-title">🔗 话题反向索引（点击查看完整演进）</div>
+    {"".join(blocks)}
+  </div>'''
+
+
 def main():
     dates = []
     for f in ARCHIVE_DIR.iterdir():
@@ -706,6 +841,12 @@ def main():
     up_days, down_days, flat_days, sentiment_total, major_events = analyze_sentiment(dates, days=30)
     market_sent = analyze_market_sentiment(dates, days=30)
     industry_sent = analyze_industry_sentiment(dates, days=30)
+
+    # 新增：本周大事记 + 话题反向索引 + 全站搜索 + 地缘事件时间轴
+    weekly_html = build_weekly_highlights(dates, days=7)
+    topic_reverse_html = build_topic_reverse_index(top10, dates, days=30)
+    search_html = build_search_index(dates)
+    geo_html = build_geo_timeline(dates, "霍尔木兹海峡/伊朗战争", days=30)
 
     # 主要事件（近 7 天）
     events_html = ""
@@ -1119,6 +1260,129 @@ def main():
     border-left: 3px solid var(--sage);
   }}
 
+  /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
+  .weekly-section, .geo-section, .topic-reverse-section, .search-section {{
+    margin-top: 32px;
+  }}
+  .weekly-list {{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }}
+  .weekly-list li {{
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }}
+  .weekly-list li:last-child {{
+    border-bottom: none;
+  }}
+  .weekly-list .hl-date {{
+    display: inline-block;
+    min-width: 50px;
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+  }}
+  .weekly-list a {{
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }}
+  .weekly-list a:hover {{
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }}
+  .topic-reverse {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }}
+  .topic-reverse summary {{
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+  }}
+  .topic-reverse summary::-webkit-details-marker {{ display: none; }}
+  .topic-reverse summary:hover {{
+    background: rgba(213, 160, 162, 0.06);
+  }}
+  .topic-reverse[open] summary {{
+    border-bottom: 1px solid var(--line-soft);
+  }}
+  .topic-reverse .weekly-list {{
+    padding: 12px 16px;
+  }}
+  /* 搜索 */
+  .search-section {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }}
+  #search-input {{
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    background: var(--page-bg);
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.15s;
+  }}
+  #search-input:focus {{
+    border-color: var(--rose);
+  }}
+  #search-results {{
+    margin-top: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+  }}
+  #search-results .sr-item {{
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }}
+  #search-results .sr-item:last-child {{ border-bottom: none; }}
+  #search-results .sr-date {{
+    display: inline-block;
+    min-width: 70px;
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+  }}
+  #search-results .sr-item a {{
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }}
+  #search-results .sr-item a:hover {{
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }}
+  #search-results .sr-empty {{
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 12px 0;
+    text-align: center;
+  }}
+  #search-results .sr-highlight {{
+    background: rgba(212, 166, 74, 0.25);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 600;
+  }}
+
   .calendar-section {{
     margin-top: 32px;
   }}
@@ -1213,10 +1477,18 @@ def main():
     <div class="today-summary">{summary}</div>
   </div>
 
+  {search_html}
+
+  {weekly_html}
+
   <div class="insights-section">
     <div class="section-title">近 30 天被热议的新话题 TOP 10</div>
     {bar_chart_html}
     <div class="chart-caption">从每天标题提取事件性话题（板块名/标的代码已过滤），按被提及天数排序</div>
+
+    {topic_reverse_html}
+
+    {geo_html}
 
     <div style="margin-top: 40px;">
       <div class="section-title">各市场情绪（近 30 天）</div>
@@ -1244,6 +1516,57 @@ def main():
     共 {total} 期 · 更新于 {now} · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
+<script>
+(async function() {{
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  if (!input || !results) return;
+  let index = [];
+  try {{
+    const r = await fetch('search_index.json');
+    index = await r.json();
+  }} catch (e) {{
+    results.innerHTML = '<div class="sr-empty">搜索索引加载失败</div>';
+    return;
+  }}
+  function highlight(text, kw) {{
+    const re = new RegExp(kw.replace(/[.*+?^${{}}()|[\]\\]/g, '\\$&'), 'gi');
+    return text.replace(re, m => `<span class="sr-highlight">${{m}}</span>`);
+  }}
+  let timer;
+  input.addEventListener('input', () => {{
+    clearTimeout(timer);
+    timer = setTimeout(() => {{
+      const q = input.value.trim();
+      if (!q || q.length < 2) {{
+        results.innerHTML = q ? '<div class="sr-empty">请输入至少 2 个字</div>' : '';
+        return;
+      }}
+      const out = [];
+      for (const day of index) {{
+        for (const title of day.titles) {{
+          if (title.toLowerCase().includes(q.toLowerCase())) {{
+            out.push({{ date: day.date, title }});
+          }}
+        }}
+      }}
+      if (out.length === 0) {{
+        results.innerHTML = `<div class="sr-empty">没有找到「${{q}}」相关的报道</div>`;
+        return;
+      }}
+      const max = 30;
+      const items = out.slice(0, max).map(r => `
+        <div class="sr-item">
+          <span class="sr-date">${{r.date.slice(5).replace('-', '/')}}</span>
+          <a href="archive/${{r.date}}.html">${{highlight(r.title, q)}}</a>
+        </div>
+      `).join('');
+      const more = out.length > max ? `<div class="sr-empty">共 ${{out.length}} 条结果，仅显示前 ${{max}} 条</div>` : `<div class="sr-empty">共 ${{out.length}} 条结果</div>`;
+      results.innerHTML = items + more;
+    }}, 200);
+  }});
+}})();
+</script>
 </body>
 </html>
 """

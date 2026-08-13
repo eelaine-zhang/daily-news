@@ -353,6 +353,129 @@
     border-left: 3px solid var(--sage);
   }
 
+  /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
+  .weekly-section, .geo-section, .topic-reverse-section, .search-section {
+    margin-top: 32px;
+  }
+  .weekly-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+  }
+  .weekly-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .weekly-list li:last-child {
+    border-bottom: none;
+  }
+  .weekly-list .hl-date {
+    display: inline-block;
+    min-width: 50px;
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  .weekly-list a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }
+  .weekly-list a:hover {
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }
+  .topic-reverse {
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .topic-reverse summary {
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    list-style: none;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .topic-reverse summary::-webkit-details-marker { display: none; }
+  .topic-reverse summary:hover {
+    background: rgba(213, 160, 162, 0.06);
+  }
+  .topic-reverse[open] summary {
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .topic-reverse .weekly-list {
+    padding: 12px 16px;
+  }
+  /* 搜索 */
+  .search-section {
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  #search-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+    background: var(--page-bg);
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  #search-input:focus {
+    border-color: var(--rose);
+  }
+  #search-results {
+    margin-top: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  #search-results .sr-item {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--line-soft);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  #search-results .sr-item:last-child { border-bottom: none; }
+  #search-results .sr-date {
+    display: inline-block;
+    min-width: 70px;
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  #search-results .sr-item a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }
+  #search-results .sr-item a:hover {
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }
+  #search-results .sr-empty {
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 12px 0;
+    text-align: center;
+  }
+  #search-results .sr-highlight {
+    background: rgba(212, 166, 74, 0.25);
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 600;
+  }
+
   .calendar-section {
     margin-top: 32px;
   }
@@ -445,6 +568,19 @@
       <a href="archive/2026-08-13.html">8月13日 · 周四</a>
     </div>
     <div class="today-summary">CoreWeave Q2 营收 $25.75 亿（+112% YoY）超预期，合同积压 $1290 亿，盘后飙 +16%——"50% 违约率"质疑被打脸</div>
+  </div>
+
+  
+  <div class="search-section">
+    <div class="section-title">🔍 全站搜索</div>
+    <input type="text" id="search-input" placeholder="搜关键词（例如：宇树 / Nvidia / 伊朗 / HBM…）" />
+    <div id="search-results"></div>
+  </div>
+
+  
+  <div class="weekly-section">
+    <div class="section-title">📅 本周大事记（近 7 天）</div>
+    <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">CoreWeave Q2 营收 $25.75 亿（+112% YoY）超预期，合同积压 $1290 亿，盘后飙 +16%——"50% 违约率"质疑被打脸</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">🇰🇷 韩股 — 8/12 KOSPI 暴涨 +3.68% 收 6,579：三星 +6%、SK Hynix +5%，触发年内第 23 次 sidecar</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">Disney Q3 2026：乐园营收 $100 亿创纪录（+10% YoY），流媒体利润 12.9% 几乎翻倍，但票房参差</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">Live Nation Q2 2026 营收 $76.7 亿（+9.4% YoY）：演唱会经济继续爆发，EPS $1.05</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">《Spider-Man》新片开画创纪录：Disney CEO 公开点赞，2026 暑期档全球票房刷新历史</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Microsoft 向 TSMC 要 30 万片 Maia 300 AI 加速器产能，Nvidia 独占 CoWoS 60% 队列</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Intel $200 亿增发今日收盘：$95/股定价，$1000 亿订单涌入（5 倍超额），Dan Niles 预告"大代工客户将官宣"</a></li></ul>
   </div>
 
   <div class="insights-section">
@@ -666,6 +802,58 @@
 </div>
     <div class="chart-caption">从每天标题提取事件性话题（板块名/标的代码已过滤），按被提及天数排序</div>
 
+    
+  <div class="topic-reverse-section">
+    <div class="section-title">🔗 话题反向索引（点击查看完整演进）</div>
+    
+      <details class="topic-reverse">
+        <summary><strong>霍尔木兹海峡/伊朗战争</strong> · 76 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">NYT：海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">伊朗：只要美国不解除制裁就一直关闭霍尔木兹，特朗普拒绝让步——油价应声上涨</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">IEA 警告全球原油库存"快速消耗"，Q3 供给缺口扩至 180 万桶/日——Brent 守 $89</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">霍尔木兹希望渺茫：Brent 升至 $89.24，EIA 上调 2026 年均价预测至 $87，海上袭击持续</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">霍尔木兹谈判停滞：Brent 升至 $84+，伊朗通过中间人与美国传话但分歧仍大</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">Brookings：伊朗战争"反噬效应"——亚洲经济安全"极度脆弱"，霍尔木兹封锁引发历史性油冲击</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">五角大楼要求军工企业 21 天内提交加速生产方案：伊朗战争消耗大量弹药库存</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">霍尔木兹海峡第 162 天实质关闭：Brent $83.55，伊朗发布通行限制草案开长清单</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">伊朗-阿曼霍尔木兹协议框架达成，但伊朗开出长清单：美军撤封锁、解除制裁、归还在美资产</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">伊朗袭击海湾国家油气设施威胁升级：警告"如果美国再打，我们打你们的钱"</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">Brent 周五收 $83.55（+1.3%）/ WTI $77-78 区间 / OPEC+ 批准 9 月增产 18.8 万桶/日</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">霍尔木兹通行量骤降：每日仅 4 艘船通过，伊朗-阿曼协议"接近达成"</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">Brookings：伊朗战争"反噬效应"——亚洲经济安全"极度脆弱"，霍尔木兹封锁引发历史性油冲击</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">Brent $83-86 区间震荡 · 黄金冲 $4,356 创阶段新高</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">霍尔木兹协议"最后阶段"但未正式达成；Brent 单日飙 3.83% 至 $82.49，油价博弈加剧</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">COMEX 黄金 $4,298.7（-0.15%）：油价飙升+地缘风险支撑，但美元走强压制涨幅</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">Bessent 称霍尔木兹协议"今明两天"可达成；伊朗-阿曼已就航线达成初步一致，Brent 三天暴跌 11%</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">胡塞武装袭击沙特油轮——红海"第二咽喉"仍不安全，油价短暂反弹后继续跌</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">黄金单日暴涨 4.5% 至 $4,255，市值单日增 $1.3 万亿——霍尔木兹乐观 + 加息押注下调双驱动</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">特朗普称"最后机会"：Bessent 称霍尔木兹协议"今明两天"可达成，伊朗否认正在谈判</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">Brent 原油从 $87 暴跌至 $83 区间：停火乐观预期驱动，EIA 预测 Q3 均价 $74</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">特朗普取消对伊朗大规模空袭，宣布今日启动新谈判；但伊朗外交部否认与美方有任何对话</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">油价暴跌近 5%：Brent 回落至 $83.70，WTI 跌至 $78.50——地缘溢价回吐但霍尔木兹仍封锁</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">特朗普宣布今日（周一）启动与伊朗新谈判，取消周末大规模空袭计划</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">伊朗-阿曼霍尔木兹海峡谈判进入"最终阶段"，新海上通道即将敲定</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">OPEC+ 9 月再增产 18.8 万桶/日，完成自愿减产全面回退；Q4 暂停增产</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中，UN 海事组织暂停霍尔木兹护航行动</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">Brent 收 $90.12 周涨 ~20%，但霍尔木兹通航小幅恢复后回落至 $87.67；沙特牵头组建海上联军</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">美国与以色列拟对伊朗能源设施发动大规模轰炸；特朗普称"将非常猛烈地打击他们"</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">伊朗革命卫队击中两艘美军护航油轮，霍尔木兹海峡日通航量从 800 万桶骤降至不足 200 万桶</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">美国与以色列拟对伊朗能源基建发动最大规模轰炸；俄方向伊朗提供军事支持</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">Brent 站上 $90 月涨 20%，OPEC+ 准备停止增产；黄金 $4077，日元疑似干预推升金价</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">沙特提议组建海上联军护航霍尔木兹，Brent 回落至 $89——但伊朗称两艘油轮在海峡起火后折返</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">今晚 24 时国内油价年内第十涨：每升涨约 0.53-0.8 元，加满一箱多花 27-40 元</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">伊朗恢复导弹攻击美军，美国与沙特联合空袭伊拉克民兵（击毙 20+），Trump 放话"going to get a beating"</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">内塔尼亚胡访白宫：称"最好的会面之一"，讨论加大对伊朗"kinetic and non-kinetic"压力</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">Brent 重返 $90+：美伊停火破局 + Trump 威胁伊朗，地缘溢价卷土重来</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">Brent 从 $96 崩至 $84（-5.2%），WTI 跌破 $80——美伊暂停互相攻击，特朗普称"正在谈判"</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">EIA 大幅下调油价预测：Brent 3Q26 预测降至 $74——承认地缘溢价不可持续</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">美伊暂停军事打击进入第三天，Brent 从 $100 暴跌至 $90 以下——地缘溢价快速消退</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">霍尔木兹海峡危机持续：通行仍受限制，但 3 周窗口期已释放 2 亿桶原油</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">FOMC 7/28-29 今日开启：市场预期维持 3.50%-3.75%，油价回落降低加息可能</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">黄金 $4087：油价回落缓解通胀担忧，但 FOMC 前多空僵持</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">乌克兰在里海远程打击伊朗商船致 1 死 1 伤——战争外溢到新战场</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">Brent 破 $100 后回落至 $96.78；胡塞武装袭击沙特油轮，红海成为第二咽喉</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">特朗普暂停轰炸伊朗：美UN大使称"给谈判空间"；海湾国家反对以色列参战</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">美伊战争第 13 天：持续空袭 + 中国斡旋促和，油价周五大跌 4%+</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">FOMC 7/28-29 会议：市场预计按兵不动，但油价飙升让加息预期升温</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">Brent 从 $70 飙到 $100 后周五大跌 4%：中国斡旋带来拐点还是喘息？</a></li><li><span class="hl-date">07/25</span> <a href="archive/2026-07-25.html">美军连续第 13 晚空袭伊朗，伊朗拒绝停火提案；红海成为第二个咽喉要道</a></li><li><span class="hl-date">07/25</span> <a href="archive/2026-07-25.html">Brent 原油 7 月暴涨 30%：$100 关口失而复得，巴基斯坦斡旋带来短暂回落</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">美伊战争第 12 夜：美军持续空袭伊朗，胡塞武装袭击沙特油轮，Brent 原油重回 $100</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">油价飙升推动 Fed 加息概率飙至 78%，6 月 CPI 3.5% / PPI 5.5% 通胀粘性显现</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">黄金 ~$4,048 回落两周高点，油价 5 连涨；中国央行 7/24 开展 5,000 亿 MLF 操作</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">美伊交火持续升级——Brent 原油盘中突破 $93/桶，霍尔木兹海峡封锁风险上升</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">美联储 7 月预计按兵不动——油价飙升推升通胀忧虑，10 年期美债收益率创两个月新高</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">美伊战争账单升至 $375 亿——Brent 冲破 $91，通胀恐惧回归</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">通胀恐惧回归——油价 + 关税双重夹击，9 月降息预期降温</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">Brent $91 + 黄金 $4,017——地缘溢价全面回归</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">中东美军连续第 9-10 晚空袭伊朗——以色列正游说美国恢复"全面打击"</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">霍尔木兹科威特海水淡化厂二度遇袭——海湾民用基础设施成为新靶点</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">大宗黄金 $4,017 守住 $4,000 关口 + Brent $88——地缘溢价全面回归</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">美伊战事持续升级：美军空袭伊朗在建核电站，霍尔木兹海峡通航受阻</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">Brent 原油反弹至 ~$85，黄金坚守 $4,000 上方——地缘溢价回归</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">美军连续 7 晚空袭伊朗，伊朗反击打击海湾民用基础设施——2 名美军在约旦阵亡</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">霍尔木兹海峡油轮爆炸+通行量仅战前 50%——全球 20% 原油运输要道命悬一线</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">美国 7 月消费者信心指数升至 54.4 创 5 个月新高——汽油价格回落驱动，但可能不持久</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">Brent $88 +4% · COMEX 黄金 $4,019 · VIX +12% 至 18.77——地缘溢价全面回归</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">美军海上封锁伊朗港口，霍尔木兹海峡油轮通行量骤降，WTI 原油连涨四日至 ~$80</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">伊朗威胁报复阿拉伯邻国——冲突外溢风险升级</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">美军连续第四夜空袭伊朗，重新封锁伊朗港口——特朗普誓言"升级轰炸直到德黑兰让步"</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">中国 Q2 GDP 仅 4.3%——疫情以来最弱，伊朗冲突拖累出口，消费零售勉强转正</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">布伦特原油 $87 · COMEX 黄金 $4,060——地缘溢价持续，避险资产高位震荡</a></li><li><span class="hl-date">07/15</span> <a href="archive/2026-07-15.html">Trump 宣布重启霍尔木兹海峡军事封锁+20% 过路费——Brent 飙至 $86</a></li><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">特朗普正式通知国会恢复对伊朗军事打击——美军称已打击布什尔、阿巴斯港等多处目标</a></li><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">Brent 原油单日暴涨 10% 突破 $85——美伊冲突重启中东风险溢价</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>Nvidia</strong> · 25 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">Nvidia $5000 亿融资联盟遭"循环融资"质疑——中国廉价 AI 芯片成 GPU 抵押品定价隐忧</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Nvidia 联手六大金融巨头启动 $5000 亿 AI 基础设施融资计划——算力正式成为"可抵押资产"</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Microsoft 向 TSMC 要 30 万片 Maia 300 AI 加速器产能，Nvidia 独占 CoWoS 60% 队列</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">Nvidia 向 Texas 电力公司 Lancium 投资 $30 亿：AI 瓶颈从芯片转向能源</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">Nvidia CMX 架构落地：GPU 集群 AI 推理瓶颈从算力转向内存，Supermicro 举办 Open Storage Summit 讨论</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">Anthropic 组建自研芯片团队：Claude 要跑在自己的硅片上，AI 巨头"去英伟达化"加速</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">AMD Q2 营收创纪录 $115.4 亿（+50%），数据中心翻倍至 $67 亿——但 Musk 选了英伟达，盘后跌 9%</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">英伟达 RTX 50 显卡全球涨价 20-40%：TSMC 晶圆 + GDDR7 内存成本双杀，技嘉取消已接预订单</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">TSMC 2nm 月产能冲刺 10 万片：英伟达、AMD 等客户倒逼加速扩产，3nm 月产也将达 18 万片</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">$1 万亿蒸发：NVDA/SK Hynix/Samsung/Micron 各跌超 $1000 亿，SOX 指数月跌 20%</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">英伟达 $7500 亿 AI 交易引发"循环融资"恐慌：CDS 利差飙至历史新高</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">Nvidia 拟为 OpenAI 的 $5000 亿俄亥俄数据中心提供 $2500 亿融资担保——AI 基建"大而不能倒"</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">黄仁勋：芯片产业需 10 倍扩张以支撑 1000 亿 AI Agent；Nvidia 计划 $7500 亿支出</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">$5000 亿史诗级合作：英伟达锁定 SK Hynix 下代 HBM 供应 + 2GW AI 工厂</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">英伟达投资 $10 亿入股 Naver，共建韩国"国家级 AI 工厂"</a></li><li><span class="hl-date">07/25</span> <a href="archive/2026-07-25.html">英伟达联手 Amkor 斥 $15 亿锁封亚利桑那封装产能——同时白宫指控月之暗面违规获取 GB300</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">AMD 发布 Zen 6 "Venice" + Helios 整机架 AI 系统——72 颗 GPU、31TB HBM4、7000 磅，直接叫板英伟达 NVL144</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">三星 HBM 混合键合量产推迟至 2029 年——配合英伟达下一代 Feynman GPU，从荷兰 BESI 采购 50 台设备</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">英伟达 Vera CPU 全貌曝光——"要拥有 AI 数据中心里的每一颗芯片"</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">英伟达披露持有 Nebius 9.3% 股份（~$20 亿投资），Nebius 股价暴涨 19%</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">Apple 短暂夺回全球市值王座——$4.88 万亿 vs $4.86 万亿，结束英伟达 265 天霸榜</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">费城半导体指数进入熊市——NVDA -2.21% 差点被 Apple 超越市值第一，Intel -13%，全球芯片股全面回调</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">三星 HBM3E 获英伟达认证进展提速，新 DRAM 厂月产能 10 万片——Micron 跌 7%，SK Hynix ADR 飙 27%</a></li><li><span class="hl-date">07/15</span> <a href="archive/2026-07-15.html">美国官员确认英伟达 H200 已开始向中国出货——但"数量极少"</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>HBM/内存</strong> · 23 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">🇰🇷 韩股 — 8/12 KOSPI 暴涨 +3.68% 收 6,579：三星 +6%、SK Hynix +5%，触发年内第 23 次 sidecar</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">🇰🇷 韩股 — 8/11 KOSPI +0.73% 报 6,346 / 三星 +4.13% 报 239,500 韩元 / SK Hynix +0.35% 报 1,425,000 韩元</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">Omdia：2026 全球半导体营收预测创新高，HBM + 先进封装成"双重瓶颈"</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">SK Hynix 董事会批准 $380 亿扩产：龙仁建新 DRAM 厂 + 清州建新 NAND 厂，AI 内存产能再加码</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">中国 CXMT 崛起：计划北京建第二座 DRAM 厂，LPDDR6 冲刺量产，PC 巨头 HP/华硕/宏碁开始采用中国内存芯片</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">SK Hynix 董事会批准 $380 亿投资：龙仁建 DRAM 厂 + 清州建 NAND 厂，AI 内存产能再加码</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">Samsung 在 FMS 2026 连发三弹：400 层 V10 BV-NAND + HBF 新存储层 + zHBM 垂直堆叠概念</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">Reuters 独家：三星和 SK Hynix 正在测试中国 AMEC 芯片制造设备，对冲美国出口管制风险</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">英国 Olix 融 $3.12 亿做"不用 HBM 的 AI 芯片"：光子互联 + 片上 SRAM，估值 $33 亿创欧洲半导体最大 VC 轮</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">三星 2nm 设计订单料翻倍：Broadcom/云厂商/HPC 客户评估三星先进节点，HBM4 整合是最大优势</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">韩国 KOSPI 单日涨 17.91% 创历史纪录：SK Hynix +30% 涨停、三星 +27%，AI 悲观预期逆转</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">$1 万亿蒸发：NVDA/SK Hynix/Samsung/Micron 各跌超 $1000 亿，SOX 指数月跌 20%</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">全球半导体股遭遇"黑色星期二"：SK Hynix -14.65%、Samsung -13.4%、SOXX -5%、A 股创业板 -7.35%</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">$2000 亿史诗级联盟：三星拿下 Broadcom 五年全面合作大单，2nm 代工 + HBM + 先进封装一条龙</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">SK Hynix 将 HBM4 供应扩展至 Microsoft——韩国存储双雄一周签下 $9500 亿大单</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">$5000 亿史诗级合作：英伟达锁定 SK Hynix 下代 HBM 供应 + 2GW AI 工厂</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">AMD 发布 Zen 6 "Venice" + Helios 整机架 AI 系统——72 颗 GPU、31TB HBM4、7000 磅，直接叫板英伟达 NVL144</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">三星 HBM 混合键合量产推迟至 2029 年——配合英伟达下一代 Feynman GPU，从荷兰 BESI 采购 50 台设备</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">三星 HBM4 逻辑芯片押注 2nm 工艺——正面对抗 SK Hynix-TSMC 联盟</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">Netlist ITC 调查或封杀 HBM/DDR5 进口——一家加州小公司可能卡住 AI 内存咽喉</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">韩国央行三年半首次加息至 2.75%——KOSPI 暴跌 6.37%，三星 -8.8%、海力士 -11.5%</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">三星 HBM3E 获英伟达认证进展提速，新 DRAM 厂月产能 10 万片——Micron 跌 7%，SK Hynix ADR 飙 27%</a></li><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">SK 海力士 ADR 上市第二日暴跌 9%——$265 亿 IPO 后的估值重压</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>三星电子</strong> · 15 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">🇰🇷 韩股 — 8/12 KOSPI 暴涨 +3.68% 收 6,579：三星 +6%、SK Hynix +5%，触发年内第 23 次 sidecar</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">🇰🇷 韩股 — 8/11 KOSPI +0.73% 报 6,346 / 三星 +4.13% 报 239,500 韩元 / SK Hynix +0.35% 报 1,425,000 韩元</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">Samsung 在 FMS 2026 连发三弹：400 层 V10 BV-NAND + HBF 新存储层 + zHBM 垂直堆叠概念</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">Reuters 独家：三星和 SK Hynix 正在测试中国 AMEC 芯片制造设备，对冲美国出口管制风险</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">三星 2nm 设计订单料翻倍：Broadcom/云厂商/HPC 客户评估三星先进节点，HBM4 整合是最大优势</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">三星 Q2 运营利润 KRW 89.5 万亿创纪录，AI 内存需求推动；警告内存短缺将延至 2028</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">韩国 KOSPI 单日涨 17.91% 创历史纪录：SK Hynix +30% 涨停、三星 +27%，AI 悲观预期逆转</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">三星 Q2 营业利润 89.5 万亿韩元（~$620 亿），同比增 1814%——芯片利润暴增 250 倍，手机部门首次亏损</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">$1 万亿蒸发：NVDA/SK Hynix/Samsung/Micron 各跌超 $1000 亿，SOX 指数月跌 20%</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">全球半导体股遭遇"黑色星期二"：SK Hynix -14.65%、Samsung -13.4%、SOXX -5%、A 股创业板 -7.35%</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">$2000 亿史诗级联盟：三星拿下 Broadcom 五年全面合作大单，2nm 代工 + HBM + 先进封装一条龙</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">三星 HBM 混合键合量产推迟至 2029 年——配合英伟达下一代 Feynman GPU，从荷兰 BESI 采购 50 台设备</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">三星 HBM4 逻辑芯片押注 2nm 工艺——正面对抗 SK Hynix-TSMC 联盟</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">韩国央行三年半首次加息至 2.75%——KOSPI 暴跌 6.37%，三星 -8.8%、海力士 -11.5%</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">三星 HBM3E 获英伟达认证进展提速，新 DRAM 厂月产能 10 万片——Micron 跌 7%，SK Hynix ADR 飙 27%</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>美联储主席人选博弈</strong> · 11 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">FOMC 7/29 以 9-3 投票维持利率 3.50-3.75%：三名官员异议支持加息，"分裂的美联储"</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">美联储主席 Warsh "准备好加息"：若通胀数据偏热且市场提高加息预期，将采取行动</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">美联储理事 Cook："准备好加息"——通胀高于目标时间越长，加息可能性越大</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">债券"义警"替美联储干活：30 年期国债收益率升至 5.25%，2007 年以来最高</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">FOMC 维持利率 3.50-3.75% 不变，但 3 票反对主张加息——Warsh 任内第二次会议出现罕见分歧</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">Fed 维持利率 3.5%-3.75% 不变，三位委员罕见投加息赞成票——2016 年以来最鹰派 FOMC 分裂，Warsh 被批"含糊其辞"</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">美联储 9:3 维持 3.5%-3.75%——三位委员 dissent 要加息，2016 年以来最分裂的一次</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">FOMC 7/28-29 议息会议今日公布结果：Warsh 美联储首考——市场预期"鹰派按兵不动"</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">美联储 7 月预计按兵不动——油价飙升推升通胀忧虑，10 年期美债收益率创两个月新高</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">美联储Kevin Warsh 首次亮相参议院银行委员会——市场给出正面反馈</a></li><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">美联储 7 月货币政策报告：沃什释放鹰派信号——九名官员支持年内加息</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>AMD</strong> · 12 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">AMD 收购 AI 推理芯片创业公司 Taalas：把 AI 模型"刻进"硅片，推理性能提升 10 倍</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">AMD 收购 AI 推理芯片初创 Taalas：把 AI 模型直接刻进硅片，推理速度 17,000 tokens/秒</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">AMD 收购 AI 推理芯片创业公司 Taalas：把 AI 模型"刻进"硅片，绕过 GPU 内存墙</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">AMD 收购 AI 推理芯片初创 Taalas：把 AI 模型直接刻进硅片，推理速度达 17,000 tokens/秒</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">AMD Q2 营收创纪录 $115.4 亿（+50%），数据中心翻倍至 $67 亿——但 Musk 选了英伟达，盘后跌 9%</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">🇺🇸 美股 — 8/5 S&amp;P 7,724 (-0.17%) / 道指 54,428 (+0.63%) / 纳指 -0.49% / AMD 盘后跌 9%</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">AMD Q2 营收创纪录 $115 亿（+50%），数据中心业务暴增 107%，但"超预期不够多"盘后跌 9%</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">TSMC 2nm 月产能冲刺 10 万片：英伟达、AMD 等客户倒逼加速扩产，3nm 月产也将达 18 万片</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">芯片股全线暴力反弹：Intel/AMD +13%、TSM +7%、Lam Research +18%、Astera Labs +20%——微软财报点燃 AI 信心</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">AMD "Advancing AI 2026" 大会：MI400 量产细节 + Helios 机架 $525 万/台，OpenAI+Meta 锁定 12GW</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">AMD 发布 Zen 6 "Venice" + Helios 整机架 AI 系统——72 颗 GPU、31TB HBM4、7000 磅，直接叫板英伟达 NVL144</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>TSMC</strong> · 17 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">TSMC CoWoS 5.5-reticle 良率达 99%！14-reticle 版 2028 年量产，内存与 ABF 基板成 AI 新瓶颈</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Microsoft 向 TSMC 要 30 万片 Maia 300 AI 加速器产能，Nvidia 独占 CoWoS 60% 队列</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">TSMC 7 月营收 NT$4676 亿（$14.5B），同比 +44.7%，AI 硬件需求"无视市场波动"持续爆发</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">Wedbush：TSMC 3nm 月产能提前至 Q4 达 18 万片，比预期早 2-3 个月</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">TSMC CoWoS 先进封装产能接近满载，扩产外包赶工——黄仁勋称半导体业可达 $7.9 万亿</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">英伟达 RTX 50 显卡全球涨价 20-40%：TSMC 晶圆 + GDDR7 内存成本双杀，技嘉取消已接预订单</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">TSMC 2nm 月产能冲刺 10 万片：英伟达、AMD 等客户倒逼加速扩产，3nm 月产也将达 18 万片</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">TSMC 紧急开发"类 EMIB"封装技术，联手 Kinsus 防止客户流向 Intel；先进封装成 AI 瓶颈</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">TSMC 追加 $1000 亿美国投资，亚利桑那总计划达 $2650 亿——AI 需求驱动史上最大海外扩张</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">台积电 Q2 利润 $220 亿（+77%），再向亚利桑那追加 $1,000 亿投资，美国总额达 $2,650 亿</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">台积电 Q2 财报炸裂：营收 NT$1.27 万亿（+36% YoY），净利暴增 77% 创历史新高，AI 需求"极度强劲"</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">TSMC 亚利桑那工厂加速扩产——CFO 称"AI megatrend"驱动，总投资管线达 $2,650 亿</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">TSMCTSMC CFO 确认追加 $1000 亿扩产亚利桑那——AI 需求拉动多年结构性成长</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">三星 HBM4 逻辑芯片押注 2nm 工艺——正面对抗 SK Hynix-TSMC 联盟</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">TSMC 财报后暴跌 6%——Q2 毛利率 67.7% 未达 70% 机构预期，宣布追加 $1000 亿美国建厂</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">台积电 Q2 创历史最高利润：收入 $402 亿 +36%，净利 +77.4%，全年指引上调至 >40%，capex 提至 $600-640 亿</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">TSMC 今日（7/16）公布 Q2 财报——预期营收 $400 亿、EPS $3.83，6 月收入同比 +68%</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>Intel</strong> · 8 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">AMD/Intel/Nvidia 周三集体上涨：Super Micro 财报点燃 AI 服务器供应链，"AI 三大逻辑硅"重新联动</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">Intel $200 亿增发今日收盘：$95/股定价，$1000 亿订单涌入（5 倍超额），Dan Niles 预告"大代工客户将官宣"</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">🇺🇸 美股 — 8/10 S&P 7753 (-0.06%) / 纳指 26605 (-0.32%) / 道指 53976 (-0.11%) / Intel 拖累芯片</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">Tesla + SpaceX 斥 $168 亿建"Terafab"芯片厂：德州 Grimes County，Intel/xAI 合资，100M 平方英尺规模</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">TSMC 紧急开发"类 EMIB"封装技术，联手 Kinsus 防止客户流向 Intel；先进封装成 AI 瓶颈</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">芯片股全线暴力反弹：Intel/AMD +13%、TSM +7%、Lam Research +18%、Astera Labs +20%——微软财报点燃 AI 信心</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">Intel 数据中心部门裁员持续：2025 年以来已裁 5000+ 美国员工，AI 时代掉队代价</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">费城半导体指数进入熊市——NVDA -2.21% 差点被 Apple 超越市值第一，Intel -13%，全球芯片股全面回调</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>功夫女足</strong> · 7 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">2026 暑期档票房破 86 亿！《功夫女足》逼近 22 亿、《八仙》破 12 亿，沈腾《欢迎来龙餐馆》今日上映</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">暑期档票房破 70 亿：《功夫女足》21 亿领跑，《八仙！》成黑马破 10 亿</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">暑期档票房破 55 亿：《功夫女足》17 亿夺冠，但《群星闪耀时》撤档潮继续</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">暑期档票房破 55 亿：《功夫女足》17 亿夺冠，《群星闪耀时》首日 3900 万开局惨淡</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">2026 暑期档三强出炉：周星驰《功夫女足》、追光动画《三国第一部：争洛阳》、白敬亭《特立独行》</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">🎬 冯小刚《功夫女足》破 11 亿——76 位明星接力转发，韩红现场喊话上热搜</a></li><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">周星驰《功夫女足》上映首日票房 1.4 亿——迪丽热巴短发运动造型全网炸</a></li></ul>
+      </details>
+      <details class="topic-reverse">
+        <summary><strong>Apple</strong> · 9 条相关报道</summary>
+        <ul class="weekly-list"><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">跨国巨头逆势增长：可口可乐、阿迪达斯、欧莱雅、苹果在中国 H1 录双位数或近双位数增长</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">本周流媒体：Ted Lasso 第四季回归 Apple TV+ / Billie Eilish 与 James Cameron 联合执导演唱会电影登 Paramount+</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">苹果暴跌近 10%：Tim Cook 任内最后一份财报被内存短缺"砸场"，供应链约束成新常态</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">Ted Lasso 第四季 8 月回归！Apple TV+ 八月片单还有这些值得看</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">苹果市值逼近 $5 万亿大关——Techlife News 7/25 封面故事</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">🇺🇸 美股：连跌势头放缓，芯片股止跌——但 Apple 拖累了道指</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">泡泡玛特王宁造访苹果总部 + LABUBU 成 FIFA 世界杯首个官方潮玩 IP</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">Apple 短暂夺回全球市值王座——$4.88 万亿 vs $4.86 万亿，结束英伟达 265 天霸榜</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">费城半导体指数进入熊市——NVDA -2.21% 差点被 Apple 超越市值第一，Intel -13%，全球芯片股全面回调</a></li></ul>
+      </details>
+  </div>
+
+    
+  <div class="geo-section">
+    <div class="section-title">🌍 「霍尔木兹海峡/伊朗战争」事件演进时间轴（近 30 天）</div>
+    <ul class="weekly-list"><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">特朗普正式通知国会恢复对伊朗军事打击——美军称已打击布什尔、阿巴斯港等多处目标</a></li><li><span class="hl-date">07/15</span> <a href="archive/2026-07-15.html">Trump 宣布重启霍尔木兹海峡军事封锁+20% 过路费——Brent 飙至 $86</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">美军连续第四夜空袭伊朗，重新封锁伊朗港口——特朗普誓言"升级轰炸直到德黑兰让步"</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">美军海上封锁伊朗港口，霍尔木兹海峡油轮通行量骤降，WTI 原油连涨四日至 ~$80</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">美军连续 7 晚空袭伊朗，伊朗反击打击海湾民用基础设施——2 名美军在约旦阵亡</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">美伊战事持续升级：美军空袭伊朗在建核电站，霍尔木兹海峡通航受阻</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">中东美军连续第 9-10 晚空袭伊朗——以色列正游说美国恢复"全面打击"</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">美伊战争账单升至 $375 亿——Brent 冲破 $91，通胀恐惧回归</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">美伊交火持续升级——Brent 原油盘中突破 $93/桶，霍尔木兹海峡封锁风险上升</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">美伊战争第 12 夜：美军持续空袭伊朗，胡塞武装袭击沙特油轮，Brent 原油重回 $100</a></li><li><span class="hl-date">07/25</span> <a href="archive/2026-07-25.html">美军连续第 13 晚空袭伊朗，伊朗拒绝停火提案；红海成为第二个咽喉要道</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">美伊战争第 13 天：持续空袭 + 中国斡旋促和，油价周五大跌 4%+</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">乌克兰在里海远程打击伊朗商船致 1 死 1 伤——战争外溢到新战场</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">美伊暂停军事打击进入第三天，Brent 从 $100 暴跌至 $90 以下——地缘溢价快速消退</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">Brent 从 $96 崩至 $84（-5.2%），WTI 跌破 $80——美伊暂停互相攻击，特朗普称"正在谈判"</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">伊朗恢复导弹攻击美军，美国与沙特联合空袭伊拉克民兵（击毙 20+），Trump 放话"going to get a beating"</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">沙特提议组建海上联军护航霍尔木兹，Brent 回落至 $89——但伊朗称两艘油轮在海峡起火后折返</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">伊朗革命卫队击中两艘美军护航油轮，霍尔木兹海峡日通航量从 800 万桶骤降至不足 200 万桶</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中，UN 海事组织暂停霍尔木兹护航行动</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">特朗普宣布今日（周一）启动与伊朗新谈判，取消周末大规模空袭计划</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">特朗普取消对伊朗大规模空袭，宣布今日启动新谈判；但伊朗外交部否认与美方有任何对话</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">特朗普称"最后机会"：Bessent 称霍尔木兹协议"今明两天"可达成，伊朗否认正在谈判</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">Bessent 称霍尔木兹协议"今明两天"可达成；伊朗-阿曼已就航线达成初步一致，Brent 三天暴跌 11%</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">霍尔木兹协议"最后阶段"但未正式达成；Brent 单日飙 3.83% 至 $82.49，油价博弈加剧</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">霍尔木兹通行量骤降：每日仅 4 艘船通过，伊朗-阿曼协议"接近达成"</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">伊朗-阿曼霍尔木兹协议框架达成，但伊朗开出长清单：美军撤封锁、解除制裁、归还在美资产</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">五角大楼要求军工企业 21 天内提交加速生产方案：伊朗战争消耗大量弹药库存</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">霍尔木兹谈判停滞：Brent 升至 $84+，伊朗通过中间人与美国传话但分歧仍大</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">霍尔木兹希望渺茫：Brent 升至 $89.24，EIA 上调 2026 年均价预测至 $87，海上袭击持续</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">NYT：海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</a></li></ul>
+  </div>
+
     <div style="margin-top: 40px;">
       <div class="section-title">各市场情绪（近 30 天）</div>
       <div class="market-grid">
@@ -758,8 +946,59 @@
   </div>
 
   <footer>
-    共 104 期 · 更新于 2026-08-13 10:35 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 104 期 · 更新于 2026-08-13 10:48 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
+<script>
+(async function() {
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  if (!input || !results) return;
+  let index = [];
+  try {
+    const r = await fetch('search_index.json');
+    index = await r.json();
+  } catch (e) {
+    results.innerHTML = '<div class="sr-empty">搜索索引加载失败</div>';
+    return;
+  }
+  function highlight(text, kw) {
+    const re = new RegExp(kw.replace(/[.*+?^${}()|[\]\]/g, '\$&'), 'gi');
+    return text.replace(re, m => `<span class="sr-highlight">${m}</span>`);
+  }
+  let timer;
+  input.addEventListener('input', () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      const q = input.value.trim();
+      if (!q || q.length < 2) {
+        results.innerHTML = q ? '<div class="sr-empty">请输入至少 2 个字</div>' : '';
+        return;
+      }
+      const out = [];
+      for (const day of index) {
+        for (const title of day.titles) {
+          if (title.toLowerCase().includes(q.toLowerCase())) {
+            out.push({ date: day.date, title });
+          }
+        }
+      }
+      if (out.length === 0) {
+        results.innerHTML = `<div class="sr-empty">没有找到「${q}」相关的报道</div>`;
+        return;
+      }
+      const max = 30;
+      const items = out.slice(0, max).map(r => `
+        <div class="sr-item">
+          <span class="sr-date">${r.date.slice(5).replace('-', '/')}</span>
+          <a href="archive/${r.date}.html">${highlight(r.title, q)}</a>
+        </div>
+      `).join('');
+      const more = out.length > max ? `<div class="sr-empty">共 ${out.length} 条结果，仅显示前 ${max} 条</div>` : `<div class="sr-empty">共 ${out.length} 条结果</div>`;
+      results.innerHTML = items + more;
+    }, 200);
+  });
+})();
+</script>
 </body>
 </html>
