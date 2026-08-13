@@ -453,9 +453,11 @@ def analyze_market_sentiment(dates: list, days: int = 30):
     recent = sorted([d for d in dates if d >= cutoff], reverse=True)
 
     market_patterns = {
-        "A 股": re.compile(r"🇨🇳|A 股|沪指|上证"),
-        "港股": re.compile(r"🇭🇰|港股|恒指|恒生"),
-        "美股": re.compile(r"🇺🇸|美股|纳指|标普|道指|S&P"),
+        # 仅用国旗 emoji 识别市场板块标题，避免把行业新闻（如 SK Hynix 扩产）误判为市场行情
+        "A 股": re.compile(r"^🇨🇳"),
+        "港股": re.compile(r"^🇭🇰"),
+        "美股": re.compile(r"^🇺🇸"),
+        "韩股": re.compile(r"^🇰🇷"),
     }
 
     result = {}
