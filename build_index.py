@@ -139,29 +139,102 @@ def extract_titles(html_path: Path) -> list:
 
 
 # 「频道词 / 板块词」黑名单——这些词是新闻板块名或常规标的代码，不算"新话题"
+# （lainy 2026-08-13 澄清：Nvidia / Apple / Tesla 这种公司名是话题，板块名才是频道词）
 CHANNEL_WORD_BLACKLIST = {
     # 板块/标的代码
-    "NVDA", "NVIDIA", "英伟达", "AMD", "Intel", "英特尔", "TSMC", "台积电",
     "A股", "港股", "美股", "韩股", "上证", "恒生", "纳指", "标普", "道指", "KOSPI",
     "沪指", "深成指", "创业板", "恒指", "恒科", "S&P", "Russell",
-    # 宏观常规词
-    "CPI", "PCE", "GDP", "非农", "PPI", "FOMC", "美联储", "加息", "降息",
-    "油价", "Brent", "WTI", "OPEC", "黄金", "美元", "人民币", "日元",
+    "恒生科技", "恒生指数", "科创", "主板", "指数", "板块", "S&amp",
+    # 宏观常规词（不是话题，是频道）
+    "CPI", "PCE", "GDP", "非农", "PPI", "FOMC", "加息", "降息",
     "财报", "半年报", "年报", "营收", "净利润", "IPO", "并购",
-    # 常规主体
-    "特朗普", "Trump", "关税", "出口管制", "制裁", "伊朗", "以色列",
+    # 太泛的技术词
+    "AI", "GPU", "CPU", "NAND", "AI芯片", "存储芯片",
+    "算力", "数据中心", "先进制程", "封装", "芯片",
+    # 常规主体/机构/媒体
+    "特朗普", "Trump", "关税", "出口管制", "制裁", "以色列",
     "乌克兰", "俄罗斯", "中东", "红海", "胡塞", "朝鲜", "台湾", "台海",
-    # 技术/常规
-    "AI", "GPU", "CPU", "HBM", "DRAM", "NAND", "存储芯片", "AI芯片",
-    "算力", "数据中心", "先进制程", "CoWoS", "封装", "芯片",
-    # 公司品牌（除非是具体事件主体，否则不算话题）
-    "Meta", "Apple", "Google", "Alphabet", "Microsoft", "Amazon", "Tesla",
-    "Samsung", "Micron", "OpenAI", "Anthropic", "Broadcom", "Nvidia",
-    # 常规机构/媒体
-    "Fed", "FOMC", "EIA", "IEA", "OPEC", "COMEX", "SEC", "FDA",
-    "恒生科技", "恒生指数", "上证", "深证",
-    # 常见后缀
-    "YoY", "QoQ", "MoM",
+    "Fed", "EIA", "IEA", "OPEC", "COMEX", "SEC", "FDA",
+    "NYT", "CNN", "CNBC", "BBC", "FT", "WSJ", "Bloomberg", "Reuters",
+    # 常见后缀/短语
+    "YoY", "QoQ", "MoM", "EPS", "CEO", "CFO",
+    "US", "USA", "UK", "EU", "UN", "IT",
+    "Q1", "Q2", "Q3", "Q4",
+    # 过泛中文词
+    "今天", "明天", "昨天", "市场", "公司", "股价", "涨幅", "跌幅", "上市", "交易", "投资", "分析师",
+    "中国", "美国", "韩国", "日本", "欧洲", "全球", "国际", "世界",
+    "万亿", "千亿", "百亿", "亿美元", "亿元", "万元",
+    "收盘", "开盘", "盘中", "早盘", "午后", "尾盘",
+    "成交", "上涨", "下跌", "反弹", "回落", "涨超", "跌超",
+    "新高", "新低", "纪录", "首次", "首度", "宣布", "表示", "透露", "报道", "消息", "公布", "发布",
+    "同比", "环比", "预期", "实际", "数据", "显示",
+}
+
+# 话题别名归一化——同一件事物的不同叫法要合并
+TOPIC_ALIAS = {
+    # 公司名不同叫法
+    "SK Hynix": "HBM/内存",
+    "SK海力士": "HBM/内存",
+    "海力士": "HBM/内存",
+    "Hynix": "HBM/内存",
+    "HBM": "HBM/内存",
+    "HBM3": "HBM/内存",
+    "HBM4": "HBM/内存",
+    "HBM3E": "HBM/内存",
+    "DRAM": "HBM/内存",
+    "三星": "三星电子",
+    "Samsung": "三星电子",
+    "英伟达": "Nvidia",
+    "NVIDIA": "Nvidia",
+    "NVDA": "Nvidia",
+    "台积电": "TSMC",
+    "苹果": "Apple",
+    "特斯拉": "Tesla",
+    "微软": "Microsoft",
+    "谷歌": "Google",
+    "阿里巴巴": "阿里",
+    "字节跳动": "字节",
+    "Unitree": "宇树科技",
+    "宇树": "宇树科技",
+    "英特尔": "Intel",
+    "迪士尼": "Disney",
+    "月之暗面": "Kimi",
+    "Anthropic": "Anthropic",
+    "Claude": "Anthropic",
+    "ChatGPT": "OpenAI",
+    "GPT": "OpenAI",
+    # 事件合并
+    "Brand New Day": "Spider-Man",
+    "Spider": "Spider-Man",
+    "八仙": "八仙！",
+    "Toy Story": "Toy Story 5",
+    "Super Mario": "Super Mario Galaxy",
+    "Grok Bot": "Grok",
+    "Manus": "Manus AI",
+    "Taalas": "AMD 收购 Taalas",
+    "Terafab": "SpaceX",
+    "Starlink": "SpaceX",
+    "Maia": "Microsoft Maia",
+    "CoWoS": "TSMC",
+    "Lancium": "Nvidia",
+    "Super Micro": "Super Micro",
+    "SMCI": "Super Micro",
+    "梁文锋": "宇树科技",
+    # 宏观事件合并
+    "霍尔木兹": "霍尔木兹海峡/伊朗战争",
+    "霍尔木兹海峡": "霍尔木兹海峡/伊朗战争",
+    "伊朗": "霍尔木兹海峡/伊朗战争",
+    "伊朗战争": "霍尔木兹海峡/伊朗战争",
+    "油价": "霍尔木兹海峡/伊朗战争",
+    "原油": "霍尔木兹海峡/伊朗战争",
+    "Brent": "霍尔木兹海峡/伊朗战争",
+    "WTI": "霍尔木兹海峡/伊朗战争",
+    "OPEC": "霍尔木兹海峡/伊朗战争",
+    "Warsh": "美联储主席人选博弈",
+    "Powell": "美联储主席人选博弈",
+    "Jackson Hole": "美联储主席人选博弈",
+    "美联储": "美联储主席人选博弈",
+    "Shein": "Shein IPO",
 }
 
 
@@ -180,45 +253,54 @@ GENERIC_CN_WORDS = {
 }
 
 
+def normalize_topic(topic: str) -> str:
+    """话题别名归一化：把同一件事物的不同叫法合并。"""
+    return TOPIC_ALIAS.get(topic, topic)
+
+
 def extract_topics_from_title(title: str) -> list:
-    """从 h4 标题里抽取「新话题」事件短语。
+    """从 h4 标题里抽取「话题」事件短语。
     
-    策略：只挑「带数字 / 大写英文 / 书名号」的专有名词，或
-    与已知热门实体词典匹配的短语。过滤太泛的板块词。"""
+    策略：
+    1. 书名号《...》里的作品名
+    2. 大写英文品牌/产品（带别名归一化）
+    3. 中文公司+行业后缀
+    4. 中文别名词典匹配
+    5. 油价/霍尔木兹/伊朗 等事件主题关键词
+    
+    所有话题都过 CHANNEL_WORD_BLACKLIST 过滤 + TOPIC_ALIAS 归一化。"""
     topics = set()
     # 1. 书名号《...》里的作品名
     for m in re.finditer(r"《([^》]{2,20})》", title):
-        topics.add(m.group(1))
-    # 2. 品牌+产品型号组合（如 "CoreWeave", "Unitree", "Spider-Man", "Grok Bot", "Maia 300", "Terafab"）
+        topics.add(normalize_topic(m.group(1)))
+    # 2. 大写英文品牌/产品
     for m in re.finditer(r"\b[A-Z][a-zA-Z0-9&-]{2,20}(?:\s+[A-Z0-9][a-zA-Z0-9&-]{0,15}){0,2}\b", title):
         phrase = m.group(0).strip()
         if phrase in CHANNEL_WORD_BLACKLIST:
             continue
         if len(phrase) < 3:
             continue
-        # 过滤 "Q2", "Q3" 这种纯季度
         if re.fullmatch(r"Q[1-4](\s+\d{4})?", phrase):
             continue
-        # 过滤 S&P / NYT / IEA / CNN 这种媒体/机构名
-        if phrase in {"NYT", "IEA", "CNN", "CNBC", "BBC", "FT", "WSJ", "S&P", "Bloomberg", "Reuters", "S&amp", "EPS", "IPO", "GDP", "CEO", "CFO", "AI", "IT", "US", "USA", "UK", "EU", "UN"}:
-            continue
-        # 过滤 "FOMC 7", "Warsh" 这种部分匹配
         if re.fullmatch(r"[A-Z]+\s*\d+", phrase):
             continue
-        topics.add(phrase)
-    # 3. 中文带数字的事件短语（如 "8000 倍超额认购", "$5000 亿融资", "第 23 次 sidecar"）
-    # 提出数字前后的中文短语
-    for m in re.finditer(r"([一-龥]{2,6}?)(\d+(?:\.\d+)?(?:\s*(?:亿|万亿|万|%|倍|台|个|次|条|部|位|家|人|股|贵|雫)))", title):
-        cn_part = m.group(1)
-        if cn_part and cn_part not in CHANNEL_WORD_BLACKLIST and cn_part not in GENERIC_CN_WORDS:
-            topics.add(cn_part)
-    # 4. 中文公司/品牌名（几个字中文 + 后面跟着 "科技"、"集团"、"汽车"、"动漫"、"机器人"、"半导体"、"医药"、"能源" 等后缀）
+        topics.add(normalize_topic(phrase))
+    # 3. 中文公司+行业后缀（如 "宇树科技"、"百度集团"）
     for m in re.finditer(r"([一-龥]{2,4})(?:科技|集团|汽车|动漫|机器人|半导体|医药|生物|能源|银行|证券|基金|影视|娱乐|游戏|餐饮|茶饮|咖啡|美妆)", title):
         phrase = m.group(0)
-        if phrase not in CHANNEL_WORD_BLACKLIST and m.group(1) not in GENERIC_CN_WORDS:
-            topics.add(phrase)
-    # 5. 过滤：出现《》的作品名 与 太短/太长的项
-    return [t for t in topics if 2 <= len(t) <= 25]
+        if phrase not in CHANNEL_WORD_BLACKLIST and m.group(1) not in CHANNEL_WORD_BLACKLIST:
+            topics.add(normalize_topic(phrase))
+    # 4. 中文别名词典匹配（重要！比如 "英伟达"、"宇树"、"特斯拉"）
+    for alias in TOPIC_ALIAS:
+        if re.search(r"[一-龥]", alias) and alias in title:
+            topics.add(normalize_topic(alias))
+    # 5. 事件主题关键词（油价/霍尔木兹/伊朗 这种没公司名但代表事件的词）
+    for kw in ["霍尔木兹", "伊朗", "油价", "原油", "Brent", "WTI"]:
+        if kw in title:
+            topics.add(normalize_topic(kw))
+            break  # 同一标题只记一次事件主题
+    # 过滤
+    return [t for t in topics if 2 <= len(t) <= 25 and t not in CHANNEL_WORD_BLACKLIST]
 
 
 def analyze_keywords(dates: list, days: int = 30) -> tuple:
@@ -255,7 +337,8 @@ def analyze_keywords(dates: list, days: int = 30) -> tuple:
         except Exception:
             continue
     counter = Counter({topic: len(days_set) for topic, days_set in topic_days.items()})
-    filtered = [(t, c) for t, c in counter.items() if 3 <= c <= 15]
+    # 话题必须在过去 30 天被提及 >= 3 天才算「被热议」（lainy 2026-08-13：删掉 15 天上限——持续被讨论的话题就应该一直显示）
+    filtered = [(t, c) for t, c in counter.items() if c >= 3]
     top10 = sorted(filtered, key=lambda x: -x[1])[:10]
     
     # 为每个话题计算市场情绪（看涨/看跌/混合）
@@ -380,55 +463,83 @@ def analyze_sentiment(dates: list, days: int = 30):
 
 # 话题上下文生成（给 TOP10 话题生成「被热议的理由」）
 TOPIC_EXPLAIN = {
-    "Hynix": {
-        "reason": "HBM 内存缺货 + 韩国 8 月前 10 天半导体出口同比 +155%，双寡头之一（另一个是三星），连续多天被外资追买",
-        "context": "AI 服务器对 HBM3E/HBM4 需求爆发，SK Hynix 作为 HBM 龙头产能被锁到 2027，市场重新定价其议价权",
-        "angle": "AI 硬件「内存瓶颈」主赛道的核心标的"
+    "霍尔木兹海峡/伊朗战争": {
+        "reason": "伊朗战争进入第 6 个月，海峡实质关闭 162+ 天，Brent 从 $83 涨到 $89，海湾国家开始绕开海峡修替代管道",
+        "context": "① 伊朗提出「解除制裁才重开」+「过路费」方案被特朗普拒绝；② NYT 报道海湾国家拟投几十亿美元修替代管道；③ IEA 警告 Q3 供给缺口 180 万桶/日，全球原油库存 2017 年以来最低",
+        "angle": "油价结构性高位的根本原因——战争不结束，油价不会跌，加息周期可能被推高油价打断",
+        "related": "Brent 原油、沙特阿美、ADNOC、中石油/中海油、新能源车"
+    },
+    "Nvidia": {
+        "reason": "近 30 天 18 天上头条：$5000 亿融资联盟 + 投 $30 亿给 Lancium 电力 + 拟为 OpenAI 俄亥俄数据中心担保 $2500 亿——英伟达从「卖芯片」变成「AI 基建银行」",
+        "context": "① 联手 Apollo/BlackRock/KKR 等 6 大华尔街巨头建算力融资平台；② 向 Texas 电力公司 Lancium 投资 $30 亿控制电力上游；③ 为 OpenAI $5000 亿数据中心提供担保；④ 8/26 财报前市场对「AI capex 可持续性」争论不断",
+        "angle": "英伟达正在把 AI 算力「金融化 + 上游锁定」，这是它应对中国廉价芯片 + 周期性风险的护城河；但也埋下「循环融资」泡沫风险",
+        "related": "CoreWeave、OpenAI、Apollo、BlackRock、TSMC CoWoS"
+    },
+    "HBM/内存": {
+        "reason": "SK Hynix + 三星 8 月前 10 天半导体出口同比 +155%，HBM 产能被锁到 2027，龙仁/清州 $380 亿扩产——AI 服务器「内存瓶颈」取代「芯片瓶颈」成为新卡点",
+        "context": "① SK Hynix 8/8 批准 $380 亿扩产（龙仁 DRAM + 清州 NAND）；② 韩国 8 月前 10 天半导体出口 +155%；③ KOSPI 8/12 单日 +3.68% 触发年内第 23 次 sidecar，三星 +6%、SK Hynix +5%；④ 外资单日净买入 2 万亿韩元",
+        "angle": "AI 硬件产业链的「收费站」从 GPU 转向 HBM 内存——SK Hynix 和三星的议价权被重新定价",
+        "related": "SK Hynix、三星电子、Micron、味之素 ABF、KOSPI"
+    },
+    "三星电子": {
+        "reason": "三星 Q2 业绩超预期 + HBM 出货量激增 + 韩国半导体出口 +155%——外资 8/12 单日买入 2 万亿韩元",
+        "context": "① 三星 Q2 DRAM 均价环比 +30%+；② HBM3E 通过 Nvidia 验证进入量产；③ 8/12 股价单日 +6%；④ 市场押注 8 月底宣布股东回报计划（回购/分红）",
+        "angle": "三星从「追赶 SK Hynix」变成「AI 内存双寡头」之一，估值重估期",
+        "related": "SK Hynix、HBM、KOSPI、Nvidia"
+    },
+    "AMD": {
+        "reason": "AMD 8/10 收购 AI 推理芯片创企 Taalas + 与 Intel/Nvidia 8/12 集体上涨——AMD 从「训练侧追赶者」转向「推理侧颠覆者」",
+        "context": "① 收购 Taalas 把 AI 模型「刻进」硅片，推理性能 10 倍提升；② 8/12 Super Micro 财报后 AMD/Intel/Nvidia 集体上涨，AI 服务器供应链重新联动；③ MI400 系列被 OpenAI 采用",
+        "angle": "AI 芯片战场从「训练」转向「推理」——AMD 在推理侧的性价比优势被放大",
+        "related": "Taalas、Super Micro、Intel、Nvidia、OpenAI"
+    },
+    "TSMC": {
+        "reason": "CoWoS 5.5-reticle 良率达 99% + 14-reticle 版 2028 量产 + Microsoft 求 30 万片 Maia 300 产能——TSMC 先进封装成 AI 新「收费站」",
+        "context": "① 7 月营收 NT$4676 亿（$14.5B）同比 +44.7%；② CoWoS 产能近三年每年翻倍，10 座先进封装厂；③ Nvidia 独占 60% CoWoS 队列，前三名客户占 85%+；④ 排队周期 52-78 周",
+        "angle": "CoWoS 是 AI 产业链的「真·瓶颈」——比芯片本身更难扩产，TSMC 议价权短期不可挑战",
+        "related": "CoWoS、Nvidia、Microsoft、Broadcom、AMD、ABF 基板"
+    },
+    "Intel": {
+        "reason": "Intel $200 亿增发 8/12 收盘：$95/股，$1000 亿订单涌入（5 倍超额），Dan Niles 预告「大代工客户将官宣」",
+        "context": "① 增发规模从 $150 亿上调至 $200 亿；② 机构需求 $1000 亿说明不是「救」而是「赌」；③ 18A 工艺被传可能拿下 Nvidia/Apple 订单；④ 但股价 8/11 跌 -1.5%，市场担忧 15-20% 稀释",
+        "angle": "Intel 18A 翻身的最后一搏——如果真签下大代工客户，股价有重估空间；否则就是缓慢的衰落",
+        "related": "Nvidia、Apple、TSMC、Dan Niles"
     },
     "功夫女足": {
-        "reason": "暑期档国产体育片黑马，票房近 22 亿，连续多天占据单日票房榜首",
-        "context": "疫情后国产体育片首次突破 20 亿量级，口碑驱动 + 女性观众占比高，社交媒体话题发酵",
-        "angle": "2026 暑期档最大黑马 + 中国电影复苏信号"
-    },
-    "Warsh": {
-        "reason": "美联储主席人选博弈——市场押注鹰派 Kevin Warsh 可能接替 Powell",
-        "context": "特朗普多次暗示要换美联储主席，Warsh 作为前理事 + 尖锐批评者成为市场焦点",
-        "angle": "2026 下半年货币政策不确定性的最大变量"
+        "reason": "暑期档国产体育片黑马：票房近 22 亿，连续多天单日票房榜首，女性观众占比高",
+        "context": "① 2026 暑期档总票房破 86 亿创纪录；② 《功夫女足》从首日 1.2 亿逆袭到 22 亿，豆瓣评分 8.3；③ 国产体育片首次突破 20 亿量级；④ 社交媒体话题发酵",
+        "angle": "中国电影复苏的最强信号——观众不是不进影院，而是要「值得大银幕」的内容",
+        "related": "八仙！、Toy Story 5、Spider-Man、暑期档票房"
     },
     "Spider-Man": {
-        "reason": "索尼《Spider-Man: Brand New Day》开画创纪录，Disney CEO 财报电话会公开点赞",
-        "context": "上映 65 年后 Spider-Man 仍是超级英雄最强 IP，索尼+漫威共享版权模式持续验证",
-        "angle": "暑期档全球票房创纪录的核心驱动"
+        "reason": "《Spider-Man: Brand New Day》开画 6 天破 $10 亿创影史第二快纪录，Disney CEO 财报电话会公开点赞",
+        "context": "① 上映 65 年后 Spider-Man 仍是超级英雄最强 IP；② 索尼+漫威共享版权模式持续验证；③ 2026 暑期档全球票房创纪录；④ Toy Story 5 以 $4.61 亿领跑",
+        "angle": "超级英雄 IP 的「长青化」——Sony 和 Disney 双受益，衍生品收入是长期金矿",
+        "related": "Sony、Disney、Marvel、Brand New Day"
     },
-    "Brand New Day": {
-        "reason": "《Spider-Man: Brand New Day》新片开画纪录",
-        "context": "同上——Spider-Man IP 最新续集",
-        "angle": "Sony 影业 2026 年度重点片"
-    },
-    "SpaceX": {
-        "reason": "SpaceX 与 Tesla 联合建 $168 亿 Terafab 芯片厂 + Starlink 收入爆发",
-        "context": "Elon Musk 把 SpaceX 从火箭公司变成「太空+芯片+通信」综合平台",
-        "angle": "SpaceX 估值重估 + 马斯克生态闭环的关键一环"
-    },
-    "Taalas": {
-        "reason": "AMD 收购 AI 推理芯片创业公司 Taalas，把模型「刻进」硅片",
-        "context": "AI 推理性能提升 10 倍，意味着推理成本可能大幅下降，AMD 在推理侧追赶 Nvidia",
-        "angle": "AI 芯片「训练→推理」战场切换的标志性收购"
+    "美联储主席人选博弈": {
+        "reason": "Kevin Warsh 成为下任美联储主席最热门人选，8/7 公开表态「准备好加息」——市场重新定价 2026 年货币政策路径",
+        "context": "① 特朗普多次暗示要换 Powell；② Warsh 作为前 Fed 理事 + 尖锐批评者被市场视为「鹰派」；③ 8/7 公开表态「若通胀偏热将采取行动」；④ FOMC 7/29 投票 9-3，三名官员异议支持加息",
+        "angle": "如果 Warsh 接任，加息周期可能重启——这对新兴市场、AI 估值、黄金都是关键变量",
+        "related": "Powell、Trump、FOMC、CPI、美债 10Y"
     },
     "宇树科技": {
-        "reason": "A 股人形机器人第一股 IPO，超额认购 8000 倍创科创板纪录",
-        "context": "散户 978 万户抢购，中签率 0.018% 创历史新低，梁文锋 7 亿浮盈",
-        "angle": "A 股对人形机器人赛道的「信仰级」定价"
+        "reason": "A 股人形机器人第一股 IPO：超额认购 8000 倍创科创板纪录，散户 978 万户抢购，中签率 0.018% 创历史新低",
+        "context": "① 定价 150.80 元/股，市值 610 亿，219 倍 PE；② 梁文锋通过 DeepSeek 战略配售 + 幻方量化网下打新获配 119 万股；③ 黄牛收购价 410 元/股（比发行价高 170%）；④ 8/13 上市首日",
+        "angle": "A 股对人形机器人赛道的「信仰级」定价——参考 2015 年创业板泡沫，但宇树有真实量产能力（Go2 机器狗全球销售）",
+        "related": "DeepSeek、梁文锋、A 股、科创板、人形机器人"
     },
-    "八仙！": {
-        "reason": "国产动画《八仙！》票房破 12 亿登顶 2026 国产动画",
-        "context": "中国动画崛起从《哪吒》延续到《八仙》，IP 改编+视觉升级路径被验证",
-        "angle": "中国动画电影工业化的新样本"
+    "SpaceX": {
+        "reason": "SpaceX + Tesla 联合建 $168 亿 Terafab 芯片厂 + Starlink 收入爆发 + Grok Bot 发布——马斯克生态闭环成型",
+        "context": "① 8/10 宣布 $168 亿 Terafab 落地德州，1 亿平方英尺垂直整合；② Intel/xAI 合资，瞄准先进制程；③ SpaceXAI 8/12 发布 Grok Bot 企业级 AI Agent，缩小与 OpenAI 差距",
+        "angle": "SpaceX 从「火箭公司」变成「太空+芯片+AI+通信」综合平台——估值逻辑彻底重写",
+        "related": "Tesla、xAI、Intel、Starlink、Grok"
     },
-    "Billie Eilish": {
-        "reason": "Billie Eilish 新专辑 + 巡回演唱会双重热点",
-        "context": "粉丝经济驱动，演唱会票房+流媒体播放量同步爆发",
-        "angle": "Z 世代粉丝经济的头部标的"
+    "Apple": {
+        "reason": "Tim Cook 任内最后一份财报被「内存短缺」打场，股价单日暴跌近 10%；同时 H1 在中国市场双位数增长——供需两侧同受压缩",
+        "context": "① 8/1 苹果财报后股价暴跌近 10%，主因是内存（DRAM/NAND）短缺导致 iPhone 供货紧张；② H1 在中国市场双位数增长，与可乐/阿迪/欧莱菊同时上榜「跨国巨头逆势增长」；③ 分析师担心 AI 服务器抢购内存会推高 iPhone 成本；④ Tim Cook 即将交棒，接班人问题公开化",
+        "angle": "Apple 正在面临「AI 内存抢资源」与「领导层交替」双重不确定性——短期压力但长期品牌护城河仍在",
+        "related": "SK Hynix、Micron、DRAM、Tim Cook、iPhone"
     },
 }
 
@@ -478,6 +589,7 @@ def render_bar_chart(top10: list, topic_context: dict = None) -> str:
         reason = explain.get("reason", "")
         context_txt = explain.get("context", "")
         angle = explain.get("angle", "")
+        related = explain.get("related", "")
         
         explain_html = ""
         if reason:
@@ -486,6 +598,8 @@ def render_bar_chart(top10: list, topic_context: dict = None) -> str:
             explain_html += f"<div class='topic-context'><strong>📖 背景：</strong>{context_txt}</div>"
         if angle:
             explain_html += f"<div class='topic-angle'><strong>🎯 视角：</strong>{angle}</div>"
+        if related:
+            explain_html += f"<div class='topic-related'><strong>🔗 关联话题：</strong>{related}</div>"
         if not explain_html and titles_html:
             explain_html = f"<div class='topic-context'><strong>📖 近期报道：</strong></div>{titles_html}"
         elif explain_html and titles_html:
@@ -889,6 +1003,11 @@ def main():
   .topic-detail .topic-angle {{
     color: var(--accent);
     font-style: italic;
+  }}
+  .topic-detail .topic-related {{
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-dim);
   }}
   .topic-detail .topic-titles {{
     margin: 4px 0 0;
