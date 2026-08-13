@@ -304,6 +304,12 @@
     font-size: 11px;
     padding-left: 13px;
   }
+  .low-sample {
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: normal;
+    font-style: italic;
+  }
 
   .industry-grid {
     display: grid;
@@ -909,7 +915,7 @@
         <div class="market-block">
           <div class="market-name" style="border-left-color:#B7C0A3;">韩股</div>
           <div class="market-data">
-            <span class="market-label">📈 偏乐观</span>
+            <span class="market-label">📈 偏乐观 <span class='low-sample'>(样本仅 {days} 天)</span></span>
             <span class="market-avg">平均 +2.21%</span>
           </div>
           <div class="market-detail">涨 2 天 · 跌 0 天 · 震荡 0 天</div>
@@ -1037,7 +1043,7 @@
   </div>
 
   <footer>
-    共 104 期 · 更新于 2026-08-13 11:16 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 104 期 · 更新于 2026-08-13 11:19 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
 <script>

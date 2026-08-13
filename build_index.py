@@ -937,6 +937,8 @@ def main():
         up, down, flat, avg, days = data["up"], data["down"], data["flat"], data["avg"], data["days"]
         if days == 0:
             return ""
+        # 样本不足 5 天时不可靠
+        low_sample = days < 5
         if up > down:
             label = "📈 偏乐观"
             color = "#B7C0A3"
@@ -946,6 +948,8 @@ def main():
         else:
             label = "➖ 震荡"
             color = "#A9BACB"
+        if low_sample:
+            label += " <span class='low-sample'>(样本仅 {days} 天)</span>"
         avg_str = f"{avg:+.2f}%" if avg != 0 else "0%"
         return f'''
         <div class="market-block">
@@ -1288,6 +1292,12 @@ def main():
     color: var(--sentiment-sub);
     font-size: 11px;
     padding-left: 13px;
+  }}
+  .low-sample {{
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: normal;
+    font-style: italic;
   }}
 
   .industry-grid {{
