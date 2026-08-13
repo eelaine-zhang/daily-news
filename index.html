@@ -426,6 +426,99 @@
   .weekly-section, .geo-section, .topic-reverse-section, .search-section {
     margin-top: 32px;
   }
+  /* 竖向时间线（地缘事件） */
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 16px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--rose) 0%, var(--line-soft) 100%);
+  }
+  .timeline-item {
+    position: relative;
+    padding-bottom: 18px;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 0;
+  }
+  .timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--card, #fff);
+    border: 2px solid var(--rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    z-index: 1;
+  }
+  .timeline-content {
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .timeline-date {
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .timeline-desc {
+    color: var(--text-main);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .timeline-link {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }
+  .timeline-link:hover {
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }
+  /* 油价走势图 */
+  .oil-chart-wrap {
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 12px;
+  }
+  .oil-chart {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .oil-chart-hint {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 8px;
+    font-style: italic;
+  }
+  .oil-marker {
+    cursor: pointer;
+  }
+  .oil-marker:hover circle:first-child {
+    r: 8;
+  }
   .weekly-list {
     list-style: none;
     padding: 0;
@@ -1127,8 +1220,240 @@
   <div class="tab-panel" id="tab-geo">
     
   <div class="geo-section">
-    <div class="section-title">🌍 「霍尔木兹海峡/伊朗战争」事件演进时间轴（近 30 天）</div>
-    <ul class="weekly-list"><li><span class="hl-date">07/14</span> <a href="archive/2026-07-14.html">特朗普正式通知国会恢复对伊朗军事打击——美军称已打击布什尔、阿巴斯港等多处目标</a></li><li><span class="hl-date">07/15</span> <a href="archive/2026-07-15.html">Trump 宣布重启霍尔木兹海峡军事封锁+20% 过路费——Brent 飙至 $86</a></li><li><span class="hl-date">07/16</span> <a href="archive/2026-07-16.html">美军连续第四夜空袭伊朗，重新封锁伊朗港口——特朗普誓言"升级轰炸直到德黑兰让步"</a></li><li><span class="hl-date">07/17</span> <a href="archive/2026-07-17.html">美军海上封锁伊朗港口，霍尔木兹海峡油轮通行量骤降，WTI 原油连涨四日至 ~$80</a></li><li><span class="hl-date">07/19</span> <a href="archive/2026-07-19.html">美军连续 7 晚空袭伊朗，伊朗反击打击海湾民用基础设施——2 名美军在约旦阵亡</a></li><li><span class="hl-date">07/20</span> <a href="archive/2026-07-20.html">美伊战事持续升级：美军空袭伊朗在建核电站，霍尔木兹海峡通航受阻</a></li><li><span class="hl-date">07/21</span> <a href="archive/2026-07-21.html">中东美军连续第 9-10 晚空袭伊朗——以色列正游说美国恢复"全面打击"</a></li><li><span class="hl-date">07/22</span> <a href="archive/2026-07-22.html">美伊战争账单升至 $375 亿——Brent 冲破 $91，通胀恐惧回归</a></li><li><span class="hl-date">07/23</span> <a href="archive/2026-07-23.html">美伊交火持续升级——Brent 原油盘中突破 $93/桶，霍尔木兹海峡封锁风险上升</a></li><li><span class="hl-date">07/24</span> <a href="archive/2026-07-24.html">美伊战争第 12 夜：美军持续空袭伊朗，胡塞武装袭击沙特油轮，Brent 原油重回 $100</a></li><li><span class="hl-date">07/25</span> <a href="archive/2026-07-25.html">美军连续第 13 晚空袭伊朗，伊朗拒绝停火提案；红海成为第二个咽喉要道</a></li><li><span class="hl-date">07/26</span> <a href="archive/2026-07-26.html">美伊战争第 13 天：持续空袭 + 中国斡旋促和，油价周五大跌 4%+</a></li><li><span class="hl-date">07/27</span> <a href="archive/2026-07-27.html">乌克兰在里海远程打击伊朗商船致 1 死 1 伤——战争外溢到新战场</a></li><li><span class="hl-date">07/28</span> <a href="archive/2026-07-28.html">美伊暂停军事打击进入第三天，Brent 从 $100 暴跌至 $90 以下——地缘溢价快速消退</a></li><li><span class="hl-date">07/29</span> <a href="archive/2026-07-29.html">Brent 从 $96 崩至 $84（-5.2%），WTI 跌破 $80——美伊暂停互相攻击，特朗普称"正在谈判"</a></li><li><span class="hl-date">07/30</span> <a href="archive/2026-07-30.html">伊朗恢复导弹攻击美军，美国与沙特联合空袭伊拉克民兵（击毙 20+），Trump 放话"going to get a beating"</a></li><li><span class="hl-date">07/31</span> <a href="archive/2026-07-31.html">沙特提议组建海上联军护航霍尔木兹，Brent 回落至 $89——但伊朗称两艘油轮在海峡起火后折返</a></li><li><span class="hl-date">08/01</span> <a href="archive/2026-08-01.html">伊朗革命卫队击中两艘美军护航油轮，霍尔木兹海峡日通航量从 800 万桶骤降至不足 200 万桶</a></li><li><span class="hl-date">08/02</span> <a href="archive/2026-08-02.html">伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中，UN 海事组织暂停霍尔木兹护航行动</a></li><li><span class="hl-date">08/03</span> <a href="archive/2026-08-03.html">特朗普宣布今日（周一）启动与伊朗新谈判，取消周末大规模空袭计划</a></li><li><span class="hl-date">08/04</span> <a href="archive/2026-08-04.html">特朗普取消对伊朗大规模空袭，宣布今日启动新谈判；但伊朗外交部否认与美方有任何对话</a></li><li><span class="hl-date">08/05</span> <a href="archive/2026-08-05.html">特朗普称"最后机会"：Bessent 称霍尔木兹协议"今明两天"可达成，伊朗否认正在谈判</a></li><li><span class="hl-date">08/06</span> <a href="archive/2026-08-06.html">Bessent 称霍尔木兹协议"今明两天"可达成；伊朗-阿曼已就航线达成初步一致，Brent 三天暴跌 11%</a></li><li><span class="hl-date">08/07</span> <a href="archive/2026-08-07.html">霍尔木兹协议"最后阶段"但未正式达成；Brent 单日飙 3.83% 至 $82.49，油价博弈加剧</a></li><li><span class="hl-date">08/08</span> <a href="archive/2026-08-08.html">霍尔木兹通行量骤降：每日仅 4 艘船通过，伊朗-阿曼协议"接近达成"</a></li><li><span class="hl-date">08/09</span> <a href="archive/2026-08-09.html">伊朗-阿曼霍尔木兹协议框架达成，但伊朗开出长清单：美军撤封锁、解除制裁、归还在美资产</a></li><li><span class="hl-date">08/10</span> <a href="archive/2026-08-10.html">五角大楼要求军工企业 21 天内提交加速生产方案：伊朗战争消耗大量弹药库存</a></li><li><span class="hl-date">08/11</span> <a href="archive/2026-08-11.html">霍尔木兹谈判停滞：Brent 升至 $84+，伊朗通过中间人与美国传话但分歧仍大</a></li><li><span class="hl-date">08/12</span> <a href="archive/2026-08-12.html">霍尔木兹希望渺茫：Brent 升至 $89.24，EIA 上调 2026 年均价预测至 $87，海上袭击持续</a></li><li><span class="hl-date">08/13</span> <a href="archive/2026-08-13.html">NYT：海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</a></li></ul>
+    <div class="section-title">🌍 伊朗战争 & 霍尔木兹海峡 · 关键转折时间线</div>
+    <div class="timeline">
+      
+    <div class="timeline-item">
+      <div class="timeline-marker">⚡</div>
+      <div class="timeline-content">
+        <div class="timeline-date">04/22 · 冲突起点</div>
+        <div class="timeline-desc">特朗普延长对伊停火但海上封锁继续——伊朗战争进入新阶段</div>
+        <a class="timeline-link" href="archive/2026-04-22.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🚨</div>
+      <div class="timeline-content">
+        <div class="timeline-date">04/23 · 首次升级</div>
+        <div class="timeline-desc">伊朗扣押两艘商船，霍尔木兹海峡紧张再升级</div>
+        <a class="timeline-link" href="archive/2026-04-23.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🛢️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">04/24 · 油价破百</div>
+        <div class="timeline-desc">美伊速成协议希望退潮，Brent 原油一度破 $100</div>
+        <a class="timeline-link" href="archive/2026-04-24.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">💥</div>
+      <div class="timeline-content">
+        <div class="timeline-date">04/28 · 谈判破裂</div>
+        <div class="timeline-desc">美伊和谈再次破裂，霍尔木兹吞吐量只剩战前 5%</div>
+        <a class="timeline-link" href="archive/2026-04-28.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">⚔️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">05/04 · 美军介入</div>
+        <div class="timeline-desc">特朗普拒绝伊朗 14 点提案，宣布派美军「引导船只」出霍尔木兹</div>
+        <a class="timeline-link" href="archive/2026-05-04.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🕊️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">05/24 · 协议突破</div>
+        <div class="timeline-desc">特朗普称美伊协议「已大致谈妥」，霍尔木兹海峡将重新开放</div>
+        <a class="timeline-link" href="archive/2026-05-24.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">💣</div>
+      <div class="timeline-content">
+        <div class="timeline-date">06/08 · 停火崩溃</div>
+        <div class="timeline-desc">伊朗首次直接攻击以色列北部，US-Israel 同步空袭黎巴嫩</div>
+        <a class="timeline-link" href="archive/2026-06-08.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">📝</div>
+      <div class="timeline-content">
+        <div class="timeline-date">06/16 · 签字协议</div>
+        <div class="timeline-desc">美伊正式签字，霍尔木兹海峡当日重开</div>
+        <a class="timeline-link" href="archive/2026-06-16.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🛢️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">06/23 · 油价触底</div>
+        <div class="timeline-desc">霍尔木兹复航 + 伊朗石油 60 天豁免，Brent 跌至 $78</div>
+        <a class="timeline-link" href="archive/2026-06-23.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🔥</div>
+      <div class="timeline-content">
+        <div class="timeline-date">06/26 · 停火受考验</div>
+        <div class="timeline-desc">伊朗再袭商船，霍尔木兹海峡紧张重燃</div>
+        <a class="timeline-link" href="archive/2026-06-26.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">⚔️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">07/09 · 战火重燃</div>
+        <div class="timeline-desc">特朗普宣布伊朗停火「已终结」，美军发动新一轮 80 目标打击</div>
+        <a class="timeline-link" href="archive/2026-07-09.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🚨</div>
+      <div class="timeline-content">
+        <div class="timeline-date">07/15 · 封锁升级</div>
+        <div class="timeline-desc">特朗普重启霍尔木兹军事封锁 + 20% 过路费，Brent 飙至 $86</div>
+        <a class="timeline-link" href="archive/2026-07-15.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🛢️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">07/24 · 油价重上百</div>
+        <div class="timeline-desc">美伊战争第 12 夜，胡塞武装袭击沙特油轮，Brent 重回 $100</div>
+        <a class="timeline-link" href="archive/2026-07-24.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">📉</div>
+      <div class="timeline-content">
+        <div class="timeline-date">07/28 · 快速消退</div>
+        <div class="timeline-desc">美伊暂停军事打击，Brent 从 $100 暴跌至 $90 以下</div>
+        <a class="timeline-link" href="archive/2026-07-28.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">⚠️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">08/02 · UN 暂停护航</div>
+        <div class="timeline-desc">伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中</div>
+        <a class="timeline-link" href="archive/2026-08-02.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🕊️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">08/06 · 协议接近</div>
+        <div class="timeline-desc">伊朗-阿曼就航线达成初步一致，Brent 三天暴跌 11%</div>
+        <a class="timeline-link" href="archive/2026-08-06.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🛢️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">08/12 · 市场现实</div>
+        <div class="timeline-desc">EIA 上调 2026 年均价至 $87，Brent 守 $89——谈判依然遥遥</div>
+        <a class="timeline-link" href="archive/2026-08-12.html">查看当日报 →</a>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-marker">🏗️</div>
+      <div class="timeline-content">
+        <div class="timeline-date">08/13 · 长期化信号</div>
+        <div class="timeline-desc">海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</div>
+        <a class="timeline-link" href="archive/2026-08-13.html">查看当日报 →</a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="geo-section" style="margin-top: 40px;">
+    <div class="section-title">🛢️ Brent 原油价格走势（04/23 → 08/13）</div>
+    <div class="oil-chart-wrap">
+      
+<svg viewBox="0 0 1100 360" class="oil-chart" xmlns="http://www.w3.org/2000/svg">
+  <!-- Y 轴 -->
+  
+      <line x1="60" y1="287.1" x2="1060" y2="287.1" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="52" y="291.1" text-anchor="end" font-size="11" fill="var(--text-muted)">$70</text>
+      <line x1="60" y1="230.0" x2="1060" y2="230.0" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="52" y="234.0" text-anchor="end" font-size="11" fill="var(--text-muted)">$80</text>
+      <line x1="60" y1="172.9" x2="1060" y2="172.9" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="52" y="176.9" text-anchor="end" font-size="11" fill="var(--text-muted)">$90</text>
+      <line x1="60" y1="115.7" x2="1060" y2="115.7" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="52" y="119.7" text-anchor="end" font-size="11" fill="var(--text-muted)">$100</text>
+      <line x1="60" y1="58.6" x2="1060" y2="58.6" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="52" y="62.6" text-anchor="end" font-size="11" fill="var(--text-muted)">$110</text>
+  <!-- X 轴 -->
+  <line x1="60" y1="310" x2="1060" y2="310" stroke="var(--line-soft)" stroke-width="1"/>
+  
+      <text x="60.0" y="328" text-anchor="middle" font-size="11" fill="var(--text-muted)">4月</text>
+      <text x="152.3" y="328" text-anchor="middle" font-size="11" fill="var(--text-muted)">5月</text>
+      <text x="367.7" y="328" text-anchor="middle" font-size="11" fill="var(--text-muted)">6月</text>
+      <text x="629.2" y="328" text-anchor="middle" font-size="11" fill="var(--text-muted)">7月</text>
+      <text x="921.5" y="328" text-anchor="middle" font-size="11" fill="var(--text-muted)">8月</text>
+  <!-- 主线 -->
+  <path d="M 60.0 106.0 L 75.4 115.7 L 90.8 87.1 L 106.2 87.1 L 121.5 230.0 L 136.9 87.1 L 152.3 69.0 L 167.7 69.0 L 183.1 58.6 L 198.5 115.7 L 213.8 110.0 L 229.2 110.0 L 244.6 92.9 L 260.0 58.6 L 275.4 65.7 L 290.8 89.0 L 306.2 115.7 L 321.5 126.6 L 336.9 184.3 L 352.3 135.1 L 367.7 144.4 L 383.1 155.7 L 398.5 155.7 L 413.8 171.7 L 429.2 138.6 L 444.6 172.9 L 460.0 167.1 L 475.4 184.3 L 490.8 224.3 L 506.2 241.4 L 521.5 241.4 L 536.9 241.4 L 552.3 258.6 L 567.7 258.6 L 583.1 275.7 L 598.5 275.7 L 613.8 270.0 L 629.2 270.0 L 644.6 270.0 L 660.0 275.7 L 675.4 281.4 L 690.8 275.7 L 706.2 275.7 L 721.5 252.9 L 736.9 195.7 L 752.3 201.4 L 767.7 167.1 L 783.1 155.7 L 798.5 115.7 L 813.8 115.7 L 829.2 115.7 L 844.6 115.7 L 860.0 115.7 L 875.4 138.6 L 890.8 172.9 L 906.2 178.6 L 921.5 172.9 L 936.9 167.1 L 952.3 208.9 L 967.7 212.9 L 983.1 218.6 L 998.5 209.7 L 1013.8 212.9 L 1029.2 207.1 L 1044.6 178.6 L 1060.0 178.6" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 转折点 -->
+  
+      <g class="oil-marker">
+        <circle cx="60.0" cy="106.0" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="60.0" cy="106.0" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🚨 04/23 · 首次升级｜Brent $101.70｜伊朗扣押两艘商船，霍尔木兹海峡紧张再升级</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="75.4" cy="115.7" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="75.4" cy="115.7" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🛢️ 04/24 · 油价破百｜Brent $100.00｜美伊速成协议希望退潮，Brent 原油一度破 $100</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="429.2" cy="138.6" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="429.2" cy="138.6" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>💣 06/08 · 停火崩溃｜Brent $96.00｜伊朗首次直接攻击以色列北部，US-Israel 同步空袭黎巴嫩</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="506.2" cy="241.4" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="506.2" cy="241.4" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🛢️ 06/23 · 油价触底｜Brent $78.00｜霍尔木兹复航 + 伊朗石油 60 天豁免，Brent 跌至 $78</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="552.3" cy="258.6" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="552.3" cy="258.6" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🔥 06/26 · 停火受考验｜Brent $75.00｜伊朗再袭商船，霍尔木兹海峡紧张重燃</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="736.9" cy="195.7" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="736.9" cy="195.7" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🚨 07/15 · 封锁升级｜Brent $86.00｜特朗普重启霍尔木兹军事封锁 + 20% 过路费，Brent 飙至 $86</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="798.5" cy="115.7" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="798.5" cy="115.7" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🛢️ 07/24 · 油价重上百｜Brent $100.00｜美伊战争第 12 夜，胡塞武装袭击沙特油轮，Brent 重回 $100</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="860.0" cy="115.7" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="860.0" cy="115.7" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>📉 07/28 · 快速消退｜Brent $100.00｜美伊暂停军事打击，Brent 从 $100 暴跌至 $90 以下</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="1044.6" cy="178.6" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="1044.6" cy="178.6" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🛢️ 08/12 · 市场现实｜Brent $89.00｜EIA 上调 2026 年均价至 $87，Brent 守 $89——谈判依然遥遥</title>
+      </g>
+      <g class="oil-marker">
+        <circle cx="1060.0" cy="178.6" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="1060.0" cy="178.6" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>🏗️ 08/13 · 长期化信号｜Brent $89.00｜海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道</title>
+      </g>
+  <!-- 最新价格标注 -->
+  <circle cx="1060.0" cy="178.6" r="4" fill="var(--rose)"/>
+  <text x="1050.0" y="168.6" text-anchor="end" font-size="12" font-weight="600" fill="var(--rose)">$89.00</text>
+</svg>
+      <div class="oil-chart-hint">💡 红点是战争关键转折点，鼠标划上去看当日事件</div>
+    </div>
   </div>
   </div>
 
@@ -1161,7 +1486,7 @@
   </div>
 
   <footer>
-    共 104 期 · 更新于 2026-08-13 12:23 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
+    共 104 期 · 更新于 2026-08-13 12:30 · <a href="https://github.com/eelaine-zhang/daily-news">GitHub</a>
   </footer>
 </div>
 <script>

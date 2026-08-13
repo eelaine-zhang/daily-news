@@ -870,29 +870,196 @@ def build_weekly_highlights(dates: list, days: int = 7) -> str:
   </div>'''
 
 
+# 伊朗战争关键转折点（手工策展）
+IRAN_WAR_MILESTONES = [
+    ("2026-04-22", "⚡", "冲突起点", "特朗普延长对伊停火但海上封锁继续——伊朗战争进入新阶段"),
+    ("2026-04-23", "🚨", "首次升级", "伊朗扣押两艘商船，霍尔木兹海峡紧张再升级"),
+    ("2026-04-24", "🛢️", "油价破百", "美伊速成协议希望退潮，Brent 原油一度破 $100"),
+    ("2026-04-28", "💥", "谈判破裂", "美伊和谈再次破裂，霍尔木兹吞吐量只剩战前 5%"),
+    ("2026-05-04", "⚔️", "美军介入", "特朗普拒绝伊朗 14 点提案，宣布派美军「引导船只」出霍尔木兹"),
+    ("2026-05-24", "🕊️", "协议突破", "特朗普称美伊协议「已大致谈妥」，霍尔木兹海峡将重新开放"),
+    ("2026-06-08", "💣", "停火崩溃", "伊朗首次直接攻击以色列北部，US-Israel 同步空袭黎巴嫩"),
+    ("2026-06-16", "📝", "签字协议", "美伊正式签字，霍尔木兹海峡当日重开"),
+    ("2026-06-23", "🛢️", "油价触底", "霍尔木兹复航 + 伊朗石油 60 天豁免，Brent 跌至 $78"),
+    ("2026-06-26", "🔥", "停火受考验", "伊朗再袭商船，霍尔木兹海峡紧张重燃"),
+    ("2026-07-09", "⚔️", "战火重燃", "特朗普宣布伊朗停火「已终结」，美军发动新一轮 80 目标打击"),
+    ("2026-07-15", "🚨", "封锁升级", "特朗普重启霍尔木兹军事封锁 + 20% 过路费，Brent 飙至 $86"),
+    ("2026-07-24", "🛢️", "油价重上百", "美伊战争第 12 夜，胡塞武装袭击沙特油轮，Brent 重回 $100"),
+    ("2026-07-28", "📉", "快速消退", "美伊暂停军事打击，Brent 从 $100 暴跌至 $90 以下"),
+    ("2026-08-02", "⚠️", "UN 暂停护航", "伊朗击中两艘美军护航油轮 + 卡塔尔 LNG 船被击中"),
+    ("2026-08-06", "🕊️", "协议接近", "伊朗-阿曼就航线达成初步一致，Brent 三天暴跌 11%"),
+    ("2026-08-12", "🛢️", "市场现实", "EIA 上调 2026 年均价至 $87，Brent 守 $89——谈判依然遥遥"),
+    ("2026-08-13", "🏗️", "长期化信号", "海湾石油巨头斥资数十亿美元修建绕开霍尔木兹的出海通道"),
+]
+
+
 def build_geo_timeline(dates: list, topic: str, days: int = 30) -> str:
-    """地缘事件时间轴：某个持续事件在近 N 天里的演进。"""
-    cutoff = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d")
-    recent = sorted([d for d in dates if d >= cutoff])
-    entries = []
-    # 该事件相关的所有话题别名
-    related_aliases = [a for a, n in TOPIC_ALIAS.items() if n == topic] + [topic]
-    for d in recent:
-        titles = extract_titles(ARCHIVE_DIR / f"{d}.html")
-        for t in titles:
-            if any(a in t for a in related_aliases):
-                entries.append((d, t))
-                break  # 一天一条代表
-    if len(entries) < 2:
-        return ""
-    lis = "".join(
-        f'<li><span class="hl-date">{d[5:].replace("-", "/")}</span> <a href="archive/{d}.html">{t}</a></li>'
-        for d, t in entries
-    )
-    return f'''
+    """地缘事件竖向时间线 + 油价走势图。"""
+    # 部分 1：竖向时间线
+    timeline_items = []
+    for date_str, icon, tag, desc in IRAN_WAR_MILESTONES:
+        archive_link = f"archive/{date_str}.html"
+        timeline_items.append(f'''
+    <div class="timeline-item">
+      <div class="timeline-marker">{icon}</div>
+      <div class="timeline-content">
+        <div class="timeline-date">{date_str[5:].replace("-", "/")} · {tag}</div>
+        <div class="timeline-desc">{desc}</div>
+        <a class="timeline-link" href="{archive_link}">查看当日报 →</a>
+      </div>
+    </div>''')
+    timeline_html = f'''
   <div class="geo-section">
-    <div class="section-title">🌍 「{topic}」事件演进时间轴（近 {days} 天）</div>
-    <ul class="weekly-list">{lis}</ul>
+    <div class="section-title">🌍 伊朗战争 & 霍尔木兹海峡 · 关键转折时间线</div>
+    <div class="timeline">
+      {"".join(timeline_items)}
+    </div>
+  </div>'''
+    
+    # 部分 2：油价走势图
+    oil_chart_html = build_oil_price_chart(dates)
+    
+    return timeline_html + oil_chart_html
+
+
+def build_oil_price_chart(dates: list) -> str:
+    """从所有早报里提取 Brent 价格点，画 SVG 走势图，转折点带 tooltip。"""
+    # 提取价格点
+    raw_points = {}
+    skip_suffixes = ('.old', '-light', '-dark', '-v2-dark', '-v2-light', '-view', '_onepage_fed_mag7')
+    for d in dates:
+        if any(d.endswith(s) for s in skip_suffixes):
+            continue
+        try:
+            content = (ARCHIVE_DIR / f"{d}.html").read_text(encoding="utf-8", errors="ignore")
+            text = re.sub(r"<[^>]+>", " ", content)
+            m = re.search(r"Brent[^\d]{0,10}\$?\s*(\d+(?:\.\d+)?)", text)
+            if m:
+                price = float(m.group(1))
+                if 60 <= price <= 130:  # 过滤异常值
+                    raw_points[d] = price
+        except Exception:
+            continue
+    if len(raw_points) < 3:
+        return ""
+    
+    # 手工清洗明显异常点（从上下文看应该是误抓）
+    outlier_fixes = {
+        "2026-04-30": 105.0,  # $120 是预测，不是当天
+        "2026-06-01": 92.0,   # $66 明显错位
+        "2026-07-01": 73.0,   # $105 是历史回顾
+        "2026-07-19": 82.0,   # $100 是预测
+        "2026-08-08": 82.0,   # $100 是回看
+    }
+    for d, correct_price in outlier_fixes.items():
+        if d in raw_points:
+            raw_points[d] = correct_price
+    
+    # 按日期排序
+    points = sorted(raw_points.items())
+    if len(points) < 3:
+        return ""
+    
+    # SVG 尺寸
+    W, H = 1100, 360
+    pad_l, pad_r, pad_t, pad_b = 60, 40, 30, 50
+    chart_w = W - pad_l - pad_r
+    chart_h = H - pad_t - pad_b
+    
+    # 价格范围
+    prices = [p for _, p in points]
+    p_min = min(prices) - 5
+    p_max = max(prices) + 5
+    
+    # 时间范围（转为索引）
+    n = len(points)
+    
+    def xy(i, price):
+        x = pad_l + (i / max(n-1, 1)) * chart_w
+        y = pad_t + chart_h - ((price - p_min) / (p_max - p_min)) * chart_h
+        return x, y
+    
+    # 生成 path
+    path_d = "M " + " L ".join(f"{xy(i, p)[0]:.1f} {xy(i, p)[1]:.1f}" for i, (_, p) in enumerate(points))
+    
+    # 转折点 = IRAN_WAR_MILESTONES 里有价格数据的日期
+    milestone_set = {d: (icon, tag, desc) for d, icon, tag, desc in IRAN_WAR_MILESTONES}
+    turning_points = []
+    for i, (d, p) in enumerate(points):
+        if d in milestone_set:
+            icon, tag, desc = milestone_set[d]
+            x, y = xy(i, p)
+            turning_points.append((x, y, d, p, tag, desc, icon))
+    
+    # Y 轴刻度
+    y_ticks = []
+    step = 10
+    p_start = int(p_min // step) * step
+    for pv in range(p_start, int(p_max) + step, step):
+        if p_min <= pv <= p_max:
+            _, ty = xy(0, pv)
+            y_ticks.append((pv, ty))
+    
+    # X 轴月份标签
+    month_labels = []
+    last_month = None
+    for i, (d, _) in enumerate(points):
+        m = d[5:7]  # MM
+        if m != last_month:
+            x, _ = xy(i, points[0][1])
+            month_labels.append((x, f"{int(m)}月"))
+            last_month = m
+    
+    # 渲染
+    y_axis_svg = "".join(f'''
+      <line x1="{pad_l}" y1="{ty:.1f}" x2="{W - pad_r}" y2="{ty:.1f}" stroke="var(--line-soft)" stroke-dasharray="2,3" stroke-width="0.5"/>
+      <text x="{pad_l - 8}" y="{ty + 4:.1f}" text-anchor="end" font-size="11" fill="var(--text-muted)">${pv}</text>'''
+      for pv, ty in y_ticks)
+    
+    x_axis_svg = "".join(f'''
+      <text x="{x:.1f}" y="{H - pad_b + 18}" text-anchor="middle" font-size="11" fill="var(--text-muted)">{label}</text>'''
+      for x, label in month_labels)
+    
+    # 转折点 markers + tooltip
+    markers_svg = []
+    for x, y, d, p, tag, desc, icon in turning_points:
+        date_label = d[5:].replace("-", "/")
+        tooltip_text = f"{icon} {date_label} · {tag}｜Brent ${p:.2f}｜{desc}"
+        markers_svg.append(f'''
+      <g class="oil-marker">
+        <circle cx="{x:.1f}" cy="{y:.1f}" r="6" fill="var(--rose)" stroke="#fff" stroke-width="2"/>
+        <circle cx="{x:.1f}" cy="{y:.1f}" r="12" fill="var(--rose)" opacity="0.2"/>
+        <title>{tooltip_text}</title>
+      </g>''')
+    markers_str = "".join(markers_svg)
+    
+    # 最新价格标注
+    last_d, last_p = points[-1]
+    last_x, last_y = xy(n-1, last_p)
+    
+    svg = f'''
+<svg viewBox="0 0 {W} {H}" class="oil-chart" xmlns="http://www.w3.org/2000/svg">
+  <!-- Y 轴 -->
+  {y_axis_svg}
+  <!-- X 轴 -->
+  <line x1="{pad_l}" y1="{H - pad_b}" x2="{W - pad_r}" y2="{H - pad_b}" stroke="var(--line-soft)" stroke-width="1"/>
+  {x_axis_svg}
+  <!-- 主线 -->
+  <path d="{path_d}" fill="none" stroke="var(--rose)" stroke-width="2" stroke-linejoin="round"/>
+  <!-- 转折点 -->
+  {markers_str}
+  <!-- 最新价格标注 -->
+  <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="4" fill="var(--rose)"/>
+  <text x="{last_x - 10:.1f}" y="{last_y - 10:.1f}" text-anchor="end" font-size="12" font-weight="600" fill="var(--rose)">${last_p:.2f}</text>
+</svg>'''
+    
+    return f'''
+  <div class="geo-section" style="margin-top: 40px;">
+    <div class="section-title">🛢️ Brent 原油价格走势（{points[0][0][5:].replace("-","/")} → {points[-1][0][5:].replace("-","/")}）</div>
+    <div class="oil-chart-wrap">
+      {svg}
+      <div class="oil-chart-hint">💡 红点是战争关键转折点，鼠标划上去看当日事件</div>
+    </div>
   </div>'''
 
 
@@ -972,7 +1139,7 @@ def main():
     weekly_html = build_weekly_highlights(dates, days=6)  # 7 天（含今天）
     topic_reverse_html = build_topic_reverse_index(top10, dates, days=30)
     build_search_index(dates)  # 生成 search_index.json（搜索框在顶栏）
-    geo_html = build_geo_timeline(dates, "霍尔木兹海峡/伊朗战争", days=30)
+    geo_html = build_geo_timeline(dates, "霍尔木兹海峡/伊朗战争")
 
     # 主要事件（近 7 天）
     events_html = ""
@@ -1462,6 +1629,99 @@ def main():
   /* 本周大事记 / 地缘时间轴 / 反向索引 共用样式 */
   .weekly-section, .geo-section, .topic-reverse-section, .search-section {{
     margin-top: 32px;
+  }}
+  /* 竖向时间线（地缘事件） */
+  .timeline {{
+    position: relative;
+    padding-left: 30px;
+    margin-top: 16px;
+  }}
+  .timeline::before {{
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--rose) 0%, var(--line-soft) 100%);
+  }}
+  .timeline-item {{
+    position: relative;
+    padding-bottom: 18px;
+  }}
+  .timeline-item:last-child {{
+    padding-bottom: 0;
+  }}
+  .timeline-marker {{
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--card, #fff);
+    border: 2px solid var(--rose);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    z-index: 1;
+  }}
+  .timeline-content {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }}
+  .timeline-date {{
+    color: var(--rose);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }}
+  .timeline-desc {{
+    color: var(--text-main);
+    font-size: 13px;
+    line-height: 1.6;
+  }}
+  .timeline-link {{
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--line-soft);
+  }}
+  .timeline-link:hover {{
+    color: var(--rose);
+    border-bottom-color: var(--rose);
+  }}
+  /* 油价走势图 */
+  .oil-chart-wrap {{
+    background: var(--card, #fff);
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 12px;
+  }}
+  .oil-chart {{
+    width: 100%;
+    height: auto;
+    display: block;
+  }}
+  .oil-chart-hint {{
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    margin-top: 8px;
+    font-style: italic;
+  }}
+  .oil-marker {{
+    cursor: pointer;
+  }}
+  .oil-marker:hover circle:first-child {{
+    r: 8;
   }}
   .weekly-list {{
     list-style: none;
