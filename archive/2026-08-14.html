@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-14</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #F0EDE5; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 14 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>S&P 500 创历史新高：</b>7 月 CPI 回落至 3.4% 叠加油价走低，S&amp;P 首破 7800 收 7,781.59（+0.43%），纳指 100 +1.15%；9 月加息概率降至 40% 以下。</li>
+      <li><b>韩国 KOSPI 进入技术牛市：</b>三星 +5%、SK Hynix +8%，淡马锡拟直接投资韩国存储双雄，KOSPI 从 7/30 低点反弹 22%；长鑫科技市值 3.54 万亿超越腾讯成中国最大。</li>
+      <li><b>乌克兰持续打俄炼油厂：</b>3 天内第 4 次无人机袭击俄罗斯腹地炼油厂；OPEC+IEA 同步下调 2026 年需求预测，Brent 跌至 $87 区间。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">中国 AI 芯片国产替代</span>
+        <h4>中国高端 AI 芯片国产份额逼近 90%：华为有望超越英伟达，海外芯片只剩 10%</h4>
+        <p>Digitimes 8/12 报道，中国高端 AI 芯片市场 2026 年可能几乎完全被国产方案占据——本土解决方案预计拿下近 <strong>90%</strong> 销售额，英伟达、AMD 等海外供应商份额缩至约 <strong>10%</strong>。华为 Ascend 系列在中国数据中心的采用率持续攀升，叠加美国出口管制收紧，加速了国产替代进程。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个趋势对 lainy 的金融视角意味着：① 英伟达在中国市场的收入占比正在快速萎缩——曾经中国占英伟达收入 20%+，现在可能是个位数；② 华为 Ascend 生态（寒武纪、海光等配套）的投资逻辑从"备胎"变成"主力"；③ 国产 AI 芯片的良率和性能差距在缩小，90% 的份额不是靠强制——是靠 TSMC 先进制程受限 + 华为自身产品迭代共同驱动的。</div>
+        <div class="ticker">📌 关联标的：688256 寒武纪（国产 AI 芯片）/ NVDA（中国市场份额受损）/ 002049 紫光国微 — 国产替代加速受益</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260812VL213/market-2026-ai-chip-nvidia-huawei.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">淡马锡 × 韩国存储</span>
+        <h4>淡马锡拟直接投资三星和 SK Hynix——新加坡主权基金首次进军韩国股市，两只股票单日飙 8%+</h4>
+        <p>8/12 消息，新加坡主权财富基金淡马锡（Temasek）正计划直接投资三星电子和 SK Hynix，这是其首次进入韩国股市。消息传出后三星和 SK Hynix 单日均涨超 <strong>8%</strong>。淡马锡目前 AI 相关投资约占组合的 6%，计划到 2031 年提升至 <strong>15%</strong>，已持有英伟达、TSMC、ASML 股份。淡马锡尚未正式确认此消息。</p>
+        <div class="why">🦞 <b>商业含义：</b>主权基金直接投资韩国存储双雄 = 对 HBM 长期需求的"官方背书"。淡马锡管理规模约 S$4300 亿，即使拿出 1-2% 配置韩国存储，也是百亿美元级别的增量资金。对 lainy：这说明全球"聪明钱"正在从买英伟达（GPU 设计）扩散到买 HBM 产业链（制造）——AI 投资的"第二阶段"逻辑。</div>
+        <div class="ticker">📌 关联标的：005930.KS 三星电子 / 000660.KS SK Hynix / TSM TSMC / ASML — 淡马锡买入信号利好整个半导体链条</div>
+        <div class="source">🔗 Source: <a href="https://www.gurufocus.com/news/9029767/temasek-plans-direct-investment-in-samsung-electronics-and-sk-hynix" target="_blank">GuruFocus</a> · <a href="https://finance.biggo.com/news/5b6b33ae-2142-4ca9-af1c-92d8983fa7cc" target="_blank">BigGo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">联想 AI 硬件</span>
+        <h4>联想 Q1 营收创历史新高 $269 亿（+43% YoY），AI 服务器 + AI PC 双轮驱动，股价飙 19%</h4>
+        <p>联想集团 8/13 发布 2027 财年 Q1 业绩：营收 <strong>$269</strong> 亿（+43% YoY），调整后净利润 <strong>$11</strong> 亿（+176% YoY），所有业务集团首次同时创季度收入和运营利润纪录。公司预期本财年营收将达 <strong>$1000</strong> 亿。AI 服务器和 AI PC 需求是核心驱动。联想港股 0992 当日飙 <strong>19%</strong> 创历史新高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>联想是"AI 硬件从云端走向边缘"的标杆。$269 亿单季营收意味着联想不再只是"PC 厂"——AI 服务器业务正成为第二增长曲线。+176% 的利润增速说明 AI 硬件的毛利率远高于传统 PC。对 lainy 的框架：AI capex 的受益环节正在从"芯片设计（英伟达）→ 代工（TSMC）→ 内存（Hynix）"扩散到"服务器整机/PC 整机"——这是投资链条的后段扩散信号。</div>
+        <div class="ticker">📌 关联标的：00992.HK 联想集团 / 000938 紫光股份（A 股 AI 服务器对标）/ SMH 半导体 ETF — AI 硬件扩散受益</div>
+        <div class="source">🔗 Source: <a href="https://news.lenovo.com/pressroom/press-releases/q1-fy-2026-27/" target="_blank">Lenovo 官方</a> · <a href="https://qz.com/lenovo-earnings-ai-computers-servers-081326" target="_blank">QZ</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia $5000 亿融资</span>
+        <h4>持续关注 · Nvidia $5000 亿融资联盟：TechCrunch 称"有风险但精明"——GPU 残值成核心问题</h4>
+        <p>8/13 日志：Nvidia 与 Apollo、BlackRock、Blackstone、Brookfield、Goldman Sachs、KKR 六大金融机构合作，目标筹集 <strong>$5000</strong> 亿第三方资本用于 AI 数据中心建设。TechCrunch 分析指出，这一模式的核心风险在于 GPU 的残值——如果下一代芯片（Rubin/Ultra）性能跳跃太大，当前 H100/H200 可能快速贬值，"可抵押资产"的底层逻辑就会动摇。但精明之处在于：Nvidia 通过此模式锁定了未来 5 年的需求，即使 GPU 更迭，旧芯片也可用于推理场景。</p>
+        <div class="why">🦞 <b>增量分析：</b>8/12 和 8/13 龙虾老师已报道此事件，今天的新角度是"循环融资"质疑——中国廉价 AI 芯片（如华为 Ascend 910C 成本约 NVDA 的 1/3）正在压低 GPU 抵押品定价。如果中国替代品性能追上来，H100 的二手市场价值会快速缩水。对 lainy：这个担忧短期内不成立（HBM 供应链壁垒仍在），但 3-5 年后国产芯片追上时确实是个变量。</div>
+        <div class="ticker">📌 关联标的：NVDA（核心受益但有残值风险）/ 688256 寒武纪（国产替代压低 GPU 残值）— GPU 残值是长期变量</div>
+        <div class="source">🔗 Source: <a href="https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/" target="_blank">TechCrunch</a> · <a href="https://www.gurufocus.com/news/9033129/nvidia-nvda-financing-model-the-future-of-ai-infrastructure-financing" target="_blank">GuruFocus</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 TSMC/三星] → 下游 [AI 芯片设计 NVDA/华为] → 终端 [云厂/服务器整机 联想] → 金融 [淡马锡/Apollo 等主权+私募资本] — 当前受益环节：服务器整机（联想 +19%）+ HBM 存储双寡头（淡马锡入场）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价与地缘风险</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">乌克兰 × 俄罗斯</span>
+        <h4>乌克兰无人机 3 天内第 4 次打击俄罗斯腹地炼油厂——俄罗斯炼油量已降至 24 年最低</h4>
+        <p>AP 8/13 报道，乌克兰无人机袭击了俄罗斯腹地一座大型炼油厂，这是 3 天内第 <strong>4</strong> 次攻击，也是 Kyiv 持续数月的打击俄罗斯石油行业的最新行动。此前乌克兰已袭击了靠近哈萨克斯坦边境的 Orsk 炼油厂。Bloomberg 8/3 报道称，俄罗斯 7 月炼油量已降至 <strong>24 年来最低</strong>。俄军以弹道导弹和滑翔炸弹回应，双方互相深打后方基础设施。</p>
+        <div class="why">🦞 <b>市场含义：</b>乌克兰的"炼油厂消耗战"正在系统性削弱俄罗斯能源出口能力——炼油量降至 24 年最低意味着俄罗斯能卖的原油多了，但能卖的成品油少了（成品油溢价更高）。对市场：① 俄罗斯成品油出口减少 = 全球成品油供给收紧，支撑炼油毛利；② 俄乌战争进入"互相消耗后方"阶段，停战谈判遥遥无期；③ 对中国：俄罗斯原油折扣可能扩大（卖不出去的成品油原料只能折价卖），中炼厂受益。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化（进口折价俄油受益）/ 601857 中国石油 — 俄炼油能力受损利好中炼厂套利</div>
+        <div class="source">🔗 Source: <a href="https://apnews.com/article/russia-ukraine-war-oil-refinery-8050b4afb5bfd6f4d93c76b4d9795dfa" target="_blank">AP News</a> · <a href="https://www.themoscowtimes.com/2026/08/03/russian-oil-refining-falls-to-24-year-low-after-ukrainian-drone-strikes-bloomberg-a93404" target="_blank">Moscow Times / Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价 · 霍尔木兹</span>
+        <h4>Brent 跌至 $87 区间：OPEC+IEA 同步下调 2026 需求预测，EIA 库存大增 1740 万桶</h4>
+        <p>油价本周走低：Brent 周三盘中破 $89 后回落至 <strong>$87-88</strong> 区间，WTI 跌至 <strong>$81-82</strong>。核心驱动：① OPEC 和 IEA 同步下调 2026 年全球原油需求增长预测；② EIA 报告美国原油库存意外大增 <strong>1740 万</strong> 桶（远超预期）；③ 霍尔木兹海峡谈判仍陷僵局——特朗普称"美国已完全控制海峡"，伊朗回应"只要制裁不解就一直关闭"。供需两端的利空暂时压过地缘溢价。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>油价正在两个力量之间拉锯——地缘风险（霍尔木兹未通）vs 需求疲软（全球经济放缓 + 库存堆积）。短期看，需求面占上风：1740 万桶库存大增是个很bearish的信号。但如果霍尔木兹突然出事（伊朗封锁油轮），$89→$120 只需要几天。对 lainy：CPI 已回落至 3.4%，如果油价继续走低至 $80 以下，9 月加息基本不可能——这是当前美股创新高的核心逻辑链。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / XLE 能源 ETF / 513130 港股通科技 ETF — 油价走低 = 通胀降温 = 美股利好</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/Latest-Energy-News/World-News/Oil-Prices-Fall-as-OPEC-and-IEA-Slash-2026-Demand-Outlooks.html" target="_blank">OilPrice</a> · <a href="https://www.investing.com/analysis/oil-prices-depend-on-hormuz-as-demand-destruction-deepens-200685800" target="_blank">Investing.com</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特/俄罗斯] → 中游 [炼化 俄罗斯炼油量↓24年最低] → 下游 [成品油全球供给] — 当前受损环节：俄罗斯炼油（乌克兰无人机消耗战），受益环节：中国炼厂（折价俄油进口）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 回落 · 美股创新高 · 黄金飙升</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美国 CPI · 美股</span>
+        <h4>7 月 CPI 回落至 3.4% + 油价走低 → S&P 500 首破 7800 创历史新高，9 月加息概率降至 40%</h4>
+        <p>8/12 美国劳工部公布 7 月 CPI 同比 <strong>+3.4%</strong>（环比 +0.1%），连续两月回落，核心 CPI 也偏软。8/13 收盘：S&P 500 <strong>+0.43%</strong> 至 7,781.59（盘中首破 7800），纳指 100 <strong>+1.15%</strong>，道指微跌。PPI 数据同样温和，进一步强化"美联储按兵不动"预期。货币市场定价 9 月加息概率降至 <strong>40%</strong> 以下。Bloomberg 称"连续两日上涨推动 S&P 创纪录"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要关注的宏观主线。逻辑链：CPI 回落 → 加息预期降温 → 风险偏好回升 → 美股创新高。但要注意：① 能源价格仍比伊朗战争前高约 $1/加仑，通胀的"最后一英里"还没走完；② 美联储当前利率 3.50-3.75%，按兵不动已经是"偏紧"姿态；③ 如果霍尔木兹问题解决、油价快速回落至 $70s，CPI 可能降至 3% 以下，届时降息讨论才会真正启动。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股创新高受益）/ IEF（美债 ETF，加息降温利好）— 9 月 FOMC 是下一个关键节点</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/business/2026/aug/12/inflation-data-july" target="_blank">The Guardian</a> · <a href="https://www.stl.news/u-s-stock-market-today-thursday-august-13-2026/" target="_blank">STL News</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-13-2026" target="_blank">TheStreet</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金突破 $4400 创两个月新高：CPI 降温 + 霍尔木兹僵局双支撑，盘中触及 $4500</h4>
+        <p>现货黄金 8/13 突破 <strong>$4400</strong>/盎司，创两个月新高，期货盘中触及 <strong>$4500</strong>。驱动：① 7 月 CPI 回落提振降息预期（黄金利好）；② 霍尔木兹谈判僵局维持地缘避险需求；③ 油价回落减轻通胀压力但地缘不确定性让资金继续涌入避险资产。LiteFinance 预测 8 月金价区间 $3580-4645，月末可能达 $4084-4120。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金在 $4400+ 的位置，说明市场正在对"通胀降温但地缘风险持续"这个组合定价。CPI 软了通常利空黄金（降息预期→美元走弱→利好黄金，但加息预期降温→风险资产涨→分流黄金资金）。当前黄金能创新高，说明地缘避险需求仍然强势。对 lainy：如果霍尔木兹通了中国央行买盘+地缘风险溢价是黄金的双重支撑，$4500 不一定是终点。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF（A 股）/ GLD（美股黄金 ETF）— 中长期看涨，短期 $4500 有关键阻力</div>
+        <div class="source">🔗 Source: <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a> · <a href="https://intellectia.ai/blog/gold-price-rally-august-2026" target="_blank">Intellectia</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [通胀预期/加息概率] → 下游 [风险偏好：股/金/债配置] — 当前关键变量：9 月 FOMC + 霍尔木兹是否通航</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/13 沪指 -0.50% 报 3926.96 / 深成指 -0.87% 报 14289.44 / 创业板 -0.45% 报 3586.04 / 成交 2.57 万亿（放量 4008 亿）</h4>
+      <p>三大指数尾盘跳水回补缺口，超 1100 只上涨、60+ 涨停。<b>亮点：</b>创新药逆市走强，博济医药、万邦医药 20cm 涨停，百花医药 7 连板后分歧。<b>长鑫科技市值超越腾讯：</b>长鑫科技 688825 收跌 1.20% 报 52.88 元，市值 <strong>3.54 万亿</strong> 人民币；腾讯控股同日跌 4.46% 报 441 港元，市值 4.01 万亿港元（约 3.44 万亿人民币）。长鑫科技正式成为中国市值最高上市公司——硬科技估值权重超过互联网。<b>板块：</b>医疗服务/生物制品/中药涨幅居前，贵金属/有色金属/光伏跌幅居前。<b>MSCI 调整：</b>MSCI 中国指数新纳入 31 只 A 股（含铜冠铜箔、风华高科、芯源微等）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/13 恒指 -0.17% 报 25,396.51 / 腾讯 -4.46% 拖累 / 联想 +19% 逆势爆发</h4>
+      <p>恒指连跌三日，腾讯 Q2 净利不及预期（营收 2048 亿 +11%，但利润仅增 3%，AI 资本开支暴增 176% 导致自由现金流转负）拖累科网板块。联想 Q1 营收 $269 亿 +43% 创纪录，股价飙 <strong>19%</strong> 创历史新高。恒指期货夜盘报 25,320，低于收盘。市场关注下周中国经济数据对港股的进一步指引。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/13 S&amp;P 500 +0.43% 报 7,781.59（历史新高）/ 纳指 100 +1.15% / 道指微跌 / 连续两日上涨</h4>
+      <p>S&P 500 盘中首破 <strong>7800</strong> 关口（最高 7,816.70），收创历史新高。Sandisk 和其他权重科技股领涨。PPI 数据温和 + 油价走低强化了"美联储按兵不动"预期。30 年期国债拍卖利率创一季度新高。纳指 100 +1.15% 表明科技股重新获得资金流入。<b>本周关注：</b>零售数据 + 消费者信心指数将公布，如果延续软数据趋势，S&P 冲击 8000 不是梦。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/13 KOSPI +3.6-4% 报 6,835.55 / 从 7/30 低点反弹 22%，进入技术牛市</h4>
+      <p>KOSPI 连续暴涨，从 7/30 低点反弹 <strong>22%</strong> 正式进入牛市区域。三星电子 +5%、SK Hynix +<strong>8%</strong>——淡马锡直接投资消息点燃买入潮。KOSDAQ +0.92%。两只股票年内已涨超 <strong>100%</strong>。CNBC 评价："全球 AI 交易复苏，投资者重新涌入主导韩国指数的半导体巨头。"这是 KOSPI 一个月前历史性暴跌后的 V 型反转——7 月的恐慌已经被 AI 芯片需求证伪。韩元同步走强。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 财报 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">腾讯 Q2 财报</span>
+        <h4>腾讯 Q2：营收 +11% 至 2048 亿超预期，但 AI 资本开支暴增 176% 致自由现金流转负，股价跌 4.46%</h4>
+        <p>腾讯 8/12 发布 Q2 2026 业绩：营收 <strong>2048</strong> 亿元人民币（+11% YoY），略超市场预期 2028 亿。但净利润仅增 <strong>3%</strong> 至 580 亿，不及预期。核心原因：AI 基础设施资本开支暴增 <strong>176%</strong>，自由现金流转为负值。广告收入和游戏业务稳定增长是营收超预期的主因。市场用脚投票：8/13 腾讯跌 4.46%，市值被长鑫科技超越。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>腾讯的 Q2 是中国互联网巨头"AI 转型阵痛"的缩影——营收在涨，但利润被 AI 投入吃掉了。自由现金流转负是个标志性事件：这意味着腾讯从"印钞机"变成了"烧钱机器"，至少在 AI 基建周期内如此。对 lainy 的框架：① 中国互联网的估值逻辑正在从"现金流"切换到"AI capex 回报预期"；② 如果 AI 投入能在 2-3 年转化为广告/云/游戏收入，腾讯估值会修复；③ 短期内，FCF 转负会让外资减仓——这正是恒指连跌的原因。</div>
+        <div class="ticker">📌 关联标的：00700.HK 腾讯 / 09992.HK 联想 / 09618.HK 京东 — 中国互联网 AI 转型阵痛期，短期承压</div>
+        <div class="source">🔗 Source: <a href="https://www.marketscreener.com/news/tencent-increases-revenue-in-second-quarter-by-11-percent-but-profit-falls-short-of-expectations-ce7859d9d88df12c" target="_blank">MarketScreener</a> · <a href="https://finance.biggo.com/news/fdcf980d-f23b-4dc2-a99c-d58b7d0a589f" target="_blank">BigGo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品消费</span>
+        <h4>AMOUAGE H1 2026 全球零售额 $3.6 亿（+74% YoY）：阿曼香水品牌创 40 年最快增长</h4>
+        <p>阿曼奢侈香水品牌 AMOUAGE 2026 上半年全球零售额约 <strong>$3.6</strong> 亿，同比 +<strong>74%</strong>，创品牌 40 年来最快增速。品牌在 Shinsegae City 开设美妆专区，全球化扩张加速。同期，ALO 品牌通过天猫国际进入中国市场，预售额达 $150 万。奢侈消费品在高端市场仍有韧性。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>高端消费的"K 型分化"仍在持续——大众消费承压（中国社零 +2.7%），但超高端消费（AMOUAGE +74%、LVMH 逆势扩张）依然强劲。这说明全球财富集中度在加速。对消费股投资的含义：① 避开"中间地带"品牌（轻奢、中端餐饮）；② 超高端（茅台、爱马仕）和超低端（蜜雪冰城、拼多多）两端最强。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（超高端消费韧性）/ 600779 水井坊（高端酒承压）— K 型分化持续</div>
+        <div class="source">🔗 Source: <a href="https://retailboss.substack.com/p/this-week-in-retail-burberry-beauty" target="_blank">Retail Boss</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料/品牌 IP] → 中游 [制造/品牌运营] → 下游 [零售渠道/电商] — 当前受益环节：超高端品牌（AMOUAGE +74%），受损环节：中端消费（腾讯 FCF 转负反映宏观消费疲软）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA · 体育商业</span>
+        <h4>Bob Iger + Joshua Kushner $125 亿收购洛杉矶湖人——创体育队伍出售价格纪录</h4>
+        <p>前迪士尼 CEO Bob Iger 与风投家 Joshua Kushner（Jared Kushner 的弟弟）达成协议，以 <strong>$125</strong> 亿收购洛杉矶湖人队。这是继 14 个月前 Mark Walter 以 $100 亿估值买下湖人后的再次转手——估值在一年多内涨了 <strong>25%</strong>。Iger 成为 NBA 历史上最具好莱坞背景的老板，湖人球迷既担忧 Walter 离开，又期待 Iger 的"迪士尼魔法"。</p>
+        <div class="why">🦞 <b>花边点评：</b>$125 亿买一支 NBA 球队——这个价格比 NFL 的 Commanders（$60 亿）翻了一倍。体育队伍正在成为"另类资产类别"：估值不再基于收入，而是基于稀缺性（NBA 只有 30 支队伍）+ 全球 IP 价值。Iger 的加入可能让湖人变成"媒体娱乐帝国"的延伸。lainy 如果关注体育商业，这是一个"体育 IP 估值泡沫 vs 稀缺资产"的经典案例。</div>
+        <div class="source">🔗 Source: <a href="https://deadline.com/2026/08/bob-iger-l-a-lakers-purchase-josh-kusner-1237031779/" target="_blank">Deadline</a> · <a href="https://www.nytimes.com/athletic/7508177/2026/08/12/los-angeles-lakers-sale-mark-walter-bob-iger-joshua-kushner/" target="_blank">NYT Athletic</a> · <a href="https://www.latimes.com/sports/live/bob-iger-joshua-kushner-buying-lakers-for-12-5-billion" target="_blank">LA Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">日全食</span>
+        <h4>2026 年日全食照片流出：西班牙向日葵田上空的"黑色太阳"——本世纪欧洲最壮观天象</h4>
+        <p>8/12 日全食横跨西班牙、冰岛和北欧，是 2026 年最壮观的天文事件。CNN、NPR、EarthSky 等媒体放出大量精美照片——最经典的画面是在西班牙 Palencia 的向日葵田上方，太阳被完全遮住，日冕向外辐射。西班牙 Javalambre 天文台拍到了 Baily's Beads 效应。美国东海岸只能看到日偏食（覆盖约 40-80%）。</p>
+        <div class="why">🦞 <b>轻松一下：</b>日全食是"最不需要金融分析"的新闻——纯粹的美。不过龙虾老师还是忍不住说一句：日全食旅游是个被低估的产业——2026 年这次给西班牙带来了数十万游客。下次日全食 2027 年在埃及/沙特，想追的话现在就可以订机票了。</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/08/12/science/gallery/photos-total-solar-eclipse" target="_blank">CNN</a> · <a href="https://earthsky.org/human-world/total-solar-eclipse-august-12-2026-best-images/" target="_blank">EarthSky</a> · <a href="https://www.cnbc.com/2026/08/13/europe-solar-eclipse-iceland-spain.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag sci">Google AI 人事</span>
+        <h4>Google AI 灵魂人物 Jeff Dean 联合 Sanjay Ghemawat 创立独立公益公司，专注 ML+科学发现</h4>
+        <p>Google CEO Sundar Pichai 8/13 发表博客文章"AI momentum 的下一章"，宣布 Google Senior Fellow Jeff Dean 和 Sanjay Ghemawat 将创立一家独立的公益公司，专注用机器学习加速科学和工程领域的发现。Pichai 同时回顾了 Google 27 年的 AI 发展历程。此举被解读为 Google 在 AI 人才流失潮中留住核心人物的策略——独立实体意味着更大的学术自由度。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>Jeff Dean 是 Google AI 的"精神领袖"——他写的每一行代码都影响着数十亿人。让他出来做独立公益机构，说明 Google 意识到"大公司体制"可能限制了顶尖人才的空间。对 lainy：这是一个有趣的趋势——科技巨头正在把核心人才"释放"到更灵活的实体中，用"放手"来"留住"。Meta 也在做类似的事（FAIR 的独立性）。</div>
+        <div class="source">🔗 Source: <a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank">Google Blog</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
