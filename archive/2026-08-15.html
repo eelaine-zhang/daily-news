@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-15</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 15 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>SMIC Q2 营收首破 $30 亿</b>，产能利用率达 93.7%，AI 需求驱动提价并考虑扩产；同日 Broadcom 暴跌 6%，BofA 警告其 AI 芯片融资工具债务或达 $3700 亿。</li>
+      <li><b>霍尔木兹僵局持续</b>：Brent 在 $84-90 间震荡，伊朗坚持"不满足条件不开放"，特朗普要求伊朗支付战争赔偿，谈判陷入僵局；IEA 报告称 7 月油价波动区间达 $40。</li>
+      <li><b>美股高位回调</b>：S&P 500 从历史高点回落 -0.2%，7 月零售销售环比 -0.6% 大幅不及预期；Reddit 因纳入 S&P 500 暴涨 14%，SanDisk 闪存 Investor Day 后飙 9%。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">SMIC</span>
+        <h4>SMIC Q2 营收首破 $30 亿，产能利用率 93.7% 接近满载，AI 需求驱动提价并考虑扩产</h4>
+        <p>8/14 中芯国际（SMIC）发布 Q2 财报：营收首次突破 <strong>$30</strong> 亿，AI 相关需求持续支撑订单，公司已上调最紧缺产能的报价。管理层表示 Q2 产能利用率达 <strong>93.7%</strong>，接近实际满载极限，正在评估增设设备的扩产方案。成熟制程芯片（配合 AI 处理器使用的周边芯片）需求超出预期，是本次提价核心驱动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>SMIC 是中国半导体国产替代的"全村希望"。Q2 财报两个信号：① 产能接近满载 = 需求真实存在，不只是概念炒作；② 提价 = 定价权开始改善，毛利率有上行空间。对 lainy 的框架：成熟制程的"量价齐升"是 SMIC 业绩拐点的标志，但先进制程（7nm 以下）仍受设备限制，真正的突破还需等待。</div>
+        <div class="ticker">📌 关联标的：00981.HK 中芯国际 / 688981 中芯国际（科创板）/ 159995 半导体ETF — 产能满载+提价受益，但先进制程瓶颈仍在</div>
+        <div class="source">🔗 Source: <a href="https://www.brecorder.com/news/40434789/chinese-chipmaker-smic-increases-prices-on-strong-ai-demand" target="_blank">Business Recorder</a> · <a href="https://qz.com/smic-chip-prices-ai-demand-revenue-earnings-081426" target="_blank">Quartz</a> · <a href="https://www.scmp.com/tech/big-tech/article/3363996/smic-weighs-more-capacity-ai-related-chip-demand-exceeds-forecasts" target="_blank">SCMP</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Broadcom</span>
+        <h4>Broadcom 暴跌 6%：BofA 警告 AI 芯片融资工具债务或达 $3700 亿，跌破 $400 关口</h4>
+        <p>8/14 Broadcom（AVGO）股价大跌 <strong>6%</strong>，跌破 $400 关口至 $389.79。美国银行分析师 Tom Curcuruto 估计，Broadcom 的 AI 芯片融资工具（chip financing vehicle / XPV）潜在债务规模可能达到 <strong>$3700</strong> 亿。该融资模式让客户通过长期合约锁定产能，但残值担保（residual value guarantee）在 AI 芯片迭代加速时存在巨大不确定性。同日 AMD 逆势上涨 4%，Baird 给出 $1,250 目标价。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是市场首次认真审视 AI 芯片融资模式的"隐藏债务风险"。Broadcom 的 XPV 模式本质是"用未来芯片产能做抵押贷款"——如果 AI 芯片需求不及预期，残值担保就会变成巨额负债。对比三星-Broadcom $2000 亿 MOU（7月底签的），这笔交易的金融工程风险正在被市场重新定价。对 lainy：AI 投资不是"闭眼买"——每条链上都有杠杆，需要辨别哪些是"真需求"，哪些是"融资泡沫"。</div>
+        <div class="ticker">📌 关联标的：AVGO（Broadcom，承压）/ AMD（对比受益，Baird $1,250 目标价）/ SMH（半导体ETF，成分股分化）— Broadcom 融资风险被市场重新定价</div>
+        <div class="source">🔗 Source: <a href="https://www.benzinga.com/markets/prediction-markets/26/08/61219624/broadcom-ai-financing-370-billion" target="_blank">Benzinga</a> · <a href="https://247wallst.com/investing/2026/08/14/broadcom-sinks-6-as-bofa-flags-370b-in-ai-debt-amd-climbs-4-on-bairds-1250-call/" target="_blank">24/7 Wall St.</a> · <a href="https://finance.yahoo.com/technology/ai/articles/broadcom-plunges-5-ai-boom-170842189.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SanDisk</span>
+        <h4>SanDisk Investor Day 炸场：NAND 毛利率 80% 指引→股价飙 9%，5 日累涨 35%，带动全板块重估</h4>
+        <p>SanDisk（SNDK）Investor Day 预测到 2030 年 NAND 闪存毛利率可达 ~<strong>80%</strong>，"新商业模式"长期合约将"结构性重置"其利润水平并大幅降低周期性。8/14 SanDisk 盘中飙 <strong>9%</strong>，开盘成交额 $100 亿，全美市场第一；5 个交易日累涨 <strong>35%</strong>。Western Digital（WDC）+7.3%、Micron（MU）+4.2% 联动上涨。SK Hynix 旗下 NAND 子公司 Solidigm 据报拟赴纳斯达克 IPO，估值约 50 万亿韩元。</p>
+        <div class="why">🦞 <b>商业含义：</b>SanDisk 的 80% 毛利率指引是一个"分水岭时刻"——意味着存储芯片从"周期性商品"变成"长期合约制高毛利业务"。这和此前 HBM 把内存变成"AI 弹药"的逻辑一致：AI 需求正在重写整个存储行业的商业模式。Solidigm IPO 若以 50 万亿韩元估值成行，将进一步验证存储资产的重估逻辑。</div>
+        <div class="ticker">📌 关联标的：SNDK（SanDisk）/ WDC（Western Digital）/ MU（Micron）/ 000660.KS SK Hynix（Solidigm 母公司）— NAND 全板块重估受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/14/stocks-making-the-biggest-moves-midday-sndk-amat-avav-csco-rddt.html" target="_blank">CNBC</a> · <a href="https://finance.biggo.com/news/7a17f938-4ae2-4580-a5cc-7860c9cd34f0" target="_blank">BigGo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星挖人</span>
+        <h4>三星聘请 Meta 资深人士加速 AI 芯片代工推进，扩展 AI 在设计/工艺/制造全环节应用</h4>
+        <p>8/14 Seoul Economic Daily 报道，三星电子通过重组管理层招聘了 Meta 资深人士，计划将 AI 扩展应用到核心半导体业务全流程——设计、工艺、制造——以提升研发和生产效率。此举紧随 7 月三星与 Broadcom 签署 $2000 亿五年 MOU 后，显示三星代工正在加速追赶 TSMC。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>三星代工的翻身策略很清晰：① 用 MOU 锁大客户（Broadcom）；② 用 AI 优化良率（聘请 Meta 老将做 AI 驱动制造）。TSMC 的优势在工艺领先，三星的优势在"一站式 + AI 加持"。如果 2nm 良率能靠 AI 提速到 70%+，三星代工的盈亏平衡点会提前到来。</div>
+        <div class="ticker">📌 关联标的：005930.KS 三星电子 / AVGO Broadcom — 三星代工份额提升受益；TSM 承压</div>
+        <div class="source">🔗 Source: <a href="https://en.sedaily.com/finance/2026/08/14/samsung-recruits-meta-veteran-to-speed-up-ai-chip-fab-push" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/SMIC] → 下游 [AI 芯片设计 — NVDA/AVGO/AMD] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：NAND 存储（SanDisk 80% 毛利率指引重估全板块）+ 成熟制程代工（SMIC 产能满载提价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹僵局 · 油价博弈</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹僵局</span>
+        <h4>Brent 在 $84-90 间震荡：伊朗坚持"不满足条件不开放"，特朗普要求战争赔偿，谈判陷入僵局</h4>
+        <p>8/10-14 霍尔木兹海峡危机持续。伊朗外长 Araghchi 表示"接近与阿曼达成协议"，但"在美国满足条件前不会重新开放"——条件包括解除制裁和支付战争赔偿。特朗普则反过来要求伊朗支付战争赔偿。Brent 原油 8/10 升至 <strong>$87.72</strong>，8/11 突破 <strong>$88.91</strong>，盘中一度破 <strong>$90</strong>。8/14 回落至 <strong>$84-85</strong> 区间，受美国 CPI 降温 + 需求担忧影响。IEA 8 月报指出 7 月油价波动区间达近 <strong>$40</strong>，地缘溢价显著。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>霍尔木兹已经从"短期危机"变成"持续性地缘溢价"。对 lainy 要记住的链条：僵局持续 → 油价 $85-90 区间 → 通胀粘性 → 美联储 9 月不敢轻易降息 → 科技股估值承压。但本周 CPI 回落至 3.4% 提供了缓冲——如果油价不再往上冲，通胀预期暂时可控。关键变量仍是：阿曼斡旋能否取得突破？</p>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源ETF）— 高油价持续受益；JETS（航空）/ XLY（可选消费）受损</div>
+        <div class="source">🔗 Source: <a href="https://www.aljazeera.com/economy/2026/8/10/oil-prices-climb-as-iranian-demands-cloud-outlook-for-strait-of-hormuz" target="_blank">Al Jazeera</a> · <a href="https://www.cnbc.com/2026/08/11/oil-prices-today-us-crude-84.html" target="_blank">CNBC</a> · <a href="https://www.iea.org/reports/oil-market-report-august-2026" target="_blank">IEA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊博弈</span>
+        <h4>特朗普称"仅部分控制"霍尔木兹；伊朗称只允许中国船只通行——中国成最大变数</h4>
+        <p>据 Wikipedia 2026 霍尔木兹危机词条，特朗普 8 月初声称美国对霍尔木兹有"完全控制权"，伊朗反驳。3 月曾有报道称伊朗将"只允许中国船只通过"霍尔木兹——因为中国在冲突升级以来一直支持伊朗。中国是伊朗石油最大买家。阿曼与伊朗接近达成通行协议，但美国条件与伊朗条件互斥，谈判实质陷入"谁先让步"的囚徒困境。</p>
+        <div class="why">🦞 <b>市场含义：</b>中国在这场博弈中处于微妙位置——如果伊朗真的"只放中国船"，中国航运企业反而获得地缘溢价。但如果霍尔木兹长期不正常运作，中国进口油价和能源安全都受影响。这是一个"短期利好、长期利空"的矛盾信号。</p>
+        <div class="ticker">📌 关联标的：600028 中国石化 / 601857 中国石油 / VLCC 油轮运费指数 — 中国航运企业可能获得地缘溢价</div>
+        <div class="source">🔗 Source: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank">Wikipedia</a> · <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank">EIA</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹/红海航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹持续受阻，油轮保费上涨）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 回落 · 零售销售暴雷 · 美联储观望</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">CPI 回落</span>
+        <h4>美国 7 月 CPI 同比 +3.4%（环比 +0.1%），连续两月回落——但 7 月零售销售环比 -0.6% 大幅暴雷</h4>
+        <p>8/12 BLS 公布 7 月 CPI：环比 <strong>+0.1%</strong>，同比 <strong>+3.4%</strong>，较 6 月回落（6 月环比 -0.4%）。CPI 数据低于预期，市场对 9 月美联储加息的预期显著降温——Reuters 报道交易员已倾向 9 月按兵不动。但 8/14 公布的 7 月零售销售环比 <strong>-0.6%</strong>，远逊预期，暗示消费者开始"收手"。密歇根大学 8 月消费者信心指数初值降至 <strong>51</strong>，低于预期的 55。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>两个数据组合在一起讲了一个故事：通胀在降温，但消费也在降温。这就是"软着陆"vs"硬着陆"的分歧点。如果消费放缓速度超过通胀降温速度 → 经济衰退风险上升 → 美联储反而需要降息。对 lainy：当前市场在"Goldilocks"（通胀降+经济稳）和"Stagflation"（通胀降+经济也降）之间摇摆，下周 FOMC 会议纪要 + PCE 数据将给出更多线索。</p>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，CPI 降温利好但零售暴雷带来分歧）/ GLD 黄金（$4,380 避险需求仍在）/ 513130 港股通科技ETF</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/12/cpi-inflation-report-july-2026.html" target="_blank">CNBC</a> · <a href="https://www.bls.gov/news.release/cpi.nr0.htm" target="_blank">BLS</a> · <a href="https://www.reuters.com/business/traders-stick-narrow-bets-september-fed-hold-after-inflation-data-2026-08-12/" target="_blank">Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金守 $4,380：CPI 降温支撑 + 霍尔木兹僵局避险，盘中触及 $4,500 后回落</h4>
+        <p>8/14 黄金收 <strong>$4,380.40</strong>，涨 $16.80。本周黄金在 <strong>$4,349-4,500</strong> 间宽幅震荡。CPI 降温一度推升金价至 <strong>$4,500</strong>，但美元反弹和长债收益率上行压制涨幅。Trading Economics 指出外交僵局持续令投资者保持谨慎。LiteFinance 预测 8 月底黄金可能触及 <strong>$4,084-4,120</strong> 区间——但当前价格已远超此预测。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,400 以上企稳 = 市场在定价"通胀降了但风险没降"。霍尔木兹僵局 + 消费者信心下滑 = 双重避险需求。央行买盘（中国 18 个月连续增持）仍是结构性支撑。对 lainy 的配置框架：黄金是当前"高通胀+地缘混乱+消费放缓"环境的核心配置。</p>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金ETF）— 央行持续买入，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://www.golddealer.com/gold-prices-rebound-cautiously/" target="_blank">GoldDealer</a> · <a href="https://www.cnbc.com/select/the-price-of-gold-today-august-14-2026/" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [通胀预期/消费者信心] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：CPI 降温但零售暴雷，美联储面临"抗通胀 vs 防衰退"两难</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/14 沪指 +0.01% 报 3927 / 深成指 +0.45% / 创业板 +1.12% / 成交 2.14 万亿</h4>
+      <p>8/14 四大指数集体收涨，创业板走势较强。<b>板块方面：</b>电子、CPO 概念震荡拉升，算力租赁板块回暖，稀土、液冷概念走强；高位股集体下挫，多股跌停。<b>涨跌幅 TOP 3：</b>CPO 概念领涨，电子化学品、非金属材料涨幅居前；大消费普跌，金融三马车走弱。<b>异动：</b>权重电信运营、煤炭、有色、石油涨幅靠前，AI 概念全线上攻。<b>市场风格：</b>从"消费价值"切向"硬科技成长"，存量博弈下无量行情易跌难涨。两市涨停 63 只，跌停 14 只，绿盘个股数量居多。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/14 恒指 -1.1% 报 25,117 / 恒科 -1.77% 报 4,708 / 四连跌 / 京东 -10%+</h4>
+      <p>8/14 港股三大指数低开低走，恒指录得 <strong>四连跌</strong>。<b>领跌：</b>科网股普跌——京东跌超 <strong>10%</strong>（Q2 营收十年来首次下滑，Bloomberg 评"中国消费疲软最新信号"），美团跌超 4%，联想跌超 3%。<b>逆势上涨：</b>中芯国际、中国电信、港铁公司涨幅居前；黄金等有色金属板块逆势走强（中国大冶有色 +14.85%，中国黄金国际 +14.64%）。京东系集体承压，做空规模达 $1.86 亿。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/14 S&P -0.2% 报 7,786 / 纳指 -0.3% / 道指 -0.2% / 连涨三周后回调</h4>
+      <p>8/14 美股从历史高点回落：S&P 500 从 <strong>7,800</strong> 历史高位下滑 -0.2%，道指跌 108 点，纳指 -0.3%。<b>原因：</b>① 7 月零售销售环比 -0.6% 大幅暴雷；② Applied Materials 财报后跌超 5% 拖累芯片板块；③ Broadcom 融资风险担忧蔓延。<b>逆势亮点：</b>Reddit（RDDT）因宣布纳入 S&P 500 暴涨 <strong>14%</strong>至 $182，8/18 正式加入；SanDisk 飙 <strong>9%</strong>，全美成交额第一。Russell 2000 创历史新高。<b>周线：</b>S&P 连涨三周后首次回调，纳指 100 周涨 1.2%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/14 KOSPI +2.41% 收近 7,000 / 周涨 11.5% 终结七周连跌 / 三星 +2.43% / SK Hynix +3.26%</h4>
+      <p>8/14 KOSPI 连续第五日上涨，收涨 <strong>+2.41%</strong> 逼近 7,000 大关，周累涨 <strong>11.5%</strong>，终结七周连跌，从 7/30 低点反弹约 <strong>22%</strong> 进入技术牛市。<b>权重股：</b>三星电子 +2.43% 收 274,500 韩元，SK Hynix +3.26% 收 1,645,000 韩元，三星优先股 +4.15%，SK Square +3.31%。<b>驱动：</b>SanDisk Investor Day 80% 毛利率指引 → NAND 全板块重估 → SK Hynix/Solidigm IPO 估值上调 → 韩国存储双寡头受益。KOSDAQ 同步走强，生物科技和芯片设备股领涨。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>京东财报 · 茅台调价 · 消费分化</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">京东财报</span>
+        <h4>京东 Q2 十年首见营收下滑：利润超预期但产品销售收入下降，港股暴跌 10%+</h4>
+        <p>8/13 京东发布 Q2 财报：利润超预期（外卖补贴战降温后利润率回升），但产品销售收入出现 2014 年上市以来首次季度下滑。Bloomberg 评价为"中国消费疲软的最新信号"。8/13-14 京东港股两日累跌超 <strong>18%</strong>，做空规模 $1.86 亿。同期京东 Q2 财报也显示 AI 技术深度嵌入供应链——用多模态大模型帮家电企业做智能化新品、用数字人降低直播成本、在四川建无人机配送网络。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>京东是中国最大的自营电商，它的营收下滑不是公司问题，是中国消费大盘的缩影。"服务零售 +5.3% vs 商品零售 +1.1%"的结构分化在这里具象化了——人们还在花钱，但花在体验上而非买商品上。对 lainy：消费股投资要分清"服务消费"（餐饮/旅游/文娱）和"商品消费"（电商/家电/零售）——前者在涨，后者在跌。</p>
+        <div class="ticker">📌 关联标的：09618.HK 京东 / JD（美股ADR）/ 09988.HK 阿里 / KWEB（中概互联ETF）— 中国电商板块承压，服务消费相对受益</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-13/jd-com-profit-beats-estimates-after-food-delivery-fight-calms" target="_blank">Bloomberg</a> · <a href="https://www.investing.com/news/earnings/jdcom-shares-slide-9-as-weak-retail-growth-overshadows-q2-earnings-beat-4859653" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">茅台调价</span>
+        <h4>茅台上半年净利微降，线下自营店挂牌零售价调整——以"价格锚点"托举全渠道价盘</h4>
+        <p>8/14 贵州茅台半年报：上半年净利润微降。公司回应行业周期、调价机制、渠道建设等市场关切。线下自营店挂牌零售价调整被酒业分析师肖竹青解读为：① 树立线下价格锚点，引导流通渠道报价向合理区间靠拢；② 保护 i 茅台平台价格优势与活跃度；③ 主动管理品牌价值，避免生肖/纪念类产品价格破位。300-500 元价位段成为婚宴市场主力选择。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>茅台调价不是"降价"，是"锚定"——让自营店挂牌价成为市场参考系，拉住渠道价不让它继续往下掉。白酒行业目前处于周期底部区域，茅台作为"价格之锚"的稳定性比它的增长更重要。对 lainy：茅台半年报净利微降 = 白酒行业整体承压确认，但茅台的定价权仍然是最强的，这是它和其他白酒品牌的本质区别。</p>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 000858 五粮液 / 002304 洋河股份 — 白酒行业底部区域，茅台定价权仍最强</div>
+        <div class="source">🔗 Source: <a href="https://www.163.com/dy/article/L4AT5HKI053469RG.html" target="_blank">网易/证券时报</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料/农业] → 中游 [食品加工/白酒酿造] → 下游 [电商/超市/餐饮/婚宴] — 当前受益环节：服务型消费（餐饮/文娱），受损环节：商品型电商（京东营收下滑）和低端白酒</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA</span>
+        <h4>Russell Westbrook 退役 + LeBron James 自由球员去向未定 + 湖人 $125 亿易主创纪录</h4>
+        <p>本周 NBA 休赛期重磅不断：① Russell Westbrook 正式宣布退役——曾效力雷霆/火箭/湖人/快船等多队，NBA 历史三双王；② LeBron James 自由球员去向仍未定，ESPN 报道"可能深入 8 月才有答案"；③ 湖人以 <strong>$125</strong> 亿估值被前迪士尼 CEO Bob Iger + Joshua Kushner 收购，创北美职业体育队伍出售价格纪录，尚需 NBA 老板投票批准。Jalen Duren 与活塞续约谈判陷入僵局。</p>
+        <div class="why">🦞 <b>花边点评：</b>Westbrook 退役标志一个时代结束——他是 NBA 历史上最"暴力美学"的控卫之一，三双机器。湖人 $125 亿易主更炸裂——对比 2024 年凯尔特人 $60 亿出售，翻了一倍。体育队伍正在变成"另类资产"，对 lainy：这是"稀缺资产溢价"的典型案例——NBA 球队就 30 支，供给极度有限。</p>
+        <div class="source">🔗 Source: <a href="https://www.espn.com/nba/story/_/id/48377855/2026-nba-buzz-latest-live-updates-news-intel-nba-draft-offseason" target="_blank">ESPN</a> · <a href="https://sports.yahoo.com/articles/nba-takes-page-nfl-schedule-173041344.html" target="_blank">Yahoo Sports</a> · <a href="https://www.nytimes.com/athletic/7508992/2026/08/12/lakers-north-american-sports-franchise-sales-record/" target="_blank">The Athletic</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">热搜</span>
+        <h4>迪丽热巴香港路演获周星驰盛赞"有天然喜剧天赋的天才演员"，全网刷屏</h4>
+        <p>8/8 迪丽热巴在香港为电影《功夫女足》路演，和周星驰、刘嘉玲一同谢票。周星驰用粤语主持并高度称赞她是"有天然喜剧天赋的天才演员"，还主动帮语言不通的她翻译观众提问。热巴高马尾白 T 恤清爽造型，听不懂粤语憋笑的可爱路透全网刷屏，现场观众喊"巴爷"让她害羞跺脚，登上全网热搜。</p>
+        <div class="why">🦞 <b>轻松一下：</b>周星驰夸人向来吝啬，说热巴有"天然喜剧天赋"已经是极高评价了。《功夫女足》目前暑期档票房 17 亿领跑，热巴的路演热度说明她的路人盘很扎实。lainy 周末如果刷到热巴憋笑的片段，这就是为什么——她听不懂粤语。</p>
+        <div class="source">🔗 Source: <a href="https://ent.sina.cn/2026-08-09/detail-inimtchm1863544.d.html" target="_blank">新浪娱乐</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">娱乐热搜</span>
+        <h4>田馥甄否认 S.H.E 将开演唱会 + 王安宇体态被放大引讨论 + 白鹿"蛇塑"撞柳智敏人设</h4>
+        <p>本周微博热搜多聚焦娱乐话题：① 田馥甄（Hebe）否认 S.H.E 将开演唱会，称"不是故意让粉丝失望"；② 演员王安宇在安徽打篮球被路人拍到走路脖子前倾，引发"明星私下体态该不该被放大审视"讨论；③ 白鹿一组黑纱写真被贴上"蛇塑"标签，撞上 aespa 成员柳智敏"蛇系美人"人设，引发跨圈审美讨论；④ 王嘉尔与宋雨琦恋情传闻再被翻炒，爆料人已删帖跑路。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这些热搜大部分是"话题制造"而非真新闻，但它们的传播逻辑值得关注——明星的每一个细节都可能被放大成"事件"。对 lainy 来说，知道这些热搜存在就够了，不用深究。</p>
+        <div class="source">🔗 Source: <a href="https://ent.china.com/movie/newszh/11005281/20260814/49675661_all.html" target="_blank">中华网娱乐</a> · <a href="https://k.sina.com.cn/article_7879776328_1d5abd848068022y92.html" target="_blank">新浪娱乐</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>科学家发现衰老大脑与身体的连接比想象中紧密——可能改写神经科学教科书</h4>
+        <p>8/14 Science Daily 报道，科学家发现衰老的人脑可能远不像此前认为的那样"与身体隔离"。传统观点认为大脑受血脑屏障保护、独立运作，但新研究表明大脑与全身系统的分子交流在衰老过程中扮演重要角色。同日 Universe Today 报道天文学家发现三个超大质量黑洞正在合并——首次观测到此类三体合并事件，对理解星系演化意义重大。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>大脑-身体连接的发现意味着很多神经退行性疾病（阿尔茨海默症等）可能有全身性治疗方案——不只能治脑，还能从身体入手。至于黑洞三体合并——宇宙也在玩"三体问题"，而且比小说更壮观。</p>
+        <div class="source">🔗 Source: <a href="https://www.sciencedaily.com/news/top/science/" target="_blank">Science Daily</a> · <a href="https://www.universetoday.com/" target="_blank">Universe Today</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
