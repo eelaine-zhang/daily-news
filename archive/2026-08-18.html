@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-18</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 18 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Nvidia 豪掷 $1050 亿：</b>为 OpenAI 俄亥俄州 8GW 数据中心提供融资担保，总项目成本可达 $5000 亿——AI 军备竞赛进入"基建化"阶段。</li>
+      <li><b>美伊停火到期无果：</b>60 天停火协议周一到期，双方未达成任何持久协议；特朗普威胁 Oman"别挡道"，Brent 升至 $90.76。</li>
+      <li><b>中国 7 月数据暴雷：</b>社零仅 +0.6%（预期 +1.5%），工业增加值 +4.5%（不及预期），但 A 股逆势大涨——沪指 +1.41% 逼近 4000 点。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Nvidia × OpenAI</span>
+        <h4>$1050 亿担保炸场：Nvidia 为 OpenAI 俄亥俄州 8GW 数据中心提供融资，AI 军备竞赛进入"基建化"</h4>
+        <p>8/17 据 Bloomberg、Reuters、CNBC 报道，Nvidia 向 SEC 提交文件显示，已同意为 OpenAI 在俄亥俄州 Pike County 的新数据中心园区提供最高 <strong>$1050</strong> 亿（约 105 billion USD）的融资担保，覆盖土地、电力和基础设施。该项目总成本可达 <strong>$5000</strong> 亿，规划 <strong>8 GW</strong> 算力容量，2028 年开始运营。Nvidia 将成为该 site 的<strong>独家芯片供应商</strong>。SB Energy 参与开发，OpenAI 为租赁方。这是 AI 迄今最大规模的单体数据中心投资。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不只是一笔交易，是 AI 产业链商业模式的结构性变化——Nvidia 从"卖芯片"变成"融资+卖芯片+锁定算力"。$1050 亿担保意味着 Nvidia 在用自己的资产负债表为 AI 基建兜底。对 lainy 的金融框架：① Nvidia 的收入确认方式会更复杂（融资担保 vs 直接销售）；② 8 GW 相当于 8 个核电站的功率，电力和冷却基建是真正的瓶颈；③ OpenAI 绑定 Nvidia 独家供应 = AMD/Google TPU 被排除在外，GPU 垄断在加深。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，核心受益）/ MSFT（OpenAI 最大投资方）/ AMD（被排除风险）/ SMH（半导体 ETF）— Nvidia "基建化"加深护城河</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-17/nvidia-to-invest-up-to-105-billion-for-openai-data-center-in-ohio" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/08/17/nvidia-financing-open-ai-data-center-ohio.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/2026/08/17/technology/nvidia-ohio-data-center-openai.html" target="_blank">NYT</a> · <a href="https://www.axios.com/2026/08/17/openai-nvidia-ohio-data-center-sb-energy" target="_blank">Axios</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星 × SK Hynix 股东回报</span>
+        <h4>三星与 SK Hynix 半年现金暴增 117 万亿韩元，市场预期两家将公布 $1090 亿股东回报计划</h4>
+        <p>据朝鲜日报 8/17 报道，三星电子与 SK Hynix 在 2026 上半年合计新增现金及短期金融资产近 <strong>117 万亿韩元</strong>（约 $848 亿），两家公司运营利润合计达 245 万亿韩元。Bloomingbit 报道指出，多家券商预计三星和 SK Hynix 本月可能公布合计至少 <strong>150 万亿韩元</strong>（约 $1090 亿）的股东回报计划——包括分红和回购。此前两家公司承诺将过去三年自由现金流的 50% 用于股东回报。</p>
+        <div class="why">🦞 <b>商业含义：</b>AI 内存"印钞机"效应全面显现。HBM3E/HBM4 需求爆发让三星和 SK Hynix 的现金流以前所未有的速度积累——半年 $848 亿新增现金，比很多科技巨头一年的利润还多。$1090 亿回报计划如果落地，将成为韩国股市史上最大规模股东回报。对 lainy：这验证了"AI capex → 内存利润传导"的核心逻辑。韩股估值重估的关键催化剂就在这里。</div>
+        <div class="ticker">📌 关联标的：005930.KS（三星电子）/ 000660.KS（SK Hynix）/ SKHY（SK Hynix ADR，7/10 上市募资 $265 亿）— HBM 双寡头现金流"印钞机"</div>
+        <div class="source">🔗 Source: <a href="https://www.chosun.com/english/industry-en/2026/08/17/RAN4PVGRS5C43EEN653MKYBBM4/" target="_blank">Chosun</a> · <a href="https://en.bloomingbit.io/feed/news/118473" target="_blank">Bloomingbit</a> · <a href="https://mbiz.heraldcorp.com/article/10843196" target="_blank">Herald Business</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国算力</span>
+        <h4>工信部：上半年智能算力达 2185 EFLOPS，同比 +177%；国产超节点市场 2028 年将破万亿</h4>
+        <p>据 Digitimes 8/17 报道，中国工信部数据显示，2026 上半年全国智能算力达到 <strong>2185 EFLOPS</strong>，同比增长 <strong>177%</strong>。国海证券预测国产超节点（supernode）市场将从 2026 年的 889 亿元飙升至 2028 年的 <strong>1.109 万亿元</strong>。同期 SK Hynix 公布 AI Infrastructure Insight，展示 54 万亿韩元投资于龙仁 Y2 和清州 M17 的产能扩张计划。</p>
+        <div class="why">🦞 <b>读给你听：</b>2185 EFLOPS 是什么概念？相当于 2185 个百万亿浮点运算/秒。177% 的增速意味着中国算力基建在"翻倍再翻倍"。超节点（supernode）是 AI 训练集群的新架构——把多个 GPU 节点用高速互联组成一个"超级节点"，减少通信延迟。对 lainy 的框架：中国 AI 算力基建不减速，但"国产替代"加速——华为昇腾、寒武纪等受益。</div>
+        <div class="ticker">📌 关联标的：688256 寒武纪（国产 AI 芯片）/ 002236 大华股份（算力基建）/ 688981 中芯国际（国产制程配套）</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260817VL202/weekly-news-roundup-capacity-demand-expansion-liquid-cooling-revenue.html" target="_blank">Digitimes</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片 — NVDA/AVGO/华为] → 终端 [云厂 — OpenAI/MSFT/GOOG] — 当前受益环节：下游算力基建（Nvidia $1050 亿担保锁定）+ HBM 内存（三星/SK Hynix 现金暴增）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊停火到期 · 油价 · 霍尔木兹</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火到期</span>
+        <h4>60 天停火协议周一到期无果：特朗普威胁 Oman"别挡道"，伊朗称霍尔木兹"是伊朗的、将永远是伊朗的"</h4>
+        <p>8/17 综合 CNN、Fox News、Guardian 报道，美国与伊朗 60 天停火协议于周一到期，双方未达成任何持久和平协议。特朗普在社交媒体称"很快将宣布霍尔木兹海峡为美国领土"，并威胁阿曼"如果挡道就轰炸"。伊朗副外长反驳"霍尔木兹是伊朗的、曾经是、将来也是"。伊朗同时表示正与阿曼敲定霍尔木兹海峡通行的联合声明。Kushner 同日在以色列会见内塔尼亚胡。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>停火到期 = 地缘风险重新定价。三种情景：① 双方延长停火（低概率，双方姿态强硬）；② 局部冲突升级（中等概率，特朗普可能加大制裁或封锁）；③ 阿曼-伊朗达成霍尔木兹通行协议绕过美国（中等概率，但特朗普已威胁阿曼）。对 lainy：地缘不确定性 = 油价溢价 = 通胀粘性 = 美联储难降息 = 科技股估值承压。这条传导链是核心。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价持续）/ XLE（能源 ETF）/ 600028 中国石化 / JETS（航空 ETF，高油价受损）</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/08/17/world/live-news/iran-war-trump" target="_blank">CNN</a> · <a href="https://www.foxnews.com/live-news/us-iran-war-news-trump-israel-hormuz-august-17" target="_blank">Fox News</a> · <a href="https://www.theguardian.com/world/live/2026/aug/17/trump-kushner-netanyahu-hamas-gaza-israel-blair-us-iran-hormuz-oil-latest-news-updates" target="_blank">Guardian</a> · <a href="https://www.thenationalnews.com/news/us/2026/08/16/deadline-for-us-iran-agreement-expires-with-stalemate-set-to-continue/" target="_blank">The National</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>Brent 升至 $90.76（+2.53%）/ WTI $84.58（+2.65%）——停火到期 + 油轮遇袭推高风险溢价</h4>
+        <p>8/17 收盘：Brent 原油上涨 <strong>$2.24</strong>（+2.53%）至 <strong>$90.76</strong>/桶，WTI 上涨 <strong>$2.18</strong>（+2.65%）至 <strong>$84.58</strong>/桶。上涨驱动：① 60 天停火协议到期无果；② 涉及 ADNOC 运营油轮的袭击事件导致霍尔木兹海峡通行放缓；③ 以色列对黎巴嫩发动新一轮空袭致 11 人死亡。Reuters 报道指出，油价已"几乎完全收复 8 月初的跌幅"，地缘风险溢价重返市场。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>上周报过的 Brent $88.52 → 今天 $90.76，方向一致。关键变化是停火到期——这意味着"最坏的情况可能还没过去"。交易员目前定价 9 月加息概率约 30%，如果 Brent 站稳 $90+ 并继续上行，加息概率会快速攀升。关注：本周无 FOMC 会议，但 8/21 美联储 7 月纪要 + 8/27-29 Jackson Hole 是下一个宏观节点。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / XOP（油气开采 ETF）— 高油价受益；XLY（可选消费）/ JETS（航空）受损</div>
+        <div class="source">🔗 Source: <a href="https://invezz.com/news/2026/08/17/evening-digest-trump-rejects-iran-truce-extension-gold-oil-gains/" target="_blank">Invezz</a> · <a href="https://www.reuters.com/business/energy/" target="_blank">Reuters Energy</a> · <a href="https://www.arabnews.com/node/2654941/business-economy" target="_blank">Arab News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹/红海航线，通行放缓] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（油轮遇袭 + 通行放缓），下游炼化成本上升</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>中国 7 月数据暴雷 · 美国零售连跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">中国 7 月数据</span>
+        <h4>中国 7 月经济数据全面不及预期：社零 +0.6%（预期 +1.5%）、工业增加值 +4.5%（预期 +4.8%）、固定资产投资 -6.7%</h4>
+        <p>8/17 国家统计局公布 7 月经济数据：① 社零总额同比仅 <strong>+0.6%</strong>，大幅不及预期的 +1.5%，前值 +1.0%；② 工业增加值 <strong>+4.5%</strong>，不及预期的 +4.8%，前值 +5.3%；③ 1-7 月固定资产投资 <strong>-6.7%</strong>，预期 -6.0%，前值 -5.7%；④ 7 月地产投资 <strong>-19.2%</strong> 同比；⑤ 城镇失业率 5.2%（6 月 5.0%）。Reuters、CNBC、Bloomberg 均以"China's recovery sputters"为标题报道。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要关注的宏观信号。社零 +0.6% 是极其疲软的数字——意味着国内消费引擎近乎熄火。地产投资 -19.2% 说明房地产下行周期还在加速。但矛盾的是，A 股当天大涨——市场在博弈"数据越差，刺激越大"的逻辑。对 lainy 的金融视角：短期看政策预期，中期看基本面，这两者目前是背离的。如果后续政策不及预期，回调风险大。</div>
+        <div class="ticker">📌 关联标的：510300 沪深300ETF / 512760 半导体ETF（政策受益方向）/ 600048 保利发展（地产，承压）— 消费疲软 + 地产下滑，市场博弈刺激政策</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/17/china-economy-sales-investment-july-.html" target="_blank">CNBC</a> · <a href="https://www.reuters.com/world/china/chinas-industrial-output-slows-july-retail-sales-miss-forecasts-2026-08-17/" target="_blank">Reuters</a> · <a href="https://www.businesstimes.com.sg/international/global/chinas-economy-loses-momentum-july-factory-output-retail-sales-and-investment-all-miss-forecasts" target="_blank">Business Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国消费降温</span>
+        <h4>美国 7 月零售销售环比 -0.6% 创一年最大降幅：消费引擎减速，高盛警告 H2 增速或降至 1%</h4>
+        <p>8/14 公布的美国 7 月零售销售环比 <strong>-0.6%</strong>（预期 +0.1%），创 2025 年 5 月以来最大降幅。核心零售（剔除汽车/建材/加油站）<strong>-0.4%</strong>。电商（含 Amazon）跌幅居前。密歇根大学消费者信心指数从 55.2 降至 <strong>51.0</strong>，一年通胀预期从 4.2% 升至 <strong>4.3%</strong>。高盛警告 H2 2026 实际消费支出增速可能放缓至 <strong>1%</strong>。本周 Walmart、Target、Home Depot、Lowe's 等零售巨头将集中发布财报。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>上周报过的 -0.6% 暴雷，今天补充高盛的 H2 预测。关键新增信息：消费者信心跌至 51 + 通胀预期升至 4.3% = "滞胀"信号在强化。但 Schwab 指出 VIX 跌至 2026 新低 14.52——市场在"经济降温 = 不加息了"的逻辑下 risk-on。这周零售财报是验证窗口：Walmart（周四）是风向标。</div>
+        <div class="ticker">📌 关联标的：WMT（Walmart，周四财报）/ TGT（Target，周三）/ XLY（可选消费 ETF）/ SPY — 消费降温 = 加息概率下降 = 风险资产短期受益</div>
+        <div class="source">🔗 Source: <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a> · <a href="https://www.benzinga.com/markets/macro-economic-events/26/08/61238663/us-retail-sales-fall-0-6-percent-july-amazon-nonstore-retailers" target="_blank">Benzinga</a> · <a href="https://www.businessinsider.com/us-economic-outlook-consumer-slowdown-goldman-sachs-2026-8" target="_blank">Business Insider</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">本周宏观日历</span>
+        <h4>本周关键事件：美联储 7 月纪要（8/21）+ 中国 LPR + 零售巨头财报周 + Jackson Hole 8/27 开幕</h4>
+        <p>本周宏观密集：① 8/21 美联储公布 7 月 FOMC 会议纪要——市场寻找 9 月是否加息的线索；② 中国 8 月 LPR 报价——5 月降息后是否继续宽松；③ Walmart（8/21）、Target、Lowe's、Home Depot、TJX 集中公布财报；④ 8/27-29 Jackson Hole 全球央行年会——Powell 发言是 9 月 FOMC 前最重要的信号。VIX 处于 2026 新低 14.52，市场波动率极低，一旦超预期事件出现，调整可能剧烈。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>VIX 14.52 = 市场在"沉睡"。历史规律：VIX 新低 + 宏观事件密集 = 变盘窗口。三种情景：① 纪要鸽派 + 零售财报 OK → 风险资产继续涨；② 纪要鹰派（暗示加息）→ 科技股回调；③ 零售财报暴雷 → 消费股崩 + 避险升温。对 lainy：这周不宜追高，等纪要和财报落地。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，纪要驱动）/ VIX（波动率，极低位有反弹风险）/ 513130 港股通科技ETF — 本周宏观密集，建议观望</div>
+        <div class="source">🔗 Source: <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a> · <a href="https://www.fxcm.com/markets/insights/global-macro-and-markets-briefing-17-august-2026/" target="_blank">FXCM</a> · <a href="https://www.riotimesonline.com/global-economy-briefing-august-17-2026/" target="_blank">Rio Times</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：8/21 FOMC 纪要 + 零售财报将决定短期方向；VIX 极低位暗示变盘风险</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/17 沪指 +1.41% 报 3982.65 逼近 4000 / 深成指 +2.44% / 创业板 +3.14% / 科创50 +4.14% / 成交 2.39 万亿</h4>
+      <p>8/17 A 股单边普涨，超 <strong>4300</strong> 只个股上涨，逾百股涨停。半导体、算力硬件、CPO 概念全线爆发，长鑫科技飙涨 <strong>+12%</strong> 市值重回 4 万亿。药明康德 A/H 股双双涨超 4% 创历史新高。成交 2.39 万亿，较前日放量超 2000 亿。<b>异动：</b>白酒、影视板块逆势下挫。<b>逻辑：</b>市场博弈"数据越差→刺激越大"，但 7 月社零 +0.6% 的基本面严重背离。关注 4000 点关口能否站稳。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/17 恒指 +1.34% 报 25453 / 恒科 +1.58% 报 4782 / 止步四连跌</h4>
+      <p>港股三大指数全线回升，科技股领涨。京东 +2%+，阿里巴巴、腾讯、哔哩哔哩跟涨。中芯国际涨超 <strong>7%</strong>，光通信、芯片股大涨。PCB、存储、集运概念齐走强，建滔积板升 9%。黄金股、科网股普涨。<b>逻辑：</b>A 股科技反弹外溢 + 半导体周期叙事升温。但 7 月中国经济数据暴雷给反弹持续性打上问号。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/15 收盘：道指 -0.20% 报 53732 / S&amp;P -0.17% 报 7786 / 纳指 -0.28% 报 26729 / VIX 14.52 创 2026 新低</h4>
+      <p>周五三大指数小幅收跌，纳指领跌。连涨三周后回调。<b>本周看点：</b>零售巨头财报密集（WMT/TGT/HD/LOW/TJX）+ 8/21 FOMC 纪要。VIX 跌至 14.52 创年内新低——市场波动率极低，但对地缘风险（美伊停火到期）和消费降温的定价可能不足。存储芯片板块逆势爆发。McDonald's 财报拖累道指。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/14 KOSPI +2.42% 报 6977.94 / 周涨 +11.5% 终结七周连跌 / 三星 +2.43% / SK Hynix +3.26%</h4>
+      <p>KOSPI 连涨五日至接近 <strong>7000</strong> 关口。三星电子从 7 月低点反弹 <strong>45%</strong>，SK Hynix 双位数反弹。外资当周净买入 <strong>₩6.55 万亿</strong>（约 $46 亿），Bloomberg 报道韩股 10 天涨 22%。但韩国"末日博士"Kim Young-ik 警告涨势可能接近拐点。<b>催化剂：</b>三星与 SK Hynix 可能本月公布 $1090 亿股东回报计划。KOSPI 今天（8/18）因假期休市。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>茅台调价 · 空调排产 · 下沉市场</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">茅台</span>
+        <h4>茅台渠道大重构：i茅台 1 月 1499 → 8 月 1753 元/瓶，渐进式调价重塑全渠道价盘</h4>
+        <p>据网易财经 8/17 报道，2026 年茅台价格调整节奏前所未有：① 1 月 i茅台以 <strong>1499</strong> 元/瓶开售飞天茅台；② 3 月底提至 <strong>1539</strong> 元，经销商合同价涨至 1269 元；③ 7 月 18 日 i茅台涨至 <strong>1639</strong> 元，合同价 1369 元；④ 8 月 8 日线下自营店涨至 <strong>1753</strong> 元/瓶。业内人士认为渐进动态调价平滑了对消费市场的冲击，强化了 i茅台等自营渠道的价格锚定作用。此前公布的 H1 财报显示净利 445 亿同比微降。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>茅台在用"小步快跑"方式重构价格体系——以前以"年"为单位调价，现在以"月"为单位。这反映两个趋势：① 自营渠道（i茅台+线下店）占比提升，经销商话语权下降；② 茅台在试探消费端的价格承受力边界。对 lainy 的消费股框架：茅台从"渠道驱动"转向"品牌直控"，短期阵痛（批发收入缩水 21%），长期利好渠道利润回流。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（渠道重构短期阵痛，长期利好）— 关注 Q3 批价稳定性</div>
+        <div class="source">🔗 Source: <a href="https://www.163.com/dy/article/L4IOHD6105199NPP.html" target="_blank">网易财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>统计局：1-7 月社零 +2.6%，下沉市场活力增强；高能效家电零售增速超 30%，可穿戴设备翻倍</h4>
+        <p>8/17 国家统计局数据：1-7 月社零总额（含商品+服务）同比 <strong>+2.6%</strong>。商品零售 <strong>+1.1%</strong>，服务零售 <strong>+5.3%</strong>，服务继续跑赢商品。结构亮点：① 可穿戴智能设备零售额同比 <strong>+100%+</strong>；② 限额以上高能效等级家电零售增速 <strong>超 30%</strong>；③ 新能源汽车、节能家电、智能家居受青睐；④ 下沉市场消费活力增强。但单月 7 月社零仅 +0.6%，显示动能正在放缓。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>1-7 月累计 +2.6% vs 7 月单月 +0.6% = 消费减速非常明显。但结构性亮点值得注意：可穿戴翻倍 + 高能效家电 +30% = "消费升级"在特定品类仍在发生，只是整体大盘在降速。对 lainy 的投资框架：选消费股要看"品类 alpha"——智能穿戴（ 华为/小米手环）、节能家电（美的/海尔高端线）跑赢大盘。</div>
+        <div class="ticker">📌 关联标的：01810 小米（可穿戴+IoT）/ 000333 美的（高能效家电）/ 600690 海尔智家 — 结构性消费升级受益</div>
+        <div class="source">🔗 Source: <a href="https://www.163.com/money/article/L4IGOS2S00258105.html" target="_blank">网易财经</a> · <a href="https://english.news.cn/20260817/a75e9c4d9d1b46848b5eb11f2d6fcfff/c.html" target="_blank">新华社</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">空调排产</span>
+        <h4>空调 9 月排产内销下滑 6.5%：行业下半年面临更大挑战，但新技术换新潮流正在形成</h4>
+        <p>据新浪科技 8/17 报道，空调行业 9 月排产内销同比下滑 <strong>6.5%</strong>。但新风空调、AI 感知空调、温湿度双控机型持续扩容，空调定位从单纯制冷制热升级为全屋空气管理，联动除湿、净化、全屋智能，推动新生代消费群体换新动力。这与 1-7 月高能效家电 +30% 的数据相互印证。</p>
+        <div class="why">🦞 <b>读给你听：</b>空调行业的"量缩价升"趋势——总排产在降，但高端机型占比在升。对 lainy：这和手机行业的逻辑一样——换机周期拉长，但单台 ASP 在提升。关注美的、海尔的高端产品线占比变化，这决定毛利率走向。</div>
+        <div class="ticker">📌 关联标的：000333 美的（高端空调占比提升）/ 600690 海尔智家 / 002508 老板电器 — 传统家电承压，智能/高端转型受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/roll/2026-08-17/doc-ininrkkk0140532.shtml" target="_blank">新浪科技</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 铜/铝/塑料] → 中游 [制造 — 家电/食品加工] → 下游 [渠道 — 电商/超市/餐饮] — 当前受益环节：智能可穿戴（+100%）+ 高能效家电（+30%），受损环节：传统家电内销（排产 -6.5%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>D23 炸场 · Michael Jackson 传记片</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">D23</span>
+        <h4>D23 2026 终极炸场：X-Men 全新阵容公布——Adam Driver 演 Mister Sinister，Sadie Sink 演 Jean Grey，12 月 18 日上映</h4>
+        <p>8/14-16 迪士尼 D23 终极粉丝活动在 Anaheim 举行。最大爆点：Marvel 公布新版 X-Men 电影阵容——Sadie Sink 饰 Jean Grey、Kit Connor 饰 Cyclops、Christopher Abbott 饰 Professor X、Samara Weaving 饰 Emma Frost、Inde Navarrette 饰 Rogue、Maya Boyd 饰 Storm，<strong>Adam Driver</strong> 饰大反派 Mister Sinister。Jake Schreier 执导，2026 年 12 月 18 日上映。Adam Driver 现场还恶搞称自己演 Magneto，引发全场尖叫后才揭晓真实角色。Avengers: Doomsday 同期定档 12 月 18 日。</p>
+        <div class="why">🦞 <b>花边点评：</b>这个阵容太强了。Sadie Sink（《Stranger Things》Max）演 Jean Grey，Kit Connor（《Heartstopper》）演 Cyclops——Marvel 在用年轻演员重启 X-Men。Adam Driver 演 Mister Sinister 是绝杀——他那种亦正亦邪的气质太适合了。lainy 如果关注 MCU，这是 2026 下半年最值得期待的电影。</div>
+        <div class="source">🔗 Source: <a href="https://abcnews.com/GMA/Culture/disney-d23-2026-trailers-theme-parks-announcements/story?id=135624276" target="_blank">ABC News</a> · <a href="https://www.yahoo.com/entertainment/movies/article/disneys-9-biggest-d23-reveals-from-adam-drivers-x-men-prank-to-olafs-girlfriend-in-frozen-3-174317251.html" target="_blank">Yahoo</a> · <a href="https://nofilmschool.com/d23-2026" target="_blank">No Film School</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Michael Jackson 传记片</span>
+        <h4>Michael Jackson 传记片本周上映：Jaafar Jackson 饰演叔叔 MJ，Lionsgate 押注年度票房大片</h4>
+        <p>本周新片推荐：Michael Jackson 传记片由 Jaafar Jackson（MJ 侄子）主演，Lionsgate 出品，再现流行音乐之王巅峰时期。US Weekly 将其列为本周（8/17-20）必看四部新片之一。影片聚焦 Michael Jackson 巅峰时期——从 Jackson 5 到 Thriller 时代，成为"世界最大流行巨星"的故事。</p>
+        <div class="why">🦞 <b>轻松一下：</b>让亲侄子演 MJ 是最聪明的选角——外貌相似度拉满，舞蹈基因自带。lainy 周末如果想看电影，X-Men 要等 12 月，但 MJ 传记片这周就能看。</div>
+        <div class="source">🔗 Source: <a href="https://www.usmagazine.com/entertainment/news/4-top-new-movies-and-tv-shows-to-watch-this-week-august-17-20-26/" target="_blank">US Weekly</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Reacher 4</span>
+        <h4>Reacher S4 评价出炉：Alan Ritchson 继续"魅力满格"，但野心太大可能劝退新观众</h4>
+        <p>Amazon Prime 的 Reacher 第四季评论 8/18 解禁。Livemint 评价：Alan Ritchson 依然"magnetic"（魅力满格），但本季叙事"ambitious"（野心大）——多条时间线穿插，可能对新观众不友好。该剧是 Amazon 最成功的原创剧之一。</p>
+        <div class="why">🦞 <b>花边点评：</b>Reacher 系列的精髓就是"大个子打坏人"，第四季要玩多线叙事说明主创想突破天花板。lainy 如果没看过，前三季是可以放心入坑的爽剧。</div>
+        <div class="source">🔗 Source: <a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-18-2026-live-updates-11786993043597.html" target="_blank">Livemint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">数据中心报告</span>
+        <h4>全球 AI 数据中心市场报告：2025 年 $2150 亿 → 2040 年预测万亿美元级，GPU/ASIC/Arm vs x86 格局重塑</h4>
+        <p>GlobeNewswire 8/17 发布《2026-2040 全球 AI 数据中心计算市场报告》，核心发现：① 2025 年市场规模 <strong>$2150</strong> 亿，正在结构性转型；② GPU 阵营（Nvidia/AMD）与云厂自研 ASIC（Google TPU/AWS Trainium）既竞争又合作；③ Arm 架构在数据中心份额持续提升，挑战 x86（Intel/AMD）；④ AI 工厂（如 Nvidia-OpenAI 俄亥俄项目）成为新收入引擎。同日 LA Times 评论称 Nvidia $1050 亿投资"supercharges AI arms race"（超级充能 AI 军备竞赛）。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这个报告验证了一个趋势——数据中心不再是"机房"，而是"AI 工厂"。Huang（黄仁勋）提出的"AI factory"概念正在成为产业共识。对 lainy 的投资框架：GPU 是当前赢家，但云厂自研 ASIC 是长期变量——Google TPU 和 AWS Trainium 在特定场景已经可以替代 GPU。关注 5-10 年的架构竞争。</div>
+        <div class="source">🔗 Source: <a href="https://www.globenewswire.com/news-release/2026/08/17/3345987/28124/en/the-global-market-for-computing-and-ai-for-data-centers-report-2026-2040-evaluating-gpus-custom-asics-arm-vs-x86-and-strategies-of-nvidia-amd-google-and-aws.html" target="_blank">GlobeNewswire</a> · <a href="https://www.latimes.com/business/story/2026-08-17/nvidias-105-billion-bet-on-ohio-data-center-supercharges-ai-arms-race" target="_blank">LA Times</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
