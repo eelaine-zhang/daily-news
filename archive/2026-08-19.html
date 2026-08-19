@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-19</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; color: var(--text-dim); font-size: 13px; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 19 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>FOMC 纪要今夜发布：</b>7 月会议三人异议（Logan/Hammack/Kashkari 要求加息），市场定价 9 月加息概率约 30%；30 年期美债收益率冲至近二十年新高，油价 $90+ 让通胀故事更复杂。</li>
+      <li><b>美伊停火正式破裂：</b>60 天 MOU 到期无果，特朗普拒绝延长并威胁阿曼，Brent 突破 $90 大关后"股债汇三杀"；A 股逆势微涨，农业板块爆发 79 涨停。</li>
+      <li><b>Supermicro Q4 订单 $600 亿创纪录：</b>Nvidia 财报 8/26 发布前，下游服务器厂商（Asus/Supermicro/Gigabyte）订单全线飙升，AI 需求从硅片到服务器的传导链正在兑现。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">Nvidia × OpenAI</span>
+        <h4>持续关注 · Nvidia $1050 亿 OpenAI 担保：Fortune 质疑"比传闻少 $1450 亿"，黄仁勋亲自回应"不是循环融资"</h4>
+        <p>8/18 Fortune 报道，Nvidia 为 OpenAI 俄亥俄州数据中心提供的担保金额为 <strong>$1050</strong> 亿，远低于此前 WSJ/CNBC 传闻的约 <strong>$2500</strong> 亿——差额 <strong>$1450</strong> 亿。市场担忧焦点："循环融资"——Nvidia 投资数据中心 → OpenAI 租赁 → 用租费买 Nvidia 芯片 → Nvidia 收入增加 → 股价上涨 → 融资更多。黄仁勋亲自回应称"这不是循环融资"，BofA 维持"买入"评级目标价 <strong>$350</strong>。Nvidia 收盘 <strong>$225.01</strong>（-0.07%），盘前一度跌 1.93%。该担保覆盖初始 4.25GW，2028-2030 年分阶段启动，为期 20 年。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 8/18 日报过的 Nvidia-OpenAI 大单的"增量进展"——核心变化是 Fortune 把"比传闻少 $1450 亿"和"循环融资"的质疑推向台面。对 lainy 的金融视角：① "循环融资"质疑触及 AI capex 叙事的软肋——如果芯片厂自己出钱建数据中心让客户买自己的芯片，需求是不是"自导自演"？② BofA 反驳逻辑：$1050 亿 ≈ Nvidia 两个季度的经营现金流，不是"掏空家底"；③ Nvidia 8/26 财报才是真正的"裁判"——如果收入/指引超预期，循环融资质疑自然消散。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，8/26 财报）/ SMCI（Supermicro，已发布 Q4）/ OAIT（OpenAI 非上市）— 短期情绪承压，财报是关键拐点</div>
+        <div class="source">🔗 Source: <a href="https://fortune.com/2026/08/18/openai-data-center-deal-with-nvidia-comes-in-145-billion-lower-than-reportedsignaling-concerns-of-artificial-demand-for-chips/" target="_blank">Fortune</a> · <a href="https://www.cnbc.com/2026/08/18/nvidias-ai-moat-is-shifting-from-chips-to-capital.html" target="_blank">CNBC</a> · <a href="https://www.gurufocus.com/news/9040748/huang-says-the-105-billion-openai-deal-isnt-circular-financing" target="_blank">GuruFocus</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Supermicro Q4</span>
+        <h4>Supermicro Q4 财报炸裂：单季订单 $600 亿+，积压创历史新高；Asus 上调服务器指引</h4>
+        <p>Supermicro（SMCI）8/18 发布 Q4 财报：非 GAAP 摊薄 EPS <strong>$1.70</strong>（远超指引 $0.65-0.79），Q4 新订单超 <strong>$600</strong> 亿，积压订单创历史新高。同日 Asus 上调服务器业务展望，Gigabyte 订单也大幅增长。Digitimes 指出，从 Nvidia 的资本运作、TSMC 董事长 C.C. Wei 对 CSP 需求的评估，到美国 CSP 创纪录 capex，再到下游 Asus/Supermicro/Gigabyte 订单全线飙升——AI 需求正从上游硅片稳步传导到服务器和数据中心，收入/利润/积压都在兑现。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Supermicro 单季 $600 亿订单是个什么概念？相当于其 FY2025 全年收入的近 3 倍。这直接反驳了"AI 泡沫"论——需求不是在PPT上，而是在订单簿上。对 lainy：AI 投资链不是只有 Nvidia 一家赚钱，下游服务器/组装厂的利润也在加速。但注意 Supermicro 此前因会计问题遭做空，需关注审计风险。</div>
+        <div class="ticker">📌 关联标的：SMCI（Supermicro）/ 2357.TW（华硕）/ 2376.TW（技嘉）/ NVDA — 服务器供应链全面受益，但 Supermicro 审计风险仍存</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/earnings/call-transcripts/2026/08/18/super-micro-computer-smci-q4-2026-earnings-call-transcript/" target="_blank">Motley Fool</a> · <a href="https://www.digitimes.com/news/a20260818PD218/nvidia-asus-guidance-supermicro-outlook.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Samsung 机器人</span>
+        <h4>三星开设实体 AI/人形机器人研究实验室，从硬件投资延伸到 AI 控制层</h4>
+        <p>Digitimes 8/18 报道，三星电子已启动一个专注于人形机器人控制与操作的实体 AI 研究实验室。此举将其机器人业务从硬件投资延伸到 AI 和控制算法层。同日，北京宣布 <strong>2056</strong> 台人形机器人将参与大规模实景测试——中国企业（包括宇树科技）正在加速开发更快、更强的人形机器人。Digitimes 另一篇分析指出，人形机器人正从演示阶段走向量产，芯片设计重点从"追 TOPS"转向"感知-计算-决策-控制"的系统级效率。</p>
+        <div class="why">🦞 <b>读给你听：</b>三星做机器人实验室，和它做代工/HBM 逻辑一脉相承——不放过任何一个"未来算力入口"。人形机器人的芯片需求跟 GPU 不同：更强调低功耗、实时感知和运动控制，而非纯算力。对 lainy 的投资框架：人形机器人是"AI 从云端走向物理世界"的标志性事件，但离大规模商用还有 3-5 年。三星+宇树+特斯拉 Optimus 是值得长期跟踪的三条线。</div>
+        <div class="ticker">📌 关联标的：005930.KS（三星电子）/ 002747 埃斯顿（机器人）/ 688169 石头科技 — 主题概念，短期无业绩支撑</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260818VL210/samsung-robotics-robot-manufacturing-data.html" target="_blank">Digitimes</a> · <a href="https://www.digitimes.com/news/a20260818VL212/beijing-robot-robotics-performance-2026.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OCP Korea / 台北</span>
+        <h4>OCP Korea Tech Day 8/21 首尔举行：NVIDIA/Cisco/AMD/Broadcom 1500 工程师齐聚；Nvidia 台北新总部推升 240MW 用电需求</h4>
+        <p>8/21（周五），OCP Korea Tech Day 2026 将在首尔 COEX 举行，NVIDIA、Cisco、Broadcom、AMD 及 <strong>1500</strong> 名工程师将讨论开放硬件标准——从 ORv3 机架、液冷到 scale-up 以太网。这决定了韩国 AI 硬件供应链能否在全球标准制定中获得话语权。另一方面，Nvidia 台北新总部选址北投士林科技园区，预计 2026 年底开工，但园区用电需求已达 <strong>240MW</strong>，台电紧急协调电力供应——AI 数据中心的"电力瓶颈"正从概念变成现实。</p>
+        <div class="why">🦞 <b>市场含义：</b>两个故事其实是同一个主题：AI 基建的瓶颈已经从"算力不够"变成了"连不连得起来、电够不够用"。OCP 标准之争 = 谁定义下一代 AI 数据中心架构；台北 240MW = 一个总部就把一个科技园区的电网逼到极限。对 lainy：电力/冷却基础设施是 AI 产业链最被低估的瓶颈环节。</div>
+        <div class="ticker">📌 关联标的：NVDA / CSCO（Cisco）/ AVGO（Broadcom）/ 2330.TW（台积电）/ 台电（非上市）— 标准之争影响长期格局</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/324867/20260818/seoul-hosts-global-ai-hardware-forum-friday-nvidia-cisco-amd-join-ocp-korea-tech-day.htm" target="_blank">TechTimes</a> · <a href="https://www.digitimes.com/news/a20260818PD210/taiwan-taiwan-power-company-demand-electricity-infrastructure.html" target="_blank">Digitimes</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/电力] → 中游 [代工 TSMC/三星/Intel] → 下游 [芯片设计 NVDA/AVGO/AMD] → 终端 [云厂 MSFT/GOOG/OpenAI] — 当前受益环节：下游服务器组装（Supermicro/Asus 订单创纪录），瓶颈环节：电力供应（240MW/台北、电力半导体短缺 2 年+）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价与全球风险偏好</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊停火破裂</span>
+        <h4>持续关注 · 60 天 MOU 正式到期无果：特朗普拒绝延长并威胁阿曼，Brent 破 $90 后"股债汇三杀"</h4>
+        <p>8/17 美伊 60 天临时停火谅解备忘录到期，特朗普明确表示"不寻求延长"，并警告斡旋方阿曼"别挡道，否则炸个稀巴烂"。伊朗方面称霍尔木兹海峡"是伊朗的、将永远是伊朗的"，威胁采取全面军事攻势。8/18 市场反应剧烈：Brent 10 月合约收涨 <strong>+2.65%</strong> 至 <strong>$90.87</strong>/桶，WTI 9 月合约 <strong>+2.55%</strong> 至 <strong>$84.58</strong>/桶。美国股债汇"三杀"：美股三大指数下挫、美债遭抛售（30 年期收益率冲至近二十年新高）、美元指数跌 0.03% 报 99.636。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>8/18 日报过停火到期，今天的增量是"三杀"——油价上涨不再是单纯的地缘事件，而是开始向股/债/汇三端传导。核心链条：油价 $90+ → 通胀预期上升 → 美债抛售/收益率飙升 → 股市估值承压 → 美元走弱。对 lainy：如果霍尔木兹海峡通行问题持续，$100+ 油价不是不可能，届时美联储 9 月加息概率会从 30% 跳到 50%+。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / XLE（能源 ETF）— 油价受益；TLT（长期美债 ETF）/ SPY 受损</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/business/2026/aug/18/oil-prices-rise-us-iran-brent-crude-donald-trump" target="_blank">The Guardian</a> · <a href="https://finance.sina.com.cn/stock/usstock/c/2026-08-18/doc-inintpir7414370.shtml" target="_blank">新浪财经</a> · <a href="https://www.fx678.com/202608181633059090.shtml" target="_blank">FX678</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采] → 中游 [航运 — 霍尔木兹海峡通行放缓] → 下游 [炼化/通胀传导] — 当前受损环节：中游航运（海峡通行风险升至最高），风险正向股/债/汇三端扩散</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 纪要今夜发布</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">FOMC 纪要</span>
+        <h4>FOMC 7 月会议纪要今日 14:00 EDT 发布：三人异议要加息，市场定价 9 月加息概率 30%</h4>
+        <p>今日（8/19）北京时间次日凌晨 2:00，美联储将发布 7 月 FOMC 会议纪要。7 月会议维持利率 <strong>3.50-3.75%</strong> 不变，但出现 <strong>3 票异议</strong>——地方联储主席 Logan、Hammack、Kashkari 均投票支持加息 25bp。Newsquawk 预览指出，市场将关注：① 异议者是否有更广泛的委员会同情；② AI 投资热潮可能固化通胀的论据；③ 劳动力市场是否"足够稳定"让 Fed 有空间优先恢复价格稳定。CME FedWatch 当前定价：9 月维持不变概率约 <strong>70%</strong>，加息 25bp 概率约 <strong>30%</strong>（较一周前的 50% 已下降）。10 年期美债收益率 <strong>4.6743%</strong>，30 年期冲至近二十年新高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是本周最核心的宏观事件。三种情景：① 纪要鸽派（强调"耐心等待"）→ 风险资产反弹、油价回落；② 纪要鹰派（异议者获广泛同情 + 通胀担忧）→ 科技股继续承压、油价溢价加剧；③ 中性（"看数据行事"）→ 维持现状。对 lainy：油价 $90+ 的背景下，FOMC 纪要的通胀措辞比以往更敏感——如果纪要明确提到"能源价格上行风险"，9 月加息预期会立刻跳升。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股）/ TLT（长期美债）/ GLD 黄金 / 513130 港股通科技ETF — 鸽派利好风险资产，鹰派利空</div>
+        <div class="source">🔗 Source: <a href="https://www.newsquawk.com/headlines/preview-fomc-minutes-due-wednesday-19th-august-2026-at-1900bst1400edt" target="_blank">Newsquawk</a> · <a href="https://www.investing.com/news/stock-market-news/fomc-minutes-crude-oil-inventories-among-economic-data-due-wednesday-93CH-4865840" target="_blank">Investing.com</a> · <a href="https://polymarket.com/event/fed-decision-in-september-762" target="_blank">Polymarket</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：FOMC 纪要措辞 + 油价能否回 $80s</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/18 沪指 +0.19% / 深成指 -0.56% / 创业板 -0.93% / 成交 24198 亿（+173 亿）</h4>
+      <p>三大指数涨跌不一，沪指探底回升翻红，深市和创业板收跌。全市场超 <strong>3200</strong> 只个股下跌，仅 <strong>79</strong> 家涨停、5 家跌停。<b>农业板块爆发</b>，十余只成分股涨停，成为全天最大亮点。科创 50 +0.11%，北证 50 +2.67%。资金面：成交额较前日增量 173 亿，市场在 4000 点关口前"攒着劲"。前日（8/17）大涨的科技板块出现获利回吐，资金轮动至防御性的农业/医药。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/18 恒指 +0.07% 报 25471 / 恒科 -0.9% 报 4739 / 阿里 +3% 领涨科网</h4>
+      <p>恒指午后由跌转涨，延续前日反弹。恒生科技指数盘中一度跌 <strong>2.2%</strong>，尾盘收窄至 -0.9%。<b>科网股分化：</b>阿里巴巴逆势涨超 <strong>3%</strong>，联想跌超 5%，美团/快手/哔哩哔哩跌超 2%。<b>半导体/AI 应用股大跌：</b>智谱跌超 13%，MINIMAX-W 跌超 4%，华虹宏力跌近 8%。<b>医药/黄金股活跃：</b>周生生涨超 19%。全日主板成交 2555 亿港元。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/18 S&amp;P -0.69% 报 7691 / 纳指 -1.33% 报 26289 / 道指 -0.22% 报 53343 / SOX -5.5%</h4>
+      <p>三大指数全线下跌，半导体板块领跌。<b>SOX 芯片指数跌 5.5%</b>，是今年表现最好的板块遭遇最大单日回撤。Caterpillar -2.86%、Nvidia -1.90%、Home Depot -1.24% 领跌道指；J&amp;J +2.29%、IBM +1.43%、Chevron +1.41% 逆势上涨。<b>核心压力：</b>油价飙升 + 30 年期美债收益率冲至近二十年新高 + 芯片股获利回吐。纳指 100 跌 1.7%。10 年期美债收益率 <strong>4.6743%</strong>。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/18 KOSPI -1.6% 报 6869 / KOSDAQ -2.11% 报 846 / 三星 -2.19% / SK Hynix +1.03%</h4>
+      <p>KOSPI 上周五休市（光复节），本周一开盘一度跳涨 <strong>2%</strong> 至 7127（受上周美股芯片股反弹带动），但随后持续回落，收盘翻跌 <strong>-1.6%</strong> 报 6869——一个交易日内从 +2% 到 -1.6% 的 <strong>3.6%</strong> 振幅。<b>三星电子收跌 2.19%</b> 报 268,500 韩元，SK Hynix 早期飙 8% 后收窄至 <strong>+1.03%</strong> 报 1,662,000 韩元。韩国"Korea Risk"地缘溢价叠加美伊紧张，外资回流不确定性上升。现代汽车 -0.44%，LG 能源解决方案 -2.57%。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>公积金新政 · 促消费组合拳</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">公积金新政</span>
+        <h4>国务院修改《住房公积金管理条例》：提取扩至 9 种（新增装修/物业费），10.9 万亿公积金从"买房专用"转向"住房全生命周期"</h4>
+        <p>8/18 新华社报道，李强签署国务院令公布修订后的《住房公积金管理条例》，<strong>9 月 20 日</strong>起施行。核心变化：① 提取情形从 6 种扩至 <strong>9 种</strong>，新增装修自住住房、支付物业费、国务院批准的其他住房消费；② 租房提取取消"房租超家庭收入规定比例"门槛；③ 灵活就业人员可自愿缴存；④ 利率定价权上收国务院；⑤ 公积金可购买政策性金融债。全国公积金结余 <strong>10.9 万亿</strong>，此次修订将其从"买房专用工具"转向覆盖租房/装修/物业/还贷的综合保障工具。地方落地细则已在推进：厦门装修提取上限 25 万元（1800 元/㎡），内蒙古上限 15 万元（1000 元/㎡）。</p>
+        <div class="why">🦞 <b>读给你听：</b>这是 1999 年以来公积金条例的第三次修订，力度很大。对 lainy 的金融视角：① 短期利好装修/物管行业（金螳螂、碧桂园服务）；② 中期利好消费——释放 10.9 万亿结余中的一部分用于消费场景；③ 长期利好住房消费全链条，但不等于"刺激房价"——政策导向是"住有所居"而非"炒房"。与上周"促消费组合拳"（消费券+公积金优化+"三新"消费试点）形成政策共振。</div>
+        <div class="ticker">📌 关联标的：002081 金螳螂（装修）/ 6098.HK 碧桂园服务（物业）/ 600048 保利发展（地产）— 装修/物管受益，地产影响中性偏正</div>
+        <div class="source">🔗 Source: <a href="https://www.news.cn/politics/20260818/751363d15a8b48ceadedbaf60e9d06bc/c.html" target="_blank">新华社</a> · <a href="https://www.huxiu.com/article/4884062.html" target="_blank">虎嗅</a> · <a href="https://www.chinanews.com.cn/gn/2026/08-18/10679887.shtml" target="_blank">中新网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>统计局：1-7 月社零 +2.6%，服务零售 +5.0% 继续跑赢商品零售 +1.1%；高能效家电增速超 30%</h4>
+        <p>国家统计局 8/18 发布：1-7 月社零总额同比 <strong>+2.6%</strong>，服务零售额 <strong>+5.0%</strong>，商品零售 <strong>+1.1%</strong>。消费升级类商品中：化妆品、通讯器材快速增长；可穿戴智能设备零售额同比翻倍；限额以上高能效等级家电零售增速超 <strong>30%</strong>。商务部同日发布《关于进一步激发下沉市场活力 活跃县域消费的意见》，推动品牌连锁店/折扣零售店/生鲜电商向县域布局，支持家装/家电与房企联动营销。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>"服务 > 商品"的剪刀差继续扩大（4 个百分点），验证了消费从"买东西"到"买体验"的结构转型。高能效家电 30%+ 增速 = "以旧换新"政策 + 消费升级双驱动。县域消费政策 = 把三四线/县域作为下一轮消费增长的"增量市场"——60 万亿消费总盘子中，县域占比在提升。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 000651 格力电器（高能效家电受益）/ 002511 顺网科技（文娱服务）— 服务消费 + 智能家电双线受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/roll/2026-08-18/doc-ininttru0072614.shtml" target="_blank">新浪科技</a> · <a href="https://ltfzs.mofcom.gov.cn/zcfg/art/2026/art_d423b00c1f734041971022bf9763ab1d.html" target="_blank">商务部</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [政策红利 — 公积金释放/消费券] → 中游 [消费场景 — 装修/物管/家电/餐饮] → 下游 [县域消费市场] — 当前受益环节：下游服务型消费 + 高能效家电 + 县域下沉市场</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">MTV VMA</span>
+        <h4>2026 MTV VMA 提名公布：Madonna 11 项领跑，Taylor Swift 9 项紧随，Sabrina Carpenter/Ariana Grande 各 7 项</h4>
+        <p>MTV 8/18 公布 2026 VMA 提名名单。Madonna 以 14 分钟长片《Confessions II — The Film》获 <strong>11</strong> 项提名领跑，包括年度音乐录影带、年度艺人和年度歌曲。Taylor Swift 凭《The Fate of Ophelia》获 <strong>9</strong> 项提名。Ariana Grande、Sabrina Carpenter 各获 <strong>7</strong> 项。Bruno Mars、PinkPantheress、Zara Larsson 各获 5 项。26 位首次入围 VMA 的艺人包括 Olivia Dean、Noah Kahan、Kali Uchis。粉丝投票已在 vote.mtv.com 开放。</p>
+        <div class="why">🦞 <b>花边点评：</b>Madonna 在 2026 年还能领跑 VMA 提名——这本身就是"持久力"的最好证明。14 分钟的长片形式入围"年度录影带"也很有意思：近年 VMA 的大奖越来越倾向长格式/电影化作品（Taylor Swift 2022 年的 15 分钟《All Too Well》开创先例）。lainy 如果有喜欢的艺人，可以去投票。</div>
+        <div class="source">🔗 Source: <a href="https://apnews.com/article/2026-mtv-vma-nominations-e9ac1be3adfd613c3bc348e83543832e" target="_blank">AP News</a> · <a href="https://www.billboard.com/lists/2026-mtv-vma-nominations-list-madonna-video-music-awards/" target="_blank">Billboard</a> · <a href="https://www.rollingstone.com/music/music-news/2026-mtv-vmas-nominees-full-list-taylor-swift-madonna-1235610787/" target="_blank">Rolling Stone</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA 婚礼</span>
+        <h4>NBA 冠军+婚礼双喜临门：Karl-Anthony Towns 与 Jordyn Woods 在 Malibu 海景婚礼完婚</h4>
+        <p>8/15 周六，纽约尼克斯中锋、2026 NBA 总冠军成员 Karl-Anthony Towns 与模特/企业家 Jordyn Woods 在加州 Malibu 一座私人海景豪宅完婚。Vogue 报道婚礼全程：白色缎面礼服、户外海景仪式、Ben Stiller 等明星到场。两个月前 Towns 刚帮尼克斯拿下 53 年来首座 NBA 总冠军——"今夏第二枚戒指"。纽约时报称其为"冠军婚礼"。</p>
+        <div class="why">🦞 <b>轻松一下：</b>两个月前拿总冠军，现在办婚礼——KAT 的 2026 夏天堪称完美。Jordyn Woods 早年因与 Tristan Thompson 的风波登上头条，如今走出舆论漩涡嫁给了 NBA 冠军中锋，也算"逆袭"剧本。lainy 如果刷到婚礼照片，Vogue 的报道值得看。</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/08/17/style/karl-anthony-towns-jordyn-woods-wedding.html" target="_blank">NYT</a> · <a href="https://www.vogue.com/slideshow/jordyn-woods-and-karl-anthony-towns-wedding" target="_blank">Vogue</a> · <a href="https://www.tmz.com/2026/08/16/jordyn-woods-karl-anthony-towns-wedding/" target="_blank">TMZ</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🎨 科技/科学花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag sci">人形机器人</span>
+        <h4>北京 2056 台人形机器人将参与大规模实景测试——中国机器人产业的"实战大考"</h4>
+        <p>Digitimes 8/18 报道，<strong>2056</strong> 台人形机器人将在北京参加大规模真实场景测试，中国企业（包括宇树科技 Unitree Robotics）正在加速开发更快、更强、更灵活的人形机器人。这是中国机器人产业从"实验室演示"走向"真实场景验证"的标志性事件。同期，Seeing Machines 发布 Physical AI 平台，将汽车视觉系统技术适配到人形机器人的人机交互中。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>2056 台不是一个小数字——这意味着量产化能力已经到位。中国选择"集中测试"的方式快速迭代，类似于当年共享单车/无人配送的"先上街再优化"路径。如果测试结果正面，人形机器人从"概念"到"商用"的转折点可能比市场预期来得更快。</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260818VL212/beijing-robot-robotics-performance-2026.html" target="_blank">Digitimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
