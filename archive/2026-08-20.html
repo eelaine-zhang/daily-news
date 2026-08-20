@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-20</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 20 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>三星代工涨价 15%：</b>AI 芯片需求爆满导致代工产能紧张，三星 7 月起对 4nm/5nm 新订单提价 5-15%，中国客户受影响最大——TSMC 产能瓶颈正在变成三星的定价权。</li>
+      <li><b>全球债灾冲击股市：</b>美国 30 年期国债收益率触及 5.33%（19 年新高），KOSPI 单日暴跌 6% 触发熔断，A 股创业板跌超 6%、百股跌停；美国财政部紧急加倍长债回购，美股尾盘反弹止住三连跌。</li>
+      <li><b>英伟达芯片管制攻防：</b>美国试图封堵中国通过东南亚数据中心远程调用 GB300 算力的漏洞；同时北京默许字节跳动和腾讯各进口约 1 万张 H200 芯片——管制与突围并行。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>代工涨价 · 出口管制 · 国产突破</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">三星代工涨价</span>
+        <h4>三星代工提价最高 15%：AI 需求撑爆产能，TSMC 瓶颈变成三星定价权</h4>
+        <p>Reuters 8/19 报道，三星电子已对先进制程代工新订单提价 <strong>5-15%</strong>，7 月起执行。涨价主要集中在 <strong>4nm (SF4)</strong> 和 <strong>5nm (SF5)</strong> 工艺，中国客户涨幅最大。三星代工部门自 2022 年以来持续亏损，此次涨价是改善盈利的关键一步。TSMC 产能被英伟达、Google 等大客户塞满，溢出订单流向三星，使其首次拥有实质定价权。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是代工格局的标志性转折。此前三星代工一直在"亏钱抢份额"，现在能涨价说明：① TSMC 产能瓶颈已严重到客户不得不接受三星的报价；② AI 芯片需求之强，甚至撑起了"第二选择"的议价权。对 lainy 的框架：代工环节正在从"TSMC 独赢"变成"TSMC 满产 + 三星涨价"的双寡头格局，三星代工业务有估值重修空间。</div>
+        <div class="ticker">📌 关联标的：SSNLF（三星电子 OTC）/ TSM（TSMC，短期产能瓶颈但议价权未变）/ 159992 半导体ETF（A 股）— 三星代工受益，中国芯片设计公司成本上升</div>
+        <div class="source">来源：<a href="https://thenextweb.com/news/samsung-foundry-price-hike-15-percent-ai-demand" target="_blank">TheNextWeb</a> · <a href="https://www.benzinga.com/markets/tech/26/08/61301650/taiwan-semiconductors-ai-bottleneck-hands-samsung-a-powerful-pricing-opportunity" target="_blank">Benzinga</a> · <a href="https://finance.yahoo.com/technology/ai/articles/samsung-raises-advanced-chipmaking-prices-101830976.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">出口管制攻防</span>
+        <h4>美国试图封堵"云端算力漏洞"：中国 AI 公司通过东南亚数据中心远程调用英伟达 GB300</h4>
+        <p>CNBC 8/19 报道，尽管美国禁止向中国出口英伟达最先进芯片（含 GB300），多家中国公司仍通过东南亚数据中心远程访问这些芯片的算力。现行出口管制聚焦于<b>物理芯片所有权</b>，对<b>远程算力租赁</b>缺乏明确覆盖。美国众议院 1 月已通过法案将远程访问视为出口事件，但在参议院搁置。与此同时，Business Standard 报道中国默许字节跳动和腾讯各进口约 <strong>1 万张</strong> NVIDIA H200 芯片，北京要求企业将硬件留在大陆以外。</p>
+        <div class="why">🦞 <b>市场含义：</b>这条新闻揭示了出口管制的结构性难题——管得了硬件进出口，管不了云端算力。TrendForce 预测中国 2026 年底前能用国产方案覆盖 90% 的高端 AI 芯片需求。lainy 需要关注：① 如果漏洞被封堵，中国 AI 公司加速国产替代（寒武纪、华为昇腾受益）；② 如果封堵不了，英伟达实际上通过"云端管道"继续从中国获利。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，管制收紧短期影响但云端漏洞仍在）/ 688256 寒武纪（国产替代受益）/ 002415 海康威视（AI 应用端）— 国产替代逻辑加强</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/08/19/china-ai-nvidia-chips-us-export-controls.html" target="_blank">CNBC</a> · <a href="https://www.business-standard.com/world-news/china-allows-limited-nvidia-h200-shipments-why-is-beijing-easing-curbs-126081900438_1.html" target="_blank">Business Standard</a> · <a href="https://www.benzinga.com/markets/tech/26/08/61293582/nvidias-h200-chips-are-flowing-into-china-again-bytedance-tencent-get-around-10000-each-report-says" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">阿里 RISC-V</span>
+        <h4>阿里平头哥 TSMC 5nm RISC-V 芯片跑通通义千问 3.8 27B 模型——国产芯片垂直整合新突破</h4>
+        <p>Wccftech 8/18 报道，阿里巴巴 T-Head（平头哥）的玄铁 C950 RISC-V 处理器，据信由 TSMC <strong>5nm</strong> 工艺制造，已成功原生运行通义千问 Qwen-3.8 <strong>27B</strong> 参数模型。该芯片采用 64 核架构，支持 RVV（RISC-V 向量扩展），解码速度 30 tokens/s，首 token 延迟 1.9 秒。平头哥同时宣布 Day 0 支持 Qwen-3.8 全系列模型。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这标志着中国科技巨头在"设计-制造-模型"全链条上的垂直整合能力。阿里现在能：① 自研 RISC-V 架构芯片；② 用 TSMC 代工制造；③ 自研大模型原生运行在上面。lainy 的商业映射：阿里从"电商公司"变成"AI 基础设施+应用"全栈公司——对标的是 Google TPU + Gemini 的垂直整合模式。</div>
+        <div class="ticker">📌 关联标的：BABA（阿里巴巴）/ 688981 中芯国际（国产代工逻辑）— 阿里垂直整合深化，RISC-V 生态加速</div>
+        <div class="source">来源：<a href="https://wccftech.com/alibabas-tsmc-built-5nm-risc-v-chip-xuantie-c950-now-runs-qwen-3-8-27b-model-natively-unlocking-massive-vertical-integration-tailwinds/" target="_blank">Wccftech</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Intel 封装</span>
+        <h4>AI 封装成为新瓶颈：Intel EMIB-T 技术抢食 TSMC CoWoS 产能缺口</h4>
+        <p>Cloud News 8/19 分析，随着 AI 加速器芯片面积越来越大，先进封装（packaging）正在成为新的产能瓶颈。Intel 推广其 <strong>EMIB-T</strong> 封装架构，声称在供电和信号路由方面优于 TSMC 的 CoWoS。TrendForce 2026 年初分析指出，Intel 正在扩张封装产能以吸引云厂商订单。但 Intel 产能仍远小于 TSMC，短期内难以撼动格局。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>封装成为瓶颈意味着：① TSMC 的"独家优势"从制造延伸到封装，但封装比制造更容易扩建；② Intel 在封装领域确实有技术竞争力，这是它翻身的最现实路径；③ 封装设备供应商（ASMPT、应用材料）受益于多家代工厂同时扩产。lainy：关注"封装"这个之前被忽视的环节。</div>
+        <div class="ticker">📌 关联标的：INTC（Intel，封装技术差异化）/ ASML（封装设备）/ 005930.KS（三星也在封装领域布局）— 封装环节产能扩张受益</div>
+        <div class="source">来源：<a href="https://cloudnews.tech/intel-gains-an-edge-over-tsmc-ai-turns-packaging-into-a-bottleneck/" target="_blank">Cloud News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC(满产)/三星(涨价)/Intel(封装突围)] → 下游 [AI 芯片设计 — NVDA/AVGO/阿里平头哥] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游代工（三星定价权提升）+ 先进封装（新瓶颈，Intel 差异化机会）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>停火到期 · 油价 · 债灾</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊停火</span>
+        <h4>60 天停火协议到期无果：特朗普称"没有谈判"，阿联酋检测到"导弹威胁"</h4>
+        <p>CNN 8/18 报道，特朗普表示美国与伊朗之间"没有进行中的谈判"。阿联酋同时检测到导弹威胁，地区紧张持续。60 天停火协议（自 6 月中旬生效）已到期未能延长。特朗普此前威胁阿曼"别挡道"，暗示可能恢复对伊朗的军事行动。伊朗方面则重申霍尔木兹海峡"是伊朗的、将永远是伊朗的"。</p>
+        <div class="why">🦞 <b>市场含义：</b>停火到期 = 地缘风险溢价重新回归油价。Brookings 分析指出，霍尔木兹海峡封锁已触发"历史性全球石油冲击"，将亚洲经济推到边缘。80% 的船只现在选择阿曼航线绕开伊朗封锁，但这条替代路线也在承受压力。对 lainy：油价高位震荡 = 通胀粘性 = 美债收益率上升 = 科技股承压。这条因果链要记住。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价持续）/ XLE（能源 ETF）/ 600028 中国石化 — 高油价受益；TLT（长债 ETF）受损于收益率上升</div>
+        <div class="source">来源：<a href="https://www.cnn.com/2026/08/18/world/live-news/iran-war-trump" target="_blank">CNN</a> · <a href="https://www.brookings.edu/collection/blowback-how-the-iran-war-may-change-the-world/" target="_blank">Brookings</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>Brent 连涨三日站上 $91：停火到期 + 油轮遇袭推高风险溢价</h4>
+        <p>油价本周连续三日上涨，Brent 原油升至 <strong>$91</strong>+，创三周新高。核心驱动：① 60 天停火协议到期无果；② 波斯湾油轮遇袭事件持续；③ 美国对伊朗"别挡道"姿态暗示军事行动可能恢复。Trump 表示"不急于结束对伊朗油轮的封锁"。Trading Economics 报道，Fed 主席 Warsh 指出"加息可能不是应对通胀的首选工具"，暗示高油价传导的通胀压力让央行陷入两难。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价从 7 月的 $72 区间涨到现在的 $91+，两周涨了 25%。这个速度比基本面变化快得多，主要是地缘风险溢价。如果停火恢复，油价有 $15-20 的回落空间；如果军事行动升级，$100+ 也不是不可能。lainy：关注一个信号——阿曼的霍尔木兹海峡通行协议是否能在停火到期后继续维持。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / JETS（航空 ETF，高油价受损）— 油价高企利好三桶油，压制航空/消费</div>
+        <div class="source">来源：<a href="https://sofokleous10.gr/2026/08/19/oil-third-straight-day-of-gains-and-three-week-high-amid-us-iran-deadlock-brent-above-91/" target="_blank">Sofokleous10</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 波斯湾航线80%绕行阿曼] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（替代航线压力增大）+ 下游消费国（通胀输入）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>债灾 · 财政部救市 · 黄金</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">全球债灾</span>
+        <h4>30 年期美债收益率触及 5.33%（19 年新高）：财政部紧急加倍长债回购，美股尾盘反弹</h4>
+        <p>8/18-19 全球债市抛售加剧，美国 <strong>30 年期</strong>国债收益率一度触及 <strong>5.337%</strong>，创 2007 年以来新高。Schwab 分析指出，长端收益率上升的核心原因：① 通胀"不祥地"停留在 Fed 2% 目标上方；② AI 投资热潮引发企业债供给洪流；③ 油价飙升叠加通胀预期。8/19 美国财政部宣布<b>加倍长债回购规模</b>，收益率随后回落，美股三连跌中止。CNBC 分析师指出："长端在回应持续性通胀风险、政府大量借贷以及 AI 投资热潮对资本的竞争。"</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要理解的宏观事件。收益率上升 → 折现率上升 → 成长股估值下降。这就是为什么芯片股跌得最惨（高估值 + 对利率敏感）。但财政部的回购说明政府也不愿意让收益率失控——这构成一个"收益率天花板"。对 lainy 的框架：① 短期收益率已过高，有回落空间（财政部干预）；② 但中期通胀压力未解除（油价+AI capex），收益率中枢会高于过去 5 年。</div>
+        <div class="ticker">📌 关联标的：TLT（长债 ETF，收益率上升=价格下跌）/ QQQ（科技股，对利率敏感）/ SPY（美股大盘）— 财政部干预带来短线反弹，中期压力未消</div>
+        <div class="source">来源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-aug-18-2026" target="_blank">TheStreet</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-18/stock-market-today-dow-s-p-live-updates" target="_blank">Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金突破 $4,520 创新高：地缘 + 债灾 + 央行买盘三重支撑</h4>
+        <p>Yahoo Finance 数据显示黄金报 <strong>$4,520.80</strong>（<strong>+2.27%</strong>），继续创历史新高。LiteFinance 分析师预计 8 月金价交易区间 <strong>$3,580-4,645</strong>，月末可能达 <strong>$4,084-4,120</strong>。但当前金价已超出该区间上沿，说明地缘风险溢价超出预期。Fed 主席 Warsh 暗示"加息不是首选工具"——这反而让黄金避险需求上升（因为意味着通胀可能被容忍）。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金 $4,500+ 的驱动力：① 地缘（伊朗停火到期）；② 债灾（收益率上升但通胀预期同步上升，实际利率未必涨）；③ 央行持续买入（结构性）。lainy 的配置框架：黄金是当前"高通胀+地缘混乱+央行去美元化"环境的最佳对冲。短期可能超买，但中期看央行买盘不歇，金价不跌。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）— 央行持续买入，中长期看涨</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/calendar/economic/" target="_blank">Yahoo Finance</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Fed 纪要前瞻</span>
+        <h4>FOMC 7 月会议纪要今日将发布：三人异议要加息，市场定价 9 月加息概率 30%</h4>
+        <p>Marketplace 8/19 报道，美联储 7 月 FOMC 会议纪要即将发布。7 月会议上有三位官员主张加息，市场目前定价 9 月加息概率约 <strong>30%</strong>。但 Fed 主席 Warsh 表示"加息不是应对通胀的首选工具"，暗示更倾向于让量化紧缩和自然力量压制通胀。CNBC 指出，尽管近期经济数据偏软，但通胀仍"不祥地"停在 Fed 2% 目标上方。</p>
+        <div class="why">🦞 <b>市场含义：</b>7 月纪要如果显示更多官员倾向加息，短期会进一步冲击股债。但 Warsh 的"不首选加息"表态 = 实际加息概率低于市场定价。lainy 的关注点：纪要中对"AI 投资对资本竞争的影响"是否有讨论——这会是一个新的政策框架信号。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（纪要偏鹰则承压）/ TLT（纪要偏鸽则反弹）— 今日关键催化事件</div>
+        <div class="source">来源：<a href="https://www.marketplace.org/story/2026/08/19/what-the-fed-minutes-might-have-in-store" target="_blank">Marketplace</a> · <a href="https://www.cnbc.com/2026/08/12/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：FOMC 纪要 + 财政部长债回购能否稳住收益率</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/19 沪指 -2% 报 ~3927 / 深成指大跌 / 创业板 -6%+ / 百股跌停 / 成交 2.51 万亿</h4>
+      <p>8/19 A 股全天低开低走，沪深两市成交 <strong>2.51 万亿</strong>（放量 1103 亿）。超 <strong>5000</strong> 只个股下跌，跌停超 <strong>100</strong> 只。芯片、机器人板块领跌。煤炭板块逆势上涨。<b>唯一亮点：</b>宇树科技 (688836) 上海科创板 IPO 首日暴涨 <strong>460%</strong>，开盘价 1100 元，收盘 845 元，市值一度触及 <strong>660 亿美元</strong>（约 4450 亿人民币），成为首家上市的人形机器人企业。Shanghai Composite 收于 <strong>3,927</strong> 附近，CSI300 跌 <strong>2.4%</strong>。市场认为下跌主因：① 全球债灾传导；② 芯片股跟随亚太暴跌。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/19 恒指 +0.09% 报 25,495 / 成交 2532 亿港元 / 相对韧性凸显</h4>
+      <p>在全球债灾冲击下，港股表现出明显韧性。恒指微涨 <strong>0.09%</strong> 收报 <strong>25,495</strong>，成交 <strong>HK$253.2 亿</strong>。科技股分化：百度暴跌 <strong>11%</strong>（市场对 AI 投入产出比质疑），但大盘在非科技板块支撑下守住 25,000 关口。BigGo Finance 分析指出，KOSPI -5.8%、CSI STAR 50 -6.89%，唯独港股"逆势抗跌"，原因：① 估值已低；② 南向资金持续买入；③ 对美债收益率敏感度低于韩股和 A 股科技。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/19 道指/标普/纳指止住三连跌：财政部加倍长债回购触发反弹</h4>
+      <p>8/19 收盘：S&amp;P <strong>+0.24%</strong> 报 <strong>7,709.91</strong>，纳指 <strong>+0.15%</strong> 报 <strong>26,331.09</strong>，道指小幅上涨。三连跌中止的核心催化：美国财政部宣布加倍长债回购规模，收益率从 5.33% 高位回落。Moderna 大涨（医药股逆势爆发）。但芯片股继续承压——Broadcom -4.5%、Intel -4%、Micron -2%，Nvidia 和 TSMC 跌幅小于 1%。VIX 从 2026 低点继续攀升。Yahoo Finance 期货数据显示盘后：道指期货 <strong>+0.52%</strong>，纳指期货 <strong>+0.43%</strong>，黄金 <strong>+2.27%</strong>。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/19 KOSPI 暴跌 5.8% 报 6,471 / 触发年内第 48 次熔断 / 三星 -7.26% / SK Hynix -9.27%</h4>
+      <p>8/19 韩股遭遇"黑色星期三"。KOSPI 跌幅一度超 <strong>6%</strong>，触发卖方熔断（年内第 48 次，卖方第 25 次），暂停程序化卖单 5 分钟。<b>权重股全线崩跌：</b>三星电子 <strong>-7.26%</strong> 报 249,000 韩元、SK Hynix <strong>-9.27%</strong> 报 1,508,000 韩元、SK Square -11.81%、现代汽车 -5.98%、LG 能源方案 -2.14%。<b>资金流向：</b>外资净卖出 <strong>1.068 万亿</strong>韩元（约 $7.9 亿），机构净卖出 2271 亿韩元，散户净买入 1.26 万亿韩元（"散户接刀"模式）。核心原因：30 年期美债收益率 19 年新高 → 外资从新兴市场撤离 → 韩股作为"高 beta 新兴市场"首当其冲。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>公积金新政 · 机器人 IPO</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">宇树 IPO</span>
+        <h4>宇树科技科创板上市首日暴涨 460%：中国人形机器人"第一股"市值一度破 660 亿美元</h4>
+        <p>8/19 宇树科技（688836.SH）在科创板上市，IPO 募资 <strong>61 亿</strong>人民币（约 $9.04 亿）。开盘即涨 <strong>629%</strong> 至 1100 元，盘中最高市值约 <strong>4450 亿</strong>人民币（$660 亿），收盘涨 <strong>460%</strong> 报 845 元。宇树是首家上市的人形机器人企业，其产品包括四足机器人和人形机器人（G1/H1 系列），被视为 Tesla Optimus 的中国竞争对手。Bloomberg、CNBC、Washington Post 等均报道。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>宇树 IPO 是"中国人形机器人产业化"的里程碑事件。460% 的涨幅说明市场对机器人赛道的估值溢价比传统芯片还疯狂。lainy 的金融视角：① 市值 660 亿美元 vs Tesla 整个公司 ~1 万亿——宇树单靠机器人就值 Tesla 的 6.6%；② 这会引发更多机器人公司上市（智元、优必选跟进预期）；③ 但要注意：宇树 2025 年营收可能不到 10 亿人民币，估值完全靠预期，泡沫风险很高。</div>
+        <div class="ticker">📌 关联标的：688836 宇树科技（新上市，高波动）/ 002747 埃斯顿（机器人概念外溢）/ TSLA（Tesla Optimus 竞争对标）— 机器人赛道估值锚定效应</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-08-18/unitree-robotics-set-to-debut-after-904-million-shanghai-ipo" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/08/19/china-backflipping-robot-maker-unitree-jumps-shanghai-ipo.html" target="_blank">CNBC</a> · <a href="https://www.scmp.com/tech/tech-trends/article/3364499/unitree-robotics-surges-629-us66-billion-valuation-shanghai-share-debut" target="_blank">SCMP</a> · <a href="https://www.benzinga.com/markets/ipos/26/08/61292864/tesla-optimus-rival-unitree-robotics-explodes-629-in-shanghai-debut-briefly-hits-66-billion-valuation" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">公积金新政</span>
+        <h4>国务院修改住房公积金条例：提取扩至 9 种用途，10.9 万亿从"买房专用"转向"住房全生命周期"</h4>
+        <p>国务院修改《住房公积金管理条例》，提取用途从原来的购房/租房扩展至 <strong>9 种</strong>（新增装修、物业费等）。全国公积金结余约 <strong>10.9 万亿</strong>，此前只能用于购房，现在可以覆盖"住房全生命周期"。这是继上次消费领域政策后，又一个释放"沉淀资金"到消费端的举措。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>10.9 万亿公积金从"死钱"变"活钱"，每年可能释放数千亿到万亿级别的消费能力。对 lainy 的消费股框架：① 物业管理公司受益（提取公积金交物业费 = 稳定现金流）；② 家居装修受益（公积金用于装修 = 释放家装需求）；③ 但对房地产开发商利好有限——不增加购房需求，只是让存量资金更灵活。</div>
+        <div class="ticker">📌 关联标的：601988 建设银行（公积金托管行）/ 002508 老板电器（家装家电受益）/ 002242 碧桂园服务（物业费提取利好）— 公积金释放利好家装/物业</div>
+        <div class="source">来源：<a href="https://m.sohu.com/a/1064860072_362042?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334" target="_blank">搜狐</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [政策释放公积金 10.9 万亿] → 中游 [家装/物业/零售] → 下游 [消费端] — 当前受益环节：家装家电 + 物业管理（公积金新用途直接利好）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>MTV VMA · 暑期档</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">MTV VMA</span>
+        <h4>2026 MTV VMA 提名公布：Madonna 11 项领跑，Taylor Swift 9 项紧追</h4>
+        <p>8/19 MTV 公布 2026 年 VMA 提名名单。Madonna 以 <strong>11</strong> 项提名领跑，其中包括年度最佳视频（《Confessions II - The Film》）、年度艺人等重磅奖项。Taylor Swift 以 <strong>9</strong> 项紧随其后，若获奖数追平将创历史纪录。Ariana Grande 和 Sabrina Carpenter 各获 <strong>7</strong> 项提名，Bruno Mars、PinkPantheress、Zara Larsson 各获 <strong>5</strong> 项。Blackpink 的 LISA 获 <strong>4</strong> 项。Madonna 自 1984 年首届 VMA 凭《Like a Virgin》炸场以来，每个十年都有提名——横跨 40 年的统治力。</p>
+        <div class="why">🦞 <b>花边点评：</b>Madonna 67 岁还能拿 11 项提名，而且不是"终身成就"那种安慰奖——是竞争性提名。她的《Confessions II》被提名年度最佳视频，说明新作品确实有竞争力。lainy 如果关注流行文化，Taylor Swift vs Madonna 的"历史最多获奖艺人"争夺会是今年 VMA（9 月举行）最大看点。</div>
+        <div class="source">来源：<a href="https://www.billboard.com/lists/2026-mtv-vma-nominations-list-madonna-video-music-awards/" target="_blank">Billboard</a> · <a href="https://www.cnn.com/2026/08/19/entertainment/video/entertainment-showbiz-hollywood-minute-mtv-vma-nominations-madonna-taylor-swift-east-of-eden-series-florence-pugh-zoe-kazan" target="_blank">CNN</a> · <a href="https://apnews.com/" target="_blank">AP</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>Florence Pugh 主演《East of Eden》剧集首曝剧照：Netflix 豪赌 Steinbeck 经典改编</h4>
+        <p>CNN Hollywood Minute 8/19 报道，Florence Pugh 主演的《East of Eden》（伊甸之东）剧集版首次曝光剧照。该剧改编自 John Steinbeck 的经典小说，由 Zoe Kazan（原著编剧孙女）操刀改编。Netflix 押注文学经典改编能否复制《Ozark》的成功？值得期待。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Steinbeck + Florence Pugh + Netflix = 奥斯卡预定。lainy 如果喜欢文艺片，这是下半年值得追的一部。</div>
+        <div class="source">来源：<a href="https://www.cnn.com/2026/08/19/entertainment/video/entertainment-showbiz-hollywood-minute-mtv-vma-nominations-madonna-taylor-swift-east-of-eden-series-florence-pugh-zoe-kazan" target="_blank">CNN</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">数据中心</span>
+        <h4>全球 AI 数据中心市场：2025 年 $2150 亿 → 2040 年预测万亿美元级，GPU/ASIC/Arm vs x86 格局重塑</h4>
+        <p>SemiEngineering 8/19 发布深度分析：全球 AI 数据中心市场 2025 年规模 <strong>$2150 亿</strong>，到 2040 年预计达万亿美元级别。关键趋势：① GPU 仍主导训练，但 ASIC（定制芯片）在推理端份额上升；② Arm 架构在数据中心加速取代 x86；③ 受 HBM 启发的 HBF（高带宽闪存）可能在 3D 存储中提升 AI 效率；④ 3D IC 失效分析（Google + TU Delft 合作）成为新研究前沿。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这个趋势对 lainy 的长期投资框架有用：GPU → ASIC 的转变意味着 Broadcom（AVGO）和 Marvell（MRVL）这类定制芯片设计公司有长期增长空间；Arm 在数据中心取代 x86 = 英特尔（INTC）的结构性压力持续。万亿美元的数据中心市场 = 整条链上的"蛋糕"还在快速变大。</div>
+        <div class="source">来源：<a href="https://semiengineering.com/the-future-of-ai-compute-wont-run-on-just-one-kind-of-chip/" target="_blank">SemiEngineering</a> · <a href="https://dedirock.com/blog/top-data-center-hardware-highlights-august-2026-edition/" target="_blank">DediRock</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
