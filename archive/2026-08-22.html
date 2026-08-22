@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-22</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 22 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>三星 110 万亿韩元股东回报：</b>韩国史上最大回报计划发布（约 $800 亿），AI 芯片暴利兑现给股东；同日 Nvidia 被曝与 SK Hynix、Micron 签多年 DRAM/HBM 锁单，内存短缺预计延续到 2028。</li>
+      <li><b>美伊「最严制裁」+</b> Brent 周涨 6%：美国宣布将对伊朗实施「史上最严厉制裁」，伊朗警告「毁灭性回应」；Brent 站 $93.96，连续两周上涨；黄金冲 $4,661，比特币突破 $76,700。</li>
+      <li><b>美股三大指数周四反弹：</b>道指 +0.98% 报 53,277 / S&P +0.43% / 纳指 +0.43%；A 股创业板 +1.43% / 恒指站上 26,000 / KOSPI +0.88% 重回 6,900。Moderna 周四暴跌 23%（前一日曾因癌症疫苗突破暴涨 177%）。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>内存锁单 · 三星回报 · AMD 数据中心</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">三星股东回报</span>
+        <h4>三星电子宣布 110 万亿韩元（~$800 亿）股东回报计划——韩国史上最大，AI 芯片暴利兑现</h4>
+        <p>8/21 三星电子董事会批准 2026 年股东回报计划，总额 <strong>90~110 万亿韩元</strong>（约 $65~80 亿），为韩国企业史上最大规模。包括约 30 万亿韩元 Q3 现金分红 + 回购。此前的历史高点是 2020 年的 20.3 万亿韩元——这次是 5 倍以上。驱动因素：AI 半导体暴利（HBM、代工），以及上周 SK Hynix 40 万亿韩元回购的竞争压力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>8/20 日报过 SK Hynix 40 万亿韩元回购 → 8/21 三星跟进 110 万亿——韩国半导体双寡头把 AI 暴利直接返还股东。对比 Intel 还在裁员烧钱，格局一目了然。对 lainy：三星的回报计划意味着管理层认为 HBM/代工利润可持续，这是"AI 红利从预期走向兑现"的关键信号。</div>
+        <div class="ticker">📌 关联标的：005930.KS 三星电子（核心受益）/ 000660.KS SK Hynix（双寡头同步）— 韩国半导体双雄股东回报竞赛</div>
+        <div class="source">🔗 Source: <a href="https://news.samsung.com/global/samsung-electronics-to-implement-largest-ever-shareholder-return-in-2026-estimated-at-krw-90-to-110-trillion" target="_blank">Samsung Newsroom</a> · <a href="https://www.bloomberg.com/news/articles/2026-08-20/samsung-plans-as-much-as-79-billion-in-shareholder-returns" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/08/21/samsung-shareholder-return-package-sk-hynix-buyback-ai-chip-boom.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 内存锁单</span>
+        <h4>Nvidia 据报与 SK Hynix、Micron 签署多年 DRAM/HBM 供应协议——内存短缺预计延续到 2028</h4>
+        <p>Edgewater Research 报告显示，Nvidia 可能已与 SK Hynix 和 Micron 签署多年 HBM 和 DRAM 供应协议。Micron 已披露 16 项战略协议，获得 <strong>$220 亿</strong>预付款和承诺；SK Hynix 完成约 10 项客户交易。AMD 曾警告内存价格要到 2028 才能稳定。Micron 表示 2026 年全年 HBM 产能（含 HBM4）已售罄。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>HBM 已经从"内存配角"变成"AI 军备弹药"——现在连普通 DRAM 都被锁单到 2028 年。对 lainy 的金融视角：这意味着内存厂商的"定价权"从周期性变成了结构性——未来 2-3 年收入可见度极高，利润弹性远超传统 DRAM 周期。三大内存厂（三星/SK Hynix/Micron）的估值还没有完全反映这个变化。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，锁单保供）/ MU（Micron，$220B 预付款）/ 000660.KS SK Hynix — 内存结构性短缺受益</div>
+        <div class="source">🔗 Source: <a href="https://wccftech.com/nvidia-reportedly-locks-multi-year-dram-deals-with-sk-hynix-and-micron-as-memory-shortage-stretches-to-2028/" target="_blank">WCCFTech</a> · <a href="https://samsung.gadgethacks.com/news/samsung-hbm4-chip-price-increase-projections-vs-facts/" target="_blank">Korea Herald via Gadget Hacks</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Micron 研发中心</span>
+        <h4>Micron 斥 $100 亿在博伊西建 AI 内存研发中心——全美首个专注内存研究的实验室</h4>
+        <p>8/20 Micron 宣布建立 Micron Research Labs，计划十年内投资 <strong>$100 亿</strong>，总部设在爱达荷州博伊西。定位为全美首个专注内存技术的研究实验室，目标覆盖后 DRAM 架构和下一代 AI 计算所需内存。将与外部专家和研究伙伴联动，加速从科学发现到实际产品转化。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Micron 在 HBM 竞争中一直排第三（落后三星和 SK Hynix），但这次 $100 亿研发投入是认真的——目标不只是追赶，而是定义"后 DRAM 时代"。对 lainy：关注美国半导体政策红利——CHIPS Act 后续效应下，美国本土研发投入正在加速。Micron 的估值弹性来自"HBM4 量产 + 后 DRAM 技术定义权"。</div>
+        <div class="ticker">📌 关联标的：MU（Micron，核心受益）/ SMH（半导体 ETF）— 美国本土内存研发加码</div>
+        <div class="source">🔗 Source: <a href="https://hothardware.com/news/micron-pours-10-billion-us-hub-invent-post-dram-ai-tech" target="_blank">HotHardware</a> · <a href="https://evertiq.com/news/2026-08-21-micron-unveils-10-billion-ai-memory-research-lab-in-boise" target="_blank">Evertiq</a> · <a href="https://www.tikr.com/blog/micron-stock-surges-11-this-week-as-micron-unveils-10-billion-ai-memory-lab" target="_blank">TIKR</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD 数据中心</span>
+        <h4>AMD Q2 数据中心收入 $67.2 亿 +107% YoY——Instinct 加速器翻倍增长，Meta 部署 6GW</h4>
+        <p>AMD Q2 2026 数据中心收入 <strong>$67.2 亿</strong>，同比 <strong>+107%</strong>，已占总收入 58%。EPYC 服务器芯片增长 70%+，Instinct AI 加速器翻倍。Meta 计划部署最多 6 GW 的 AMD 芯片，Microsoft、OpenAI、Oracle 均已签约。管理层预计 2027 年数据中心收入将再翻倍。第六代 EPYC Venice 已在 2nm 工艺上量产。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>AMD 正在从"Nvidia 的追赶者"变成"Nvidia 的替代者"——6GW 的 Meta 订单规模巨大。对 lainy 的框架：① AI 算力不只是 GPU，通用 CPU + 加速器的组合方案正在被大厂接受；② AMD 的 HBM 供应来自三星、SK Hynix、Micron 三家（不像 Nvidia 部分依赖独家供应），这反而成了优势；③ 2nm EPYC 量产 = TSMC 2nm良率已达标。</div>
+        <div class="ticker">📌 关联标的：AMD（核心受益）/ NVDA（竞争压力增加）/ META（自建算力）— AMD 数据中心从追赶变替代</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/technology/ai/articles/amd-vs-nvidia-amd-finally-153053497.html" target="_blank">Yahoo Finance</a> · <a href="https://www.insidermonkey.com/blog/nvidia-corporation-nvda-advanced-micro-devices-amd-nvidia-might-ship-ai-chips-with-less-memory-amd-says-its-not-worried-1809389/" target="_blank">Insider Monkey</a> · <a href="https://www.tradingview.com/news/zacks:4bb6b4c5f094b:0-seagate-vs-amd-which-ai-infrastructure-stock-has-the-edge/" target="_blank">TradingView</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 家用 GPU</span>
+        <h4>Nvidia 联手 SPAN 与 PulteGroup：把家用墙壁变成迷你 AI 数据中心——16 块 Blackwell GPU 液冷壁挂</h4>
+        <p>Nvidia 与智能电气面板公司 SPAN、美国最大住宅开发商 PulteGroup 合作，在新房中免费安装壁挂式液冷 Blackwell GPU 节点（16 块 GPU + 4 颗服务器 CPU）。零首付成本，住户通过参与算力网络获得收益抵扣。这是 Nvidia "AI 工厂蓝图"（100MW 到多 GW 级别）的消费端延伸。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这个想法很疯狂但也合理——如果每家都有 16 块 Blackwell，算力供给从"集中式数据中心"变成"分布式家用节点"。对 lainy：① 这是"AI 算力基础设施化"的极致版本——未来算力像电力一样入户；② PulteGroup 的新房可能因为"自带算力"而溢价；③ 电力系统影响——每个节点功耗 10-15kW，新建住宅电气规格要升级。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，消费端算力扩张）/ PHM（PulteGroup，住宅+算力概念）/ SPAN（未上市）— AI 算力基础设施化</div>
+        <div class="source">🔗 Source: <a href="https://wccftech.com/nvidia-wants-to-turn-your-home-wall-into-a-mini-data-center-by-packing-16-blackwell-gpus-and-4-server-cpus-in-a-liquid-cooled-wall-mounted-box-at-0-upfront-cost/" target="_blank">WCCFTech</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 TSMC/三星 + 内存 SK Hynix/Micron] → 下游 [AI 芯片设计 NVDA/AMD/AVGO] → 终端 [云厂 MSFT/META/GOOG + 分布式家用] — 当前受益环节：中游内存（锁单到 2028）+ 下游 AI 芯片（Nvidia 市值 $5T+）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊制裁升级 · 霍尔木兹僵局</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊制裁</span>
+        <h4>美国宣布将对伊朗实施「史上最严厉制裁」——伊朗警告「毁灭性回应」，中国反对</h4>
+        <p>8/21 美国副总统 JD Vance 表示美伊冲突进入"新阶段"，美国准备对伊朗实施"史上最严厉制裁"。特朗普称"别无选择，再来 100 次也会这么做"，但留有谈判余地。伊朗外交部称制裁"非法且不人道"，警告"毁灭性回应"。中国批评称"进一步制裁无法解决冲突"。阿曼表示霍尔木兹海峡的持久安全取决于地区和平，反对进一步升级。此前美伊两次停火协议（4 月和 6 月）均迅速崩溃。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是美伊从军事冲突转向"经济战"的新阶段——制裁的核心目标是压伊朗在霍尔木兹海峡通行权上让步。但两次停火均崩溃意味着双方底线差距大。对 lainy 的市场含义：① 制裁 = 油价溢价持续（Brent 已站 $93+）；② 中国角色微妙——如果中国不配合制裁，效果打折；③ 霍尔木兹海峡每天通过 ~2000 万桶原油，任何中断都会让 Brent 冲 $100+。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价持续）/ 600028 中国石化 / XLE（能源 ETF）— 制裁升级 = 油价高位维持</div>
+        <div class="source">🔗 Source: <a href="https://www.foxnews.com/live-news/iran-war-trump-economic-sanctions-strait-hormuz-oil-08-21-26" target="_blank">Fox News</a> · <a href="https://www.nbcnews.com/world/iran/iran-war-devastating-response-us-threat-toughest-economic-hit-rcna593697" target="_blank">NBC News</a> · <a href="https://www.thehindu.com/news/international/iran-us-war-live-updates-donald-trump-economic-sanctions-strait-of-hormuz-ceasefire-deal/article71372035.ece" target="_blank">The Hindu</a> · <a href="https://www.cnbctv18.com/world/us-iran-war-live-updates-scott-bessent-trump-sanctions-china-oman-naval-blockade-yemen-hijack-crude-oil-liveblog-19974162.htm" target="_blank">CNBC TV18</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">油价</span>
+        <h4>Brent $93.96 连续两周上涨——美伊僵局 + 霍尔木兹通行安全未解</h4>
+        <p>Brent 原油期货收 <strong>$93.96</strong>/桶，WTI 收 <strong>$86.94</strong>/桶，本周涨幅超 <strong>5%</strong>，连续第二周上涨。驱动因素：美伊冲突无缓解迹象，更多商船改走阿曼侧海峡航线。Trading Economics 显示原油交易在 $86+ 上方，本周涨近 6%。Daily Star 报道 Brent 一度触及 $91.47 后继续上行。CNBC 分析指出油价每涨 $10，全球通胀约上升 0.3-0.5 个百分点。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>上周日报过 Brent 破 $91——本周继续上冲至 $94。趋势很明确：只要霍尔木兹僵局不破，油价就难回 $80 以下。对 lainy 的传导链：高油价 → 通胀粘性 → 美联储难降息 → 科技股估值承压 → 黄金/比特币避险买盘。这条链你要记住。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI / 600028 中国石化 / XLE — 油价连续两周上涨，地缘溢价不退</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/amp/2026/08/21/oil-prices-us-iran.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.thedailystar.net/business/economy/news/oil-hits-three-week-high-uncertainty-over-hormuz-4251876" target="_blank">Daily Star</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特阿美/伊朗NIOC] → 中游 [航运 波斯湾航线，商船改走阿曼侧] → 下游 [炼化 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹通行受限， tanker 成本上升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>债市干预 · 黄金创新高 · 比特币暴涨</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">债市干预</span>
+        <h4>Bessent 加倍长债回购至 $40 亿/次——30 年期收益率曾触 5.33%（19 年新高）</h4>
+        <p>美国财政部部长 Bessent 8/20 宣布将长债回购规模从每次 $20 亿加倍至 <strong>$40 亿</strong>，9 月 9 日至 11 月 4 日生效。30 年期收益率此前触及 <strong>5.33%</strong>（19 年新高），10 年期站 <strong>4.70%</strong>。Bessent 表示"$40 亿是下限不是上限"，暗示可能进一步加大。此举意在压低长端利率，减轻房贷利率和企业融资压力。但反弹仅持续一天，长债收益率隔夜回升。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是美国财政部直接干预债市——不是美联储降息，而是财政部"卖短买长"压收益率曲线。对 lainy：① 30 年期 5.33% = 房贷利率居高不下，房地产承压；② 如果 Bessent 加码成功 → 长债收益率回落 → 科技股估值反弹；③ 如果失败（市场"不买账"）→ 衰退预期升温。目前看市场半信半疑。</div>
+        <div class="ticker">📌 关联标的：TLT（长债 ETF）/ QQQ（科技股，对长端利率敏感）/ XLF（金融股）— 长债回购成败决定下半年利率走向</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/economy/article/one-day-after-doubling-treasury-buybacks-bessent-says-hes-ready-to-boost-them-further-to-push-down-long-term-yields-181218236.html" target="_blank">Yahoo Finance</a> · <a href="https://www.thestreet.com/markets/scott-bessent-doubles-treasury-bond-buybacks-market" target="_blank">TheStreet</a> · <a href="https://www.euronews.com/business/2026/08/21/bessent-vows-bigger-buybacks-after-bond-yields-erased-the-us-treasurys-relief-rally" target="_blank">Euronews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金 + 比特币</span>
+        <h4>黄金冲 $4,661 创新高 + 比特币暴涨 7.8% 破 $76,700——避险资产齐飞</h4>
+        <p>8/21 黄金升至 <strong>$4,661.60</strong>/盎司（日涨 <strong>+1.97%</strong>），月内涨幅 <strong>+11%</strong>，年同比 <strong>+36%</strong>。比特币同日暴涨 <strong>+7.8%</strong> 至 <strong>$76,704</strong>，一度触及 $78,704。驱动因素：① Bessent 债市干预后美元走弱；② 美伊制裁升级推高避险需求；③ 央行持续增持黄金。Bitcoin 面临 $80,000 关键测试位。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金和比特币同步大涨说明市场在"去美元化"交易——美债被抛、黄金和加密货币被买。对 lainy 的配置框架：黄金 $4,600+ 已经不便宜，但央行买盘是结构性的（不受短期利率影响）。比特币冲 $80K 是关键——如果破位，可能引发新一轮 FOMO 买盘。两类资产同涨 = 市场对法币体系信任度下降。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD / BTC — 避险资产齐飞，去美元化交易</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/markets/article/why-bitcoin-prices-are-suddenly-rallying-big-time-094451450.html" target="_blank">Yahoo Finance</a> · <a href="https://fortune.com/article/price-of-bitcoin-08-21-2026/" target="_blank">Fortune</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：利率 [财政部回购压长端] → 避险资产 [黄金/比特币齐涨] → 风险偏好 [美股周四反弹但波动大] — 当前关键变量：Bessent 回购能否压住长债收益率</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/21 沪指 +0.04% 报 3905 / 深成指 +0.87% / 创业板 +1.43% / 成交跌破 2 万亿</h4>
+      <p>8/21 三大指数震荡上行，沪指全天窄幅震荡收 <strong>3905.2</strong>，深成指 <strong>+0.87%</strong>，创业板 <strong>+1.43%</strong>。全市场成交 <strong>18,923 亿</strong>，较上日缩量。超 2500 只个股上涨。<b>亮点板块：</b>贵金属大涨（黄金创新高带动）、算力硬件股走强。<b>回调板块：</b>疫苗、粮食概念。高位人气股走弱，一鸣食品、红四方跌停。上周周线：8/19 大跌后 8/20-21 两天反弹，但成交萎缩显示资金仍谨慎。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/21 恒指 +1.21% 站上 26,000 / 金融黄金 AI 携手拉升</h4>
+      <p>8/21 恒指收 <strong>26,000+</strong>（<strong>+1.21%</strong>），恒生科技指数报 4,724（+0.5%），国指 +0.4%。金融股撑市，黄金板块跟涨，AI 概念走强。恒地升逾 6%，平保绩后受追捧。<b>回调：</b>泡泡玛特挨沽。亚股早盘普跌，港股逆升跑赢亚股。恒指连升 5 日累涨约 600 点。技术上看，大市已重越多条移动均线，若动力配合可上试 26,187 点。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/21 道指 +0.98% 报 53,277 / S&amp;P +0.43% 报 7,674 / 納指 +0.43% 报 26,180</h4>
+      <p>8/21 三大指数反弹结束连跌：道指 +517 点（<strong>+0.98%</strong>），S&P <strong>+0.43%</strong>，纳指 <strong>+0.43%</strong>。Bloomberg 报道称美股商业活动增速创四年最快。但盘后涨势收窄，长端收益率回升压制科技股。<b>个股亮点：</b>Moderna 周三暴涨 177%（癌症疫苗突破）后周四暴跌 <strong>23.5%</strong> 至 $133.32，抹去 $180 亿市值——典型的"买预期卖事实"。Mara Holdings +21%（比特币暴涨带动矿企）。CNBC 提到芯片股反弹失败仍是纳指承压因素。本周 Nvidia 财报周临近。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/21 KOSPI +0.88% 报 6,912.94 / 三星 +3.04% / SK Hynix +2%+ / 回血 6,900</h4>
+      <p>8/21 KOSPI 收 <strong>6,912.94</strong>（<strong>+0.88%</strong>），KOSDAQ 开盘跌 2% 后回升。三星电子 <strong>+3.04%</strong>——市场预期 110 万亿韩元股东回报计划（当日公布）。SK Hynix +2%+。韩元兑美元走强。TradingKey 分析指出韩国科技股整体表现强劲。KOSPI 从 8/19 暴跌 5.8% 到 8/20 暴涨 5.9% 再到 8/21 稳步回升，三天波动率极大。AsiaE 报道称 KOSPI 接近 7,000 关键关口，但持续性取决于三星回报计划落地。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>中国消费结构转型 · Shein IPO · 平保暴利</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费结构</span>
+        <h4>中国消费换轨：前 7 月服务零售 +5% 远超商品零售 +1.2%——「买服务」替代「买商品」</h4>
+        <p>Caixin 8/21 报道国家统计局数据：2026 前 7 月服务零售额 <strong>+5%</strong>，商品零售仅 <strong>+1.2%</strong>，差距 3.8 个百分点。整体社零总额 <strong>28.77 万亿</strong>（$4.3 万亿）。消费者从"买东西"转向"买体验"（旅游、餐饮、文娱）。这组数据在 8/20 日报过初版（当时差距 4.2 个百分点），8/21 数据修正后差距略缩小但趋势一致。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是增量新闻——上次报的是初值，这次是财新的深度分析。核心信号不变：服务消费远强于商品消费。对 lainy 的消费股选股框架：① 餐饮/旅游/文娱 > 传统零售百货；② 高端白酒（宴请场景）韧性强于低端光瓶酒；③ 家电承压（商品消费弱 + 价格战）。选股看"服务属性"强弱。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 002511 顺网科技（文娱服务）/ 000651 格力电器（家电承压）</div>
+        <div class="source">🔗 Source: <a href="https://www.caixinglobal.com/2026-08-21/chinas-services-spending-outpaces-goods-as-travel-entertainment-gain-102476266.html" target="_blank">Caixin Global</a> · <a href="https://chinaeconomicreview.com/chinas-service-spending-growth-outpaces-retail/" target="_blank">China Economic Review</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">Shein IPO</span>
+        <h4>Shein 终于要在香港上市了：8/24 启动 IPO / 9/1 挂牌——估值缩水 + 增长减速</h4>
+        <p>据多方报道，Shein 计划 8/24 启动香港 IPO，目标 9/1 挂牌。这是 Shein 三年来多次推迟后的最终冲刺。但 NYT 报道指出增长减速 + 成本上升影响投资者兴趣。估值从此前的 $66B 大幅缩水。PE 投资者（General Atlantic、红杉等）被迫继续持有，寄望 IPO 提供退出通道。中国奢侈品市场也在经历"reckoning"——Puck 报道中国奢侈品复苏脆弱。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Shein IPO 是下半年港股最大看点之一。对 lainy：① 快时尚赛道——Shein 增长减速说明"超快时尚"模式天花板显现；② 估值缩水 = 市场重新定价"中国消费概念"；③ 中国奢侈品市场脆弱 = 高端消费不如预期。整体信号：中国消费"结构性分化"——服务 > 商品、必需 > 可选、低端 > 奢侈。</div>
+        <div class="ticker">📌 关联标的：SHEIN（即将港股上市）/ 09989 Weibo（可比消费概念）/ 01810 小米（消费电子对标）— Shein IPO 定价将重置快时尚估值</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/08/21/business/shein-ipo-questions.html" target="_blank">NYT</a> · <a href="https://cryptobriefing.com/shein-hong-kong-ipo-valuation-drop/" target="_blank">CryptoBriefing</a> · <a href="https://puck.news/chinas-luxury-reckoning-and-sheins-movable-ipo/" target="_blank">Puck</a> · <a href="https://pitchbook.com/news/articles/sheins-pe-backers-may-have-to-hold-on-a-little-longer" target="_blank">PitchBook</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">保险</span>
+        <h4>中国平安半年净利 925.9 亿 +36%——股市 rally 推升投资收益</h4>
+        <p>8/20 平安保险发布中报：归母净利润 <strong>925.9 亿</strong>（<strong>+36%</strong>），超分析师预期。核心驱动：中国股市 rally 推升投资收益 + 保险政策销售走强。平安股价盘中走高。Bloomberg 称这是中国最大市值保险公司受惠于股市回暖的典型案例。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>平安的暴利说明一件事——A 股 2026 年的反弹（沪指从 2025 年低位回升约 30%）让保险公司的投资组合大幅回血。对 lainy：保险股是 A 股/港股回暖的高弹性标的——投资收益跟随股市走。但反过来，如果 A 股回调，平安的利润也会快速缩水。</div>
+        <div class="ticker">📌 关联标的：02318 平安（港股）/ 601318 平安（A 股）— 股市 rally 的弹性受益者</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-20/ping-an-s-profit-rises-as-stock-market-rally-boosts-returns" target="_blank">Bloomberg</a> · <a href="https://www.businessinsurance.com/ping-ans-net-income-jumps-36/" target="_blank">Business Insurance</a> · <a href="https://www.investing.com/news/stock-market-news/why-is-ping-an-insurance-stock-rising-today-93CH-4870848" target="_blank">Investing.com</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 锂/铜/黄金] → 中游 [制造 电池/家电/保险] → 下游 [渠道 电商/餐饮/旅游] — 当前受益环节：服务型消费（餐饮/文娱）+ 保险（投资收益回暖），受损环节：商品零售 + 奢侈品</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">票房</span>
+        <h4>《The Odyssey》全球票房破 $13.5 亿——34 天内 Nolan 新片成为 2026 年最大爆款</h4>
+        <p>Christopher Nolan 执导的《The Odyssey》上映 34 天，北美票房 <strong>$5.16 亿</strong>，全球票房 <strong>$13.5 亿</strong>，成为 2026 年迄今全球票房最高电影。影片改编自荷马史诗，Nolan 标志性的 IMAX 视觉奇观 + 星光熠熠的阵容（Matt Damon、Tom Holland、Anne Hathaway）持续吸引观众。</p>
+        <div class="why">🦞 <b>花边点评：</b>Nolan 再次证明他是"票房 + 口碑"双保证的导演。lainy 周末如果还没看，《The Odyssey》是 IMAX 影厅的必选。$13.5 亿 = 2026 年好莱坞大片的标准答案——原创 IP（非续集/超英）能做到这个级别，市场在奖励原创性。</div>
+        <div class="source">🔗 Source: <a href="https://boxofficewatch.com/movies/the-odyssey" target="_blank">Box Office Watch</a> · <a href="https://en.wikipedia.org/wiki/2026_in_film" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Moderna 过山车</span>
+        <h4>Moderna 一日暴涨 177% 后暴跌 23%——癌症疫苗突破引发"世纪逼空"后回吐</h4>
+        <p>8/20 Moderna 股价暴涨 <strong>177%</strong>（创历史最大单日涨幅），原因是公司与 Merck 联合研发的 mRNA 癌症疫苗三期临床试验数据突破性阳性。但 8/21 即暴跌 <strong>23.5%</strong> 至 $133.32，抹去约 $180 亿市值。Forbes 分析称投资者"买预期卖事实"——虽然试验结果好，但商业化还需数年。CNBC 分析师称"很好的结果，但并非完全出乎意料"。</p>
+        <div class="why">🦞 <b>轻松一下：</b这就是华尔街的经典剧本——好消息一出，散户冲进去追高，机构趁机出货。177% 涨 → 23% 跌 = 两天内市值波动超 $100 亿。对 lainy：生物医药投资最刺激也最危险——一个三期数据可以翻倍也可以腰斩。Modena 的故事说明"突破性结果"不等于"立刻赚钱"。</div>
+        <div class="source">🔗 Source: <a href="https://www.forbes.com/sites/tylerroush/2026/08/20/moderna-stock-plunges-25-wiping-out-18-billion-after-historic-cancer-vaccine-breakthrough/" target="_blank">Forbes</a> · <a href="https://www.fxleaders.com/news/2026/08/21/moderna-stock-mrna-cancer-vaccine-breakthrough/" target="_blank">FX Leaders</a> · <a href="https://www.cnbc.com/quotes/MRNA" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">新片</span>
+        <h4>本周末新片：《Spa Weekend》上映 + 《天空之城》40 周年重映</h4>
+        <p>8/22 周末新片上映：喜剧片《Spa Weekend》登陆北美院线（宽映）。Studio Ghibli 经典《天空之城》40 周年纪念版在限定影院重映。Box Office Mojo 显示本周末票房竞争相对平淡——《The Odyssey》预计继续领跑。印度市场方面，《Awarapan 2》上映 8 天累计近 ₹170 亿，增速放缓。</p>
+        <div class="why">🦞 <b>周末推荐：</b>如果 lainy 周末去看电影，《The Odyssey》IMAX 是首选，《天空之城》重映适合怀旧。《Spa Weekend》是轻松喜剧，适合不想动脑子的周末。</div>
+        <div class="source">🔗 Source: <a href="https://www.boxofficemojo.com/" target="_blank">Box Office Mojo</a> · <a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-22-2026-live-updates-11787338184776.html" target="_blank">Livemint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag sci">科学</span>
+        <h4>Nvidia 把 GPU 装进美国家庭墙壁——SPAN + PulteGroup 合作「零首付壁挂式 AI 节点」</h4>
+        <p>这个前面 AI 板块已经讲过，但从"科技花边"角度看更有意思：Nvidia 正在把 AI 算力变成"家庭基础设施"——就像 20 世纪初电力入户一样。如果成功，未来每栋新房都自带 10-15kW 算力容量，住宅电气标准、电力公司商业模式、算力网络协议都会被重塑。PulteGroup 是美国最大住宅开发商，SPAN 是智能电气面板公司——三方合作意味着这不仅是实验，而是规模化推进。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>如果 10 年后回看，"AI 算力入户"可能像"宽带入户"一样成为住宅标配。lainy 的金融视角：PulteGroup 如果把"自带 AI 算力"作为新房卖点，可能成为住宅行业差异化竞争点。当然，也可能像 Google Fiber 一样——雄心壮志但最终缩水。</div>
+        <div class="source">🔗 Source: <a href="https://wccftech.com/nvidia-wants-to-turn-your-home-wall-into-a-mini-data-center-by-packing-16-blackwell-gpus-and-4-server-cpus-in-a-liquid-cooled-wall-mounted-box-at-0-upfront-cost/" target="_blank">WCCFTech</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
