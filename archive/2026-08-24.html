@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-24</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 24 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>超级周开场：</b>Nvidia 8/26 周三盘后发财报，黄仁勋已低调抵台密会 TSMC 锁定产能；Fed 主席 Warsh 本周五 Jackson Hole 首秀 + Core PCE 同日公布——本周是 2026 年 AI 投资与货币政策的双重拐点。</li>
+      <li><b>美加贸易战开打：</b>美加贸易谈判上周五午夜前破裂，50% 关税即刻生效覆盖 $200 亿加拿大商品，加总理 Carney 宣布 9/8 起实施「 dollar-for-dollar 」报复性关税。</li>
+      <li><b>伊朗硬了一位安全首脑：</b>新任安全委员会秘书 Rezaei 警告海湾国家「加入美国制裁就是敌人」，扬言「不让一滴油通过波斯湾」；Brent 原油周涨 6.6% 至 $94 附近。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>超级周：Nvidia 财报 + Jackson Hole</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">黄仁勋抵台</span>
+        <h4>黄仁勋低调抵台，财报前密会 TSMC 锁定下一代 AI 芯片产能</h4>
+        <p>在 Nvidia 8/26（周三）盘后发布 Q2 财报前夕，CEO 黄仁勋低调抵达台湾。据 BigGo Finance 报道，此次行程的主要目的是与 TSMC 及核心供应链高管进行闭门会议，敲定下一代 AI 芯片产能分配、先进封装配额及服务器定价调整。华尔街预期 Nvidia Q2 营收同比增长 <strong>97%</strong>，该财报被视为 2026 年 AI 投资周期的风向标。期权市场定价财报后市值波动约 <strong>$3130</strong> 亿。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄仁勋选在财报前亲自跑台湾，说明两件事：① Nvidia 对 TSMC 产能的争夺已经到了「老板亲自盯」的阶段；② Grace Blackwell 300 和 Vera Rubin 200 系统的产能分配将直接影响 FY2027 收入预期。对 lainy 的框架：TSMC 是 AI 链条的「瓶颈」，谁拿到产能谁赢。Nvidia 财报不只是看数字，更看指引——如果指引上调，整条 AI 链（TSMC → SK Hynix → 美光）都会跟着动。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，财报前核心标的）/ TSM（TSMC，产能分配受益）/ 000660.KS（SK Hynix，HBM 供应方）— AI 链全线关注财报指引</div>
+        <div class="source">🔗 Source: <a href="https://finance.biggo.com/news/0cbc7540-c6ca-49a0-b1c6-522d99889d5e" target="_blank">BigGo Finance</a> · <a href="https://finance.yahoo.com/markets/article/nvidia-earnings-and-jackson-hole-what-to-watch-this-week-100000082.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD 台湾</span>
+        <h4>AMD 豪掷 $100 亿投资台湾：与 TSMC/ASE 合建下一代先进封装，数据中心收入目标 60% 年增长</h4>
+        <p>The Motley Fool 8/23 报道，AMD 承诺在台湾投资超过 <strong>$100</strong> 亿，用于与 TSMC、ASE 科技和硅品精密合作开发下一代 Elevated Fanout Bridge（EFB）先进封装技术。AMD 目标是未来 3-5 年数据中心业务年增长 <strong>60%</strong>+。目前 AMD 与 Powertech 已完成 EFB 面板级封装测试。这标志着 AMD 从「只设计芯片」向「深度绑定制造链」转型，直接对标 Nvidia 的垂直整合策略。</p>
+        <div class="why">🦞 <b>商业含义：</b>AMD 投 $100 亿在台湾本质上是在买「产能确定性」——当 TSMC 的先进封装产线被 Nvidia 挤满时，AMD 必须提前锁定自己的位置。EFB 封装是 AMD 区别于 Nvidia 的技术路线——Nvidia 用 TSMC CoWoS，AMD 走 EFB，两条路线并行意味着封装产能瓶颈可能比市场预期更早缓解。对 lainy：AMD 在 AI 加速器市场的份额提升叙事正在被「真金白银」支撑。</div>
+        <div class="ticker">📌 关联标的：AMD（直接受益）/ ASX（ASE 科技，封装合作方）/ TSM（TSMC，共同受益）— AMD 供应链垂直整合加速</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/investing/2026/08/23/amd-is-investing-more-than-xx-billion-in-taiwan-to/" target="_blank">The Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 涨价</span>
+        <h4>持续关注 · Nvidia AI 服务器涨价 15%+：内存成本翻倍，Vera Rubin / Grace Blackwell 均受影响</h4>
+        <p>8/22 Bloomberg 报道，Nvidia 已通知大客户 AI 服务器价格将上涨超过 <strong>15%</strong>，适用于明年起交付的 Grace Blackwell 300 和 Vera Rubin 200 系统涨价。直接原因：服务器 DRAM 在 2026 Q1 翻倍，内存现在占高端 AI 机架成本的 <strong>25%</strong>。Tom's Hardware 指出，讽刺的是，当前挤压 Nvidia 的内存短缺正是它自己的需求创造的——三大存储厂将产能转向 HBM 和高容量服务器 DRAM，导致普通内存供应紧张。</p>
+        <div class="why">🦞 <b>增量解读：</b>上周已报过涨价消息，今天的增量是「为什么涨」的机制——内存厂转产 HBM → DRAM 短缺 → Nvidia 成本上升 → 转嫁给云客户。对 lainy 的产业映射：这不是「Nvidia 赚更多」，而是「AI 算力的总成本在上升」。利好存储厂（三星、SK Hynix 定价权增强），利空云厂（MSFT/Meta/GOOG 的 capex 会超预算）。</div>
+        <div class="ticker">📌 关联标的：NVDA（短期利好——转嫁成本保毛利）/ 005930.KS 三星 / 000660.KS SK Hynix（内存定价权增强）/ MSFT META GOOG（云厂 capex 压力上升）</div>
+        <div class="source">🔗 Source: <a href="https://www.tomshardware.com/pc-components/dram/nvidia-reportedly-warns-biggest-customers-of-15-percent-price-hikes-on-ai-servers" target="_blank">Tom's Hardware</a> · <a href="https://finance.yahoo.com/technology/ai/articles/nvidia-15-price-hike-reveals-144354675.html" target="_blank">Yahoo Finance</a> · <a href="https://biz.chosun.com/en/en-international/2026/08/23/55BZNNM5HZD5VGEP5YW43LOL7E/" target="_blank">Chosun Biz</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix 工会</span>
+        <h4>SK Hynix 工会今天就奖金股化方案投票：60% 奖金以股票发放 + 加薪 6.3%</h4>
+        <p>Seoul Economic Daily 8/23 报道，SK Hynix 与工会达成初步协议：奖金的 <strong>60%</strong> 以股票形式发放，基本工资上调 <strong>6.3%</strong>。投票定于 8/24-25 两天进行。如果通过，这将是韩国半导体行业首次大规模「奖金股化」安排——让员工直接持有公司股票，与股东利益对齐。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这个安排很聪明——既满足了员工加薪诉求，又不会直接增加现金支出（以股票代替），还让员工成为股东，降低未来罢工风险。对投资者：短期看股权稀释有限，长期看员工持股比例上升有助于稳定公司治理。SK Hynix 近期还启动了 <strong>$280</strong> 亿美国上市（ADR），加上三星的 110 万亿韩元股东回报，韩国半导体双寡头的「股东价值重估」叙事在强化。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix，ADR 上市 + 员工持股 + HBM 需求三重利好）— 韩国半导体股东价值重估持续</div>
+        <div class="source">🔗 Source: <a href="https://en.sedaily.com/finance/2026/08/23/sk-hynix-union-vote-opens-on-bonus-in-shares-deal" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游存储（DRAM 涨价 → 三星/SK Hynix 定价权增强），受损环节：终端云厂（capex 超预算风险上升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美加贸易战 + 伊朗升级</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美加贸易战</span>
+        <h4>美加贸易谈判破裂：50% 关税即刻生效覆盖 $200 亿商品，Carney 宣布 9/8 起「dollar-for-dollar」报复</h4>
+        <p>8/21 午夜前，美加贸易谈判在三天延期后仍未达成协议，50% 关税即刻生效，覆盖 <strong>$200</strong> 亿加拿大出口商品（含乳制品、酒类、木材等），约占加拿大对美出口总额的 5%。加拿大总理 Carney 表示美国「要得太多、给得太少」，宣布 9/8 起实施等额报复性关税。NPR 和 The Atlantic 均指出，谈判破裂的核心是双方互相指责对方在最后时刻修改已同意条款。美国这边由特朗普直接推动，将其与 USMCA 2026 重谈挂钩。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是美国对最亲密盟友发动的最大规模贸易战。对市场的冲击路径：① 加拿大木材/铝/钢关税上升 → 美国建房成本上升 → 通胀压力；② 加拿大报复性关税瞄准美国农产品/制造业 → 美国出口商受损；③ 如果 USMCA 谈论持续恶化，全球供应链的「北美环节」不确定性上升。对 lainy：这是「特朗普 2.0 关税」的又一个战场，此前对华、对欧已开打，现在连加拿大也不放过——全球贸易碎片化在加速。</div>
+        <div class="ticker">📌 关联标的：XLF（金融股，贸易不确定性风险）/ EWC（加拿大 ETF）/ WMB（木材期货）— 美加双边贸易受损，全球避险情绪上升</div>
+        <div class="source">🔗 Source: <a href="https://www.npr.org/2026/08/22/nx-s1-5941584/us-canada-tariffs" target="_blank">NPR</a> · <a href="https://www.cnbc.com/2026/08/22/us-canada-trade-talks-collapse-ushering-in-wave-of-new-tariffs.html" target="_blank">CNBC</a> · <a href="https://www.theatlantic.com/ideas/2026/08/why-us-canada-trade-talks-fell-apart/688386/" target="_blank">The Atlantic</a> · <a href="https://www.theguardian.com/us-news/2026/aug/23/canada-us-collapsed-trade-talks-negotiation-breakdown-analysis" target="_blank">The Guardian</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">伊朗硬升级</span>
+        <h4>伊朗新安全首脑 Rezaei 警告海湾国家：加入美国制裁就是「敌人」，扬言封锁波斯湾所有石油通道</h4>
+        <p>CNN、NYT、The Guardian 8/23-24 报道，伊朗最高国家安全委员会新任秘书 Mohsen Rezaei 发表强硬声明：① 警告海湾邻国不要加入美国对伊制裁，否则将被视为「敌人」；② 威胁「不让一滴油通过波斯湾」；③ 称霍尔木兹海峡将继续关闭直到美国「改变行为」。同期，美国宣布对伊朗实施「史上最严厉制裁」。Brent 原油周涨 <strong>6.6%</strong> 至 <strong>$94.39</strong>，但周日略降至 <strong>$93.77</strong>。中东问题智库 ME Council 指出，市场一直在押注「石油会回来」，但五个月过去了仍未回归。</p>
+        <div class="why">🦞 <b>市场含义：</b>Rezaei 是伊朗政坛的硬线人物，他的上任本身就是一个信号——伊朗正在从「谈判姿态」转向「对抗姿态」。对油价的影响路径：如果海湾国家（沙特、阿联酋）在美国压力下配合制裁，伊朗真的封锁波斯湾 → Brent 可能冲 $120+；如果海湾国家保持中立 → 当前 $90-95 可能是新的均衡区间。对 lainy：高油价 = 通胀粘性 = Fed 难降息 = 科技股估值承压，这条链你很熟了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / XLE（能源 ETF）— 油价高位支撑能源股，但压制科技估值</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/08/23/world/live-news/iran-war-trump" target="_blank">CNN</a> · <a href="https://www.nytimes.com/2026/08/23/world/europe/iran-economy-war-united-states.html" target="_blank">NYT</a> · <a href="https://www.theguardian.com/world/2026/aug/23/iran-new-security-chief-trump-economic-war-enemies-mohsen-rezaei" target="_blank">The Guardian</a> · <a href="https://mecouncil.org/blog_posts/why-has-the-price-of-oil-remained-below-war-time-expectations/" target="_blank">ME Council</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 波斯湾航线 war-risk 保险高企] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹关闭 + 波斯湾威胁升级，tanker 保险费率持续走高）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Jackson Hole 超级周 · PCE · Nvidia 财报</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Jackson Hole</span>
+        <h4>Fed 主席 Warsh 本周五 Jackson Hole 首秀：债市押注通胀信号，Core PCE 同日公布</h4>
+        <p>本周（8/24-28）是 2026 年迄今最关键的宏观周：① 7 月 FOMC 会议纪要已于上周发布，「多位」官员表示准备好加息；② Fed 主席 Warsh 将于 8/28（周五）在 Jackson Hole 经济政策研讨会发表就任后首次主旨演讲——市场将其视为「双向风险」，因为 Warsh 没有政策记录可供锚定；③ Core PCE 通胀数据同样在周五公布，预测环比加速至 <strong>0.3%</strong>；④ GDP 修正值也将于本周发布。BabyPips 指出，30 年期国债收益率近期触及 <strong>5.33%</strong>（19 年新高），债市正在用脚投票。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Warsh 作为 Fed 主席的「首秀」——市场会从他的每个用词中寻找利率方向的信号。三种情景：① 鸽派（强调经济放缓风险）→ 风险资产大涨；② 鹰派（暗示加息可能）→ 科技股承压、债券收益率继续升；③ 模糊（不打明牌）→ 市场继续用数据（PCE/GDP）来定价。当前 Polymarket 显示 9 月加息 25bp 概率约 <strong>67%</strong>。对 lainy：这一周 Nvidia 财报 + Jackson Hole + PCE 同时发生，市场波动率会显著上升。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，Jackson Hole 直接驱动）/ TL TLT（长期国债 ETF，收益率方向）/ GLD 黄金（避险需求）— 超级周波动率上升</div>
+        <div class="source">🔗 Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262126132-jackson-hole-warsh-nvidia-marvell-earnings-ai-investment-sentiment-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.babypips.com/analysis/fundies-cheat-sheet-2026-08-24-jackson-hole-warsh-core-pce-gold-bitcoin-debasement-levels" target="_blank">BabyPips</a> · <a href="https://www.business-standard.com/world-news/investors-seek-clearer-fed-guidance-from-warsh-at-jackson-hole-address-126082300413_1.html" target="_blank">Business Standard</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">通胀 & 油价</span>
+        <h4>Brent 周涨 6.6% 至 $94 附近，铜价走高市场押注 Fed 9 月加息 25bp 概率 67%</h4>
+        <p>本周油价继续走高：Brent 周涨 <strong>6.6%</strong> 收于 <strong>$94.39</strong>，WTI 涨 <strong>5.15%</strong> 至 <strong>$86.64</strong>。COMEX 铜价升至 <strong>$5.365</strong>/磅（+0.85%），市场预期 FOMC 9 月可能变动 25bp。美国 7 月 CPI 已降至 <strong>3.4%</strong>，核心 CPI 同比 <strong>2.5%</strong>（符合预期），但油价高企让通胀预期恶化。当前联邦基金利率维持在 <strong>3.63%</strong>。UBS 将 S&P 500 年底目标上调，指出该指数 2026 年至今涨幅 <strong>12.1%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>油价从 7 月的低点已经反弹了将近 30%，这不是「地缘溢价」那么简单——霍尔木兹关闭 + 美伊对抗 + 美加关税推升进口成本 = 通胀的「三重夹击」。如果本周 PCE 超预期，9 月加息几乎成定局。对 lainy：通胀粘性 = 高利率更久 = 估值压缩，科技股短期承压但 AI 龙头（Nvidia）可能因财报而独立行情。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / COMEX 铜 / SPY（美股）/ TLT（国债 ETF）— 通胀超预期则加息概率上升</div>
+        <div class="source">🔗 Source: <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://polymarket.com/event/fed-decision-in-september-762" target="_blank">Polymarket</a> · <a href="https://tradingeconomics.com/united-states/inflation-cpi" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：周五 Warsh 演讲 + PCE 数据将决定 9 月 FOMC 方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股 · 上周五收盘 + 本周展望</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 上周五 8/21 沪指 +0.04% 报 3905 / 深成指 +0.87% / 创业板 +1.43% / 成交 1.88 万亿</h4>
+      <p>周五 A 股窄幅震荡，三大指数小幅收涨，但成交额降至 <strong>1.88</strong> 万亿（前一日 2.09 万亿），缩量反弹特征明显。科创板 2026 年至今涨 <strong>23%</strong>，跑赢全球主要科技指数。<b>本周关注：</b>① 长鑫科技科创板上市后续（A 股最大 IPO，可能虹吸效应）；② 内幕交易新规实施后市场反应；③ Nvidia 财报对国产 AI 芯片（寒武纪/海光）的情绪传导。<b>重点异动：</b>宁德时代半年报后回购 400 亿持续推进，半年报日赚 2.4 亿的利好仍在消化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 上周五 8/21 恒指 +1.21% 报 26,009 / 周末期货 25,895（小幅回落）</h4>
+      <p>恒指周五站上 26,000 心理关口，金融/黄金/AI 板块携手拉升。<b>今日焦点：</b>Shein 正式启动 IPO 路演，拟募资最高 <strong>$18</strong> 亿（HK$138.6 亿），估值上限 <strong>$270</strong> 亿，8/31 定价、9/1 挂牌——这将是 2026 年港股最大 IPO。<b>本周关注：</b>Nvidia 财报对恒科情绪传导 + Jackson Hole 对港流动性的影响。CNBC 报道恒指期货周末报 25,895，暗示今日可能小幅低开。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 上周五道指收高但周线连跌：S&amp;P -1.4% / 道指 -0.8% / 纳指 -2.1%（全周）</h4>
+      <p>周五收盘：道指小涨 <strong>+0.46%</strong>，但 S&amp;P 微涨 <strong>+0.05%</strong> 报 7,674，纳指跌 <strong>-0.64%</strong> 报 26,180。全周来看三大指数均跌——S&amp;P <strong>-1.4%</strong>（-111 点），道指 <strong>-0.8%</strong>（-455 点），纳指 <strong>-2.1%</strong>（-549 点）。NYSE 指出 S&amp;P 已跌破 7,700，打破了 8 月初以来的箱体。<b>本周超级周：</b>Nvidia 8/26 盘后财报 + Marvell 8/27 财报 + Jackson Hole 8/28 + Core PCE 8/28。<b>市场预期：</b>Nvidia Q2 YoY +97%，若超预期可能带动纳指反弹；若不及预期则 AI 叙事可能回调。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 上周五 KOSPI +0.88% 报 6,912.95 / 三星 +3.87% / SK Hynix 跟涨 / 从 7 月低点反弹 31%</h4>
+      <p>KOSPI 周五收 6,912.95（+0.88%），三星电子盘中涨 <strong>3.87%</strong>（股东回报预期驱动），但盘后公布 90-110 万亿韩元回报计划后小幅回落（被认为「不够」）。SK Hynix 同步上涨。<b>关键叙事：</b>KOSPI 从 7 月低点反弹 <strong>31%</strong>，从熊市转入牛市仅用一个月——主要由三星/SK Hynix 大幅反弹驱动。韩国散户转向年化 <strong>40-50%</strong> 票息的 ELS（股权挂钩证券）追逐风险收益。<b>本周关注：</b>① SK Hynix 工会投票 8/24-25；② Samsung 股东回报方案市场反应；③ Nvidia 财报对韩股 AI 链的情绪传导。<b>外资流向：</b>上周五外资卖出 1.47 万亿韩元。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · IPO · 食品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Shein IPO</span>
+        <h4>Shein 今日正式启动香港 IPO 路演：募资上限 $18 亿 / 估值 $270 亿 / 9/1 挂牌</h4>
+        <p>Reuters/Bloomberg 8/24 报道，Shein 今日启动香港 IPO book-building，发行 2.8 亿股，每股 HK$47.60-49.50，募资上限 HK$13.86 亿（约 <strong>$18</strong> 亿），估值上限 <strong>$268</strong> 亿。8/31 定价，9/1 正式挂牌。这是 Shein 在美国和伦敦上市尝试均受挫后的最终选择。对比 2023 年上一轮融资的 <strong>$660</strong> 亿估值，当前估值缩水近 60%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Shein 是「快时尚 + 中国供应链出海」的标杆。估值从 $660 亿降到 $270 亿，反映的是：① 地缘政治让中概股折价；② 快时尚增长减速；③ 供应链合规争议。但对 lainy：$270 亿仍然是一个有吸引力的价格——如果 Shein 上市后能证明 AI 驱动的柔性供应链效率，估值有修复空间。港股 IPO 市场也需要这个大单来提振信心。</div>
+        <div class="ticker">📌 关联标的：Shein（上市后观察）/ 01810.HK 小米（消费电子可比公司）/ 港股 IPO 市场情绪 — 港股 IPO 提振</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-23/shein-seeks-up-to-1-8-billion-in-long-awaited-hong-kong-ipo" target="_blank">Bloomberg</a> · <a href="https://www.channelnewsasia.com/business/fast-fashion-giant-shein-launches-up-18-billion-hong-kong-ipo-6336556" target="_blank">CNA</a> · <a href="https://www.tradingview.com/news/reuters.com,2026:newsml_L1N44K04S:0-shein-launches-up-to-1-8-billion-hong-kong-ipo/" target="_blank">Reuters via TradingView</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">食品价格预警</span>
+        <h4>JPMorgan 预警：2027 年食品价格或飙升——厄尔尼诺 + 化肥短缺双威胁</h4>
+        <p>Daily Mail 8/23 报道，JPMorgan 发布报告警告美国消费者可能面临食品价格暴涨——两大全球威胁同时逼近：① 厄尔尼诺气候现象影响全球农作物产量；② 化肥供应链持续紧张。报告指出，食品通胀可能在 2027 年成为新的宏观风险，叠加当前能源通胀和贸易关税上升，形成「三重通胀」压力。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>食品通胀是「最危险的通胀」——因为它直接打击消费者感受，且央行很难通过利率工具解决（供给端问题）。对 lainy 的消费股框架：如果食品通胀在 2027 年兑现，① 必选消费（食品饮料龙头如茅台、伊利）有定价权可以转嫁成本；② 可选消费（餐饮、零售）利润被两头挤；③ 农产品期货（玉米、大豆、糖）可能是 2027 年的最佳配置之一。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（定价权）/ 600887 伊利股份（乳制品）/ DBA（农产品 ETF）— 食品通胀利好定价权强的品牌</div>
+        <div class="source">🔗 Source: <a href="https://www.dailymail.com/sciencetech/article-16070689/food-prices-jpmorgan-warning-el-nino-fertilizer.html" target="_blank">Daily Mail</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">P&G 收购</span>
+        <h4>P&amp;G 以 $38 亿收购营养品品牌 Thorne：健康消费品赛道整合加速</h4>
+        <p>Nutritional Outlook 报道，P&amp;G（宝洁）以 <strong>$38</strong> 亿收购营养补充剂品牌 Thorne Health Tech，P&amp;G 股价应声涨约 <strong>1%</strong>。这是 P&amp;G「个人健康护理」战略的延续——2026 年补充剂行业已有多起高调并购。Thorne 专注于高端营养补充剂，产品线覆盖维生素、矿物质、运动营养等。</p>
+        <div class="why">🦞 <b>市场含义：</b>消费品巨头正在从「日化」向「健康」转型——P&amp;G 的逻辑是：日化增长见顶，但健康营养品赛道增速仍有双位数。对 lainy 的消费股框架：关注「大消费 + 健康化」趋势——中国对标逻辑是华润医药、汤臣倍健等营养品企业。全球消费品并购潮 = 行业整合期 = 龙头通过收购维持增长。</div>
+        <div class="ticker">📌 关联标的：PG（P&G，健康转型）/ 300146 汤臣倍健（中国营养品对标）— 消费品健康化整合趋势</div>
+        <div class="source">🔗 Source: <a href="https://www.nutritionaloutlook.com/view/procter-gamble-to-acquire-thorne-f3-8-billion" target="_blank">Nutritional Outlook</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [农产品/化肥] → 中游 [食品加工/营养品制造] → 下游 [品牌/零售渠道] — 当前受益环节：下游有定价权的品牌（P&G/茅台），受损环节：中游无差异化制造（成本上升无法转嫁）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Yellowstone</span>
+        <h4>《Yellowstone》创作者 Taylor Sheridan 被指控「偷」了剧集创意——来自 2016 年被拒的提案</h4>
+        <p>Livemint 8/24 报道，《Yellowstone》主创 Taylor Sheridan 面临诉讼：有人指控他从 2016 年一份被拒的提案中「偷取」了 Yellowstone 的核心概念。案件正在推进中。与此同时，Yellowstone 系列前传《1944》和续集《2024》均在制作中，派拉蒙+本周上新包括 Ryan Gosling 与 Michelle Williams 的新作。</p>
+        <div class="why">🦞 <b>花边点评：</b>好莱坞的「创意剽窃」官司年年有，但 Yellowstone 是 2026 年美国最赚钱的 IP 之一——派拉蒙靠它撑起了整个流媒体平台。如果诉讼成立，赔偿金额不会小。lainy 如果追 Yellowstone 系列，这就是为什么最近新闻里一直在讨论它。</div>
+        <div class="source">🔗 Source: <a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-24-2026-live-updates-11787513381604.html" target="_blank">Livemint</a> · <a href="https://www.comingsoon.net/movies/news/2179306-new-paramount-releases-this-week-august-24-30" target="_blank">ComingSoon</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">流媒体上新</span>
+        <h4>本周流媒体上新：Disney+ 上线《Venom: The Last Dance》/ Paramount+ Ryan Gosling 新片 / Hulu 老牌情景喜剧全集</h4>
+        <p>8/24-30 各平台上新：Disney+ 上线《Venom: The Last Dance》+ Andy Serkis 的科幻新片（全球票房 <strong>$4.78</strong> 亿）；Paramount+ 推出 Ryan Gosling 与 Michelle Williams 的浪漫新片；Hulu 上线一部成人情景喜剧全部 19 季 + 一部经典老剧全集。Disney+ 同时上架 Marvel 新内容。</p>
+        <div class="why">🦞 <b>轻松一下：</b>本周流媒体大战精彩——Disney+ 靠 Marvel + 科幻大制作稳住基本盘，Paramount+ 靠 star power（Ryan Gosling）拉新，Hulu 走怀旧路线。lainy 周末想放松的话，《Venom: The Last Dance》适合无脑爽片之夜。</div>
+        <div class="source">🔗 Source: <a href="https://www.comingsoon.net/movies/news/2178600-new-disney-releases-this-week-august-24-30" target="_blank">ComingSoon - Disney+</a> · <a href="https://www.comingsoon.net/tv/news/2178601-new-hulu-releases-this-week-august-24-30" target="_blank">ComingSoon - Hulu</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">NBA</span>
+        <h4>Cameron Boozer 谈 Duke 心碎经历 + 2026 NBA 选秀展望：球二代正在路上</h4>
+        <p>Sports Illustrated 8/23 报道，Cameron Boozer——前 NBA 球星 Carlos Boozer 之子——在专访中首次公开谈论在 Duke 大学的「心碎」经历，以及他对 2026 NBA 选秀的展望。Boozer 被视为 2026 选秀的乐透区热门人选。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>球二代进 NBA 总是自带话题——Cameron 的父亲 Carlos Boozer 曾是爵士队核心。如果你关注 NBA 选秀，Boozer 和 Cooper Flagg 这一代「星二代+天才」混搭的新生代正在改变联盟格局。</div>
+        <div class="source">🔗 Source: <a href="https://www.si.com/" target="_blank">Sports Illustrated</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">人形机器人</span>
+        <h4>2026 北京世界人形机器人运动会：人形机器人赛跑 + 摔跤——Bloomberg 专题报道</h4>
+        <p>Bloomberg 本周发布专题视频报道 2026 北京世界人形机器人运动会（World Humanoid Robot Games）——赛场上人形机器人进行赛跑、格斗摔跤等竞技项目。这是全球首届大规模人形机器人体育赛事，参赛单位包括宇树科技、智元机器人、优必选等中国企业，以及部分国际团队。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>人形机器人从「能走路」到「能摔跤」，技术进步速度超出市场预期。对 lainy：WAIC 2026 上已看到量产信号，这次运动会相当于「公开技术测评」——谁家的机器人平衡性更好、响应更快，下一步商业化方向就会更清晰。关注人形机器人概念股：002747 埃斯顿、688169 石头科技等。</div>
+        <div class="ticker">📌 关联标的：002747 埃斯顿（机器人）/ 688169 石头科技（机器人概念外溢）— 人形机器人量产化加速</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
