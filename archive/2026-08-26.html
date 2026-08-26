@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-26</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --commodity: #B8A07E; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; font-style: normal; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.commodity { background: #B8A07E18; color: var(--commodity); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 26 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>英伟达今夜盘后发 Q2 财报：</b>华尔街预期收入 ~<strong>$910</strong> 亿，EPS $2.09——全年 AI 投资风向标；同日 OpenAI 首款自研芯片 Jalapeño 基准跑赢英伟达 GB300。</li>
+      <li><b>霍尔木兹油轮遇袭 + Bessent 制裁升级：</b>阿曼沿海油轮被不明弹体击中瘫痪，美财长宣布制裁 <strong>60</strong> 个伊朗关联实体，警告各国"断绝与伊朗金融联系"。</li>
+      <li><b>美股收盘小涨、韩股反弹：</b>S&P 500 <strong>+0.41%</strong> 至 7,677 / 道指 +0.22% / 纳指 +0.68%；KOSPI +0.68% 从前日 -3% 反弹；Dick's Sporting Goods 暴跌 <strong>29%</strong>。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>英伟达财报日 + OpenAI 芯片首秀</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达财报</span>
+        <h4>英伟达 Q2 FY27 今夜盘后发布：收入预期 ~$910 亿、同比 +95%，全年 AI capex 风向标</h4>
+        <p>英伟达将于 8/26 美东时间盘后发布 Q2 FY27 财报。华尔街共识预期：收入 <strong>$910</strong> 亿（±2%，公司 5 月指引），EPS $2.09，同比收入增长约 <strong>+95%</strong>。期权市场定价财报后约 <strong>$3,130</strong> 亿市值波动。关键看点：① 数据中心收入是否继续 beat（上季度 $441 亿）；② Blackwell/Rubin 平台出货进度；③ 中国市场归零后客户结构变化；④ 毛利率能否维持 75%+。Yahoo Finance 指出 TSMC 股价可能受英伟达财报催化。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 8 月最关键的单一事件。英伟达财报不只是"一家公司的业绩"——它是全球 AI capex 周期的"温度计"。如果 beat + raise，TSMC/三星/SK Hynix/博通整条链都跟着涨；如果 miss 或 guidance 偏弱，整个半导体板块会回调。lainy 记住：英伟达的 guidance 比当季数字更重要，它决定未来 6 个月的 AI 芯片需求预期。</div>
+        <div class="ticker">📌 关联标的：NVDA（核心）/ TSM（台积电，催化受益）/ 000660.KS SK Hynix / AVGO Broadcom / SMH 半导体ETF — 财报 beat 全链受益，miss 全链承压</div>
+        <div class="source">🔗 Source: <a href="https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/NVIDIA-2nd-Quarter-FY27-Financial-Results/default.aspx" target="_blank">NVIDIA IR</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/prediction-tsmc-stock-soar-aug-074301218.html" target="_blank">Yahoo Finance</a> · <a href="https://www.tipranks.com/stocks/nvda/earnings" target="_blank">TipRanks</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OpenAI 自研芯片</span>
+        <h4>OpenAI 首款自研芯片 Jalapeño 基准首秀：每千瓦吞吐量 1.5-1.9x 英伟达 GB300，延迟低 3.6x</h4>
+        <p>OpenAI 8/25 发布其首款自研推理 ASIC "Jalapeño" 的首批公开基准测试结果。在 SemiAnalysis InferenceX 基准上，Jalapeño 以 <strong>700W</strong> 功耗实现了对比英伟达 <strong>1,400W</strong> GB300 系统的 <strong>1.5x-1.9x</strong> 每千瓦吞吐量优势，端到端延迟降低 <strong>1.7x-3.6x</strong>。该芯片由 OpenAI 与 Broadcom 联合开发，采用 TSMC 3nm 工艺。Bloomberg 报道第二代芯片即将 tapeout，第三代已在概念设计阶段。OpenAI 去年与 Broadcom 签署 10GW 部署协议。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是 AI 芯片格局的标志性事件——OpenAI 从"英伟达最大客户"变成"英伟达竞争对手"。但短期影响有限：① Jalapeño 是推理芯片，训练仍需英伟达；② 量产规模远不及英伟达；③ OpenAI 仍在 TSMC 同一条供应链上排队。中长期含义：大客户自研芯片趋势加速（Google TPU → Amazon Trainium → OpenAI Jalapeño），英伟达的定价权面临结构性侵蚀。对 lainy 的框架：英伟达今天财报如果 beat，短期股价涨；但 Jalapeño 这类新闻说明"去英伟达化"是真实趋势，不是噱头。</div>
+        <div class="ticker">📌 关联标的：NVDA（长期定价权承压）/ AVGO（Broadcom，联合开发受益）/ TSM（代工受益不论谁赢）/ 159992 半导体ETF — 短期 NVDA 仍是王者，中长期 AVGO 受益于 ASIC 趋势</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests" target="_blank">Bloomberg</a> · <a href="https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks" target="_blank">Tom's Hardware</a> · <a href="https://techcrunch.com/2026/08/25/openais-jalapeno-chip-is-built-for-fast-inference-at-scale-benchmarks-show/" target="_blank">TechCrunch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Hot Chips 2026</span>
+        <h4>Hot Chips 2026 大会：英伟达 Vera Rubin Groq 3 LPX 进入全量生产 + Spectrum-X 多平面网络架构</h4>
+        <p>在斯坦福 Hot Chips 2026 大会上，英伟达宣布推理加速器 <strong>Groq 3 LPX</strong> 已进入全量生产（full production），作为 Vera Rubin NVL72 系统的补充，专为 agentic AI 超低延迟推理设计。同时展示 Spectrum-X Ethernet 多平面网络架构，计划将 AI 工厂网络从数千 GPU 扩展到 50 万 GPU 规模。第六代 NVLink 实现 72-GPU scale-up 域，3.6 TB/s 全对全带宽，延迟降低 10x。Nebius 成为首批 Groq 3 LPX 部署客户。英伟达主题："从芯片到网络到 Token 工厂的极端协同设计"。</p>
+        <div class="why">🦞 <b>读给你听：</b>Groq 3 LPX 是英伟达去年收购 Groq 后的首个产品化成果——专攻推理市场。对 lainy 的金融视角：① AI 推理市场正在从"训练的附属"变成独立大市场，英伟达在布局"训练用 Blackwell/Rubin + 推理用 Groq LPX"的双线；② Spectrum-X 网络架构意味着英伟达不只想卖芯片，还想卖网络设备——从"卖 GPU"到"卖整个 AI 工厂"；③ 这直接对标 OpenAI Jalapeño 的推理优势——竞争在加速。</div>
+        <div class="ticker">📌 关联标的：NVDA（推理市场新增长曲线）/ NBIS（Nebius，首批部署客户）/ AVGO（网络芯片竞争）/ 512760 半导体ETF — 英伟达从"芯片公司"变成"AI 工厂解决方案商"</div>
+        <div class="source">🔗 Source: <a href="https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/" target="_blank">NVIDIA Blog</a> · <a href="https://siliconangle.com/2026/08/24/nvidias-dedicated-inference-accelerator-groq-3-lpx-enters-full-production-to-supercharge-ai-agents/" target="_blank">SiliconANGLE</a> · <a href="https://www.servethehome.com/nvidia-vera-rubin-nvl72-rack-at-hot-chips-2026/" target="_blank">ServeTheHome</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达制造</span>
+        <h4>英伟达 $60 亿美国 AI 制造计划面临"7000 英里问题"——先进封装瓶颈成最大障碍</h4>
+        <p>Memeburn 分析指出，英伟达 <strong>$60</strong> 亿美国 AI 制造计划面临核心挑战：先进封装（advanced packaging）能力集中在亚洲，美国本土严重不足。英伟达 Q1 2026 中国市场份额已降至 <strong>0</strong>（出口管制收紧后），推动其加速美国本土制造。但 CoWoS 封装产能 90%+ 在台湾，美国本土封装线建设至少需要 2-3 年。TSMC 产能被英伟达和 Google 塞满，其他客户被挤出。</p>
+        <div class="why">🦞 <b>商业含义：</b>"7000 英里问题"指的是美国设计芯片→台湾制造→台湾封装→美国部署的供应链长链。对 lainy 的框架：① 先进封装是比晶圆代工更紧缺的瓶颈——CoWoS 产能决定 AI 芯片实际出货量；② 美国本土封装建设利好 ASE/Amkor 等封装厂；③ 台积电亚利桑那工厂虽然量产，但封装仍需回台湾——"造出来不等于能出货"。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电）/ ASX（ASE，封装受益）/ AMKR（Amkor，封装）/ 002156 富美芯（国产封装）— 封装瓶颈是 AI 出货量的隐形天花板</div>
+        <div class="source">🔗 Source: <a href="https://memeburn.com/nvidia-6-billion-us-ai-manufacturing-packaging-gap/" target="_blank">Memeburn</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星] + [封装 — ASE/Amkor] → 下游 [AI 芯片设计 — NVDA/AVGO/OpenAI] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前瓶颈环节：先进封装（CoWoS 产能 90% 在台湾，美国本土严重不足）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹危机 · 制裁升级</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>油轮在阿曼沿海被不明弹体击中瘫痪——霍尔木兹海峡商船通行量降至历史低点</h4>
+        <p>8/24-25，一艘油轮在阿曼沿海、霍尔木兹海峡附近被不明弹体击中，机舱受损后瘫痪。AP 报道称这是"伊朗战争以来海峡航运危险的最新例证"。IranWire 报道商船通行量已降至历史最低水平。事件发生时，巴基斯坦与伊朗正在就霍尔木兹重新开放进行谈判。截至目前无人宣称对袭击负责。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>霍尔木兹每天正常通行约 <strong>2,000 万桶</strong>原油（全球需求的 20%）。通行量骤降 = 全球供给侧的物理收缩。对 lainy 的传导链：霍尔木兹风险 → 油价溢价 → 通胀粘性 → 美联储难降息 → 科技股估值承压。油轮遇袭说明即使谈判在进行，实际安全状况并未改善。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（供给收缩推高价格）/ 600028 中国石化 / XLE 能源ETF / JETS 航空ETF（受损）— 霍尔木兹风险持续 = 油价底部有支撑</div>
+        <div class="source">🔗 Source: <a href="https://www.upi.com/Top_News/World-News/2026/08/24/oman-Hormuz-tanker-attacked/9311787626785/" target="_blank">UPI</a> · <a href="https://apnews.com/article/middle-east-iran-israel-hormuz-pakistan-august-25-2026-1a4fa2e3812c458a25a561b38dc89f09" target="_blank">AP News</a> · <a href="https://iranwire.com/en/news/156730-tanker-attack-and-traffic-collapse-escalate-strait-of-hormuz-crisis/" target="_blank">IranWire</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美国制裁</span>
+        <h4>Bessent 宣布制裁 60 个伊朗关联实体，警告各国"断绝与伊朗金融联系否则面临报复"</h4>
+        <p>美国财长 Bessent 8/24 宣布对 <strong>60</strong> 个伊朗及伊朗关联的实体、个人和船只实施新制裁，并要求关闭一家在多国运营的伊朗主要银行的全部分支。Bessent 将此次制裁称为"经济 D-Day"，警告所有与伊朗有贸易往来的国家"断绝金融联系，否则面临美国报复"。但他拒绝说明涉及哪些国家，也未给出最后期限。NYT 报道称这更像是"安静期的警告"而非立即执行。Bessent 未明确是否制裁中国银行。</p>
+        <div class="why">🦞 <b>市场含义：</b>制裁升级但留了模糊空间——"quiet period"暗示美国在观察各国反应后再决定是否加码。关键变量：中国是伊朗最大原油买家，如果美国制裁中国银行，将是中美关系重大升级事件，市场目前未定价这一风险。对 lainy：短期油价因制裁预期有支撑，但"无截止日期"意味着可能雷声大雨点小——类似 8/24 的情况。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（制裁支撑油价）/ 600028 中国石化 / USDCNH（离岸人民币，若制裁中国银行将贬值压力）— 制裁若升级至中国银行，风险资产剧烈波动</div>
+        <div class="source">🔗 Source: <a href="https://apnews.com/article/iran-rial-currency-bessent-trade-august-24-2026-e367634d8853c8fa4a341132cd577f31" target="_blank">AP News</a> · <a href="https://www.nytimes.com/live/2026/08/24/us/trump-news-iran-economy" target="_blank">NYT</a> · <a href="https://www.washingtonpost.com/business/2026/08/24/bessent-unveil-economic-d-day-sanctions-against-iran/" target="_blank">Washington Post</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">巴基斯坦斡旋</span>
+        <h4>巴基斯坦与伊朗讨论霍尔木兹重新开放——"显著进展"，伊朗-阿曼磋商分阶段管理方案</h4>
+        <p>巴基斯坦陆军参谋长 Asim Munir 8/25 在德黑兰与伊朗领导层举行"全面讨论"，聚焦防止冲突升级和霍尔木兹海峡重新开放。ISPR 称取得"显著进展"。同日，伊朗和阿富汗外长在德黑兰会面讨论地区安全。伊朗-阿曼外长也在讨论"分阶段管理海峡通行的方案"。CBS 报道特朗普宣布停火协议"失效"，美伊在霍尔木兹控制权上持续僵持。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>巴基斯坦在中美伊之间扮演"传话人"角色——它与中国关系密切，与美国也有军事合作，同时是伊朗邻国。"显著进展"说明双方都在找台阶下。如果霍尔木兹重新开放哪怕部分通行，油价有 $10-15 的回落空间。对 lainy：这是今天最值得关注的利好信号——地缘缓和 = 风险偏好回升 = 科技股受益。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（开放则回落 $10-15）/ SPY（风险偏好回升）/ 600028 中国石化（油价回落短期承压）— 霍尔木兹开放是短期最大边际变量</div>
+        <div class="source">🔗 Source: <a href="https://www.geo.tv/latest/679053-significant-progress-islamabad-tehran-discuss-hormuz-reopening-expedited-end-to-iran-us-conflict" target="_blank">Geo News</a> · <a href="https://www.siasat.com/pakistan-pushes-iran-talks-to-end-conflict-reopen-hormuz-3530370/" target="_blank">Siasat</a> · <a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-sanctions-strait-of-hormuz/" target="_blank">CBS News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹海峡] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（通行量历史低点，油轮遇袭风险持续）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>消费者信心回落 · 加息预期升温</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">消费者信心</span>
+        <h4>密歇根消费者信心 8 月回落约 8%，结束两月连升——通胀侵蚀购买力，低收入群体最受伤</h4>
+        <p>密歇根大学消费者信心指数 8 月下降约 <strong>8%</strong>，结束了 6-7 月的连续改善。该指数 5 月曾创历史新低。恶化最显著的人群：老年消费者、低收入家庭、无大学学位者——这些群体"对通胀侵蚀购买力最为脆弱"。The Conference Board 消费者信心指数也同步下滑。下周五 8/28 将公布最终 8 月数据。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>消费者信心 = 消费支出的领先指标。美国消费占 GDP 的 70%，信心下滑意味着 Q3 消费支出可能减速。对 lainy 的传导链：信心下滑 → 消费减速 → GDP 放缓 → 但同时通胀预期恶化（因为油价高企）→ 美联储陷入"增长放缓 + 通胀粘性"的两难——这正是"滞胀"的早期信号。</div>
+        <div class="ticker">📌 关联标的：SPY（消费放缓拖累大盘）/ XLY（可选消费ETF，承压）/ XLP（必需消费ETF，相对抗跌）/ GLD 黄金（滞胀环境利好）— 消费者信心走弱 = 经济减速信号</div>
+        <div class="source">🔗 Source: <a href="https://www.sca.isr.umich.edu/" target="_blank">University of Michigan</a> · <a href="https://tradingeconomics.com/united-states/consumer-confidence" target="_blank">Trading Economics</a> · <a href="https://wwmt.com/news/nation-world/consumers-still-pretty-downbeat-as-confidence-slips-again-in-august-the-conference-board-consumer-confidence-index" target="_blank">WWMT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">加息预期</span>
+        <h4>Polymarket 定价 2026 年加息概率 56.5%——伊朗战争推动油价成为加息主驱动</h4>
+        <p>Polymarket 最新定价显示 <strong>56.5%</strong> 的市场隐含概率：美联储 2026 年至少加息一次。核心驱动是伊朗战争导致的油价飙升——Trading Economics 显示 WTI 原油 8/25 收 <strong>$81.15</strong>（-4.54%），但同比仍高 <strong>28%</strong>。美 10 年国债收益率回落至 <strong>4.66%</strong>（-0.04pp）。Fed 官员本周在 Jackson Hole 前密集发声，Governor Cook 将就经济前景发表演讲。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>加息预期从上个月的 ~30% 升到 56.5%——市场在重新定价"油价 → 通胀 → 加息"传导链。但注意油价 8/25 已经从高点回落（$81 vs 前周 $94），如果霍尔木兹缓和持续，加息预期可能回落。对 lainy：关注本周 Fed 官员发言——如果他们强调"通胀仍是风险"，加息预期会进一步升温，科技股承压。</div>
+        <div class="ticker">📌 关联标的：QQQ（科技股，加息预期升温承压）/ TLT（长债ETF）/ GLD 黄金 / USDCNH（人民币汇率）— 加息预期升温 = 成长股承压、美元走强</div>
+        <div class="source">🔗 Source: <a href="https://polymarket.com/event/fed-rate-hike-in-2026" target="_blank">Polymarket</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics 10Y</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油价高企] → 中游 [通胀预期恶化] → 下游 [消费者信心下滑 + 加息预期升温] — 当前关键变量：霍尔木兹是否重新开放将决定油价和加息预期方向</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>贵金属 · 工业金属 · 能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag commodity">贵金属</span>
+        <h4>黄金 $4,637 回调 0.32%，月涨 13.7%——美债买债计划 + 地缘避险双支撑；白银 Rs 243,756</h4>
+        <p>8/25 COMEX 黄金收 <strong>$4,637.17</strong>/oz，日跌 <strong>0.32%</strong>，但月涨 <strong>13.73%</strong>，年涨 <strong>36.64%</strong>。MCX 印度白银 Rs 2,43,756（-0.56%）。黄金在 $4,600+ 高位震荡，支撑来自：① 美财政部拟动用一般账户买债（避险需求）；② 霍尔木兹地缘风险溢价；③ 央行持续购金。短期阻力 $4,700，支撑 $4,600。</p>
+        <div class="why">🦞 <b>市场含义：</b>黄金月涨 13.7% 是今年最大单月涨幅之一——这不是投机泡沫，而是央行购金 + 地缘避险 + 美债买债三重支撑。对 lainy 的配置框架：黄金是"高通胀+地缘混乱"环境下的核心配置。短期如果霍尔木兹缓和，金价可能回调到 $4,500——那仍是加仓机会，不是止损信号。央行购金是结构性的（中国连续 18 个月增持），不受短期利率影响。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金ETF）/ 600547 山东黄金 / 600916 中国黄金 — 央行持续购金，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://univest.in/blogs/commodity-market-prediction-for-tomorrow-26-august-2026" target="_blank">Univest</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag commodity">能源</span>
+        <h4>WTI 原油 $81.15 大跌 4.54%——制裁前获利了结 + 霍尔木兹谈判信号；Brent 同步回落</h4>
+        <p>8/25 WTI 原油收 <strong>$81.15</strong>（-<strong>4.54%</strong>），月跌 1.76% 但年涨 28.31%。MCX 原油 Rs 7,888（-3.08%）。天然气 Rs 262.20（-1.54%）。油价从上周高点回落，核心驱动：① Bessent 制裁留了"安静期"，市场解读为短期不会升级；② 巴基斯坦-伊朗谈判"显著进展"信号；③ 前期多头获利了结。但霍尔木兹通行量仍处历史低点，供给收缩未逆转。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价 8/25 的大跌说明市场在"卖预期"——制裁消息出来前已经买足了风险溢价。但别被单日下跌骗了：霍尔木兹通行量仍在低点，油轮还在被袭击。油价方向取决于谈判能否真正恢复通行——能则回到 $70s，不能则 $90s+。对 lainy：油价高波动 = 能源股高波动，不建议追涨杀跌。</div>
+        <div class="ticker">📌 关联标的：WTI / Brent 原油 / 600028 中国石化 / XLE 能源ETF / 601857 中国石油 — 短期油价方向取决于霍尔木兹谈判进展</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://univest.in/blogs/commodity-market-prediction-for-tomorrow-26-august-2026" target="_blank">Univest</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag commodity">工业金属</span>
+        <h4>铜价 Rs 1,387 小涨 0.21%——AI 驱动需求 + 地缘供给紧张双支撑；SQM 锂矿季度销售创新高 84,100 吨</h4>
+        <p>MCX 铜 Rs 1,387（+0.21%），锌 Rs 417.20（+1.23%）。Economic Times 指出铜价正受"地缘紧张 + 供给结构性短缺 + AI 驱动需求"三因素推升，铜正成为 AI 时代的战略商品。锂矿方面，SQM 公布季度销量创纪录 <strong>84,100</strong> 吨，LIT 锂矿 ETF 微涨，Albemarle 小跌。钴市场持平，DRC 配额风险 + IEA 预测 2026 年起供给缺口。稀土方面，CREIA 报告价格指数 <strong>261.3</strong>，镝/铽/钇在中国以外"近乎零供应"，形成两个市场格局。</p>
+        <div class="why">🦞 <b>读给你听：</b>铜是"AI 时代的石油"——数据中心铜用量是普通建筑的 3-5 倍。SQM 锂矿销量创新高说明 EV/储能需求仍在增长，锂价底部可能已过。稀土的"两个市场"格局意味着中国以外买家被迫溢价采购——利好中国稀土企业。</div>
+        <div class="ticker">📌 关联标的：COPX（铜矿ETF）/ 600362 江西铜业 / LIT（锂矿ETF）/ SQM / 600111 北方稀土 / 600549 厦门钨业 — 铜/锂/稀土三条线均在"AI+能源转型"受益方向</div>
+        <div class="source">🔗 Source: <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://www.riotimesonline.com/lithium-markets-latam-tuesday-august-25-2026/" target="_blank">Rio Times</a> · <a href="https://rareearthexchanges.com/news/heavy-rare-earth-china-ex-china-pricing/" target="_blank">Rare Earth Exchanges</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金/银 — 央行购金+避险] / 工业金属 [铜 — AI驱动+供给紧张] [锂 — SQM销量新高] [稀土 — 中国垄断加剧] / 能源 [油 — 霍尔木兹风险] — 当前受益：贵金属（避险+买债）+ 稀土（中国垄断溢价）；当前受损：能源消费者（油价高企传导至下游）</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/25 沪指 +0.19% 报 3,889 / 深成指 -0.35% / 创业板 -1.00% / 成交 1.83 万亿（缩量）</h4>
+      <p>8/25 收盘三大指数涨跌不一，全市场 <strong>4,200+</strong> 股上涨。亮点：<b>农业、日用化工、房地产、CXO 板块领涨</b>；贵金属、锂矿、化纤、银行领跌。<b>涨停 65 股</b>，汉森制药 5 连板，深中华 A 4 连板。<b>石头科技 20cm 涨停</b>（业绩兑现驱动），消费 ETF 获 7,400 万份净申购。两市成交 <strong>1.83 万亿</strong>，较前日缩量 1,756 亿，创 4 个月地量。<b>拼多多 Q2 财报</b>：营收 1,124 亿 +8%，但净利润 -12% 至 272 亿，收入 miss 预期，Benchmark 下调目标价。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/25 恒指 -0.03% 报 25,517（持平） / 五日连涨中断</h4>
+      <p>恒指 8/25 基本持平，结束此前五日 <strong>+880</strong> 点（+3.5%）的连涨。恒科指数分化，小鹏下滑。中国国企指数 -0.28% 至 8,447。港股在等英伟达财报 + 霍尔木兹谈判两个催化。<b>短期关注：</b>英伟达财报如果 beat，恒生科技有望跟涨突破 25,600；如果 miss，可能回探 25,000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/25 S&P +0.41% 报 7,677 / 道指 +0.22% 报 53,580 / 纳指 +0.68% / 芯片股反弹</h4>
+      <p>三大指数反弹，芯片股在英伟达财报前回补部分跌幅。英伟达 <strong>+1.65%</strong> 领涨，AMD 获分析师上调评级也涨。<b>Dick's Sporting Goods 暴跌 <strong>29%</strong></b> 至 $124.31（财报 miss + 下调全年指引），成为当日最大个股灾难。Moderna 因癌症疫苗利好续涨。<b>小盘股 Russell 2000 -0.76%</b>，大小盘分化持续。<b>今夜关键：</b>英伟达盘后财报——期权定价 ~$310/股波动区间。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/25 KOSPI +0.68% 报 6,743 / KOSDAQ +1.7% 报 827 / 从前日 -3% 反弹</h4>
+      <p>KOSPI 从 8/24 的 -3% 暴跌中反弹，三星和 SK Hynix 均从前日低点回升。韩元对美元走弱。<b>驱动因素：</b>① 美国芯片股反弹带动；② 英伟达财报前的空头回补。但 <b>Benzinga 报道美国正向韩国芯片厂施压要求在美国投资</b>，叠加伊朗局势不确定性，反弹力度有限。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>拼多多财报 · A 股消费板块 · 美国零售</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">拼多多</span>
+        <h4>拼多多 Q2：营收 1,124 亿 +8% 但净利润 -12%——Temu 国际承压 + 国内千亿扶持战略进入收获期</h4>
+        <p>PDD Holdings 8/24 发布 Q2 2026 财报：总营收 <strong>RMB 1,124</strong> 亿（<strong>+8%</strong> YoY），但归母净利降至 <strong>272</strong> 亿（<strong>-12%</strong>）。EPS 超预期但收入 miss。CFO 李炯表示上半年中国消费市场稳步扩张，线上零售渗透率持续提升，农村增速快于整体。Temu 国际业务面临增长挑战。Benchmark 下调目标价，股价 YTD 已跌 <strong>23%</strong> 至 $86.31。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>拼多多的"增收不增利"说明平台正在用利润换市场份额——"千亿扶持"战略（补贴商家 + 降价）在国内奏效但侵蚀利润。对 lainy 的消费框架：① 中国电商进入"利润换份额"阶段，短期难有趋势性机会；② 农村电商是增量市场，拼多多已布局；③ Temu 国际面临地缘阻力（美国关税 + 消费者信心下滑）。</div>
+        <div class="ticker">📌 关联标的：PDD（拼多多）/ BABA（阿里）/ JD（京东）/ 513130 港股通科技ETF — 电商板块整体承压，关注利润率拐点</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/earnings/call-transcripts/2026/08/24/pdd-pdd-q2-2026-earnings-call-transcript/" target="_blank">Motley Fool</a> · <a href="https://finance.biggo.com/news/35bbb3c7-6c9e-4a5e-a805-92ec0884eb0e" target="_blank">BigGo Finance</a> · <a href="https://www.investing.com/news/analyst-ratings/benchmark-cuts-pinduoduo-stock-price-target-on-growth-challenges-93CH-4875546" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">A 股消费</span>
+        <h4>A 股大消费板块活跃：石头科技 20cm 涨停，消费 ETF 获净申购——农业/食品饮料/旅游领涨</h4>
+        <p>8/25 A 股大消费板块盘中持续活跃，零售、食品饮料、旅游涨幅居前。消费 ETF 招商（510150）标的指数涨 <strong>1.01%</strong>，权重股石头科技 20cm 涨停，药明康德、贵州茅台、伊利股份、福耀玻璃、海尔智家纷纷上涨。农业板块转基因概念涨幅居前（万向德农、登海种业连板）。可选消费 ETF 华夏（562580）涨 <strong>1.13%</strong>。两市成交虽缩量至 1.83 万亿，但消费板块获资金流入。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>消费板块在缩量市场中获资金流入，说明机构在"防御性调仓"——从科技/周期转向消费。石头科技涨停是业绩驱动（智能消费龙头业绩兑现）。农业板块的转基因概念连续走强，反映粮食安全主题持续发酵。对 lainy：消费板块短期有资金面支撑，但需区分"业绩驱动"（石头科技）和"主题炒作"（转基因概念）。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 688169 石头科技 / 600887 伊利股份 / 510150 消费ETF — 消费板块缩量市场中的避风港</div>
+        <div class="source">🔗 Source: <a href="https://m.163.com/dy/article/L562H99A0534A4SC.html" target="_blank">网易财经</a> · <a href="https://www.cls.cn/detail/2463671" target="_blank">财联社</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美国零售</span>
+        <h4>Dick's Sporting Goods 暴跌 29%：财报 miss + 下调全年指引——美国可选消费警报拉响</h4>
+        <p>Dick's Sporting Goods（DKS）8/25 暴跌 <strong>29%</strong>（实际收盘 -30.68% 至 $124.31），创公司史上最大单日跌幅。原因：Q2 财报 miss + 下调全年净销售额和营业利润指引。公司称面临"challenging conditions"（挑战性环境）。CNBC 指出多个运动品牌 Q2 美国批发市场疲软。Motley Fool 将其评为当日最大个股灾难。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Dick's 是美国最大的运动用品零售商，它的暴跌 = 美国可选消费正在减速。结合密歇根消费者信心下滑 8%，这幅画面很清楚：油价高企 + 通胀侵蚀购买力 → 消费者砍掉"可选消费"（运动用品、休闲）→ 零售商财报 miss。对 lainy 的传导链：美国消费减速 → GDP 放缓 → 但通胀不退 → 滞胀风险上升。</div>
+        <div class="ticker">📌 关联标的：DKS（Dick's，暴跌）/ XLY（可选消费ETF，承压）/ NKE（Nike，批发渠道受影响）/ FL（Foot Locker）— 美国可选消费警报拉响</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/coverage/stock-market-today/2026/08/25/stock-market-midday-aug-25-tech-stocks-rebound-and-dick-s-sporting-goods-plummets-27/" target="_blank">Motley Fool</a> · <a href="https://www.investopedia.com/market-update-dicks-stock-plunges-on-disappointing-results-the-retailer-says-it-faced-challenging-conditions-dks-12067155" target="_blank">Investopedia</a> · <a href="https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌商 — Nike/运动品牌] → 中游 [零售商 — Dick's/零售渠道] → 下游 [消费者 — 信心下滑] — 当前受损环节：中游零售商（Dick's 暴跌 29%）+ 下游消费者（信心 8 月回落 8%）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NFL 2026</span>
+        <h4>NFL 2026 赛季临近：49ers 老板 Jed York 被捕新闻霸占头条 + 各队裁员截止日 8/26</h4>
+        <p>NFL 2026 赛季即将开始，各队需在 8/26 截止日前将阵容裁至 53 人。旧金山 49ers 老板 Jed York 在俄亥俄州被捕的新闻成为训练营最大场外新闻。Fox Sports 分析称 49ers "正开向悬崖"（driving off the cliff）。49ers 同时签下 DL Kevin Givens、放置 4 名球员在 PUP 名单。NFL 发布 2026 "Rivalries" 系列新球衣引发讨论。</p>
+        <div class="why">🦞 <b>轻松一下：</b>NFL 赛季又要开始了！49ers 老板上新闻不是因为球队成绩，而是因为被捕——这剧本比球场上的还精彩。lainy 如果关注 NFL，今年 49ers 可能是"drama > wins"的赛季。裁员截止日（今天 8/26）是各队确定最终 53 人名单的最后机会。</div>
+        <div class="source">🔗 Source: <a href="https://www.ninersnation.com/san-francisco-49ers-preseason/161671/49ers-news-preseason-jed-york-arrest-ohio" target="_blank">Niners Nation</a> · <a href="https://www.foxsports.com/" target="_blank">Fox Sports</a> · <a href="https://www.usatoday.com/sports/" target="_blank">USA Today</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">宝莱坞</span>
+        <h4>宝莱坞大片 Toxic 遭 CBFC 删改：粗口被静音、毒品场景被删减——印度电影审查再引争议</h4>
+        <p>印度明星 Yash 的新片 Toxic 的印地语版本遭中央电影认证委员会（CBFC）删改：辱骂性台词被静音、毒品场景被删减。这是 2026 年印度电影审查的最新案例，引发创作自由 vs 审查标准的讨论。该片是 Yash 继 KGF 系列后的又一商业大片。</p>
+        <div class="why">🦞 <b>花边点评：</b>印度电影的审查问题一直存在，但 Toxic 被删改说明 CBFC 在 2026 年进一步收紧。lainy 如果看印度电影，注意印地语版可能不是导演剪辑版——泰卢固语/卡纳达语原版通常更完整。</div>
+        <div class="source">🔗 Source: <a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-26-2026-live-updates-11787683981119.html" target="_blank">Livemint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
