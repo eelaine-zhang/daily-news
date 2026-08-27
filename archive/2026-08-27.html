@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-27</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --commodity: #B8A07E; --energy: #C4A77D;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--commodity); }
+  .tag.eng { background: #C4A77D18; color: var(--energy); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .sub-group { margin: 8px 0 4px; font-size: 13px; font-weight: 600; color: var(--commodity); }
+  .sub-group.eng { color: var(--energy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 27 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>英伟达 Q2 财报超预期：</b>收入 $962.2 亿（+105% YoY），EPS $2.22 vs 预期 $2.10；黄仁勋预测 FY28 收入再增 70%，远超分析师预期的 44%——AI capex 引擎继续加速。</li>
+      <li><b>霍尔木兹谈判出现转机：</b>伊朗与阿曼就霍尔木兹海峡临时通行通道达成框架协议，美国暂缓次级制裁；Brent 原油回落至 ~$86，但伊朗革命卫队仍称"美国必须先履行承诺"。</li>
+      <li><b>核心 PCE 同比 3.3%：</b>美联储最看重的通胀指标 7 月环比 +0.2%，同比 +3.3%，略高于预期；通胀粘性叠加油价回落，9 月加息概率维持 ~56%。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>英伟达财报 · OpenAI 自研芯片 · 内存涨价新高</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">英伟达 Q2 财报</span>
+        <h4>英伟达 Q2 FY27 收入 $962.2 亿超预期 +105%，黄仁勋预测 FY28 收入再增 70%——AI capex 引擎继续加速</h4>
+        <p>8/26 盘后英伟达公布 Q2 财报：收入 <strong>$962.2</strong> 亿 vs 预期 $921.7 亿（<strong>+105%</strong> YoY），调整后 EPS <strong>$2.22</strong> vs 预期 $2.10。净利润 <strong>$539.5</strong> 亿，同比翻倍。CFO Colette Kress 指引 FY2028 收入增长 <strong>70%</strong>，远超分析师共识的 44%。黄仁勋称"AI 已到达拐点，正在做有用的工作"。但公司同时预警：毛利率将在 Q4 跌至 <strong>71-72%</strong> 区间，部分因内存成本飙升——TrendForce 预测 2026 年服务器 DRAM 价格将暴涨 <strong>260%</strong>。英伟达还将"负债"首次列为独立风险因素，当前优先票据 $335 亿+商业票据 $250 亿额度。</p>
+        <div class="why"><b>为什么值得看：</b>这是 2026 年 AI 产业最重要的财报。三个关键信号：① 需求端没有放缓——客户预测"明年翻倍"，但英伟达只给 70% 指引（因供给约束，不是需求不足）；② 毛利率见顶回落——内存涨价开始侵蚀利润，但 71-72% 仍是历史级水平；③ 负债上升——英伟达在为客户 AI 数据中心建设提供融资支持（backstop），开始承担更多金融风险。对 lainy 的框架：AI 产业链的"钱"正在从芯片利润向内存/封装/数据中心建设转移，英伟达从"纯卖芯片"变成"AI 基建综合商"。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，核心受益）/ SK Hynix 000660.KS（HBM 供应商）/ 005930.KS 三星（HBM 替代供应）/ SMH（半导体 ETF）— 英伟达 + 内存厂双线受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-august-2026" target="_blank">Kiplinger</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OpenAI 自研芯片</span>
+        <h4>OpenAI 首款自研芯片 Jalapeño 基准首秀：每瓦性能 1.5-1.9x 英伟达 GB300，三星供应 HBM4</h4>
+        <p>OpenAI 8/26 公布自研 AI 推理芯片 Jalapeño 的基准测试结果：在多数推理场景下，每瓦性能达英伟达 Blackwell 系统的 <strong>1.5-1.9 倍</strong>，延迟低 3.6 倍。Jalapeño 采用 TSMC 3nm 工艺 + HBM4 内存（三星供应），预计年底前部署到 OpenAI 基础设施。OpenAI 去年 10 月与 Broadcom 签署 10GW 部署协议，Jalapeño 是该合作的成果。分析人士指出，Nvidia 更新的 Vera Rubin 平台才是更公平的对标——但 Jalapeño 证明定制芯片在推理侧已具备挑战英伟达的能力。</p>
+        <div class="why"><b>龙虾老师的解读：</b>OpenAI 造芯片不是为了"替代英伟达"，而是降低对单一供应商的依赖 + 降低推理成本。推理（inference）市场正在从"英伟达一家独大"变成"定制芯片百花齐放"——Google TPU、Amazon Trainium、Microsoft Maia 都在做。对 lainy 的市场含义：① 英伟达在训练（training）端的垄断暂时无人挑战；② 推理端利润空间将被定制芯片侵蚀；③ HBM4 需求进一步放大——三星 HBM 业务获新客户。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，推理端面临竞争）/ AVGO（Broadcom，OpenAI 芯片合作伙伴）/ 005930.KS 三星（HBM4 供应）— 训练端英伟达受益，推理端份额被分流</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/openai-jalapeno-ai-chip-nvidia.html" target="_blank">CNBC</a> · <a href="https://www.trendforce.com/news/2026/08/26/news-openai-debuts-jalapeno-ai-inference-chip-with-samsung-reportedly-supplying-hbm4/" target="_blank">TrendForce</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">DRAM 涨价</span>
+        <h4>TrendForce：2026 年服务器 DRAM 价格暴涨 260%，AI 成本传导至全产业链</h4>
+        <p>据 TrendForce 8 月报告，服务器 DRAM 价格在 2025 下半年已涨 <strong>64%</strong>，预计 2026 年全年涨幅将达 <strong>260%</strong>。英伟达 CFO 在财报会上确认内存成本是毛利率下降的主要因素。HBM4 产能仍集中在三星和 SK Hynix，美光（MU）份额落后。硅片价格也打破三年冻结，台湾三大硅片厂同步涨价 10%+。AI 算力成本的"内存墙"正在取代"算力墙"成为瓶颈。</p>
+        <div class="why"><b>为什么值得看：</b>内存涨价 260% 意味着 AI 的成本结构正在发生根本变化——GPU 不再是唯一瓶颈，HBM/DRAM 成为新的"卡脖子"环节。这对 lainy 的投资框架：① HBM 双寡头（三星+SK Hynix）的定价权在强化，类比 OPEC 对石油的控制力；② 硅片涨价说明需求传导到最上游，整条链都在赚 AI 的钱；③ 关注内存涨价对下游 AI 应用利润的挤压效应——如果推理成本不降，AI 应用变现难度加大。</div>
+        <div class="ticker">📌 关联标的：000660.KS SK Hynix（HBM 龙头）/ 005930.KS 三星 / 002049 紫光国微（国产存储概念）/ MU 美光（份额落后，承压）— HBM 双寡头受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html" target="_blank">CNBC (TrendForce 引用)</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工+HBM — TSMC/三星/SK Hynix] → 下游 [AI 芯片设计 — NVDA/AVGO/OpenAI] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游 HBM 内存（260% 涨价），受损环节：下游 AI 应用（推理成本上升）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹转机 · 美伊谈判 · 次级制裁暂缓</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗与阿曼就霍尔木兹海峡通行达成框架协议：临时通道+联合扫雷，美国暂缓次级制裁</h4>
+        <p>8/26 伊朗革命卫队宣布伊朗与阿曼已就霍尔木兹海峡达成框架协议，包括：① 建立临时航运通道；② 联合扫雷行动。但伊朗方面强调协议"仍有细节待敲定"，革命卫队称"美国必须先履行 6 月 MOU 承诺"（解除港口封锁、释放冻结资产、取消制裁）才会完全开放。CNBC 报道美国已开始将外交官返回海湾国家，暗示不预期军事升级。俄罗斯 RIA 通讯社引述消息称美伊将在未来几天宣布新停火协议。但 CNN 报道指出海峡商船通行量仍比 10 日均值低 <strong>三分之二</strong>。</p>
+        <div class="why"><b>为什么值得看：</b>这是油价下行最大的催化剂。如果协议真正落地——Brent 可能从 $86 快速回落至 $70s；如果谈判破裂——$100+ 重现。当前状态是"谨慎乐观"：外交官返回=美国不预期打仗，但"细节待定"=随时可能翻脸。对 lainy 的框架：地缘风险溢价正在被重新定价，但还没有完全消除。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（下行风险）/ WTI 原油 / 600028 中国石化 / XLE 能源 ETF / JETS 航空 ETF（油价下跌利好）— 油价回落利好航空/运输，利空能源股</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/us-iran-war-trump-hormuz.html" target="_blank">CNBC</a> · <a href="https://www.channelnewsasia.com/world/iran-oman-talks-hormuz-shipping-us-6343371" target="_blank">CNA</a> · <a href="https://www.aljazeera.com/news/2026/8/26/iran-oman-agree-on-temporary-hormuz-route-what-we-know" target="_blank">Al Jazeera</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美国制裁</span>
+        <h4>Bessent 宣布"史上最大金融攻势"制裁伊朗 60 个实体，但暂缓次级制裁执行</h4>
+        <p>美国财政部长 Bessent 本周宣布对 60 个伊朗关联实体实施制裁，警告各国"断绝与伊朗金融联系否则面临报复"。但次级制裁（即惩罚与伊朗做生意的第三国企业）暂缓执行——CNBC 分析认为这是给霍尔木兹谈判留空间。特朗普声称"制裁将赢得这场战争"，但伊朗经济仍在运转——大量原油仍通过灰色渠道流出。伊朗总统佩泽什基安承认面临"最严峻经济战"。</p>
+        <div class="why"><b>市场含义：</b>次级制裁暂缓=短期缓和信号，但"达摩克利斯之剑"仍在。如果霍尔木兹谈判破裂，次级制裁随时启动——届时与伊朗做生意的中国/印度企业将面临美元清算风险。对 lainy：这是中美关系的潜在摩擦点——中国是伊朗原油最大买家。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（制裁升级=涨价）/ 600028 中国石化 / 601857 中国石油（伊朗石油买家概念）— 制裁升级利多油价，暂缓利空</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/us-iran-war-trump-hormuz.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 伊朗/沙特/阿联酋] → 中游 [航运 — 霍尔木兹通道] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [消费 — 航空/运输] — 当前关键变量：霍尔木兹协议落地程度决定油价方向</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>核心 PCE 3.3% · 9 月加息概率 56% · Jackson Hole 在即</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">核心 PCE</span>
+        <h4>美联储最看重的通胀指标：7 月核心 PCE 同比 +3.3%，环比 +0.2%，略高于预期</h4>
+        <p>8/26 美国商务部公布 7 月 PCE 数据：整体 PCE 环比 <strong>+0.2%</strong>，同比 <strong>+3.7%</strong>（高于预期 0.1 个百分点）；核心 PCE（扣除食品和能源）同比 <strong>+3.3%</strong>，环比 +0.2%。7 月 CPI 已从 6 月的 3.5% 降至 <strong>3.4%</strong>。数据"月度符合预期但年度粘性明显"——市场解读为"不足以触发降息，也不足以推动加息"。美股周三窄幅震荡，投资者等待英伟达财报和周五 Jackson Hole 上美联储新主席 Warsh 的首秀。</p>
+        <div class="why"><b>龙虾老师的解读：</b>核心 PCE 3.3% 意味着通胀仍在"最后一英里"挣扎。关键是：油价从 $86 回落如果在 8 月持续，9 月 PCE 可能进一步放缓——但油价从 $80s 飙到 $100 又回到 $86 的剧烈波动让通胀预测变得非常困难。Polymarket 定价 9 月加息 25bp 概率 <strong>56.5%</strong>，Jackson Hole 将是 Warsh 定调的关键时刻。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，PCE+Jackson Hole 双驱动）/ GLD 黄金 / 513130 港股通科技ETF — 鸽派利好科技，鹰派利空</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/feds-preferred-inflation-gauge-shows-core-prices-rose-3point3percent-annually-in-july.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/united-states/inflation-cpi" target="_blank">Trading Economics</a> · <a href="https://polymarket.com/event/fed-decision-in-september-762" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Jackson Hole</span>
+        <h4>美联储新主席 Warsh 周五 Jackson Hole 首秀：债市焦虑下的关键定调时刻</h4>
+        <p>美联储新主席 Warsh 将于 8/29 在 Jackson Hole 年会上发表就任以来首次重要讲话。市场关注三个信号：① 对 9 月加息的态度（鸽/鹰/中性）；② 对油价-通胀传导链的判断；③ 对"财政部用一般账户买债"的货币政策配合。当前 Fed Fund 利率维持不变，但通胀粘性+地缘不确定让市场预期混乱。7 月非农就业低于预期，劳动力市场开始出现降温信号。</p>
+        <div class="why"><b>为什么值得看：</b>Warsh 是 2026 年新任主席，市场对他的政策立场仍在"摸底"阶段。Jackson Hole 历来是美联储释放重大政策信号的场合。三种情景：① 鸽派（强调就业风险）→ 风险资产大涨；② 鹰派（强调通胀粘性）→ 科技股承压、黄金走强；③ 中性 → 维持现状。当前市场最关注的是他对"油价下跌是否足以改变加息路径"的表态。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / GLD / 513130 港股通科技ETF / 518880 黄金ETF — Warsh 鸽派=利好科技+黄金，鹰派=利空科技+利好黄金</div>
+        <div class="source">🔗 Source: <a href="https://www.interactivecrypto.com/fed-funds-steady-amid-mixed-inflation-signals-and-market-jitters-ahead-of-jackson-hole-aug-2026" target="_blank">InteractiveCrypto</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [通胀预期/风险偏好] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：Jackson Hole Warsh 讲话将决定 9 月方向</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 &amp; Goods <small>黄金回落 · 铜价创新高 · 油价下行</small></h2>
+    <div class="cards">
+
+      <div class="sub-group">贵金属（金 / 银）</div>
+
+      <div class="card">
+        <span class="tag comm">黄金</span>
+        <h4>黄金从 $4,700 高点回落至 $4,594，下跌 1.38%——霍尔木兹缓和削弱避险需求</h4>
+        <p>8/26 黄金期货从早盘 $4,715 高点回落至 <strong>$4,593.74</strong>/盎司，日跌 <strong>1.38%</strong>。月度仍涨 <strong>12.66%</strong>，同比涨 <strong>35.2%</strong>。白银报 <strong>$68.81</strong>/盎司，日涨 0.20%。黄金回落主因：霍尔木兹谈判进展+美国暂缓次级制裁降低地缘风险溢价。但央行购金趋势不变——中国进口创 15 个月新高，全球央行连续 18 个月增持。</p>
+        <div class="why"><b>龙虾老师说：</b>黄金在 $4,700 遇阻回落是正常的获利了结——地缘缓和=短期避险需求下降。但结构支撑没有变：央行购金+通胀粘性+美元不确定性。如果 Jackson Hole Warsh 鸽派，黄金可能再冲 $4,700；鹰派则可能回调至 $4,500 附近——那会是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股）/ 600547 山东黄金 / 600916 中国黄金 — 中长期看涨，短期波动</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-wednesday-august-26-2026-gold-pulls-back-from-mornings-high-over-4700-120804724.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="sub-group">工业金属（铜 / 锂 / 镍）</div>
+
+      <div class="card">
+        <span class="tag comm">铜</span>
+        <h4>铜价创历史新高突破 $14,400/吨：AI 数据中心需求 + 供给紧张双推动</h4>
+        <p>LME 铜价突破 <strong>$14,400/吨</strong> 创历史新高，2025 年以来全球涨幅 <strong>42%</strong>，印度 MCX 涨 <strong>61%</strong>。核心驱动：① AI 数据中心对铜的需求暴增（电缆+连接器+散热）；② 智利、秘鲁铜矿供给受扰；③ 美国市场出现铜的"异常积累"（投资者囤积实物铜）。SQM 锂矿季度销售创新高 <strong>84,100</strong> 吨，碳酸锂价格企稳。</p>
+        <div class="why"><b>为什么值得看：</b>铜是"AI 时代的石油"——每个 AI 数据中心需要数千吨铜用于电缆和散热系统。铜价创新高说明 AI capex 正在从"芯片"向"大宗商品"传导。对 lainy：铜价涨 → 紫金矿业/江西铜业/Freeport 利好，但下游电力设备/家电成本承压。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 601899 紫金矿业 / FCX Freeport-McMoRan / COPX 铜ETF — 上游矿企受益，下游设备商承压</div>
+        <div class="source">🔗 Source: <a href="https://www.share-talk.com/sp-angel-todays-market-view-wednesday-26th-august-2026/" target="_blank">Share Talk</a> · <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a></div>
+      </div>
+
+      <div class="sub-group">能源商品（原油 / 天然气）</div>
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent 回落至 ~$86 / WTI ~$80：霍尔木兹谈判+制裁暂缓推动油价下行</h4>
+        <p>8/26 Brent 原油期货下跌 <strong>2.5%</strong> 至 <strong>$86.38</strong>/桶，WTI 下跌 <strong>2.8%</strong> 至 <strong>$80.08</strong>/桶。Trading Economics 数据显示 WTI 收于 <strong>$80.78</strong>（日跌 1.92%）。油价下行驱动：① 伊朗-阿曼霍尔木兹协议框架达成；② 美国暂缓次级制裁；③ 美国外交官返回海湾=不预期军事升级。但海峡实际通行量仍低 2/3，TotalEnergies 宣布投资两条绕开霍尔木兹的管道（阿布扎比 Fujairah 线）。</p>
+        <div class="why"><b>龙虾老师的解读：</b>油价从 $100 回落到 $86 不是因为供给增加，而是因为地缘风险溢价被重新定价。如果霍尔木兹真正恢复通行，Brent 有 $10-15 的下行空间（回到 $70-75）。但"框架协议"到"实际通行"之间还有很大不确定性。TotalEnergies 投资绕行管道说明能源公司已在为"霍尔木兹长期不稳定"做结构准备。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / TTE TotalEnergies — 油价下行利空上游油企，利好下游炼化+航空</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://uk.advfn.com/market-news/article/21860/energy-stocks-slide-as-oil-falls-on-iran-oman-hormuz-talks" target="_blank">ADVFN</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/" target="_blank">OilPrice</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企/油企 — 紫金/Freeport/沙特阿美] → 中游 [冶炼/炼化 — 江西铜业/中石化] → 下游 [制造/电力/交通 — 电缆厂/航空] — 当前受益环节：上游铜矿（AI 需求+供给紧张），受损环节：上游油企（油价下行）</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>霍尔木兹缓和 · 绕行管道 · 电力市场</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag eng">原油市场</span>
+        <h4>TotalEnergies 投资两条绕开霍尔木兹的管道：阿布扎比 Fujairah 线扩建+新管道计划</h4>
+        <p>TotalEnergies 8/24 宣布投资两条绕开霍尔木兹海峡的原油管道：① 扩建阿布扎比 Fujairah 出口管道（通往阿曼湾，不经霍尔木兹）；② 规划中的新管道。这是能源巨头对"霍尔木兹长期不稳定"的结构性押注。与此同时，美国页岩油产量维持高位，OPEC+ 尚未调整产量政策。</p>
+        <div class="why"><b>为什么值得看：</b>管道投资是"慢决策"——一旦建成就回不去了。TotalEnergies 的决策意味着能源行业认为霍尔木兹风险是"新常态"而非短期事件。对 lainy：绕行管道 = 阿联酋出口能力提升 = 海湾原油对霍尔木兹的依赖度下降（长期利好油价稳定）。但短期看，管道建成前油价仍受地缘事件驱动。</div>
+        <div class="ticker">📌 关联标的：TTE TotalEnergies / XOM 埃克森美孚 / 600028 中国石化 / 601857 中国石油 — 绕行管道长期利好海湾原油出口稳定性</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/Latest-Energy-News/World-News/" target="_blank">OilPrice</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag eng">电力市场</span>
+        <h4>A 股绿电概念回暖：立新能源/新中港/郴电国际涨停——电力体制改革预期升温</h4>
+        <p>8/26 A 股绿电板块集体上涨，立新能源、新中港、郴电国际涨停。可控核聚变概念全天活跃，百利电气、融发核电、顺钠股份涨停。驱动因素：① 电力体制改革预期（电价市场化）；② AI 数据中心电力需求预期；③ 绿电交易机制完善。同期，中国 2026 国际消费电子博览会宣布 8/26 在青岛开幕，智能电网/储能是重点展区。</p>
+        <div class="why"><b>龙虾老师的解读：</b>电力是 AI 产业链的"隐形赢家"——每个 AI 数据中心耗电量相当于一个小城市。绿电+核聚变概念活跃反映两个预期：① AI 算力扩张将推升电力需求 3-5 倍；② 中国电力市场化改革将释放绿电溢价。对 lainy：电力板块是"AI capex→基础设施"传导链的最佳切入点。</div>
+        <div class="ticker">📌 关联标的：600905 三峡能源 / 601985 中国核电 / 600025 华能水电 / 300274 阳光电源（光伏逆变器）— 绿电+核电受益</div>
+        <div class="source">🔗 Source: <a href="https://www.panewslab.com/zh/articles/01a03ce1-bb34-73f2-bc16-67b1f7ff677a" target="_blank">PANews/财联社</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [能源开采 — 油企/光伏/风电] → 中游 [发电/输电 — 电力公司] → 下游 [用电 — 数据中心/工业/居民] — 当前受益环节：中游绿电发电（AI 需求+电改预期）</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/26 沪指 +0.59% 报 3,912 / 深成指 +0.69% / 创业板 +0.51% / 成交 1.81 万亿（缩量 231 亿）</h4>
+      <p>8/26 A 股三大指数集体收涨，全市场超 2,900 只个股上涨。<b>热点板块：</b>大金融全天强势，楚天龙 4 连板，锦龙股份/湘财股份/恒银科技涨停；黄金概念+工业金属大涨，深中华 A 5 连板，江西铜业/金诚信/白银有色涨停；绿电概念回暖。<b>下跌：</b>CRO 概念调整，诚达药业/康龙化成/义翘神州跌幅靠前。<b>今日关注：</b>英伟达财报超预期可能带动 A 股 AI 链情绪回暖，但 Jackson Hole 在即市场可能偏谨慎。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/26 恒指 +0.6% 报 ~25,560 / 恒生科技回暖 / 油价回落提振风险偏好</h4>
+      <p>8/26 恒指收涨 <strong>0.6%</strong>（+141 点），收于约 25,560。油价回落+霍尔木兹谈判进展提振风险偏好。港股资金"选香港不选大陆"趋势明显——恒指开盘涨 0.45% 后一路维持至收盘，而上证同日仅小幅收涨。<b>本周关注：</b>英伟达财报结果对港股科技板块的溢出效应+Jackson Hole 对流动性的影响。如果 Warsh 鸽派，恒指有望冲击 26,000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/26 S&amp;P 7,676 (-0.01%) / 纳指 26,136 (-0.06%) / 道指 53,464 (-0.21%) / 盘后英伟达大涨</h4>
+      <p>8/26 美股三大指数几乎持平——PCE 数据略高于预期+英伟达财报前观望。S&amp;P 500 跌 <strong>0.01%</strong>、纳指跌 <strong>0.06%</strong>、道指跌 <strong>0.21%</strong>。Russell 2000 涨 0.50%。S&amp;P 500 企业 Q3 财报盈利增长约 <strong>50%</strong>，为 2021 年以来最强。盘后英伟达财报超预期，股价涨 <strong>4%</strong>——预计 8/27 美股开盘 AI 链将强势。但毛利率下行指引可能引发"增长 vs 利润率"分歧。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/26 KOSPI +0.68% 报 6,743 / KOSDAQ +1.7% 报 827 / 三星 +2.53% / SK Hynix +0.66%</h4>
+      <p>8/26 韩股从前日 -3% 反弹，机构净买入 7,100 亿韩元。三星电子涨 <strong>2.53%</strong>、SK Hynix 涨 0.66%、现代汽车涨 1.69%。半导体板块买盘强劲——英伟达财报前投资者提前布局。韩股从 7 月低点已反弹 <strong>31%</strong>。英伟达 FY28 70% 增长指引对韩股存储双雄（三星+SK Hynix）是直接利好——HBM 需求将继续放量。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>消费电子博览会 · 奢侈品分化</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">消费电子</span>
+        <h4>2026 中国国际消费电子博览会在青岛开幕：智能电网+储能成重点展区</h4>
+        <p>8/26 山东省人民政府主办的 2026 中国国际消费电子博览会在青岛开幕。重点展区包括智能电网、储能系统、AI 智能家居。博览会反映消费电子行业从"终端产品"向"能源+智能"融合方向转型。同期 A 股消费电子板块表现平稳，但 AI 智能终端概念活跃。</p>
+        <div class="why"><b>龙虾老师的解读：</b>消费电子博览会的重心从"手机/电视"转向"智能电网/储能"——这跟 AI 数据中心对电力需求暴增的大趋势一致。对 lainy：消费电子行业的增长引擎正在切换，传统手机/家电增长见顶，"能源+智能"成为新方向。</div>
+        <div class="ticker">📌 关联标的：000333 美的集团（智能家居）/ 300274 阳光电源（储能逆变器）/ 002415 海康威视（AI 终端）— 智能电网+储能受益</div>
+        <div class="source">🔗 Source: <a href="https://jd.zol.com.cn/1238/12384667.html" target="_blank">中关村在线</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>全球奢侈品"大分化"：珠宝坚挺、手袋走弱——中国消费复苏仍处萌芽阶段</h4>
+        <p>欧洲奢侈品巨头财报显示消费地图"变速"：美国需求韧性超预期，中国市场复苏"绿芽"初现但仍脆弱。硬奢侈品（珠宝/腕表）需求坚挺，软奢侈品（手袋/成衣）承压。LVMH、Kering、Burberry 等看到中国市场环比改善，但同比仍为负增长。数字化渠道成为分化关键——DTC（直营电商）表现优于批发渠道。</p>
+        <div class="why"><b>为什么值得看：</b>奢侈品分化反映高净值人群消费韧性 vs 中产消费降级的结构性变化。对 lainy 的消费股框架：硬奢侈品（珠宝/黄金饰品）> 软奢侈品（服装/包袋）；DTC 品牌 > 批发依赖品牌。中国奢侈品复苏"绿芽"如果持续，相关港股标的值得关注。</div>
+        <div class="ticker">📌 关联标的：LVMH / KER.PA Kering / BRBY.L Burberry / 600916 中国黄金（黄金饰品消费）— 珠宝>手袋趋势延续</div>
+        <div class="source">🔗 Source: <a href="https://montenapodaily.com/2026/08/26/lusso-globale-la-grande-polarizzazione-mercati-finanziari-tra-strappo-dellhard-luxury-e-riassestamento-dei-consumi/" target="_blank">Montenapo Daily</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 黄金/钻石/皮革] → 中游 [品牌制造 — LVMH/Burberry] → 下游 [渠道 — DTC/批发] — 当前受益环节：硬奢侈品（珠宝/腕表），受损环节：软奢侈品（手袋/成衣）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>Tim Curry 去世 · 2026 US Open · NBA</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">影坛损失</span>
+        <h4>Tim Curry 去世享年 80 岁：《洛基恐怖秀》传奇谢幕，好莱坞集体哀悼</h4>
+        <p>8/26 TMZ 报道，英国演员 Tim Curry 去世，享年 80 岁。Curry 因《洛基恐怖秀》（The Rocky Horror Picture Show）中 Frank-N-Furter 一角成为文化偶像，代表作还包括《小丑回魂》《三方钱》等。2026 年以来好莱坞已失去多位名人，包括乡村音乐女王 Dolly Parton 等。《Heroes》剧组同时在社交媒体宣布将重聚"纪念 Hayden Panettiere 的生命"。</p>
+        <div class="why"><b>轻松一下：</b>Tim Curry 的 Frank-N-Furter 是影史上最标志性的角色之一——那种"迷人又可怕"的表演风格影响了整整一代演员。lainy 如果没看过《洛基恐怖秀》，周末可以找来看看，绝对的 cult classic。</div>
+        <div class="source">🔗 Source: <a href="https://www.usmagazine.com/celebrity-news/pictures/celebrity-deaths-of-2026-grateful-deads-bob-weir-and-more-stars-we-lost/" target="_blank">US Weekly</a> · <a href="https://ew.com/celebrity-deaths-2026-stars-who-died-this-year-11884984" target="_blank">Entertainment Weekly</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>2026 美网公开赛开赛：Roger Federer 表演赛亮相，Homer Gere & Kaia Gerber 现身观赛</h4>
+        <p>2026 美国网球公开赛在纽约正式开赛。Roger Federer 在表演赛环节亮相，吸引 Homer Gere（Richard Gere 之子）和 Kaia Gerber 等新生代明星到场观赛。NFL 方面，49ers 老板 Jed York 被捕新闻占据体育头条，各队裁员截止日 8/26。</p>
+        <div class="why"><b>花边点评：</b>Federer 退役后每次亮相都是"回忆杀"。美网 2026 的看点除了比赛本身，还有新生代明星的场外话题——Homer Gere 和 Kaia Gerber 因为合作新片《The Shards》而同框，这是 Hollywood "星二代" 正式接班的信号。</div>
+        <div class="source">🔗 Source: <a href="https://people.com/" target="_blank">People</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🎨 科技花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI 应用</span>
+        <h4>英伟达"Token 工厂"概念走红：从芯片到网络到 Token 的极端协同设计</h4>
+        <p>在 Hot Chips 2026 大会上，英伟达展示了其"Token 工厂"理念——将芯片设计、网络架构和 Token 生成视为一个整体系统进行协同优化。Vera Rubin Groq 3 LPX 已进入全量生产，Spectrum-X 多平面网络架构正式亮相。英伟达正在从"卖芯片"进化为"卖 AI 生成能力"——按 Token 计费的商业模式正在形成。</p>
+        <div class="why"><b>彩蛋视角：</b>如果英伟达未来从"卖硬件"转向"卖 Token"（类似云服务），它的商业模式将更像 AWS 而非 Intel。这对 lainy 的框架：英伟达的护城河正在从"芯片设计"扩展到"系统级优化"——竞争对手可以复制一颗芯片，但很难复制整条 Token 生产线。</div>
+        <div class="source">🔗 Source: <a href="https://www.nvidia.com/en-us/" target="_blank">NVIDIA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
