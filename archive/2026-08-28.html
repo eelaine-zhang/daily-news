@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-28</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --comm: #B8A07E; --comm-soft: #B8A07E18; --energy: #C4A77D; --energy-soft: #C4A77D18;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); font-weight: 600; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  .sub-group { font-size: 12px; color: var(--text-dim); margin: 8px 0 4px; font-weight: 600; letter-spacing: 0.05em; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 28 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>英伟达炸了：</b>Q2 收入 $962 亿超预期 +106%，盘后大涨 <strong>+8.6%</strong>，单日市值增加 <strong>$4400</strong> 亿；CFO 预告 FY28 收入再增 70%，黄仁勋称 AI 已到"拐点"。</li>
+      <li><b>今日焦点 Jackson Hole：</b>新美联储主席 Warsh 今天 10am 首秀 keynote——油价高企 + 通胀粘性下，市场紧张他会不会放鹰。同日韩国央行连续第二个月加息至 <strong>3.0%</strong>。</li>
+      <li><b>Shein 港股 IPO 定价：</b>融资 <strong>$17</strong> 亿、估值 <strong>$265</strong> 亿——漫长上市路终于落地；伊朗-阿曼霍尔木兹协议拟禁军事船只通行，白宫沉默。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>英伟达财报冲击波</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达 Q2 财报</span>
+        <h4>英伟达 Q2 收入 $962 亿超预期 +106%，市值单日暴增 $4400 亿——AI 需求"拐点"已到</h4>
+        <p>8/26 盘后英伟达发布 Q2 FY27 财报：收入 <strong>$962.2</strong> 亿（Wall Street 预期 $921.7 亿），同比 <strong>+106%</strong>；调整后 EPS <strong>$2.22</strong>（预期 $2.10），连续第四个季度加速增长。Q3 指引收入 <strong>$1080</strong> 亿（±2%），毛利率 74%。CFO Colette Kress 预告 FY28 收入再增 <strong>70%</strong>——按当前共识推算年化约 <strong>$6730</strong> 亿，将超过苹果和 Alphabet。CEO 黄仁勋称 AI 已到"拐点"，需要大型 GPU 集群的公司"数量大幅扩展"。8/27 英伟达股价收涨 <strong>+8.64%</strong>，单日市值增加约 <strong>$4400</strong> 亿——打破此前连续四季度"财报后下跌"魔咒。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$4400 亿的单日市值增加≈腾讯+阿里+茅台加起来的市值波动。更关键的是 FY28 70% 增长指引——这意味着市场此前对"AI capex 见顶"的担忧被推翻。黄仁勋说需求"远大于 70%"但受限于供应（TSMC 产能 + HBM 短缺）。对 lainy：AI capex 不是"一次性脉冲"而是"多年趋势"，整条产业链（台积电→SK Hynix→广达→数据中心 REIT）都在受益。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，核心受益）/ TSM（台积电，产能瓶颈=定价权）/ 000660.KS SK Hynix（HBM 供应商）/ SMH（半导体 ETF）— 英伟达+台积电+HBM 全链受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/27/nvidia-nvda-q2-earnings.html" target="_blank">CNBC</a> · <a href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-august-2026" target="_blank">Kiplinger</a> · <a href="https://seekingalpha.com/news/4637259-nvidia-expects-70-percent-fiscal-2028-revenue-growth-as-it-resets-gross-margin-outlook-to-72" target="_blank">Seeking Alpha</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OpenAI Jalapeño</span>
+        <h4>OpenAI Jalapeño 芯片基准首秀：每瓦性能 1.9x 英伟达 Blackwell，延迟低 3.6x</h4>
+        <p>Hot Chips 2026 大会上，OpenAI 首次公布自研 AI 芯片 Jalapeño 的基准数据：在 InferenceX 平台上，Jalapeño 每瓦 AI 吞吐量达英伟达 GB200/GB300 的 <strong>1.9x</strong>，端到端延迟低至 <strong>3.6x</strong>；2048 处理器系统可扩展至 27 exaFLOPS。采用 NUMA-style 空间架构，由三星供应 HBM4。黄仁勋回应称"很多项目都会启动"，暗示不构成短期威胁。SemiAnalysis 分析师在 OpenAI 实验室完成独立验证。但 Forbes 指出 Jalapeño 尚未与英伟达下一代 Rubin 平台对比。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是"客户变对手"的经典案例。OpenAI 是英伟达最大客户之一，但它正在自研芯片以降低对 NVDA 的依赖。1.9x 效率优势主要集中在推理（inference）而非训练（training）——意味着 Jalapeño 可能先替代英伟达在推理市场的份额，训练市场短期内仍锁定 Blackwell/Rubin。对 lainy 的框架：NVDA 的"绝对垄断"正在松动，但"相对优势"仍然巨大——市值 $4400 亿单日涨幅说明市场不担心。</div>
+        <div class="ticker">📌 关联标的：NVDA（短期无虞，长期需关注客户自研趋势）/ AVGO（Broadcom，帮 OpenAI 设计芯片）/ TSM（台积电，可能代工 Jalapeño）— 自研芯片趋势长期看是 NVDA 的尾部风险</div>
+        <div class="source">🔗 Source: <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/hot-chips-2026-openais-jalapeno-ai-asic-unpacked-accelerator-developed-using-ai-achieves-efficiency-and-throughput-gains-against-power-hungry-blackwell" target="_blank">Tom's Hardware</a> · <a href="https://www.forbes.com/sites/jonmarkman/2026/08/27/openai-publishes-first-jalapeno-benchmarks-against-nvidia-blackwell/" target="_blank">Forbes</a> · <a href="https://www.benzinga.com/markets/tech/26/08/61453544/nvidia-jensen-huang-openai-jalapeno-chip-competition" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Vera Rubin</span>
+        <h4>英伟达 Vera Rubin 进入全量生产 + Hot Chips "Token 工厂"概念：从芯片到网络的极端协同设计</h4>
+        <p>Hot Chips 2026 大会同期，英伟达展示 Vera Rubin 平台已进入全量生产。SiliconANGLE 报道，黄仁勋在 Hot Chips 提出"Token 工厂"概念——将极端协同设计从芯片层延伸到网络层再到 Token 生成层。Spectrum-X 多平面网络架构成为数据中心标配。英伟达同时推进 <strong>$60</strong> 亿美国 AI 制造计划，但面临"7000 英里问题"——先进封装产能集中在亚洲，美国本土供应链缺口巨大。</p>
+        <div class="why">🦞 <b>商业含义：</b>Vera Rubin 全量生产 = 下一代 AI 算力已在路上。对产业链：台积电的 CoWoS 先进封装产能是瓶颈——Vera Rubin 需要 CoWoS-L 封装，当前月产能仅够英伟达 + 广闘 + AMD 三家瓜分。"Token 工厂"概念的市场含义：英伟达不再只卖芯片，卖的是"端到端 AI 算力系统"——网络设备 + 服务器 + 软件栈全打包。</div>
+        <div class="ticker">📌 关联标的：NVDA（Vera Rubin 量产驱动下一轮升级周期）/ TSM（CoWoS 产能=瓶颈）/ 002475 立讯精密（可能参与美国组装）/ ANET（Arista Networks，Spectrum-X 竞争）— 生态锁定加深</div>
+        <div class="source">🔗 Source: <a href="https://siliconangle.com/2026/08/26/nvidias-next-billion-dollar-market-breaking-ai-factory-out-data-center/" target="_blank">SiliconANGLE</a> · <a href="https://www.nvidia.com/en-us/" target="_blank">NVIDIA Hot Chips 2026</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AVGO/OpenAI] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：全链条（NVDA 财报验证需求持续 + Jalapeño 自研趋势开始但短期不改变 NVDA 统治地位）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹 · 油价 · 地缘</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗称与阿曼的霍尔木兹协议将禁止军事船只通行——白宫沉默不回应</h4>
+        <p>8/27 伊朗副外长 Gharibabadi 公开表示，伊朗与阿曼谈判中的霍尔木兹海峡通行协议将"不允许军事船只通过海峡"。Fox News 报道，白宫对此不予置评——未确认特朗普是否接受该条款。Euronews 确认该协议为"潜在"协议（尚未正式签署）。此前 8/26 美国财政部宣布制裁 60 个伊朗关联实体，但暂缓次级制裁执行。霍尔木兹海峡是全球约 20% 原油运输通道。</p>
+        <div class="why">🦞 <b>市场含义：</b>"禁止军事船只通行"如果落地，意味着美国海军第五舰队在波斯湾的存在受法律层面的挑战——这比之前"摩擦式封锁"升了一级。但关键是：① 协议尚未签署（"potential deal"）；② 白宫沉默可能意味着"还没谈好"。对油价：Brent 已从上周 $100+ 回落至 $87-89 区间——如果协议最终签署且包含军事船只禁令，油价可能再增 $5-10 地缘溢价；如果谈判破裂，$100+ 重现。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价回升风险）/ 600028 中国石化 / 601857 中国石油 / XLE（能源 ETF）— 油价每涨 $10，三桶油利润弹性 15-20%</div>
+        <div class="source">🔗 Source: <a href="https://www.euronews.com/2026/08/27/iran-to-allow-no-military-ship-in-hormuz-under-potential-deal-with-oman" target="_blank">Euronews</a> · <a href="https://www.foxnews.com/politics/white-house-silent-iran-oman-hormuz-plan-tehran-says-would-ban-us-warships" target="_blank">Fox News</a> · <a href="https://economictimes.indiatimes.com/news/defence/iran-warns-of-military-ship-ban-in-hormuz-under-potential-deal-with-oman/articleshow/133553454.cms" target="_blank">Economic Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">伊朗战争</span>
+        <h4>伊朗战争持续：乌克兰获美方请求协助应对 Shahed 无人机；HRANA 记录 664 次袭击、28 省受波</h4>
+        <p>Wikipedia 伊朗战争时间线更新：乌克兰总统泽连斯基表示已收到美方请求，协助应对伊朗 Shahed 无人机。特朗普表示"接受乌克兰援助"。HRANA 人权组织记录伊朗境内 <strong>664</strong> 次袭击，覆盖 <strong>28</strong> 个省份，至少 25 人伤亡（含 4 名平民）。卡塔尔首相与伊朗官员会面，讨论"缓和一个 tensions and create conditions conducive to dialogue"。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这个细节被很多人忽略了——美国请求乌克兰帮忙应对伊朗无人机，意味着美伊冲突中俄制+伊制武器正对美军构成实际威胁。卡塔尔介入调停是一个新变量：卡塔尔与伊朗+美国均有渠道，可能成为下一个"阿曼"。664 次袭击/28 省 = 伊朗全境几乎都在受影响——这不是边境摩擦，是持续性的高强度冲突。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / SPY（美股，地缘风险溢价）/ GLD 黄金（避险需求）— 冲突持续=油价+避险资产持续有支撑</div>
+        <div class="source">🔗 Source: <a href="https://en.wikipedia.org/wiki/Timeline_of_the_2026_Iran_war" target="_blank">Wikipedia</a> · <a href="https://www.cnn.com/2026/08/26/world/live-news/iran-war-trump" target="_blank">CNN</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 波斯湾航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前关键变量：霍尔木兹军事船只禁令谈判结果将决定油价方向</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Jackson Hole 日 · 韩国加息</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Jackson Hole</span>
+        <h4>新美联储主席 Warsh 今日 10am Jackson Hole 首秀：市场紧张他会不会放鹰</h4>
+        <p>8/28（今日）上午 10am（美东），新任美联储主席 Kevin Warsh 将在 Jackson Hole 年度经济政策研讨会上发表就任以来首次 keynote 演讲。NPR 报道称"stakes are as high as the surrounding Teton mountains"。Axios 指出，Warsh 预计将讨论"big, lofty ideas"而非近期政策细节。市场关注：① 通胀预期管理（7 月 CPI 同比 <strong>+3.4%</strong>，低于 6 月 3.5%）；② 油价 $87+ 对通胀的传导；③ 剩余三次 FOMC 会议的利率路径暗示。LiteFinance 指出 Q2 全球黄金需求降至 <strong>942</strong> 吨（2021 Q3 以来最低），3 名 FOMC 委员称可能需要进一步收紧。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Warsh 是特朗普任命的新主席，市场对其政策倾向尚不清晰——他的 Jackson Hole 首秀将定调未来 3-6 个月预期。三种情景：① 鸽派（强调通胀回落趋势）→ 风险资产大涨、黄金回调；② 中性（数据依赖）→ 市场横盘；③ 鹰派（暗示加息可能）→ 科技股承压、黄金走强。当前 7 月 CPI 3.4% 虽在回落但仍高于 2% 目标，油价 $87+ 构成通胀上行风险。InvestingCube 指出美元/南非兰特已达六个月低点—— Warsh 如果偏鸽，美元可能继续走弱。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，FOMC 预期直接驱动）/ GLD 黄金（$4,585 附近，鹰派=涨）/ US 10Y Treasury（利率预期锚）— 鸽派利好科技+黄金，鹰派利空科技+利好黄金</div>
+        <div class="source">🔗 Source: <a href="https://www.npr.org/2026/08/27/nx-s1-5945044/federal-reserve-kevin-warsh-jackson-hole-wyoming-bond-markets" target="_blank">NPR</a> · <a href="https://www.axios.com/2026/08/27/warsh-guidance-jackson-hole" target="_blank">Axios</a> · <a href="https://www.theepochtimes.com/business/fed-chairman-kevin-warsh-set-to-deliver-1st-jackson-hole-keynote-speech-6080131" target="_blank">Epoch Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">韩国央行加息</span>
+        <h4>韩国央行连续第二个月加息至 3.0%——核心通胀居高不下，韩美利差维持 0.75%</h4>
+        <p>8/27 韩国银行（BOK）将基准利率上调 25bp 至 <strong>3.00%</strong>（2025 年 1 月以来最高），符合预期。这是连续第二个月加息——7 月从 2.50% 加至 2.75%，8 月再加至 3.00%。CNBC 报道称核心通胀仍高于目标，金融稳定风险上升。韩美利差维持在 <strong>0.75</strong> 个百分点（美国 3.75% vs 韩国 3.00%）。尽管加息，KOSPI 仍大涨 2.07%——英伟达财报驱动的 AI 情绪盖过加息压力。</p>
+        <div class="why">🦞 <b>市场含义：</b>韩国是全球芯片产业链核心节点（三星+SK Hynix），其加息对全球科技股的传导有限但值得关注。连续加息说明：① 亚洲央行也在对抗油价传导的通胀；② 韩元可能走强——有利于降低进口成本但不利出口。对 lainy：KOSPI 在加息日仍涨 2% = 英伟达财报的 AI 利好>利率利空。但如果 Warsh 今天也放鹰，全球科技股可能面临"双加息"压力。</div>
+        <div class="ticker">📌 关联标的：KOSPI / 005930.KS 三星电子 / 000660.KS SK Hynix / KRW 韩元 — 短期 AI 情绪>利率压力，中期关注韩美利差走向</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/27/korea-bok-rate-hike-inflation.html" target="_blank">CNBC</a> · <a href="https://en.sedaily.com/finance/2026/08/27/bank-of-korea-raises-base-rate-25-basis-points-to-300" target="_blank">Seoul Economic Daily</a> · <a href="https://www.aol.com/articles/bok-delivers-back-back-rate-010837000.html" target="_blank">Reuters via AOL</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美国通胀</span>
+        <h4>7 月 CPI 同比 +3.4% 连续两月回落——但油价 $87+ 构成通胀上行风险</h4>
+        <p>Trading Economics 数据显示，7 月美国 CPI 同比 <strong>+3.4%</strong>（6 月 3.5%，5 月高点 4.2%），环比 <strong>+0.1%</strong>（6 月 -0.4%）。通胀虽在回落但仍远高于美联储 2% 目标。油价从 6 月 $70s 反弹至 8 月 $87+，构成通胀回升的"油价传导"风险。Warsh 今日 Jackson Hole 演讲将回应这一矛盾——通胀在降但油价在涨，怎么办？</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>通胀数据本身在好转（3.4% < 3.5% < 4.2%），但油价是"隐形税"——如果 Brent 维持 $87+ 到 9 月，8 月 CPI 可能回升。Warsh 的难题：承认通胀在降→市场会 pricing 更快降息（利好）；但提油价风险→可能暗示"不急于降息"（偏鹰）。对 lainy：今天 10am 的演讲是本月最重要的宏观事件，没有之一。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / GLD 黄金 / US 10Y Treasury — Warsh 演讲结果将决定未来 1-2 周方向</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/united-states/inflation-cpi" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油价/利率] → 中游 [通胀预期/风险偏好] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：Warsh Jackson Hole 演讲结果（今日 10am ET）</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金 / 银 / 铜 / 油 / 锂</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金 $4,585 守稳，月涨 13.7%——Jackson Hole 前观望情绪浓；全球 Q2 金条需求降至 942 吨</h4>
+        <p>8/27 黄金现货报 <strong>$4,585</strong>/oz（CNBC 9am ET），LiteFinance 盘中录得 <strong>$4,613</strong>。KitCO 数据显示黄金从 8 月初 $4,000 附近一路上行，月涨幅约 <strong>13.7%</strong>。LiteFinance 报告 Q2 全球黄金需求降至 <strong>942</strong> 吨（2021 Q3 以来最低）——但投资需求在 8 月回升。印度 MCX 黄金 Rs 12,318/10g 持平；白银 +0.84%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄金在 $4,585 附近高位震荡——油价 $87+ 提供通胀对冲逻辑，但 CPI 回落提供"通胀降温"逻辑，两个相反力量拉锯。Warsh 今天如果放鸽，黄金可能冲 $4,700+；放鹰可能回 $4,400。Q2 需求 942 吨 = 低点——8 月资金回流可能是"抄底"信号。对 lainy：央行购金+地缘避险+通胀对冲三重支撑，中长期看涨不变。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 600547 山东黄金 / SLV（白银 ETF）— 央行持续买入，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/select/the-price-of-gold-today-august-27-2026/" target="_blank">CNBC</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a> · <a href="http://www.kitco.com/" target="_blank">KitCO</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent $87.65 / WTI $82.90：油价从 $100+ 回落但霍尔木兹谈判存变数</h4>
+        <p>8/27 Brent 原油报 <strong>$87.65</strong>/bbl，WTI <strong>$82.90</strong>/bbl，Brent-WTI 价差 $4.75。Trading Economics 数据显示 WTI 月涨 2.65%，年涨 25.95%。Eastern Herald 分析指出 PCE 数据"找到地板"——通胀数据未进一步恶化，油价暂时失去上行动力。但伊朗-阿曼霍尔木兹协议如果包含军事船只禁令且最终签署，油价可能再增地缘溢价。FXEmpire 报道 Brent +3.00%、WTI +3.22%、天然气 +4.01%。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 7 月高点 $100+ 回落至 $87 是"地缘缓和"的定价——但这个定价可能 premature。伊朗的"禁止军事船只"条款如果被美国拒绝，谈判破裂→$100+ 重现。Fortune 报道 8/27 早 7:15am ET 油价 $89.68——盘中有波动。对 lainy：油价是当前宏观的"最大摇摆变量"，直接传导到通胀→利率→科技股估值。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE（能源 ETF）— 油价 $87 仍高于三桶油盈亏线</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://easternherald.com/2026/08/27/crude-oil-price-today-august-27-2026/" target="_blank">Eastern Herald</a> · <a href="https://fortune.com/article/price-of-oil-08-27-2026/" target="_blank">Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">工业金属</span>
+        <h4>铜价历史高位突破 $14,400/吨——AI 数据中心需求 + 供给紧张双推动；中国锂价回升</h4>
+        <p>8/26 铜价创历史新高突破 <strong>$14,400</strong>/吨（前日已报），Economic Times 指出驱动力为"地缘紧张 + 结构性供给短缺 + AI 驱动需求暴增"——铜被越来越多视为"AI 时代的战略商品"。LME 铜库存持续下降。中国碳酸锂现货价格近月显著回升（Seeking Alpha 报道），SQM 锂矿季度销售创 84,100 吨新高。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>铜的叙事从"中国地产"转向"AI 数据中心"——每个 AI 数据中心的用铜量是传统数据中心的 3-5x（散热+电源+布线）。供给端智利、秘鲁产量受限，新矿投产周期 10-15 年。对 lainy：铜是"AI capex 的第二层映射"——NVDA 财报好→铜需求预期涨→铜价涨→江西铜业/Freeport 受益。锂价回升则反映电池需求（EV+储能）企稳。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 600547 山东黄金 / FCX Freeport-McMoRan / COPX（铜 ETF）/ 002460 赣锋锂业 — AI+EV 双驱动，铜锂受益</div>
+        <div class="source">🔗 Source: <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://seekingalpha.com/article/4940658-lithium-junior-miners-news-for-the-month-of-august-2026" target="_blank">Seeking Alpha</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">天然气</span>
+        <h4>欧洲天然气 NBP 160.50 p/therm / TTF €65.63/MWh——LNG 贸易+欧洲库存博弈</h4>
+        <p>Prestige Business Solutions 8/27 报告：NBP 日前结算 <strong>160.50</strong> p/therm（-0.90p），前月合约 161.02 p/therm，Winter 26 合约 163.64 p/therm（-1.71p）。TTF 前月 <strong>€65.63</strong>/MWh。FXEmpire 数据显示天然气日涨 <strong>+4.01%</strong>。欧洲天然气库存处于季节性正常区间，但霍尔木兹局势对 LNG 贸易路线构成潜在风险。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>欧洲天然气是"霍尔木兹的第二战场"——如果波斯湾 LNG 出口受阻，TTF 可能飙升。当前 €65.63/MWh 相比 2022 年危机高点 €345 已大幅回落，但地缘风险溢价仍在。对 lainy：天然气不像油价那么受关注，但它是欧洲工业成本的"隐性锚"——TTF 每涨 €10/MWh，欧洲化工股（BASF/巴斯夫）利润下降 3-5%。</div>
+        <div class="ticker">📌 关联标的：TTF 天然气 / NBP 天然气 / 600256 广汇能源 / 601139 深圳燃气 / LNG 钱尼尔能源（Cheniere）— 地缘风险溢价支撑价格</div>
+        <div class="source">🔗 Source: <a href="https://www.prestigebusiness.energy/marketreports/energy-market-update27-aug2026" target="_blank">Prestige Business Solutions</a> · <a href="https://www.fxempire.com/forecasts/natural-gas" target="_blank">FXEmpire</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿业 — 紫金/Freeport/SQM] → 中游 [冶炼/精炼 — 江西铜业/嘉能可] → 下游 [制造 — 电池/电网/AI 数据中心] — 当前受益环节：铜（AI 需求+供给短缺）、金（地缘避险+通胀对冲）；受损环节：天然气下游化工（成本压力）</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / 天然气 / 电力 / 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">原油市场</span>
+        <h4>OPEC+ 产量政策按兵不动 + 霍尔木兹谈判成油价最大变量</h4>
+        <p>Brent $87.65 / WTI $82.90——油价从 7 月高点 $100+ 回落约 13%，但霍尔木兹"军事船只禁令"谈判构成潜在上行风险。OPEC+ 最新产量政策维持当前配额不变。Wikipedia 伊朗战争燃料危机词条记录：中国曾要求顶级炼厂暂停柴油/汽油出口（2026 年 3 月），Vox 分析中国"如何压低全球油价"——中国战略储备释放是隐性因素。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>OPEC+ 不增产 + 霍尔木兹风险 = 油价下方有支撑。中国的"压价操作"（释放战略储备+限制成品油出口）是市场低估的变量——如果中国停止压价，油价可能跳涨 $5-8。对 lainy：三桶油（中石油/中石化/中海油）在 $80+ 油价下利润丰厚，但 $100+ 可能引发政策性限价。</div>
+        <div class="ticker">📌 关联标的：Brent / WTI / 601857 中国石油 / 600028 中国石化 / 600938 中国海油 / XOM 埃克森美孚 / OPEC — $80-90 区间三桶油利润最优</div>
+        <div class="source">🔗 Source: <a href="https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" target="_blank">Wikipedia</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">新能源</span>
+        <h4>铜价历史新高映射 AI 数据中心"隐性金属"——光伏/储能装机继续推升铜+锂需求</h4>
+        <p>铜价突破 $14,400/吨历史新高，核心驱动之一是 AI 数据中心电力基础设施（变压器、电缆、散热）用铜量暴增。同时光伏/风电装机持续推升铜+铝+锂需求。Economic Times 指出铜正在成为"AI 时代的战略商品"——AI 数据中心 + 新能源装机双轮驱动。中国碳酸锂价格近月显著回升，SQM 季度销售 84,100 吨创纪录。</p>
+        <div class="why">🦞 <b>市场含义：</b>新能源和 AI 在大宗商品层面"合流"了——两者都需要大量铜+电力基础设施。对 lainy 的映射：① 铜价涨→江西铜业/紫金矿业/Freeport 受益；② 锂价回升→赣锋锂业/天齐锂业/宁德时代上游受益；③ 电力基础设施→特变电工/国电南瑞。能源转型+AI 算力是未来 3-5 年大宗商品的核心叙事。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 600547 山东黄金 / FCX Freeport / 002460 赣锋锂业 / 300750 宁德时代 — AI+新能源双驱动铜锂需求</div>
+        <div class="source">🔗 Source: <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://seekingalpha.com/article/4940658-lithium-junior-miners-news-for-the-month-of-august-2026" target="_blank">Seeking Alpha</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油/天然气/铜矿/锂矿] → 中游 [炼化/冶炼/电池制造] → 下游 [电力/数据中心/EV/储能] — 当前受益环节：铜矿（AI+新能源双驱动）、锂矿（电池需求企稳）；关注：霍尔木兹局势对油气的潜在冲击</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 8/27 沪指 +1.13% 报 3,957 / 深成指涨 / 创业板涨 / 成交放量</h4>
+      <p>8/27 收盘 SSE Composite <strong>+1.13%</strong> 报 <strong>3,957</strong> 点，连续两日上涨。24/7 Wall St 报道称 Shanghai 涨幅超过 1%。 Armenpress 数据确认 Shanghai Composite <strong>+1.13%</strong> 至 3,956.57 点。<b>今日关注：</b>8/28 周五交易——英伟达财报利好可能提振 A 股半导体板块（寒武纪/海光信息），Jackson Hole 结果将影响外资流向。A 股逼近 4,000 点关口，这是 2025 年以来的关键心理位。<b>重点异动：</b>半导体/光模块板块可能受英伟达财报催化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 8/27 恒指 -0.34% 报 25,566 / 跑输 A 股 / Shein IPO 前夕市场关注</h4>
+      <p>8/27 恒指收 <strong>25,565.74</strong>（<strong>-0.34%</strong>），Armenpress 确认。24/7 Wall St 报道称 Hang Seng "slipping into the red early and never fully recovering"。CNBC 期货数据显示 8/28 早盘恒指期货 <strong>25,476</strong>（较前日收盘低约 90 点）。<b>Shein IPO：</b>融资 $17 亿、估值 $265 亿——港交所最大的 2026 年 IPO 之一，可能吸引增量资金流入港股。<b>今日关注：</b>Warsh Jackson Hole 结果对港股流动性至关重要——鸽派则恒指有望收复 25,600；鹰派则可能下探 25,000。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 8/27 S&amp;P +0.72% 报 7,731 / 纳指 +1.57% 报 26,541 / 道指 +0.20% 报 53,569 / 英伟达暴涨</h4>
+      <p>8/27 收盘三大指数全涨：S&amp;P 500 <strong>+0.72%</strong> 报 <strong>7,730.99</strong>，纳指 <strong>+1.57%</strong> 报 <strong>26,541.35</strong>，道指 <strong>+0.20%</strong> 报 <strong>53,569.44</strong>（+105.56 点）。<b>核心驱动：</b>英伟达盘后财报炸裂→8/27 日内涨 <strong>+8.64%</strong>，单日市值增加约 <strong>$4400</strong> 亿。Salesforce <strong>+21.55%</strong> 领涨道指，IBM <strong>+3.77%</strong>。<b>拖后腿：</b>McDonald's -2.63%、Disney -2.58%、Merck -2.27%。XLK（科技 ETF）涨 2.9%——2006 年以来科技板块"唯一上涨"的最大单日涨幅。<b>今日关注：</b>Warsh Jackson Hole 10am + 英伟达涨势能否延续。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 8/27 KOSPI +2.07% 报 ~6,931 / 三星 +1.72% / SK Hynix +2.49% / 眼睛盯着 7,000</h4>
+      <p>8/27 KOSPI 大涨 <strong>+2.07%</strong>，开盘报 <strong>6,996</strong> 点（+187.91 点），一度逼近 7,000 关口。KOSDAQ <strong>+1.62%</strong>。三星电子 <strong>+1.72%</strong> 报 266,000 韩元，SK Hynix <strong>+2.49%</strong> 报 1,730,000 韩元——英伟达财报验证 HBM 需求，双寡头直接受益。其他强势股：LG Energy Solution <strong>+5.56%</strong>、Samsung Electro-Mechanics <strong>+4.14%</strong>。<b>值得注意的是：</b>韩国央行同日加息 25bp 至 3.00%——加息日大涨 2% 说明 AI 情绪远>利率压力。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>Shein IPO · 零售趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Shein IPO</span>
+        <h4>Shein 港股 IPO 定价 $265 亿估值、融资 $17 亿——漫长上市路终于落地</h4>
+        <p>8/27 Bloomberg 报道，Shein Global Holdings 将以招股区间中位数定价，融资约 HK$136 亿（<strong>$17</strong> 亿），估值约 <strong>$265</strong> 亿。Reuters/Economic Times/Business Times 均确认。Shein 的上市之路持续两年有余——从最早申请美股 IPO 到被美国监管质疑供应链问题，转战香港，最终定价在 $265 亿（远低于此前传闻的 $500-600 亿）。China Money Network 报道称这是 2026 年港股最大 IPO。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$265 亿的估值对 Shein 来说是"打折上市"——2023 年上一轮融资估值 $660 亿，意味着估值缩水约 60%。但上市本身比估值更重要：① Shein 获得上市平台=融资+流动性；② 港交所迎来 2026 年最大消费股 IPO；③ 供应链透明度问题被公开审视。对 lainy：Shein 的上市是"中国消费品牌出海"的标志性事件——快时尚+跨境电商+柔性供应链三条线交汇。</div>
+        <div class="ticker">📌 关联标的：SHEIN（待上市代码）/ 03333 携程（中概股情绪）/ 09988 阿里巴巴（跨境电商对标）— Shein 上市利好港交所流动性</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-08-27/shein-is-said-to-guide-hong-kong-ipo-price-to-middle-of-range" target="_blank">Bloomberg</a> · <a href="https://www.chinamoneynetwork.com/2026/08/27/sheins-1-7-billion-hong-kong-ipo-at-26-5-billion-valuation-marks-major-milestone" target="_blank">China Money Network</a> · <a href="https://www.rte.ie/news/business/2026/0827/1589402-sheins-hong-kong-ipo-pricing-values-firm-at-26-5bn/" target="_blank">RTE</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">J.M. Smucker</span>
+        <h4>J.M. Smucker 超预期：Uncrustables 品牌增长 12% 带动收入超预期</h4>
+        <p>CNBC 8/27 报道，J.M. Smucker Q1 收入 <strong>$22.2</strong> 亿超 FactSet 所有分析师预期，Uncrustables 品牌（冷冻三明治）净销售增长 <strong>12%</strong>。公司上调全年收入指引——预期降幅小于此前预期。股价本周涨约 <strong>8%</strong>，2026 年至今涨 <strong>38%</strong>——连续第七周上涨，四年以来首次正收益年。CEO Mark Smucker 称 Uncrustables 在"冷冻手持食品"品类中带动整体增长。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Uncrustables 是美国消费市场"便利化"趋势的缩影——消费者愿意为"去边三明治+冷冻保鲜"付溢价。对 lainy 的消费框架：这不是高端消费，是"中端消费升级"——通胀压低可支配收入后，消费者不是不花钱，而是花在"小确幸"上。J.M. Smucker 涨 38% 说明"经济下行+通胀"环境下，便利型食品品牌是最确定的方向。</div>
+        <div class="ticker">📌 关联标的：SJM (J.M. Smucker) / K（Kellogg's）/ 600872 中炬高新（调味品，便利化趋势对标）— 便利型食品在通胀环境下的防御性</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/08/26/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 棉花/食品原料] → 中游 [制造 — 服装/食品加工] → 下游 [渠道 — 电商/超市/餐饮] — 当前受益环节：便利型消费品牌（Uncrustables/Shein 快时尚），关注：Shein IPO 对港股消费板块的资金虹吸</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Dolly Parton</span>
+        <h4>Dolly Parton 去世享年 80 岁——乡村音乐女王谢幕，全球哀悼</h4>
+        <p>8/25 Dolly Parton 在纳什维尔 Vanderbilt-Ingram 癌症中心去世，享年 <strong>80</strong> 岁。Variety/USA Today/LA Times/Washington Post 均确认。家人在视频声明中称她"勇敢地与癌症短暂抗争后离去"。Parton 是乡村音乐史上最具影响力的女性艺术家之一，《Jolene》《9 to 5》等经典作品影响数代人。她最后一次公开露面是 2026 年 6 月在田纳西州 Cornersville 以她命名的卡车休息站开幕式。此前 3 月在 Dollywood 41 周年庆典上做了短暂演讲。</p>
+        <div class="why">🦞 <b>花边点评：</b>Dolly Parton 不只是音乐人——她是美国南方的文化符号、Dollywood 主题公园的创始人、 literacy 慈善家（Imagination Library 每月向百万儿童赠书）。80 岁离世让全美集体哀悼。lainy 可能不熟她，但《Jolene》和《9 to 5》的旋律你一定听过。</div>
+        <div class="source">🔗 Source: <a href="https://variety.com/2026/music/news/dolly-parton-dead-dies-country-music-1236842727/" target="_blank">Variety</a> · <a href="https://www.usatoday.com/story/entertainment/music/2026/08/25/dolly-parton-death-updates-health/91460074007/" target="_blank">USA Today</a> · <a href="https://www.latimes.com/entertainment-arts/music/story/2026-08-25/dolly-parton-cause-death-cancer-brief-battle" target="_blank">LA Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">流媒体</span>
+        <h4>本周流媒体新片：Shudder《Penny Lane is Dead》首播 + Adult Swim 25 周年特别节目</h4>
+        <p>Mashable 8/28 流媒体指南：Shudder 新片《Penny Lane is Dead》8/28 首播；Adult Swim 迎来 25 周年生日，播出 Robot Chicken 特别节目（集合 Smiling Friends、The Venture Bros 等角色）。Robert Downey Jr. 与妻子 Susan 庆祝结婚 21 周年——People 杂志刊登怀旧照。EW 更新 2026 年已故名人名单，包括 Dolly Parton、Tim Curry 等。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Adult Swim 25 周年是"美国动画成年人的 25 年"——从 Space Ghost Coast to Coast 到 Rick and Morty，它定义了一代人的"深夜动画"。RDJ 结婚 21 周年也很治愈——Marvel 之外的 Downey 是个好丈夫。</div>
+        <div class="source">🔗 Source: <a href="https://mashable.com/entertainment/new-to-streaming-august-28-2026" target="_blank">Mashable</a> · <a href="https://people.com/" target="_blank">People</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 科技花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技/科学花边 <small>一条</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">中国航天</span>
+        <h4>海南文昌海边数千人围观火箭发射——中国航天的"大众节日"</h4>
+        <p>Reuters 8/27 报道，在海南文昌航天发射场附近，数千人在炎热八月夜晚涌向海滩，举起手机等待火箭发射的壮观场面。Space Launch Live 数据显示近期中国发射密集：9/1 星河动力 Pallas-1 火箭将在酒泉发射。文昌作为中国新一代重型火箭发射基地，正在成为"航天旅游"的热门目的地。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>数千人在海滩等火箭——这是中国航天从"国家工程"到"大众文化"的转变。文昌发射场对外开放观礼，是中国"航天叙事"成功的标志。对 lainy：航天产业链（商业航天+卫星互联网）是未来 3-5 年的投资主题之一。</div>
+        <div class="ticker">📌 关联标的：002049 紫光国微（航天芯片）/ 688568 中科星图（卫星数据）— 商业航天概念持续</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/" target="_blank">Reuters</a> · <a href="https://spacelaunchlive.com/" target="_blank">Space Launch Live</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
