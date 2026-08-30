@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-08-30</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --comm: #B8A07E; --energy: #C4A77D;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; padding-bottom: 4px; border-left: 4px solid var(--accent); border-bottom: none; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; font-style: normal; color: var(--text); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  .tldr li b { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .sub-group { font-size: 14px; font-weight: 600; color: var(--text); margin: 16px 0 8px; padding-left: 8px; border-left: 3px solid var(--comm); }
+  .sub-group.energy { border-left-color: var(--energy); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 8 月 30 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的周末简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>英伟达 $129 亿吞下 Hugging Face：</b>AI 生态"圈地运动"升级——GPU 霸权延伸到开源模型平台，同时洽谈投资 Perplexity（估值 $300 亿+），AI 产业链垂直整合加速。</li>
+      <li><b>Trump 拿下委内瑞拉 650 亿桶石油：</b>"史上最大石油交易"——美国获得委内瑞拉 <strong>650 亿</strong>桶已探明储量多数控制权，委内瑞拉考虑退出 OPEC，全球能源格局重塑。</li>
+      <li><b>Warsh 放鹰 + 油价周跌 5%：</b>美联储新主席 Jackson Hole 首秀表态鹰派，9 月加息概率从 36% 跳至 <strong>56%</strong>；Brent 收 <strong>$89.31</strong> 周跌超 5%；黄金 <strong>$4,457</strong> 单日跌 2%，欧盟天然气库存创 13 年新低。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>英伟达生态圈地 + 国产存储突破</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达 × Hugging Face</span>
+        <h4>英伟达 $129 亿收购 Hugging Face——AI 生态"圈地运动"：从 GPU 垄断延伸到开源模型平台</h4>
+        <p>8/27 The Information 报道，英伟达已同意以 <strong>$129</strong> 亿收购 Hugging Face——全球最大的开源 AI 模型仓库（类似"AI 界的 GitHub"）。Hugging Face 年收入约 <strong>$1.5</strong> 亿，收购价对应约 <strong>80 倍</strong>前瞻收入乘数。这是英伟达在财报后一周内的第二个重大战略动作：先报出 Q2 收入 <strong>$962</strong> 亿（+106% YoY），再吞下 AI 开发者生态的核心基础设施。同期英伟达还在洽谈投资 Perplexity，估值超 <strong>$300</strong> 亿（Perplexity 年化收入从 1 月的 <$2.5 亿增至 <strong>$7.5</strong> 亿）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是普通的并购——英伟达在用 GPU 利润收购 AI 开发生态的"底层管道"。Hugging Face 托管了数十万个开源模型，控制它 = 控制模型分发渠道 = 让开源生态也跑在英伟达的轨道上。对 lainy 的金融视角：① 英伟达的护城河从"硬件垄断"扩展到"生态锁定"，定价权更强；② <strong>80 倍收入</strong>的收购价说明英伟达不怕溢价——GPU 利润太丰厚；③ Perplexity 估值 $300 亿 = AI 搜索赛道的门票价格，对比 OpenAI $3000 亿+，Perplexity 是"平替标的"。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，生态锁定加深）/ MSFT（Microsoft，OpenAI 合作伙伴面临竞争压力）/ GOOG（Google，AI 搜索被 Perplexity 蚕食）— 英伟达受益，竞争对手生态承压</div>
+        <div class="source">🔗 Source: <a href="https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion" target="_blank">The Information</a> · <a href="https://thenextweb.com/news/hugging-face-nvidia-acquisition-thomas-wolf-interview" target="_blank">The Next Web</a> · <a href="https://sophiccapital.com/august-29-2026-running-hard-to-stay-in-place/" target="_blank">Sophic Capital</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">CXMT LPDDR6</span>
+        <h4>长鑫存储 LPDDR6 正式量产！首发搭载小米 18 Fold——国产 DRAM 首次在旗舰手机上跑赢三星/SK 海力士</h4>
+        <p>8/29 长鑫存储（CXMT）宣布自研 LPDDR6 移动 DRAM 正式量产，小米 18 Fold 成为全球首发搭载机型，同时搭载小米自研 Xring O3 SoC。这意味着中国 DRAM 厂商首次在旗舰手机内存上抢到了三星/SK 海力士/美光之前的首发窗口。此前 CXMT 的 LPDDR5/LPDDR5X 主要用于中低端机型，LPDDR6 量产标志技术代际追赶的里程碑。SK Hynix、三星、美光仍在 LPDDR6 量产爬坡阶段。</p>
+        <div class="why">🦞 <b>读给你听：</b>LPDDR6 是下一代移动内存标准——数据传输速率比 LPDDR5 快约 50%，对 AI 手机（端侧大模型推理）至关重要。CXMT 先于三星/SK Hynix 在旗舰机型上首发，说明中国存储厂商从"追赶者"正在变成"并跑者"。对 lainy 的产业框架：① 国产替代从逻辑芯片（华为海思）扩展到存储芯片，链条在延伸；② 小米 18 Fold 用国产芯片+国产内存 = "全栈国产旗舰"概念；③ 对三星/SK Hynix 的影响有限但信号意义强——中国内需市场不再必然买韩国内存。</div>
+        <div class="ticker">📌 关联标的：小米集团 01810.HK（全栈国产旗舰受益）/ CXMT 未上市（长鑫存储）/ 005930.KS 三星电子（内存份额被蚕食风险）/ 000660.KS SK Hynix — 国产替代加速，韩国内存厂面临中国内需份额流失</div>
+        <div class="source">🔗 Source: <a href="https://www.kad8.com/storage/cxmt-lpddr6-mass-production-a-new-milestone-for-mobile-dram/" target="_blank">KAD8</a> · <a href="https://www.sammyfans.com/2026/08/29/cxmt-lpddr6-dram-debuts-on-xiaomi-18-fold/" target="_blank">Sammy Fans</a> · <a href="https://www.gizmochina.com/2026/08/29/xiaomi-18-fold-confirmed-to-debut-with-cxmts-lpddr6-memory/" target="_blank">Gizmochina</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达 Q2 后续</span>
+        <h4>英伟达 Q2 后续：股价盘后涨 5% 后回落——反垄断忧虑 + HBM 成本上升 + Warsh 鹰派三面夹击</h4>
+        <p>英伟达 Q2 财报（8/26 发布）后股价盘后涨 <strong>5%</strong>，但随后回吐。FX Leaders 分析指出三重压力：① 反垄断忧虑——英伟达在 AI 芯片市占率超 80%，收购 Hugging Face 可能引发监管审查；② HBM 成本上升——三星/SK Hynix 在 HBM4 谈判中提高报价，GPU 毛利受压；③ 美联储 Warsh 鹰派发言——高利率压制长周期科技股估值。但 SemiVision 周报指出 AI buildout 仍在加速，"风险中心正在向下游转移"——从 GPU 硬件转向电力/基础设施/融资链。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>英伟达的故事正在从"GPU 一家独大"变成"生态+供应链+宏观三线作战"。反垄断风险是新的——以前英伟达是"被需要的"，现在它开始"买下游"，监管不会视而不见。HBM 成本上升 = 三星和 SK Hynix 有了议价权（英伟达没地方买替代品）。对 lainy：短期波动不改长期趋势，但 Q3 毛利率是关键变量——如果 HBM 涨价吃掉 2-3 个百分点毛利，市场会重新定价。</div>
+        <div class="ticker">📌 关联标的：NVDA（短期承压/中长期仍受益）/ SMH（半导体 ETF）/ 000660.KS SK Hynix（HBM 议价权上升）— 英伟达短期承压，HBM 供应商受益</div>
+        <div class="source">🔗 Source: <a href="https://www.fxleaders.com/news/2026/08/28/nvda-stock-retreats-as-antitrust-concerns-partnership-pause-margin-pressure-weigh-on-nvidia/" target="_blank">FX Leaders</a> · <a href="https://tspasemiconductor.substack.com/p/semivision-weekly-intelligence-2026-1fa" target="_blank">SemiVision</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 TSMC/三星/CXMT] → 下游 [AI 芯片 NVDA/AVGO/华为] → 终端 [云厂 MSFT/GOOG + 开源生态 Hugging Face] — 当前受益环节：下游生态整合（英伟达收购 Hugging Face）+ 中游国产替代（CXMT LPDDR6）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊 6 个月 · 委内瑞拉石油大单 · 俄乌升级</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">委内瑞拉石油大单</span>
+        <h4>Trump 宣布"史上最大石油交易"：美国获得委内瑞拉 650 亿桶已探明储量多数控制权</h4>
+        <p>8/28 Trump 在 Truth Social 宣布，美国已获得委内瑞拉 <strong>650 亿</strong>桶已探明石油储量的多数控制权——占委内瑞拉 3030 亿桶总储量约 21%，相当于美国现有石油储量翻倍。交易通过国务卿 Rubio 和"战争部长"Hegseth 与委内瑞拉临时总统 Rodriguez 合作达成，"对美国纳税人零成本"。Bloomberg 同日报道委内瑞拉正在考虑退出 OPEC。这笔交易把美国变成了事实上的全球第一石油储备国。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是二战以来最大的能源地缘政治交易之一。对 lainy 的三个维度：① <b>油价</b>——美国控制更多石油 = 供给端话语权增强 = 长期压制油价的政治意志更强；② <b>OPEC</b>——如果委内瑞拉退出 OPEC，OPEC 的全球产量份额下降，但内部协调更简单（少了一个不配合的成员）；③ <b>中俄</b>——委内瑞拉一直是中国和俄罗斯在拉美的关键伙伴，这笔交易把她们挤了出去。短期油价因霍尔木兹谈判+Warsh 鹰派而下跌，但这笔交易的长期影响是"美国能源自主"再进一步。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（长期供给增加预期压制油价）/ 600028 中国石化 / XOM 埃克森美孚 / CVX 雪佛龙 / 601857 中国石油 — 美国石油巨头受益，OPEC 定价权削弱</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/" target="_blank">Reuters</a> · <a href="https://www.outlookindia.com/international/trumps-venezuela-oil-deal-explained-how-much-control-will-the-us-have-over-its-reserves" target="_blank">Outlook India</a> · <a href="https://www.theweek.in/news/world/2026/08/29/us-venezuela-oil-deal-trump.html" target="_blank">The Week</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊 6 个月</span>
+        <h4>美伊战争满 6 个月：霍尔木兹谈判卡在"军事船只通行权"，德国批 Trump"不负责任"</h4>
+        <p>8/28 美伊战争进入第 6 个月。霍尔木兹海峡通行谈判通过阿曼/卡塔尔/巴基斯坦斡旋进行，伊朗同意拟定条件清单恢复正常通航，但直接高级别谈判仍停滞。据 Polymarket，当前焦点是"临时霍尔木兹航运走廊+扫雷框架"，仍需最终批准。本周四仅 7 艘商品船通过海峡（前日 17 艘，10 日均 15 艘）。Goldman 估计当前海湾出口 1500-1600 万桶/日，低于战前约 700-800 万桶/日。德国财长 Klingbeil 8/29 批评 Trump "不负责任的伊朗战争"导致高油价。美国宣布"史上最严"伊朗制裁，Tehran 回应称已"失去效力"。</p>
+        <div class="why">🦞 <b>市场含义：</b>6 个月了——战争从"突发事件"变成"新常态"。油价已经从 3 月恐慌高点回落，但霍尔木兹通行仍未恢复正常。关键变量：① 如果阿曼-卡塔尔斡旋成功（"临时走廊"落地），油价可能再跌 $5-10；② 如果谈判破裂，$100+ 不是不可能。对 lainy：德国公开批评 = 欧洲对美国伊朗政策裂痕扩大，但实际影响有限。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 — 霍尔木兹谈判进展决定油价短期方向</div>
+        <div class="source">🔗 Source: <a href="https://www.foxnews.com/live-news/iran-war-us-strait-hormuz-oman-oil-tensions-08-28-26" target="_blank">Fox News</a> · <a href="https://gulfnews.com/uae/us-iran-war-at-six-months-what-uae-residents-need-to-know-today-aug-29-2026-1.500656163" target="_blank">Gulf News</a> · <a href="https://germany.news-pravda.com/en/germany/2026/08/29/154512.html" target="_blank">Pravda Germany</a> · <a href="https://polymarket.com/event/us-ceasefire-against-iran-continues-throughptptpt" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">俄乌升级</span>
+        <h4>俄无人机炸基辅郊外 37 人死亡；泽连斯基下令"每天 1000 架无人机"打击俄罗斯；乌克兰 FP-1 无人机炸雅罗斯拉夫尔炼油厂</h4>
+        <p>8/29 俄罗斯对基辅郊外发动大规模无人机袭击，击中仓库和商业中心，造成至少 <strong>37</strong> 人死亡——NYT 称暴露乌克兰防空缺口。同期乌克兰军方情报称俄罗斯正计划在北部（包括基辅方向）发动地面进攻。泽连斯基下令对俄实施"每天 <strong>1000</strong> 架无人机"打击；乌克兰 FP-1 远程无人机袭击了雅罗斯拉夫尔炼油厂。此前乌克兰无人机还攻击了托博尔斯克 ZapSibNeftekhim 石化设施。俄计划 2026-2027 年动员 60 万人（今年 30 万+明年 30 万）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>俄乌战争正在升级——从"阵地战"回到"打击后方+地面进攻准备"。37 人死亡的攻击是近期最致命的一次。乌克兰"每天 1000 架无人机"的命令意味着无人机产能需要大幅扩张。对 lainy 的能源视角：乌克兰持续打击俄罗斯炼油厂 = 俄罗斯成品油出口能力下降 = 全球成品油供给偏紧 = 炼油利润上升。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（俄炼油产能受损推高成品油价）/ 600028 中国石化 / XLE 能源 ETF — 俄炼油厂被打 = 全球成品油供给收紧</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/08/29/world/europe/russia-ukraine-strike-kyiv-drones.html" target="_blank">NYT</a> · <a href="https://independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-burnham-missiles-nato-b3040764.html" target="_blank">The Independent</a> · <a href="https://en.wikipedia.org/wiki/Timeline_of_the_Russo-Ukrainian_war_(1_June_2026_%E2%80%93_present)" target="_blank">Wikipedia</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特阿美/委内瑞拉] → 中游 [航运 霍尔木兹+红海] → 下游 [炼化 俄罗斯炼油厂被打击] → 终端 [成品油供给收紧] — 当前受损环节：中游航运（霍尔木兹通行量仅战前 60%）+ 下游炼化（俄炼油厂遭袭）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Warsh 放鹰 · 9 月加息概率 56%</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Warsh 放鹰</span>
+        <h4>美联储新主席 Warsh Jackson Hole 首秀放鹰：2% 通胀目标"坚定固定"，9 月加息概率从 36% 跳至 56%</h4>
+        <p>8/28 美联储主席 Kevin Warsh 在 Jackson Hole 发表就任以来首次讲话，明确放鹰：① 2% PCE 通胀目标是"坚定和固定的"；② 如果通胀没有以"足够速度"向目标移动，"我们还有工作要做"；③ 经济处于充分就业，消费和投资"看起来有韧性"；④ 夏季较好的通胀数据"不说明底层趋势有显著改善"。他拒绝给出明确前瞻指引，但 Harvard 教授 Rogoff 评价："如果通胀数据不改善，他会加息。"CME FedWatch 显示 9 月加息概率从 <strong>36%</strong> 跳至 <strong>56%</strong>。2 年期国债收益率从 4.22% 升至 <strong>4.30%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Warsh 在 5 月接替 Powell 后第一次明确表态——通胀优先于就业。这跟 Powell 时代的"平衡风险"框架不同。对 lainy：① 如果 9 月加息，科技股估值承压、黄金回调、美元走强；② 但 Warsh 也说"不想让市场看美联储做下一笔交易"= 不会提前预告；③ <strong>56%</strong> 的概率意味着市场已开始定价加息，但没完全消化——如果真的加息，还有一波调整。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（科技股，加息利空）/ GLD 黄金（$4,457，加息压力）/ TLT 国债 ETF（收益率上升=价格跌）/ DXY 美元指数（2 年新高）— 鹰派利好美元，利空长周期资产</div>
+        <div class="source">🔗 Source: <a href="https://abcnews.com/Business/wireStory/warsh-raises-stakes-feds-meeting-takeaways-jackson-hole-136055905" target="_blank">ABC News</a> · <a href="https://www.axios.com/2026/08/29/fed-kevin-warsh-jackson-hole" target="_blank">Axios</a> · <a href="https://finchannel.com/kevin-warsh-jackson-hole-speech-raises-odds-of-september-fed-rate-hike/134138/economic/2026/08/" target="_blank">FinChannel</a> · <a href="https://finance.yahoo.com/economy/article/fed-chairman-warsh-shows-courage-with-jackson-hole-speech-defying-political-pressure-says-harvards-rogoff-140951926.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 传导链：Warsh 鹰派 → 美元走强（DXY 2 年新高）→ 黄金承压（$4,457 跌 2%）→ 科技股估值压缩 → 油价因美元走强+霍尔木兹谈判而下跌 — 当前关键变量：9 月 FOMC 会议是否加息</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 &amp; Goods <small>黄金回调 · 油价周跌 5% · 欧洲天然气 13 年新低</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金 $4,457——Warsh 鹰派触发获利了结，单日跌 2%，8 月仍涨 13.4%</h4>
+        <p>黄金 8/29 收于约 <strong>$4,457</strong>，较周中 $4,630 高点回落约 <strong>3.7%</strong>，单日跌 <strong>2%</strong>。核心驱动：Warsh Jackson Hole 鹰派发言推高美元至 2 年新高，美元走强=黄金承压。但 8 月整体仍涨 <strong>13.4%</strong>。Long Forecast 月度预测：8 月均价 $4,326，区间 $4,074-$4,755。Credit Agricole 维持 $5,000 目标价。当前支撑 <strong>$4,400</strong>，阻力 <strong>$4,600</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金从 $4,630 跌到 $4,457 不是趋势反转——是"鹰派冲击下的回调"。结构上央行购金+地缘避险+伊朗战争三重支撑仍在。对 lainy：如果 9 月 Warsh 真加息，黄金可能再回 $4,200-4,300——那会是更好的加仓位。不加息则直冲 $4,600+。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD / SLV 白银 ETF / 600547 山东黄金 / 600916 中国黄金 — 短期回调，中长期央行购金支撑不变</div>
+        <div class="source">🔗 Source: <a href="https://www.exchangerates.org.uk/news/47038/2026-08-29-gold-price-forecast-prediction-warsh-selloff-tests-credit-agricole-5-000-call.html" target="_blank">Exchange Rates UK</a> · <a href="https://longforecast.com/gold-price-today-forecast-2017-2018-2019-2020-2021-ounce-gram" target="_blank">Long Forecast</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">能源金属</span>
+        <h4>铜价维持历史高位 ~$14,400/吨——AI 数据中心需求 + 供给紧张双支撑；中国锂价企稳</h4>
+        <p>铜价本周维持在历史高位约 <strong>$14,400</strong>/吨附近（周二曾创新高）。核心支撑：① AI 数据中心建设对铜的需求（每 MW 数据中心约用 5.5 吨铜）；② 全球光伏/储能装机继续推升铜用量；③ 供给端智利/秘鲁铜矿品位下降+罢工风险。碳酸锂价格本周企稳回升，中国电池级碳酸锂约 8.5-9 万元/吨，受宁德时代半年报利好+储能需求增长带动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜已经从"传统工业金属"变成"AI 时代的隐性金属"——每个 AI 数据中心都是一座铜矿的下游。对 lainy 的映射：铜价高 = 矿企利润厚（紫金/洛阳钼业/Freeport）但下游制造成本上升（电缆/电机/变压器涨价）。锂价企稳 = 电池厂利润空间恢复。</div>
+        <div class="ticker">📌 关联标的：LME 铜三个月 / 600362 江西铜业 / 603993 洛阳钼业 / FCX Freeport-McMoRan / SCCO Southern Copper / GLD 黄金 — 上游矿企受益，下游制造承压</div>
+        <div class="source">🔗 Source: <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-ALUMINIUM.cms" target="_blank">Economic Times</a> · 前日数据综合</div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent $89.31 / WTI $83.40——油价本周跌超 5%，霍尔木兹谈判+Warsh 鹰派+美元走强三重打压</h4>
+        <p>8/28 收盘：Brent <strong>$89.31</strong>（-0.43%），WTI <strong>$83.40</strong>（-0.16%）。周线 Brent 跌超 <strong>5%</strong>，WTI 跌超 <strong>4%</strong>。核心驱动：① Warsh 鹰派=美元走强=以美元计价的大宗承压；② 霍尔木兹谈判传出"周末可能达成协议"的乐观信号；③ 阿曼-伊朗航运走廊恢复+美国扫雷行动=波斯湾出口量回升。Goldman 估计当前海湾出口 1500-1600 万桶/日，比 3 月低点多 500-600 万桶/日。但乌克兰打击俄罗斯炼油厂=成品油供给偏紧。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 7 月的 $100+ 回落到 $89，地缘溢价在收窄。但不要被跌价骗了——霍尔木兹通行量仍只有战前的 60%，谈判随时可能破裂。对 lainy：如果霍尔木兹协议达成，油价可能回 $80s；如果破裂，$100+ 回来。委内瑞拉 650 亿桶交易是长期供给面利空，短期不改变库存平衡。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — 油价回调短期利空能源股，但霍尔木兹风险未消</div>
+        <div class="source">🔗 Source: <a href="https://www.businesstimes.com.sg/companies-markets/energy-commodities/oil-settles-lower-clues-about-fed-policy-rumours-hormuz-deal" target="_blank">Business Times</a> · <a href="https://blockonomi.com/crude-oil-markets-plunge-over-4-as-fed-tightening-and-hormuz-negotiations-intensify" target="_blank">Blockonomi</a> · <a href="https://stockpil.com/crude-oil-prices-dollar-middle-east-flows/" target="_blank">Stockpil</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 紫金/Freeport/山东黄金] → 中游 [冶炼/精炼] → 下游 [电池/电缆/电子制造] → 期货 [COMEX/LME/SHFE] — 当前受益环节：上游矿企（铜金高位），受损环节：下游制造（成本上升）</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>欧洲天然气危机 · 委内瑞拉退出 OPEC · 俄炼油厂被炸</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">天然气</span>
+        <h4>欧盟天然气库存创 13 年新低——"冬季恐慌"模式开启，伊朗战争+俄气断供双夹击</h4>
+        <p>Guardian 8/29 报道，欧盟天然气库存约 <strong>64%</strong>，处于 13 年来最低季节水平。原因：① 伊朗战争扰乱 LNG 贸易流（波斯湾 LNG 出口受霍尔木兹影响）；② 欧盟持续淘汰俄罗斯天然气；③ 2025-2026 冬季偏冷导致消耗超预期。交易商进入"冬季恐慌"模式——担心今冬再出现 2022 年式的价格飙涨。Henry Hub 天然气 <strong>$2.89</strong>/MMBtu（美国），欧洲 TTF 约 €65/MWh。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>欧洲天然气危机不是"会不会再来"的问题，是"多严重"的问题。64% 库存 = 往年同期通常 75-85%。如果今冬偏冷+伊朗战争持续，TTF 可能重回 €100+/MWh。对 lainy 的映射：① 欧洲 LNG 进口需求上升 = 美国 LNG 出口商受益（钱尼尔能源/NextDecade）；② 中国管道气/LNG 供给相对稳定，但全球 LNG 贸易重新分配会传导到亚洲价格；③ 新奥股份/广汇能源作为中国 LNG 进口商可能受益于价差。</div>
+        <div class="ticker">📌 关联标的：TTF 天然气期货 / NYMEX 天然气 / 600256 广汇能源 / 600803 新奥股份 / LNG 钱尼尔能源（US）— 欧洲 LNG 需求上升，全球天然气价格中枢抬升</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/business/2026/aug/29/european-gas-stores-lowest-13-years-eu-price" target="_blank">The Guardian</a> · <a href="https://www.rt.com/news/644808-eu-gas-winter-panic/" target="_blank">RT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">原油/地缘</span>
+        <h4>委内瑞拉考虑退出 OPEC + Trump 650 亿桶石油交易——OPEC 定价权 60 年来最大松动</h4>
+        <p>Bloomberg 报道委内瑞拉正在考虑退出 OPEC。结合 Trump 宣布的 650 亿桶石油储量控制权交易，这意味着：① OPEC 的全球产量份额下降；② 美国对全球石油供给的直接影响从"页岩油"扩展到"委内瑞拉储量"；③ 如果其他拉美产油国跟进（巴西/圭亚那已非 OPEC），OPEC 的影响力将进一步收缩。当前 OPEC Basket 均价约 <strong>$87</strong>/桶。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>OPEC 成立 60 年来，核心功能是"限产保价"。如果委内瑞拉退出，OPEC 少了一个"不配合的成员"——可能是好事（内部更团结）也可能是坏事（市场份额进一步被美国蚕食）。对 lainy：长期看，石油定价权正在从 OPEC 向"美国+OPEC"双中心转移。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / OPEC 一篮子 / 600028 中国石化 / XOM 埃克森美孚 / CVX 雪佛龙 — 美国石油巨头受益，OPEC 定价权削弱</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/business/energy/us-enters-into-oil-agreement-with-venezuela-trump-says-2026-08-28/" target="_blank">Reuters</a> · <a href="https://www.investmentwatchblog.com/the-cartel-that-has-set-the-price-of-oil-for-60-years-is-coming-apart/" target="_blank">Investment Watch</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特阿美/委内瑞拉 PDVSA] → 中游 [LNG 贸易/航运] → 下游 [炼化 中石化/ExxonMobil] → 终端 [电力/供暖 欧洲天然气短缺] — 当前受损环节：欧洲天然气下游（库存 13 年新低），受益环节：美国 LNG 出口商</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>周五收盘 · 周回顾 · A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 周五 8/28 沪指 -0.11% 报 ~3,952 / 深成指 -0.68% / 创业板 -1.41%</h4>
+      <p>A 股周五缩量回调，创业板跌幅较大。周线看三大指数仍处震荡区间，未破前低。板块方面，芯片/半导体周五领跌（受 Trump 芯片关税第二阶段影响），消费板块相对抗跌。<b>下周关注：</b>非农就业数据（9/4 或 9/5）+ 财长会议+ 美联储官员密集发声。A 股自身催化剂有限，主要跟随外围（油价+美联储）和产业政策（芯片关税/国产替代）节奏。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指周五 ~25,585（基本持平）/ 周线收跌——阿里巴巴配股冲击</h4>
+      <p>恒指周五基本持平，但周线下跌——主因阿里巴巴突发配股（share placement）引发科技板块抛售。CGTN 分析师 Timothy Pope 指出，科技股遭配股冲击后市场情绪脆弱。<b>关键看点：</b>阿里巴巴配股定价和规模对下周港股科技板块流动性有直接影响。恒指目前处于 25,500-25,700 区间，如果外围（美联储+油价）改善，有望上探 26,000；如果恶化，可能下探 24,800。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 周五 8/28 S&amp;P 7,712 (-0.25%) / 纳指 26,402 (-0.52%) / 道指 53,560 (~0%) — 周线仍涨</h4>
+      <p>周五三大指数小幅下跌——Warsh 鹰派讲话触发利率敏感型板块回调。但<b>周线</b>仍录得涨幅：S&P <strong>+0.5%</strong>、纳指 <strong>+0.9%</strong>、道指 <strong>+0.5%</strong>（道指三周来首周涨）。周初 Nvidia 财报暴涨推动科技股，周末被 Warsh 鹰派降温。Russell 2000 小盘股周五跌超 <strong>1%</strong>——对利率最敏感。<b>本周关键：</b>9 月 FOMC 前最后一次非农数据（9/4 或 9/5）将决定 Warsh 是否有"数据依据"加息。Labor Day 长周末，周一美股休市。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 6,788.88（周跌 -1.79%）/ 三星 257,000 韩元（-3.38%）/ 股东回报失望</h4>
+      <p>KOSPI 周跌 <strong>1.79%</strong>，收 6,788.88。三星电子 257,000 韩元（周跌 <strong>3.38%</strong>）——主因股东回报方案不及预期，机构抛售。SK Hynix 同样承压。韩国央行本周加息至 3.0%（已连续两月加息），核心通胀居高不下，韩美利差维持 0.75%。<b>下周关注：</b>KOSPI 能否守住 6,700 支撑；三星股东大会前是否有追加回购/分红信号。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>周末轻松看</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">小米 18 Fold</span>
+        <h4>小米 18 Fold 旗舰折叠屏发布：首发 CXMT LPDDR6 + 自研 Xring O3 芯片——"全栈国产旗舰"来了</h4>
+        <p>小米 18 Fold 确认将搭载 CXMT（长鑫存储）LPDDR6 内存 + 小米自研 Xring O3 SoC，成为全球首款"全栈国产"旗舰折叠屏手机。同时推出的还有 Xiaomi Pad 9 Pro Max（同样用 CXMT LPDDR6）。这是中国手机厂商首次在旗舰产品上同时使用国产 SoC+国产内存+国产面板（京东方/OLED），标志着"国产替代"从芯片扩展到全链。</p>
+        <div class="why">🦞 <b>消费视角：</b>对 lainy 的消费-产业映射：小米正在走"华为路线"——自研芯片+国产供应链+高端定价。区别是华为用海思（已受限），小米用 Xring（不受限）。如果 18 Fold 定价 8999+，对标三星 Z Fold，小米的品牌力是否足够？这是消费端的看点。对小米股价：短期利好情绪，但折叠屏市场份额有限（全球折叠屏约占智能手机 2%），对收入贡献不大。</div>
+        <div class="ticker">📌 关联标的：01810.HK 小米集团（全栈国产旗舰情绪利好）/ 005930.KS 三星电子（折叠屏份额被蚕食风险）/ BOE 京东方（OLED 面板供应商）</div>
+        <div class="source">🔗 Source: <a href="https://xiaomitoday.com/xiaomi-18-fold-confirmed-with-cxmt-lpddr6-and-xring-o3-chip/" target="_blank">XiaomiToday</a> · <a href="https://www.notebookcheck.net/Xiaomi-18-Fold-set-to-debut-CXMT-s-new-LPDDR6-memory.1382353.0.html" target="_blank">Notebookcheck</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [国产芯片 Xring/CXMT LPDDR6] → 中游 [小米手机组装] → 下游 [零售/电商] → 终端 [消费者 国产替代情绪] — 当前受益环节：全栈国产供应链（芯片+内存+面板）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">美网公开赛</span>
+        <h4>2026 美网公开赛本周开打！$1.08 亿总奖金（+21%）/ Zverev 头号种子 / 威廉姆斯姐妹回归</h4>
+        <p>2026 美国网球公开赛本周末在纽约法拉盛草地开打。总奖金 <strong>$1.08</strong> 亿（+21% YoY），男女单冠军各 <strong>$550</strong> 万，首轮出局也有 <strong>$14 万</strong>。男单头号种子 Alexander Zverev（因 Sinner 膝伤缺席），WTA 群雄逐鹿——女子网坛今年四大满贯产生了四个不同冠军。Serena 和 Venus Williams 均回归本届美网。票价再创新高引发讨论。</p>
+        <div class="why">🦞 <b>花边点评：</b>$1.08 亿奖金比很多科技公司净利润还高——体育赛事的商业化已经到了另一个维度。Zverev 当头号种子说明男子网坛"后三巨头时代"格局仍不稳定。lainy 周末如果看比赛，威廉姆斯姐妹的回归是情感线——她们可能是最后一次在法拉盛打球了。</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/athletic/7535566/2026/08/29/us-open-tennis-2026-guide-storylines/" target="_blank">The Athletic</a> · <a href="https://sports.yahoo.com/tennis/article/us-open-2026-how-to-watch-full-tv-schedule-streaming-info-and-more-121500868.html" target="_blank">Yahoo Sports</a> · <a href="https://usopentennisinfo.com/schedule/" target="_blank">US Open Info</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视八卦</span>
+        <h4>Black Widow 演员 Ray Winstone 曝料：在片场当面怒斥导演——因目睹其对女演员"动手动脚"</h4>
+        <p>LiveMint 8/30 报道，英国演员 Ray Winstone（曾在《黑寡妇》中饰演 Dreykov）回忆在片场目睹导演对一名女演员"动手动脚"后，直接当面与导演对峙。"我告诉他，如果再碰她一次，我会让他后悔。"Winstone 表示这种事在行业里"比人们想象的多得多"。这则消息在社交媒体引发关于影视行业职场安全的讨论。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Ray Winstone 以硬汉形象著称（《惊天劫案》《黑寡妇》），这段故事跟他银幕角色一样有张力——片场里的"正义使者"。不过也折射出影视行业的职场安全问题仍然严峻。lainy 周末刷到这条可以当吃瓜看看。</div>
+        <div class="source">🔗 Source: <a href="https://www.livemint.com/entertainment/todays-entertainment-latest-news-on-august-30-2026-live-updates-11788037218735.html" target="_blank">LiveMint</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
