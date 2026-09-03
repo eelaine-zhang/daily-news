@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-03</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D5A0A2; --geo: #A9BACB; --macro: #B7C0A3; --commodity: #B8A07E; --energy: #C4A77D; --stock: #D4A64A; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding: 4px 0 4px 12px; border-left: 4px solid var(--accent); border-bottom: none; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; color: var(--text); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D5A0A218; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.commodity { background: #B8A07E18; color: var(--commodity); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.stock { background: #D4A64A18; color: var(--stock); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--stock); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin: 40px 0 20px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .sub-group { font-size: 13px; color: var(--text-dim); margin: 8px 0 4px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 3 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美伊交火升级：</b>美军首次空袭伊朗油轮实施"以船换船"报复，伊朗回击约旦/UAE 美军基地——Brent 突破 <strong>$96</strong>/桶，霍尔木兹海峡危机再起。</li>
+      <li><b>ADP 就业超预期疲软：</b>8 月私营部门仅增 <strong>3.8 万</strong> jobs（预期 4.7 万），创 1 月以来最低——但 9/16 FOMC 加息概率仍维持 <strong>57%</strong>，9 月历史上是最弱月份。</li>
+      <li><b>中国光伏装机历史性超越煤电：</b>截至 7 月底光伏装机 <strong>12.86 亿千瓦</strong> 首超煤电 <strong>12.85 亿千瓦</strong>，风电+光伏占发电量 <strong>24.6%</strong>——能源结构拐点。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>HBM 罢工 + RTX Spark + TSMC 封装路线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">Micron 台湾罢工</span>
+        <h4>美光台湾 HBM 工人罢工预警：10,000 名员工正式发起罢工行动，要求利润分享 15%</h4>
+        <p>9/1，美光科技（Micron, NASDAQ:MU）台湾桃园和台中工厂的近 <strong>10,000</strong> 名 HBM 芯片工人正式向资方发起罢工预告，要求美光将现有激励薪酬方案替换为"营业利润的 <strong>15%</strong>"分红公式。美光台湾厂是目前美光全球 HBM 生产基地的核心，先进封装产线已排产至 2026 年底。台湾科学园区管理局已表示正监测争端并可能介入调停。美光计划于 9/30 发布 FY2026 Q4 财报。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美光台湾 HBM 工人罢工威胁的 timing 非常敏感——AI 内存需求正处于 supercycle 顶端，HBM 交期已超过一年，先进封装产线 2026 年全满。如果罢工落地，将直接冲击美光 HBM3E 供应，间接利好三星和 SK Hynix 的 HBM 市场份额。对 lainy 的映射：HBM 双寡头格局中，美光是"第三梯队"——它一旦供应中断，三星/SK 的议价权更强。</div>
+        <div class="ticker">📌 关联标的：MU（美光，短期承压）/ 000660.KS（SK Hynix，受益）/ 005930.KS（三星，受益）/ 159992 半导体ETF — HBM 供应扰动利好双寡头</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/326311/20260902/micron-taiwan-strike-risk-hbm-workers-claim-share-ai-memory-supercycle.htm" target="_blank">TechTimes</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/micron-taiwan-unit-reportedly-plans-091939264.html" target="_blank">Yahoo Finance</a> · <a href="https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/micron-s-taiwan-labor-dispute-tests-a-memory-maker-operating-at-full-tilt/70040447" target="_blank">ad-hoc-news</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">NVIDIA RTX Spark</span>
+        <h4>英伟达 RTX Spark AI PC 芯片亮相 IFA 2026：128GB 统一内存、1 Petaflop 算力，华硕/宏碁首批机型售罄</h4>
+        <p>英伟达 RTX Spark"超级芯片"在 IFA 2026（柏林消费电子展）上由 Acer、ASUS 等多家 OEM 展出。RTX Spark 搭载 <strong>128GB</strong> 统一内存、<strong>1 Petaflop</strong> AI 算力，面向"个人 AI 代理 24/7 运行"场景。ASUS 和 MSI 的首批 RTX Spark 笔记本配额在出货前即售罄。Acer 展示了配备最多 6,144 核 Blackwell RTX GPU 和 20 核 Grace CPU 的迷你桌面。产品将于 2026 Q4 在北美上市。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>RTX Spark 是英伟达从"数据中心 AI"向"桌面 AI"的延伸——把数据中心级算力塞进消费级设备。128GB 统一内存意味着大模型可以本地运行，不用云端调用。对 lainy 的商业含义：① AI PC 换机潮可能成为英伟达的新增长曲线（消费 GPU 市场比数据中心更大）；② 对 Intel/AMD 传统 CPU 厂商构成结构性威胁——"AI PC"的定义权正在被英伟达抢走；③ ASUS/微星首批售罄 = 需求验证。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，AI PC 新增长曲线）/ 2353 宏碁 / 2357 华硕（ASUS）/ INTC（Intel，AI PC 话语权进一步受压）— 英伟达受益，Intel 承压</div>
+        <div class="source">🔗 Source: <a href="https://www.engadget.com/2248794/acer-shows-off-its-ai-desktop-future-with-the-rtx-spark-design/" target="_blank">Engadget</a> · <a href="https://world-today-journal.com/asus-and-msi-sell-out-initial-nvidia-rtx-spark-laptop-allocations/" target="_blank">World Today Journal</a> · <a href="https://www.ubergizmo.com/2026/09/acer-unveils-mini-ai-pc-featuring-nvidia-rtx-spark-superchip/" target="_blank">Ubergizmo</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 封装路线</span>
+        <h4>TSMC 要求供应商开发 5μm HBM 微凸块：混合键合推迟至 HBM4E/HBM5，SK Hynix 展示嵌入式 HBM4</h4>
+        <p>据 ETNews 报道，TSMC 已向材料和设备供应商提出开发 <strong>5μm</strong> 级微凸块键合和底部填充技术的要求，用于先进 HBM 封装——这意味着 TSMC 本轮将继续使用微凸块而非混合键合（hybrid bonding）。JEDEC 今年早些时候提高了 HBM 堆叠高度限制，使 HBM4 可以继续使用成本更低的微凸块技术，混合键合推迟至 HBM4E/HBM5（2028-2029 年）。同时，在 Semicon Taiwan 2026 上，SK Hynix 展示了在 HBM4 基础裸片中嵌入计算功能的定制化 HBM。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条新闻的 significance 在于"HBM 封装技术路线分歧"——TSMC 选择渐进升级微凸块（5μm），而非跳跃到混合键合。对 lainy 的含义：① 封装设备的资本开支周期被拉长（现有 microbump 设备可以继续用），利好 Tokyo Electron/ASM Pacific 等封装设备商；② SK Hynix 在 HBM4 基础裸片中嵌入计算 = "存算一体"路线，可能改变 HBM 的竞争格局——从"谁的堆叠层数多"变成"谁的裸片更智能"。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ 000660.KS（SK Hynix）/ 3322 东京电子（TEL）/ 8526.AS APAEA — 封装设备供应链受益于技术渐进路线</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260902VL218/tsmc-hbm-materials-equipment-technology.html" target="_blank">DigiTimes</a> · <a href="https://www.tomshardware.com/tech-industry/semiconductors/hybrid-bonding-roadmap-examined" target="_blank">Tom's Hardware</a> · <a href="https://finance.biggo.com/news/b93d6948-619b-4de5-bc33-f1e7fe904d37" target="_blank">BigGo Finance</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂+AI PC — MSFT/GOOG/ASUS] — 当前受益环节：HBM 内存双寡头（三星+SK Hynix），美光罢工扰动放大议价权；AI PC 开辟消费级新增长曲线</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊交火升级 · 霍尔木兹危机</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊交火</span>
+        <h4>美军首次空袭伊朗油轮实施"以船换船"报复；伊朗回击约旦/UAE 美军基地，婚礼遭误击致 4 死</h4>
+        <p>9/1-2，美军中央司令部对霍尔木兹海峡 Larak 岛上的伊朗火箭发射器阵地发动空袭，称伊朗正计划用水雷封锁航道。随后美军首次空袭两艘伊朗政府油轮——Axios 称这是特朗普批准的"以船换船"（tanker for tanker）新政策，此前伊朗袭击霍尔木兹商船，美国以打击伊朗油轮作为报复。伊朗方面称空袭造成伤亡，其中一次打击命中一场婚礼活动，致 <strong>4 人死亡</strong>、数十人受伤。伊朗随后向约旦和阿联酋的美军基地发射导弹和无人机进行报复。此前停火一个月的战线重新点燃。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"以船换船"政策标志着美伊冲突进入新阶段——从打击军事目标扩展到经济目标（油轮）。这意味着：① 霍尔木兹海峡通航风险进一步上升，保险费率可能跳涨；② 伊朗如果选择封锁海峡，全球约 <strong>20%</strong> 的海运石油将受阻；③ 婚礼误击事件可能在伊朗国内引发舆论反弹，加大伊朗领导人的国内压力。对 lainy：油价的地缘溢价短期不会消退，9/16 FOMC 前油价高企 = 加息压力增大。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XLE（能源 ETF）— 油价地缘溢价持续；JETS（航空 ETF）/ XLY（可选消费）受损</div>
+        <div class="source">🔗 Source: <a href="https://apnews.com/article/iran-us-strikes-hormuz-trump-september-2-2026-cc891e22860d7a53bf7ade9a3d74c0ae" target="_blank">AP News</a> · <a href="https://www.axios.com/2026/09/02/iran-tankers-hormuz-attacks-oil" target="_blank">Axios</a> · <a href="https://www.nytimes.com/2026/09/01/us/politics/us-launches-air-strikes-iran.html" target="_blank">New York Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">伊朗外交</span>
+        <h4>伊朗表示"愿谈"但继续反击；阿拉伯半岛电视台称美国开始暗示"政权更替"选项</h4>
+        <p>据 10things.news 报道，伊朗在交火后仍表示"愿谈"，且习近平近期访问中东地区。同时阿拉伯半岛电视台（Al Arabiya）报道，美国开始暗示"政权更替"（regime change）作为可能的选项之一——这是此前从未公开提及的。印度总理莫迪也呼吁和平。特朗普表示将"重新评估"福克兰群岛（Falklands）立场——这条消息的上下文尚不明确，目前信息有限，待跟进。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>美国暗示"政权更替"是一个危险的信号——如果美国开始公开讨论伊朗政权更替，谈判空间将大幅收窄。但目前仍停留在"暗示"阶段，实际执行概率低。值得继续关注：中国（习近平访中东）和印度（莫迪呼吁和平）的角色在加大——这意味着亚洲大国正在尝试介入调停，可能成为"台阶"。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（谈判成功则回落 $10-15）/ SPY（风险偏好敏感）/ GLD 黄金（避险需求）— 谈判成功利空油价利好风险资产，反之亦然</div>
+        <div class="source">🔗 Source: <a href="https://www.10things.news/p/10-things-global-news-2nd-september-9e7" target="_blank">10 Things News</a> · <a href="https://www.alarabiya.net/iran/2026/09/02/3-%D8%AE%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA-%D8%A7%D9%85%D8%A7%D9%85-%D8%B7%D9%87%D8%B1%D8%A7%D9%86" target="_blank">Al Arabiya</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹/红海航线，保险费率飙升] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（"以船换船"政策下，伊朗油轮成为合法打击目标）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>ADP 疲软 · FOMC 9/16 · 10Y 美债 4.79%</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">ADP 就业</span>
+        <h4>ADP 8 月就业仅增 38,000 人：创 1 月以来最低，远低于预期 47,000</h4>
+        <p>9/2 ADP 全国就业报告显示，美国私营部门 8 月仅新增 <strong>38,000</strong> 个就业岗位（7 月修正值 46,000），低于经济学家预期的 <strong>47,000</strong>，为 2026 年 1 月以来最低。年薪同比上涨 <strong>4.7%</strong>。Vanguard 高级经济学家 Schickling 表示，"今夏劳动力市场走软是在春季强劲就业增长之后"。数据发布后美债收益率小幅回落，帮助了美股开盘反弹。周五非农就业数据（NFP）将是下一个关键数据点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>ADP 是非农的"前菜"，38,000 的大幅低于预期意味着：① 美国 labor market 正在实质放缓；② 9/16 FOMC 加息概率可能从当前 57% 下调——如果周五 NFP 也弱；③ 但 Warsh 的鹰派立场意味着 Fed 仍可能在"数据依赖"框架下选择加息。对 lainy：ADP 弱 = 周五 NFP 值得重点关注。如果 NFP 也弱，9/16 加息概率可能降至 40% 以下，利好风险资产。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，弱数据可能降低加息概率利好）/ TL TLT（长债 ETF，弱数据推高债券价格）/ GLD 黄金 — 弱就业数据短期利好风险资产和债券</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/02/private-payrolls-rose-by-38000-in-august-fewer-than-expected-adp-reports.html" target="_blank">CNBC</a> · <a href="https://www.foxbusiness.com/economy/private-sector-added-38000-jobs-august-below-expectations-adp-says" target="_blank">Fox Business</a> · <a href="https://www.kiplinger.com/investing/economy/jobs-report-august-2026-what-to-expect" target="_blank">Kiplinger</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">FOMC 9/16</span>
+        <h4>9/16 FOMC 会议 + SEP 经济预测 + 点阵图：加息概率 57%，10Y 美债收益率升至 4.79%</h4>
+        <p>9 月 FOMC 会议定于 <strong>9/15-16</strong>，将同时发布利率决议、Summary of Economic Projections（SEP）和点阵图。当前联邦基金利率维持在 <strong>3.50%-3.75%</strong>，已连续五次维持不变。10Y 美债收益率升至 <strong>4.79%</strong>，创 2025 年初以来最高。Polymarket 定价 9 月加息概率约 <strong>57%</strong>，而美联储自己的点阵图显示今年还有一次降息——分歧巨大。Investrade 指出，9 月历史上是市场最弱的月份，加上 FOMC + 非农 + Trump/Xi 峰会 9/24，多重事件叠加。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>9 月是 2026 年最关键的宏观拐点之一。三件事同时发生：FOMC（9/16）、ECB 会议（9/10）、BOJ 会议（9/18）——全球三大央行同时议息。当前市场预期：ECB 可能紧缩、BOJ 可能加息、Fed 可能加息也可能按兵。如果三家同时紧缩，全球流动性将面临巨大压力。对 lainy：这是"多事之秋"的教科书案例——配置上增加防御性资产（黄金、短债），减少高估值成长股暴露。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / TLT（长债）/ GLD 黄金 / 513130 港股通科技ETF — FOMC 结果将决定 9 月方向；同时紧缩 = 利空风险资产</div>
+        <div class="source">🔗 Source: <a href="https://fedratecalc.com/fomc-meeting-schedule/september-2026/" target="_blank">FedRateCalc</a> · <a href="https://www.cnbc.com/2026/08/31/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://investrade.com/market-review-september-02-2026/" target="_blank">Investrade</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：9/16 FOMC + 9/10 ECB + 9/18 BOJ 三大央行同时议息，全球流动性拐点</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 $4,377 · 铜 $13K+ · 镍 $16,663 · 原油 Brent $94</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag commodity">贵金属</span>
+        <h4>黄金 $4,377（+1.12%）反弹：ADP 弱就业推动避险买盘，白银 $65.46 跟涨</h4>
+        <p>9/2 黄金现货报 <strong>$4,377.15</strong>/oz，日涨 <strong>+1.12%</strong>。12 月 COMEX 黄金期货收 <strong>$4,414.60</strong>（+$18.20, +0.41%），白银 <strong>$65.46</strong>/oz（+$0.09, +0.14%）。ADP 弱就业数据发布后，美债收益率小幅回落，推动金价从连续四日下跌中反弹。此前 8/26 黄金曾触及 $4,450 高位后回落至 $4,358。月涨 <strong>+9.75%</strong>，年涨 <strong>+28%</strong>。Kitco 数据显示央行持续买入构成底部支撑。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,350-4,450 区间反复拉锯，核心逻辑：地缘避险（买）vs Warsh 鹰派（卖）vs ADP 弱就业（买）。ADP 数据给了黄金喘息空间——如果周五 NFP 也弱，金价可能重新挑战 $4,450。对 lainy 的配置视角：黄金在"高通胀+地缘混乱+央行持续买入"环境下是核心配置，但 FOMC 后如果鹰派，短期可能回调至 $4,200——那是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股）/ SLV 白银 ETF / 600547 山东黄金 / 600489 中金黄金 — 央行持续买入+地缘避险托底</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://investrade.com/market-review-september-02-2026/" target="_blank">Investrade</a> · <a href="https://www.riotimesonline.com/gold-silver-precious-metals-wednesday-september-2-2026/" target="_blank">Rio Times Online</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag commodity">工业金属</span>
+        <h4>铜价 $13,000+ 高位回调：Bloomberg 称铜的涨势"暂停"，AI 数据中心+新能源需求仍是长期支撑</h4>
+        <p>Bloomberg 9/2 报道，铜价连续第二日下跌，因油价飙升引发全球经济担忧。但铜价仍维持在 <strong>$13,000</strong>/吨以上，2026 年累计涨幅 <strong>+42%</strong>。8 月铜价仍涨近 4%，受供应紧张支撑。Share Talk 报道，Albemarle（ALB, 全球最大锂生产商之一）正在寻求调解以避免其在智利的罢工。镍价报 <strong>$16,663.50</strong>/吨，日跌 0.07%，月跌 <strong>-3.18%</strong>。钴价持平于 <strong>$56,290</strong>/吨。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜价在 $13,000 高位的"暂停"是短期信号——长期来看，AI 数据中心和新能源装机的铜需求是结构性的。智利 Albemarle 罢工威胁如果落地，锂供应可能再次收紧——但锂价今年已经大幅回调，罢工对价格的边际影响有限。对 lainy：铜的"高位回调"可能是加仓时点——等油价稳定后，铜的基本面（供应紧张+AI 需求）会重新主导定价。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600547 山东黄金（黄金）/ 600362 江西铜业 / 600259 广晟有色（稀土）/ FCX Freeport（铜矿）/ ALB Albemarle（锂）— 铜长期受益，短期受油价波动影响</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-09-02/copper-s-rally-stalls-as-worries-about-global-economy-resurface" target="_blank">Bloomberg</a> · <a href="https://tradingeconomics.com/commodity/nickel" target="_blank">Trading Economics</a> · <a href="https://www.share-talk.com/sp-angel-todays-market-view-wednesday-2nd-september-2026/" target="_blank">Share Talk</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag commodity">原油</span>
+        <h4>Brent $94.19 / WTI $90.72：美伊"以船换船"推升地缘溢价，EIA 上调 Q3 预测至 $85</h4>
+        <p>9/2 Brent 原油报 <strong>$94.19</strong>/bbl（日跌 1.02%），WTI 报 <strong>$90.72</strong>/bbl（日涨 0.56%）。部分数据显示 Brent 日内一度触及 <strong>$96</strong>。美伊交火升级推升地缘溢价，但 ADP 弱就业数据显示经济放缓可能压制需求预期。EIA 短期能源展望（STEO）已将 Q3 Brent 预测上调至 <strong>$85</strong>/bbl（较上月预测 +$11），Q2 全球石油库存日均下降 <strong>420 万桶</strong>，Q3 预计继续下降 <strong>380 万桶</strong>。Henry Hub 天然气 <strong>$2.95</strong>/MMBtu。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>原油市场正在对"地缘溢价 vs 需求放缓"进行定价拉锯。EIA 的 Q3 $85 预测低于当前 $94 现价——意味着 EIA 认为 $9 的地缘溢价是"超额定价"。但如果霍尔木兹海峡真正被封锁，$100+ 不是不可能。对 lainy：高油价 = 通胀粘性 = Fed 难降息 = 科技股估值承压。这条传导链是 9 月市场的核心矛盾。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源ETF — 高油价受益三桶油和能源股；航空/消费受损</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes</a> · <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank">EIA STEO</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 — 紫金/Freeport/Albemarle] → 中游 [冶炼/精炼 — 江西铜/北方稀土] → 下游 [电池/电网/珠宝 — 宁德/电网/周大福] — 当前受益环节：贵金属矿企（央行买盘+地缘避险），受损环节：工业金属短期受油价波动压制</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>中国光伏首超煤电 · 霍尔木兹 LNG · 卡塔尔不可抗力</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag energy">新能源 · 历史性</span>
+        <h4>中国光伏装机首超煤电：12.86 亿千瓦 vs 12.85 亿千瓦，煤炭发电占比首次跌破 50%</h4>
+        <p>国家能源局 9/1 公布数据：截至 2026 年 7 月底，全国光伏发电装机容量达 <strong>12.86 亿千瓦</strong>（1,286 GW），首次超越同期煤电装机 <strong>12.85 亿千瓦</strong>（1,285 GW），成为中国装机规模最大的电源品类。光伏占全国总装机 <strong>31.5%</strong>。1-7 月太阳能发电量 <strong>8,024 亿千瓦时</strong>，同比增 <strong>+15.5%</strong>。上半年风电+光伏占全国发电量 <strong>24.6%</strong>，煤炭占比首次降至 <strong>49.7%</strong>。中国生产全球约 <strong>80%</strong> 的太阳能组件。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是一个历史性拐点——中国电力结构的"煤炭时代"正在被"光伏时代"替代。对 lainy 的商业含义：① 光伏组件产能过剩局面下，价格竞争激烈，但装机量持续超预期；② 煤电占比跌破 50% = 碳交易市场可能迎来新一轮政策推动；③ 中国生产全球 80% 光伏组件 = 全球新能源供应链的中国依赖度仍在上升，尽管美国关税压力持续。</div>
+        <div class="ticker">📌 关联标的：601012 隆基绿能（光伏龙头）/ 600438 通威股份（硅料+电池）/ 300274 阳光电源（逆变器+储能）/ 600025 华能水电（清洁能源）— 光伏装机超预期利好全产业链</div>
+        <div class="source">🔗 Source: <a href="https://news.sina.com.cn/c/2026-09-02/doc-iniqkefq3322130.shtml" target="_blank">新浪新闻</a> · <a href="https://www.scmp.com/economy/china-economy/article/3365985/beyond-coal-chinas-installed-solar-power-capacity-crosses-historic-threshold" target="_blank">SCMP</a> · <a href="https://www.business-standard.com/world-news/china-solar-capacity-overtakes-coal-power-generation-india-energy-sources-126090200246_1.html" target="_blank">Business Standard</a> · <a href="https://electrek.co/2026/09/02/china-now-has-more-solar-than-coal-to-fuel-its-electric-car-boom/" target="_blank">Electrek</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">天然气 · LNG</span>
+        <h4>霍尔木兹危机推升亚洲 LNG 价格创五个月新高：卡塔尔延长不可抗力至 11 月</h4>
+        <p>LNG Global 报道，霍尔木兹海峡重新被封锁推动亚洲现货 LNG 价格跳升至五个月高点。卡塔尔已将 LNG 交付不可抗力条款延长至 <strong>11 月</strong>。南亚买家被高价挤出市场——巴基斯坦面临新一轮停电。同时美国 LNG 出口创纪录，部分买家转向太阳能、管道气和长期合同以规避现货价格波动。欧洲天然气库存进入冬季备库关键期，霍尔木兹危机增加了供应不确定性。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>LNG 市场正在"双重挤压"——霍尔木兹危机限制卡塔尔出口（全球最大 LNG 出口国之一），同时欧洲冬季备库推高需求。对 lainy 的映射：① 新奥股份/广汇能源等 LNG 进口商可能受益于价差扩大（如果长期合同价 < 现货价）；② 但中国 LNG 进口成本上升 = 天然气发电利润承压；③ 光伏装机首超煤电 = 中国在用新能源替代天然气进口依赖——这解释了为什么中国在加速光伏装机。</div>
+        <div class="ticker">📌 关联标的：600803 新奥股份（LNG）/ 600256 广汇能源（LNG）/ LNG 钱尼尔能源（美国 LNG 出口）/ 601139 首华燃气 — 卡塔尔不可抗力推升 LNG 价差</div>
+        <div class="source">🔗 Source: <a href="https://www.lngglobal.com/what-you-need-to-know-sept-1-2-2026/" target="_blank">LNG Global</a> · <a href="https://energy-forum.co.jp/online-content/28202/" target="_blank">Energy Forum</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油气开采 — 中石油/中石化/卡塔尔能源] → 中游 [LNG 液化/运输 — 钱尼尔/新奥] → 下游 [发电 — 电网/光伏/风电] — 当前受益环节：下游光伏（装机首超煤电），受损环节：中游 LNG（霍尔木兹封锁+卡塔尔不可抗力）</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+       <div class="market-block">
+      <h4>🇨🇳 A 股 — 9/2 收盘：沪指 -0.97% 报 3941.39 / 深成指 -1.88% / 创业板 -2.39% / 成交缩至 1.79 万亿</h4>
+      <p>9/2 三大指数集体收跌，超 <b>3,800</b> 只个股飘绿。沪指失守 3,950 收于 <b>3,941.39</b>（-0.97%），深成指 <b>-1.88%</b> 报 13,611.55，创业板 <b>-2.39%</b> 报 3,312.24，仅北证 50 逆势涨 <b>+2.50%</b>。板块方面：煤炭、传媒、有色金属调整；军工、银行板块逆市走高。前券商首席经济学家李大霄表示调整主要受外围影响——国际原油突破 $96/桶、美日国债收益率攀升。核心蓝筹股展现抗跌性。<b>重点异动：</b>晟楠科技涨超 26%，北方长龙、天秦装备涨超 10%，内蒙一机、建设工业、长城军工涨停。中金公司放量大跌超 7% 领跌券商板块。比亚迪公布 8 月交付数据后跌 3.39%，宁德时代挫 4.64%。</p>
+    </div>
+
+       <div class="market-block">
+      <h4>🇭🇰 港股 — 9/2 收盘：恒指微跌 -0.07% 报 25,311.21 / 恒生科技 -0.74% / 美团逆涨 +2.74%</h4>
+      <p>9/2 恒指低开 307 点后午后回暖，最终微跌 <b>18.52</b> 点（-0.07%）报 <b>25,311.21</b>，连续三日下跌但仍稳守 25,000 点及 50 天线。国企指数 -0.15%，恒生科技 -0.74%（盘中曾跌至 -2%）。<b>盘面亮点：</b>美团逆涨 <b>+2.74%</b>，小米 +1.81%，京东平收；中海外涨 4.54% 为最佳蓝筹。<b>拖累项：</b>中金公司大跌超 7%，招商证券、中信证券跌超 3%；比亚迪 -3.39%，宁德时代 -4.64%，蔚来 -3.34%。PCB 概念、光通信、海运、航空、有色金属板块普跌。港股体现出"外围风雨飘摇，内部蓝筹抗跌"的防御特征。</p>
+    </div>
+
+       <div class="market-block">
+      <h4>🇺🇸 美股 — 9/2 收盘：三大指数反弹！道指 +0.56% 报 53,061.95 / S&P +0.46% 报 7,666.60 / 纳指 +0.45% 报 26,217.83</h4>
+      <p>9/2 美股终结三连跌，ADP 弱就业数据推动美债收益率回落，AI 股反弹。<b>道指</b> +295.07 点（+0.56%）报 <b>53,061.95</b>，重新收复 53,000 关口；<b>S&P 500</b> +0.46% 报 <b>7,666.60</b>；<b>纳指</b> +0.45% 报 <b>26,217.83</b>。<b>领涨：</b>英伟达 +3.12%，Dell 等AI相关股反弹。油价维持 $91 附近，债券收益率暂停攀升给了风险资产喘息空间。Investopedia 指出，9 月 1 日开门黑后 9/2 即反弹，但 9 月仍是历史上最弱月份——FOMC 9/16 + 非农周五 + Trump/Xi 9/24 峰会构成多重不确定性。</p>
+    </div>
+
+       <div class="market-block">
+      <h4>🇰🇷 韩股 — 9/2 KOSPI 暴跌 -3.99% 报 6,562.72 / KOSDAQ 同步大跌 / 三星 -4.02% / SK Hynix -4.73%</h4>
+      <p>9/2 KOSPI 遭遇大幅抛售，收跌 <b>-3.99%</b>（-273.08 点）报 <b>6,562.72</b>。三星电子跌 <b>-4.02%</b> 报 250,500 韩元，SK Hynix 暴跌 <b>-4.73%</b> 报 161 万韩元——尽管三星和 SK Hynix 同时在进行大规模股票回购，但外资和机构抛售 overwhelms 回购买盘。Hyundai Motor 跌 5.62%。驱动因素：① 油价飙升+美债收益率上升的双重打击；② CXMT（中国长鑫存储）开始 HBM3E 风险量产的消息加剧了对韩国 HBM 份额的担忧；③ 韩元走强压制出口股估值。这是 9 月开局连续两天大跌。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>无重大新闻 · 关注中秋旺季数据</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费</span>
+        <h4>今日消费板块无重大单日事件——关注中秋旺季来临 + 白酒渠道去化进展</h4>
+        <p>9/2 消费板块整体跟随大盘调整，无重大单日消费数据或品牌事件。但进入 9 月，中秋（9/15）+ 国庆（10/1）双节旺季即将来临——这是白酒、餐饮、礼赠品类的年度关键窗口。此前 8/31 报道的商务部 7 部门消费升级方案（2030 年社零目标 60 万亿元）仍在发酵中。白酒板块渠道库存有望下半年完成去化，温和复苏可期。今日暂无新增消费数据值得单独报道。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>消费板块今日"无新闻"本身就是信息——9 月的焦点将转向中秋消费数据。对 lainy：关注中秋前一周（9/8-14）的白酒批价变化和餐饮预订数据，这是判断下半年消费复苏的关键先行指标。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（中秋旺季前关注批价）/ 000858 五粮液 / 002714 牧原股份（猪肉价格）— 等中秋数据落地</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/jjxw/2026-09-02/doc-iniqmmyy7760304.shtml" target="_blank">新浪财经</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 粮食/糖/包材] → 中游 [制造 — 食品/白酒/家电] → 下游 [渠道 — 电商/超市/餐饮] — 当前关注环节：下游餐饮/礼赠（中秋旺季 9/15 前后数据）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>美网 + 孙宇晨 vs 景甜</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">美网 2026</span>
+        <h4>美网进入第二轮：头号种子 Zverev 五盘险胜 Sonego，Gauff/Eala/Monfils 晋级</h4>
+        <p>2026 美网 9/2 进入第二轮比赛日。男单头号种子 Alexander Zverev 在 Arthur Ashe 球场经历五盘大战险胜 Lorenzo Sonego。Alex de Minaur 直落三盘击败 Andrea Guerrieri（6-2, 6-2, 6-4），Daniil Medvedev 亦晋级。女单方面，Gauff、Eala、以及 Monfils 均在 Day 3 晋级。美网将持续至 9/13 决赛。</p>
+        <div class="why">🦞 <b>花边点评：</b>Zverev 作为头号种子五盘险胜不是好信号——他在大满贯的稳定性一直被质疑。Alcaraz 伤愈复出后首轮告捷（8/31 报道），今年美网男单格局开放。lainy 周末如果刷到美网，关注 Alcaraz vs Sinner 的潜在对决。</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/athletic/live-blogs/us-open-2026-live-updates-day-3-scores-results/QtNaNj2NkpSp/" target="_blank">The Athletic</a> · <a href="https://www.atptour.com/en/news/us-open-2026-results" target="_blank">ATP Tour</a> · <a href="https://www.cbssports.com/tennis/news/us-open-2026-schedule-results-bracket-live-updates-matches-where-to-watch/live/" target="_blank">CBS Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">热搜</span>
+        <h4>孙宇晨起诉景甜：3,000 万恋爱财产纠纷演变成横跨娱乐圈/币圈/财经圈的"全民大瓜"</h4>
+        <p>币圈人物孙宇晨一纸诉状起诉演员景甜，涉及约 <b>3,000 万</b> 的恋爱财产纠纷，数千字长文倾泻私人恋爱细节，热搜榜单轮番霸榜。9/1 自媒体人卢克文公开发文回应"收取景甜公关费"传闻，明确否认自己及团队收过任何公关费用，称发声纯粹是被孙宇晨公开隐私的"下作"行为激怒。讨论热度持续至 9/2。另外，景甜竟是歌手出道——2006 年 18 岁发行首张 EP《你是谁》，张亚东操刀制作、宁浩执导 MV。</p>
+        <div class="why">🦞 <b>轻松一下：</b>这个瓜跨越了三个圈——娱乐圈（景甜）、币圈（孙宇晨）、财经圈（3,000 万金额），堪称 2026 年最有"跨界感"的八卦。卢克文的回应也很有意思——他不是帮景甜说话，是"被孙宇晨的行为激怒"才站出来的。lainy 如果在微博刷到这个热搜，这就是为什么全网都在讨论。</div>
+        <div class="source">🔗 Source: <a href="https://tags.sina.com.cn/star_jingtian" target="_blank">新浪娱乐</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🎨 科技花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>Sibanye-Stillwater 罢工 · 稀土供应</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">矿业</span>
+        <h4>Sibanye-Stillwater 美国 Montana 矿开始罢工：750 名工人威胁铂金/钯金供应</h4>
+        <p>Mining.com 报道，约 <b>750</b> 名工人将在 Sibanye-Stillwater 的美国 Montana 州 Stillwater East 矿和 Columbus 加工厂开始罢工。Stillwater 是美国仅有的两个铂金/钯金矿之一（另一个是俄罗斯的 Norilsk）。钯金是汽车尾气催化剂的关键材料，也是半导体封装电镀的重要材料。罢工可能影响全球钯金供应。</p>
+        <div class="why">🦞 <b>花边视角：</b>这个花边和宏观其实有关联——钯金供应中断可能推高汽车催化剂成本，间接影响汽车股利润。对 lainy：这就是为什么"花边"有时候不只是花边——一个 Montana 矿的 750 人罢工，可能影响全球汽车供应链。</div>
+        <div class="ticker">📌 关联标的：SBSW（Sibanye-Stillwater）/ PALL（钯金 ETF）/ 600916 中国黄金 — 钯金供应扰动利好价格</div>
+        <div class="source">🔗 Source: <a href="https://www.mining.com/strike-to-begin-at-sibanye-stillwaters-us-operations/" target="_blank">Mining.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
