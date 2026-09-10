@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-10</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --commod: #B8A07E; --energy: #C4A77D; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding: 4px 0 4px 12px; border-left: 4px solid var(--accent); border-bottom: none; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.commod { background: #B8A07E18; color: var(--commod); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .sub-group { margin-top: 10px; padding-left: 12px; border-left: 2px solid var(--border); }
+  .sub-group h5 { font-size: 13px; color: var(--text-dim); margin: 0 0 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 10 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>苹果"亮新篇"发布会：</b>iPhone Duo 折叠屏 + iPhone 18 Pro + AirPods 5 + Watch Ultra 4 齐发，新 CEO John Ternus 首秀——消费电子超级日。</li>
+      <li><b>美伊霍尔木兹战升级：</b>伊朗对美军基地发射导弹、攻击 10 艘商船；美军击毁 5 艘伊朗油轮——Brent 破 <strong>$100</strong>，油价地缘溢价飙升。</li>
+      <li><b>Qualcomm-AWS $600 亿 AI 芯片大单：</b>Qualcomm 暴涨 9%，联手亚马逊定制 AI 数据中心芯片——AI 算力军备竞赛进入"非英伟达"赛道。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>Qualcomm-AWS 大单 · Intel 涨价 · TSMC 扩产</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Qualcomm × AWS</span>
+        <h4>Qualcomm 联手亚马逊：$600 亿 AI 数据中心芯片大单，定制推理芯片 + 光网络全包</h4>
+        <p>9/8 Qualcomm 与 Amazon Web Services（AWS）宣布多代合作：① 为 AWS 数据中心定制 AI 推理处理器；② 共建下一代光网络连接基础设施；③ Qualcomm 还将使用 AWS AI 基础设施（含 Amazon Bedrock）加速芯片设计。合作潜在交易规模达 <strong>$600</strong> 亿，Qualcomm 同时向 AWS 发行 <strong>$40</strong> 亿股票认股权证。Qualcomm 当日暴涨 <strong>+9%</strong>。</p>
+        <div class="why">这是 AI 芯片赛道 2026 年最大非英伟达订单。含义：① AWS 不想只依赖英伟达/AMD，正在引入 Qualcomm 作为第三极；② 光网络 = AI 数据中心带宽瓶颈的解法，Qualcomm 的光学技术成为差异化筹码；③ $600 亿规模相当于 Qualcomm 年收入的 ~1.5 倍，标志着其从"手机芯片公司"向"AI 基础设施公司"的质变。</div>
+        <div class="ticker">📌 关联标的：QCOM（Qualcomm，直接受益）/ AMZN（AWS 母公司）/ NVDA（英伟达，份额被分）/ 1288.HK 赣通城（光模块概念）— Qualcomm 受益，NVDA 短期情绪承压</div>
+        <div class="source">🔗 Source: <a href="https://www.thestreet.com/investing/qualcomm-amazon-aws-custom-ai-chips-deal" target="_blank">TheStreet</a> · <a href="https://www.nwaonline.com/news/2026/sep/09/qualcomm-amazon-reach-ai-chip-deal/" target="_blank">Reuters (via NWA Democrat-Gazette)</a> · <a href="https://www.fool.com/investing/2026/09/09/forget-smartphones-qualcomm-just-landed-a-massive-ai-deal-with-amazon/" target="_blank">Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Intel 涨价</span>
+        <h4>Intel 暴涨 9%：DigiTimes 报 CPU 年内第三次涨价 10%，Northland 升级至"跑赢"目标 $120</h4>
+        <p>9/8 Intel 股价单日大涨 <strong>+9%</strong>，两大利好叠加：① DigiTimes 报道 Intel 计划今年晚些时候将 CPU 价格上调最高 <strong>10%</strong>——这是 2026 年第三次提价（Q1 和 7 月已各涨一次），在行业性芯片短缺背景下体现了定价能力；② Northland Securities 分析师 Gus Richard 将 Intel 评级上调至"跑赢大盘"，目标价 <strong>$120</strong>，理由是转型取得"实质性进展"且晶圆代工业务前景可期。Intel 52 周价格区间已扩展至 $24-$142。</p>
+        <div class="why">Intel 在 AI 时代掉队的叙事正在被修正——三次涨价说明客户别无选择（AMD 产能也紧张），代工业务有翻盘迹象。但"涨价能力"不等于"增长能力"，客户被涨价是因为没货，不等于是因为产品好。关注：Intel 代工客户是否从"只有自己"扩展到外部客户。</div>
+        <div class="ticker">📌 关联标的：INTC（Intel，直接受益）/ AMD（AMD，竞争对手也可能跟涨）/ SMH（半导体 ETF）— Intel 短期受益，但长期仍需看代工落地</div>
+        <div class="source">🔗 Source: <a href="https://blockonomi.com/intel-intc-stock-surges-9-following-nvidias-30b-investment-and-price-increase-reports" target="_blank">Blockonomi</a> · <a href="https://coincentral.com/intel-intc-stock-jumps-9-as-nvidia-reveals-30-billion-stake-and-cpu-price-hike-looms" target="_blank">CoinCentral</a> · <a href="https://startupfortune.com/intel-stock-jumps-9-as-chip-shortage-lets-it-raise-prices-again/" target="_blank">Startup Fortune</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 扩产</span>
+        <h4>TSMC 以 5 倍历史速度建造 25 座设施，2026 资本支出升至 $600-640 亿</h4>
+        <p>TSMC 目前在全球同时建设 <strong>25</strong> 座设施，速度是历史均值的 <strong>5 倍</strong>，2026 年资本支出预算已上调至 <strong>$600-640</strong> 亿区间。与此同时，AMD CFO 上调 AI 芯片市场规模预测至 <strong>$3 万亿</strong>（长期 TAM）。全球数据中心市场进入"电力受限超级周期"（JLL 报告），AI 需求仍跑赢供给。</p>
+        <div class="why">TSMC 25 座设施同时在建 = 史无前例的扩产速度，但 AI 需求仍在跑赢——这说明"AI 基建供不应求"不是短期现象，而是至少 2-3 年的结构性状态。$3 万亿 TAM 虽然是 AMD 自家预测，但方向与英伟达的指引一致。对 lainy：AI 芯片产业链的超额利润期还没结束。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ AMD / NVDA / 512760 半导体ETF — 全链受益于 AI capex 超级周期</div>
+        <div class="source">🔗 Source: <a href="https://rcrtech.com/semiconductor-news/tsmcs-ai-historic-build-out/" target="_blank">RCR Tech</a> · <a href="https://247wallst.com/investing/2026/09/09/amd-rises-3-as-cfo-lifts-ai-chip-market-forecast-toward-3-trillion-intel-ticks-up/" target="_blank">24/7 Wall St.</a> · <a href="https://www.jll.com/en-us/insights/market-outlook/data-center-outlook" target="_blank">JLL</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/光掩模 — SUMCO/信越/ASML] → 中游 [代工 — TSMC/三星/Intel] → 下游 [芯片设计 — NVDA/AMD/QCOM/AVGO] → 终端 [云厂 — AWS/MSFT/GOOG] — 当前受益环节：下游多元化（AWS 引入 Qualcomm 分散依赖），中游代工（TSMC 扩产 5 倍仍不够）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊霍尔木兹升级 · 特朗普对加拿大加码</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊冲突</span>
+        <h4>伊朗大规模导弹袭击美军目标：攻击约旦美军基地 + 霍尔木兹 10 艘商船；美军击毁 5 艘伊朗油轮</h4>
+        <p>9/9 伊朗伊斯兰革命卫队（IRGC）发动大规模报复：① 向约旦 Al Azraq 美军基地发射弹道导弹，多名美军士兵受伤；② 宣布在霍尔木兹海峡设立新"限航区"，并攻击 <strong>10 艘</strong>商船。美方随即反制，在阿曼湾和 Kharg 岛附近击毁 <strong>5 艘</strong>伊朗油轮。这是 9/5 霍尔木兹对峙以来最大规模升级——伊朗设定"结束战争条件"，局势从"擦枪走火"进入"有限交战"阶段。</p>
+        <div class="why">这不是"小冲突"了——伊朗直接攻击美军基地 + 10 艘商船 = 战争行为。市场的即时反应：Brent 破 $100（7 月以来首次）、避险资产飙升。对 lainy 的传导链：① 油价 $100+ → 全球通胀压力 → 美联储加息预期升温 → 科技股估值承压；② 霍尔木兹"限航区" = 全球 ~20% 原油运输受阻 → 能源股短期受益但消费/运输股受损。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（破 $100）/ 600028 中国石化 / 601857 中国石油 / XLE（能源 ETF）/ GLD 黄金（避险买入）— 能源+黄金受益，运输/航空受损</div>
+        <div class="source">🔗 Source: <a href="https://www.aljazeera.com/news/2026/9/9/us-destroys-five-iranian-tankers-iran-retaliates-with-attacks-on-jordan-base" target="_blank">Al Jazeera</a> · <a href="https://www.dropsitenews.com/p/iran-us-hormuz-trump-canada-trade-sudan-drone-strike" target="_blank">Drop Site News</a> · <a href="https://www.outlookindia.com/international/iran-strikes-us-base-in-jordan-targets-10-ships-near-hormuz-after-five-tankers-destroyed" target="_blank">Outlook India</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美加贸易战</span>
+        <h4>特朗普对加拿大加码：扩大 50% 关税至钢铝/家具/纸张，另禁 dairy/酒类/摩托车进口</h4>
+        <p>9/8-9 特朗普在加拿大实施 <strong>$200</strong> 亿报复性关税后进一步加码：① 将现有 <strong>50%</strong> 关税扩展至数十种加拿大产品——含部分钢铝、家具、纸张，9 月生效；② 依据 1930 年法案直接禁止部分加拿大 dairy、酒类、摩托车进口。加拿大此前已对 $200 亿美国商品加征报复性关税。白宫发布 fact sheet 称"回应加拿大最新报复"。</p>
+        <div class="why">美加贸易战从"关税对峙"升级到"进口禁令"——这是 NAFTA/CUSMA 框架下的罕见操作。对 lainy 的传导：① 加拿大酒类/dairy 被禁 → 美国本土替代品受益（但不利于消费者物价）；② 钢铝 50% 关税 → 美国制造业成本上升 → 叠加油价 $100+ → 通胀"双重打击"；③ 这让美联储 9 月加息概率进一步上升。</div>
+        <div class="ticker">📌 关联标的：X（US Steel）/ AA（Alcoa）/ STZ（Constellation Brands，酒类，受加拿大禁令影响）— 美国钢铝短期受益，消费品承压</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/09/07/economy/trump-carney-canada-us-trade-war" target="_blank">CNN</a> · <a href="https://www.axios.com/2026/09/08/trump-tariffs-canada-import-ban-alcohol-dairy-motorcycles" target="_blank">Axios</a> · <a href="https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/" target="_blank">White House</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 伊朗 NIOC/沙特阿美] → 中游 [霍尔木兹航运 — tanker] → 下游 [炼化/消费 — 全球] — 当前受损环节：中游航运（霍尔木兹"限航区"+ 5 艘油轮被击毁 = tanker 可用率骤降），全球原油供给端冲击</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>UBS 转鹰 · 美债收益率创 3 年新高 · 加息概率 58%</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储加息</span>
+        <h4>UBS 撤回债券看多呼叫，预警今年两次加息；9 月 FOMC 加息概率升至 58.7%</h4>
+        <p>UBS 撤回了此前"锁定债券收益率"的推荐，转为预测 2026 年美联储将加息 <strong>两次</strong>。CME FedWatch 数据显示，9/15 FOMC 会议加息 25bps 的概率已从 <strong>35.4%</strong> 跃升至 <strong>58.7%</strong>。10 年期美债收益率攀升至 <strong>3 年新高</strong>。驱动因素：① 8 月非农 +16.2 万大超预期；② 油价破 $100 推升通胀预期；③ Fed 官员 Warsh 在 Jackson Hole 的鹰派发言。</p>
+        <div class="why">UBS 转鹰是重要的华尔街共识信号——如果连去年最看多的银行都转鹰，说明加息预期已经形成共识。对 lainy 的传导：① 美债收益率上升 → 全球科技股估值承压（尤其是高 PSR 的 AI 概念股）；② 港股对美债极度敏感（资金外流压力）；③ A 股相对独立但情绪面会受影响；④ 黄金短期受加息预期压制，但地缘避险对冲。</div>
+        <div class="ticker">📌 关联标的：TLT（长期美债 ETF，加息预期下承压）/ QQQ（纳指，估值压力）/ 513130 港股通科技ETF — 加息预期利空科技股，利好能源/银行</div>
+        <div class="source">🔗 Source: <a href="https://www.thestreet.com/economy/ubs-reverses-bond-call-fed-rate-hikes" target="_blank">TheStreet</a> · <a href="https://growbeansprout.com/tools/fedwatch" target="_blank">CME FedWatch</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 传导链：油价 $100+ → 通胀预期上升 → 美债收益率 3 年新高 → 加息概率 58.7% → 科技股估值承压 + 港股资金外流 — 当前关键节点：9/15 FOMC 会议将定方向</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 $4400 · 铜价新高 · Brent 破 $100</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag commod">贵金属</span>
+        <h4>黄金 $4,400.21（+1.02%）：地缘避险 + 央行购金双支撑，但加息预期压制上行</h4>
+        <p>9/9 黄金升至 <strong>$4,400.21</strong>/盎司，日涨 <strong>+1.02%</strong>。月度涨幅 +0.20%，年同比 +20.87%。美伊冲突升级推升避险买盘，但 UBS 加息预警 + 美债收益率走高形成对冲压力。中国央行已连续 22 个月增持黄金储备（8 月加 65 万盎司），结构性买盘为金价托底。</p>
+        <div class="why">金价在 $4,400 附近拉锯——地缘避险 vs 加息预期的经典对撞。短期看 9/15 FOMC：加息则回调至 $4,300，不加息则冲 $4,500。但中长期来看，央行购金 + 地缘碎片化 = 结构性支撑。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF / GLD / 600547 山东黄金 — 央行持续买入，中长期看涨；短期取决于 FOMC</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a></div>
+      </div>
+      <div class="card">
+        <span class="tag commod">工业金属</span>
+        <h4>LME 铜价 $6.69/lb（+1.39%）：AI 数据中心 + 地缘供给紧缩双驱动；年同比 +48.68%</h4>
+        <p>9/8 铜价升至 <strong>$6.69</strong>/lb，日涨 <strong>+1.39%</strong>，月度 +1.43%，年同比 <strong>+48.68%</strong>。驱动因素：AI 数据中心铜用量激增（JLL 报告确认超级周期）+ 智利/秘鲁供给受限 + 美国铜关税猜测。铝、镍等工业金属同步走强。</p>
+        <div class="why">铜价年涨近 50% 是"AI 基建 + 地缘紧缩"的双重映射。AI 数据中心每座用铜量是传统数据中心的 3-5 倍（电源+散热+连接器全用铜）。对 lainy：铜价高 = 紫金/洛钼/江西铜业利润弹性大，但也 = 家电/新能源车制造成本承压。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 601899 紫金矿业 / 2899.HK 紫金矿业 / COPX（铜矿 ETF）— 上游矿企受益，下游家电/新能源承压</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/copper" target="_blank">Trading Economics</a> · <a href="https://www.naturalnews.com/2026-09-09-copper-hits-record-high-on-tariff-speculation.html" target="_blank">Natural News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 — 紫金/洛钼/Freeport] → 中游 [冶炼 — 江西铜业/江西铜业] → 下游 [应用 — AI 数据中心/电网/新能源车] — 当前受益环节：上游矿企（铜价年涨 49%），受损环节：下游家电/车企制造成本</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>Brent 破 $100 · 天然气波动 · OPEC 本周报告</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">原油</span>
+        <h4>Brent 破 $100 首次自 7 月以来：美伊油轮战 + OPEC 报告本周发布 = 三重地缘溢价</h4>
+        <p>9/9 Brent 原油突破 <strong>$100</strong>/桶，7 月以来首次。WTI 涨至 <strong>$97.19</strong>/桶（日涨 <strong>+4.47%</strong>），月涨 <strong>+18.34%</strong>，年涨 <strong>+52.65%</strong>。三重驱动：① 美伊霍尔木兹油轮战（5 艘伊朗油轮被击毁 + 伊朗攻击 10 艘商船）；② OPEC 月报本周发布，市场预期维持产量纪律；③ 中国补充战略储备推升非洲/加拿大/拉美原油采购。</p>
+        <div class="why">Brent $100 是全球资本市场的"心理关口"——破百意味着通胀预期重新升温。传导链：油价 $100 → CPI 上行 → 美联储加息概率上升 → 科技股承压。但如果美伊达成停火（特朗普暗示"选举后立即结束战争"），油价可能快速回落 $20-30。</div>
+        <div class="ticker">📌 关联标的：Brent / WTI / 600028 中国石化 / 601857 中国石油 / 0857.HK 中石油 / XOM 埃克森美孚 / XLE — 油价 $100 上游全面受益；JETS 航空 ETF 受损</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/09/oil-prices-today-wti-brent-us-iran-hormuz-attacks.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://fortune.com/article/price-of-oil-09-08-2026/" target="_blank">Fortune</a></div>
+      </div>
+      <div class="card">
+        <span class="tag energy">天然气</span>
+        <h4>天然气期货冲 $3.00/MMBtu 后回落：LNG 需求强但制冷需求消退</h4>
+        <p>9/8 NYMEX 天然气期货一度冲破 <strong>$3.00</strong>/MMBtu 后大幅回落，因制冷需求消退盖过 LNG 进料需求。霍尔木兹局势影响 LNG 贸易路线不确定性，卡塔尔 LNG 船队此前暂停后出现恢复装船迹象。</p>
+        <div class="why">天然气在 $3 关口反复 = 供需拉锯。LNG 进料需求强劲（出口终端满负荷）但夏季制冷需求尾声。霍尔木兹如果持续受限，卡塔尔 LNG 出口受阻 → 全球天然气供给收紧 → 价格中枢上移。</div>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 / 600256 广汇能源 / 601139 深圳燃气 / LNG 钱尼尔能源 — 霍尔木兹受限则 LNG 价格中枢上移</div>
+        <div class="source">🔗 Source: <a href="https://www.naturalgasintel.com/" target="_blank">Natural Gas Intelligence</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [开采 — 中石油/中海油/ExxonMobil] → 中游 [航运 — tanker/LNG 船] → 下游 [炼化 — 中石化/Shell] — 当前受益环节：上游开采（油价 $100+），受损环节：下游炼化（原料成本飙升）+ 航空运输（燃油成本）</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股 · 9/9 收盘</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 9/9 收盘：沪指 +0.28% 报 3,951.51 / 深成指 +0.15% / 创业板 -0.14% / 成交 1.86 万亿</h4>
+      <p>9/9 A 股三大指数涨跌不一，沪指走势较强。板块方面：煤炭板块震荡走强（云煤能源、郑州煤电、大有能源涨停）；航运概念异动拉升（海通发展 5 天 3 板，南京港、招商轮船涨停）；黄金概念午后活跃（莱绅通灵涨停）；军工板块活跃（湖南天雁涨停）——美伊紧张局势 + 珠海航展临近驱动。下跌方面：传媒/影视板块走弱（出版传媒跌停，中信出版、读客文化跟跌），房地产调整。全市场 <strong>1,794</strong> 只上涨、<strong>3,642</strong> 只下跌。成交额 <strong>1.86</strong> 万亿，缩量约 1,047 亿。<b>今日关注：</b>苹果发布会带动消费电子概念 + 美伊局势持续影响军工/能源板块。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 9/9 收盘：恒指 -0.17% 报 25,274（3 连跌）/ 恒科指 -0.76% 报 4,420 / 成交偏淡</h4>
+      <p>港股三大指数集体收跌，均录得 3 连跌。恒生科技表现最弱（-0.76%），盘中刷新近期调整新低。海底捞大跌 <strong>-9%</strong> 拖累消费板块。铜铝、光通信逆势活跃。AI 与苹果概念股逆市走强。<b>今日关注：</b>苹果发布会可能提振港股消费电子链（舜宇光学、高伟电子等）；但油价 $100+ + 美债收益率走高 = 港股双重压力。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 9/9 收盘：道指 -0.77% 报 52,380.66 / S&amp;P -0.48% 报 7,636.36 / 纳指 -0.64% 报 26,253.34</h4>
+      <p>9/9 美股三大指数齐跌：道指跌 <strong>405</strong> 点 (<strong>-0.77%</strong>)，S&amp;P 跌 <strong>-0.48%</strong>，纳指跌 <strong>-0.64%</strong>。10 年期美债收益率升至 3 年新高。油价突破 $100 打击市场情绪。Alphabe t 领跌科技股。Nasdaq 100 接近 <strong>-1%</strong> 跌幅。<b>盘后：</b>苹果发布会（9/10 凌晨 1 点 PT）可能带动消费电子板块反弹；但 UBS 加息预警 + 油价高企 = 短期逆风。<b>关键事件：</b>9/15 FOMC 会议前最后一份 CPI（9/11）将是方向性变量。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 9/9 收盘：KOSPI +1.67% 报 7,070.94 / KOSDAQ +2.28% 报 830.37 / 三星 +1.48% / SK Hynix +3.96%</h4>
+      <p>9/9 韩股大涨——KOSPI 收复 7,000 关口，电池和炼油板块领涨。三星电子 +<strong>1.48%</strong>，SK Hynix +<strong>3.96%</strong>（HBM4 需求预期）。机构投资者和三星回购吸收了散户获利了结。KOSDAQ 涨 <strong>+2.28%</strong> 报 830.37。<b>驱动：</b>Qualcomm-AWS 大单提振芯片股情绪 + Intel 涨价说明行业短缺 = 韩国存储/逻辑芯片定价权增强。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>苹果折叠屏 · 入境退税 · 白酒变局</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">苹果发布会</span>
+        <h4>苹果"亮新篇"发布会 9/10 凌晨：iPhone Duo 折叠屏 + iPhone 18 Pro + AirPods 5 + Watch Ultra 4 齐发</h4>
+        <p>北京时间 9/10 凌晨 1 点，苹果举行"Surprise and Shine"秋季特别活动。新任 CEO John Ternus 接任后首次登台。重磅产品：① <strong>iPhone Duo</strong>——苹果史上首款折叠屏手机；② <strong>iPhone 18 Pro</strong>——新一代 Pro 系列旗舰；③ <strong>AirPods 5</strong>；④ <strong>Watch Ultra 4</strong>。多家媒体确认折叠屏为本次最大亮点。</p>
+        <div class="why">折叠屏 iPhone 是 2017 年 iPhone X 以来最大硬件形态创新。对 lainy 的传导：① 苹果供应链（立讯精密、舜宇光学、蓝思科技）直接受益于新机型放量；② 折叠屏 → 铰链/UTG 玻璃需求暴增 → 凯盛科技、长盈精密等；③ 消费电子板块在港股/A 股短期有情绪催化。</div>
+        <div class="ticker">📌 关联标的：AAPL（苹果）/ 002475 立讯精密 / 02382.HK 舜宇光学 / 300433 蓝思科技 / 002635 安洁科技 — 苹果供应链全链受益</div>
+        <div class="source">🔗 Source: <a href="https://www.techradar.com/news/live/apple-event-september-2026-live-blog" target="_blank">TechRadar</a> · <a href="https://www.usatoday.com/story/tech/2026/09/09/apple-event-sept-9-live-updates--live/91599414007/" target="_blank">USA Today</a> · <a href="https://www.foxbusiness.com/technology/apple-unveils-first-foldable-iphone-iphone-18-pro-lineup-new-watches-annual-launch-event" target="_blank">Fox Business</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">入境消费</span>
+        <h4>离境退税即买即退加速融入消费场景：兴业太古汇 H2 退税单数增 700%，国际品牌占比近 90%</h4>
+        <p>中国网报道：入境消费热度持续走高，离境退税"即买即退"服务加速融入高端商圈。以上海静安区兴业太古汇为例，2025 年下半年场内即买即退交易单数较 H1 增长约 <strong>700%</strong>，消费金额同比增幅近 <strong>400%</strong>。目前场内退税商店近 50 家，近 <strong>90%</strong> 为国际品牌（腕表、皮具、香氛等）。</p>
+        <div class="why">"即买即退"是 2024 年起推行的退税便利化政策，2026 年进入加速渗透期。对 lainy 的消费-产业映射：① 高端零售/免税（中国中免、王府井）受益于入境消费；② 奢侈品品牌（LV/爱马仕/历峰）中国区销售有望持续回暖；③ 上海作为入境消费第一站，高端商圈价值重估。</div>
+        <div class="ticker">📌 关联标的：601888 中国中免（免税）/ 600859 王府井 / 002264 新华都 — 入境消费+退税便利化受益</div>
+        <div class="source">🔗 Source: <a href="http://travel.china.com.cn/txt/2026-09/09/content_118686789.shtml" target="_blank">中国网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌/制造 — 苹果/LV] → 中游 [渠道 — 免税/高端商圈] → 下游 [消费 — 入境游客/本地高端] — 当前受益环节：中游高端商圈（退税 700% 增长）+ 上游消费电子（苹果折叠屏放量）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>苹果日 · 热搜 · 轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">苹果日</span>
+        <h4>科技圈的"超级碗"：苹果新 CEO John Ternus 首秀登台，折叠 iPhone 终于来了</h4>
+        <p>9/10 凌晨的苹果发布会是 2026 年消费电子最大事件——不是因为有多少新产品，而是因为"折叠屏 iPhone"这个等了十年的概念终于落地了。新 CEO John Ternus 在上周致员工信中表达了对新品的期待，预告"这场活动将汇聚多个重磅新品"。社交媒体上"iPhone Duo"和"iPhone Ultra"话题已经刷屏。</p>
+        <div class="why">🦞 轻松一下：折叠屏 iPhone 从 2019 年就有传言，苹果硬是拖了 7 年才做出来。lainy 今天如果刷到朋友圈被苹果刷屏，这就是为什么——整个科技圈都在"过节"。折叠屏定价可能在 $2,000-$2,300 区间，首批可能一机难求。</div>
+        <div class="source">🔗 Source: <a href="https://www.zdnet.com/business/apple-september-event-live-blog-09-09-2026/" target="_blank">ZDNET</a> · <a href="https://news.ssbcrack.com/%E8%8B%B9%E6%9E%9C%E5%8D%B3%E5%B0%86%E4%B8%BE%E8%A1%8C%E7%A7%8B%E5%AD%A3%E7%89%B9%E5%88%AB%E6%B4%BB%E5%8A%A8%EF%BC%8C%E5%8F%91%E5%B8%83%E6%96%B0%E6%AC%BE%E6%8A%98%E5%8F%A0iphone%E4%B8%8Epro%E7%B3%BB/" target="_blank">SSBCrack</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 科技花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">AI 数据中心</span>
+        <h4>JLL：全球数据中心进入"电力受限超级周期"——AI 需求重塑选址与能源创新</h4>
+        <p>JLL 发布 2026 全球数据中心市场展望报告，指出全球数据中心市场正进入"电力受限的超级周期"——AI 需求驱动容量增长，但电力供应成为最大瓶颈。影响：① 选址从"网络枢纽"转向"电力充足区"；② 能源创新加速（核能/液冷/光伏一体化）；③ 资本支出持续攀升。</p>
+        <div class="why">🦞 这个报告验证了一个 lainy 需要知道的趋势：AI 不只是"芯片的故事"，更是"电力的故事"。全球数据中心从"找网"变成"找电"——这改变了土地、能源、基础设施的估值逻辑。</div>
+        <div class="ticker">📌 关联标的：600023 浙能电力 / 600886 国投电力 / Vistra（美国电力）/ 300274 阳光电源 — AI 数据中心 = 电力需求增量</div>
+        <div class="source">🔗 Source: <a href="https://www.jll.com/en-us/insights/market-outlook/data-center-outlook" target="_blank">JLL</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
