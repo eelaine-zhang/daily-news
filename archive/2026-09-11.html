@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-11</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D5A0A2; --geo: #A9BACB; --macro: #B7C0A3; --comm: #B8A07E; --energy: #C4A77D; --stk: #D4A64A; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D5A0A218; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.stk { background: #D4A64A18; color: var(--stk); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--stk); font-weight: 600; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #f5f2eb; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin: 16px 0; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 11 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>TSMC 8 月营收创历史新高：</b>NT$5148 亿（+53.3% YoY），AI 芯片需求连续第四个月推升月度纪录；同日 OpenAI 确认与三星合作下一代芯片，三星 2nm 良率升至 ~80%。</li>
+      <li><b>油价破 $100 拖累全球股市：</b>Brent $105.71、WTI $96.68；美股连四跌（S&amp;P -0.58% 至 7,591.70），A 股沪指 -0.43% 至 3,934.40，港股恒指 -1.27% 至 24,954.47；今日 8 月 CPI 将定方向。</li>
+      <li><b>美国对伊朗"史上最强制裁"：</b>财长 Bessent 称将"collapse this regime"；伊拉克向 OPEC 要求 600 万桶/日产量基线；Avengers: Doomsday 预售破 $5000 万，影史最早。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">TSMC 8 月营收</span>
+        <h4>TSMC 8 月营收 NT$5148 亿（+53.3% YoY）创历史新高，AI 需求连续第四个月推升月度纪录</h4>
+        <p>台积电 9/10 公布 8 月营收 <strong>NT$5148.1 亿</strong>（约 <strong>US$163.5 亿</strong>），环比 +10.1%，同比 <strong>+53.3%</strong>，连续第四个月环比增长，再创单月历史新高。1-8 月累计营收 NT$3.387 万亿（约 US$1170 亿），同比 <strong>+39.3%</strong>。CEO C.C. Wei 在最近财报电话会上表示"AI 相关需求持续极为强劲"。TSMC 同时以 5 倍历史速度建造 25 座设施，2026 资本支出升至 <strong>$600-640 亿</strong>，但产能仍然供不应求。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>TSMC 月度营收是 AI 产业链的"实时温度计"。+53.3% YoY 意味着 AI capex 不仅没放缓，还在加速。对 lainy 的框架：① TSMC 产能供不应求 = 代工涨价权强 = 毛利率有支撑；② CoWoS 先进封装扩到 5.5 reticle（2026 年量产），2027 年路线图到 9.5 reticle——封装而非光刻正在成为 AI 芯片的真正瓶颈；③ TSMC 股价（TSM/2330.TW）虽短期受油价拖累，但基本面无懈可击。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电 ADR）/ 2330.TW（台积电）/ 005930.KS（三星，竞争关系）— TSMC 受益，AI capex 链全线利好</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/10/tsmc-august-revenue-chip-ai.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-09-10/tsmc-revenue-rises-53-as-ai-chip-demand-outstrips-supply" target="_blank">Bloomberg</a> · <a href="https://qz.com/tsmc-record-august-revenue-ai-chip-demand-091026" target="_blank">QZ</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OpenAI × Samsung</span>
+        <h4>OpenAI 确认与三星合作下一代 AI 芯片：Jalapeeno 之后，三星 2nm 代工正式加入 OpenAI 硅片供应链</h4>
+        <p>9/9-9/10 OpenAI Korea GM 在首尔公开确认与三星电子在下一代 AI 加速器上的联合研发与生产合作。OpenAI 此前已通过 Broadcom 设计了第一代定制推理芯片 Jalapeeno（由 TSMC 代工），现在将三星 2nm SF2P+ 工艺纳入供应链。三星 Taylor, Texas 2nm 良率已升至约 <strong>80%</strong>。三星同时领投了 Mistral AI 的 €30 亿 Series D，并与 OpenAI、Anthropic 均有芯片合作讨论。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 OpenAI "去 TSMC 单一依赖"的关键一步。对 lainy 的金融视角：① OpenAI 成为芯片大买家 = 三星代工客户组合从 Broadcom 扩展到 OpenAI，2nm 产能利用率有保障；② 三星 2nm 80% 良率是关键拐点——之前 60% 时代工客户不敢用，80% 可以认真竞标了；③ Mistral 投资 + OpenAI 芯片合作 + Anthropic 接触 = 三星正在构建"AI 生态朋友圈"对冲 TSMC。</div>
+        <div class="ticker">📌 关联标的：005930.KS（三星电子）/ AVGO（Broadcom，OpenAI 第一代芯片伙伴）/ TSM（TSMC，短期被分流但长期仍主导）— 三星受益，TSMC 独占风险降低</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/327162/20260910/openai-adds-samsung-foundry-its-silicon-program-closing-tsmc-only-risk.htm" target="_blank">TechTimes</a> · <a href="https://www.techspot.com/news/113802-samsung-working-openai-next-generation-chips-while-deploying.html" target="_blank">TechSpot</a> · <a href="https://forkast.news/openais-samsung-pivot-the-reality-of-manufacturing-diversification/" target="_blank">Forkast</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM 短缺</span>
+        <h4>中国 AI 芯片厂商因 HBM 短缺涨价：全球高带宽内存紧缺传导至下游</h4>
+        <p>Modern Diplomacy 报道，全球 HBM（高带宽内存）短缺正推高中国 AI 芯片厂商的成本和售价。HBM 是 AI 加速器的核心组件，目前由三星和 SK Hynix 主导（美光第三），产能被英伟达、Microsoft、Broadcom 等大客户锁定。中国芯片设计公司无法获得充足 HBM 供应，被迫涨价转嫁成本。与此同时，Nvidia 向台湾测试接口供应商加价锁定探针卡和测试插座产能，进一步加剧供应链紧张。</p>
+        <div class="why">🦞 <b>市场含义：</b>HBM 短缺已从"内存厂的问题"变成"全产业链瓶颈"。对 lainy：① HBM 双寡头（三星 + SK Hynix）定价权持续走强；② 中国 AI 芯片涨价 = 国产替代的"价格锚"在上移——寒武纪、海光等国产 AI 芯片即使性能弱也有价格优势；③ 测试产能瓶颈 = Advantest 等测试设备商受益。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星）/ 688256 寒武纪（国产 AI 芯片涨价受益）/ Advantest（6857.T）— HBM 厂受益，中国 AI 芯片涨价转嫁成本</div>
+        <div class="source">🔗 Source: <a href="https://moderndiplomacy.eu/2026/09/10/china-ai-chips-hbm-shortage-prices/" target="_blank">Modern Diplomacy</a> · <a href="https://www.digitimes.com/news/a20260910PD212/ic-testing-interface-ai-chip-high-end-capacity-demand.html" target="_blank">DigiTimes</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC +53% YoY / 三星 2nm 80% 良率] → 下游 [AI 芯片设计 — NVDA/AVGO/OpenAI] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游代工（产能全满）+ HBM 内存（双寡头定价权强化）+ 测试设备（瓶颈加剧）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊战争 · 制裁 · 油价地缘</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">美伊战争</span>
+        <h4>美国对伊朗启动"Operation Economic Outcast"——财长 Bessent 称"史上最强制裁"，目标"collapse this regime"</h4>
+        <p>Reuters 报道，美国财长 Scott Bessent 9/10 表示将对伊朗实施"史上最强制裁"，聚焦经济手段以减少军事行动需要。制裁计划名为 <strong>"Operation Economic Outcast"</strong>，目标为切断伊朗石油出口的完整链条：运输公司、银行、中间商。Time 杂志报道，美国财政部新航空制裁已扩展至伊朗航空业，旨在"切断伊朗政权最后的每一条经济生命线"。伊朗里亚尔已进入自由落体，通胀爆发，民众被迫贷款购买日用品。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"史上最强制裁"不是修辞——这是美国在"军事+经济"双轨对伊施压中的经济轨道。对 lainy 的市场映射：① 制裁伊朗石油出口 = 全球供应减少 ~150-200 万桶/日 = 油价溢价 $10-15；② 里亚尔崩溃 = 伊朗社会可能崩盘 = 如果政权更迭，地缘风险溢价可能快速回落（但路径不确定）；③ 霍尔木兹海峡通航安全仍是核心风险——如果伊朗封锁海峡，$120+ 油价不是不可能。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（$105.71，制裁加剧供应风险）/ 601857 中国石油 / XOM 埃克森美孚 — 高油价受益；但 JETS 航空 ETF / XLY 可选消费受损</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/world/" target="_blank">Reuters</a> · <a href="https://time.com/article/2026/09/09/us-treasury-iran-sanctions-aviation-global-impact-economy/" target="_blank">Time</a> · <a href="https://www.dropsitenews.com/p/iran-economy-debt-us-war" target="_blank">Drop Site News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">伊拉克 · OPEC</span>
+        <h4>伊拉克向 OPEC 要求 600 万桶/日产量基线——当前配额仅 4.43 百万桶/日，实际产量 3.37 百万桶/日</h4>
+        <p>Bloomberg 报道，伊拉克在 OPEC 产能审计中正式要求将产量基线设定为 <strong>600 万桶/日</strong>——较当前配额 443 万桶/日高出 <strong>36%</strong>，几乎为 8 月实际产量 337 万桶/日的两倍。伊拉克声称需要 <strong>$4000 亿</strong> 重建资金。同时沙特 10 月产量配额为 1049 万桶/日，俄罗斯 995 万桶/日。沙特产量因胡塞袭击能源设施而暴跌 190 万桶/日至 1990 年以来最低月均。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>伊拉克要 600 万桶基线 = OPEC 内部分裂信号。如果 OPEC 给伊拉克更高配额 = 全球供应增加 = 油价有下行压力；但如果拒绝 = 伊拉克可能"偷产" = OPEC 纪律崩坏。沙特产量暴跌 190 万桶/日是更大问题——这意味着即使 OPEC 想增产也增不了，因为最大产油国的产能被战火打了。对 lainy：油价短期支撑在 $100+，中期看 OPEC 能否稳住伊拉克和沙特两端。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 00883 中海油 / XLE（能源 ETF）— 供应紧张支撑高油价；如果伊拉克获准增产则油价有回落空间</div>
+        <div class="source">🔗 Source: <a href="https://www.indexbox.io/blog/iraq-requests-6-million-barrel-opec-production-baseline/" target="_blank">IndexBox</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/" target="_blank">OilPrice</a> · <a href="https://www.commoditycontext.com/p/opec-data-deck-september-2026" target="_blank">Commodity Context</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">特朗普 · 韩国</span>
+        <h4>特朗普因伊朗问题向韩国施压——"First NATO, now South Korea"，连续敲打盟友</h4>
+        <p>Google News / 多家媒体报道，特朗普因伊朗问题对韩国施压，继此前对 NATO 盟友施压后，韩国成为最新被"敲打"的盟友。报道标题为"First NATO, now South Korea. Trump hammers another US ally over Iran"。这反映出美国在伊朗战争中试图拉拢盟友但面临阻力——海湾国家反对以色列参战，欧洲盟友对制裁范围有分歧。</p>
+        <div class="why">🦞 <b>市场含义：</b>特朗普对盟友的持续施压 = 外交关系紧张 = 韩国可能被迫在伊朗问题上选边。对 lainy：① 韩国如果配合制裁伊朗 = 韩国-伊朗经贸关系断裂 = 伊朗供应更紧；② 但韩国自身也在中东有能源利益（三星重工造船、韩国油气进口）；③ 这条新闻的市场影响有限，但如果韩国真的加入制裁，油价会再上一台阶。</div>
+        <div class="ticker">📌 关联标的：KOSPI（韩国综指，外交不确定性）/ EWY（韩国 ETF）/ Brent 原油 — 韩国如果加入制裁，油价再涨 $3-5</div>
+        <div class="source">🔗 Source: <a href="https://news.google.com/" target="_blank">Google News</a> · <a href="https://asiatimes.com/2026/09/what-irans-resilience-tells-china-russia-about-us-power/" target="_blank">Asia Times</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美产量暴跌 190 万桶/日 / 伊朗被制裁] → 中游 [航运 — 霍尔木兹通航风险] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹+红海双重风险）+ OPEC 内部纪律（伊拉克要求增产基线）</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 日 · PPI · Fed 加息预期</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">8 月 CPI</span>
+        <h4>今日 8:30 AM ET 公布 8 月 CPI：共识 3.3-3.4% YoY，核心 CPI 预计 +0.2% MoM——FOMC 前最关键数据</h4>
+        <p>CNBC 报道，今日（9/11）8:30 AM ET 美国劳工统计局将公布 8 月 CPI 数据。FactSet 调查中位数预期同比 <strong>3.3%</strong>，Nowflation 预测 <strong>3.34%</strong>，7 月实际值 <strong>3.4%</strong>。核心 CPI 月度预计 <strong>+0.2%</strong>（6 月为持平）。昨日公布的 8 月 PPI 月度 <strong>+0.4%</strong>（符合预期），但年度 PPI 达 <strong>5.4%</strong>，高于 7 月修正值 4.8%——批发通胀加速。Schwab 指出 S&amp;P 500 中仅 <strong>36%</strong> 个股在 50 日均线上方，市场广度急剧收窄。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 9 月 FOMC（9/17）前最关键的数据。三种情景：① CPI ≤ 3.2% + 核心温和 → 鸽派预期升温，科技股反弹、黄金走强；② CPI 3.3-3.4% + 核心持平 → 维持现状，市场按兵不动；③ CPI ≥ 3.5% + 核心跳升 → 加息预期飙升，美股连五跌。当前 PPI 5.4% 已让市场紧张——如果 CPI 也高于预期，Polymarket 显示的 9 月加息概率会从 ~30% 跳到 50%+。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，CPI 直接驱动）/ GLD 黄金（$4,357）/ 513130 港股通科技ETF — CPI 低于预期利好科技，高于预期利空</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/10/fridays-cpi-inflation-report-is-even-more-important-than-usual-heres-what-to-expect.html" target="_blank">CNBC</a> · <a href="https://www.cnbc.com/2026/09/10/ppi-inflation-report-august-2026.html" target="_blank">CNBC PPI</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">PPI 5.4%</span>
+        <h4>8 月 PPI 年率 5.4%（高于预期 5.3%），批发通胀加速——油价 $100+ 传导至批发端</h4>
+        <p>8 月 PPI 月度 <strong>+0.4%</strong>（符合共识），但年率 <strong>5.4%</strong>，高于 7 月修正值 4.8% 和预期 5.3%。核心 PPI 年率 <strong>4.6%</strong>，高于 7 月的 4.2%。Bloomberg 分析指出，Fed 官员已表示如果通胀不改善"准备加息"，但利率工具对油价驱动的通胀效果有限——因为加息不能增加石油供应。10 年期美债收益率升至 <strong>4.44%</strong>，30 年固定房贷利率 <strong>6.66%</strong>。AI 企业债发行量超 $1.5 万亿，推高长端收益率；日本央行反复卖出美债以保卫日元。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>PPI 5.4% 告诉你的是：批发端的油价通胀正在传导。Fed 的尴尬在于——加息可以压需求，但压不了地缘供给冲击。对 lainy：① 油价 $100+ 如果持续 2-3 个月，核心 CPI 可能在 Q4 跳升；② 10 年期美债 4.44% = 成长股估值天花板；③ 日央行卖美债 = 美债收益率被推高 = 全球流动性收紧。这条传导链你要记住：油价 → PPI → CPI → Fed → 美债 → 全球股市。</div>
+        <div class="ticker">📌 关联标的：TLT（20+ 年美债 ETF，收益率上升价格跌）/ IEF（7-10 年美债）/ 513130 港股科技 — 美债收益率上升压制成长股估值</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-09-10/us-cpi-report-to-guide-fed-decision-on-rates-impact-on-economy" target="_blank">Bloomberg</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/economy/article/ppi-data-shows-wholesale-prices-advancing-in-line-with-expectations-124319008.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油价 $100+ → PPI 5.4%] → 中游 [Fed 加息预期 → 美债 4.44%] → 下游 [股市估值压制 / 房贷 6.66% / 企业融资成本] — 当前关键变量：今日 CPI 将决定 9/17 FOMC 是降息、按兵不动还是加息</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>贵金属 · 工业金属 · 能源 · 农产品</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金 $4,357（-1.13%），白银跟跌，油价驱动的加息预期压制避险资产</h4>
+        <p>黄金 9/10 收于 <strong>$4,357.50</strong>（日跌 <strong>-1.13%</strong>，-$49.80），较上周 $4,400+ 回落。白银同步下跌。此前 LME 铜价创历史新高 <strong>$14,757/吨</strong>后回落（-0.07%），COMEX 铜 <strong>$5.365/lb</strong>（+0.85%）。LME 现货铜对 3 个月合约溢价 $16/吨（两周前为 -$5 贴水），表明近期供应紧张。Mining.com 报道，COMEX 铜库存达 695,624 吨（LME+上海库存的两倍以上），因关税预期推动创纪录入库。</p>
+        <div class="why">🦞 <b>市场含义：</b>黄金和铜出现分化——铜因 AI 数据中心 + 关税预期 + 矿供应紧缩而创新高，黄金因加息预期压制而回调。对 lainy：① 黄金回调到 $4,357 如果 CPI 低于预期 = 鸽派反弹机会；如果 CPI 高于预期 = 可能下探 $4,200；② 铜价 $14,757 创纪录 = AI 基建 + 电气化 + 关税囤货三重驱动，Freeport/Southern Copper/江西铜业受益；③ COMEX vs LME 铜溢价 = 美国囤铜现象加剧。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / GLD（黄金 ETF）/ 518880 黄金ETF（A 股）/ LME 铜 / 600547 山东黄金 / FCX（Freeport，铜受益）/ SCCO（Southern Copper）— 铜创新高受益，黄金短期承压但中长期央行购金支撑</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a> · <a href="https://www.brecorder.com/news/40438823/copper-rally-holds-firm-even-as-rising-oil-threatens-growth-outlook" target="_blank">Business Recorder</a> · <a href="https://www.mining.com/mining-stocks-rally-comes-to-abrupt-halt-as-copper-silver-prices-plummet-and-gold-slides" target="_blank">Mining.com</a> · <a href="https://en.sedaily.com/finance/2026/09/10/metals-rally-defies-surging-yields-as-copper-hits-record" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent $105.71 / WTI $96.68：胡塞袭击沙特能源设施 + OPEC 内部分裂 = 供应溢价持续</h4>
+        <p>Brent 9/10 开盘 <strong>$101.64</strong>，日内升至 <strong>$105.71</strong>。WTI 开盘 <strong>$96.68</strong>。Trading Economics 显示原油 9/9 日涨 <strong>+4.47%</strong>，月涨 <strong>+18.34%</strong>，年涨 <strong>+52.65%</strong>。驱动因素：① 胡塞武装袭击沙特能源设施导致部分运营暂停；② 沙特产量暴跌 190 万桶/日至 1990 年以来最低；③ 美国对伊朗"史上最强制裁"威胁全球供应。OPEC 篮子均价 <strong>$101.52/桶</strong>（8 月 $86.42）。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价 $100+ 已经不是"短期波动"——月涨 18%、年涨 53% 告诉你这是结构性重估。三个变量决定接下来走向：① 今日 CPI 如果高于预期 = Fed 加息 = 需求压制但供应更紧 = 油价高位震荡；② 霍尔木兹通航安全是否恢复 = 阿曼斡旋结果；③ OPEC 能否管住伊拉克。对 lainy：高油价时代利好三桶油，但利空航空、物流、消费。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 601857 中国石油 / 600028 中国石化 / 00883 中海油 / XOM 埃克森美孚 / XLE（能源 ETF）— 高油价受益；JETS（航空）/ IYT（物流）受损</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes</a> · <a href="https://convextrade.com/metrics/brent" target="_blank">Convex Trade</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 — Freeport/山东黄金/紫金] → 中游 [交易所库存 — COMEX 铜创纪录入库 / LME 现货溢价] → 下游 [制造业 — 新能源/电网/数据中心] — 当前受益环节：铜（AI + 关税 + 供给紧缩三重驱动）；黄金短期承压但央行购金结构性支撑</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 · 天然气 · 电力 · 新能源</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag energy">天然气</span>
+        <h4>EIA 上调 2026 年美国天然气产量预测至 122.5 Bcf/d（+4 亿/日），LNG 出口需求推动创纪录增长</h4>
+        <p>EIA 9 月 STEO（短期能源展望）预测 2026 年美国市场化天然气产量均值为 <strong>122.5 Bcf/d</strong>，超过 2025 年纪录 118.5 Bcf/d。需求侧预测 <strong>92.0 Bcf/d</strong>（8 月预测），9 月上调。OilPrice 指出 LNG 出口设施投产推动产量增长，但欧洲可再生能源扩建速度超过储能容量，导致负电价和电网不稳定。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美国天然气产量创纪录 = LNG 出口能力扩张 = 欧洲和亚洲 LNG 需求被满足 = 天然气价格有天花板。但欧洲负电价 = 可再生能源增速超过储能 = 储能/电网投资机会。对 lainy：① 美国 LNG 出口 = 钱尼尔能源（LNG）受益；② 欧洲负电价 = 储能项目（电池/抽水蓄能）经济性变差，但电网投资需求上升；③ 中国天然气进口 = 新奥股份/广汇能源长期受益。</div>
+        <div class="ticker">📌 关联标的：LNG（钱尼尔能源）/ 600808 新奥股份 / 603169 广汇能源 / 601985 中国核电 — LNG 出口受益；欧洲储能短期承压但电网投资长期利好</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/Energy/Natural-Gas/US-Natural-Gas-Market-Verging-on-Record-Growth.html" target="_blank">OilPrice</a> · <a href="https://www.europesays.com/us/1055213/" target="_blank">EIA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">OPEC 需求</span>
+        <h4>OPEC 再次下调 2026 全球石油需求增长预期至 +40 万桶/日，但供应端紧缩对冲需求疲软</h4>
+        <p>TASS 报道，OPEC 再次下调 2026 年全球石油需求增长预期，预计增长 <strong>40 万桶/日</strong>至 1.0584 亿桶/日。但供应端紧缩——沙特产量暴跌、伊朗被制裁、胡塞袭击——远超需求疲软的影响。沙特 10 月配额 1049 万桶/日，俄罗斯 995 万桶/日，伊拉克 443 万桶/日。OPEC 篮子均价 <strong>$101.52</strong>（8 月仅 $86.42，月涨 17.6%）。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>OPEC 下调需求但油价还在涨 = "供给冲击 > 需求疲软"的经典案例。对 lainy：这意味着即使全球经济放缓（中国需求弱、欧洲能源贵），只要地缘供应持续受限，油价就下不来。关键观察：如果 CPI 显示经济放缓 + 油价因需求弱回落到 $90 = 三桶油短期回调但中长期仍强；如果 CPI 显示通胀粘性 + 油价守住 $100 = 三桶油继续受益。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / 00883 中海油 / XOM 埃克森美孚 / CVX 雪佛龙 — 供给紧缩对冲需求疲软，三桶油继续受益</div>
+        <div class="source">🔗 Source: <a href="https://tass.com/economy/2185527" target="_blank">TASS</a> · <a href="https://countryeconomy.com/raw-materials/opec" target="_blank">Country Economy</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采 — 美国产量 122.5 Bcf/d 创纪录] → 中游 [LNG 液化出口 — 钱尼尔/新奥] → 下游 [欧洲电网 — 负电价/储能不足] → 新能源 [光伏/风电装机 > 储能建设速度] — 当前受益环节：上游 LNG 出口（美国产量创纪录）；受损环节：欧洲储能（负电价压缩经济性）</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 9/10 收盘：沪指 -0.43% 报 3,934.40 / 深成指 -0.77% 报 13,617.70 / 油价驱动通胀担忧</h4>
+      <p>9/10 收盘沪指 <strong>-0.43%</strong> 至 <strong>3,934.40</strong>，深成指 <strong>-0.77%</strong> 至 13,617.70。中盘此前连续三日反弹积累 +0.5%，但周四油价破 $100 触发通胀担忧，中港股市跟跌区域同侪。Business Standard 指出油价上涨增加通胀和经济增长担忧。CNBC 报道 Nike 被摩根士丹利下调至 Underweight，Nike 创 52 周新低。<b>今日关注：</b>8 月 CPI 公布（北京时间 20:30）+ 沪指能否守住 3,900 支撑。板块方面，能源股（三桶油）受益高油价，科技股承压。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 9/10 收盘：恒指 -1.27% 报 24,954.47 / 恒科指 -2.1% / 成交偏淡</h4>
+      <p>恒指 <strong>-1.27%</strong> 至 <strong>24,954.47</strong>，失守 25,000 关口。恒生科技指数 <strong>-2.1%</strong>。DimSum Daily 报道成交约 HK$130 亿，交投清淡。Vibiznews 指出港股被美股连跌传染 + 美债收益率上升 + 油价飙升三重压力。RTTNews 预期港股可能继续整固，25,275 以上为阻力。<b>今日关注：</b>CPI 数据对港股流动性的影响——鸽派则恒指有望收复 25,000，鹰派则可能下探 24,500。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 9/10 收盘：道指 -0.60% 报 52,064.10 / S&amp;P -0.58% 报 7,591.70 / 纳指 -0.65% 报 26,081.72 / 连四跌</h4>
+      <p>道指 <strong>-316.56 点</strong>（<strong>-0.60%</strong>）至 <strong>52,064.10</strong>，S&amp;P <strong>-0.58%</strong> 至 <strong>7,591.70</strong>，纳指 <strong>-0.65%</strong> 至 <strong>26,081.72</strong>，Russell 2000 <strong>-1.04%</strong> 至 2,890.95。VIX <strong>+8.38%</strong> 至 17.84。TheStreet 报道纳指跌 0.97% 至 -0.97%（盘中更低）。CNBC 指出 S&amp;P 仅 36% 个股在 50 日均线上方，市场广度急剧收窄。<b>盘后：</b>S&amp;P 期货 +0.1%，纳指 100 期货 +0.06%，道指期货 +26 点。今日 CPI 将定方向——如果超预期，连五跌可能。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 9/10 收盘：KOSPI -1.28% 至 6,961.23 / 三星 -0.19% / SK Hynix -0.16% / 四重 witching day</h4>
+      <p>KOSPI <strong>-1.28%</strong> 至 <strong>6,961.23</strong>，失守 7,000 关口（前一日刚收复）。Samsung Electronics <strong>-0.19%</strong>，SK Hynix <strong>-0.16%</strong>——两权重股盘中跌超 2% 后靠公司回购收回大部分跌幅。9/10 为四重 witching day（期权/期货到期），ETF 再平衡放大波动。BOK 报告指出 Samsung + SK Hynix 占 KOSPI 从 8000 到 9000 涨幅的 <strong>99%</strong>，韩国股市集中度极端。SK Hynix ADR 较首尔溢价 <strong>43.6%</strong>（$198.63）。Short 头寸一周减少 6709 亿韩元。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">食品饮料</span>
+        <h4>食品饮料品牌增长创五年新低：2026 仅 14% 品牌获得购买意向提升</h4>
+        <p>Morning Consult 调查 2800 个品牌后发现，2026 年仅 <strong>14%</strong> 的食品饮料品牌获得购买意向增长——为五年来最低。通胀和消费放缓是主因。但大品牌仍有优势：Snickers、Hershey's 等高知名度品牌获得了最大涨幅。Numerator CGPI 显示 8 月日常家用购买价格下降 0.1%（7 月 -0.4%），通胀减速但仍高于 Fed 目标。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>消费品牌增长创五年新低 = "通胀挤压消费"的又一个数据点。对 lainy：① 大品牌（Snickers/Hershey's）逆势增长 = 消费者转向"熟悉的便宜选择" = 可选消费（新品牌/高端化）承压；② CGPI 连续两月下降 = 消费端通胀在减速，但批发端（PPI 5.4%）还在加速——中间商在吸收成本；③ A 股消费股选股逻辑：必选消费（粮油/调味品）> 可选消费（零食/新消费）。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 600887 伊利股份（必选消费）/ 002747 埃斯顿（新消费承压）— 必选 > 可选，大品牌 > 新品牌</div>
+        <div class="source">🔗 Source: <a href="https://www.indexbox.io/blog/food-and-beverage-brand-growth-hits-five-year-low-in-2026/" target="_blank">IndexBox</a> · <a href="https://www.fooddive.com/news/fastest-growing-food-beverage-brands-morning-consult/830023/" target="_blank">Food Dive</a></div>
+      </div>
+
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 农产品价格趋降] → 中游 [食品制造 — 大品牌优势] → 下游 [零售 — 消费者通胀压力] — 当前受益环节：大品牌（高知名度 + 价格锚）；受损环节：新消费品牌（缺乏品牌护城河）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周五快乐 🎬</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">漫威</span>
+        <h4>Avengers: Doomsday 预售破 $5000 万——影史最快达到此里程碑，70% 票房来自 Infinity Vision 高端格式</h4>
+        <p>距上映还有三个多月，Avengers: Doomsday 国内预售已破 <strong>$5000 万</strong>，成为影史上最快达到此里程碑的电影。Disney 确认数据。70% 预售票房来自 Infinity Vision 高端格式。业内猜测全球票房可能冲击 <strong>$30 亿</strong>。该片由 Russo 兄弟执导，Robert Downey Jr. 回归饰演 Doctor Doom，Chris Evans 回归。同档期有 Dune: Part Three 竞争。</p>
+        <div class="why">🦞 <b>花边点评：</b>$5000 万预售 = 影迷用真金白银投票。RDJ 回归演 Doctor Doom 而非 Iron Man = MCU 的"重启"信号。lainy 如果喜欢漫威，这是今年最值得期待的大片。对 DIS 股价：一部 $30 亿票房的电影 = 约 $15 亿分成 = Disney 2026 财年的重要催化。</div>
+        <div class="ticker">📌 关联标的：DIS（迪士尼）/ 600977 中国电影（国内发行受益）— Avengers: Doomsday 可能成为 2026 全球票房冠军</div>
+        <div class="source">🔗 Source: <a href="https://wdwnt.com/2026/09/avengers-doomsday-pre-sale-tickets-cross-50m-marvels-best-month-in-disney-history-most-viewed-disney-trailer-in-history/" target="_blank">WDW News Today</a> · <a href="https://bleedingcool.com/movies/avengers-doomsday-has-reportedly-made-50m-in-ticket-pre-sales-alone/" target="_blank">Bleeding Cool</a> · <a href="https://varietyindia.com/avengers-doomsday-the-mcu-film-generates-50-million-in-pre-sales-three-months-before-its-release/" target="_blank">Variety India</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>9/11 新片上映：Heart of the Beast / Runner / The Uprising / Onslaught / Practical Magic 2 / Avengers: Endgame 重映</h4>
+        <p>9/11 周五多部新片上映。Movie Insider 列出 9 月上映片单：Practical Magic 2（经典奇幻续集）、The Uprising（动作）、Onslaught（战争）、Runner（惊悚）等。Avengers: Endgame 以 Encore 版重映。Beyond Fest 2026 宣布片单包括 Primetime、V/H/S/Mixtape、Your Mother Your Mother Your Mother。Rotten Tomatoes 推荐新片 Saipan——Steve Coogan 主演的足球剧情片，评分不俗。</p>
+        <div class="why">🦞 <b>周五快乐：</b>lainy 如果周末想看电影，Saipan（Steve Coogan 的足球剧情片）口碑不错，Practical Magic 2 适合怀旧。Avengers: Endgame 重映 = Disney 为 Doomsday 预热。Mashable 推荐 Crew Girl 适合周末刷剧。</div>
+        <div class="source">🔗 Source: <a href="https://www.movieinsider.com/movies/september/2026" target="_blank">Movie Insider</a> · <a href="https://editorial.rottentomatoes.com/guide/best-new-movies/" target="_blank">Rotten Tomatoes</a> · <a href="https://mashable.com/entertainment/new-to-streaming-september-11-2026" target="_blank">Mashable</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
