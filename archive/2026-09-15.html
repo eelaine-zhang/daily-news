@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-15</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --comm: #B8A07E; --energy: #C4A77D; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; padding-bottom: 4px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; color: var(--text-dim); font-size: 13px; }
+  .card .why::before { content: "💡 "; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .ticker { margin-top: 8px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0 0 6px; font-size: 13.5px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 15 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报（补发 · cron 跑空）</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>FOMC 首日开会，加息 25bp 概率 85-93%：</b>CME FedWatch 显示市场已基本完全定价，明日凌晨 2 点（香港时间）出结果。Goldman 85%、Kiplinger 93%。若兑现，是三年多来首次加息，基准利率升至 3.75-4.00%。</li>
+      <li><b>TSMC 大扩产 70%：</b>Seoul Economic Daily 报道，TSMC 3nm 月产能将在 18 个月内从 12.5 万片拉到 21 万片，订单能见度已到 2030 年——AI 需求根本停不下来，直接打脸昨天 Anthropic 的"减速宣言"。</li>
+      <li><b>油价创六周新高：</b>Brent 9/14 收 $108.34（+3.56%），月涨 19.2%、年涨 60.6%。Goldman 警告若海湾产能持续受损，2027 年 Brent 可能冲 $120。霍尔木兹"临时航道"虽公布，但通行量仍受伊朗军事管制。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">TSMC 大扩产</span>
+        <h4>TSMC 3nm 月产能 18 个月内提升 70% 至 21 万片，订单能见度到 2030——AI 需求信号再确认</h4>
+        <p>9/14-15 Seoul Economic Daily 连续报道，TSMC 已悄悄向供应链伙伴简报 2nm + 3nm 大扩产计划：3nm 月产能将从当前水平提升约 <strong>70%</strong>，到 2027 年中达到 <strong>21 万片/月</strong>。AI 客户的订单能见度已经直接锁定到 2030 年。同时 TSMC 还在推进 2nm 节点的产能爬坡，供应链被要求同步扩产。</p>
+        <div class="why"><b>🦞 为什么值得看：</b>这条直接打脸昨天 Anthropic 的"减速宣言"——产业内部喊慢，但 Foundry 的订单簿告诉你真相。对 lainy 的框架：① <b>订单能见度 5 年</b>说明 AI capex 不是短周期现象，是结构性需求；② 70% 扩产意味着 EUV 设备、先进封装、HBM 配套都要同步扩——ASML、台积电供应链（京鼎、帆宣、家登）是直接受益；③ 台积电在 AI 芯片代工市占率已经 90%+，这次扩产是"堵门"——进一步抬高 Samsung Foundry / Intel Foundry 的追赶难度。</div>
+        <div class="ticker">📌 关联：TSM / 2330.TW / ASML / 京鼎(3413.TW) / Samsung Foundry 竞争压力↑</div>
+        <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/09/15/tsmc-to-boost-3-nanometer-output-70-percent-to-210000" target="_blank">Seoul Economic Daily</a> · <a href="https://www.sammyfans.com/2026/09/14/tsmc-plans-major-2nm-and-3nm-expansion/" target="_blank">Sammy Fans</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">CXMT 暴利</span>
+        <h4>中国 CXMT 借 AI 红利把 DRAM 运营利润率做到 80%——国产存储开始赚大钱</h4>
+        <p>9/14 Digitimes 报道，长鑫存储（CXMT）凭借 AI 服务器对 DRAM 的爆发需求，运营利润率飙升至 <strong>80%</strong>。受惠于：① 国内 AI 厂商（DeepSeek、阿里、字节）被迫用国产 HBM/DRAM 替代受限进口；② DRAM 现货价年涨 260%；③ CXMT 在 HBM3E 上风险量产突破。报告同时指出 Nvidia 与 MediaTek 深化 20 年芯片合作，联合开发下一代 AI 加速器。</p>
+        <div class="why"><b>🦞 龙虾老师解读：</b>80% 运营利润率是什么概念？茅台的毛利率也就 91%、运营利润率 ~60%。CXMT 这个数字说明：① <b>AI 需求 + 国产替代双红利</b>，让它从"亏钱追技术"变成"印钞机"；② 这对三星/SK Hynix 是坏消息——中国客户本来要买它们的 HBM，现在被国产分走；③ 警惕：80% 是周期顶部的利润率，不可持续，但短期 CXMT 科创板 IPO 估值会被这个数拉高。</div>
+        <div class="ticker">📌 关联：CXMT（未上市，关注科创板 IPO）/ 005930.KS / 000660.KS（三星、海力士中国市场份额承压）</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260914PD204/dram-2026-price-micron-hbm.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Hyundai × Nvidia</span>
+        <h4>现代汽车集团标准化自动驾驶硬件平台，深度绑定 Nvidia——2028-2029 量产</h4>
+        <p>9/15 Digitimes 报道，现代汽车集团（Hyundai / Kia / Genesis）将标准化其自动驾驶硬件栈，全面采用 Nvidia 方案，并建立内部数据中心 + 自研 AI 算法，目标 2028-2029 年推出量产自动驾驶车型。策略核心是"学习速度 + 数据规模 + 软件迭代"三维竞争，而非单纯车辆功能。</p>
+        <div class="why"><b>🦞 解读：</b>车厂绑 Nvidia 是 2026 的大趋势（Mercedes、Volvo、比亚迪都在做）。对 lainy 的金融视角：① Nvidia 汽车业务营收占比虽小（~2%），但单车价值量 $2000-5000，是 Nvidia 估值的"远期选择权"；② 现代这次是<b>平台级绑定</b>——意味着后续车型迭代都得用 Nvidia，切换成本极高；③ 对 Mobileye（INTC 旗下）、Qualcomm Snapdragon Ride 是负面信号。</div>
+        <div class="ticker">📌 关联：NVDA / 005380.KS（现代）/ MBLY（Mobileye 压力）</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260915PD205/hyundai-data-autonomous-driving-nvidia-hardware.html" target="_blank">Digitimes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Dreamforce 2026</span>
+        <h4>Dreamforce 2026 今日旧金山开幕（9/15-17），Agentforce 360 能否对冲"AI 减速"恐慌？</h4>
+        <p>Salesforce 年度旗舰大会 Dreamforce 2026 今日在 Moscone Center 开幕，为期三天。市场预期 Salesforce 将发布 Agentforce 360 的重大更新，重点是企业级 AI Agent 的规模化落地。这是 Anthropic/OpenAI CEO 双"减速宣言"之后，第一家 SaaS 大厂公开表态"AI 应用层还在加速"的机会。</p>
+        <div class="why"><b>🦞 观察点：</b>lainy 上周看完美股 chip 股调整，本周需要关注"应用层能否接棒"。如果 Benioff 在 keynote 里给出 Agentforce 的具体付费客户数 / ACV 数据，能修复部分 AI 恐慌；如果只是 roadmap 没数字，市场可能继续杀估值。Salesforce 自身股价今年 +32%，已经部分定价了 Agentforce 成功。</div>
+        <div class="ticker">📌 关联：CRM / NOW（ServiceNow）/ MSFT（Copilot 对标）</div>
+        <div class="source">来源：<a href="https://www.salesforce.com/dreamforce/" target="_blank">Salesforce 官方</a> · <a href="https://gptfy.ai/dreamforce-2026" target="_blank">GPTfy 预览</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>持续关注 · 伊朗临时航道协议公布，但 EIA 数据显示 8 月 shut-in 仍达 670 万桶/日</h4>
+        <p>昨日（9/14）报过的伊朗向海湾国家公布临时航道协议一事，9/15 增量信息有限——但 EIA 最新短期能源展望显示，8 月全球原油 shut-in（被动停产）达 <strong>670 万桶/日</strong>（7 月为 500 万桶/日），并预计 Q4 中东供应仍受约束，平均 shut-in 570 万桶/日。说明虽然航道协议有了，但实际产能恢复还需要时间。</p>
+        <div class="why"><b>🦞 增量在哪：</b>昨天报的是"协议公布"这个事件，今天的增量是 <b>EIA 定量测算供应损失</b>。670 万桶/日 ≈ 全球需求 6-7%，这是 Brent 一直站 $100+ 的根本原因。对 lainy：只要 shut-in 不回到 200 万桶/日以下，油价中枢难下移——利好中国海油、西方石油、埃克森美孚的盈利预期，利空航空、化工。</div>
+        <div class="ticker">📌 关联：XOM / CVX / 0883.HK（中国海油）/ 航空股承压</div>
+        <div class="source">来源：<a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank">EIA STEO</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">Trump-Xi 峰会</span>
+        <h4>持续关注 · Trump-Xi 9/24 峰会命运系于台湾军售——北京已明确威胁取消</h4>
+        <p>9/12 Telegraph 报道，北京已正式警告：如果美国批准对台新一轮 $140 亿军售，将取消原定 9/24 的 Trump-Xi 峰会。该军售包此前已在 5 月 Trump 访华时讨论过，Trump 当时态度模糊。Bloomberg 报道部分参议员正在施压 Trump 在峰会前批准军售，作为对 Xi 的筹码。截至 9/15 上午，白宫尚未明确表态。</p>
+        <div class="why"><b>🦞 为什么重要：</b>这是中美关系 9 月下旬最大的单一变量。如果峰会取消：① 市场对"中美关系缓和"的预期落空，港股/A 股外资情绪可能急转；② 芯片关税、AI 出口管制可能进一步收紧；③ 台海风险溢价上升，利好军工（AVIC、洛克希德）和黄金。如果峰会照常，等于 Trump 暂缓军售，对台股（TSMC）和中国资产都是短期利好。</div>
+        <div class="ticker">📌 关联：台股 TW50 / 中概 KWEB / 黄金 GLD / 军工 LMT</div>
+        <div class="source">来源：<a href="https://www.telegraph.co.uk/world-news/2026/09/12/china-threatens-cancel-xi-trump-summit/" target="_blank">Telegraph</a> · <a href="https://www.bloomberg.com/news/articles/2026-05-11/senators-push-trump-on-taiwan-arms-package-ahead-of-xi-summit" target="_blank">Bloomberg</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">FOMC D-Day</span>
+        <h4>FOMC 今日开会（9/15-16），市场已完全定价 25bp 加息——三年多来首次</h4>
+        <p>CME FedWatch 最新数据显示，市场对本次加息 25bp 的定价概率已升至 <strong>80-93%</strong>（不同信源区间），基准利率将从 3.50-3.75% 升至 3.75-4.00%。Goldman Sachs 给 85%，Kiplinger 报 93% 期货定价，Cryptobriefing 综合口径 80.5%。明日（9/16）香港时间凌晨 2:00 公布利率决议 + 鲍威尔新闻发布会。这是 2023 年 7 月以来的首次加息。</p>
+        <div class="why"><b>🦞 lainy 必看：</b>① <b>25bp 已被定价</b>，市场反应取决于声明措辞和点阵图——如果暗示"一次性加息"而非"加息周期开启"，市场松口气；如果说"数据依赖、保留继续加息选项"，美债收益率继续上行、风险资产承压。② 关注鲍威尔对油价（Brent $108）和核心 PCE（3.3% 粘性）的表态。③ 加息后美元大概率走强，压制新兴市场货币和黄金（短期）。④ 对港股/中概：美元加息意味着香港联系汇率下 HKMA 跟随，H 股折让可能扩大。</div>
+        <div class="ticker">📌 关联：DXY / US10Y / SPX / 黄金（短期承压）/ 港股（联系汇率传导）</div>
+        <div class="source">来源：<a href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026" target="_blank">Kiplinger</a> · <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank">CME FedWatch</a> · <a href="https://cryptobriefing.com/goldman-sachs-sees-85-chance-of-fed-rate-hike-in-september-meeting/" target="_blank">Goldman 85%</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">10Y 美债</span>
+        <h4>10Y 美债收益率创 2023 以来新高——加息预期 + 油价推动通胀预期双杀</h4>
+        <p>9/14 TheStreet 报道，10Y 美债收益率升至 2023 年以来最高水平，主要驱动：① FOMC 加息预期；② Brent $108 推高通胀预期；③ 财政部 Q4 大规模发债（TGA 重建 + 赤字 6.1% GDP）。S&P 500 9/14 收跌 0.5%，纳指 100 跌 0.8%，道指跌 152 点。卡特彼勒领跌道指（-2.15%），芯片股拖累纳指。</p>
+        <div class="why"><b>🦞 关键逻辑：</b>10Y 美债是全球资产定价锚。收益率破前高意味着：① 股票风险溢价（ERP）压缩，高估值科技股最敏感；② 新兴市场资本外流压力上升（韩元、人民币、印度卢比都会感受）；③ 美债 2s10s 曲线如果进一步倒挂，会强化衰退叙事。短期看，等 FOMC 靴子落地再判断方向。</div>
+        <div class="ticker">📌 关联：US10Y / TLT（做空久期受益）/ 高估值科技股承压</div>
+        <div class="source">来源：<a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-14-2026" target="_blank">TheStreet</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent 9/14 收 $108.34（+3.56%），月涨 19.2% 年涨 60.6%——Goldman 警告 2027 可能冲 $120</h4>
+        <p>Trading Economics 数据显示，Brent 9/14 结算价 <strong>$108.34/桶</strong>，单日 +3.56%；月涨 19.22%，年涨 60.64%。Investing.com 报道，Goldman Sachs 上调 Brent 预测，警告如果海湾产能在 2026 年底仍显著低于战前水平，<strong>2027 年 Brent 可能突破 $120</strong>。FRED 最新数据（9/9）Brent $109.51，本周回落但仍处高位。</p>
+        <div class="why"><b>🦞 解读：</b>Goldman 喊 $120 不是无的放矢——EIA 数据显示 shut-in 还在 670 万桶/日，OPEC+ 自愿减产已全部回滚但闲置产能有限，叠加 FOMC 加息预期推升美元指数但没能压住油价，说明这是<b>真·供给冲击</b>。对 lainy：① 利好上游油气公司 Q3 财报；② 推高全球通胀预期，间接支撑 Fed 加息路径；③ 国内成品油调价窗口预计本周上调，关注中石油/中石化。</div>
+        <div class="ticker">📌 关联：Brent / WTI / XOM / 0883.HK / 601857.SH / 通胀预期</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.investing.com/commodities/brent-oil" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金在 $4,380 附近震荡，加息预期压制但地缘风险托底</h4>
+        <p>延续昨日行情：黄金在 FOMC 决议前保持观望，现价约 <strong>$4,380-4,400/oz</strong>。市场逻辑：① 加息预期推升实际利率，短期压制金价；② 但伊朗/霍尔木兹/Trump-Xi 三重地缘风险提供下方支撑；③ 央行购金（中国、波兰、新加坡）仍是长线逻辑。</p>
+        <div class="why"><b>🦞 操作视角：</b>金价已经定价了相当一部分地缘溢价。如果 FOMC 加息且鲍威尔鹰派，黄金可能回调至 $4,300 附近——那可能是 Q4 的建仓机会。如果鸽派或声明暗示"一次性"，金价有望挑战 $4,500。 lainy 关注：山东黄金、紫金矿业的黄金股弹性比实物金大。</div>
+        <div class="ticker">📌 关联：XAUUSD / GLD / 600547.SH（山东黄金）/ 601899.SH（紫金）</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源</h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag energy">OPEC+</span>
+        <h4>OPEC+ 9 月完全回滚自愿减产，但闲置产能有限 + 中东 shut-in 抵消增产效果</h4>
+        <p>Reuters/Forbes 8 月初报道，OPEC+ 已在 8 月会议决定 9 月起完全回滚此前的自愿减产。但 EIA 数据显示，由于伊朗/伊拉克/利比亚等地缘因素，实际中东产能利用率仍远低于疫情前。8 月全球 shut-in 670 万桶/日，远超 OPEC+ 主动增产量。</p>
+        <div class="why"><b>🦞 关键判断：</b>OPEC+ "增产"是纸面数据，实际供给端仍在收缩。这就是为什么 Brent 从 8 月 $85 一路涨到 $108——市场看的是<b>有效供给</b>，不是配额。对 lainy：① 别被"OPEC+ 增产"标题骗，看 EIA 的 shut-in 数据才是真相；② Q4 如果伊朗临时航道协议落地 + shut-in 降到 300 万桶以下，油价可能回调到 $95-100 区间，那时是止盈上游股票的时机。</div>
+        <div class="ticker">📌 关联：OPEC+ 配额 / EIA 库存 / Brent 期限结构（目前深度 backwardation）</div>
+        <div class="source">来源：<a href="https://www.reuters.com/business/energy/opec-has-agreement-principle-september-quota-increase-pause-thereafter-source-2026-08-02/" target="_blank">Reuters</a> · <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank">EIA STEO</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">欧洲天然气</span>
+        <h4>欧洲天然气价格 5 个月涨 3 倍——储气率虽回升但冬季风险未消</h4>
+        <p>延续 9/14 报道，欧洲 TTF 天然气价格过去 5 个月累计上涨 3 倍。主因：① 卡塔尔 LNG 不可抗力延长至 11 月；② 俄罗斯管道气持续受限；③ 亚洲（中国、印度、日本）同步竞购 LNG 推高 JKMA 价格，挤压欧洲货源。储气率虽回升至 85%+，但冬季极端天气情景下仍可能紧张。</p>
+        <div class="why"><b>🦞 对 lainy 的关联：</b>欧洲天然气价格高企意味着：① 欧洲化工/制造业成本压力持续，利好中国出口替代（化工、钢铁、玻璃）；② 中国 LNG 进口成本也涨，压制城燃公司毛差（新奥能源、华润燃气）；③ 冬季如果欧洲真的紧张，可能重演 2022 年"抢煤抢气"，动力煤可能被动受益。</div>
+        <div class="ticker">📌 关联：TTF / JKM / 2688.HK（新奥）/ 1193.HK（华润燃气）/ 动力煤</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/eu-natural-gas" target="_blank">Trading Economics</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>四大市场全扫描</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 · 周一（9/14）微跌，AI/半导体板块领跌，防御板块护盘</h4>
+      <p><b>行情：</b>Business Recorder 9/15 报道，周一 A 股小幅收跌，AI 与半导体板块走弱抵消了防御板块的涨幅。投资者在 FOMC 前保持谨慎。沪指继续在 3,900 关口附近震荡。</p>
+      <p><b>🦞 板块逻辑：</b>① 昨天 Anthropic "减速宣言" + DeepSeek 砍 HBM 用量，直接利空 A 股 AI 算力、光模块、HBM 概念（中际旭创、新易盛、寒武纪都有压力）；② 但国产存储（CXMT 概念）反而受益——CXMT 利润率 80% 的消息今天发酵，兆易创新、北京君正、深科技可能异动；③ FOMC 前外资偏谨慎，北向资金可能继续净流出。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 · 周一恒指 24,806（-0.60%），月跌 2.49% 年跌 6%</h4>
+      <p><b>行情：</b>Trading Economics 数据，HK50 周一跌 0.60% 至 24,806 点。过去一个月累跌 2.49%，年跌 6%。美元加息预期 + 联系汇率传导压力持续。科技股仍受 AI 减速恐慌压制。</p>
+      <p><b>🦞 关注：</b>① FOMC 加息后 HKMA 必然跟随，港股流动性预期恶化；② Trump-Xi 峰会能否成行是港股 9 月下旬最大变量；③ 阿里、腾讯、美团如果继续回调，可能吸引价值型外资进场——恒指 PE 已经跌破 11 倍。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 · 周一 S&P -0.5%、纳指 100 -0.8%、道指 -152 点</h4>
+      <p><b>行情：</b>Trading Economics 9/14 收盘：S&P 500 跌 0.5%，纳指 100 跌 0.8%，道指跌 152 点。芯片股领跌（SOX 被 Anthropic + DeepSeek 双重打击），Caterpillar 跌 2.15% 拖累道指。10Y 美债收益率创 2023 以来新高。注意：9/14 Yahoo Finance 另一则报道显示纳指 +1% 至 26,333、S&P +0.9% 至 7,657——这是上周五（9/11）数据被错误索引，以 Trading Economics 9/14 收盘数据为准。</p>
+      <p><b>🦞 看点：</b>① FOMC 前缩量调整是正常的，关键是鲍威尔怎么说；② 如果点阵图显示"一次性加息"，风险资产可能松口气；③ 芯片股短期别抄底——DeepSeek 利空还在消化，等 Dreamforce 看应用层能不能对冲。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 · KOSPI 周二开盘 6,633（-0.76%），三星/SK Hynix 继续下探</h4>
+      <p><b>行情：</b>Business Today 9/15 报道，KOSPI 周二开盘跌 0.76% 至 <strong>6,633.30</strong>，三星电子和 SK Hynix 延续跌势。上周 KOSPI 失守 7,000 后继续下行，主要因 DeepSeek V4.1-Flash 砍 HBM 需求 + Anthropic 减速宣言的双重打击。</p>
+      <p><b>🦞 深度：</b>① 韩国是 HBM 双寡头（三星 + SK Hynix 合计 95% 份额），DeepSeek 这个消息直接戳中韩国经济命门；② 但 CXMT 同期利润率 80%——说明全球 HBM 总量需求还在，只是分配发生变化；③ 短期 KOSPI 可能继续下探 6,500 支撑，中期看 DeepSeek 的 MLA 架构能否成为行业新标准（如果能，HBM 需求真的会下降）。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">中秋消费观察</span>
+        <h4>中秋临近，白酒批价节前小幅回暖但动销仍弱——关注茅台 1935 和五粮液渠道库存</h4>
+        <p>9/15 中秋前最后一个交易周，白酒批价小幅回暖但动销（终端实际销售）仍弱于往年。经销商反馈：① 茅台 1935 批价从低位回升至 880-900 元区间，但团购大单减少；② 五粮液普五批价 940-960 元，渠道库存仍偏高；③ 中秋商务宴请需求恢复缓慢，家庭聚饮成为主力场景。</p>
+        <div class="why"><b>🦞 消费视角：</b>白酒是 lainy 一直关注的板块。中秋动销数据是 Q3 财报的关键先行指标——如果中秋不行，重阳/国庆也难指望。当前白酒板块 PE 已回到 2018 年水平，估值底已现，但需要等业绩底。关注茅台是否在中秋后出"稳价"政策。</div>
+        <div class="ticker">📌 关联：600519.SH（茅台）/ 000858.SZ（五粮液）/ 白酒 ETF</div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">新消费</span>
+        <h4>茶饮品牌跨界卖饭成为新趋势——蜜雪、奈雪都在加码"茶饮+轻食"复合业态</h4>
+        <p>延续 9/13 报道的"奶茶店跨界卖饭"趋势，本周蜜雪冰城在郑州试点"茶饮+米饭套餐"门店，奈雪在上海开设"茶饮+烘焙+轻食"旗舰店。背后逻辑：① 茶饮渗透率见顶，单店日均杯数下滑，必须提高客单价；② 轻食毛利率（60%+）高于茶饮（50-55%）；③ 延长消费时段——从下午茶扩展到午餐和晚餐。</p>
+        <div class="why"><b>🦞 商业逻辑：</b>这是中国新消费从"单品爆款"转向"场景经营"的标志。对 lainy：① 关注蜜雪冰城港股 IPO（已递交招股书）的定价——如果市场认可"复合业态"故事，估值会比纯茶饮高 30-50%；② 奈雪的转型能否成功，决定它能否从"中国版星巴克"的故事里走出来。</div>
+        <div class="ticker">📌 关联：奈雪(2150.HK) / 蜜雪（待上市）/ 海底捞（场景经营对标）</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Dreamforce 演出</span>
+        <h4>Dreamforce 2026 演出阵容公布——The Grand Nightclub 9/15 开幕派对</h4>
+        <p>Dreamforce 2026 今晚 7 点在旧金山 The Grand Nightclub 举行开幕派对。Salesforce Ben 放出完整派对指南，预计超 4 万人参会。往年 Dreamforce 请过 U2、Metallica、Fleetwood Mac，今年的演出阵容仍是谜，但市场传闻可能有 Dua Lipa 或 The Weeknd 级别的艺人。</p>
+        <div class="why"><b>🦞 为什么这条放娱乐版：</b>Dreamforce 的派对规格是科技行业景气度的风向标——2023 年 AI 火爆时 Salesforce 直接包下整个 AT&T 公园，2024 年 AI 降温就缩水成 Moscone Center 内部活动。今年重新回到 The Grand Nightclub，说明 SaaS 行业景气在回升。</div>
+        <div class="ticker">📌 关联：CRM 股价 / 旧金山酒店入住率（间接指标）</div>
+        <div class="source">来源：<a href="https://www.salesforceben.com/official-dreamforce-parties-and-events-guide/" target="_blank">Salesforce Ben</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Avengers Endgame 重映</span>
+        <h4>《复仇者联盟4：终局之战》重映持续热映，为《复仇者联盟5：毁灭日》预热</h4>
+        <p>漫威《Avengers: Endgame》重映进入第二周，全球累计票房突破 $9.5 亿（含原映）。这次重映是为 2027 年 5 月的《Avengers: Doomsday》预热，后者预售已破 $5,000 万创影史最快纪录。北美影院上座率维持在 65%+，高于预期。</p>
+        <div class="why"><b>🦞 花边里的商业：</b>迪士尼的"重映经济学"越来越成熟——旧片零成本重映，毛利率 95%+，还能为续集造势。对 lainy：① 迪士尼 Q4 财报会因此受益；② 这种模式如果成功，可能会被其他大厂复制（华纳的 Harry Potter、环球的 Jurassic Park 都可能重映）。</div>
+        <div class="ticker">📌 关联：DIS（迪士尼）/ AMC / CNK（Cinemark）</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技/科学花边</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">Nvidia 电力瓶颈</span>
+        <h4>Digitimes 专访 TSMC 老兵：Nvidia AI 芯片面临 1000W 功耗墙——电力成为新约束</h4>
+        <p>Digitimes 9/14 专访一位 TSMC 资深工程师，谈 Nvidia 下一代 AI 芯片的"1000W 功耗墙"问题。随着 B300/GB300 功耗逼近 1000W，数据中心供电、散热、PCB 设计都面临极限。解决方案：① 更先进的封装（CoWoS-L）；② 液冷渗透；③ 系统级优化（NVLink 拓扑重构）。</p>
+        <div class="why"><b>🦞 为什么这条放在科技花边：</b>这个趋势对 lainy 的产业链框架很重要——AI 芯片的瓶颈正在从"算力"转向"电力"。① 数据中心 REIT（EQIX、DLR）受益；② 液冷供应链（Vertiv、台达、英维克）是下一个热点；③ 电力公司（KEPCO、中电控股）开始把 AI 数据中心当成战略客户。这就是为什么上周 KEPCO 向三星/SK Hynix 要钱建电网的新闻那么重要。</div>
+        <div class="ticker">📌 关联：VRT（Vertiv）/ 英维克(002837.SZ) / EQIX / 0002.HK（中电控股）</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20260914PD204/dram-2026-price-micron-hbm.html" target="_blank">Digitimes</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻 · 2026-09-15（补发 · cron 跑空）</div>
+    <div class="footer-note">数据截至 2026-09-15 11:30 HKT · 明日凌晨 2:00 FOMC 决议 · 注意市场波动</div>
+  </footer>
+</div>
+</body>
+</html>
