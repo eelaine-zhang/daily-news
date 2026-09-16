@@ -55,6 +55,9 @@
   .market-block p { margin: 0 0 6px; font-size: 13.5px; color: var(--text); }
   .market-block b, .market-block strong { color: var(--hbm); }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
 </style>
 </head>
 <body>
@@ -301,6 +304,8 @@
       </div>
     </div>
   </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
 
   <footer>
     <div>🦞 龙虾老师 · 每日不错过新闻 · 2026-09-15（补发 · cron 跑空）</div>
