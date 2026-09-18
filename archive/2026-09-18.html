@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-18</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; font-style: normal; }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 18 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美联储三年来首次加息：</b>9/16 FOMC 一致决定加息 25bp 至 3.75%-4.00%，点阵图指向年内再加息一次；但 9/17 美股不跌反涨（纳指 +1.7%），市场解读为"靴子落地"。</li>
+      <li><b>黄仁勋放大招：</b>苏格兰 AI 峰会上放话 2027 年英伟达芯片销量翻倍，Vera Rubin 平台每 GW 收入 $400 亿 vs Blackwell $250 亿；NVDA 涨 2%，分析师 EPS 预期 90 天内从 $13 跳到 $16。</li>
+      <li><b>沙特管道被炸后恢复部分供应：</b>Brent 回落至 $104.82；特朗普称与伊朗"直接对话"、战争"有望结束"，但伊朗否认谈判——地缘博弈仍在拉锯。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达</span>
+        <h4>黄仁勋苏格兰放话：2027 年英伟达芯片销量翻倍，Vera Rubin 平台每 GW 收入 $400 亿</h4>
+        <p>9/17 英伟达 CEO 黄仁勋在苏格兰 AI 峰会上确认：2027 年芯片出货量和销售额预计较 2026 年翻倍。核心驱动是 Vera Rubin 平台——已进入量产，号称"英伟达史上最快 ramp 的产品"，每 GW 收入机会约 <strong>$400</strong> 亿，高于 Blackwell 的 <strong>$250</strong> 亿。黄仁勋同时呼吁 AI 行业重视安全测试，不安全的产品不应上市。英伟达财报中供应义务已膨胀至 <strong>$2790</strong> 亿，Apollo/BlackRock/Blackstone/Brookfield/Goldman/KKR 等金融机构预计动员超 <strong>$5000</strong> 亿第三方资本用于 AI 基建。分析师共识 EPS 90 天内从 $13 跳到 $16，39 次上调、0 次下调。NVDA 当日涨 <strong>+2%</strong> 至 $219，接近 52 周高点 $236。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是英伟达给出的 2027 年"量价齐升"明牌。翻倍 = 供给受限下的增长，意味着台积电/三星/HBM 产能必须同步扩张。对 lainy 的金融框架：① Vera Rubin 的每 GW $400 亿 vs Blackwell $250 亿 = 单位算力货币化能力提升 60%，这意味着即使 GPU 出货量不翻倍，收入也能大涨；② $2790 亿供应义务 = 英伟达提前锁定了上游产能，HBM/CoWoS 封装产能被买断；③ $5000 亿第三方资本 = AI capex 不是泡沫论，是机构真金白银在下注。</div>
+        <div class="ticker">📌 关联标的：NVDA（核心受益）/ TSM 台积电（代工）/ 000660.KS SK Hynix（HBM）/ 005930.KS 三星（HBM+代工）— 全链条受益于 Vera Rubin ramp</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/17/nvidia-huang-ai-chip-guidance.html" target="_blank">CNBC</a> · <a href="https://www.bloomberg.com/news/articles/2026-09-17/nvidia-s-huang-expects-to-sell-twice-as-many-chips-next-year" target="_blank">Bloomberg</a> · <a href="https://247wallst.com/investing/2026/09/17/nvidia-expects-chip-sales-to-double-in-2027/" target="_blank">24/7 Wall St</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">三星 zHBM</span>
+        <h4>三星发布 zHBM：3D 垂直堆叠内存直贴 AI 芯片，目标 AI 响应速度提升 10 倍</h4>
+        <p>9/17 三星在 SEMICON Taiwan 2026 上发布 zHBM 技术——一种可直接 3D 堆叠在 AI 芯片顶部的内存方案，突破传统 2.5D 架构的物理瓶颈。系统级目标：将 AI agent 响应吞吐量从约 100 tokens/s/用户提升至 <strong>1000</strong> tokens/s/用户，即 10 倍提升。三星同时透露 Taylor Plant 2 预计 2026 年底动工，并准备将台积电引入部分 HBM 供应链以拓展定制化 HBM 市场。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>zHBM 是内存架构的范式转换——从"并排放"（2.5D）到"叠在一起"（3D）。如果成功，AI 推理延迟将大幅下降，这对 AI agent 场景（需要实时交互）是关键突破。对 lainy：① 三星在 HBM 领域的技术路线开始与 SK Hynix 差异化——SK Hynix 走 TSMC 合作路线，三星走自主 3D 堆叠；② 把台积电引入 HBM 供应链 = 三星承认自己不能全包，但也意味着 HBM 供应链正在复杂化；③ 1000 tokens/s/用户如果实现，AI agent 大规模商用化就不远了。</div>
+        <div class="ticker">📌 关联标的：005930.KS 三星电子（zHBM 自研受益）/ 000660.KS SK Hynix（竞争路线）/ TSM 台积电（被引入 HBM 供应链）— HBM 技术路线分化，三星押注 3D</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260917VL221/samsung-hbm-accelerator-dram-data.html" target="_blank">DIGITIMES</a> · <a href="https://news.futunn.com/en/post/79406424/samsung-launches-zhbm-aiming-to-boost-ai-response-speeds-by" target="_blank">Futunn</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">CoreWeave</span>
+        <h4>CoreWeave 上线 Vera Rubin NVL72 集群：数百颗 Rubin GPU 互联，云算力进入 Rubin 时代</h4>
+        <p>9/16 AI 云计算公司 CoreWeave 宣布已搭建多机架 Vera Rubin NVL72 集群，连接数百颗 Rubin GPU。这是英伟达新平台在云端的首次实际部署记录，意味着 Vera Rubin 不只是纸面产品——已经在为客户产出算力。CoreWeave 是英伟达最大的云合作伙伴之一，此前已获得数十亿美元融资用于 AI 基建。</p>
+        <div class="why">🦞 <b>商业含义：</b>Vera Rubin 从发布到云上线只用了很短时间，验证了黄仁勋"史上最快 ramp"的说法。对 lainy：AI 算力的供给侧正在加速——不是需求的问题，是供给能不能跟上的问题。CoreWeave 作为"英伟达的弹药库"，其部署速度是整个 AI 算力产业链的领先指标。</div>
+        <div class="ticker">📌 关联标的：NVDA（芯片受益）/ CRWD CoreWeave（私有公司，直接受益）/ MSFT Microsoft（CoreWeave 大客户）— Rubin 量产节奏超预期</div>
+        <div class="source">🔗 Source: <a href="https://aimultiple.com/ai-chip-makers" target="_blank">AIMultiple</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Tier IV</span>
+        <h4>日本 Tier IV 开源自动驾驶 AI 芯片设计，挑战英伟达</h4>
+        <p>日本自动驾驶公司 Tier IV 正在开发 AI 芯片，并将芯片设计和相关工具链开源，允许半导体厂商使用其设计开发自动驾驶芯片。这是继中国华为之后，又一个试图在自动驾驶芯片领域打破英伟达垄断的玩家。Tier IV 的开源策略降低了芯片厂商进入自动驾驶领域的门槛。</p>
+        <div class="why">🦞 <b>读给你听：</b>自动驾驶芯片是 AI 芯片的第二大战场（仅次于数据中心）。英伟达 Drive 系列目前主导，但特斯拉自研、中国地平线/华为都在追赶。Tier IV 的开源模式类似 RISC-V 对 ARM 的挑战——如果设计够好，可能催生一批低成本自动驾驶芯片厂商。对 lainy：这是一个"去英伟达化"的长期趋势信号，但短期影响有限。</div>
+        <div class="ticker">📌 关联标的：NVDA（自动驾驶业务面临长期竞争）/ TSM 台积电（可能代工开源设计芯片）— 短期无影响，长期值得跟踪</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260916PD205/nvidia-autonomous-driving-ai-chip-design-chips.html" target="_blank">DIGITIMES</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂 — MSFT/GOOG/CoreWeave] — 当前受益环节：NVDA（Rubin ramp）+ HBM 内存（三星 zHBM 技术突破）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>特朗普称与伊朗"直接对话"，战争"有望结束"——但伊朗否认谈判存在</h4>
+        <p>9/17 特朗普在白宫表示已与德黑兰"直接对话"，称伊朗"想达成协议"，战争"有望"近期结束。然而伊朗方面否认谈判正在进行，称特朗普"欺骗性的"。伊朗此前拒绝了美国提出的 15 点和平方案，并坚持黎巴嫩必须纳入停火协议。同时，沙特与胡塞武装互相打击仍在持续，海湾国家承受着升级的攻击压力。美伊战争自 2/28 爆发以来已持续近 7 个月。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>特朗普的"宣布"与伊朗的"否认"之间的落差，是当前中东最大的不确定性。如果谈判确有其事 → 油价可能快速回落 $15-20（Brent 回到 $80s），全球风险偏好大升；如果是特朗普单方面造势 → 油价溢价持续，甚至可能因伊朗被激怒而升级。对 lainy：关注阿曼作为中间人的斡旋角色——上次阿曼-伊朗霍尔木兹协议接近达成，这次也可能走类似路径。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（谈判成功则大跌）/ SPY 美股（风险偏好回暖）/ GLD 黄金（避险降温但加息支撑）— 地缘博弈仍是油价最大变量</div>
+        <div class="source">🔗 Source: <a href="https://www.aljazeera.com/news/2026/9/17/trump-claims-direct-talks-with-iran-is-diplomacy-picking-up-again" target="_blank">Al Jazeera</a> · <a href="https://www.foxnews.com/live-news/iran-war-trump-talks-oil-gas-prices-midterms-09-17-26" target="_blank">Fox News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">沙特管道</span>
+        <h4>沙特东西管道被炸后重启霍尔木兹出口：Brent 回落至 $104.82，但欧洲柴油价格警告升级</h4>
+        <p>9/10 沙特东西输油管道遭无人机袭击（卫星图像显示 Medina 南部黑烟升起），这条管道是绕开霍尔木兹海峡的关键替代路线。9/17 CNBC 报道沙特已将部分原油出口转向通过霍尔木兹海峡以船对船方式在阿曼 Sohar 港附近转运，弥补管道关闭的供应缺口。Brent 11 月合约收 <strong>$104.82</strong>（<strong>-0.95%</strong>），WTI 10 月合约收 <strong>$101.91</strong>（<strong>-0.51%</strong>）。但欧洲领导人紧急应对柴油价格飙升——该管道也是欧洲柴油供应的关键通道。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>沙特的做法是"管道断了就走海路"——但霍尔木兹本身也有风险（伊朗控制）。这意味着全球原油运输的两条关键路径都在"带伤运行"。油价从 $80s 飙到 $100+ 只用了三周，现在回落到 $104 但远未正常化。对 lainy 的传导链：高油价 → 通胀粘性 → 美联储加息 → 科技股估值承压 → 港股受外资流出影响。这条链现在正在实时运行。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 — 高油价受益；但欧洲柴油危机可能倒逼 OPEC+ 增产</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html" target="_blank">CNBC</a> · <a href="https://www.aljazeera.com/news/2026/9/12/saudi-arabia-shuts-critical-oil-pipeline-after-drone-attack-what-happened" target="_blank">Al Jazeera</a> · <a href="https://www.euronews.com/my-europe/2026/09/17/european-leaders-rush-to-counter-looming-diesel-price-surge-as-saudi-pipeline-attacked" target="_blank">Euronews</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美] → 中游 [管道/航运 — 东西管道(受损)/霍尔木兹(替代)] → 下游 [炼化 — 欧洲柴油/亚洲成品油] — 当前受损环节：中游管道（被炸停运）+ 下游欧洲柴油（供应缺口）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美联储加息靴子落地 · 点阵图指向年内再加一次</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储加息</span>
+        <h4>FOMC 三年来首次加息 25bp 至 3.75%-4.00%：点阵图显示年内再加息一次，市场反而松了口气</h4>
+        <p>9/16 美联储 FOMC 一致决定加息 25 个基点，将联邦基金利率从 3.50%-3.75% 升至 <strong>3.75%-4.00%</strong>，这是 2023 年 7 月以来首次加息。点阵图显示：① 2026 年末利率中值 <strong>4.1%</strong>（对应再加息一次），18 名官员中 16 人预计年内至少再加一次；② 2027 年利率中值也升至 <strong>4.1%</strong>（高于 6 月预测的 3.6%），意味着高利率将持续更久；③ GDP 增速预测上调至 2.3%，失业率下调至 4.1%，PCE 通胀上调至 3.7%、核心 PCE 3.4%。主席 Warsh 未承诺后续加息时间表。9/17 市场反应：美股全线大涨（纳指 <strong>+1.7%</strong>，标普 <strong>+1.14%</strong>，道指 <strong>+0.61%</strong>），10 年期美债收益率从 5% 以上回落 7bp 至 <strong>4.93%</strong>，2 年期回落 6bp 至 <strong>4.67%</strong>。期货市场定价：10 月再加息概率 <strong>50.9%</strong>，12 月前至少再加一次概率 <strong>87%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 本周最重要的宏观事件。市场的"反常大涨"逻辑：加息靴子落地 + Warsh 没有暗示连续加息 = 不会更糟的 relief rally。但别被反弹迷惑——87% 概率 12 月前再加息一次意味着紧缩周期还没结束。对 lainy 的传导框架：① 美债 5% → 全球资产重新定价，港股尤其敏感（联系汇率制度下香港利率跟随美国）；② 美元指数 100.25 → 新兴市场资金外流压力；③ 高利率 + 高油价 = 通胀难回落 = 加息周期可能比预期更长。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，relief rally 受益）/ TLT 美债 ETF（收益率回落利好）/ 513130 港股通科技ETF — 短期反弹但中期受高利率压制</div>
+        <div class="source">🔗 Source: <a href="https://www.fx168news.com/article/1093838" target="_blank">FX168</a> · <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a> · <a href="https://en.sedaily.com/international/2026/09/18/nasdaq-jumps-17-percent-on-relief-over-feds-inflation" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>加息后黄金反弹至 $4,311：实物买盘吸收加息冲击，白银 +2.9%</h4>
+        <p>9/16 加息当日黄金一度跌至 $4,253 附近，但 9/17 物理黄金反弹至 <strong>$4,310.80</strong>/盎司，白银涨至 <strong>$65.52</strong>（<strong>+2.9%</strong>）。USAGOLD 报告指出实物买盘在加息后迅速入场吸收抛压。12 月黄金期货开于 <strong>$4,301.40</strong>，盘中触及 $4,354.60。分析师 9 月预期区间 $4,136-$5,304，月底保守目标 $4,444。Fortune 报道 9/16 黄金 $4,346/盎司，年涨幅 $659。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>加息本应打压黄金（提高持有成本），但实物买盘的韧性令人惊讶。这验证了一个结构性的趋势：央行购金 + 实物需求已经与利率周期"脱钩"。对 lainy：黄金在 $4,250-$4,350 区间震荡，加息落地后的反弹说明下方支撑很强。如果 10 月再加一次息，可能短期测试 $4,200，但中期$4,500+ 的趋势未变。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 600547 山东黄金 — 加息后实物买盘支撑强劲</div>
+        <div class="source">🔗 Source: <a href="https://www.usagold.com/daily-precious-metals-market-report-september-17-2026/" target="_blank">USAGOLD</a> · <a href="https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-thursday-september-17-2026-gold-prices-relatively-stable-following-fed-rate-increase-110852391.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">铜</span>
+        <h4>LME 铜价创历史新高 $14,694/吨：智利产量创 19 年新低，供需缺口扩大</h4>
+        <p>LME 三个月期铜 9/8 创下盘中历史新高 <strong>$14,694</strong>/吨，超过 1 月创下的前纪录 $14,527.50。核心驱动：智利——全球最大铜生产国——产量创 19 年来最低水平。CNBC 报道铜价本周至今涨约 1%，有望实现四周内第三周上涨。印度 MCX 铜 2025 年涨 61%，2026 年继续上涨。铜被市场视为"下一个经济周期"的核心金属——AI 数据中心、电网升级、新能源车都需要铜。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜是"经济的铜博士"——铜价创新高通常预示经济扩张。但这次的特殊之处在于"供给端驱动"（智利产量下降）而非纯粹需求拉动。对 lainy：① 铜价上涨 → 铜矿股利润弹性大（紫金矿业、江西铜业、Freeport）；② AI 数据中心用铜量是传统数据中心的 2-3 倍，这是结构性增量需求；③ 智利产量 19 年新低 = 矿业投资不足的长期问题，短期无解。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600368 紫金矿业 / 600362 江西铜业 / FCX Freeport-McMoRan / COPX 铜矿 ETF — 供给收缩+需求扩张，铜矿股受益</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/16/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.prnewswire.com/news-releases/copper-hit-a-record-high-as-chile-posts-its-weakest-output-in-19-years-302882178.html" target="_blank">PR Newswire</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">离岸信托税收</span>
+        <h4>离岸信托 20% 个税持续发酵：5 月起限制大陆客户通过香港中介买卖海外股票，7 月落地 20% 税，监管延伸至海外薪资和保险收入</h4>
+        <p>Dimsum Daily 报道（9/16）梳理了近期中国财富监管的连续动作：① 5 月起限制大陆客户通过香港中介进行海外股票交易；② 7 月对离岸信托三阶段（设立/存续/清算）征收 <strong>20%</strong> 个人所得税；③ 监管已开始对海外薪资和保险收入征税。这一系列措施正在重塑高净值人群的跨境财富管理架构。香港保险股和私银行受到直接影响。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是 lainy 作为金融从业者必须持续跟踪的政策线。7 月落地后 50 天，市场仍在消化影响。三条逻辑：① 离岸信托不再"免税" → 家族办公室需重新设计架构，香港/新加坡的信托业务模式被迫转型；② 限制海外股票交易 → 南向资金可能回流 A 股；③ 征税海外薪资 → 跨境人才派遣的税务成本上升。对 lainy：关注香港私银行（如瑞银香港、汇丰私行）的客户流失情况，以及新加坡是否因此受益。</div>
+        <div class="ticker">📌 关联标的：005.HK 汇丰控股 / 0388.HK 香港交易所（南向交易受限影响）— 短期承压；A 股可能因资金回流受益</div>
+        <div class="source">🔗 Source: <a href="https://www.dimsumdaily.hk/the-us-rate-hike-caps-hong-kong-property-it-wont-kill-the-rally/" target="_blank">Dimsum Daily</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/铜/油] — 当前关键变量：10 月是否连续加息（概率 51%），中东谈判能否突破</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金 / 银 / 铜 / 油</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $4,311 反弹 / 白银 $65.52 (+2.9%)：加息冲击被实物买盘吸收</h4>
+        <p>加息日黄金一度跌至 $4,253，但次日反弹至 <strong>$4,310.80</strong>。白银表现更强势，涨至 <strong>$65.52</strong>（<strong>+2.9%</strong>）。实物买盘在价格回调时迅速入场，USAGOLD 称这是"物理买家吸收加息冲击"的典型案例。12 月期货盘中高点 $4,354.60。</p>
+        <div class="why">🦞 <b>市场含义：</b>白银涨幅大于黄金 = 贵金属板块整体偏强，不是单纯的避险需求，而是工业+货币双属性驱动。白银的工业用途（光伏、电子）在 AI 时代有增量需求。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / COMEX 白银 / 518880 黄金ETF / GLD / SLV — 实物买盘支撑，中期看涨</div>
+        <div class="source">🔗 Source: <a href="https://www.usagold.com/daily-precious-metals-market-report-september-17-2026/" target="_blank">USAGOLD</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>LME 铜创历史新高 $14,694/吨：智利 19 年产量最低，AI+电网+新能源三重需求</h4>
+        <p>LME 铜 9/8 触及 <strong>$14,694</strong>/吨历史新高。智利产量创 19 年新低是供给端核心矛盾。需求端三重驱动：AI 数据中心铜用量 2-3 倍于传统数据中心、全球电网升级周期、新能源车持续放量。本周铜价涨约 1%，有望实现四周内第三周上涨。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>铜是"AI 时代被低估的金属"——大家都盯着 GPU 和 HBM，但数据中心建设需要大量铜缆、铜母排。供给端智利产量下滑是结构性问题（矿山老化、品位下降、投资不足），短期无法逆转。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600368 紫金矿业 / 600362 江西铜业 / FCX Freeport / COPX 铜矿 ETF — 供需双驱动，铜矿股利润弹性大</div>
+        <div class="source">🔗 Source: <a href="https://www.prnewswire.com/news-releases/copper-hit-a-record-high-as-chile-posts-its-weakest-output-in-19-years-302882178.html" target="_blank">PR Newswire</a> · <a href="https://www.cnbc.com/2026/09/16/stock-market-today-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $104.82 / WTI $101.91：沙特管道被炸后转向霍尔木兹出口，油价高位回落</h4>
+        <p>Brent 11 月合约收 <strong>$104.82</strong>（<strong>-0.95%</strong>），WTI 10 月合约收 <strong>$101.91</strong>（<strong>-0.51%</strong>）。沙特在东西管道被炸后，将部分出口转向霍尔木兹海峡船对船转运。美国原油库存数据与 API 预估差异大（API 预估 +710 万桶，实际不同）。油价月涨 <strong>+21.5%</strong>，年涨 <strong>+61.4%</strong>。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 $80s 到 $100+ 只用了三周。沙特"管道坏了走海路"是权宜之计，但霍尔木兹本身也有风险。如果美伊谈判取得进展，油价可能快速回落 $15-20；如果破裂，$120 不是不可能。对 lainy：当前油价对通胀的传导已经开始——美联储已经因此加息了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — 高油价受益；JETS 航空 ETF 受损</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/09/17/oil-prices-today-wti-brent-hormuz-iran-war.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金/银 — 央行购金+实物需求] / 工业金属 [铜 — 智利供给收缩+AI需求] / 能源 [油 — 沙特管道受损+霍尔木兹替代] — 当前受益环节：铜矿（供需缺口）+ 油气（地缘溢价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / 天然气 / 电力 / 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油</span>
+        <h4>沙特东西管道被炸影响持续：全球原油运输两条关键路径同时承压</h4>
+        <p>9/10 沙特东西输油管道遭无人机袭击后停运。该管道全长约 1,200 公里，是沙特绕开霍尔木兹海峡将东部油田原油输送至红海 Yanbu 港的关键替代路线。9/17 沙特已将部分出口转回霍尔木兹海峡（在阿曼 Sohar 港附近船对船转运），但欧洲柴油价格面临飙升风险——该管道也承担欧洲柴油运输任务。Al Jazeera 分析指出，这条管道和霍尔木兹海峡是全球原油运输的"两条命脉"，现在一条断了，另一条也在风险中运行。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是短期事件——管道修复需要时间，而胡塞武装已证明有能力反复打击沙特基础设施。对 lainy：全球原油运输的"冗余度"正在被消耗殆尽。如果霍尔木兹也出事，油价可能飙到 $130-150。三桶油（中石油、中石化、中海油）在高油价环境下利润弹性大。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / 0883.HK 中海油 / XOM 埃克森美孚 — 高油价环境受益</div>
+        <div class="source">🔗 Source: <a href="https://www.aljazeera.com/news/2026/9/14/why-saudi-arabias-east-west-pipeline-matters-for-global-oil" target="_blank">Al Jazeera</a> · <a href="https://www.euronews.com/my-europe/2026/09/17/european-leaders-rush-to-counter-looming-diesel-price-surge-as-saudi-pipeline-attacked" target="_blank">Euronews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">天然气</span>
+        <h4>美国天然气随油价波动：高油价环境下 LNG 贸易格局持续重塑</h4>
+        <p>随 Brent 突破 $100，天然气市场也受到影响——高油价环境下 LNG 贸易定价体系正在重塑。欧洲天然气库存进入秋季补充期，但中东地缘风险溢价外溢至整个能源板块。美国 LNG 出口终端建设加速，Cheniere Energy 等主要出口商受益于欧洲需求。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>天然气和原油在工业用途上有替代关系，油价高到一定程度后，部分发电和工业用户会转向天然气。对 lainy：关注美国 LNG 出口商（Cheniere）和中国天然气进口商（新奥股份、广汇能源）的价差机会。</div>
+        <div class="ticker">📌 关联标的：LNG 钱尼尔能源 / 603883 新奥股份 / 600256 广汇能源 — 欧洲需求+高油价溢出效应</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/energy" target="_blank">Bloomberg Energy</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">新能源</span>
+        <h4>LGES 与三星 SDI 储能订单填满北美两年产能：ESS 成为电池厂第二增长曲线</h4>
+        <p>DIGITIMES 报道，LG Energy Solution 和三星 SDI 的北美储能系统（ESS）订单已填满未来两年产能。这验证了储能作为电池厂"第二增长曲线"的判断——动力电池增速放缓，但储能需求因电网升级和可再生能源配储政策而爆发。同期，中国"十五五"规划重点支持金刚石材料用于 AI 散热，新能源+AI 的交叉领域成为新热点。</p>
+        <div class="why">🦞 <b>商业含义：</b>储能是从"新能源发电"到"新能源可用"的关键环节。没有储能，光伏/风电的间歇性问题无法解决。LGES 和三星 SDI 在北美市场拿到满产订单 = 美国储能市场正在爆发。对 lainy：中国储能龙头（宁德时代储能业务、阳光电源、亿纬锂能）也在跟进。</div>
+        <div class="ticker">📌 关联标的：373220.KS LGES / 006400.KS 三星 SDI / 300750 宁德时代（储能）/ 300274 阳光电源 — 储能需求爆发</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20260917VL221/samsung-hbm-accelerator-dram-data.html" target="_blank">DIGITIMES</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：原油 [开采 — 沙特阿美/三桶油] → 天然气 [LNG — Cheniere/新奥] → 电力 [电网升级] → 新能源 [储能 — LGES/宁德/阳光电源] — 当前受益环节：储能（订单爆满）+ 油气（高油价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 9/17 沪指 -0.41% 报 3875.60 / 深成指 -0.33% 报 13409.91 / 创业板 -0.40% / 成交 1.84 万亿</h4>
+      <p>9/17 A 股三大指数冲高回落集体收跌。美联储加息靴子落地后，有色矿业领跌（受美元走强压制），生物医药与机器人逆势走强。全市场超 <strong>2800</strong> 只个股下跌，成交额 1.84 万亿，较上日缩量 160 亿。<b>板块表现：</b>农业板块逆势大涨，医药/汽车走强；有色/矿业受压。<b>背景：</b>外资机构正加大 A 股配置力度，认为中国资产估值吸引力上升。9/16 前一日反弹中科创50 曾大涨 <strong>+4.14%</strong>，但 9/17 回吐部分涨幅。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 9/17 恒指 -0.44% 报 24,604 / 老铺黄金 -3% / 濰柴动力 +5.3%</h4>
+      <p>恒指 9/17 收报 <strong>24,604</strong> 点，跌 109 点。美联储加息 + 高油价双重压力下港股承压。老铺黄金跌 <strong>3%</strong>（金价波动传导），濰柴动力逆势涨 <strong>5.3%</strong>。9/18 港股投资日誌：中国人寿、中国神华等将召开股东大会，TAI PING CARPET、神威藥業等公布业绩。联系汇率制度下香港利率跟随美国上调，楼市和银行股承压。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 9/17 道指 51,778 (+0.61%) / S&amp;P 7,638 (+1.14%) / 纳指 26,418 (+1.69%)</h4>
+      <p>加息后 relief rally：三大指数全线大涨。纳指领涨 <strong>+1.69%</strong>，大型科技股 NVDA/AMZN 各涨 <strong>+2%</strong>，MSFT +1.5%。费城半导体指数涨 <strong>+3.14%</strong>，SK Hynix ADR +4.64%，Micron +5.5%，Intel +7.7%，Qualcomm +2.1%。10 年期美债收益率从 5%+ 回落 7bp 至 <strong>4.93%</strong>。The Wealth Alliance CEO Conzo 称市场反应可总结为"relief"——美联储正在解决通胀问题——但警告中东冲突仍可能引发极端波动。SOXX 芯片 ETF 涨 3%，连续两天反弹。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 9/17 KOSPI 报 6,717.97 / 外资抛售达 12 万亿韩元 / 韩国生产者价格回升</h4>
+      <p>KOSPI 9/17 收报 <strong>6,717.97</strong>，外资持续抛售，累计达 <strong>12 万亿韩元</strong>。韩国 8 月生产者价格环比 +0.2%，受热浪和能源成本推升，从 7 月的负值回升。同日新闻：韩国人 61 岁起重回"入不敷出"状态，老年人赤字首次超过儿童——老龄化经济压力加剧。三星电子发布 zHBM 技术（详见 AI 板块）。SK Hynix ADR 在美股涨 <strong>+4.64%</strong>，反映韩国存储双雄在 AI 时代的吸引力。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>LV、Gucci、Rolex 关店潮：中国奢侈品市场显著下行，中产阶级消费萎缩</h4>
+        <p>多家国际媒体报道，Louis Vuitton、Gucci、Balenciaga、Rolex 等国际奢侈品牌正在中国主要城市关闭门店。核心原因：① 消费者需求下降，经济走弱、债务增加、中产阶级收入停滞；② 房地产市场长期低迷拖累财富效应；③ 高净值人群消费趋于保守。ChinaRetailNews 称这是"中国奢侈品市场的一次重大下行"。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>奢侈品关店是"消费降级"的硬指标——品牌不会轻易关店，关店意味着同一商圈的坪效已经无法覆盖租金人工。对 lainy 的消费框架：① 中国奢侈品市场从"增量"转向"存量博弈"，品牌集中度将提升（LVMH 韧性 > Kering）；② 本土高端消费品牌（如老铺黄金）可能受益于"国潮替代"；③ 中产阶级消费萎缩 = 社零增速 +2.5% 的微观数据印证。前 8 个月社零 +2.5%，服务零售 (+5.3%) 远超商品零售 (+1.1%) 的结构性分化仍在持续。</div>
+        <div class="ticker">📌 关联标的：LVMH.PA / KER.PA / 6181.HK 老铺黄金（国潮替代受益）/ 600519 贵州茅台（高端消费分化）— 国际奢侈品承压，本土国潮品牌受益</div>
+        <div class="source">🔗 Source: <a href="https://brandequity.economictimes.indiatimes.com/news/business-of-brands/international-luxury-brands-close-stores-in-china-over-weak-consumer-demand/134308682" target="_blank">ET BrandEquity</a> · <a href="https://www.chinaretailnews.com/2026/09/16/28539-weak-consumer-demand-hits-international-luxury-brands-in-china/" target="_blank">ChinaRetailNews</a> · <a href="https://www.europesays.com/france/80384/" target="_blank">Asia News Network</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">社零数据</span>
+        <h4>中国前 8 月社零 +2.5%：消费稳步增长但力度温和，服务持续优于商品</h4>
+        <p>国家统计局数据：2026 年 1-8 月社零总额同比 <strong>+2.5%</strong>。China Daily 报道称消费支出保持"稳步增长"。但结合此前数据，服务零售 (+5.3%) 与商品零售 (+1.1%) 的 4.2 个百分点差距仍在延续。"买服务"替代"买商品"的结构性换轨持续。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>+2.5% 的增速说明消费不是崩塌，而是"弱复苏"。对 lainy 的投资框架：选消费股看"服务属性"——餐饮/文娱 > 传统零售/百货。白酒分化继续：高端宴请（服务场景）韧性强，低端光瓶酒承压。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端韧性）/ 002511 顺网科技（文娱）/ 000651 格力电器（家电承压）— 服务消费优于商品</div>
+        <div class="source">🔗 Source: <a href="http://global.chinadaily.com.cn/a/202609/17/WS6aab415ee4b06d4aa055e800.html" target="_blank">China Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">美国零售</span>
+        <h4>美国 8 月零售销售强劲反弹 +1.2%：远超预期，经济韧性信号强化</h4>
+        <p>美国 8 月零售销售环比 <strong>+1.2%</strong>，远超预期，强化经济韧性信号。非实体零售商 +2.6%，电子电器 +1.6%，服装 +0.7%，家具 +0.9%，食品服务 +1.2%。核心零售销售（排除汽车、燃油、建材、食品服务）跳涨 <strong>+1.4%</strong>，为今年以来最强劲表现。这一数据也是美联储 9/16 加息的重要依据之一。</p>
+        <div class="why">🦞 <b>市场含义：</b>美国消费强劲 = 经济没有衰退风险 = 美联储有空间继续加息。这对市场是"双刃剑"——好消息是不衰退，坏消息是利率更高更久。对 lainy：美国零售数据强 → 美元强 → 新兴市场资金外流 → 港股/A 股承压。这条传导链在 9/17 的 relief rally 中被暂时忽略，但 10 月会议前会重新成为焦点。</div>
+        <div class="ticker">📌 关联标的：SPY / XLY 可选消费 ETF（美国零售受益）/ 513130 港股通科技ETF — 美国消费强 = 美元强 = 新兴市场承压</div>
+        <div class="source">🔗 Source: <a href="https://retailslop.substack.com/p/retail-around-the-world-17-september-aa0" target="_blank">Retail Substack</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 锂/铜/铝] → 中游 [制造 — 电池/家电/食品加工] → 下游 [渠道 — 电商/超市/餐饮/奢侈品] — 当前受益环节：服务型消费（餐饮/文娱），受损环节：国际奢侈品（关店潮）+ 商品零售（增速低迷）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>圣塞巴斯蒂安电影节 9/18 开幕：第 74 届西班牙巴斯克海岸影展来袭</h4>
+        <p>第 74 届圣塞巴斯蒂安国际电影节 9/18 开幕，西班牙巴斯克海岸再次成为全球电影界焦点。这是欧洲秋季最重要的 A 类电影节之一，许多冲击颁奖季的影片选择在此首映。秋季影展季正在进行中，国际电影圈的目光从威尼斯转向圣塞巴斯蒂安。</p>
+        <div class="why">🦞 <b>花边点评：</b>圣塞巴斯蒂安是欧洲最有"文艺范儿"的电影节——没有戛纳那么商业，没有威尼斯那么政治，主打"好看的电影"。lainy 如果关注颁奖季，这里是早期风向标之一。</div>
+        <div class="source">🔗 Source: <a href="https://deadline.com/" target="_blank">Deadline</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">音乐</span>
+        <h4>Jay-Z 纪录片《Jay-Z in 8》9/18 HBO 首播：八集系列每周两集</h4>
+        <p>9/18 HBO 和 HBO Max 首播 Jay-Z 纪录片《Jay-Z in 8》前两集，之后每周五推出两集直到 10 月。这是对这位嘻哈传奇人物的深度纪录片系列，涵盖他从布鲁克林街头到成为亿万富翁企业家的完整历程。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Jay-Z 的故事就是"从街头到董事会"的活教材——从卖毒品的少年到 Tidal 创始人、Armand de Brignac 香槟老板、Roc Nation CEO。lainy 如果对"音乐人如何做商业"感兴趣，这部纪录片值得追。</div>
+        <div class="source">🔗 Source: <a href="https://www.howtogeek.com/new-shows-watch-this-weekend-netflix-prime-video-september-18/" target="_blank">How-To Geek</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>NBA 2026 选秀前瞻：Cameron Boozer 谈杜克心碎与选秀目标</h4>
+        <p>Sports Illustrated 报道，杜克大学球星 Cameron Boozer——NBA 球星 Carlos Boozer 之子——在选秀前瞻中谈及杜克赛季的"心碎"经历，以及他对自己 2026 年 NBA 选秀目标的期待。Boozer 被视为 2026 选秀的热门新秀之一。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>"球二代"在 NBA 越来越多了——Boozer、James（布朗尼）、O'Neal 都有孩子进入联盟。Cameron Boozer 如果在选秀中被高顺位选中，又是"虎父无犬子"的佳话。</div>
+        <div class="source">🔗 Source: <a href="https://www.si.com/" target="_blank">Sports Illustrated</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">科技花边</span>
+        <h4>Google Photos 将支持二维码保存到本地：分享照片更方便</h4>
+        <p>9/18 新浪科技报道，外媒 Android Authority 拆解 Google Photos 7.93.0 版本时发现，谷歌计划拓展照片二维码分享功能——此前仅支持二维码分享相册但无法保存二维码图片，新版将支持直接保存二维码到本地。同时谷歌还在开发全新的"收藏集"标签页功能。</p>
+        <div class="why">🦞 <b>小趣闻：</b>二维码分享听起来是个小功能，但在中国二维码已经是生活基础设施了——支付宝、微信、外卖全靠它。谷歌终于跟上了。</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/tech/digi/2026-09-18/doc-inisewti3575045.shtml" target="_blank">新浪科技</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学发现</span>
+        <h4>江西鄱阳湖发现全球新物种"九江喇叭虫"：中国首次发现该属新种</h4>
+        <p>近日江西鄱阳湖流域正式定名一种全球新物种——原生动物"九江喇叭虫（Stentor jiujiangensis）"。这是中国首次发现该属的新种，相关成果已于 8 月底发表在国际权威动物分类学期刊上。同时，科学家发现了人脑基因组在中年起开始发生大规模重组变化，为理解衰老与阿尔茨海默病风险提供了新线索。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>发现新物种在生物学界是"中了彩票"——全球已知的喇叭虫属物种本就不多，在中国水域发现新种说明本土生物多样性研究还有很大空间。人脑基因组的研究则更贴近 lainy 的关注——阿尔茨海默病药物研发是生物医药投资的热门赛道。</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908nqpw.html" target="_blank">新浪科学</a> · <a href="https://www.sciencedaily.com/" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
