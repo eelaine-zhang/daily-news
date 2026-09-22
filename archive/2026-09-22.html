@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-09-22</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .commod-group { margin-bottom: 16px; }
+  .commod-group h5 { font-size: 14px; margin: 0 0 8px; color: var(--text); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 9 月 22 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AMD 市值首破 $1 万亿：</b>芯片股全线反弹，AMD 成为继英伟达、台积电、Intel 之后第四家美国万亿美元芯片公司；TSMC 玻璃基板封装（CoPoS）技术推进，AI 封装产能竞赛升级。</li>
+      <li><b>习特会倒计时 + UNGA 超级周：</b>习近平 9/24 赴华盛顿国事访问，贸易休战到期、伊朗、台湾、稀土上桌；特朗普今日在联合国大会发言，伊朗总统佩泽什基安 9/23 发言——油价连跌四日至 $92。</li>
+      <li><b>离岸信托补缴大限仅剩 30 天：</b>财政部/税务总局 21 号公告 90 天缓冲期 10/22 截止，主动申报不收滞纳金；光伏出口退税 4 月归零后成交价已跌破成本线，行业深度亏损。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI & 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">AMD 万亿美元</span>
+        <h4>AMD 市值首破 $1 万亿！五日连涨 9%，成为第四家美国万亿美元芯片公司</h4>
+        <p>9/21 美股交易时段，AMD 股价大涨 <strong>9%</strong>，连续第五日上攻，市值首次突破 <strong>$1 万亿</strong>大关。AMD 成为继英伟达（NVDA）、台积电（TSM）、Intel（INTC，已回落）之后第四家达到万亿美元市值的美国芯片公司。核心驱动：① Meta 的 Muse AI 助手冲上 Apple App Store 免费榜第一，AMD 是 Meta 核心 GPU 供应商；② AMD 宣布芯片涨价约 <strong>10%</strong>；③ 市场资金从英伟达轮动至 AMD（CPU 替代叙事）。同日纳指收涨 <strong>2.3%</strong>创历史新高，标普 <strong>+1.5%</strong>，道指 <strong>+0.7%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>AMD 破万亿是 AI 芯片格局变化的标志——英伟达不再"一家独大"，AMD 正在分食 GPU 市场。关键信号：Meta 选择 AMD GPU 训练 Muse，说明 AMD 的 MI300/MI400 系列在推理场景已有竞争力。对 lainy 的金融视角：芯片股从"英伟达单极"变成"双极格局"，意味着 AI capex 的受益面在扩大，但英伟达的毛利率定价权可能被稀释。</div>
+        <div class="ticker">📌 关联标的：AMD（万亿美元新贵）/ NVDA（英伟达，资金轮动短期承压）/ SMH（半导体 ETF）/ 159992 半导体ETF（A 股）— AMD 受益，NVDA 短期资金分流</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/09/21/amd-stock-1-trillion-value.html" target="_blank">CNBC</a> · <a href="https://www.semafor.com/article/09/21/2026/amd-reaches-a-1-trillion-market-cap-as-chip-stocks-drive-rally" target="_blank">Semafor</a> · <a href="https://www.investopedia.com/market-update-amd-joins-the-trillion-dollar-market-cap-club-12132681" target="_blank">Investopedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC CoPoS</span>
+        <h4>TSMC 玻璃基板封装 CoPoS 进入关键验证期，面板厂转型半导体封装</h4>
+        <p>TSMC 正在推进新一代封装技术 CoPoS（Chip-on-Panel-on-Substrate），使用 <strong>310×310mm</strong> 方形玻璃基板替代传统圆形硅晶圆作为中介层。2026 年是设备和材料供应商的关键验证期。TrendForce 指出 TSMC 当前 CoWoS-L 封装将持续主导高端 AI 处理器至 2028 年，但 CoPoS 是下一代路线。与此同时，面板厂（如 AUO）正被 TSMC 和 Intel 争相拉拢，转型为半导体封装基地——AUO 股价单日大涨 <strong>9%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>封装正成为 AI 芯片的新瓶颈——芯片越做越大，硅中介层尺寸受限，玻璃基板是突破口。对 lainy 的产业链框架：① 先进封装 = AI 芯片的"后段门槛"，TSMC 在这里继续领跑；② 面板厂转型 = 产能跨界，降低封装成本；③ 关注 TSMC 供应链中的封装设备和材料公司。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电）/ ASE 开发投控（封装龙头）/ 2317 鸿海（旗下 SEMCO 封装）/ AUO 友达（面板转封装概念）— 先进封装链受益</div>
+        <div class="source">来源：<a href="https://gokhshtein.com/news/2026-09-20-tsmcs-glass-interposer-play-shortens-path-to-cheaper-ai" target="_blank">Gokhshtein</a> · <a href="https://www.inelectronics.co.uk/cowos-l-becomes-mainstream-as-ai-packages-grow/" target="_blank">IN Electronics</a> · <a href="https://finance.biggo.com/news/4c5631ed-a8a7-44bc-a0f9-20269f79e311" target="_blank">BigGo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix / 黄仁勋</span>
+        <h4>黄仁勋称明年芯片销量翻倍；SK Hynix HBM 技术逼近关键天花板</h4>
+        <p>英伟达 CEO 黄仁勋 9/17 在苏格兰 AI 峰会上重申"尽可能快地发展 AI"，预计 <strong>2027 年芯片销量翻倍</strong>。同时 SK Hynix 在 HBM 技术上逼近关键突破——HBM4 量产准备中，正通过 TSMC 制造逻辑基础裸片。AI 芯片需求持续超过 HBM 供给，存储芯片库存不足 10 天。分析机构指出全球半导体市场 2026 年预计超 <strong>$1.6 万亿</strong>，AI 需求推动增速翻倍。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄仁勋"翻倍"的底气来自 HBM 供应链的保障——SK Hynix 是核心。对 lainy：HBM 是 AI 军备竞赛的"弹药"，三星+SK Hynix 双寡头的格局意味着 HBM 定价权极强，远超传统 DRAM 周期。关注韩国存储双雄的季度财报指引。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达）/ 000660.KS（SK Hynix）/ 005930.KS（三星电子）/ MU（美光，被边缘化风险）— HBM 链核心受益</div>
+        <div class="source">来源：<a href="https://www.heygotrade.com/en/news/ai-chip-semiconductor-momentum-sk-hynix-nvidia-arm-asml-analog-devices/" target="_blank">Gotrade</a> · <a href="https://finance.yahoo.com/quote/NVDA/" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">高通骁龙峰会</span>
+        <h4>高通骁龙峰会 9/23-25 夏威夷登场：第六代骁龙 8 至尊版 2nm 工艺，AI 算力再跃升</h4>
+        <p>高通将于 9/23-25 在夏威夷举办 Snapdragon Summit 2026，预计发布第六代骁龙 8 至尊版（Snapdragon 8 Elite Gen 6），采用 <strong>2nm</strong> 工艺（台积电 N2P），AI 算力大幅提升。端侧 AI 推理是核心主题——手机端运行大模型不再需要云端。上周 Samsung 电子股价单日大涨 <strong>4.98%</strong>，部分受芯片出口数据利好推动（8 月芯片出口同比 <strong>+259%</strong>）。</p>
+        <div class="why">🦞 <b>读给你听：</b>端侧 AI 是下一个增长点——不是所有 AI 都要在数据中心跑。高通 2nm 芯片 = 手机端能独立跑 AI 模型 = 对云端 GPU 的依赖可能减缓。对 lainy 的框架：AI 需求不只是"英伟达卖 GPU"，还分"云端训练"（英伟达主导）和"端侧推理"（高通/联发科主导）两条线。</div>
+        <div class="ticker">📌 关联标的：QCOM（高通）/ 005930.KS（三星，2nm 代工客户）/ 2454 联发科（端侧 AI 竞争对手）— 端侧 AI 链受益</div>
+        <div class="source">来源：<a href="https://www.koreatimes.co.kr/economy/20260921/kospi-regains-7000-as-samsung-electronics-shares-surge-on-record-chip-exports" target="_blank">Korea Times</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO/高通] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游代工（2nm 验证期）+ 先进封装（CoPoS 玻璃基板）+ HBM 内存（供需缺口持续）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>习特会 + UNGA 超级周</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag geo">习特会</span>
+        <h4>习近平 9/24 赴华盛顿国事访问：贸易休战到期 + 伊朗 + 台湾 + 稀土全部上桌</h4>
+        <p>习近平将于 <strong>9 月 24 日</strong>抵达华盛顿进行国事访问，这是自 2015 年以来习近平首次访问白宫。特朗普将亲赴安德鲁斯空军基地迎接（罕见礼遇）。核心议程：① 中美贸易休战协议 <strong>11 月到期</strong>，是否延长是焦点；② 美国要求中国约束伊朗（中国是伊朗最大贸易伙伴和石油买家，日均 <strong>147 万桶</strong>）；③ 台湾问题——美国国防合作；④ 稀土出口管制；⑤ 美国指控中国从前沿 AI 系统提取能力。分析人士指出：中方目前处于强势地位——美国受伊朗战争拖累，特朗普支持率降至政治生涯最低，不太可能对华采取强硬措施。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年下半年最重要的地缘事件。对 lainy 的金融视角：① 贸易休战延长 = 市场风险偏好提升，港股/A 股受益；② 若涉及稀土管制谈判 = 稀土板块（北方稀土、广晟有色）波动；③ 伊朗问题上的中美博弈直接影响油价——如果中国承诺减少购买伊朗石油，油价有下行空间。The Independent 分析称"这是世界权力格局深刻转移的体现"。</div>
+        <div class="ticker">📌 关联标的：SPY（美股，risk-on 受益）/ 513130 港股通科技ETF / 600111 北方稀土（稀土管制概念）/ Brent 原油（中美博弈影响溢价）</div>
+        <div class="source">来源：<a href="https://www.independent.co.uk/asia/china/xi-trump-summit-washington-iran-war-sanctions-b3048496.html" target="_blank">The Independent</a> · <a href="https://www.csis.org/programs/trump-xi-2026-summits" target="_blank">CSIS</a> · <a href="https://en.wikipedia.org/wiki/2026_state_visit_by_Xi_Jinping_to_the_United_States" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">UNGA 超级周</span>
+        <h4>特朗普今日在联合国大会发言聚焦伊朗；伊朗总统 9/23 发言——外交转机还是加码施压？</h4>
+        <p>第 78 届联合国大会本周在纽约开幕。特朗普定于 <strong>9/22（今日）</strong>在大会发言，预计聚焦伊朗核威胁和其政府处理国际冲突的方式。伊朗总统佩泽什基安将于 <strong>9/23</strong>发言——这是美伊战争近 7 个月来伊朗领导人首次在国际舞台发声。特朗普还将会见波斯湾阿拉伯国家领导人讨论战争下一阶段。美财长 Bessent 称将对伊朗实施"史上最严厉制裁"。同时，美国提出 <strong>$50 亿</strong>中东重建基金。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>UNGA 是观察美伊走向的最佳窗口。三种情景：① 特朗普释放谈判信号 → 油价快速回落 $10-15；② 继续强硬 → 油价维持 $95+；③ 意外宣布与伊朗总统会面 → 地缘溢价大幅消退。目前市场定价偏向情景 ②，但如果出现 ① 或 ③，就是大类资产的拐点。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（外交进展则回落）/ GLD 黄金（避险降温则回调）/ SPY（风险偏好提升则涨）</div>
+        <div class="source">来源：<a href="https://www.npr.org/2026/09/21/nx-s1-5971262/united-nations-general-assembly" target="_blank">NPR</a> · <a href="https://www.cnn.com/2026/09/21/world/unga-2026-what-to-expect-latam-intl" target="_blank">CNN</a> · <a href="https://gulfnews.com/world/americas/un-general-assembly-2026-trump-iran-war-gaza-ukraine-and-8-things-to-watch-1.500682887" target="_blank">Gulf News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹 · 油价回落</span>
+        <h4>Brent 连跌四日至 $92，沙特霍尔木兹通行量回升至 290 万桶/日——地缘溢价消退？</h4>
+        <p>原油价格连跌第四个交易日，Brent 跌至约 <strong>$92.3</strong>/桶（日跌 <strong>-3.86%</strong>），WTI 跌至 $88 区间。核心驱动：① 沙特过去 6 天通过霍尔木兹海峡的原油运输量升至 <strong>290 万桶/日</strong>，卫星图像显示沙特港口停泊超 14 万桶运力的超级油轮，为 6 月以来最高；② 外交斡旋进展——阿曼-伊朗霍尔木兹协议持续推进；③ 市场预期本周 UNGA 可能带来外交突破。但分析机构仍警告：霍尔木兹仍处于"半关半开"状态，已累计影响 <strong>28 亿桶</strong>出口，摩根大通仍看 $150 风险。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 $106 回落至 $92 是地缘溢价消退的信号——但还没有完全消退。$92 仍比战前 $72 高出 $20。本周 UNGA + 习特会将决定油价方向：外交突破 → $80s；僵局 → $90s 维持；恶化 → $100+。对 lainy：油价回落 = 通胀压力减轻 = 美联储 12 月加息概率（当前 88%）可能下调 = 科技股估值压力缓解。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源 ETF）— 油价回落利空上游，利好航空/消费（JETS / XLY）</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.vantagemarkets.com/market-news/oil-falls-third-day-hormuz-diplomacy-september-21-2026/" target="_blank">Vantage Markets</a> · <a href="https://discoveryalert.com/analysis/hormuz-blockade-oil-supply-crisis-september-2026/" target="_blank">Discovery Alert</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美] → 中游 [航运 — 霍尔木兹通行恢复中] → 下游 [炼化 — 中石化/ExxonMobil] — 当前变化：中游瓶颈缓解，地缘溢价从 $14 收窄至 $8-10</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 & 市场 <small>加息消化期 · 习特会前夜</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag macro">Fed 加息消化</span>
+        <h4>上周 Fed 加息 25bp 至 3.75-4.00%，市场消化中——12 月再加息概率 88%</h4>
+        <p>美联储 9/16 加息 <strong>25bp</strong>至 <strong>3.75-4.00%</strong>，为 2023 年以来首次。上周五美股涨跌互现，但 9/21 周一纳指大涨 <strong>2.3%</strong>创历史新高。本周经济数据较轻：费城联储非制造业调查、里士满联储制造业指数，多位 Fed 官员讲话。10 年期美债收益率回到 <strong>5%</strong>附近。CME FedWatch 显示 12 月再加息概率 <strong>88%</strong>。高盛预计还会有第二次。但同时油价回落正在缓解通胀预期。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>市场已经从"加息恐慌"过渡到"加息消化"阶段——纳指创新高说明市场接受了"高利率 + AI 赚钱"的组合。但对 lainy 的框架：加息周期没有结束，12 月大概率再加。真正的风险不是加息本身，而是"高利率维持多久"——如果 2027 年不降息，科技股的估值天花板就在这里。</div>
+        <div class="ticker">📌 关联标的：QQQ（纳指，创新高）/ SPY / IEF（7-10 年国债，利率敏感）/ 513130 港股通科技ETF — 高利率环境下选有盈利的科技股</div>
+        <div class="source">来源：<a href="https://www.ft.com/us-economy" target="_blank">FT</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Charles Schwab</a> · <a href="https://kctrades777.substack.com/p/weekly-outlook-plan" target="_blank">KC Trades</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">💰 财税/财富监管</span>
+        <h4>离岸信托补缴大限仅剩 30 天！财政部 21 号公告 90 天缓冲期 10/22 截止</h4>
+        <p>中国财政部、国家税务总局 7/24 发布《关于离岸信托个人所得税有关事项的公告》（2026 年第 21 号），对离岸信托设立、存续、清算三阶段征收 <strong>20%</strong> 个税。90 天缓冲期至 <strong>10 月 22 日</strong>截止：① 2026 年 1 月 1 日前信托历史收益，主动申报补缴不收滞纳金；② 逾期不缴按日加收滞纳金，严重的按偷逃税罚款。新规并非否定离岸信托，而是改变了中国税务居民使用离岸信托的税务逻辑。同时，财政部 8/27 第 25 号公告 9/1 起施行，规范增值税进项抵扣；钠离子电池、固态电池 <strong>2026.9.1-2028.12.31 继续免征消费税</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这是 lainy 作为金融从业者必须关注的大事。21 号公告的影响面极广——所有在中国有税务居民身份的高净值人士，通过离岸信托持有的资产都要重新审视税务成本。10/22 大限 = 30 天倒计时，家族办公室、私人银行、律所都在加班处理。对 lainy：关注港股中资金融股（信托/私人银行业务承压）、以及对高净值资产配置流向的影响（新加坡/香港信托架构调整需求上升）。</p>
+        <div class="ticker">📌 关联标的：港股信托/私银行概念承压 — 00388 渣打 / 02388 中银香港 / 新加坡信托架构服务商标的受益</div>
+        <div class="source">来源：<a href="https://www.stheadline.com/zh-hans/investment/3616069/" target="_blank">星岛头条</a> · <a href="https://www.sohu.com/a/1076947166_121124620" target="_blank">搜狐</a> · <a href="https://news.qq.com/rain/a/20260921A078EK00" target="_blank">腾讯新闻</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">光伏/锂电退税退坡</span>
+        <h4>光伏出口退税 4 月归零后成交价跌破成本线，锂电退税 2027 年全面取消</h4>
+        <p>2026 年 4 月 1 日财政部/税务总局第 2 号公告生效，<strong>249 项光伏全产业链产品</strong>出口退税率由 9% 直接归零（两年内从 13%→9%→0）。电池产品分两步：2026 年 4-12 月退税率从 9% 降至 6%，<strong>2027 年 1 月 1 日起全面取消</strong>。政策效果：光伏成交价已跌破成本线，行业深度亏损；锂电因储能需求对冲暂盈利，但远期产能过剩压力仍在。1 月 6 日市场监管总局约谈光伏协会及通威、协鑫等龙头，要求不得约定产能/价格/市场划分——反垄断红线划定。同时钠离子电池、固态电池 2026.9.1-2028.12.31 继续免征消费税。</p>
+        <div class="why">🦞 <b>读给你听：</b>退税归零 = 政策主动刺破光伏低价竞争泡沫。此前企业把退税额转化为降价空间，导致出口价低于成本。现在退税取消 + 消费税恢复 = 价格底线被迫抬升。对 lainy 的产业链框架：① 光伏龙头（通威、隆基、晶澳）短期利润承压但长期利于产能出清、价格回稳；② 锂电退坡稍缓，但 2027 年全面取消 = 储能电池出口也要算成本了；③ 钠电池/固态电池免消费税 = 政策扶持新技术路线。</div>
+        <div class="ticker">📌 关联标的：600438 通威股份（短期承压，长期产能出清受益）/ 601012 隆基绿能 / 300750 宁德时代（锂电退税 2027 归零）/ 002460 赣锋锂业 — 光伏短期受损，钠电/固态受益</div>
+        <div class="source">来源：<a href="https://news.qq.com/rain/a/20260921A062C100" target="_blank">腾讯新闻</a> · <a href="https://www.huxiu.com/article/4892804.html" target="_blank">虎嗅</a> · <a href="https://www.sohu.com/a/1078977602_121281111" target="_blank">搜狐</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：习特会结果 + UNGA 伊朗进展 + 12 月加息预期</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金价承压 · 油价回落 · 铜高位震荡</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="commod-group">
+          <h5>🥇 贵金属</h5>
+          <p><b>黄金</b>：COMEX 金价约 <strong>$4,370/oz</strong>（-0.31%），受美元走强和获利了结压制。上周 Fed 加息后不跌反涨，但本周回落。FedWatch 显示 12 月加息概率 88%，利率高位压制贵金属上行空间。但央行购金（中国 18 个月连续增持）和去美元化提供结构性支撑。Q3 预测 <strong>$4,396</strong>。</p>
+          <p><b>白银</b>：约 <strong>$66.7/oz</strong>（-0.7%），在美中峰会前维持高位。白银今年涨幅依然强劲，工业需求（光伏银浆）+ 贵金属属性双支撑。</p>
+        </div>
+        <div class="why">🦞 <b>市场含义：</b>黄金在 $4,350-4,400 区间盘整——加息压力 vs 央行买盘对撞。如果本周 UNGA 出现外交突破（油价下跌 + 避险降温），黄金可能短期回调至 $4,200-4,300，但中长期央行购金趋势不变。白银受益于光伏需求，但波动更大。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股）/ 600547 山东黄金 / SLV（白银 ETF）— 中长期看涨，短期回调可能</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-monday-september-21-2026-silver-prices-rising-ahead-of-us-china-summit-135458890.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <div class="commod-group">
+          <h5>🔧 工业金属</h5>
+          <p><b>铜</b>：LME 铜价在 <strong>$13,000/吨</strong> 上方高位震荡，受 AI 数据中心 + 绿色转型双驱动。印度 MCX 铜 2025 年涨 <strong>61%</strong>，2026 年继续上行。智利产量 19 年新低持续支撑供给端。但需求端中国房地产疲软构成上方阻力。</p>
+          <p><b>碳酸锂</b>：约 <strong>¥134,300/吨</strong>（上周 -5.6%），持续下跌。光伏退税归零 + 锂电退税退坡 = 电池产业链成本压力加大。但储能需求对冲，锂电暂盈利。</p>
+        </div>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>铜是"AI + 新能源"双引擎的交汇点——数据中心用铜量是传统建筑的 2-3 倍，每 GW 数据中心约需 5 万吨铜。供给端智利产量不足 = 价格有支撑。碳酸锂则在"光伏退坡 + 锂电退坡"政策组合下面临下行压力，但储能需求是缓冲垫。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / COPX（铜矿 ETF）/ 600362 江西铜业 / Freeport (FCX) / Southern Copper (SCCO) — 铜受益；碳酸锂 / 002460 赣锋锂业 / 002466 天齐锂业 — 锂承压</div>
+        <div class="source">来源：<a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <div class="commod-group">
+          <h5>🛢️ 能源商品</h5>
+          <p><b>Brent 原油</b>：约 <strong>$92.3/桶</strong>（-3.86%），连跌四日。沙特霍尔木兹通行量回升至 290 万桶/日，外交斡刻进展压低地缘溢价。年初至今仍涨 <strong>53.6%</strong>。</p>
+          <p><b>天然气/LNG</b>：亚洲现货 LNG 约 <strong>$26/mmbtu</strong>，较 2 月涨 <strong>150%</strong>。卡塔尔 LNG 货物受霍尔木兹封锁影响，欧洲库存历史低位，Qatari cargo 通行受限。OilPrice 报道称 LNG 价格仍有 <strong>1/3 上涨空间</strong>。</p>
+        </div>
+        <div class="why">🦞 <b>为什么值得看：</b>油价回落 = 通胀压力减轻 = 加息预期降温。但 LNG 价格仍居高不下——欧洲冬天来了，库存低 + 卡塔尔供应受阻 = 能源危机可能重演 2022 年。对 lainy：关注 LNG 概念股（新奥股份、广汇能源）和天然气运输船（LNG carrier）订单。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / NYMEX 天然气 / 600028 中国石化 / 601857 中国石油 / LNG 钱尼尔能源（CHRD）— 油价回落，LNG 仍紧</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://www.europesays.com/europe/142615/" target="_blank">Europe Says</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [央行购金 + 去美元化] → 工业金属 [AI 数据中心 + 新能源铜需求] → 能源 [霍尔木兹恢复中 + LNG 仍紧] — 当前变化：油价地缘溢价收窄，铜结构性短缺持续，黄金高位盘整</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油回落 · LNG 紧张 · 光伏新政</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag hbm">原油</span>
+        <h4>沙特霍尔木兹通行量升至 290 万桶/日，但"半关半开"格局延续——油价从 $106 回落至 $92</h4>
+        <p>过去 6 天沙特通过霍尔木兹海峡的原油运输量升至 <strong>290 万桶/日</strong>，卫星显示沙特港口停泊超 14 万桶运力的超级油轮群，为 6 月以来最高。但霍尔木兹仍处于"半关半开"状态，累计已影响 <strong>28 亿桶</strong>出口。Trump 政府提出 <strong>$50 亿</strong>中东重建基金。本周 API 原油库存数据将公布。同时中国正在安排第二个 LNG 接收站接收受制裁的俄罗斯原油货物。</p>
+        <div class="why">🦞 <b>市场含义：</b>霍尔木兹"半关半开"= 油价从极端溢价区间回落，但尚未回到正常。$92 仍有约 $8-10 的地缘溢价。如果本周 UNGA 出现外交突破，可能再降 $5-10。对 lainy：油价是当前全球宏观的"总开关"——油价落 = 通胀落 = 加息预期降 = 科技股估值升。</div>
+        <div class="ticker">📌 关联标的：Brent / 600028 中国石化 / XOM 埃克森美孚 / XLE — 油价回落利空上游，利好航空化工</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.reuters.com/business/energy/" target="_blank">Reuters</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">天然气/LNG</span>
+        <h4>亚洲 LNG 价格较 2 月涨 150%至 $26/mmbtu，欧洲库存历史低位——能源危机 2.0？</h4>
+        <p>受霍尔木兹封锁影响，卡塔尔 LNG 货物通行受限，亚洲现货 LNG 价格升至约 <strong>$26/mmbtu</strong>，较 2 月涨 <strong>150%</strong>。欧洲天然气库存处于历史低位，多个分析机构（BBC、FT、Bruegel）预测欧洲 2026 年可能重演 2022 年能源危机。OilPrice 报道称 LNG 价格仍有 <strong>1/3 上涨空间</strong>。与此同时，中国安排第二个 LNG 接收站接收受制裁的俄罗斯货物；欧盟 2027 年起全面禁止俄罗斯 LNG 贸易。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>LNG 是当前被低估的危机线。霍尔木兹封锁影响的不只是原油——卡塔尔是全球最大 LNG 出口国之一，其货物必须经过霍尔木兹。欧洲刚经历 2022 年能源危机，如果 2026 年冬天再叠加卡塔尔 LNG 供应受阻，可能引发新一轮能源政治动荡。对 lainy：LNG 概念股和天然气运输船订单是中长期主题。</div>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 / 600803 新奥股份 / 600256 广汇能源 / CHRD 钱尼尔能源 / LNG 运输船概念 — LNG 高位受益</div>
+        <div class="source">来源：<a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://www.europesays.com/europe/142615/" target="_blank">Europe Says</a> · <a href="https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">新能源</span>
+        <h4>中国测试首个海底太阳能电站 + 加拿大取消中国光伏十年关税 + 光伏组件中标价 0.73 元/W</h4>
+        <p>三则新能源新闻：① 中国在南海 10 米水深测试全球首个实用化海底太阳能电站（SCMP 报道）；② 加拿大正式取消对中国光伏产品长达十年的反倾销关税，被视为积极信号；③ 9/14-9/20 中国光伏组件中标容量 <strong>5,444MW</strong>，平均中标价 <strong>0.73 元/W</strong>，TCL 中环以 0.71 元/W 中标 1,000MW。但退税归零后行业利润承压，成交价已跌破成本线。钠离子电池、固态电池 2026.9.1-2028.12.31 继续免征消费税。</p>
+        <div class="why">🦞 <b>读给你听：</b>海底太阳能 = 海上光伏新场景，解决陆地用地紧张。加拿大取消关税 = 中国光伏出海少了一个障碍。但 0.73 元/W 的中标价在退税归零后意味着什么？= 亏钱出货。行业正在经历"政策倒逼产能出清"的阵痛期。对 lainy：光伏短期是"至暗时刻"，但产能出清后龙头集中度提升是长期利好。</div>
+        <div class="ticker">📌 关联标的：601012 隆基绿能 / 600438 通威股份 / 688599 天合光能 / 阳光电源 300274 — 短期承压，中长期产能出清后龙头受益</div>
+        <div class="source">来源：<a href="https://now.solar/2026/09/21/china-tests-first-practical-submarine-solar-farm-at-10-metre-depth-in-open-sea-south-china-morning-post/" target="_blank">SCMP via Solar Now</a> · <a href="https://now.solar/2026/09/22/canada-ends-decade-long-duties-on-chinese-photovoltaic-products-expert-sees-positive-signal-global-times/" target="_blank">Global Times</a> · <a href="https://now.solar/2026/09/21/smm-brief-pv-module-bidding-capacity-from-9-14-9-20-was-5444-44-mw-with-an-average-winning-bid-price-of-0-73-yuan-w-shanghai-metals-market/" target="_blank">SMM</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：原油 [霍尔木兹恢复中] → 天然气/LNG [卡塔尔受阻，欧洲低库存] → 新能源 [光伏退税归零阵痛期，海底光伏新场景] — 当前变化：原油回落，LNG 仍紧，光伏政策倒逼产能出清</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 9/21 沪指 +0.97% 报 3949.91 / 深成指 +0.65% / 创业板 +0.80% / 超 4500 只个股上涨</h4>
+      <p>9/21 收盘三大指数全线飘红，医药、房地产板块爆发。沪指全天震荡走高收 <strong>3949.91</strong>（<strong>+0.97%</strong>），深成指 <strong>+0.65%</strong> 报 13730.02，创业板 <strong>+0.80%</strong>。超 <strong>4500 只</strong>个股上涨，超百家涨停，"吃药喝酒"行情重现——医药生物、白酒板块领涨。但"股王"贵州茅台跌逾 <strong>5%</strong>（罕见单日大跌）。新华传媒收购概念引发"新华"系涨停潮（新华制药、内蒙新华、新华百货等）。沪深两市半日成交 <strong>1.33 万亿</strong>。今日 A 股尚未开盘（9/22 为交易日），关注习特会前市场情绪。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 9/21 恒指 +1.2% 报 25,042.71 / 恒生科技同步上涨 / 医药股大涨</h4>
+      <p>9/21 恒生指数收涨 <strong>+1.2%</strong> 报 <strong>25,042.71</strong>，重回 25000 上方。恒生科技指数上涨，恒生生物科技指数大涨近 <strong>5%</strong>。中国生物制药涨超 <strong>8%</strong>，科伦博泰生物涨 <strong>7.7%</strong>。全球股市在油价回落 + 美中峰会预期下集体反弹。Macau Business 报道港股、A 股、日股全线上涨。关注：习特会前港股可能维持 risk-on 态势，但若贸易谈判传出不利消息则快速反转。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 9/21 纳指 +2.3% 创历史新高 / 标普 +1.5% / 道指 +0.7% / AMD 破万亿</h4>
+      <p>9/21 美股大涨：纳指 <strong>+2.3%</strong> 收创历史新高（超越 6/2 纪录），标普 <strong>+1.5%</strong>（距历史新高 0.4%），道指 <strong>+0.7%</strong>。核心驱动：① AMD 市值首破 $1 万亿（+9%）；② 油价连跌四日缓解通胀担忧；③ AI 交易重新回归。Arm（ARM）和 Western Digital（WDC）盘前均涨超 2%。10 年期美债收益率回到 5% 附近。但本周经济数据较轻，关注 Fed 官员讲话和 UNGA 消息。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 9/21 KOSPI +1.65% 报 7,007.72 重回 7000 / 三星 +4.98% / SK Hynix +0.59%</h4>
+      <p>9/21 KOSPI 收涨 <strong>+1.65%</strong> 报 <strong>7,007.72</strong>，重回 7000 点关口。三星电子收报 274,000 韩元（<strong>+4.98%</strong>），受 8 月芯片出口同比 <strong>+259%</strong> 数据提振。SK Hynix <strong>+0.59%</strong> 报 1,868,000 韩元。KOSDAQ <strong>+1.11%</strong> 报 836.27。现代汽车 -1.1%、LG 能源解决方案下跌。半导体板块领涨，AI 需求持续推动韩国芯片出口创新高。</p>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品承压 · 消费数据</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag biz">LVMH</span>
+        <h4>LVMH 股价年内跌 35% 创 2020 以来新低——中国市场需求疲软 + 继承人不明</h4>
+        <p>Bloomberg 9/21 分析指出，LVMH 股价 <strong>2026 年已跌约 35%</strong>，创 2020 以来最低。核心问题：① 中国市场需求持续疲软——消费者从"买 logo"转向"买体验"；② Bernard Arnault 继承人问题不明朗；③ Lululemon 中国市场miss 已在 9 月初被证实；④ LV 在"Molly Tea 事件"后形象受损加深。分析认为 LVMH 需要修复在华形象并明确继承方案。Jing Daily 报道 Bottega Veneta 任命韩国演员宋慧乔为品牌代言人，显示奢侈品正在转向韩国市场。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>LVMH 跌 35% = 奢侈品周期下行的缩影。对 lainy 的消费框架：① "买体验 > 买商品"趋势在中国持续，传统奢侈品承压；② 品牌转向韩国 = 韩国文化输出带动消费；③ 关注 LVMH 估值是否进入"抄底区间"——但需等中国需求企稳信号。</div>
+        <div class="ticker">📌 关联标的：LVMH.PA（路易酩轩）/ MC.PA / 0700.HK 腾讯（消费替代受益——数字体验）— 奢侈品短期承压</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/opinion/articles/2026-09-21/lvmh-shares-are-cheap-for-a-reason" target="_blank">Bloomberg</a> · <a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/lvmh-moet-hennessy-louis-vuitton-stock-nears-52-week-low-as-margins-come/70143130" target="_blank">AD-HOC-News</a> · <a href="https://jingdaily.com/intels/2026-09/21" target="_blank">Jing Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国消费数据</span>
+        <h4>百观数据 8 月更新：Lululemon 中国 miss 确认，LV 下滑加深，白酒转"价值深耕"</h4>
+        <p>百观（Baiguan）9/21 发布 8 月中国消费数据更新：① Lululemon 中国市场miss（此前预判已被 9 月初财报证实）；② LV 在 Molly Tea 事件后下滑加深而非消退；③ 白酒行业从"规模扩张"转向"价值深耕"——品酒师站上行业 C 位，武汉酒博会定档 10 月；④ 奢侈品行业从"卖 logo"转向"卖体验"，中国年轻消费者与数字化私域成为增长核心。中国品牌出海方面：墨西哥中国品牌汽车销量上半年涨 <strong>30%</strong>，尽管 1 月加征关税仍未阻止进口增长。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这些数据验证了之前"服务消费 > 商品消费"的判断。对 lainy：消费股选股核心看"服务属性"——文娱/餐饮 > 传统零售/奢侈品。白酒两极分化持续：高端（茅台）韧性强但短期有波动（9/21 茅台跌 5%），中低端承压。中国汽车出海是亮点——墨西哥/东南亚/中东市场在打开。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（短期波动，长期韧性）/ 002511 顺网科技（文娱服务）/ LULU Lululemon（中国 miss 承压）— 服务消费 > 商品消费</div>
+        <div class="source">来源：<a href="https://www.baiguan.news/p/china-consumer-data-august-2026-luxury-louis-vuitton-laopu-gold-luckin-guming-tea-coffee-pop-mart-labubu-nike-lululemon-sportswear-retail-spending-offline-payment-brand-performance-investor-outlook" target="_blank">Baiguan</a> · <a href="https://www.reuters.com/world/china/" target="_blank">Reuters China</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌设计/制造] → 中游 [渠道/零售] → 下游 [消费者 — 从"买商品"转向"买体验"] — 当前受益环节：服务型消费（餐饮/文娱），受损环节：传统奢侈品（LVMH -35%）+ 传统零售</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>Emmy 颁奖 + 流浪地球 3</small></h2>
+    <div class="cards">
+
+      <div class="card">
+        <span class="tag fun">Emmy 2026</span>
+        <h4>2026 Emmy 颁奖：Widow's Bay 狂揽 14 奖破纪录！Matthew Rhys 双料视帝</h4>
+        <p>第 78 届 Emmy 颁奖典礼揭晓，《Widow's Bay》成为最大赢家，破纪录拿下 <strong>14 项</strong>艾美奖。Matthew Rhys 凭《Widow's Bay》和《The Beast in Me》拿下双料视帝（剧情类和限定剧最佳男主角）。《The Pitt》和《DTF St. Louis》也是大热获奖作品。Netflix 同期宣布 Greta Gerwig 执导的《纳尼亚》真人版正在制作中，《World War Z》续集也在推进。Miley Cyrus 获得好莱坞星光大道星牌。</p>
+        <div class="why">🦞 <b>花边点评：</b>Widow's Bay 14 奖是历史级别的横扫——如果 lainy 最近剧荒，这剧值得一看。Greta Gerwig 执导纳尼亚 = 《芭比》导演拍《纳尼亚》，期待值拉满。Matthew Rhys 双料视帝也说明流媒体时代优质内容集中在少数头部作品。</div>
+        <div class="source">来源：<a href="https://www.goldderby.com/gallery/hells-kitchen-season-25-cast/" target="_blank">Gold Derby</a> · <a href="https://therollingtape.com/emmys-buzz-and-more-what-you-missed-this-week/" target="_blank">The Rolling Tape</a> · <a href="https://ca.rollingstone.com/tv-movies/tiff-2026-award-winners/" target="_blank">Rolling Stone Canada</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">中国影视</span>
+        <h4>《流浪地球 3》（上部）定档春节档！《披荆斩棘 2026》三公淘汰引争议</h4>
+        <p>中国电影 9/21 半年度业绩说明会上宣布：① 《流浪地球 3》（上部）计划春节档登陆院线；② 国庆档参与出品《小猪佩奇》合家欢动画。综艺方面，《披荆斩棘 2026》第三场公演结果揭晓，刘畊宏与张卓尔双双止步，张卓尔爆冷出局引发观众热议。王俊凯 27 岁生日演唱会热闹非凡，徐洁儿看完演唱会后发微博庆生却手滑艾特错账号登上热搜。</p>
+        <div class="why">🦞 <b>轻松一下：</b>流浪地球 3 定档春节 = 郭帆团队继续押注中国科幻大IP。第一部和第二部都是档期票房冠军，第三部只要特效不崩基本稳了。披荆斩棘的淘汰争议说明综艺热度还在——"爆冷"是最好的话题制造机。lainy 周末如果刷到王俊凯演唱会的热搜，就是这么回事。</p>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908o9hm.html" target="_blank">新浪影视</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908o7ce.html" target="_blank">新浪明星</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育/国际</span>
+        <h4>Wayne Rooney 将参加《我是名人》！Dolly Parton 生前预录视频接受终身成就奖</h4>
+        <p>英格兰足球传奇 Wayne Rooney 与《我是名人》（I'm A Celebrity）节目进行高级谈判，有望追随妻子 Coleen 的脚步（2024 年亚军）。美国乡村音乐传奇 Dolly Parton 于 8 月去世前预录了一段视频，在 2026 Americana Honors & Awards 上接受终身成就奖，令人动容。</p>
+        <div class="why">🦞 <b>花边一句：</b>Rooney 上真人秀 = 退役球星"第二职业"的经典路径。Dolly Parton 的预录视频则是"用自己的方式告别"的感人故事。</div>
+        <div class="source">来源：<a href="https://www.skysports.com/football/transfer-paper-talk" target="_blank">Sky Sports</a> · <a href="https://abcnews.com/entertainment" target="_blank">ABC News</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
