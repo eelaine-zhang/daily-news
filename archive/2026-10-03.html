@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-03</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14px; }
+  .card .why { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); color: var(--text-dim); font-size: 13px; font-style: italic; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block .closed { color: var(--text-dim); font-style: italic; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .card { padding: 22px 24px; }
+  .card h4 { font-size: 17px; line-height: 1.5; }
+  .card p { font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr { box-shadow: 0 2px 8px rgba(74, 70, 64, 0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { color: var(--macro); }
+  .tldr li b { color: var(--accent); }
+  .market-block { padding: 18px 20px; }
+  .holiday-banner { background: #FFF8E1; border: 1px solid #E0C97A; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #8B7355; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 3 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 国庆黄金周第 3 天 · A 股休市中</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美 9 月非农仅 +2.9 万人远逊预期</b>，7 月数据下修至负值，失业率微升至 4.2%——美债收益率回落，美股周线纳指涨 1.3%，但 Fed 加息预期仍高达 70%。</li>
+      <li><b>G7 宣布释放最多 1 亿桶战略储备</b>，欧洲同意释放大量柴油库存压价格；同时伊朗 IRGC 首次公开承认每天打击霍尔木兹海峡目标，联合国 IMO 再次暂停护航。</li>
+      <li><b>美逮捕加州男子走私 $3 亿英伟达芯片至中国</b>，英伟达已删除半数亚洲白名单买家；台积电考虑德州新建数百亿美元园区扩产 AI 芯片。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>英伟达走私案 · 台积电德州 · 美光 NVHBM</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达走私案</span>
+        <h4>美国逮捕加州男子走私 $3 亿英伟达 AI 芯片至中国，英伟达删除半数亚洲白名单买家</h4>
+        <p>10/1 Bloomberg 深度报道揭示，美国出口管制非但未消除英伟达在中国的存在，反而催生了一个庞大的影子贸易网络——从新加坡查抄的豪宅到台湾截获的货物，遍布全球。10/2 美国联邦检察官逮捕加州居民 Greg Lui，指控其走私含 <strong>$3 亿</strong>英伟达 AI 芯片的服务器至中国，涉嫌共谋、走私和洗钱。FBI 称涉及 H100 GPU。英伟达随后删除了半数以上此前授权的亚洲 AI 芯片买家，在新加坡、马来西亚和日本加强尽职调查。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是出口管制执行层面的一次重大升级。$3 亿的走私规模意味着这不是个案，而是系统性渠道。英伟达主动收紧白名单 = 在政府压力下自保。对 lainy 的视角：① 中美芯片脱钩的实际执行远比纸面复杂——禁而不绝，但灰色通道在收窄；② 英伟达短期股价可能有监管压力，但中国市场收入早已归零，影响有限；③ 国产替代逻辑（寒武纪、华为昇腾）反而因走私被打压而加强。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，监管风险但基本面不变）/ 688256 寒武纪（国产替代受益）/ 002049 紫光国微 — 走私打压利好国产替代情绪</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/features/2026-10-01/nvidia-faces-questions-over-china-ai-chip-smuggling-cases" target="_blank">Bloomberg</a> · <a href="https://www.bloomberg.com/news/articles/2026-10-02/man-charged-by-us-with-illegally-shipping-nvidia-chips-to-china" target="_blank">Bloomberg(2)</a> · <a href="https://arstechnica.com/tech-policy/2026/10/us-arrests-tech-ceo-accused-of-smuggling-300m-in-nvidia-chips-into-china/" target="_blank">Ars Technica</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">台积电德州</span>
+        <h4>台积电考虑德州新建数百亿美元园区，AI 芯片需求"无休止"驱动海外扩产</h4>
+        <p>Bloomberg 10/1 报道，台积电正评估在德州新建一座晶圆厂园区，将为其多年美国扩产计划再增加数百亿美元投资。这是台积电继亚利桑那州一期、二期之后的第三个美国选址，核心驱动是英伟达和苹果"无休止的" AI 硬件需求。台积电 2026 年营收创历史新高，AI 芯片需求是主引擎。10/15 台积电将召开法说会，市场关注其美国扩产路线图及 CHIPS Act 补贴进展。</p>
+        <div class="why">🦞 <b>商业含义：</b>台积电去美国已经是"三连投"了。德州选址的信号：① 亚利桑那产能不够用了；② 德州有更好的电力和土地条件；③ 政治压力下的"在美制造"继续加码。对 lainy：台积电在美国的资本开支越大，毛利率短期承压（美国成本是台湾 2-3 倍），但长期绑定美政府补贴和客户关系。HBM 方面，台积电同时为三大内存厂做 base die，已成为 AI 供应链的"咽喉"。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电，AI 需求主引擎）/ NVDA / AAPL / SMH（半导体 ETF）— 台积电是 AI 供应链咽喉</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-10-01/tsmc-mulls-multibillion-dollar-texas-campus-for-more-ai-chips" target="_blank">Bloomberg</a> · <a href="https://finance.yahoo.com/technology/ai/articles/tsmc-mulls-multibillion-dollar-texas-102454782.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">美光 NVHBM</span>
+        <h4>美光与英伟达联合开发定制 HBM4E（NVHBM），使用台积电外部 base die——三大内存厂全部上了台积电车</h4>
+        <p>DIGITIMES 10/2 报道，美光正在推进 NVHBM——与英伟达联合开发的定制高带宽存储产品。美光将使用外部制造的 base die（由台积电代工），押注定制化能带来更高附加值。美光高管 DeBoer 表示已与英伟达合作超一年开发 HBM4E/NVHBM，这将是市场上第一款主要定制 HBM 产品。至此，全球三大内存厂（SK Hynix、三星、美光）的 HBM base die 全部由台积电制造。</p>
+        <div class="why">🦞 <b>读给你听：</b>HBM 的竞争格局发生了一个微妙变化——以前是"三星 vs SK Hynix 争英伟达订单"，现在美光也杀进来了，而且走的是"定制化"路线（NVHBM 是英伟达专属规格，不走 JEDEC 标准）。这意味着：① HBM 不再是标准品，而是"定制芯片"——利润更高但门槛也更高；② 台积电在 HBM 供应链中的地位从"代工"升级为"平台"——三大内存厂都要找它做 base die；③ 美光此前在 HBM3E 输给 SK Hynix，现在通过绑定英伟达定制路线弯道超车。</div>
+        <div class="ticker">📌 关联标的：MU（美光，HBM 弯道超车）/ 000660.KS（SK Hynix）/ 005930.KS（三星）/ TSM（台积电，HBM base die 垄断）— 台积电是 HBM 链隐形赢家</div>
+        <div class="source">来源：<a href="https://www.digitimes.com/news/a20261002PD216/micron-hbm-dram-bandwidth-design.html" target="_blank">DIGITIMES</a> · <a href="https://thecryptobasic.com/2026/10/01/micron-stock-slips-after-earnings-beat-nvidia-co-designed-hbm4e-to-use-foundry-process/" target="_blank">TheCryptoBasic</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/光刻 — ASML/信越] → 中游 [代工 — TSMC（base die 垄断）/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游台积电（HBM base die + AI 芯片代工双垄断）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹 · G7 释放储备</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗 IRGC 首次公开承认每天打击霍尔木兹海峡目标，联合国 IMO 再次暂停护航行动</h4>
+        <p>NYT 10/2 报道，伊朗伊斯兰革命卫队（IRGC）周三首次公开确认其在霍尔木兹海峡每 24 小时打击一次目标，称伊朗南部海岸每天听到的爆炸声来自其攻击行动。Reuters 10/2 报道，联合国国际海事组织（IMO）在阿曼湾一艘船只遭攻击后，再次暂停了通过霍尔木兹海峡的护航行动。G7 领导人 10/2 发表声明谴责伊朗持续攻击邻国，并赞赏美国确保霍尔木兹海峡商业通行畅通的努力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>IRGC 从"不承认不否认"转为公开承认每天打击——这是心理战升级的信号。IMO 再次暂停护航 = 国际社会手里的工具在失效。对 lainy：霍尔木兹每天约 2000 万桶原油通过，"半关半开"格局已持续 6 个月，市场已经把 $10-15 的地缘溢价定价进去了。但如果 IMO 护航彻底停摆，油价可能再跳 $5-10。G7 释放战略储备就是应对这个风险。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价持续）/ 600028 中国石化 / 601857 中国石油 / XLE — 油价高企三桶油受益</div>
+        <div class="source">来源：<a href="https://www.nytimes.com/2026/10/02/world/middleeast/iran-strait-hormuz-attacks-oil.html" target="_blank">New York Times</a> · <a href="https://www.reuters.com/world/iran/" target="_blank">Reuters</a> · <a href="https://www.iranintl.com/en/liveblog/202609269384" target="_blank">Iran International</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">G7 释放储备</span>
+        <h4>G7 宣布释放最多 1 亿桶战略石油储备，欧洲同意释放"大量"柴油库存——Trump 11 月选举前压油价</h4>
+        <p>Al Jazeera 10/2 报道，G7 宣布将释放最多 <strong>1 亿桶</strong>战略石油储备以应对油价飙升。Trump 10/2 表示欧洲已同意释放"大量"柴油库存。FT 10/2 报道欧洲柴油价格大幅下跌。Guardian 报道英国正与欧洲盟友商讨释放紧急柴油储备。Trump 同时威胁可能实施柴油出口禁令。NBC News 确认美国政府要求欧洲盟友释放柴油战略储备以增加全球供应。这一切发生在 11 月美国中期选举前——油价是选民最敏感的议题。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这是典型的"选举前压油价"操作。1 亿桶听起来多，但全球日消费约 1 亿桶——仅相当于 1 天的供应。柴油价格回落直接利好运输/航空/物流板块。但注意：战略储备释放是"一次性"的，不改变供需基本面。如果霍尔木兹真的出了大事，储备用完后油价会报复性反弹。对 lainy 的框架：短期油价可能从 $100 回到 $90s，但地缘风险溢价不会完全消失。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（短期承压）/ 柴油 / JETS（航空 ETF，柴油降价受益）/ XLI（工业 ETF，运输成本下降）— 短期利好柴油下游消费端</div>
+        <div class="source">来源：<a href="https://www.aljazeera.com/news/2026/10/2/trump-says-europe-agrees-to-release-massive-amount-diesel-stockpile" target="_blank">Al Jazeera</a> · <a href="https://www.bnnbloomberg.ca/markets/oil/2026/10/02/europe-agrees-to-release-stocked-diesel-oil-trump-says/" target="_blank">BNN Bloomberg</a> · <a href="https://www.nbcnews.com/business/energy/trump-diesel-reserves-europe-ban-rcna600967" target="_blank">NBC News</a> · <a href="https://www.theguardian.com/business/2026/oct/01/britain-talks-european-allies-eu-emergency-diesel-stockpiles-reserves" target="_blank">Guardian</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹通行] → 下游 [炼化/柴油 — 欧洲炼厂/中石化] — 当前受益环节：下游柴油消费端（G7 释放储备压价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>9 月非农 · Fed 加息预期 · 金价回调</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">9 月非农</span>
+        <h4>美国 9 月非农仅 +2.9 万人远逊预期，7 月下修至负值，失业率微升至 4.2%——但 Fed 加息预期仍 70%</h4>
+        <p>BLS 10/2 公布：9 月非农就业 +29,000，远低于市场预期，7 月数据下修至 <strong>-10,000</strong>（从 +21,000 下修），失业率微升至 <strong>4.2%</strong>。Schwab 指出数据公布后美债收益率回落，股市早盘走高。然而 Mining.com 报道 Fed 加息预期仍高达 <strong>70%</strong>——油价高企 + Fed 9 月已加息 25bp 至 3.75-4.00% 的背景下，市场认为弱就业不足以阻止 Fed 继续抗通胀。Trading Economics 数据显示本周 S&P +0.2%，纳指 +1.3%，道指 -319 点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 最需要关注的宏观信号。弱就业 + Fed 仍想加息 = "滞胀风险"正在显现。7 月就业从 +21,000 下修到 -10,000 是非常罕见的——说明劳动力市场比想象中更弱。但 Fed 9 月刚加了 25bp，油价还在 $100 附近，通胀压力不减。对 lainy：滞胀环境下，黄金（抗通胀）+ 美债（衰退避险）是经典配置，但 Fed 加息会压黄金（实际利率上升）。这就是为什么金价近期在 $4,200 附近反复——两股力量对撞。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，弱就业下利率回落利好科技）/ GLD 黄金（$4,200 关口攻防）/ TLT（美债 ETF，弱就业推升降息预期但 Fed 仍鹰）— 弱就业 vs 鹰派 Fed = 滞胀博弈</div>
+        <div class="source">来源：<a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS</a> · <a href="https://finance.yahoo.com/economy/articles/september-2026-jobs-report-payrolls-123334753.html" target="_blank">Yahoo Finance</a> · <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank">Schwab</a> · <a href="https://www.mining.com/gold-price-erases-2026-gains-as-fed-hike-bets-climb-to-70-silver-slides/" target="_blank">Mining.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金回调</span>
+        <h4>黄金跌破 $4,200，连续第二周下跌——油价高企推升 Fed 加息预期，实际利率压制金价</h4>
+        <p>Trading Economics 10/2 数据，黄金跌破 <strong>$4,200/盎司</strong>，正走向连续第二周下跌。FXEmpire 分析指金价 $4,200 和白银 $60 支撑位成为焦点。核心逻辑：油价维持 $100 附近 → 通胀粘性 → Fed 加息预期 70% → 实际利率上升 → 持有黄金的机会成本增加。此前 9 月初金价一度跌至 $4,374（COMEX 12 月合约），为 8 月以来最弱。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金从 9 月的 $4,700+ 高点回落到 $4,200 以下，跌了约 10%。但这个回调不是趋势反转，而是"Fed 加息恐慌"叠加"获利了结"。央行购金趋势不变（中国央行连续 18+ 个月增持），地缘风险不减。对 lainy：如果 Fed 确认再加一次息，金价可能短暂下探 $4,000-4,100，但那可能是中长期买入窗口。黄金的"底"由央行购金和地缘风险托住，"顶"被实际利率压住。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 600547 山东黄金 — 短期承压，中长期央行购金支撑</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.fxempire.com/forecasts/article/gold-and-silver-price-forecast-metals-slide-as-oil-fuels-fed-fears-1632618" target="_blank">FXEmpire</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/实际利率] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：Fed 加息预期 70% vs 弱就业，博弈方向未定</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>原油 · 天然气 · 贵金属</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">原油</span>
+        <h4>Brent 跌至 $99.68（-2.57%）——G7 释放 1 亿桶战略储备 + 欧洲柴油降价，油价短期承压</h4>
+        <p>Trading Economics 10/2 数据，Brent 原油跌至 <strong>$99.68</strong>/桶，单日跌幅 <strong>2.57%</strong>。月度仍涨 4.36%，同比涨 <strong>54.47%</strong>。FT 报道欧洲柴油价格大幅下跌，因欧盟考虑在 Trump 压力下释放 5000 万桶储备。NYMEX 天然气期货报 $2.93/MMBtu。EIA 预测美国天然气库存将在 10/31 达到 3,969 Bcf，高于五年均值 <strong>5%</strong>。G7 释放储备 + 天然气库存充足 = 短期能源价格有回调空间，但霍尔木兹风险仍在。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Brent 从 9 月的 $103-104 回落到 $99-100 区间，核心驱动是 G7 释放储备。但别忘了 IRGC 每天在打霍尔木兹——如果护航彻底停摆，储备释放只是"缓冲垫"而非"解药"。天然气方面，美国库存高于均值 5%，意味着冬季供暖需求有保障，天然气价格短期不会飙升。对 lainy：油价短期可能回到 $90s，但不要把它当成趋势反转——地缘溢价随时可能回来。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / NYMEX 天然气 — 短期回调，地缘溢价未消</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://markets.ft.com/data/commodities" target="_blank">FT Markets</a> · <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">贵金属</span>
+        <h4>黄金 $4,200 以下 / 白银 $60 支撑测试——油价推升加息预期，贵金属双双承压</h4>
+        <p>KITCO 10/2 现货数据，黄金在 $4,200 下方运行，周线连续第二周下跌。FXEmpire 分析指白银同时测试 $60 支撑位。核心逻辑：油价高企 → 通胀粘性 → Fed 加息预期 70% → 实际利率上升 → 持有黄金/白银的机会成本增加。TD Economics 认为，地缘风险和央行购金仍为黄金提供下行支撑，但高实际利率限制上行空间。</p>
+        <div class="why">🦞 <b>商业含义：</b>金银同跌但驱动不同——黄金跌是因为利率预期，白银跌是因为工业需求疲软（经济放缓）。白银的 $60 是关键技术位，跌破可能引发止损盘。对 lainy：如果你看好黄金的中长期逻辑（央行购金 + 去美元化），当前的回调可能是分批建仓窗口。白银的波动更大，适合更激进的仓位。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF / GLD / SLV（白银 ETF）/ 600547 山东黄金 / 600916 中国黄金 — 金银短期承压，中长期逻辑不变</div>
+        <div class="source">来源：<a href="http://www.kitco.com/price/precious-metals" target="_blank">KITCO</a> · <a href="https://www.fxempire.com/forecasts/article/gold-and-silver-price-forecast-metals-slide-as-oil-fuels-fed-fears-1632618" target="_blank">FXEmpire</a> · <a href="https://economics.td.com/commodity-price-report" target="_blank">TD Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [央行购金 → 黄金ETF → 金矿股] / 原油 [OPEC+ → 油运 → 炼化 → 成品油] — 当前关注：G7 释放储备短期压油价，但霍尔木兹风险溢价未消</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>G7 战略储备 · 天然气库存</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">战略储备</span>
+        <h4>G7 释放 1 亿桶 + 欧洲柴油库存释放 + 美国天然气库存超均值 5%——全球能源供应链"急救包"同时打开</h4>
+        <p>本周能源市场三条线同时释放：① G7 宣布释放最多 <strong>1 亿桶</strong>战略石油储备（Al Jazeera）；② 欧洲同意释放"大量"柴油库存（BNN Bloomberg, NBC News）；③ EIA 预测美国天然气库存 10/31 达 3,969 Bcf，高于五年均值 <strong>5%</strong>。Trump 同时威胁可能实施柴油出口禁令以压低国内价格。FT 报道欧洲柴油价格应声大跌。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>三条线同时开闸，短期油价和柴油价格大概率继续回落。但注意三个"但是"：① 1 亿桶 = 全球 1 天消费量，用完就没了；② 霍尔木兹 IRGC 每天在打，航运随时可能中断；③ Trump 出口禁令如果实施，反而可能扭曲全球成品油贸易流——美国柴油不出口 = 全球其他地方柴油更缺。对 lainy：短期能源股可能回调，但不要以为地缘风险消失了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 柴油 / 600028 中国石化 / XOM 埃克森美孚 / CVX 雪佛龙 / NYMEX 天然气 / LNG 钱尼尔能源 — 短期回调但地缘溢价未消</div>
+        <div class="source">来源：<a href="https://www.aljazeera.com/news/2026/10/2/trump-says-europe-agrees-to-release-massive-amount-diesel-stockpile" target="_blank">Al Jazeera</a> · <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a> · <a href="https://markets.ft.com/data/commodities" target="_blank">FT Markets</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油气开采 — OPEC+/美国页岩] → 中游 [炼化/储存 — 战略储备] → 下游 [成品油/电力 — 柴油/天然气] — 当前受益环节：下游柴油消费端（储备释放压价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股休市 / 港股 / 美股 / 韩股</small></h2>
+    <div class="holiday-banner">📢 A 股国庆假期休市（10/1-10/7），10/8 恢复交易。港股除 10/1 外正常交易。以下为最近交易日数据。</div>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 国庆休市中（10/1-10/7），10/8 恢复交易</h4>
+      <p class="closed">A 股因国庆黄金周休市。节前最后一个交易日（9/30 周三）沪指收于 3,900 附近，深成指及创业板指也处于近期震荡区间。节后关注：① 9 月经济数据公布（CPI/PPI/社融）；② 国庆消费数据是否超预期提振消费板块；③ 美股本周走势对节后 A 股开盘的引导。市场普遍预期节后 A 股有望"开门红"——历史上国庆后首日上涨概率约 60%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/2 正常交易，恒指延续震荡</h4>
+      <p>港股 10/2 正常交易（10/1 国庆休市一天）。受美股前一日纳指走高带动，科技股有所企稳。但美债收益率高企 + Fed 加息预期 70% 继续压制港股估值。节后关注：南向资金恢复流入节奏、恒指能否守 24,000 关口。本周关注美国 CPI 数据（如公布）对 Fed 路径的进一步指引。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — S&P 7,666 (+0.2%) / 纳指 26,872 (+0.04%) / 道指 50,927 (+0.04%)（9/30 收盘）</h4>
+      <p>9/30 收盘三大指数微涨：S&P <strong>+0.2%</strong> 报 7,666.45，纳指 <strong>+0.04</strong> 报 26,871.60，道指 +0.04% 报 50,926.56。10/1 开盘延续温和上涨，S&P +0.2%，纳指 +0.3%。10/2 弱非农数据后收益率回落，芯片股反弹。本周：S&P +<strong>0.2%</strong>，纳指 +<strong>1.3%</strong>，道指 -319 点。Nvidia 周内涨 1.3%，Broadcom 涨 4.6%（Q3 销售超预期）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 6,971（+1.95%）周四收盘，三星/SK Hynix 领涨结束三连跌</h4>
+      <p>KOSPI 10/1 收盘 <strong>+1.95%</strong> 报 6,971，结束三连跌。三星电子和 SK Hynix 机构买盘涌入带动芯片板块反弹。10/2 早盘回吐部分涨幅，Samsung 持平，SK Hynix 受内存芯片乐观情绪支撑。韩国 9 月 CPI +2.9%（8 月 +3.1%），回落至 3% 以下但能源成本仍高。KOSDAQ 回升至 900 上方。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>国庆黄金周 · 文旅消费开门红</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">国庆黄金周</span>
+        <h4>国庆黄金周首日文旅消费开门红：景区门票 +30%，21.3 亿人次跨区域出行，"请3休13"催生超长假期</h4>
+        <p>潮新闻 10/1 报道，2026 国庆黄金周首日文旅消费迎来开门红：<strong>全国景区门票同比增长近 30%</strong>，多地热门景区门票售罄、博物馆客流大增。交通运输部预计 7 天假期全国跨区域出行达 <strong>21.3 亿人次</strong>。今年中秋与国庆仅隔 3 个工作日，"请3休13"拼出最长 13 天连续假期。文化和旅游部启动全国国庆文化和旅游消费月，各地推出超 2 万场次文旅活动、发放超 <strong>3.1 亿元</strong>消费券。北京酒店预订率接近爆满。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>21.3 亿人次 = 日均 3 亿人出行，规模史上最高。"请3休13"是今年新现象——消费者主动"创造"长假，旅游消费意愿强。对消费股映射：① 景区/酒店/餐饮受益（黄山旅游、峨眉山、海底捞）；② 长线游 + 入境游双升（China Travel 持续圈粉）；③ 县域"反向旅游"热度不减。关注节后公布的旅游收入数据。</div>
+        <div class="ticker">📌 关联标的：600058 黄山旅游 / 600138 中青旅 / 002707 众信旅游 / 601888 中国中免 / 6862 海底捞 — 黄金周消费数据提振文旅板块</div>
+        <div class="source">来源：<a href="https://tidenews.com.cn/news.html?id=3575565" target="_blank">潮新闻</a> · <a href="https://finance.sina.com.cn/jjxw/2026-10-01/doc-inittqyc6531489.shtml" target="_blank">新浪财经</a> · <a href="https://www.sina.cn/weibo/detail/5349548044061392.html" target="_blank">新浪微博</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [交通/住宿 — 航司/酒店] → 中游 [景区/餐饮 — 门票/客单价] → 下游 [零售/免税 — 中免/王府井] — 当前受益环节：全链受益（黄金周消费高峰）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>NBA 季前赛开打</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NBA</span>
+        <h4>2026-27 NBA 季前赛今日开打！热火 vs 猛龙加拿大站率先登场，ESPN 10/8 开始转播</h4>
+        <p>NBA 官网确认 2026-27 赛季季前赛 10/3 开打，首场为热火 vs 猛龙的 NBA Canada Games，NBA TV 7:00 PM ET 直播。ESPN/ESPN2 将于 10/8 开始转播 5 场季前赛，首场国王 vs 湖人（10:30 PM ET, ESPN2）。本季看点：火箭和独行侠将在 10 月于澳门打两场季前赛；NBA 同时在探索欧洲赛事扩展。常规赛 10/20 开幕。</p>
+        <div class="why">🦞 <b>轻松一下：</b>NBA 季前赛虽然不赌胜负，但对球迷来说是"等了整个夏天终于有球看了"的时刻。今年看点：① 火箭澳门赛 = NBA 在中国市场的回归信号；② NBA 探索欧洲联赛 = 全球化下一步。lainy 如果喜欢篮球，10/3 晚可以看看热火 vs 猛龙。</div>
+        <div class="source">来源：<a href="https://www.nba.com/news/key-dates" target="_blank">NBA.com</a> · <a href="https://sports.yahoo.com/nba/article/how-to-watch-the-2026-nba-preseason-channels-where-to-stream-games-schedule-and-more-163000759.html" target="_blank">Yahoo Sports</a> · <a href="https://espnpressroom.com/press-release/espn-tips-off-its-coverage-of-the-2026-nba-preseason-on-thursday-october-8/" target="_blank">ESPN Press Room</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
