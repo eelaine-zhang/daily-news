@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-08</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .sub-group { font-size: 14px; font-weight: 600; color: var(--text-dim); margin: 16px 0 8px; padding-left: 4px; border-left: 2px solid var(--border); padding-left: 8px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 8 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 国庆节后首个交易日</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>美债 5.35% 创 24 年新高：</b>10 年期美债收益率冲破 5.35%（2002 年来最高），30 年期破 5.70%，房贷利率升至 7.49%——美联储纪要指向年内再加息一次，S&P/纳指从纪录高点回落。</li>
+      <li><b>A 股节后首日：</b>国庆休市期间海外普涨（纳指 +2.75%、日经 +5.89%），但港股承压（恒指 -1.35%），多家券商看好节后修复反弹，关键看成交量能否回到 2 万亿上方。</li>
+      <li><b>英伟达 RTX Spark 开卖：</b>英伟达联手微软推出 Arm-based Windows AI PC（$2,899 起），ASUS ProArt 预购已开，DGX Station for Windows Q4 上市——AI 从数据中心走向桌面。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AI 从数据中心走向桌面</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">NVIDIA × Microsoft</span>
+        <h4>英伟达 RTX Spark AI PC 开卖：Arm-based Windows 笔记本 $2,899 起，DGX Station for Windows Q4 上市</h4>
+        <p>10/7 微软 Surface 发布会上，英伟达与微软联合推出 RTX Spark 系列 Arm-based Windows AI PC，起售价 <strong>$2,899</strong>（128GB RAM），由英伟达与联发科合作设计芯片（S-Dielet CPU + G-Dielet GPU 双 chiplet 架构）。ASUS ProArt P16/P14 预购当日开启，首批美国发货。同时发布 <strong>DGX Station for Windows</strong>（搭载 GB300 Blackwell Ultra GPU，748GB 内存，20 PFLOPs），Q4 2026 由 ASUS/Dell/GIGABYTE/HP/MSI/Supermicro 出货。NVIDIA 股价 10/7 小跌 <strong>0.74%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 算力从云端走向终端的标志性事件。RTX Spark = 英伟达首次在消费级 PC 市场推出 Arm-based 芯片，直接挑战 Intel/AMD 的 x86 地位。对联发科而言，这是进入高端计算芯片的跳板。对 lainy 的市场含义：① AI PC 换机潮可能成为 2027 年消费电子最大驱动力；② Intel 的 CPU 定价权进一步被侵蚀（已累计涨价 30%）；③ 英伟达不再只是"数据中心公司"，变成全栈计算公司。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达）/ MSFT（微软）/ INTC（Intel，承压）/ 2454 联发科（联发科，受益）— 英伟达+联发科受益，Intel 受损</div>
+        <div class="source">🔗 Source: <a href="https://www.engadget.com/2279642/microsoft-windows-surface-event-2026-live-blog-nvidia-rtx-spark-laptop-ultra/" target="_blank">Engadget</a> · <a href="https://www.unite.ai/nvidia-and-microsoft-bring-rtx-spark-laptops-ai-agents-to-windows-pcs/" target="_blank">Unite.AI</a> · <a href="https://press.asus.com/news/press-releases/asus-proart-rtx-spark-p16-p14-ai-pcs/" target="_blank">ASUS Pressroom</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 2nm</span>
+        <h4>TSMC 2nm 产能冲刺：年底月产能可达 12 万片，高于此前 9-10 万片预估</h4>
+        <p>据 Invezz/EDN 报道，TSMC 2nm 工艺月产能到 2026 年底可达约 <strong>120,000</strong> 片/月，高于此前 90,000-100,000 片的预估。Q2 2nm 已占晶圆总收入 <strong>3%</strong>，量产始于 2025 年底，2026 下半年加速爬坡。TSMC 纯代工市场份额约 <strong>72%</strong>。TSMC 7 月宣布将在亚利桑那建设更多 2nm 及以下工艺晶圆厂和先进封装厂。RCR Tech 指出 2nm 的 AI 核心收益在于效率而非速度，封装和 HBM 集成才是关键。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>2nm 产能超预期 = AI 芯片供给瓶颈在缓解。12 万片/月远超预期意味着苹果 A20 和英伟达下一代芯片的产能更有保障。对 lainy：TSMC 的产能扩张直接利好下游 AI 芯片厂的毛利率——供给多了，议价空间就大了。但 TSMC 自身 CapEx 压力也在加大。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ NVDA（英伟达）/ AAPL（苹果）— TSMC 产能扩张利好下游芯片设计公司</div>
+        <div class="source">🔗 Source: <a href="https://invezz.com/en-ae/news/2026/10/05/tsmc-hits-another-record-but-nvidia-and-apple-demand-may-become-its-next-problem/" target="_blank">Invezz</a> · <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262201499-tsmc-tsm-stock-forecast-october-6-2026" target="_blank">TradingKey</a> · <a href="https://rcrtech.com/semiconductor-news/tsmcs-2nm-node-ai-efficiency/" target="_blank">RCR Tech</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Samsung × HBM</span>
+        <h4>三星推出 HBM 内部散热新技术 Heat Path Block，TSMC 同步扩大 CoWoS 封装产能</h4>
+        <p>CloudNews 10/7 报道，三星发布针对 HBM 内存的新型散热方案 Heat Path Block，从 HBM 内部解决 AI 芯片发热问题。与此同时 TSMC 持续扩大 CoWoS 先进封装产能，以容纳更多逻辑和内存芯片。两条技术路线并行：三星从内存端散热，TSMC 从封装端扩容。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>HBM 散热是当前 AI 芯片性能提升的核心瓶颈——堆叠层数越多越热，散热做不好就要降频。三星的 Heat Path Block 如果量产成功，可能成为 HBM4 时代的差异化卖点。对 lainy：HBM 竞争不只是"堆叠层数"，散热和封装都是技术壁垒，三星在试图用工程创新追赶 SK Hynix 的市场份额领先。</div>
+        <div class="ticker">📌 关联标的：005930.KS（三星电子）/ 000660.KS（SK Hynix）/ TSM（TSMC）— 三星散热技术可能改变 HBM 竞争格局</div>
+        <div class="source">🔗 Source: <a href="https://cloudnews.tech/samsung-tackles-hbm-cooling-from-within-as-tsmc-expands-cowos/" target="_blank">CloudNews</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Intel</span>
+        <h4>Intel CPU 累计涨价 30%：AI 抢占全球内存产能，消费芯片成了"连带牺牲品"</h4>
+        <p>TechTimes 10/6 报道，Intel CPU 零售价已累计上涨 <strong>30%</strong>，核心原因是 AI 需求抢占了全球内存和晶圆产能，导致消费级芯片供应链成本飙升。Intel Q2 2026 非 GAAP 毛利率仅 <strong>41.8%</strong>，仍低于 Intel Products CEO 宣布的 50% 新产品审批门槛。下一个关键变量是 TSMC 2027 年 1 月是否再次提价——如果提，AMD/英伟达/高通/Intel 消费端可能面临第二波零售涨价。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"AI 通胀"已经传导到消费电子——AI 基建不只自己花钱，还在挤压传统芯片供应链。对 lainy：这意味着 PC 换机周期可能被进一步拉长（价格太贵用户不换），反过来利好二手市场和翻新机赛道。Intel 毛利率 41.8% vs 50% 门槛 = 新产品研发被卡住，恶性循环。</div>
+        <div class="ticker">📌 关联标的：INTC（Intel，看空）/ AMD（AMD，同样受提价影响但有 TSMC 产能优先权）— Intel 受损最严重</div>
+        <div class="source">🔗 Source: <a href="https://www.techtimes.com/articles/328672/20261006/intel-cpu-prices-climbed-30-because-ai-seized-global-memory-production.htm" target="_blank">TechTimes</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 TSMC 2nm/三星/Intel] → 下游 [AI 芯片 NVDA/AVGO/华为] → 终端 [AI PC/数据中心] — 当前受益环节：中游代工（2nm 产能超预期）+ 下游 AI PC（RTX Spark 新品类开启）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹"表涨实跌"的暗面</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>霍尔木兹原油流量恢复创新高，但"纸面繁荣"掩盖 darker reality——运费飙升、伊朗持续攻击、美国第三航母群进驻</h4>
+        <p>Reuters 10/7 报道，霍尔木兹海峡原油运输量升至 2 月美伊冲突以来最高水平。但 Responsible Statecraft 10/5 分析称，流量恢复"纸面繁荣"掩盖了更深问题：① 伊朗仍在持续攻击商船；② 运费成本创纪录高位；③ 干散货（化肥/铝/谷物/水泥等）仍滞留在波斯湾；④ 美国 <strong>第三艘航母</strong>（USS Roosevelt 率领的航母打击群）正驶向海湾。Atlantic 10 月刊指出 IMF 预测伊朗经济 2026 年将收缩 <strong>5.4%</strong>，财长 Bessent 称伊朗处于"死亡螺旋"中。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>原油"能运出去"不等于"安全廉价地运出去"。运费飙升 + 持续攻击 = 实际到岸成本远高于报价。对 lainy：G7 释放 1 亿桶储备 + 沙特降价只是短期压制，只要伊朗攻击不停、美国航母不撤，油价底部就在 $90+。这个"表涨实危"的格局可能持续到 2027 年。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 — 油价高位震荡，三桶油利润弹性持续</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/world/iran/" target="_blank">Reuters</a> · <a href="https://responsiblestatecraft.org/hormuz-oil-transits-war/" target="_blank">Responsible Statecraft</a> · <a href="https://www.theatlantic.com/international/2026/10/oil-hormuz-iran-war/688890/" target="_blank">The Atlantic</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊 · 乌克兰</span>
+        <h4>Trump 怒转矛头："高油价不是霍尔木兹的锅，是乌克兰打俄罗斯炼油厂造成的"；同时施压韩国参与对伊行动</h4>
+        <p>CBS 10/6 报道，Trump 周一表示"推高汽油价格的不再是霍尔木兹海峡，因为创纪录数量的原油正在通过"，反而指责乌克兰攻击俄罗斯炼油厂是高油价主因。同日 Google News 标题："先是对北约，现在是对韩国——Trump 又在敲打盟友参与对伊行动"。韩国作为美国在东亚的关键盟友，面临在伊朗问题上选边站压力。</p>
+        <div class="why">🦞 <b>市场含义：</b>Trump 把高油价归咎于乌克兰 = 可能为"迫使乌克兰和谈"制造舆论铺垫。如果乌克兰减少对俄炼油厂打击，油价有 $5-10 的回落空间。但韩国被拉入中东博弈 = 东北亚地缘风险上升，对韩股是负面信号。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / KOSPI 韩股（地缘风险上升）— 韩国被施压参与对伊行动增加不确定性</div>
+        <div class="source">🔗 Source: <a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-oil-prices-yemen-red-sea-houthis-bab-el-mandeb/" target="_blank">CBS News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特阿美/伊朗NIOC] → 中游 [航运 波斯湾航线 运费创纪录高位] → 下游 [炼化 中石化/ExxonMobil] — 当前受损环节：中游航运（运费飙升+攻击持续，实际成本远高于报价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美债 24 年新高 · Fed 鹰派</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美债</span>
+        <h4>10 年期美债冲破 5.35%（2002 年来最高），30 年期破 5.70%——房贷利率升至 7.49%，Fed 纪要指向年内再加息</h4>
+        <p>Forbes 10/7 报道，10 月 7 日 10 年期美债收益率攀升至 <strong>5.35%</strong> 以上，为 2002 年以来最高水平；30 年期达到 <strong>5.70%</strong>。债券抛售推动 30 年期定息房贷利率从 7.30% 升至 <strong>7.49%</strong>。FT 报道国债收益率进一步上升，因经济增速快于此前预估。24/7 WallSt 报道 2 年期收益率回落至 <strong>4.79%</strong>，但 Fed 纪要指向年内还有一次加息。Trading Economics 数据显示 10 年期较一年前高 <strong>1.19</strong> 个百分点。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美债 5.35% 是"无风险利率"的新基准——所有资产估值都要重新折算。对 lainy 的传导链：① 房贷 7.49% = 美国房地产承压 = 消费走弱；② 短端 4.79% 回落但长端飙升 = 市场在定价"通胀顽固+经济增长"组合，不是衰退；③ 港股对美债极度敏感（资金外流压力）；④ A 股影响相对小但有情绪传导。</div>
+        <div class="ticker">📌 关联标的：TLT（长期国债 ETF，下跌）/ SPY（美股，估值承压）/ 513130 港股通科技ETF — 长端利率飙升压制成长股估值</div>
+        <div class="source">🔗 Source: <a href="https://www.forbes.com/sites/garthfriesen/2026/10/07/why-the-10-year-treasury-yield-just-hit-a-24-year-high/" target="_blank">Forbes</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a> · <a href="https://247wallst.com/cards/the-policy-sensitive-two-year-yield-slipped-to-4-79-easing-macro-release-01m4c9n4atkdj0nrga6fpa3njm" target="_blank">24/7 WallSt</a> · <a href="https://www.ft.com/us-treasury-bonds" target="_blank">FT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美股</span>
+        <h4>美股创纪录后回落：周二 S&amp;P 首破 7,800 / 纳指创新高，周三因美债收益率飙升回落</h4>
+        <p>10/6（周二）美股三大指数创收盘新高：道指 <strong>51,521</strong>（+0.49%）/ S&amp;P <strong>7,819</strong>（+0.58%，连续四日上涨，首次收于 7,800 上方）/ 纳指 <strong>27,600</strong>（+0.45%）。但 10/7（周三）从纪录高点回落：道指跌 <strong>0.8%</strong>、纳指跌 <strong>0.7%</strong>、S&amp;P 跌 <strong>0.5%</strong>，因 10 年期美债冲 5.35%。Investopedia 指出这是"纪录高点后的债券恐慌"。Schwab 分析称市场呈现极度 top-heavy 特征——纳指 100 近三个月跑赢道指和小盘股指数近 20 个百分点。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>美股"创新高然后跌"的剧本反复上演，核心矛盾是：AI 驱动的科技巨头拉指数 vs 美债收益率拉估值。市寬极窄 = 少数巨头撑指数，大部分股票已经在跌。《黑天鹅》作者塔勒布 10/8 发文警告"AI 投资陷阱"和"脆弱的美债行情可能损害美股涨势"。对 lainy：这轮美股新高不是"全面牛市"，是"七巨头牛市"。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / NVDA / SMH（半导体 ETF）— 科技巨头独撑指数，广度收窄是风险信号</div>
+        <div class="source">🔗 Source: <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-10072026-12162282" target="_blank">Investopedia</a> · <a href="https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html" target="_blank">Yahoo Finance</a> · <a href="https://finance.sina.com.cn/stock/usstock/c/2026-10-08/doc-iniunezt4077572.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">💰 财税/财富监管</span>
+        <h4>亚洲家族办公室紧急审计离岸信托：分析师预警中国可能扩及遗产税和赠与税</h4>
+        <p>Asian Private Banker 10/5 报道，亚洲家族办公室和财富顾问正为中国超高净值客户"紧急审计"离岸信托，以应对北京追溯性 <strong>20%</strong> 个税。Tigris Family Office 联合创始人 Candice Wu 表示审计工作"争分夺秒"。星岛日报 10/2 分析指出，北京加强海外财富税收征管、堵塞信托漏洞并对股息课税，分析师认为这仅是开端，未来可能扩及<strong>海外房地产、遗产税及赠与税</strong>，以缓解财政压力并将资本留在国内。China-Briefing 确认首个截止日期为 <strong>10 月 22 日</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 作为金融从业者必须关注的结构性变化。新事实（vs 之前报道的"北京朝阳税务所发文"）：① 家族办公室正在"争分夺秒"做信托审计——这是真实的市场反应，不是纸面政策；② 分析师明确提出"遗产税/赠与税"可能下一步推出——如果成真，将彻底改变中国高净值财富管理范式。HK01 同日分析指出离岸信托监管正在掀起"富豪离婚潮"——婚姻财产隔离功能被打破。</div>
+        <div class="ticker">📌 关联标的：港股上市家族信托架构公司 / 私人银行股（HSBC 渣打等）— 离岸信托业务模式面临重塑</div>
+        <div class="source">🔗 Source: <a href="https://asianprivatebanker.com/family-office-intermediaries/chinese-uhnw-clients-rush-to-audit-offshore-trusts-ahead-of-october-deadline/" target="_blank">Asian Private Banker</a> · <a href="https://www.singtaousa.com/2026/10/02/news/china/china-s-wealthy-brace-for-a-widening-tax-net-as-beijing-closes-in/" target="_blank">星岛日报</a> · <a href="https://www.china-briefing.com/news/offshore-tax-planning-chinese-hnwis-crs-trust-rules/" target="_blank">China-Briefing</a> · <a href="https://global.hk01.com/01%E8%AE%BA%E5%9D%9B/60394981/%E6%9D%A5%E7%A8%BF-%E7%A6%BB%E5%B2%B8%E4%BF%A1%E6%89%98%E7%9B%91%E7%AE%A1%E5%A6%82%E4%BD%95%E6%8E%80%E8%B5%B7%E5%AF%8C%E8%B1%AA%E7%A6%BB%E5%A9%9A%E6%BD%AE" target="_blank">HK01</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 股/债/金/油] — 当前关键变量：10 年期美债 5.35% 重新定价所有资产</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金承压 · 油价高位震荡</small></h2>
+    <div class="cards">
+      <div class="sub-group">贵金属（金 / 银）</div>
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金跌至 $4,110（-1.32%），美债 5.35% + 美元走强双杀贵金属</h4>
+        <p>Trading Economics 数据显示，10/7 黄金跌至 <strong>$4,109.61</strong>/盎司，单日跌幅 <strong>1.32%</strong>，月内累计下跌 <strong>5.65%</strong>。美债收益率飙升是核心压制因素——无风险利率越高，不生息的黄金吸引力越低。但同比仍高 <strong>1.66%</strong>，显示长期支撑仍在。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金在 $4,100 附近拉锯，短期看美债脸色，长期看央行买盘。如果 10/22 离岸信托申报截止引发中国富豪资金外流加速，黄金可能反而受益（避险需求）。但短期美债 5.35% 的引力太强，$4,000 关口可能再次被测试。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 600547 山东黄金 — 短期承压，$4,000 是关键支撑</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.kitco.com/" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="sub-group">能源（原油 / 天然气）</div>
+      <div class="card">
+        <span class="tag hbm">原油</span>
+        <h4>Brent 守 $101 附近、WTI $90.30：G7 释放 1 亿桶 + 沙特降价 vs 运费飙升 + 伊朗攻击</h4>
+        <p>Economic Times 10/7 数据：Brent 期货涨 <strong>0.92%</strong> 至 <strong>$101.51</strong>，WTI 涨 <strong>1.01%</strong> 至 <strong>$90.30</strong>。Trading Economics 显示 WTI 月内跌 <strong>3.41%</strong>，但同比仍高 <strong>43.65%</strong>。Trading Economics 分析指出：G7 释放 1 亿桶储备 + 沙特大幅下调亚洲售价 + OPEC+ 维持 11 月产量不变 = 短期供应宽松信号。但 OilPrice 提醒 Brent 仍守 $100 附近，因运费创纪录高位 + 油轮风险上升，实际到岸成本远高于报价。Freeport LNG 一条液化线因维护停产，正在恢复。EU 确认 2027 年起全面禁止企业转售俄罗斯 LNG。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价在 $100 附近形成了新均衡——G7 释放储备压制了短期上涨，但霍尔木兹运费和地缘风险托住了底部。对 lainy：① 油价 $90-105 区间震荡 = 三桶油利润稳定但弹性减弱；② EU 2027 禁俄 LNG = 亚洲 LNG 市场供应进一步收紧，利好美国 LNG 出口商（钱尼尔能源）；③ AAA 全美汽油均价 10/5 降至周内低点（G7 释放后回落约 11 美分）。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / LNG 钱尼尔能源 — 油价高位震荡，LNG 长期供应收紧</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://economictimes.indiatimes.com/commoditysummary/symbol-CRUDEOIL.cms" target="_blank">Economic Times</a> · <a href="https://www.reuters.com/business/energy/" target="_blank">Reuters Energy</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 沙特阿美/伊朗NIOC] → 中游 [航运 波斯湾运费创纪录] → 下游 [炼化 中石化/ExxonMobil → 零售汽油] — 当前受益环节：上游（油价高位）+ LNG 出口（EU 2027 禁俄 LNG）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>OPEC+ 维持产量 · EU 禁俄 LNG</small></h2>
+    <div class="cards">
+      <div class="sub-group">原油 / OPEC+</div>
+      <div class="card">
+        <span class="tag hbm">OPEC+</span>
+        <h4>OPEC+ 维持 11 月产量不变，G7 释放 1 亿桶储备——短期供应宽松但地缘风险未消</h4>
+        <p>Trading Economics 10/6 报道，OPEC+ 同意维持 11 月石油产量目标不变。同日 G7 宣布释放最多 <strong>1 亿桶</strong>柴油和原油储备，并承诺不实施能源出口限制。沙特大幅下调旗舰原油对亚洲买家的售价。这些因素共同推动油价短期承压。</p>
+        <div class="why">🦞 <b>市场含义：</b>OPEC+ 不增产 = 产油国认为当前价格"可以接受"。G7 释放储备是"应急药"而非"根治药"——储备释放后需要回补，反而成为未来的需求增量。对 lainy：油价短期可能跌至 $85-95，但 $85 以下 OPEC+ 可能减产托价。</p>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / XLE（能源 ETF）— OPEC+ 托底 + G7 释压 = $85-105 区间震荡</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+      <div class="sub-group">天然气 / LNG</div>
+      <div class="card">
+        <span class="tag geo">LNG</span>
+        <h4>EU 确认 2027 年起全面禁止企业转售俄罗斯 LNG——亚洲 LNG 供应进一步收紧</h4>
+        <p>Reuters 6/19 报道，欧盟委员会发函澄清：2027 年起 EU 运营商将被禁止销售俄罗斯 LNG，即使买家在欧盟以外。霍尔木兹危机已使全球 1/5 的 LNG 供应"不可靠"。Shell 和合作伙伴已批准 <strong>$230 亿</strong> LNG 加拿大扩建项目。Freeport LNG 一条液化线维护后正在恢复天然气 intake。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>EU 禁俄 LNG = 俄罗斯 LNG 只能往亚洲卖，但运力有限 = 亚洲 LNG 价格可能上涨。对 lainy：中国 LNG 进口商（新奥股份、广汇能源）面临采购成本上升风险，但美国 LNG 出口商（钱尼尔能源、Venture Global）是最大受益者。</p>
+        <div class="ticker">📌 关联标的：LNG 钱尼尔能源 / 600256 广汇能源 / 600803 新奥股份 / Shell（SHEL）— 美国 LNG 出口商受益，中国进口商承压</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/business/energy/" target="_blank">Reuters Energy</a> · <a href="https://www.cnbc.com/oil/" target="_blank">CNBC Energy</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采 俄罗斯/美国/卡塔尔] → 中游 [LNG 船运] → 下游 [亚洲/欧洲进口] — 当前受益环节：美国 LNG 出口（EU 禁俄 LNG 后替代需求激增）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股节后首日 · 美股回落 · 韩股存储承压</small></h2>
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 国庆休市 7 天后 10/8 恢复交易，券商普遍看好节后修复反弹</h4>
+      <p>A 股 10/1-10/7 休市，10/8 恢复交易。休市期间外围普涨：纳指 +<strong>2.75%</strong>、日经 +<strong>5.89%</strong>、韩国综合指数 +<strong>1.51%</strong>。但港股承压（恒指 -1.35%、恒生科技 -0.72%）。中信证券、华泰证券等普遍认为节后资金回流+政策发力有望推动修复性反弹，但非单边普涨。关键看成交量能否回到 2 万亿上方。财政部部长蓝佛安在《求是》撰文提出研究制定增量政策，10/1 起居民购房贷款贴息政策全国实施。韩国 9 月芯片出口同比增 <strong>263%</strong> 至创纪录 <strong>603 亿美元</strong>，利好 A 股半导体情绪。</p>
+    </div>
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 假期恒指累计 -1.35%，南向资金 10/8 回归成关键</h4>
+      <p>国庆期间港股除 10/1 休市外照常交易，恒指累计跌 <strong>1.35%</strong>，恒生科技指数跌 <strong>0.72%</strong>。美债收益率飙升+油价高位=港股双重压力。10/8 南向资金恢复，能否接力修复是关键。港股已连涨两日（10/6-7），累计回升超 300 点（+1.2%）。</p>
+    </div>
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 周二创新高后周三回落：S&P 7,819（+0.58%）→ 回落 0.5%，道指跌 0.8%</h4>
+      <p>10/6 收盘：道指 <strong>51,521</strong>（+0.49%）/ S&P <strong>7,819</strong>（+0.58%，首次破 7,800）/ 纳指 <strong>27,600</strong>（+0.45%），三大指数齐创收盘新高。10/7 回落：道指 -<strong>0.8%</strong>、纳指 -<strong>0.7%</strong>、S&P -<strong>0.5%</strong>，因 10 年期美债冲 5.35%。NVDA 跌 <strong>0.74%</strong>。存储概念股逆市重挫：希捷 -9%、西部数据 -6%、SK 海力士美股 -6%。塔勒布警告 AI 投资陷阱+美债脆弱性。</p>
+    </div>
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 10/7 低开 1.11% 后翻红，存储股分化：三星 +2% vs SK Hynix -0.68%</h4>
+      <p>10/7 KOSPI 低开 <strong>1.11%</strong> 报 6,864，随后反弹翻红至 6,951（+0.12%）。三星电子涨幅扩至 <strong>2%</strong>+，SK Hynix 跌幅收窄至 <strong>0.68%</strong>。前一日 KOSPI 跌 <strong>0.89%</strong> 至 6,941，SK Hynix 跌 <strong>3.69%</strong>。韩国 9 月芯片出口同比增 <strong>263%</strong> 至创纪录 <strong>603 亿美元</strong>，验证全球半导体需求爆发式增长。Trump 施压韩国参与对伊行动增加地缘不确定性。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>国庆消费 K 型分化</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">国庆消费</span>
+        <h4>国庆 21.3 亿人次出行创新高，但消费呈 K 型分化——以旧换新带动 196 亿，白酒旺季平淡</h4>
+        <p>商务部数据：10/1-3 重点监测 78 个步行街客流 +<strong>3.4%</strong>、营业额 +<strong>5.3%</strong>。以旧换新带动销售额 <strong>196.3 亿</strong>（汽车 74.5 亿/家电 65 亿/数码 49 亿），惠及 348.3 万人次。出行 21.3 亿人次（日均 3 亿），铁路单日 2440 万创国庆新高。但白酒双节动销平淡，预计销量同比下滑。1-8 月社零同比仅增 <strong>1.1%</strong>，8 月单月仅 <strong>0.4%</strong>，超六成居民倾向储蓄。虎嗅评论称"极具迷惑性的数据"——人流旺但消费弱。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>21.3 亿人次出行 vs 社零 1.1% = 典型"旺丁不旺财"。以旧换新政策是消费主要拉动力，自发消费依然疲弱。① 白酒旺季平淡 = 高端酒批价稳但量缩；② 以旧换新 = 家电/汽车有政策红利但透支未来需求；③ 文旅"沉浸式体验"经济 = 演出/非遗/县域游是新增长点。</p>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（白酒承压）/ 000333 美的集团（以旧换新受益）/ 601888 中国中免（出境游受益）— 消费 K 型分化，政策驱动 > 自发消费</div>
+        <div class="source">🔗 Source: <a href="http://www.xinhuanet.com/fortune/20261005/4e37812f8fd74f40b2aa226a34141aa8/c.html" target="_blank">新华社</a> · <a href="https://cn.investing.com/news/stock-market-news/article-3598738" target="_blank">智通财经</a> · <a href="https://www.huxiu.com/article/4895169.html" target="_blank">虎嗅</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料] → 中游 [制造 家电/食品加工] → 下游 [渠道 电商/超市/餐饮] — 当前受益环节：以旧换新政策驱动（家电/汽车），受损环节：自发消费（白酒/家具）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>2026 美网冠军诞生：兹维列夫夺得男单冠军，莱巴金娜夺得女单冠军</h4>
+        <p>CNN 体育报道，Alexander Zverev 赢得 2026 年美网男单冠军，Elena Rybakina 赢得女单冠军。兹维列夫在经历伤病后重返大满贯巅峰。</p>
+        <div class="why">🦞 <b>花边点评：</b>兹维列夫终于拿到大满贯了——天赋一直在，之前被伤病和场外争议拖累。lainy 如果看网球的话，这两位值得关注即将到来的室内赛季。</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/sport" target="_blank">CNN Sport</a></div>
+      </div>
+      <div class="card">
+        <span class="tag fun">娱乐</span>
+        <h4>Dancing with the Stars 第 35 季 Mariah Carey 之夜落幕，再次出现意外淘汰</h4>
+        <p>USA Today 10/7 报道，DWTS 第 35 季迎来 Mariah Carey 主题之夜，表演精彩但再次出现意外淘汰。本季参赛者包括 Guillermo Rodriguez、Ciara Miller 和 Jenna Dewan 等。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Mariah Carey 之夜+意外淘汰=真人秀经典配方。lainy 周末如果想放松一下，DWTS 是不错的选择——不费脑子但很精彩。</div>
+        <div class="source">🔗 Source: <a href="https://www.usatoday.com/story/entertainment/tv-streaming/2026/10/06/dancing-with-the-stars-mariah-carey-night-2026-live-updates--live/92120431007/" target="_blank">USA Today</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
