@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-10</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 10 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>TSMC Q3 营收创纪录：</b>9 月单月 NT$5118.6 亿（+54.6% YoY），Q3 合计 NT$1.49 万亿——AI 芯片需求持续爆发；同日 Bloomberg 爆 OpenAI 预计年底年化收入达 <strong>$700 亿</strong>，企业业务为主要驱动力。</li>
+      <li><b>油价回落 + 美债 5.24%：</b>Trump 宣布中期选举前不攻击伊朗，Brent 从 $110 回落至 <strong>$103.45</strong>，WTI 跌至 <strong>$90.85</strong>；10 年期美债仍在 5.24% 高位徘徊，逼近 24 年新高。</li>
+      <li><b>官媒回击离岸信托报道：</b>人民日报/环球时报发文驳斥 FT/Reuters/Bloomberg 对离岸信托 20% 个税的"外媒炒作"，称其为"国际通行做法"而非"填补财政窟窿"；LVMH 下周一发财报，奢侈品股年内已跌 40%。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC</span>
+        <h4>TSMC 9 月营收 NT$5118.6 亿创历史新高（+54.6% YoY），Q3 合计 NT$1.49 万亿——AI 需求驱动连续创纪录</h4>
+        <p>台积电 10/8 公布 9 月营收数据：单月 <strong>NT$5118.6 亿</strong>（约 $160 亿），同比增长 <strong>54.6%</strong>，连续创单月历史新高。Q3 合计营收 <strong>NT$1.49 万亿</strong>，超出市场预期。AI 芯片需求（英伟达、AMD、Broadcom 等客户）是核心驱动。台积电将在 10/17 发布完整 Q3 财报，届时将公布资本开支计划和 AI 需求展望。CNBC 同日报道指出，TSMC 的营收增长进一步验证了 AI 硬件建设仍在加速。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>台积电的月度营收是 AI 产业链最实时的"晴雨表"。+54.6% 的同比增速意味着：① AI 芯片订单没有放缓迹象；② 先进制程产能利用率维持高位；③ 全年营收大概率超预期。对 lainy 的框架：TSMC 的营收增速 = AI capex 实际落地的验证指标。如果 TSMC 连续超预期，整个 AI 产业链（HBM、封装、设备）都有支撑。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电 ADR）/ 005930.KS 三星 / 000660.KS SK Hynix / SMH（半导体 ETF）— TSMC 超预期利好整条 AI 供应链</div>
+        <div class="source">🔗 Source: <a href="https://ground.news/article/tsmc-september-sales-hit-another-record-as-ai-boom-rolls-on_7282fc" target="_blank">Ground.news/Bloomberg</a> · <a href="https://technode.global/2026/10/09/tsmc-record-q3-revenue/" target="_blank">TechNode</a> · <a href="https://www.cnbc.com/technology/" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">OpenAI</span>
+        <h4>Bloomberg 独家：OpenAI 预计年底年化收入达 $700 亿——企业业务成主要增长引擎</h4>
+        <p>Bloomberg 10/9 报道，据知情人士透露，OpenAI 预计到 2026 年底年化收入将达到或超过 <strong>$700 亿</strong>，主要驱动力是企业业务增长。华尔街此前已据此定价——Money Morning 指出"华尔街花了两周把 OpenAI 当成 $700 亿收入机器来定价"。这一消息在 10/9 推动了芯片股反弹：半导体指数涨 <strong>1.5%</strong>，S&P +0.3%，纳指 +0.6%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>$700 亿年化收入意味着 OpenAI 已经超越 Oracle 的年营收（~$400 亿），接近 Meta 的广告收入水平。对 lainy 的市场含义：① AI 不再是"故事"，而是实打实的收入流——验证了 AI capex → 收入变现的闭环；② 但市场也在质疑：OpenAI 的 $700 亿收入对应的是巨额算力成本，利润率可能仍为负；③ 企业 AI 支出正在从"试验"转向"预算项"，这对微软、Google 等平台公司是利好。</div>
+        <div class="ticker">📌 关联标的：MSFT（微软，OpenAI 合作伙伴）/ NVDA（英伟达，算力供应商）/ ORCL（Oracle，AI 竞争对手被比较）— AI 收入验证利好整条算力链</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-10-09/openai-expects-70-billion-in-annualized-revenue-by-end-of-2026" target="_blank">Bloomberg</a> · <a href="https://www.gurufocus.com/news/9117382/us-stocks-rise-as-chip-stocks-rebound-amid-ai-optimism" target="_blank">GuruFocus</a> · <a href="https://moneymorning.com/2026/10/09/oracle-openai-50-billion-revenue-run-rate-october-2026" target="_blank">Money Morning</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SpaceX</span>
+        <h4>SpaceX 融资 ~$400 亿采购英伟达 AI 芯片——Terafab 与 TSMC 洽谈专属晶圆厂产能</h4>
+        <p>多家财经媒体报道，SpaceX 正在筹集约 <strong>$400 亿</strong>融资，用于采购英伟达 AI 芯片，打造太空 AI 算力平台。Morgan Stanley 分析师 Adam Jonas 维持看多评级。同时，SpaceX 旗下的 Terafab 正与 TSMC 洽谈建设专属晶圆厂，为 SpaceX、Tesla 和 xAI 供应先进芯片——如果成行，这将是 TSMC 首次为单一客户建专属 fab。SPCX 股价周涨 5-6%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>$400 亿买英伟达芯片 = 史上最大 AI 算力采购订单之一（10/9 早报已报道 SpaceX $400 亿融资，今天补充的是资金用途明确指向英伟达）。Terafab 与 TSMC 的合作如果落地，意味着"专属 fab"模式的出现——目前只有英伟达和苹果有类似待遇。对 lainy：① AI 算力需求从"云厂"扩展到"太空/卫星"领域；② TSMC 产能分配可能更紧张。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，直接受益）/ TSM（TSMC，潜在专属 fab）/ SPCX（SpaceX）/ TSLA（Tesla，Terafab 关联）— SpaceX+英伟达+TSMC 三角联动</div>
+        <div class="source">🔗 Source: <a href="https://www.timothysykes.com/news/space-exploration-technologies-corp-spcx-news-2026_10_09-3/" target="_blank">Timothy Sykes</a> · <a href="https://stockstotrade.com/news/space-exploration-technologies-corp-spcx-news-2026_10_09-2/" target="_blank">StocksToTrade</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/光刻 — ASML/SUMCO] → 中游 [代工 — TSMC +54.6% YoY] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂/太空 — MSFT/GOOG/SPCX] — 当前受益环节：中游代工（TSMC 连续创纪录）+ 下游 AI 收入验证（OpenAI $700 亿）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>油价与地缘风险</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>Trump 宣布中期选举前不攻击伊朗——Brent 从 $110 回落至 $103.45，油价"降温"但霍尔木兹仍关闭</h4>
+        <p>Trump 10/9 在社交媒体表示，美国与伊朗正在进行"建设性对话"，中期选举前不会对伊朗发动军事打击。消息公布后 Brent 从日内高点 $110 回落至 <strong>$103.45</strong>（-1%+），WTI 跌至 <strong>$90.85</strong>。但 Trump 同时表示对伊朗港口的封锁将继续。霍尔木兹海峡截至 10/9 仍处于"有效关闭"状态——10/4 仅 4 艘船只通过，正常日均约 85 艘。</p>
+        <div class="why">🦞 <b>市场含义：</b>"选举前不打"= 短期地缘风险降温，但不是和平——港口封锁持续 = 伊朗原油出口仍被遏制 = 供给侧仍有约束。油价从 $110 回落到 $103 是"风险溢价收窄"，但 $100+ 的绝对水平仍远高于冲突前。关注：如果中期选举后 Trump 恢复攻击，油价可能重回 $110+。目前市场在"短期放松"和"长期不确定"之间博弈。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源 ETF）— 油价短期承压但结构性供给缺口未解</div>
+        <div class="source">🔗 Source: <a href="https://www.equentis.com/blog/crude-oil-prices-today-brent-falls-below-104-wti-near-91-as-trump-rules-out-iran-attack-before-us-polls/" target="_blank">Equentis</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://straits.live/" target="_blank">Straits.live</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">墨西哥湾</span>
+        <h4>飓风 Isaias 迫使墨西哥湾停产 ~130 万桶/日——美国原油供给遭受双重冲击</h4>
+        <p>据美国海洋矿产管理局数据，飓风 Isaias 截至 10/8 已导致墨西哥湾生产商关停约 <strong>130 万桶/日</strong>产能。这为本来已因霍尔木兹危机而紧张的全球原油供给增加了额外压力。Trading Economics 指出，油价本周整体变化不大，因霍尔木兹风险与 G7 释放战略储备的多空力量相互抵消。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>墨西哥湾停产 130 万桶/日不是小事——相当于美国日产量的 ~10%。叠加霍尔木兹事实关闭，全球原油供给同时受到"中东地缘"和"美国天气"双重冲击。但 G7 已释放 1 亿桶战略储备对冲，所以油价没有飙升。对 lainy：短期油价看飓风恢复速度 + Trump 伊朗政策；中期看 OPEC+ 12 月会议。</div>
+        <div class="ticker">📌 关联标的：WTI 原油 / 601857 中国石油 / XOM 埃克森美孚 / CVX 雪佛龙 — 短期供给冲击利好上游油企</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 墨西哥湾停产 130 万桶/日 + 霍尔木兹关闭] → 中游 [航运 — 通行量降至正常 5%] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：上游供给（地缘+天气双重冲击），对冲因素：G7 释放 1 亿桶战略储备</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美债 5.24% · 财税监管</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美债</span>
+        <h4>10 年期美债收益率 5.24% 徘徊——逼近 24 年新高，Fed 加息预期仍存</h4>
+        <p>截至 10/9 收盘，10 年期美债收益率在 <strong>5.24%</strong> 附近徘徊，距本周早些时候创下的 24 年高点 5.35% 仅一步之遥。30 年期维持在 5.70% 以上。Fed 现行利率 <strong>3.88%</strong>，期货市场定价 1 月将升至 ~4.1%，明年 10 月升至 ~4.7%。Yahoo Finance 数据显示，S&P 期货周五盘后微涨 0.32%，纳指期货涨 0.71%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美债 5.24% 是当前全球资产定价的"锚"。对 lainy 的传导链：① 美债高企 → 美元走强 → 港股/新兴市场资金外流压力；② 高无风险利率 → 科技股估值承压（但 AI 收入验证在抵消）；③ 房贷利率升至 7.49% → 美国房地产降温。下周关注：是否有 Fed 官员发表更鹰派言论推动收益率再创新高。</div>
+        <div class="ticker">📌 关联标的：TLT（20+ 年美债 ETF）/ SPY / QQQ / 513130 港股通科技ETF — 美债高位压制风险资产估值</div>
+        <div class="source">🔗 Source: <a href="https://streetstats.finance/rates/fedfunds" target="_blank">StreetStats</a> · <a href="https://finance.yahoo.com/markets/" target="_blank">Yahoo Finance</a> · <a href="https://tradingeconomics.com/united-states/30-year-bond-yield" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">💰 财税/财富监管</span>
+        <h4>人民日报/环球时报回击外媒：离岸信托税"不是填财政窟窿"——10/22 申报截止日逼近</h4>
+        <p>人民日报英文版 10/9 发布专家文章，驳斥 FT/Reuters/Bloomberg 对离岸信托 20% 个税的报道框架，称"中国将从 10/22 起对海外财富征税"和"填补财政窟窿"的说法"具有误导性"。文章强调：① 这是中国税法的既有原则（居民全球收入纳税），并非新政策；② 设立满 3 年的信托设立阶段税负可免追溯；③ 提供 3 个月自愿申报宽限期。FT 此前报道"10/22 起对离岸信托分红和利息征 20% 个税"，引发国际媒体广泛关注。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是官方首次系统性地回击外媒对离岸信托税的"恐慌性叙事"。核心信号：① 政策本身不变，10/22 仍是申报截止日——但官方想降低市场恐慌；② "国际通行做法"的定性意味着政策不会退缩；③ 3 个月宽限期 = 给高净值人群"自首"窗口。对 lainy：这不是"要不要交"的问题，而是"怎么合规交"的问题。家族办公室和私人银行仍在紧急帮客户做 trust audit。同时，奢侈品行业担心：离岸信托税 + 美国消费疲软 = LVMH/Hermes 下周财报面临双重压力。</p>
+        <div class="ticker">📌 关联标的：LVMH（周一发财报，预期 €185 亿）/ HRMS（Hermes 10/22 发财报）/ KERING（开云 10/22）— 奢侈品板块承压</div>
+        <div class="source">🔗 Source: <a href="http://en.people.cn/n3/2026/1009/c90000-20506591.html" target="_blank">People's Daily Online</a> · <a href="https://finimize.com/content/chinas-tax-deadline-puts-luxurys-q3-in-focus" target="_blank">Finimize</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [美债收益率 5.24%] → 中游 [美元走强/资金流向] → 下游 [风险资产估值/新兴市场] — 当前关键变量：Fed 官员言论 + 离岸信托 10/22 申报截止</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金 / 银 / 铜 / 油</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金反弹至 $4,187（+1.31%）/ 白银 $60.82——油价回落+地缘避险双支撑</h4>
+        <p>10/9 黄金收于 <strong>$4,187.38</strong>，单日涨 <strong>1.31%</strong>，从本周低位 $4,110 反弹。白银同步走强至 <strong>$60.82</strong>（+1.70%）。驱动因素：① Trump 暂缓攻击伊朗 → 油价回落 → 通胀预期降温 → 利好黄金；② 但霍尔木兹仍关闭 → 地缘避险需求仍在 → 金价底部有支撑。过去一个月黄金仍跌 3.01%，但同比涨 4.34%。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金这周走了一个"V"——从 $4,110 反弹到 $4,187，核心逻辑是"油价跌→加息预期降→实际利率降→黄金涨"。但美债 5.24% 仍是天花板。对 lainy 的配置框架：黄金在 $4,100-4,200 区间是"高利率+地缘混乱"的均衡价。如果 Fed 确认不再加息，黄金可能突破 $4,200 向上；如果 12 月加息，可能回踩 $4,000。</p>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ SLV（白银 ETF）— 金银反弹受益</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://goldpricez.com/" target="_blank">GoldPriceZ</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $103.45 / WTI $90.85——Trump 暂缓打伊 + 飓风 Isaias + G7 释放储备，多空拉锯</h4>
+        <p>本周油价走势：周初 Brent 飙升至 $110+（伊朗攻击油轮+飓风 Isaias），10/9 因 Trump 暂缓攻击伊朗回落至 <strong>$103.45</strong>（-1%+），WTI 跌至 <strong>$90.85</strong>。Trading Economics 总结：本周原油整体变化不大，因霍尔木兹风险（多）与 G7 释放 1 亿桶战略储备（空）相互抵消。墨西哥湾飓风导致 ~130 万桶/日停产仍在持续。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价在 $100+ 维持了一个月以上，已成为"新常态"。对 lainy 的传导：① 高油价 → 全球通胀粘性 → Fed 难降息；② 高油价 → 能源股利润暴增（三桶油、ExxonMobil）；③ 高油价 → 消费者购买力下降 → 消费股承压。短期变量：飓风恢复速度 + 中期选举后 Trump 伊朗政策。</p>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE（能源 ETF）— 油价高位利好上游，利空航空/消费</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金 $4,187 / 银 $60.82 — 反弹] · 原油 [Brent $103 / WTI $91 — 多空拉锯] → 相关标的：600547 山东黄金 / 600028 中石化 / XOM — 当前受益环节：上游能源（油价 $100+ 新常态）+ 贵金属避险需求</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / 天然气 / LNG</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油</span>
+        <h4>霍尔木兹危机 Day 222：通行量仅正常的 5%，但"纸面繁荣"掩盖真实成本</h4>
+        <p>Straits.live 数据显示，截至 10/9 霍尔木兹海峡仍处于"有效关闭"状态——10/4 仅 4 艘船只通过（正常日均 ~85 艘）。Trump 暂缓攻击伊朗的消息虽然让油价从 $110 回落，但海峡通行并未恢复。运费保险成本仍是冲突前 33 倍。G7 释放 1 亿桶战略储备只能对冲短期供给缺口，无法替代正常的航运通道功能。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>"暂缓攻击"不等于"恢复通行"。只要霍尔木兹关闭，全球原油就在"吃库存"——G7 储备释放只是把紧缺时间往后推。对 lainy：关注 11/3 中期选举后 Trump 的伊朗政策转向——如果恢复攻击，Brent 可能快速重回 $110-120。</p>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中石化 / XLE — 霍尔木兹关闭时长决定油价中枢</div>
+        <div class="source">🔗 Source: <a href="https://straits.live/" target="_blank">Straits.live</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">LNG</span>
+        <h4>中东 LNG 扩产 vs 欧盟禁令：卡塔尔加速扩能，EU 2027 年起禁转售俄罗斯 LNG</h4>
+        <p>MEES 10/9 报道，海湾国家正加速 LNG 产能扩张——卡塔尔（全球最大 LNG 出口国）推进大规模扩能计划。同时，EU 确认 2027 年起全面禁止企业向第三方转售俄罗斯 LNG。两条线叠加：① 中东 LNG 扩产填补俄罗斯缺口；② 但亚洲买家（日本、韩国、中国）也在抢 LNG——亚洲 LNG 市场供应进一步收紧。Shell 及合作伙伴 $230 亿加码加拿大 LNG 扩建也在同步推进。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>LNG 是"天然气版"的半导体——供需都在重构。卡塔尔扩产 vs EU 禁俄 LNG = 中东话语权上升。对 lainy：关注 LNG 产业链——上游液化（Shell、Cheniere）、中游航运（LNG 船运费）、下游接收站（中国新奥股份、广汇能源）。</p>
+        <div class="ticker">📌 关联标的：SHEL 壳牌 / LNG 钱尼尔能源 / 600809 新奥股份 / 600256 广汇能源 — LNG 扩产周期受益</div>
+        <div class="source">🔗 Source: <a href="https://www.globenewswire.com/news-release/2026/10/09/3377938/28124/en/middle-east-economic-survey-mees-mena-oil-gas-and-energy-market-outlook-gulf-investment-opportunities-rise-as-lng-expansion-and-low-cost-oil-reshape-energy-security.html" target="_blank">MEES/GlobeNewswire</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：原油 [霍尔木兹关闭 Day 222] → 天然气 [卡塔尔扩产 + EU 禁俄 LNG] → 下游 [炼化/发电 — 中石化/新奥] — 当前受益环节：LNG 扩产周期（Shell/卡塔尔），受损环节：航运（霍尔木兹通行量仅 5%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 周五休市（周六），10/9 沪指 -0.79% 报 3,812 / 深成指 -2.07% / 创业板 -3.15%</h4>
+      <p>10/9（周五）A 股黄金周后第二日交易，三大指数延续回调：沪指 <strong>-0.79%</strong> 报 3,812，深成指 <strong>-2.07%</strong>，创业板 <strong>-3.15%</strong>。节后两日累计：创业板跌超 6%。主要压力：① 美债 5.35% 创新高 → 外资流出新兴市场；② 油价高企 → 通胀担忧；③ 节后获利了结。<b>今日（周六）休市。</b>关注下周：LVMH 周一发财报对消费板块的信号传导。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/9 恒指 +1.79% 报 24,211 / 恒生科技反弹 / 小米领涨</h4>
+      <p>10/9 恒指收 <strong>24,211</strong>（<strong>+1.79%</strong>），从三个月新低反弹。金融和科技板块领涨，小米大幅上涨。但芯片股落后。CNN 数据显示恒指日内高点触及 24,224。<b>本周港股波动剧烈：</b>10/8 节后首日恒指 -1.43% 创三个月新低 → 10/9 反弹 1.79%。南向资金回归后流动性改善，但美债 5.24% 仍是估值天花板。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 10/9 周五反弹：S&P +0.3% / 纳指 +0.6% / 道指 +0.2%——芯片股反弹 + OpenAI 利好</h4>
+      <p>10/9 收盘：S&P 500 <strong>+0.3%</strong>，纳指 100 <strong>+0.6%</strong>，道指 <strong>+0.2%</strong>。半导体指数涨 <strong>1.5%</strong>，受 OpenAI $700 亿收入预期提振。Megacaps 英伟达、Tesla、Amazon、Alphabet 均上涨。但本周整体波动剧烈——周二 S&P 首破 7,800 创历史新高，周三因美债飙升回落。<b>本周关键数据：</b>10 年期美债 5.24-5.35% 区间，Brent $100-110 区间。S&P 周四收盘 ~7,811，纳指 ~27,366。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI -2.62% 报 6,626 / 三星 SK Hynix 领跌 / 外资净抛 ₩4 万亿</h4>
+      <p>10/9 KOSPI 收 <strong>6,626</strong>（<strong>-2.62%</strong>），连跌四日，失守 6,700 关口。外资和机构投资者净抛售 <strong>₩4 万亿</strong>（约 $30 亿）。三星电子优先股 -2.02%，SK Hynix -2.44% 报 ₩1,681,000。SK Square 暴跌 8.06%。ETMarkets 指出：尽管 KOSPI 仍是 2026 年全球表现最好的主要市场之一，但近期已进入"调整区域"。<b>关注：</b>三星 10/8 公布 Q3 初步利润 107.4 万亿韩元创纪录，但股价"利好出尽"反跌。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 财税冲击</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>离岸信托税 + 美国消费疲软双重夹击：LVMH/Hermes 年内跌 40%，下周一 LVMH 发财报</h4>
+        <p>多家媒体报道，中国离岸信托 20% 个税 10/22 申报截止 + 美国消费者支出走弱 = 奢侈品板块遭遇"双重暴击"。<strong>LVMH 和 Hermes 年内均跌约 40%</strong>，Kering（Gucci 母公司）跌 29%，均交易在多年低点附近。分析师预期 LVMH Q3 销售额 <strong>€185 亿</strong>（$207 亿），同比仅增 1%。Kering 和 Hermes 将于 10/22 公布财报——同日是离岸信托申报截止日。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>10/22 是个"三合一"关键日——离岸信托申报截止 + Kering/Hermes 财报 + LVMH 周一提前发财报。对 lainy：中国高净值人群是奢侈品核心买家，离岸信托税直接影响他们的可支配财富。"Something About Rocks"报道指出，中国税改可能对手表和珠宝需求构成风险。如果 LVMH Q3 不及 €185 亿预期，整个奢侈品板块可能再跌一轮。</p>
+        <div class="ticker">📌 关联标的：LVMH.PA（LVMH）/ HRMS.PA（Hermes）/ KERING.PA（开云）— 奢侈品板块双重承压</div>
+        <div class="source">🔗 Source: <a href="https://yournews.com/2026/10/09/7220644/chinas-tax-crackdown-raises-pressure-on-luxury-brands-as-u-s/" target="_blank">YourNews</a> · <a href="https://in.fashionnetwork.com/news/China-s-tax-crackdown-piles-pressure-on-luxury-brands-as-us-spending-falters-,1874598.html" target="_blank">FashionNetwork</a> · <a href="https://finimize.com/content/chinas-tax-deadline-puts-luxurys-q3-in-focus" target="_blank">Finimize</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [中国高净值消费力 — 离岸信托税挤压] → 中游 [奢侈品品牌 — LVMH/Hermes 年跌 40%] → 下游 [零售渠道 — 美国/欧洲消费疲软] — 当前受损环节：全链条承压，关注 10/22 财报+申报截止三合一</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NFL</span>
+        <h4>传奇教练 Mike Ditka 去世享年 86 岁——1985 年芝加哥熊队 Super Bowl XX 冠军教头</h4>
+        <p>NFL 传奇人物 Mike Ditka 10/9 去世，享年 86 岁。Ditka 是 NFL 历史上第一位以 tight end 身份入选名人堂的球员，后以主教练身份带领 1985 年芝加哥熊队赢得 Super Bowl XX——那支球队被广泛认为是 NFL 史上最强防守球队。家人发表声明："怀着深切的悲痛，我们宣布我们敬爱的丈夫、父亲、祖父和朋友 Mike Ditka 离世。"死因尚未公布。纽约时报、TMZ、AP 等主流媒体均在第一时间报道。</p>
+        <div class="why">🦞 <b>花边点评：</b>1985 年芝加哥熊队在美国体育史上地位相当于巴西 1970 年足球队——文化符号级别。Ditka 既是传奇球员又是传奇教练，这种"player-coach"双重名人堂身份在 NFL 仅此一人。lainy 如果跟美国客户聊天，这是个很好的 icebreaker 话题。</p>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/10/09/sports/mike-ditka-dead.html" target="_blank">New York Times</a> · <a href="https://www.nydailynews.com/2026/10/09/mike-ditka-super-bowl-chicago-bears-dead-obit/" target="_blank">NY Daily News</a> · <a href="https://heavy.com/sports/nfl/chicago-bears/mike-ditka-super-bowl-champion-dies/" target="_blank">Heavy</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">MLB</span>
+        <h4>MLB 季后赛继续：Yankees 的 Anthony Volpe 差几英寸上演 October heroics</h4>
+        <p>CNN Sports 报道，纽约扬基队的 Anthony Volpe 在季后赛中差几英寸——以及一个球迷的手臂——就完成了一次 October magic moment。MLB 分区系列赛正在进行中，ALDS 转播 TNT，NLDS 转播 FOX。Cleveland Guardians 10/9 在 ALDS Game 3 以 9-3 大胜避免被横扫。</p>
+        <div class="why">🦞 <b>轻松一下：</b>MLB 季后赛每年 10 月都是美国体育最大的谈资。Volpe 是扬基队年轻游击手，"差几英寸"的戏剧性正是棒球最迷人的地方——一记全垒打和一个出局之间的距离，可能就是几厘米。lainy 周末如果需要跟美国客户闲聊，问问 MLB 季后赛准没错。</p>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/sport" target="_blank">CNN Sport</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">科技花边</span>
+        <h4>UC San Diego 新芯片设计：压电元件让 GPU 能效大增——AI 数据中心能耗难题有解？</h4>
+        <p>ScienceDaily 10/9 报道，UC San Diego 研究团队发布新芯片设计，利用压电元件（piezoelectric components）重新设计 GPU 的电源转换方式，可大幅提升数据中心能效。目前 AI 数据中心的能耗问题已成为瓶颈——训练一个大型 AI 模型的耗电量相当于一个小城市。这项研究为"AI 算力增长 vs 能耗限制"的矛盾提供了新思路。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>AI 的"暗面"是电力消耗。台积电、英伟达都在想办法降功耗——台积电的 2nm 工艺本身就是为了降低能耗。UC San Diego 的压电方案如果商业化，可能成为"AI 数据中心省电"的新赛道。对 lainy：关注"AI+能源"交叉领域的早期投资机会。</p>
+        <div class="source">🔗 Source: <a href="https://www.sciencedaily.com/news/computers_math/artificial_intelligence/" target="_blank">ScienceDaily</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
