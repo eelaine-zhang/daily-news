@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-18</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; font-style: normal; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 18 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 抛售潮席卷全球：</b>KOSPI 七连跌累计 <strong>-21%</strong> 创 2008 年来最差周；三星 -9.5%、SK Hynix -11% 单日暴跌，外资抛售 2.9 万亿韩元；美股纳指周五 -2.1%，中国 Star50 下半年跌 40%——AI 估值正面临全球性重估。</li>
+      <li><b>霍尔木兹海峡油轮触雷：</b>伊朗 IRGC 10/17 报告一艘载 200 万桶原油的超级油轮在霍尔木兹海峡触雷爆炸起火；Brent 周涨 6.6% 至 $109.68，WTI 涨 12% 至 $101.89——能源价格飙升加剧通胀粘性担忧。</li>
+      <li><b>中国富豪税务风暴升级：</b>10/22 离岸信托境外收入申报大限临近，富人抛售股票、解除信托甚至变更国籍；Reuters 报道税务部门组建专门团队征收 20% 个税，CRS/FATCA 全球透明化让海外资产无所遁形。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AI 估值重估进行时</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC Q3</span>
+        <h4>TSMC Q3 营收 NT$1.494 万亿（+50.9% YoY），净利润 +68.7%——AI 需求仍远超供给，但股价反跌</h4>
+        <p>TSMC 10/15 发布 Q3 2026 财报：营收 <strong>NT$1.494 万亿</strong>（约 $467 亿美元），同比增长 <strong>50.9%</strong>；净利润 NT$763 亿（约 $157.7 亿美元），同比增长 <strong>68.7%</strong>；毛利率 <strong>66.4%</strong>。高性能计算（HPC）平台营收环比增长 <strong>22%</strong>，AI 占总营收 <strong>68%</strong>。管理层在电话会中表示「AI 需求极度强劲，无放缓迹象，供给仍远低于需求」。同时上调全年营收增长指引至约 <strong>44%</strong>，资本支出提高至 $60-64B。但股价周五下跌——市场担忧毛利率稀释（Capex 扩大 + 新产能爬坡）。</p>
+        <div class="why">💡 <b>为什么值得看：</b>TSMC 财报是 AI 硬件链的「晴雨表」。Q3 数据确认了 AI capex 仍在加速——但市场焦点已从「增长能否兑现」转向「利润率能否维持」。TSMC 全年 Capex $60-64B 意味着折旧压力上升，毛利率 66.4% 虽高但环比可能见顶。对 lainy 的金融视角：AI 芯片链的「贝塔行情」（涨就一起涨）正在让位于「阿尔法分化」——能守住利润率的赢，靠价格战的输。TSMC Q4 指引隐含环比 +14% 增长，但同期 Samsung/SK Hynix 也在扩产，竞争在加剧。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电 ADR）/ 2330.TW（台积电）/ NVDA（英伟达，核心客户）/ SMH（半导体 ETF）— TSMC 基本面强劲但估值承压</div>
+        <div class="source">来源：<a href="https://seekingalpha.com/article/4954981-tsmc-the-ai-cycle-just-sent-another-signal" target="_blank">Seeking Alpha</a> · <a href="https://www.biznob.com/tsmc-reports-record-q3-2026-profit-as-ai-chip-demand-outpaces-supply/" target="_blank">BizNob</a> · <a href="https://www.tipranks.com/stocks/tsm/earnings/q3-2026-report" target="_blank">TipRanks</a> · <a href="https://www.fool.com/investing/2026/10/16/tsmc-says-ai-chip-demand-is-still-far-above-what-it-can-supply-that-s-why-i-d-buy-nvidia-stock/" target="_blank">Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Micron HBM</span>
+        <h4>Micron 台中 HBM 新设施开幕：2027 年产能已签约「绝大部分」，EIM 边缘推理内存瞄准 2028 量产</h4>
+        <p>Micron 10/17 在台湾台中举行 HBM 新制造设施开幕式。CEO Sanjay Mehrotra 表示：2026 年 HBM 供应量已全部签约（价格+数量锁定），2027 年产能「绝大部分」已以高于去年的价格签约。同时发布 Edge Inference Memory（EIM）新技术——兼具 LPDDR 低功耗和 HBM 低延迟高带宽特性，目标 2028 年量产，瞄准 AI 机器人和边缘推理市场。NVIDIA Blackwell、下一代 Vera Rubin、AMD Instinct 系列均使用 HBM。</p>
+        <div class="why">💡 <b>商业含义：</b>Micron 的信号很明确——HBM 不只是「明年的事」，而是「后年都卖完了」。2027 产能已签约意味着 AI 内存市场的可见度延伸到至少 2028 年。EIM 是新故事——如果边缘推理（机器人、自动驾驶）真的起来，HBM 的市场将从「数据中心」扩展到「万物」。对 lainy：HBM 三巨头（三星/SK Hynix/Micron）的格局正在从「双寡头」向「三足鼎立」演变，Micron 正在抢回份额。</div>
+        <div class="ticker">📌 关联标的：MU（Micron）/ 000660.KS（SK Hynix）/ 005930.KS（三星）— Micron HBM 份额回升，三足鼎立格局形成中</div>
+        <div class="source">来源：<a href="https://www.zaikei.co.jp/article/20261017/873899.html" target="_blank">财经新闻</a> · <a href="https://wccftech.com/micron-edge-inference-memory-hbm-power-efficiency-ai-robots/" target="_blank">WCCFTech</a> · <a href="https://www.stocktitan.net/stocks/themes/ai-stocks" target="_blank">StockTitan</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">全球 AI 抛售</span>
+        <h4>全球 AI 股票一周蒸发 $1 万亿——KOSPI 七连跌 -21%，中国 Star50 下半年跌 40%，纳指周跌 4.5%</h4>
+        <p>据 CNBC 统计，全球前 20 大 AI/半导体股票市值在四个交易日内蒸发约 <strong>$1 万亿</strong>（约 1,340 万亿韩元）。韩国 KOSPI 七连跌累计 <strong>-21%</strong>，创 2008 年以来最差周表现；10/16 单日 Samsung <strong>-9.48%</strong>、SK Hynix <strong>-11.06%</strong>，触发一级熔断暂停交易 20 分钟，外资抛售 2.9 万亿韩元。中国 Star50 下半年跌 <strong>~40%</strong>，港股通净流出 900 亿人民币。美国纳指周跌 <strong>4.5%</strong>，为 6 月以来最差周。三大驱动因素：9 月 CPI 高于预期→加息预期回升 + 中国 CXMT 发布新一代 DRAM 技术 + Samsung/SK Hynix 回购计划到期。</p>
+        <div class="why">💡 <b>龙虾老师的解读：</b>这不是普通的回调——是全球性的 AI 估值重估。三条逻辑线交织：① 通胀粘性→利率更高更久→折现率上升→高估值科技股首当其冲；② 中国 CXMT DRAM 技术突破→存储芯片竞争格局从「韩国独大」向「中韩竞争」演变；③ 回购「护盾」消失→Samsung/SK Hynix 之前用回购吸收外资抛压，到期后失去缓冲。对 lainy：AI 硬件链从「无脑涨」进入「分化选股」阶段——能赚钱的（TSMC/Micron HBM）vs 靠故事的（AI 概念股）。</div>
+        <div class="ticker">📌 关联标的：KOSPI (.KS11) / 512760 半导体ETF / NVDA / SMH — 短期超跌反弹可能，但中期需看 Q3 财报验证</div>
+        <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/10/17/kospi-rebounds-after-7-day-slide-as-ai-selloff-pauses" target="_blank">Seoul Economic Daily</a> · <a href="https://www.tokenpost.com/news/investing/34016" target="_blank">TokenPost</a> · <a href="https://www.briefs.co/news/china-s-star50-sinks-as-ai-trade-loses-steam/" target="_blank">Briefs</a> · <a href="https://finance.biggo.com/news/adc65fa5-8b73-4f3f-a57a-bcc0bdbfc317" target="_blank">BigGo Finance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受压环节：全链条估值收缩，HBM 内存相对韧性最强（2027 产能已签约）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹 · 俄乌 · 中东</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗 IRGC 报告：超级油轮在霍尔木兹海峡触雷爆炸起火——原油运输咽喉再受威胁</h4>
+        <p>10/17 伊朗伊斯兰革命卫队（IRGC）表示，一艘油轮在霍尔木兹海峡 transit 时触碰到 naval mine（水雷），随后爆炸起火。事件发生在伊朗与阿曼此前就霍尔木兹海峡通行协议谈判期间。此前数月，红海/亚丁湾胡塞武装袭击频发，航运保险费率已飙升至历史高位。IEA 成员国已承诺释放剩余的 1 亿桶紧急储备原油。Brent 原油周涨 <strong>6.6%</strong> 至 <strong>$109.68</strong>/桶，WTI 涨 <strong>12%</strong> 至 <strong>$101.89</strong>/桶。</p>
+        <div class="why">💡 <b>为什么值得看：</b>霍尔木兹海峡日均通行约 2000 万桶原油（占全球海运原油的 <strong>20%</strong>），任何中断都会直接冲击 Brent。这次触雷事件虽然是偶发，但叠加 Red Sea 胡塞袭击，意味着中东两个关键水道同时面临安全威胁。对 lainy：高油价 → 通胀粘性 → 利率更高更久 → 科技股估值承压。这是本周 AI 抛售的地缘催化剂之一。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 — 油价飙升受益；JETS 航空 ETF / XLY 可选消费受损</div>
+        <div class="source">来源：<a href="https://english.alarabiya.net/" target="_blank">Al Arabiya</a> · <a href="https://www.aljazeera.com/news/" target="_blank">Al Jazeera</a> · <a href="https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities" target="_blank">ShareTrader</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美国能源政策</span>
+        <h4>Trump 暂停新一轮对俄制裁——美国「燃料危机」加深，能源价格飙升施压政策转向</h4>
+        <p>10/17 报道：Trump 政府暂停了新一轮对俄制裁的审批，因美国国内面临「燃料危机」——油价 YTD 涨幅超 <strong>75%</strong>，全美汽油均价持续攀升。同时 Washington 正考虑放宽对部分运输伊朗、俄罗斯或委内瑞拉原油船只的制裁。行业团体长期寻求加快天然气运输审批流程，以应对 LNG 出口和发电需求。IEA 成员国承诺释放剩余 1 亿桶紧急储备。</p>
+        <div class="why">💡 <b>市场含义：</b>这是地缘政治「向现实低头」的信号——高油价正在倒逼美国外交政策做出让步。如果制裁松动，短期内可能释放更多俄罗斯/伊朗/委内瑞拉原油进入市场，压低油价。但这是双刃剑——降低油价的同时削弱了制裁威慑效果。对 lainy：关注 Brent 能否在 $105-110 区间企稳，如果制裁松绑落地，可能快速回落至 $90s。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / XLE（能源 ETF）/ 600028 中国石化 — 制裁松绑短期利空油价，但地缘溢价仍存</div>
+        <div class="source">来源：<a href="https://geopoliticsunplugged.substack.com/p/trump-stops-new-russia-sanctions" target="_blank">Geopolitics Unplugged</a> · <a href="https://blackmon.substack.com/p/10-big-energy-stories-10172026-all" target="_blank">Blackmon Substack</a> · <a href="https://www.nbcnews.com/data-graphics/gas-prices-iran-war-state-national-cost-trump-rcna265835" target="_blank">NBC News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹/红海航线] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（双水道安全威胁，保险费率飙升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>含 💰 财税/财富监管头条</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">离岸信托税务</span>
+        <h4>10/22 大限临近：中国富豪加速抛售股票、解除信托、变更国籍——Reuters 报道税务组建专门团队征收 20% 个税</h4>
+        <p>Reuters 报道，随着 10/22 离岸信托境外收入申报截止日临近，中国富裕个人正在加速重组离岸信托、抛售投资、甚至变更国籍。北京对资本外流和税务合规的关注度持续升高。IndexBox 报道，部分最富有者正在「削减离岸信托、抛售股票、在 10/22 之前变更国籍」。中国税务部门已组建专门团队征收 <strong>20%</strong> 信托利润个税。Forbes 分析指出，CRS 和 FATCA 全球信息交换框架让海外资产「无所遁形」。Mayer Brown 10/15 法律简报详解：新规将信托分配视为「视同处置」，对增益部分征收 20% 个税（而非按转移资产全额计算）。</p>
+        <div class="why">💡 <b>为什么值得看：</b>这是 lainy 作为金融从业者必须关注的事件。关键增量（vs 前几周报道）：① Reuters 确认税务部门已组建专门团队，意味着执行力度在升级；② 富人实际行动从「观望」转为「抛售+解除信托+变更国籍」——这是真实的市场行为，不再只是政策讨论；③ Mayer Brown 法律简报明确了计税基数是「增益」而非「全额」，降低了市场对「追溯全额」的最坏情景担忧。对 lainy：关注港股中与高净值/家族办公室相关的股票（如私人银行、财富管理）短期波动。</div>
+        <div class="ticker">📌 关联标的：港股财富管理板块 / 私人银行业务相关 / 513130 港股通科技ETF — 高净值客户资产重组可能引发短期抛压</div>
+        <div class="source">来源：<a href="https://www.chinamoneynetwork.com/2026/10/16/chinas-wealthy-rush-to-unwind-offshore-trusts-amid-tax-deadline" target="_blank">China Money Network</a> · <a href="https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/global-market-chinas-wealthy-rush-to-unwind-offshore-trusts-as-tax-deadline-looms/articleshow/134982601.cms" target="_blank">Economic Times</a> · <a href="https://www.forbes.com/sites/virginialatorrejeker/2026/10/13/chinas-offshore-tax-crackdown-what-crs-fatca--us-ties--mean-now/" target="_blank">Forbes</a> · <a href="https://www.mayerbrown.com/en/insights/publications/2026/10/asia-tax-bulletin-autumn-2026" target="_blank">Mayer Brown</a> · <a href="https://www.indexbox.io/blog/chinas-wealthy-cut-offshore-trusts-sell-shares-change-nationality-ahead-of-october-22-tax-deadline/" target="_blank">IndexBox</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">通胀 &amp; 利率</span>
+        <h4>9 月 CPI 高于预期 → 加息预期回升——高油价叠加通胀粘性，市场重新定价利率路径</h4>
+        <p>本周美国 9 月 CPI 数据高于预期，叠加 Brent 原油周涨 6.6% 至 <strong>$109.68</strong>，市场对「利率更高更久」的预期升温。PPI 数据也强化了通胀压力信号。Trading Economics 报道：黄金在 <strong>$4,166</strong>/oz 附近震荡（周跌 0.11%），但地缘紧张局势和美元走强同时拉扯。S&amp;P 500 跌破 50 日均线，纳指创 6 月以来最差周表现。</p>
+        <div class="why">💡 <b>龙虾老师的解读：</b>核心矛盾在于：AI capex 推动的经济繁荣 → 能源需求上升 → 油价上涨 → 通胀粘性 → 利率难降 → AI 估值承压。这是一个反馈循环。对 lainy：关注下周无重要经济数据（周日活动），但下周如果油价继续涨，10 月底 FOMC 会议的预期可能从「按兵不动」转向「鹰派表态」。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，利率敏感）/ GLD 黄金（$4,166 震荡）/ 513130 港股通科技ETF — 高利率环境利空高估值科技股</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://abcnews.com/Business/wireStory/major-us-stock-indexes-fared-friday-10162026-137331951" target="_blank">ABC News</a> · <a href="https://neoreports.substack.com/p/daily-ai-investment-brief-261017" target="_blank">Neo Reports</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：通胀粘性 + 高油价 → 利率路径重估</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>贵金属 · 工业金属 · 能源 · 农产品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $4,166/oz 微跌 0.11%——地缘避险 vs 美元走强拉锯；白银周跌 6.3%</h4>
+        <p>黄金 10/16 收于 <strong>$4,166.39</strong>/oz，周跌 <strong>0.11%</strong>，月跌 <strong>4.03%</strong>。PPI 数据强化通胀预期 + 中东地缘紧张 + 乌克兰局势为金价提供支撑，但美元走强和加息预期升温形成压制。白银周跌 <strong>6.3%</strong>，跌幅大于黄金——白银的工业属性更强，受全球经济放缓担忧拖累。</p>
+        <div class="why">💡 <b>市场含义：</b>黄金在 $4,100-4,200 区间高位震荡，反映的是「通胀+地缘」与「美元+利率」的拉锯。对 lainy：央行持续增持黄金（中国央行已连续 18 个月增持）是结构性支撑，短期回调到 $4,000 以下是加仓机会。白银跌得比黄金快，说明市场更担心全球经济放缓而非通胀——这跟 AI 抛售潮是同一个信号。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ SLV（白银 ETF）— 央行持续买入，中长期看涨；白银短期承压</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities" target="_blank">ShareTrader</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>铜价受地缘+AI 需求双重支撑；锂碳酸酯周跌 16.5% 至 CNY 102,150/吨——供需失衡加剧</h4>
+        <p>铜价本周持稳在 ~$9,090/吨附近（LME），受三重因素支撑：① 地缘政治紧张（供应链风险）；② 结构性供给短缺（矿企长期投资不足）；③ AI 驱动的数据中心铜需求激增。印度 MCX 铜价报 ~$1,398/吨。锂碳酸酯（lithium carbonate）本周暴跌 <strong>16.5%</strong> 至 <strong>CNY 102,150</strong>/吨，跌破 10 万元关口——这是 2026 年以来最大单周跌幅，主因供过于求担忧持续。</p>
+        <div class="why">💡 <b>龙虾老师的解读：</b>铜和锂的故事截然不同：铜有「AI 时代战略金属」叙事（数据中心铜用量是传统建筑的 3-5 倍），供给端又长期投资不足，价格有支撑；锂则是供过于求的持续压力，中国锂盐产能扩张速度远超需求增长。对 lainy：铜的「AI 叙事」vs 锂的「过剩现实」是 2026 年大宗商品最重要的分化之一。关注 Freeport-McMoRan（FCX）、Southern Copper（SCCO）、紫金矿业（601899）。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / FCX（Freeport）/ SCCO（Southern Copper）/ 601899 紫金矿业 / 600362 江西铜业 — 铜受益于 AI 需求+供给短缺；锂相关：002460 赣锋锂业 / 002466 天齐锂业 — 锂价持续承压</div>
+        <div class="source">来源：<a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a> · <a href="https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities" target="_blank">ShareTrader</a> · <a href="https://www.thelec.net/news/articleView.html?idxno=14670" target="_blank">The Elec</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $109.68（周涨 6.6%）/ WTI $101.89（周涨 12%）——中东地缘溢价持续攀升</h4>
+        <p>Brent 原油本周大涨 <strong>6.6%</strong> 收于 <strong>$109.68</strong>/桶，WTI 涨 <strong>12%</strong> 至 <strong>$101.89</strong>/桶。Trading Economics 报告油价 YTD 涨幅已超 <strong>75%</strong>。驱动因素：① 霍尔木兹海峡油轮触雷事件；② 红海胡塞武装袭击持续；③ 俄罗斯柴油供给担忧；④ IEA 紧急释放 1 亿桶储备未能压制市场恐慌。Trump 政府考虑放宽部分制裁以缓解国内燃料价格压力。</p>
+        <div class="why">💡 <b>为什么值得看：</b>油价 YTD +75% 是 2026 年最大的宏观变量之一。对 lainy 的传导链：油价涨 → 运输成本升 → PPI/CPI 粘性 → 利率更高更久 → 科技股估值承压 → AI 抛售。同时直接利好三桶油（中石油/中石化/中海油）和埃克森美孚、壳牌等传统能源巨头。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / 600028 中国石化 / 600938 中国海油 / XOM 埃克森美孚 / CVX 雪佛龙 — 油价飙升直接受益</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://sharetrader.com.au/news/2026-10-17-emergency-oil-reserves-fail-to-quiet-gulf-supply-fears-the-week-in-commodities" target="_blank">ShareTrader</a> · <a href="https://blackmon.substack.com/p/10-big-energy-stories-10172026-all" target="_blank">Blackmon</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企/油企 — FCX/紫金/沙特阿美] → 中游 [冶炼/炼化 — 江西铜业/中石化] → 下游 [新能源/基建/消费] — 当前分化：铜受益（AI 需求+供给短缺）vs 锂承压（供过于求）vs 油（地缘溢价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 · 天然气 · 电力 · 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油市场</span>
+        <h4>IEA 紧急释放 1 亿桶储备未能压制油价——Washington 考虑放宽部分制裁以增加供给</h4>
+        <p>IEA 成员国本周承诺释放剩余的 1 亿桶紧急储备原油（3 月启动的干预计划），但市场反应冷淡——Brent 反而涨至 $109.68。Trading Economics 报道，Washington 正考虑放宽对部分运输伊朗、俄罗斯或委内瑞拉原油船只的制裁，以增加市场供给。同时，行业团体长期寻求加快天然气管道/LNG 出口审批。Cheniere Energy（LNG）Q3 财报定于 10/29 发布，市场关注 LNG 出口增长前景。</p>
+        <div class="why">💡 <b>龙虾老师的解读：</b>IEA 释放储备是「止血」不治本——1 亿桶相对于全球日需求量 ~1 亿桶/天只是 1 天的供给。真正解决问题需要：① 中东地缘稳定（霍尔木兹通行安全）；② 制裁松绑释放俄罗斯/伊朗/委内瑞拉原油；③ 美国 LNG 出口加速。Cheniere 10/29 财报值得关注——LNG 是美国能源出口的增量故事。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / LNG（Cheniere Energy）/ 600028 中国石化 / XOM 埃克森美孚 — IEA 储备释放短期无效，制裁松绑是关键变量</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/quote/LNG/" target="_blank">Yahoo Finance</a> · <a href="https://geopoliticsunplugged.substack.com/p/trump-stops-new-russia-sanctions" target="_blank">Geopolitics Unplugged</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">天然气/LNG</span>
+        <h4>美国 LNG 出口审批加速——行业团体推动天然气运输审批改革</h4>
+        <p>美国行业团体长期寻求加快天然气运输和 LNG 出口审批流程，以应对强劲的 LNG 出口需求和国内发电需求。Trump 政府正在起草行政声明，解决审批流程中的重复分析和拖延问题。Cheniere Energy 作为美国最大 LNG 出口商，Q3 财报将于 10/29 发布，市场关注其签约增长量和未来扩产计划。</p>
+        <div class="why">💡 <b>市场含义：</b>LNG 是 2026 年美国能源出口的核心增长点。如果审批加速，Cheniere、Venture Global 等出口商的产能利用率将提升。对 lainy：关注 LNG 概念股（Cheniere LNG / 新奥股份 600803 / 广汇能源 600256）——高油价环境下 LNG 替代需求也在增加。</div>
+        <div class="ticker">📌 关联标的：LNG（Cheniere Energy）/ 600803 新奥股份 / 600256 广汇能源 — LNG 出口加速受益</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/quote/LNG/" target="_blank">Yahoo Finance</a> · <a href="https://geopoliticsunplugged.substack.com/p/trump-stops-new-russia-sanctions" target="_blank">Geopolitics Unplugged</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采] → 中游 [LNG 液化/运输] → 下游 [发电/工业] — 当前受益环节：中游 LNG 出口（审批加速 + 高油价替代需求）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股 — 周五收盘</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — Star50 下半年跌 ~40% / HK 通净流出 900 亿人民币</h4>
+      <p>周五收盘（10/16）：A 股 Star50（科创50）下半年累计跌 <strong>~40%</strong>，AI 硬件板块领跌。港股通净流出 <strong>900 亿人民币</strong>。北京呼吁「国家队」稳定市场。中国 CXMT 发布新一代 DRAM 技术，对 Samsung/SK Hynix 构成竞争威胁，引发全球存储芯片股抛售。上周无结构性/制度变化公告。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 24,314（-0.13%）/ 24,187（-0.52%）—— AI 拖累 + 富人资产重组抛压</h4>
+      <p>恒指周五收 <strong>24,314.17</strong>（<strong>-0.13%</strong>），部分数据显示 24,186.80（<strong>-0.52%</strong>）。距 52 周低点 22,518 约 +8%，距 52 周高点 28,056 约 -13.3%。2026 YTD 约 <strong>-5.1%</strong>。驱动因素：① AI 股抛售拖累科技板块；② 离岸信托 10/22 大限临近，高净值客户抛售股票引发短期抛压；③ HKEX 推迟 T+1 结算改革。港股通净流出 900 亿人民币。Biztoc 报道：外资银行缩减中国分行网络，低回报考验区域策略。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 52,002（-0.34%）/ S&P 7,659（-1.09%）/ 纳指 26,140（-2.14%）— 周线：纳指 -4.5%</h4>
+      <p>周五收盘：道指 <strong>-0.34%</strong> 至 52,002.41；S&amp;P 500 <strong>-1.09%</strong> 至 7,659.44（跌 84.62 点）；纳指 <strong>-2.14%</strong> 至 26,140.03（跌 572.99 点）。周线：S&amp;P <strong>-1.9%</strong>，纳指 <strong>-4.5%</strong>（6 月以来最差），道指 <strong>+0.7%</strong>。Russell 2000 <strong>-3%</strong>。S&amp;P 跌破 50 日均线，芯片股继续承压——AI 基础设施是抛售震中。本周道指/纳指分化扩大——资金从高估值科技股向价值股轮动。周末无交易，周一开盘关注 AI 超跌反弹。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 七连跌累计 -21%（2008 年以来最差周）/ Samsung -9.48% / SK Hynix -11.06% 熔断</h4>
+      <p>KOSPI 周五暴跌 <strong>-7.57%</strong>，七连跌累计 <strong>-21%</strong>，创 2008 年以来最差周表现。Samsung Electronics <strong>-9.48%</strong>、SK Hynix <strong>-11.06%</strong>，触发一级熔断暂停交易 20 分钟。外资抛售 <strong>2.9 万亿韩元</strong> KOSPI 股票。三大驱动：9 月 CPI 高于预期→加息预期 + CXMT DRAM 技术突破→中国竞争威胁 + Samsung/SK Hynix 回购计划到期→「护盾」消失。Samsung/SK Hynix 跌破 ELS 赎回触发线 85% 阈值。KOSPI 跌至 5,400 水平（7 月以来新低），V-KOSPI 进入恐慌区。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">KFC x Coca-Cola</span>
+        <h4>KFC 美国市场将从 Pepsi 切换至 Coca-Cola——百事可乐痛失快餐巨头渠道</h4>
+        <p>CNBC 10/16 报道，KFC 美国市场将把饮料供应从 Pepsi 切换至 Coca-Cola。这是一个标志性的渠道变更——KFC 全球多数市场使用 Pepsi（Yum! Brands 体系），但美国市场切换至 Coca-Cola 意味着可口可乐在快餐渠道的竞争力回升。</p>
+        <div class="why">💡 <b>龙虾老师说：</b>快餐饮料渠道是「品牌粘性」的试金石。KFC 切换到 Coca-Cola 说明在美国消费者心目中，Coke 的品牌偏好度仍领先 Pepsi。对消费股投资：可口可乐（KO）的渠道护城河在加深，百事（PEP）需要警惕连锁客户流失风险。</div>
+        <div class="ticker">📌 关联标的：KO（可口可乐）/ PEP（百事可乐）/ YUM（Yum! Brands）— KO 渠道扩张受益</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原料供应商] → 中游 [饮料品牌 — KO/PEP] → 下游 [快餐渠道 — YUM/MCD] — 当前受益环节：下游渠道选择权增加，KO 渠道扩张</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>《Sense and Sensibility》2026 版上映 + Netflix 将推《Pride and Prejudice》限定剧——奥斯汀热回归</h4>
+        <p>Deadline 报道，2026 版《Sense and Sensibility》已登陆院线，同时 Netflix 正在筹备一部《Pride and Prejudice》限定剧，预计今年稍晚上线。奥斯汀IP 在 2026 年迎来新一轮改编热潮。</p>
+        <div class="why">💡 <b>花边点评：</b>经典文学IP 每隔几年就会来一轮翻拍潮——2026 年轮到简·奥斯汀。lainy 周末如果需要放松，4K 版《Sense and Sensibility》值得一看。</div>
+        <div class="source">来源：<a href="https://deadline.com/" target="_blank">Deadline</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育花边</span>
+        <h4>Coach Calipari 在 NBA 总决赛不敢接近 Taylor Swift——"我在角落偷偷看着"</h4>
+        <p>Times of India 10/18 报道，67 岁的篮球教练 John Calipari 近日透露，在 NBA 总决赛现场看到 Taylor Swift 时太害羞不敢上前打招呼：「我在角落偷偷看着。」</p>
+        <div class="why">💡 <b>轻松一下：</b>原来名教练也会犯「社恐」。Calipari 带过无数球员、见过大场面，结果在 Swift 面前「社恐」了。很 relatable——谁看到 Taylor Swift 不紧张呢？</div>
+        <div class="source">来源：<a href="https://timesofindia.indiatimes.com/entertainment/english/music/coach-john-calipari-67-admits-he-was-too-embarrassed-to-approach-taylor-swift-during-the-nba-finals-im-in-the-back-corner-just-kind-of-watching/articleshow/135016194.cms" target="_blank">Times of India</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">明星</span>
+        <h4>Academy Museum Gala 2026 预热：Taraji P. Henson、Colman Domingo、Michael Douglas 齐聚洛杉矶</h4>
+        <p>People 杂志报道，2026 Academy Museum Gala 预热私人晚宴在洛杉矶举行，Taraji P. Henson、Colman Domingo、Michael Douglas 等明星出席。Hollywood Reporter 同期推出新系列「Game Recognize Game」，由 NHL 明星 Macklin Celebrini 和演员 Belmont Cameli 合作。</p>
+        <div class="why">💡 <b>花边：</b>Academy Museum Gala 是奥斯卡季的第一个风向标。lainy 如果关注 awards season，可以开始记名字了。</div>
+        <div class="source">来源：<a href="https://people.com/star-tracks-saturday-october-17-2026-new-celebrity-photos-updated-daily-12178420" target="_blank">People</a> · <a href="https://www.hollywoodreporter.com/" target="_blank">Hollywood Reporter</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">科学</span>
+        <h4>Micron Edge Inference Memory（EIM）技术突破：HBM 功效瓶颈有望破解，2028 年量产瞄准 AI 机器人</h4>
+        <p>WCCFTech 10/17 报道，Micron 发布 Edge Inference Memory（EIM）新技术，旨在解决 HBM 功耗效率弱点。EIM 兼具 LPDDR 低功耗和 HBM 低延迟高带宽特性，目标 2028 年量产。如果成功，生成式 AI 可能从「云端」扩展到「物理世界」——人形机器人可以在本地做出决策，不依赖云端算力。</p>
+        <div class="why">💡 <b>彩蛋视角：</b>这是本周最有趣的科技新闻——如果 EIM 成功，AI 的下一个阶段不再是「更大的数据中心」，而是「装进机器人的大脑」。对 lainy：这跟你在关注的 AI 硬件产业链直接相关——HBM 的市场可能不只是数据中心，还有机器人。</div>
+        <div class="source">来源：<a href="https://wccftech.com/micron-edge-inference-memory-hbm-power-efficiency-ai-robots/" target="_blank">WCCFTech</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
