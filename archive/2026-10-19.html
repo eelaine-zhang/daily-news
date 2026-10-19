@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-19</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; color: var(--text-dim); font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 19 日</h1>
+    <div class="subtitle">周一 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>NVHBM 重大变化：</b>三星确认使用 TSMC 3nm 工艺为英伟达定制 HBM 生产 base die——三星代工转向「如果打不过就加入」策略，TSMC 3nm 产能进一步被 AI 需求锁死。</li>
+      <li><b>韩股史诗级崩跌：</b>KOSPI 周跌超 8%，三星/SK Hynix 单日跌超 9%，AI 估值质疑 + 中国 CXMT 竞争 + 美联储加息三重夹击，上周五收 5,554 创四月新低。</li>
+      <li><b>离岸信托税 10/22 申报：</b>路透社 10/16 报道离岸信托所得须在 10/22 前自行计算申报，高净值人群加速资金迁移；同期海底捞张勇妻子减持被市场解读为「补税套现」。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">NVHBM · 三星 × TSMC</span>
+        <h4>三星确认使用 TSMC 3nm 为英伟达 NVHBM 生产 base die——代工格局「打不过就加入」</h4>
+        <p>10/18 Seoul Economic Daily 报道，三星电子确认将使用 TSMC <strong>3nm</strong> 工艺为英伟达下一代定制 HBM（NVHBM）生产 base die（基础裸片）。这意味着三星从此前的「一站式 turnkey」策略（从 HBM 本体到 base die 全自己代工）转为「HBM 本体自做 + base die 外包 TSMC」的混合模式。SK Hynix 和美光也被英伟达要求统一走 TSMC 3nm 做 base die，确保三家内存厂商的标准化。NVHBM 承诺比标准 HBM4E 带宽高 <strong>30%</strong>、功耗低 <strong>15%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 芯片产业链的「权力图谱」更新——英伟达在用 NVHBM 标准进一步绑定 TSMC。三星此前一直试图用 turnkey（代工+HBM+封装一条龙）来跟 TSMC 竞争，但现在英伟达明确要求 base die 必须走 TSMC 3nm，三星只能妥协。对 lainy 的金融视角：① TSMC 3nm 产能被进一步锁死——AI 需求不是「增速放缓」，而是「所有人都在抢产能」；② 三星代工独立变现能力受损——它可能沦为「HBM 本体制造商」而非全链条方案商；③ 这对 SK Hynix 是利好——它已经在用 TSMC 做 HBM4 base die，现在三星也被拉到同一条船上。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC，3nm 产能进一步被锁）/ NVDA（英伟达，NVHBM 标准强化垄断）/ 005930.KS（三星，代工叙事弱化）/ 000660.KS（SK Hynix，已适应 TSMC base die 模式）</div>
+        <div class="source">🔗 Source: <a href="https://en.sedaily.com/finance/2026/10/18/samsung-to-use-tsmc-for-base-die-in-nvidias-custom-hbm" target="_blank">Seoul Economic Daily</a> · <a href="https://www.channelnewsasia.com/business/samsung-use-tsmc-technology-nvidias-next-generation-memory-chips-seoul-newspaper-reports-6469576" target="_blank">CNA</a> · <a href="https://cryptobriefing.com/tsmc-nvidia-custom-hbm-base-dies/" target="_blank">Crypto Briefing</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC Q3 + 产能</span>
+        <h4>TSMC Q3 营收 NT$1.49 万亿创纪录（+50.9% YoY），Q4 指引 $543 亿——CEO 称「AI 需求远超供应」</h4>
+        <p>TSMC 上周发布 Q3 财报：营收 NT$1.494 万亿（<strong>+50.9%</strong> YoY），净利 NT$7463 亿（<strong>+近 70%</strong> YoY），连续第六个季度创纪录。Q4 指引收入区间 $526-543 亿，中位数高于市场预期。TSMC 上调 2026 全年收入增速预期至约 <strong>44%</strong>（美元计），较 7 月的「略超 40%」进一步提升。CNBC 报道称英伟达、苹果、博通、AMD 在 TSMC 产线上展开「极其激烈」的产能争夺战。HPC 收入环比增长 22%。但利润率展望拖累股价——市场担心「收入增长 > 利润率增长」的剪刀差在扩大。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>TSMC 的财报基本是 AI 需求的「终极温度计」——需求远超供应意味着提价权还在 TSMC 手里。但利润率承压意味着它在「扩产能换收入」阶段，短期利润释放不如收入增长快。对 lainy：上周全球半导体股蒸发 $1 万亿（KOSPI 触发熔断），但 TSMC 的基本面没有任何恶化——这是情绪而非基本面。NVHBM 消息进一步验证 AI 需求的持续性。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ NVDA（英伟达）/ AVGO（博通）/ AMD — 产能争夺战意味着这些公司谁先拿到产能谁先出 AI 产品</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/10/15/nvidia-apple-broadcom-in-fierce-battle-to-make-chips-at-tsmc.html" target="_blank">CNBC</a> · <a href="https://www.fool.com/investing/2026/10/16/tsmc-says-ai-chip-demand-is-still-far-above-what-it-can-supply-that-s-why-i-d-buy-nvidia-stock/" target="_blank">Motley Fool</a> · <a href="https://coinpaper.com/37339/tsmc-forecasts-up-to-543-billion-in-q4-revenue-as-ai-chip-stocks-face-global-selloff" target="_blank">CoinPaper</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Tesla 财报</span>
+        <h4>Tesla Q3 2026 财报倒计时：10/21 盘后发布，交付量环比增但同比降，利润率是焦点</h4>
+        <p>Tesla 将于 <strong>10/21</strong>（周三）盘后发布 Q3 财报，电话会 5:30 PM ET。Zacks 一致预期 EPS <strong>$0.44</strong>、收入 <strong>$278</strong> 亿。Q3 交付量已先期公布——环比增长但同比下降，汽车毛利率仍是核心争议点。OANDA 指出交付量超预期，但市场更关注：① 汽车毛利率能否止跌；② Cybertruck 产能爬坡进度；③ Robotaxi/自动驾驶路线图更新；④ 能源业务（Megapack）增长曲线。股东提问已通过 Say 平台征集，10/20 截止。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Tesla 是 AI + 能源 + 机器人的交叉标的。对 lainy：关注点不是交付量（那个已经公布了），而是毛利率——如果汽车毛利率继续下滑，说明价格战还没到底；如果能源业务增长超预期，Megapack 是下一个增长曲线。另外 Musk 在电话会上对自动驾驶/FSD 的表态会直接影响 AI 概念股情绪。</div>
+        <div class="ticker">📌 关联标的：TSLA（Tesla）/ 750059 阳光电源（储能产业链）/ NIO/9866（新能源车企估值对标）</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/stocks/articles/tesla-gears-report-q3-earnings-125800623.html" target="_blank">Yahoo Finance</a> · <a href="https://www.tipranks.com/stocks/tsla/earnings" target="_blank">TipRanks</a> · <a href="https://www.oanda.com/eu-en/blog/tesla-q3-2026-earnings-preview-deliveries-beat-estimates" target="_blank">OANDA</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 — TSMC 3nm 产能被 NVHBM 锁死] → 下游 [AI 芯片设计 — NVDA/AVGO/AMD] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游 TSMC（定价权+产能锁死）；受损环节：三星代工（turnkey 叙事弱化）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗 targeting ship-to-ship 原油转运 + UN 肥料运输计划濒临崩溃——霍尔木兹危机进入新阶段</h4>
+        <p>AP News 10/14 报道，伊朗正瞄准霍尔木兹海峡附近的船对船（STS）原油转运作业。同日 The Independent 报道，一个负责监督 UN 支持的肥料通过霍尔木兹海峡运输计划的官员告诉路透社，如果美伊无法达成协议，亚洲和非洲部分地区可能面临粮食安全危机。Vitol 10/16 数据显示，高硫燃料油（HSFO）通过霍尔木兹的流量仍比 2 月水平低至少 <strong>80 万吨/月</strong>。Britannica 记录显示 10/14 伊朗支持的胡塞武装袭击了沙特阿美总部，同日伊朗报告一艘船只在霍尔木兹触雷沉没。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>霍尔木兹危机从「打船」升级到「打转运作业」——这意味着伊朗在封锁策略上更精准了。UN 肥料运输计划如果崩溃，影响的不只是油价，而是全球农产品供应链——亚洲和非洲粮食安全。对 lainy 的市场映射：① 油价维持 $100+ 高位的结构性支撑；② 肥料涨价 → 农产品涨价 → 全球食品通胀链；③ 这不是短期波动，而是可能持续到 2027 年的地缘常态。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / DBA 农产品 ETF — 油价高位 + 农产品通胀双线受益</div>
+        <div class="source">🔗 Source: <a href="https://apnews.com/article/saudi-arabia-yemen-houthis-october-13-2026-3e6e5f152048c035081eac369f62ed4f" target="_blank">AP News</a> · <a href="https://www.the-independent.com/news/world/middle-east/strait-of-hormuz-iran-war-ships-oil-b3067351.html" target="_blank">The Independent</a> · <a href="https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 伊朗/沙特] → 中游 [STS 转运 + 霍尔木兹通行] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [肥料/食品 — 全球通胀链] — 当前受损环节：中游 STS 转运（被精准打击）+ 下游肥料/食品（UN 计划濒临崩溃）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 超预期 · 美债 5%+ · 离岸信托 10/22</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">CPI · 美债</span>
+        <h4>9 月 CPI 同比 3.7% 超预期 / 10 年期美债收益率 5.09-5.3% 区间运行——Fed 12 月加息预期升温</h4>
+        <p>上周宏观数据密集发布：9 月 CPI 同比 <strong>3.7%</strong>（超预期），环比 <strong>+0.6%</strong>（5 个月最大涨幅），汽油 <strong>+34.2%</strong> YoY 是主要推手。CPI 数据公布后，10 年期美债收益率一度飙升至 <strong>5.33%</strong>，随后回落至 <strong>5.09%</strong> 附近。2 年期收益率升至 <strong>5.27%</strong> 附近。Fed 副主席 Bowman 表示「通胀仍然过高但上次加息后需时间观察」，FOMC 会议纪要显示决策者仍倾向进一步加息，期货市场预计 12 月可能第二次加息。BlackRock 指出今年以来 10 年期收益率已升 <strong>110 bps</strong> 至约 5.25%，主要受实际利率上升驱动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CPI 超预期 + 油价 $100+ = Fed 降息无望，甚至可能再加息。这对 lainy 的核心逻辑链：高油价 → 通胀粘性 → Fed 加息 → 美债 5%+ → 科技股估值承压 + 港股流动性外流。上周美股 CPI 后全线大跌（S&P -1.10%），但周尾有所企稳。本周关注：住房数据 + 多国通胀数据（日本/香港/新加坡等）。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，鹰派利空）/ TLT（美债 ETF，收益率上行=价格下跌）/ 513130 港股通科技 ETF（港股受美债收益率直接影响）</div>
+        <div class="source">🔗 Source: <a href="https://finance.sina.com.cn/wm/2026-10-14/doc-inivfftk1315430.shtml" target="_blank">新浪财经</a> · <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank">Trading Economics</a> · <a href="https://www.blackrock.com/cn/global-weekly-commentary" target="_blank">BlackRock</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">离岸信托 · 10/22</span>
+        <h4>路透社 10/16：离岸信托所得须 10/22 前自行计算申报——高净值人群加速迁移，海底捞张勇妻子减持被解读为「补税套现」</h4>
+        <p>路透社 10/16 报道，持有离岸信托收入的人士须在 <strong>10/22</strong> 前自行提交应缴税额的计算，并在税务机关确认金额后缴税。财政部/税务总局 7/24 发布的第 21 号公告涉及离岸信托设立/存续/清算三个环节，按 <strong>20%</strong> 个税征收，给存量信托留了 <strong>90 天</strong>补税窗口（10/22 截止）。同期新浪/25 号观察报道：海底捞创始人张勇 5 月以 13.39 港元增持 1135 万股后，妻子减持 <strong>2.59 亿股</strong>——被市场解读为「补税套现」。Mondaq/Legal500 深度分析指出，「案例先例化」将替代「规则细化」成为短期主要路径——统一执行细则缺位，BVI 持股、离岸信托、境外保险的争议领域将通过个案处理逐步沉淀。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是 lainy 作为金融从业者必须关注的事件。10/22 是存量信托的补税窗口截止日——之后不再免滞纳金。路透社的报道确认了自行计算申报流程的存在，这是新事实。海底捞张勇妻子的减持时间线与 90 天窗口高度吻合，虽不能确证就是补税，但市场已做此解读。对 lainy：① 高净值客户的信托架构需要紧急 review；② 港股架构（BVI 持股）的税务成本结构性上升；③ 私行/律所/家族办公室业务量暴增但利润率下降（客户在砍价）。</div>
+        <div class="ticker">📌 关联标的：6862 海底捞（创始人减持情绪面）/ 港股高净值概念 — 离岸架构成本上升，私人银行/信托服务需求增加但利润率受压</div>
+        <div class="source">🔗 Source: <a href="https://www.legal500.com/intelligence/china/tax/" target="_blank">Legal500</a> · <a href="https://www.mondaq.com/china/tax-authorities/1854360/" target="_blank">Mondaq</a> · <a href="https://www.sina.cn/weibo/detail/5353266482514804.html" target="_blank">新浪/25号观察</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [财政部/税务总局公告] → 中游 [私人银行/律所/家族办公室] → 下游 [高净值客户 — 信托架构重整] — 当前热环节：中游（咨询量暴增）+ 下游（资金迁移加速），但利润率受「客户砍价 + 合规成本上升」双重挤压</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>贵金属 / 工业金属 / 能源 / 农产品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $4,182/oz（+0.37%）/ 白银 $57.36——油价回落 + 地缘避险双支撑，CPI 后美元走强压制</h4>
+        <p>截至 10/18 收盘：COMEX 黄金 <strong>$4,182</strong>/oz（+0.37%），白银 <strong>$57.36</strong>/oz（+0.64%）。上周黄金在 CPI 爆表后一度跌至 $4,083，但随后反弹。Trading Economics 指出黄金 climbed toward $4,150 on Thursday as crude oil ended its five-day rally。Barchart 技术分析指出 Gold Breaks $4,378, Silver Tests $63——波动率仍在高位。结构支撑：中东地缘避险 + 央行持续买盘 + 美元走弱周期。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金在 $4,100-4,200 区间反复拉锯，本质是 CPI 超预期（利空）vs 地缘避险（利多）对撞。对 lainy 的配置框架：央行购金是结构性的（中国央行已连续 18+ 月增持），所以每次回调到 $4,000 附近都是配置机会。本周 Fed 加息预期升温可能短期压制，但 $4,000 是强支撑。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF（A 股）/ GLD（美股黄金 ETF）/ SLV（白银 ETF）/ 600547 山东黄金 — 中长期看涨，短期 $4,000 是强支撑</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.barchart.com/futures/quotes/GC*0/futures-prices" target="_blank">Barchart</a> · <a href="https://www.kitco.com/price/precious-metals" target="_blank">KITCO</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>铜 $6.53/lb（月跌 -0.84%）/ 锂 CNY 111,650/t（月跌 -19.47%）——分化加剧，OPEC 砍需求拖累工业金属</h4>
+        <p>截至 10/16：COMEX 铜 <strong>$6.53</strong>/lb（日涨 +0.30%，但月跌 -0.84%），仍比去年同期高 <strong>31.75%</strong>。锂 CNY <strong>111,650</strong>/t（日跌 -3.25%，月跌 -19.47%）——碳酸锂价格继续寻底。OPEC 砍 2026 年需求增长至 40 万桶/日（从年初 140 万累计下调 71%）拖累工业金属情绪，但铜的供给端紧张（智利/秘鲁矿山扰动）仍在支撑价格。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜和锂的分化是 2026 年大宗商品的核心叙事——铜是「绿色转型+电网投资」的需求端，锂是「新能源车增速放缓」的供应过剩端。对 lainy：铜价维持 $6.5+/lb 意味着紫金/洛阳钼业/江西铜业的利润有支撑；锂价跌到 11 万/t 附近意味着锂矿股（赣锋/天齐）还在底部，但宁德时代等下游受益于原材料降价。</div>
+        <div class="ticker">📌 关联标的：COMEX 铜 / 600362 江西铜业 / 601899 紫金矿业 / 002460 赣锋锂业（锂价寻底）/ 300750 宁德时代（锂降价受益方）</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/copper" target="_blank">Trading Economics</a> · <a href="https://finance.yahoo.com/markets/commodities/" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">原油</span>
+        <h4>Brent ~$103 / WTI ~$91——从 $107 高位回落，霍尔木兹攻击 vs G7 释放战略储备拉锯</h4>
+        <p>截至 10/18：Brent <strong>$103.18</strong>/桶（-1.47%），WTI <strong>$90.31</strong>/桶（-1.68%）。上周 Brent 从 $107 高位回落，核心逻辑：① G7 释放战略储备（SPR）约 1 亿桶压价；② 霍尔木兹通行量仅正常 5% 但「纸面」流通仍在；③ OPEC 砍 2026 需求增长至 40 万桶/日。但 Vitol 数据显示 HSFO 通过霍尔木兹的流量仍比 2 月低 80 万吨/月——供给缺口未填。Business Standard 10/17 报道 Brent $103.18 / WTI $90.31。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>油价在 $90-107 区间拉锯，核心矛盾是「G7 释放 SPR 压价」vs「霍尔木兹结构性供给中断」。SPR 释放是一次性的，霍尔木兹中断是持续的——所以中长期油价中枢上移是大概率事件。对 lainy：三桶油（中石油/中石化/中海油）的利润弹性在 $100+ 油价下非常可观。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / 600028 中国石化 / 600938 中国海油 / XOM 埃克森美孚 — 高油价受益</div>
+        <div class="source">🔗 Source: <a href="https://www.business-standard.com/markets/commodities" target="_blank">Business Standard</a> · <a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html" target="_blank">OilPrice (Hormuz)</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿业 — 紫金/洛阳钼业/Freeport] → 中游 [冶炼/精炼] → 下游 [新能源车/电网/电子] — 当前分化：铜受益于电网+绿色投资，锂受压于新能源车增速放缓；油价高位支撑上游油气公司利润</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / 天然气 / 电力 / 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油 · OPEC+</span>
+        <h4>OPEC 大砍 2026 需求增长至 40 万桶/日（年初 140 万累计下调 71%），2027 看反弹至 260 万</h4>
+        <p>OPEC 月报将 2026 年全球石油需求增长预测从年初的 140 万桶/日累计下调至 <strong>40 万</strong>桶/日（下调幅度 <strong>71%</strong>）。但 OPEC 预测 2027 年反弹至 <strong>260 万</strong>桶/日。下调主因：① 中东地缘冲突拖累全球经济增长；② 高油价抑制需求；③ 中国经济复苏弱于预期。但 2027 年反弹预期基于：地缘冲突降温 + 新兴市场需求恢复。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>OPEC 砍需求预测是「自利」的——低需求预期 = 维持减产合理化 = 支撑油价。但 71% 的累计下调幅度非常大，意味着 OPEC 自己也不看好 2026 年的石油需求。对 lainy：2027 年反弹至 260 万桶/日的预测如果实现，意味着 2027 年油价可能回到 $80s——但这取决于中东和平，目前看不到。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / OPEC+ 减产受益股 — 600028 中国石化 / 601857 中国石油 / 600938 中国海油</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.bloomberg.com/markets/commodities" target="_blank">Bloomberg</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">天然气 · LNG</span>
+        <h4>霍尔木兹 HSFO 流量缺口 80 万吨/月 + 特朗普再提阿拉斯加 LNG 管道——天然气市场地缘定价加剧</h4>
+        <p>Vitol 10/16 数据显示高硫燃料油（HSFO）通过霍尔木兹的流量仍比 2 月水平低至少 <strong>80 万吨/月</strong>。同期特朗普在阿拉斯加集会再次声称「韩国同意花 $500 亿建阿拉斯加 LNG 管道」——但韩国官员已否认。霍尔木兹 crisis 导致中东 LNG 扩产面临不确定性：卡塔尔加速扩能，但 EU 2027 年起禁转售俄罗斯 LNG。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>天然气市场正在被地缘政治重新定价——霍尔木兹影响的不只是原油，LNG 也是。卡塔尔是全球最大 LNG 出口国，其扩产计划如果受阻 = 亚洲 LNG 价格上行 = 新奥股份/广汇能源等天然气股受益。特朗普的阿拉斯加 LNG 管道虽然被韩国否认，但这个叙事如果持续 = 美国天然气出口受益。</p>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 / 600256 广汇能源 / 603688 石化机械 — LNG 扩产 + 地缘溢价受益</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/Geopolitics/Middle-East/Hormuz-Is-Turning-Shippings-Fuel-Bill-Into-a-Supply-Crisis.html" target="_blank">OilPrice</a> · <a href="https://www.britannica.com/event/2026-Iran-war" target="_blank">Britannica</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油气开采 — 中石油/中海油/埃克森美孚] → 中游 [LNG 液化/运输 — 卡塔尔/阿拉斯加] → 下游 [发电/化工/交通] — 当前受益环节：上游油气（高油价）；受损环节：下游化工（原料成本上升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 周五 10/16 沪指 3,716 收盘，盘中冲高回落，全周宽基指数普跌</h4>
+      <p>上周 A 股主要宽基指数普跌，大盘相对抗跌。行业方面：食品饮料、银行表现较好；通信、电子和电力设备跌幅居前。中信建投研报指出：上游周期明显升温（煤炭/石油石化热度上升），传媒、非银和银行热度也在上升。基本面：电子、煤炭、计算机、通信和有色金属盈利预测调整居前。宏桥控股公告拟定增募资不超 <strong>120 亿</strong>元——电解铝龙头股价近期大涨超 <strong>46%</strong>。<b>本周关注：</b>10/19 周一开盘情绪 + CPI 后资金面变化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/16 恒指收 24,187 / 恒生科技回暖，联想涨超 8% 领涨</h4>
+      <p>上周恒指在 24,100-24,400 区间震荡，10/16 收盘 <strong>24,187</strong>。恒生科技指数回暖，科网股普涨，联想集团涨超 <strong>8%</strong> 领涨蓝筹。但美债收益率 5%+ 持续压制港股流动性——资金外流压力仍在。此前 10/13 恒指 +0.52%，科指 +1.16%。<b>本周关注：</b>美债收益率走向 + Tesla 财报对科网股情绪影响。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 上周五 S&amp;P 7,807 / 纳指 26,692（CPI 后大跌），周尾芯片股反弹企稳</h4>
+      <p>10/14 CPI 爆表后美股全线大跌：S&amp;P <strong>-1.10%</strong> 报 7,719，纳指 <strong>-1.88%</strong> 报 26,692。但 10/15 周五芯片股反弹：Advantest +1.89%，Kioxia 涨 6%，阿里 +3.1%，腾讯 +2.2%，SK Hynix +2.85%，三星 +2.38%。CNBC 指出 TSMC 财报后市场情绪有所修复——AI 需求“远超供应”的信号压过 CPI 利空。Motley Fool 认为 NVDA 当前股价比 TSMC 便宜（相对盈利预期），是买入信号。<b>本周关注：</b>Tesla 10/21 财报 + 住房数据 + 多国通胀数据。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 周跌超 8% 触发熔断，收 5,554 创四月新低，三星/SK Hynix 单日跌超 9%</h4>
+      <p>上周韩股经历了史诗级崩跌：KOSPI 10/15 单日跌 <strong>8.13%</strong> 触发熔断，收 5,554——七连跌，创四月新低。三星电子单日跌 <strong>9%+</strong>，SK Hynix 跌 <strong>11%</strong>。Bloomberg 指出驱动因素：① 美联储加息预期升温；② AI 估值质疑（全球半导体股蒸发 $1 万亿）；③ 中国 CXMT 4F² DRAM 技术突破威胁。Business Insider 分析称这是「AI 热的双重威胁」——估值过高 + 融资成本上升。外资连续七天净抛售。10/16 KOSPI 有所企稳，但情绪仍脆弱。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>品牌 · 食品 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">海底捞 · 离岸信托</span>
+        <h4>海底捞张勇妻子减持 2.59 亿股——市场解读为「离岸信托补税窗口套现」</h4>
+        <p>新浪/25 号观察报道：海底捞创始人张勇 5 月以 13.39 港元增持 1135 万股后，妻子转头减持 <strong>2.59 亿股</strong>。时间线与财政部/税务总局 7/24 发布的第 21 号公告（离岸信托 20% 个税、90 天补税窗口）高度吻合——市场解读为「补税套现」。同期海底捞股价一度大跌 <strong>10%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>虽然不能确证减持就是为了补税，但时间线确实高度相关。对 lainy：这个案例反映了高净值人群在 10/22 大限前的资金迁移压力。海底捞本身的基本面不是焦点——焦点是「创始人减持 = 高净值资金从港股信托架构流出」的信号。如果更多港股上市公司创始人跟进减持，港股流动性压力可能加大。</div>
+        <div class="ticker">📌 关联标的：6862 海底捞 — 创始人减持情绪面利空；港股高净值概念整体承压</div>
+        <div class="source">🔗 Source: <a href="https://www.sina.cn/weibo/detail/5353266482514804.html" target="_blank">新浪/25号观察</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">出口退税</span>
+        <h4>财政部下调新能源汽车出口退税率：13% → 9%，2027 年 4 月起生效</h4>
+        <p>财政部/税务总局发布公告，新能源汽车出口退税率从 <strong>13%</strong> 降至 <strong>9%</strong>，2027 年 4 月 1 日起生效。同时调整的还有电子烟等品类。这意味着新能源车企出口利润率将下降约 4 个百分点——对比亚迪、宁德时代等出海大户的利润有直接影响。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>出口退税下调 = 政府在「补贴退坡」。对 lainy：新能源车的「政策红利期」在结束——国内补贴退了，出口补贴也在退。这意味着：① 车企出海利润率下降；② 行业洗牌加速——小厂更难存活；③ 宁德时代等电池厂的海外客户利润率下降 = 间接受损。</div>
+        <div class="ticker">📌 关联标的：300750 宁德时代 / 002594 比亚迪 — 出口退税率下降 4 个百分点，利润率承压</div>
+        <div class="source">🔗 Source: <a href="https://www.sina.cn/weibo/detail/5353835702782603.html" target="_blank">新浪新闻</a> · <a href="http://szs.mof.gov.cn/zhengcefabu/202610/t20261012_4002592.htm" target="_blank">财政部税政司</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 锂/铜] → 中游 [电池/整车 — 宁德/比亚迪] → 下游 [出口市场] — 当前受损环节：中游（出口退税率下调 4 个百分点）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>聊天也能用上</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>WNBA 总决赛进行中：Golden State Valkyries 1-0 领先 Atlanta Dream，Game 2 周一晚 8 PM ET</h4>
+        <p>2026 WNBA 总决赛正在如火如茶进行中。Golden State Valkyries 在 Game 1 取胜，目前 <strong>1-0</strong> 领先 Atlanta Dream。Game 2 于 10/19（周一）晚 8:00 PM ET 开打。EssentiallySports 指出 Valkyries 带着 1-0 的系列赛优势进入 Game 2。</p>
+        <div class="why">🦞 <b>轻松一下：</b>WNBA 在 2026 年的关注度创下历史新高——新生球队 Valkyries 闯入总决赛。lainy 周一如果没事做，可以看看直播。</div>
+        <div class="source">🔗 Source: <a href="https://www.essentiallysports.com/nhl-wnba-mlb-nfl-ice-hockey-basketball-baseball-football-news-october-nineteenths-complete-sports-schedule-where-when-and-how-to-watch-your-favorite-sports-events/" target="_blank">EssentiallySports</a> · <a href="https://frontofficesports.com/" target="_blank">Front Office Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>Messi 梅西双响带领 Inter Miami 获胜 + NFL Week 6 Bears vs Falcons 精彩对决</h4>
+        <p>梅西周末双响带领 Inter Miami 获胜。NFL Week 6 周日对决：Chicago Bears vs Atlanta Falcons 等。CBS Sports Gameday 提供了全面比赛回顾。AP News 体育节目表显示 10/19-25 本周赛事密集。</p>
+        <div class="why">🦞 <b>花边补充：</b>梅西在 MLS 季后赛冲刺阶段的状态回升是好消息——Inter Miami 的季后赛前景值得关注。NFL 本周进入 Week 6，赛季已过三分之一。</div>
+        <div class="source">🔗 Source: <a href="https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-october-19-2026-check-top-national-international-and-sports-news-here-10333154" target="_blank">Daily Jagran</a> · <a href="https://www.cbssports.com/" target="_blank">CBS Sports</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
