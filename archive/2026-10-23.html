@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-23</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; color: var(--text-dim); font-size: 13px; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.sci { background: #B8B0D518; color: var(--sci); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 23 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 恐慌蔓延：</b>Meta 财报上调资本开支指引引发 AI 支出可持续性质疑，Nasdaq 创 6 月以来最大单日跌幅 <strong>-2.6%</strong>，Meta 暴跌 <strong>7%</strong>，AI 算力链（GE Vernova / Vistra / Bloom Energy）集体暴跌 10%+。</li>
+      <li><b>油价飙至 5 月新高：</b>Brent 收 <strong>$113.17</strong>（+4%），WTI 收 <strong>$99.47</strong>——美国财长 Bessent 宣布对伊朗实施「史上最严厉制裁」，NPR 报道美以拟在中期选举后恢复对伊打击，霍尔木兹海峡危机再升级。</li>
+      <li><b>离岸信托大限已过：</b>10/22 离岸信托 20% 个税申报截止日已到，中国富豪境外财富面临首批补税压力；同日俄罗斯向美国派出首船柴油——特朗普-普京协议进入执行阶段。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>Nvidia GTC Berlin · AI 泡沫裂痕扩大</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Nvidia GTC Berlin</span>
+        <h4>Nvidia 在 GTC Berlin 锁定六家供应链伙伴——$11 亿预付款锁定封装/测试/光引擎产能，黄仁勋称「产能是唯一约束」</h4>
+        <p>10/22 Nvidia 在柏林首届 GTC 大会上宣布与六家半导体供应链公司签署产能扩张协议——Amkor、IBIDEN、KYEC（京元电子）、三星电机、SPIL（矽品）、Unimicron。总预付款达 <strong>$11</strong> 亿（仅 KYEC 一家），目标：基板产能 3 年内扩大 <strong>2.5x</strong>，先进封装（韩国）2028 年底前扩大 <strong>300%</strong>，芯片测试产能 2027 年翻倍，光引擎产量 2027 年中前扩大 <strong>15x</strong>。黄仁勋在主旨演讲中表示：「我们正处于人类历史上最大规模的基建潮中。需求是非凡的，产能才是约束。」同时推出 DSX 全栈架构和 DSX POD 模块化数据中心，宣称工厂化 AI 数据中心可在 14 天内上线。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 Nvidia 从「抢需求」转向「抢供给」的标志性动作。基板（ABF 基板）此前一直是被忽吃的瓶颈——不同于 HBM 和晶圆代工的公开讨论，基板供应链高度集中（IBIDEN 独家 ABF 材料），扩产周期长。Nvidia 用预付款锁定产能 = 别家（AMD、Broadcom 自研 AI 芯片）可能面临「有钱也买不到基板」的局面。对 lainy 的框架：AI 芯片竞争已从「谁的 GPU 更快」进入「谁锁定了供应链」阶段，Nvidia 的先发优势在加固。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，供应链锁定受益）/ TSM（TSMC）/ 000660.KS SK Hynix / IBIDEN（日本基板龙头）/ KYEC（京元电子测试龙头）— Nvidia 锁定产能 = 竞争对手面临供给挤压</div>
+        <div class="source">来源：<a href="https://www.techtimes.com/articles/329352/20261022/nvidia-locks-ai-chip-testing-optics-capacity-six-partner-prepayment-push.htm" target="_blank">TechTimes</a> · <a href="https://www.digitimes.com/news/a20261022PD232/nvidia-data-center-gtc-berlin-production.html" target="_blank">DigiTimes</a> · <a href="https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout" target="_blank">NVIDIA Newsroom</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Meta 财报 · AI 泡沫</span>
+        <h4>Meta Q3 财报引发 AI 支出恐慌——上调资本开支指引后股价暴跌 <strong>7%</strong>，AI 算力股集体跳水</h4>
+        <p>10/22 Meta 发布 Q3 财报，营收和 EPS 均超预期，但宣布上调 2026 年全年资本开支指引至高端，并发布了有限的 2027 年展望。市场解读为「AI 投入无底洞」信号，Meta 盘中暴跌 <strong>7%</strong>，同时宣布 2:1 拆股。连锁反应迅速蔓延：GE Vernova 跌 <strong>11%+</strong>，Bloom Energy 跌 <strong>11%+</strong>，Vistra 跌 <strong>10%+</strong>，Quanta Services 跌 <strong>8%+</strong>，Talen Energy 跌 <strong>8.3%</strong>，Eaton 跌 <strong>7%</strong>。核能概念股也未能幸免：Oklo 跌 <strong>4%+</strong>，NuScale 跌 <strong>3%+</strong>。Tesla 同日发布 Q3 财报（净利 $7.87 亿，同比 <strong>-44%</strong>），股价跌 <strong>3%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是 2026 年 AI 叙事的关键拐点——Meta 一家公司的 capex 指引就让整个 AI 算力链暴跌 10%+，说明市场已经从「AI 投资 = 一定值得」转向「AI 投资 = 谁来买单？」的质疑阶段。GE Vernova / Vistra 这些电力公司是 AI 数据中心的「卖铲人」，它们暴跌 = 市场开始怀疑数据中心建设是否真的会按计划落地。对 lainy 的框架：AI 从「建设期」（估值驱动）进入「回报验证期」（盈利驱动），这个转换期波动会非常大。</div>
+        <div class="ticker">📌 关联标的：META（Meta，-7%）/ TSLA（Tesla，-3%）/ GEVN（GE Vernova，-11%）/ VST（Vistra，-10%）/ BE（Bloom Energy，-11%）/ SMH（半导体 ETF）— AI 基建链全线承压</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/10/21/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://finance.yahoo.com/markets/live/stock-market-today-thursday-october-22-dow-sp-500-nasdaq-tesla-meta-112217857.html" target="_blank">Yahoo Finance</a> · <a href="https://www.cnbc.com/2026/10/22/tesla-q3-2026-earnings-analysts.html" target="_blank">CNBC Tesla</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">SK Hynix HBM</span>
+        <h4>SK Hynix 向主要客户送样最新 HBM 芯片——HBM4 竞争进入实质性客户验证阶段</h4>
+        <p>Reuters 10/22 报道，SK Hynix 已向主要客户送样最新一代高带宽存储（HBM）芯片。继上周 Nvidia-SK Hynix $5000 亿合作及 Samsung-Broadcom $2000 亿协议后，SK Hynix 继续巩固其在 AI 内存市场的领先地位。SK Hynix 同时通过 TSMC 逻辑基础裸片制造 HBM4/HBM4E，并供应 Solidigm QLC eSSD。</p>
+        <div class="why">🦞 <b>商业含义：</b>HBM4 送样 = 产品从研发进入客户验证阶段，距离量产又近一步。SK Hynix 在 HBM 市场的份额领先正在从 HBM3E 延续到 HBM4。对 lainy 的映射：HBM 是 AI 军备竞赛的「弹药」——Nvidia 每卖一颗 GPU 需要配 4-6 颗 HBM 芯片，HBM 的定价权直接决定 SK Hynix 和三星的利润弹性。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星电子）/ TSM（TSMC 代工 HBM 基础裸片）— HBM 双寡头格局延续</div>
+        <div class="source">来源：<a href="https://www.reuters.com/company/nvidia-corp/" target="_blank">Reuters</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [ABF 基板 — IBIDEN/味之素] → 中游 [代工 — TSMC/三星] + [封装测试 — KYEC/SPIL/Amkor] → 下游 [GPU — NVDA/AMD] + [HBM — SK Hynix/三星] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前关键瓶颈：上游 ABF 基板 + 封装测试产能（Nvidia 正在用预付款锁定）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊制裁升级 · 俄乌战火未歇</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>Bessent 宣布对伊朗实施「史上最严厉制裁」——NPR 报道美以拟中期选举后恢复对伊打击</h4>
+        <p>10/22 美国财长 Bessent 宣布将对伊朗实施「史上最严厉制裁」，聚焦经济措施，暗示这将减少对伊朗进行新的大规模军事行动的需要。同日 NPR 报道，美国和以色列正在制定中期选举后恢复对伊朗打击的计划。BBC 报道，俄罗斯在宣布「原则上同意」恢复与美乌三方和谈后数小时，向基辅发动三波弹道导弹和无人机攻击，造成 1 人死亡、22 人受伤。AP 发布卫星图像显示 10/8 乌克兰无人机袭击了俄罗斯 Sasovo 的数据中心（位于 Ryazan 地区）。</p>
+        <div class="why">🦞 <b>市场含义：</b>Bessent 的「制裁而非军事」表态表面降温，但 NPR 的爆料（美以已开始规划选后打击）才是真正的信号——这说明暂停轰炸只是选前策略。油价当天应声飙升 <strong>4%</strong> 至 Brent $113。同时俄罗斯一边说和谈一边打基辅的「边打边谈」策略意味着地缘不确定性持续。对 lainy：高油价 = 通胀粘性 = Fed 12 月加息概率维持高位 = 科技股估值承压，这条传导链在今天的 Nasdaq -2.6% 里已经完全体现了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（+4%，地缘溢价上升）/ 600028 中国石化 / 601857 中国石油 / GLD 黄金 — 油价飙升利好三桶油，黄金避险需求支撑</div>
+        <div class="source">来源：<a href="https://www.reuters.com/world/" target="_blank">Reuters</a> · <a href="https://www.npr.org/sections/world/" target="_blank">NPR</a> · <a href="https://www.bbc.com/" target="_blank">BBC</a> · <a href="https://apnews.com/" target="_blank">AP News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">俄柴油赴美</span>
+        <h4>俄罗斯首船柴油 10/22 驶往美国——特朗普-普京协议执行中，欧洲天然气价格飙至 2022 年 12 月以来最高</h4>
+        <p>继 10/22 早报报道俄罗斯首船柴油驶往美国后，更多细节浮现：美方临时豁免制裁允许进口俄罗斯柴油，作为特朗普-普京协议的一部分。与此同时，欧洲天然气价格攀升至 2022 年 12 月以来最高水平——俄罗斯柴油可以卖给美国，但欧洲买家仍被制裁禁止购买，导致欧洲能源市场供给更加紧张。霍尔木兹海峡通行量维持正常水平的仅 <strong>5%</strong>，伊朗海军布雷持续，全球原油供应链仍处「ICU 状态」。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这个局面非常讽刺——美国一边制裁伊朗一边买俄罗斯柴油，欧洲两头受气。对 lainy 的市场映射：① 欧洲天然气价格飙升 = 欧洲化工/制造业成本压力回升（BASF / Siemens 受损）；② 美国买俄柴油 = 油价地缘溢价有部分被「管理」了，但霍尔木兹不恢复，$100+ Brent 下不去；③ 中俄关系深化——李强赴圣彼得堡参加中俄总理第 31 次定期会晤。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / NYMEX 天然气 / LNG（Cheniere Energy）— 欧洲天然气紧缺利好美国 LNG 出口商</div>
+        <div class="source">来源：<a href="https://www.fdd.org/overnight-brief/october-22-2026/" target="_blank">FDD</a> · <a href="https://www.csis.org/programs/latest-analysis-war-iran" target="_blank">CSIS</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC/俄罗斯Rosneft] → 中游 [航运 — 霍尔木兹/红海航线，通行率 5%] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹危机持续）+ 欧洲天然气供应（俄柴油赴美但欧洲买不到）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>油价飙升 · 离岸信托大限已过</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">离岸信托截止日</span>
+        <h4>离岸信托 20% 个税 10/22 申报截止日已过——90 天过渡期结束，中国富豪境外财富面临首批补税</h4>
+        <p>10/22 是财政部/税务总局 7/24 公告的离岸信托 20% 个税申报截止日。90 天过渡期内申报可免滞纳金。Economic Times 报道指出，中国超富阶层在香港、新加坡、东京等地设立的大量离岸信托面临首批补税压力，这是中国政府填补财政缺口的最新举措。Chiangrai Times 报道，部分市场参与者预期新规可能推动数字美元需求上升（资金从传统离岸渠道向加密货币转移的避险行为）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 作为金融从业者必须关注的事件——7/24 公告 → 90 天过渡期 → 10/22 截止，现在过渡期已正式结束。后续关注：① 是否有首批补税案例/处罚公开（将影响高净值人群行为）；② 税务总局是否发布更多执行细则（10/19 已发布 6 条）；③ 香港私银行/家族办公室业务是否出现资金外流迹象；④ 是否有信托设立地（香港/新加坡）的监管回应。本条严格遵守「政策生效日 ≠ 新闻」补丁——只因 10/22 是截止日且是最后一天，不再后续追踪除非有新事实。</div>
+        <div class="ticker">📌 关联标的：香港上市银行（03888 渣打 / 02388 中银香港）/ 家族办公室概念 / BTC（数字美元避险逻辑）— 私银行/家办业务可能受冲击</div>
+        <div class="source">来源：<a href="https://economictimes.indiatimes.com/news/international/world-news/cash-strapped-china-targets-offshore-wealth-with-new-tax/articleshow/135105508.cms" target="_blank">Economic Times</a> · <a href="https://www.chiangraitimes.com/china/china-tax-crackdown/" target="_blank">Chiangrai Times</a> · <a href="https://www.thestandard.com.hk/china/article/346177/Cash-strapped-China-targets-offshore-wealth-with-new-tax" target="_blank">The Standard HK</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">油价 &amp; Fed</span>
+        <h4>Brent 收 $113.17 创 5 月以来新高——油价 +4% 推升加息预期，10 年期美债收益率逼近 24 年高点</h4>
+        <p>10/22 Brent 原油收 <strong>$113.17</strong>（+4%），WTI 收 <strong>$99.47</strong>（+2.4%）——均创 5 月以来最高。CNBC 报道指出油价飙升源于投资者对美国恢复对伊朗打击的担忧。同时 10 年期美债收益率逼近 24 年新高，油价 $110+ 推升通胀预期 → 加息预期 → 美元走强 → 金价承压。下周 FOMC 会议将决定方向。美国 Q2 GDP 终值 <strong>+2.2%</strong>（BEA 10/22 发布），低于 Q1 的 +2.5%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>油价 → 通胀 → Fed → 股市，这条传导链今天完美演绎了一遍。Brent $113 = 5 月以来最高 = 地缘溢价完全回来了。对 lainy 的三步框架：① 油价 $110+ 持续 → CPI 能源分项回升 → Fed 12 月加息概率维持高位；② 美元走强 → 新兴市场资金外流 → 港股承压（今天恒指 -3.1%）；③ 美债收益率上行 → 科技股 DCF 估值折价扩大 → Nasdaq 承压。下周 FOMC 是关键节点。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 10Y 美债收益率 / SPY / QQQ / 513130 港股通科技ETF — 油价高位 + Fed 加息预期 = 科技股和新兴市场双承压</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/10/21/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes</a> · <a href="https://www.bea.gov/" target="_blank">BEA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">IBM 财报</span>
+        <h4>IBM Q3 超预期但盘后跌 3%——调整后 EPS $2.95 超预期，2026 全年自由现金流指引 +$10 亿</h4>
+        <p>10/22 IBM 发布 Q3 财报：调整后 EPS <strong>$2.95</strong>（超 LSEG 预期 $2.86），营收超预期。公司指引 2026 全年自由现金流将同比增长超 <strong>$10</strong> 亿。尽管如此，IBM 盘后跌超 <strong>3%</strong>——市场对科技股的容忍度已降至冰点。同日 Lam Research 也发布财报，盘前走低。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>IBM 超预期还跌 = 市场情绪已经从「财报好不好」变成「AI 投资能不能回本」。IBM 的 AI 咨询业务是传统企业 AI 落地的风向标——它的超预期说明传统企业确实在花钱买 AI，但市场不买账说明投资者已经进入「验证期疲劳」。</div>
+        <div class="ticker">📌 关联标的：IBM（-3% 盘后）/ LRCX（Lam Research）— 科技财报超预期但被抛售，市场情绪极度脆弱</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/markets/live/earnings-live-updates-all-eyes-on-musk-and-meta-as-q3-earnings-roll-on-134152191.html" target="_blank">Yahoo Finance</a> · <a href="https://registeredcoupons.com/article/stock-market-update-meta-tesla-earnings-impact-ai-boom-concerns-and-ibm-volatility" target="_blank">Registered Coupons</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油价/利率] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：下周 FOMC + 油价 $113 + AI 财报验证期</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金回落 · 油价飙升</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">贵金属</span>
+        <h4>黄金 $4,040 连跌 / 白银承压——油价推升加息预期打压避险资产</h4>
+        <p>10/22 黄金收 <strong>$4,040.25</strong>（-2.44%），月跌幅 <strong>-5.76%</strong>，年同比 <strong>-2.08%</strong>。油价飙升推升美债收益率和美元走强，打压黄金避险需求。白银同步承压。 Trading Economics 数据显示，金价在 $4,000-4,100 区间持续震荡，地缘避险 vs 美元走强两股力量拉锯。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金现在被夹在两股力量中间——地缘危机（买黄金避险）vs 油价推升加息预期（美元走强卖黄金）。今天后者赢了。但 $4,000 是强支撑，如果下周 FOMC 鸽派，金价可能快速反弹到 $4,100+。对 lainy 的配置框架：黄金是「高通胀+地缘混乱」环境的核心配置，短期波动是加仓机会不是止损。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ 600547 山东黄金 — 金价回调后关注 $4,000 支撑</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">能源金属</span>
+        <h4>Brent $113.17 / WTI $99.47——油价创 5 月新高，霍尔木兹危机 + 美以对伊打击预期推升地缘溢价</h4>
+        <p>10/22 Brent 原油收 <strong>$113.17</strong>（+4%），WTI 收 <strong>$99.47</strong>（+2.4%），均为 5 月以来最高。CNBC 报道油价飙升源于投资者对美以恢复对伊朗打击的担忧。Brent 突破 $109.99 后快速拉升。Citi 此前 $60 油价预测已被 $112 Brent 现实打破。加拿大 9 月通胀升至 3.1%，燃油价格同比跳涨 58%。WTI 距 $100 仅一步之遥。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价 $113 = 通胀粘性 = Fed 难降息 = 科技股估值承压。这条传导链今天就兑现了——Nasdaq -2.6%。对 lainy 的三桶油映射：油价每涨 $10，中石油/中海油利润弹性 15-20%。但高油价也会反噬需求——如果油价持续 $110+，全球需求放缓将拖累原油消费。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / 0883.HK 中海油 / XOM 埃克森美孚 / XLE 能源 ETF — 高油价利好上游油企</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/oil/" target="_blank">CNBC Oil</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [金矿 — 紫金/山东黄金/纽蒙特] + [油企 — 中石油/中海油/沙特阿美] → 中游 [炼化 — 中石化/ExxonMobil] → 下游 [消费 — 航空/物流/制造] — 当前受益环节：上游油企（油价 $113）；当前受损环节：下游航空/物流（成本飙升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>油价飙升 · LNG 重塑 · 天然气分化</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">LNG</span>
+        <h4>QatarEnergy 转向 Cheniere 签美国 LNG 长约——伊朗战争打乱全球 LNG 贸易格局</h4>
+        <p>OilPrice 10/22 报道，QatarEnergy 正在与美国 Cheniere Energy 签署新的 LNG 长期供应合同，原因是伊朗战争打乱了全球 LNG 贸易格局。QatarEnergy 传统上依赖中东航线出口 LNG，但霍尔木兹海峡通行率仅 5% 的现状使其必须寻找替代出口路线。Cheniere 同日获 Petrobras 新 LNG 合约关注，其 Q3 财报将于 10/29 发布。美国 NYMEX 天然气价格跌至 $2.535（跌破 10 月低点 $2.575），但欧洲天然气价格飙升至 2022 年 12 月以来最高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>全球 LNG 贸易正在被地缘政治重塑——QatarEnergy 转向美国 = ① 美国 LNG 出口商（Cheniere）成为最大赢家；② 欧洲天然气价格飙升 = 欧洲制造业成本压力回升；③ 美国 NYMEX 天然气下跌 = 美国本土天然气供给充裕，与欧洲形成割裂。对 lainy 的映射：LNG 价差（美国 vs 欧洲）是衡量地缘风险溢价的绝佳指标。</div>
+        <div class="ticker">📌 关联标的：LNG（Cheniere Energy，受益）/ 600256 广汇能源 / 601139 深圳燃气 — 美国 LNG 出口商受益于中东供应中断</div>
+        <div class="source">来源：<a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://finance.yahoo.com/quote/LNG/" target="_blank">Yahoo Finance LNG</a> · <a href="https://www.fxempire.com/forecasts/natural-gas" target="_blank">FXEmpire Natural Gas</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采 — 美国页岩/卡塔尔] → 中游 [LNG 液化/运输 — Cheniere/三菱商事] → 下游 [发电/工业 — 欧洲化工/亚洲制造业] — 当前受益环节：美国 LNG 出口商；当前受损环节：欧洲天然气消费者</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 10/22 收盘：Nasdaq -2.6% / S&amp;P -1.21% / Dow +0.02%——Meta 财报引发 AI 泡沫恐慌</h4>
+      <p>10/22 美股收盘：S&amp;P 500 <strong>-1.21%</strong> 报 7,663.43，Nasdaq <strong>-2.6%</strong> 报 26,008.86（6 月以来最大单日跌幅），Dow +0.02% 报 52,867.98（尾盘翻正）。Meta <strong>-7%</strong>（财报上调 capex 指引 + 2:1 拆股），Tesla <strong>-3%</strong>（Q3 净利 -44%，capex 削减至 $200 亿）。AI 算力链全线暴跌：GE Vernova -11%+，Bloom Energy -11%+，Vistra -10%+，Quanta -8%+。IBM 超预期但盘后仍跌 3%。资金从科技向防御股轮动：医疗保健板块跑赢 S&amp;P。Schwab 指出 Dow Health Care Index 年内跑赢 S&amp;P 500，资金加速从科技向医疗轮动。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/22 收盘：恒指 -3.10% 报 22,919 / 恒生科技跌破 3,830 创两年新低——阿里跌破 HK$100，腾讯失守 HK$400</h4>
+      <p>10/22 恒指收 <strong>-3.10%</strong> 报 22,919.11，恒生科技指数盘中暴跌超 4% 至 <strong>3,829.18</strong>（2024 年 9 月以来最低，年内跌幅超 30%）。阿里巴巴跌破 HK$100 关口，腾讯失守 HK$400。BigGo Finance 报道称这是科技股全面抛售。RTHK 报道恒指低开 0.58% 后持续走弱。CSI 300 同日跌 1.84% 至 4,036.30，进入技术性熊市。Sharecast 报道澳大利亚 ASX -0.43%，新西兰 NZX -0.11%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 10/22 收盘：沪指 -0.53% 报 3,716 / 福耀玻璃 -8.22% 领跌 / 中国神华 -3.90%</h4>
+      <p>10/22 沪指收 <strong>-0.53%</strong> 报 3,716 点（Trading Economics）。跌幅榜前三：福耀玻璃 <strong>-8.22%</strong>、中国神华 <strong>-3.90%</strong>、华域汽车 <strong>-3.69%</strong>。涨幅榜：航天信息 <strong>+9.96%</strong>、用友软件 +1.75%。CSI 300 跌 1.84% 进入熊市。市场整体受港股科技股暴跌 + 油价飙升 + AI 泡沫担忧三重打击。消费板块未见明显利好信号。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI -3.52% 报 5,533.77 / KOSDAQ -3.6% 报 764.1——AI 估值担忧全球蔓延</h4>
+      <p>10/22 KOSPI 收 <strong>-3.52%</strong> 报 5,533.77，KOSDAQ <strong>-3.6%</strong> 报 764.1（CNBC）。三星电子、SK Hynix 跟随全球 AI 芯片股暴跌。CNBC TV18 前一日报道 KOSPI 开盘跌 0.47%。韩股本周连续多日受 AI 估值担忧和外资流出打击——上周三 KOSPI 曾反弹 +3.29%，但本周被全部吐回。外资 10 日来仅 1 日净买入。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>中国消费持续疲软 · 离境退税增长</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>中国消费持续疲软：Chinese equities 年度回报 -19% vs MSCI EM +30%——制造业转型未能提振消费者信心</h4>
+        <p>Warakirri 报告（Northcape Capital）显示，截至 2026 年 9 月 30 日的 12 个月里，中国股票回报 <strong>-19%</strong>，而 MSCI 新兴市场指数回报 <strong>+30%</strong>——差距 49 个百分点。制造业升级（AI、机器人）未能传导至消费者信心。Pakistan Today 报道，中国正在推进「Shopping in China」品牌和离境退税政策——1-8 月离境退税销售额同比增长约 60%，退税旅客数翻三倍。但国内消费依然疲软，服务零售增速（+5%）远超商品零售（+1%）的结构性分化持续。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>中国消费的「K 型分化」越来越明显——高端消费（离境退税、奢侈品、服务消费）在政策刺激下有所恢复，但大众消费（商品零售、家电）依然疲软。对 lainy 的消费股框架：① 服务型消费（餐饮、旅游、文娱）&gt; 商品型消费（百货、超市）；② 高端 &gt; 大众；③ 政策受益板块（离境退税、文旅）&gt; 传统零售。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费）/ 002511 顺网科技（文娱服务）/ 000651 格力电器（家电承压）— 消费分化持续</div>
+        <div class="source">来源：<a href="https://rallies.ai/news/chinas-manufacturing-pivot-fails-to-lift-consumer-confidence-warakirri-report-says-c8659f5e877ffa10" target="_blank">Rallies.ai</a> · <a href="https://www.pakistantoday.com.pk/2026/10/22/china-outlines-progress-in-high-quality-trade-investment-development" target="_blank">Pakistan Today</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料] → 中游 [制造 — 家电/食品加工] → 下游 [渠道 — 电商/超市/餐饮] — 当前受益环节：下游服务型消费（餐饮/文旅/离境退税）；当前受损环节：中游商品制造（价格战+需求疲软）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>World Series 来了！</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">World Series</span>
+        <h4>2026 World Series 10/24 开打：Milwaukee Brewers vs Tampa Bay Rays——两支从未夺冠的球队，新王将加冕</h4>
+        <p>MLB 官方 10/22 公布 2026 World Series 赛程：Milwaukee Brewers 横扫卫冕冠军 Dodgers 进入总决赛，Tampa Bay Rays 6 场淘汰 Guardians。两支球队都是队史首次夺冠机会。Fox Sports 公布转播阵容：Kevin Burkhardt 主持，Derek Jeter、David Ortiz、Alex Rodriguez 担任解说。MLB 官方还宣布 Payton Tolle、Miguel Rojas 和 Ernie Clement 担任 World Series 通讯记者。LISA 新歌「SaWaDiKa」成为本届 World Series 主题曲。</p>
+        <div class="why">🦞 <b>花边点评：</b>这可能是近年来最有故事感的 World Series——两支从未夺冠的球队，谁赢都是队史首冠。Brewers 横扫了卫冕冠军 Dodgers，Rays 在前年还差点搬迁到蒙特利尔，现在却要打 World Series。Marvel 还宣布在 Game 1 期间首播《Avengers: Doomsday》独家预告片——Bryce Harper、Freddie Freeman、Randy Arozarena 等球星出镜。lainy 周末如果刷到 World Series 话题，这就是为什么全网都在讨论。</div>
+        <div class="source">来源：<a href="https://www.mlb.com/news/world-series-2026-correspondents" target="_blank">MLB.com</a> · <a href="https://www.foxsports.com/stories/mlb/fox-sports-mlb-announcers-2026-world-series-schedule-rays-brewers" target="_blank">Fox Sports</a> · <a href="https://en.wikipedia.org/wiki/2026_World_Series" target="_blank">Wikipedia</a> · <a href="https://wdwnt.com/2026/10/marvel-to-air-exclusive-avengers-doomsday-preview-during-world-series-game-1/" target="_blank">WDWNT</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
