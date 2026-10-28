@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-28</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --metal: #B8A07E; --energy: #C4A77D;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; color: var(--text-dim); font-size: 13px; font-style: normal; }
+  .card .why::before { content: "💡 "; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.metal { background: #B8A07E18; color: var(--metal); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a08; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 28 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · FOMC 决议日</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>SK Hynix 炸裂 Q3：</b>营业利润 ₩83.33 万亿（$628 亿）创历史新高、同比飙 7 倍，宣布 ₩100 万亿（$755 亿）股东回报计划——AI 内存正在印钞。</li>
+      <li><b>FOMC 今日决议：</b>市场定价 90% 概率维持 3.75-4.00%，但油价仍守 $100+、通胀粘性令 10% 加息概率悬着——Powell 讲什么比决议本身更关键。</li>
+      <li><b>Trump 称伊朗停火「浪费时间」：</b>CNN 报道美军可在 96 小时内发动打击，霍尔木兹仍关闭、伊朗提 7 项条件——中东局势再度升温。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>SK Hynix 印钞日</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">SK Hynix Q3</span>
+        <h4>SK Hynix Q3 营业利润 ₩83.33 万亿（$628 亿）创历史新高——7 倍 YoY，宣布 ₩100 万亿股东回报</h4>
+        <p>10/28 早盘公布：Q3 营业利润 <strong>₩83.33 万亿</strong>（$628 亿），同比飙升逾 <strong>7 倍</strong>，创单季历史纪录。AI 内存需求——尤其 HBM3E/HBM4——驱动营收超预期。同时宣布 <strong>₩100 万亿</strong>（$755 亿）年度股东回报计划，含可能的 <strong>₩16 万亿</strong>特别股息。Zacks 预期每股 ADR $5.96 / 营收 $664 亿，实际超预期。10/27 韩股收盘 SK Hynix <strong>+5-7%</strong>，三星 <strong>+5%</strong>，KOSPI 大涨 <strong>+3.46-4.39%</strong> 至 ~5,658-5,709 点。期权市场定价财报后 ±6.7%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>HBM 正在成为全球半导体行业利润最大的单一品类。SK Hynix 绑定英伟达 + Microsoft 双客户后，HBM 产能 = 印钞机。₩100 万亿回报计划意味着公司认为当前利润水平可持续。对 lainy 的金融视角：① HBM 双寡头（SK Hynix + 三星）的定价权远超传统 DRAM 周期；② ₩16 万亿特别股息 = 管理层超级自信；③ 三星明天的 Q3（10/29）将验证「双寡头都在赚」还是「SK Hynix 吃独食」。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星）/ SKHY（ADR）— HBM 双寡头受益；三星明日报告或验证格局</div>
+        <div class="source">来源：<a href="https://www.koreatimes.co.kr/business/companies/20261028/sk-hynix-logs-record-q3-operating-profit-of-628-bil" target="_blank">Korea Times</a> · <a href="https://www.koreajoongangdaily.com/business/sk-hynixs-q3-operating-profit-surges-more-than-sevenfold-to-record-628b/12941760" target="_blank">Korea JoongAng Daily</a> · <a href="https://www.koreaherald.com/article/10917003" target="_blank">Korea Herald</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 供应链</span>
+        <h4>Nvidia $2790 亿供应链锁定：从 $1190 亿单季度跳至 $2790 亿——TSMC 考虑 CoWoS 涨价 20%</h4>
+        <p>Tom's Hardware 报道：据 Nvidia 8 月财报披露，截至 2026 年 7 月，公司已累计 <strong>$2790 亿</strong>（约 ₩）未履行的供应链和产能锁定承诺，较上一季度的 <strong>$1190 亿</strong>单季翻倍。Nvidia 与 6 家主要供应商签署十亿美元级长期协议，覆盖基板、先进封装、半导体测试、光引擎。同时 TSMC 据报考虑将 CoWoS 封装价格上调 <strong>20%</strong>。富邦研究预计 Nvidia 2028 年数据中心 AI GPU 出货将达 <strong>1240 万</strong>张，较 2026 年的 820 万张大幅增长。Nvidia GTC Berlin 博客指出：电力已成为 AI 基建最大瓶颈，全美 <strong>$3000 亿+</strong>设备订单积压，200+ GW 项目排队。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>$2790 亿供应链锁定 = Nvidia 在用真金白银告诉市场「AI 需求不是泡沫」。但 TSMC 涨价 20% 意味着：AI 芯片的毛利率边际正在被中游代工侵蚀。链路：Nvidia 预付款 → 供应商扩产 → TSMC 涨价 → Nvidia 毛利率承压 → 需要更高 ASP 来维持利润。对 lainy：AI 芯片链的利润正在从「设计端」向「制造端」转移——TSMC/SK Hynix 的议价权在上升。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，毛利润率承压风险）/ TSM（TSMC，CoWoS 涨价受益）/ 000660.KS（SK Hynix，HBM 议价权上升）— 中游议价权增强</div>
+        <div class="source">来源：<a href="https://www.tomshardware.com/tech-industry/semiconductors/nvidia-is-bankrolling-ai-accelerator-supply-chain-buildout-to-reserve-production-capacity-announces-billion-dollar-deals-with-six-major-suppliers-across-substrates-advanced-packaging-semiconductor-testing-and-optical-engines" target="_blank">Tom's Hardware</a> · <a href="https://blogs.nvidia.com/gtc-berlin-2026-news/" target="_blank">NVIDIA Blog</a> · <a href="https://petragordan.substack.com/p/nvidia-gtc-berlin-the-token-factory" target="_blank">Petra Gordan</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">国产替代</span>
+        <h4>中国实验室用纯国产加速器完成 1.6 万亿参数模型预训练——零 Nvidia 参与的训练跑</h4>
+        <p>AI Central 报道：某中国实验室在约 5 万张国产加速器上完成了 1.6 万亿参数模型的预训练，整个训练过程无任何 Nvidia 硅片参与。首批组件已于 Q4 2026 开始出货。这标志着中国 AI 算力国产替代从「可用」迈向「可大规模训练」阶段。</p>
+        <div class="why">🦞 <b>市场含义：</b>5 万张国产卡跑 1.6T 参数 = 国产替代不再是政治口号，而是工程现实。对 lainy：关注国产 AI 芯片链——寒武纪、华为昇腾——的估值重估机会。短期不影响 Nvidia（全球需求远超产能），但中长期改变的是中国 AI 市场格局。</div>
+        <div class="ticker">📌 关联标的：688256 寒武纪（国产 AI 芯片）/ 002747 埃斯顿（机器人）/ 512760 半导体ETF — 国产替代情绪利好</div>
+        <div class="source">来源：<a href="https://substack.aicentral.blog/p/some-assembly-required" target="_blank">AI Central</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Hynix] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：中游 HBM（SK Hynix 创纪录利润）+ 先进封装（TSMC CoWoS 涨价 20%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>伊朗局势再度升温</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>Trump 称伊朗停火「浪费时间」——CNN 报道美军可在 96 小时内发动打击</h4>
+        <p>10/26 Trump 在公开讲话中称此前与伊朗的停火协议是「sort of a waste of time」，同时炫耀美军对霍尔木兹海峡的封锁效果。Fox News 报道：CNN 引述官员消息，美军中东部队可在收到总统命令后 <strong>96 小时</strong>内对伊朗发动大规模行动。与此同时，沙特、土耳其、巴基斯坦高级官员齐聚德黑兰，推动伊朗「去升级」四方会谈。伊朗外长 Araqchi 表示希望美方选择外交，但警告若美方恢复军事行动将予以回应。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 7 月停火以来 Trump 首次公开否定停火协议。96 小时打击窗口 = 如果今晚 FOMC 后市场反应负面 + 油价继续飙升，Trump 可能需要外部「危机叙事」转移注意力。对 lainy：① 油价地缘溢价不会消退；② 如果打击发生，Brent 可能冲 $130+；③ 中国作为伊朗最大原油买家，直接受影响。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价上升）/ 601857 中国石油 / 600028 中国石化 — 油价每涨 $10，三桶油利润弹性 15-20%</div>
+        <div class="source">来源：<a href="https://www.foxnews.com/live-news/iran-war-news-trump-israel-saudi-october-26" target="_blank">Fox News</a> · <a href="https://www.aljazeera.com/news/2026/10/27/irans-calculations-as-us-escalation-looms-trust-midterms-hormuz" target="_blank">Al Jazeera</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗提 7 项条件拒绝重开霍尔木兹——Qatar 居间斡旋，卡塔尔 LNG 断供冲击扩大</h4>
+        <p>Al Circle 报道：伊朗向美方提出 7 项条件以重新开放霍尔木兹海峡通行，谈判陷入僵局。Qatar 在华盛顿与德黑兰之间传递消息。6 月备忘录曾带来短暂停火，但 7 月因伊朗攻击商船而破裂。Iranian Foreign Minister 表示「伊朗的优先事项不是再签一个停火，而是永久结束战争」。Al Jazeera 分析指出：伊朗在霍尔木兹的杠杆——全球 1/5 原油和 LNG 经此通行——使其不愿轻易让步。</p>
+        <div class="why">🦞 <b>市场含义：</b>7 项条件 = 伊朗在「赌」美方不敢在选举年升级。如果赌对了，油价高位持续；如果赌错了（Trump 真的下令打击），Brent $130-150 不是不可能。对 lainy 的配置框架：能源股/油气 ETF 在这个环境下是「地缘对冲」而非纯基本面投资。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / XLE（能源ETF）/ 600028 中国石化 / 601857 中国石油 — 高油价受益</div>
+        <div class="source">来源：<a href="https://www.alcircle.com/news/iran-keeps-strait-of-hormuz-closed-as-seven-conditions-stall-us-negotiations-121715" target="_blank">Al Circle</a> · <a href="https://www.britannica.com/event/2026-Iran-war" target="_blank">Britannica</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹封锁] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（霍尔木兹关闭 + 7 项条件僵局）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 决议日</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC</span>
+        <h4>FOMC 今日 2 PM EDT 公布决议：90% 概率维持 3.75-4.00%，10% 加息概率悬着</h4>
+        <p>FOMC 10/27-28 会议今日结束，决议将于美东时间 <strong>2:00 PM</strong>（HK 时间 10/29 凌晨 2:00）公布。截至 10/26 联邦基金期货定价：维持利率 <strong>3.75-4.00%</strong> 的概率约 <strong>90-93%</strong>（Kalshi/Polymarket ~93%，OIS ~89%），25bp 加息概率 <strong>7-11%</strong>。EBC Financial 指出：通胀仍远高于美联储 2% 目标，油价 $100+ 令年内紧缩预期未消。iTechGuides 分析：Kevin Warsh 的政策指引可能重塑 12 月加息预期——关注声明措辞变化而非仅看利率决定。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 lainy 今天最需要盯的宏观事件。三种情景：① 按兵不动 + 鸽派声明 → 风险资产大涨、黄金回调；② 按兵不动 + 鹰派声明（暗示 12 月可能加息）→ 科技股承压、黄金走强；③ 意外加息 → 全球震荡。当前共识是情景 ①，但油价 $100+ + 通胀粘性让情景 ② 概率上升。对港股影响最大（流动性敏感），A 股影响有限。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股）/ GLD 黄金 / 513130 港股通科技ETF — 鸽派利好科技，鹰派利空</div>
+        <div class="source">来源：<a href="https://www.ebc.com/forex/fed-october-2026-rate-decision" target="_blank">EBC Financial</a> · <a href="https://rateprobability.com/fed" target="_blank">RateProbability</a> · <a href="https://defirate.com/odds/fed-decision/" target="_blank">DeFi Rate</a> · <a href="https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-october-2026" target="_blank">Kiplinger</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">财税监管</span>
+        <h4>CRS 2.0 叠加离岸信托新规：跨境财富税务监管全面收紧——Law.asia 深度分析</h4>
+        <p>Law.asia 发布深度分析：离岸信托 21 号公告（财政部/税务总局）+ 税务总局 15 号公告共同构建了跨境财富税务监管新框架。核心：① CRS 2.0 跨境金融信息交换机制升级，穿透离岸架构；② 税务总局依托大数据涉税比对，搭建境内外数据联动核查体系；③ 常态化筛查纳税人境外资产、交易流水与申报信息差异。覆盖所有跨境从业者、离岸架构持有人、高净值人群。同期，美国 IRS 10/26 生效最终规则 TD 10055，将遗产税结案信费用上调 $20。</p>
+        <div class="why">🦞 <b>读给你听：</b>这不是「21 人被点名」的故事重复——而是系统性框架正在成形。CRS 2.0 = 信息端打通（你海外有什么，税务总局看得到）；21 号公告 = 执行端落地（不补就罚）。两套机制叠加 = 跨境财富管理行业面临结构性重整。对 lainy 作为金融从业者：私银行/家族办公室/律所的客户架构审查需求将爆发式增长。</div>
+        <div class="ticker">📌 关联标的：离岸架构概念股 — 私银行/律所/家办受益于合规需求激增；高净值客户资产配置从「避税」转向「合规+传承」</div>
+        <div class="source">来源：<a href="https://law.asia/zh-hans/crs-offshore-trust-rules-tighten-tax-oversight/" target="_blank">Law.asia</a> · <a href="https://www.amz123.com/t/jqZERna8" target="_blank">AMZ123</a> · <a href="https://www.lexology.com/library/detail.aspx?g=0b9bfd98-51fa-4f8f-9c66-7924b094c449" target="_blank">Lexology</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：FOMC 决议 + Powell 声明措辞</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金价企稳 FOMC 前 · 油价回落至 $100</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag metal">贵金属</span>
+        <h4>黄金 $4,023.90 FOMC 前企稳 / 白银 $54.15 小涨——避险资产等待方向</h4>
+        <p>10/27 收盘：黄金 <strong>$4,023.90</strong>/oz（<strong>-0.4%</strong>），白银 <strong>$54.15</strong>/oz（<strong>+0.35%</strong>）。黄金在 FOMC 前维持 $4,000-4,100 震荡区间，地缘避险需求支撑底部，但油价推升加息预期打压上限。Kitco 现货数据一致。印度排灯节（Diwali）前金价走势偏弱——传统实物买盘季节性减弱。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>黄金 $4,000 是多空战场。FOMC 鸽派 → 突破 $4,100；鹰派 → 可能回踩 $3,900。但中长期支撑不变：央行持续购金 + 地缘混乱 + 通胀粘性。lainy 的配置框架：$3,900 以下是加仓区，不是止损区。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD — FOMC 后方向选择</div>
+        <div class="source">来源：<a href="https://www.kitco.com/price/precious-metals" target="_blank">KITCO</a> · <a href="https://tradingeconomics.com/commodity/silver" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag metal">工业金属</span>
+        <h4>铜 $6.62/lb（+1.7%，同比 +30%）/ 碳酸锂仍低迷——AI 驱动 vs 电池寒冬</h4>
+        <p>10/27：LME 铜 <strong>$6.62</strong>/lb（<strong>+1.7%</strong>），同比涨幅约 <strong>+30%</strong>，受 AI 数据中心铜需求 + 地缘供应紧张双支撑。碳酸锂维持弱势，跌破 CNY 100,000/吨后继续磨底。ENR Morning Brief 数据：WTI <strong>$100.87</strong>（-0.9%），天然气 <strong>$3.02</strong>（+16.2%），铜 <strong>$6.62</strong>（+1.7%）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜和锂的分裂是 2026 年最鲜明的商品叙事：AI 建设要铜，新能源放缓杀锂。对 lainy 的映射：铜价 → 紫金矿业/江西铜业/Freeport；碳酸锂 → 天齐锂业/赣锋锂业。铜的 AI 驱动逻辑是结构性的，不是短期波动。</div>
+        <div class="ticker">📌 关联标的：2899.HK 紫金矿业 / 600362 江西铜业 / FCX（Freeport）/ 002460 赣锋锂业 — 铜受益，锂承压</div>
+        <div class="source">来源：<a href="https://github.com/Jason-741/Jason-projects/issues/29" target="_blank">ENR Morning Brief</a> · <a href="https://www.sunsirs.com/commodity-news/petail-37140.html" target="_blank">SunSirs</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag metal">原油</span>
+        <h4>Brent 回落至 $100（-1.73%）/ WTI $100.87（-0.9%）——美沙伊外交 vs 霍尔木兹封锁拉锯</h4>
+        <p>Trading Economics：Brent 10/27 收 <strong>$100</strong>/Bbl（<strong>-1.73%</strong>），较上周 $115-116 高位回落。WTI <strong>$100.87</strong>（-0.9%）。月涨幅约 <strong>+8%</strong>，同比 <strong>+66%</strong>。回落原因：美沙伊外交努力初见成效 + G7 释放战略储备。但霍尔木兹仍关闭 + 伊朗提 7 项条件 = 下行空间有限。OPEC+ 预计 12 月会议维持产量配额不变。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价从 $116 回到 $100 是「外交努力定价」，但 $100 本身仍是高油价。对 lainy：油价 $100+ = 通胀粘性 = 美联储难降息 = 科技股估值承压。这条链要记住。如果 Trump 真的下令打击，$100 → $130 可能就是一天的事。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 — 高油价受益</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿产 — 紫金/Freeport/巴里克] → 中游 [冶炼/精炼] → 下游 [制造/能源/投资] — 当前受益环节：铜（AI 需求驱动 +30% YoY）；受损环节：碳酸锂（新能源需求放缓）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>天然气飙升 · LNG 成本暴增</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">天然气</span>
+        <h4>欧洲 TTF 天然气维持高位 / 全球 LNG 进口商 2026 年多付 $390 亿——霍尔木兹封锁效应持续外溢</h4>
+        <p>OilPrice 报道：全球 LNG 进口商 2026 年面临 <strong>$390 亿</strong>额外成本，尽管进口量同比减少 6070 万吨，主因中东供应中断。Natural Gas Intelligence 报道美国天然气期货 10/27 交投活跃，11 月合约临近到期，LNG 需求坚挺但天气温和制约涨幅。欧洲 TTF 天然气维持高位（上周触及 €97.50/MWh 四年新高），EU 储气率创 2011 年以来同期最低。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>天然气是 2026 年能源市场最大痛点。霍尔木兹关闭 → Qatar LNG 出口受阻 → 欧洲抢气 → TTF 飙升。对 lainy：欧洲天然气 = 欧洲化工（BASF/Linde）成本压力 + 中国 LNG 进口商（新奥/广汇）套利机会。$390 亿额外成本 = 全球能源通胀的又一次加码。</div>
+        <div class="ticker">📌 关联标的：TTF 天然气 / NG=F（NYMEX 天然气）/ 600028 中国石化 / XOM 埃克森美孚 / 601857 中国石油 — 高气价受益：上游油企；受损：下游化工</div>
+        <div class="source">来源：<a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://naturalgasintel.com/" target="_blank">Natural Gas Intelligence</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">OPEC+</span>
+        <h4>OPEC+ 预计 12 月维持产量配额不变——连续第三个月按兵不动</h4>
+        <p>OilPrice 报道：消息人士透露 OPEC+ 在周日（10/26）非正式磋商后，预计 12 月会议将维持当前产量配额不变。这意味着 OPEC+ 选择在霍尔木兹危机期间保持谨慎，不增不减。同时，全球可再生能源装机目标（2030 年三倍）虽接近达成，IEA 警告可能不足以实现气候目标。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>OPEC+ 按兵不动 = 油价方向由地缘（非供需）决定。对 lainy：OPEC+ 不增产 = 油价底部有支撑；不减持 = 油价上行有天花板。$100-115 区间可能是霍尔木兹危机期间的新常态。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / OPEC+ 产量政策 / 601857 中国石油 / 600028 中国石化 — 产量稳定，油价由地缘驱动</div>
+        <div class="source">来源：<a href="https://oilprice.com/Latest-Energy-News/World-News/" target="_blank">OilPrice</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油气开采 — 沙特阿美/中石油] → 中游 [LNG 贸易 — Qatar/Cheniere] → 下游 [电力/化工 — 中石化/BASF] — 当前受损环节：下游化工（天然气成本飙升 + LNG 溢价 $390 亿）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 10/27 收盘：沪指 -1.33% 报 3,648 / 深成指 -2.50% / 创业板 -3.41% / 科创50 -4.81%</h4>
+      <p>A 股三大指数集体下跌，全市场成交额 14,729 亿（缩量 1,479 亿）。双创指数午后直线杀跌，科创 50 跌 <strong>-4.81%</strong>。银行板块逆势走强收涨 <strong>+1.34%</strong>，建设银行盘中创历史新高，沪农商行涨超 <strong>+4%</strong>。海信家电 A 股 <strong>-3.5%</strong>、港股 <strong>-3.71%</strong> 同步下跌。<b>结构性变化自检：</b>今日无新交易所公告/制度变化。关注 FOMC 决议对明日开盘影响。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/27 收盘：恒指 -0.73% 报 23,041 / 恒生科技 -1.48% 报 3,800</h4>
+      <p>恒指高开低走，恒生科技险守 3,800。小米跌超 <strong>-4%</strong>、网易跌超 <strong>-3%</strong>、联想涨超 <strong>+2%</strong>。智谱（02513）逆势涨超 <strong>+8%</strong>，港股通南向成交额第一（25.29 亿），腾讯第二（12.73 亿），MINIMAX 第三（12.34 亿）。内房股、生物医药、新能源车股集体走低。<b>关注：</b>FOMC 决议 → 港股流动性敏感，鸽派则有望反弹。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 10/26 收盘：道指 52,362（+0.28%）/ S&amp;P 7,677（+0.70%）/ 纳指 26,169（+0.82%）/ 费城半导体 +2.8%</h4>
+      <p>美股周一反弹：S&amp;P <strong>+0.70%</strong>、纳指 <strong>+0.82%</strong>，费城半导体 ETF <strong>+2.8%</strong>。Nvidia 股价带动 AI 板块反弹，但 NVDA 月跌 <strong>-4%</strong>、TSM 月跌 <strong>-5.8%</strong>。24/7 Wall St. 分析：过去一个月暴露了 Nvidia vs TSMC 的风险叙事——供需能否匹配是核心问题。<b>FOMC 今日：</b>决议前市场偏谨慎，科技股等待方向。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 10/27 收盘：KOSPI +3.46-4.39% 报 ~5,658-5,709 / SK Hynix +5-7% / 三星 +5%</h4>
+      <p>韩股暴涨！KOSPI 开盘即涨 <strong>+3.46%</strong>，盘中扩大至 <strong>+4.39%</strong>，报 5,709.85。三星电子 <strong>+5.05%</strong>、SK Hynix <strong>+7.14%</strong> 领涨——美 AI 股反弹带动韩国芯片股。KOSDAQ <strong>+2.9%</strong>。Seoul 此前停止了程序化买入（program buying），市场在 SK Hynix Q3 财报前自发反弹。高盛此前下调 KOSPI 12 个月目标价 25% 至 9,000 点。<b>今日关注：</b>SK Hynix Q3 已公布（₩83.33 万亿营业利润创纪录），三星明日（10/29）发布。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>服务消费持续领跑 · 白酒六涨五跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费结构</span>
+        <h4>商务部：前 9 月批零平稳增长 / 通讯器材零售 +18.1%（9 月单月 +31.1%）/ 以旧换新超 1 亿台</h4>
+        <p>21 经济网报道：商务部数据显示，2026 年以来家电以旧换新累计超 <strong>10,099 万</strong>台，数码/智能产品购新超 <strong>12,060 万</strong>件。1-9 月限额以上通讯器材类零售额 <strong>8,123 亿</strong>（<strong>+18.1%</strong>），其中 9 月单月 <strong>+31.1%</strong>，增速 16 类商品中第一。老字号消费活跃：1-9 月中华老字号餐饮堂食交易额 <strong>+7.85%</strong>。服务零售额 <strong>+5.0%</strong>，高于商品零售 <strong>4 个百分点</strong>。人均服务性消费支出占居民消费支出比重达 <strong>47.3%</strong>（+1.6pp vs 上半年）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>通讯器材 +31.1% = 以旧换新政策驱动的脉冲式增长。服务 vs 商品 4pp 差距 = 消费结构转型趋势确立。对 lainy：消费股选股「服务属性 > 商品属性」——餐饮/文娱 > 百货/超市。老字号餐饮 +7.85% = 品牌溢价的体现。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台（高端消费韧性）/ 002511 顺网科技（文娱服务）/ 000651 格力电器（以旧换新受益）— 服务消费受益，商品消费分化</div>
+        <div class="source">来源：<a href="https://www.21jingji.com/article/20261027/herald/091adfae66ddeab0835559c3abb086dc.html" target="_blank">21 经济网</a> · <a href="https://news.china.com/domestic/945/20261027/49819864.html" target="_blank">中华网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">白酒</span>
+        <h4>白酒 12 大单品 10/27 日报：六涨五跌一平——飞天茅台小涨、古20 大涨 7 元、习酒君品重跌</h4>
+        <p>新浪财经「酒价内参」10/27 数据：12 大单品终端零售均价六涨五跌一平。飞天茅台小涨，五粮液普五三连阳站稳 800 元，古井贡古 20 大涨 <strong>+7 元</strong>，习酒君品重跌。整体价盘较 10/26 略有改善。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>白酒价盘分化 = 行业调整期特征。茅台/五粮液稳 = 高端韧性；古 20 涨 = 次高端有弹性；习酒跌 = 二线承压。对 lainy：白酒不是「涨跌」的事，是「分层」的事——高端稳、次高端弹性、二线磨底。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 000858 五粮液 / 000596 古井贡酒 — 高端稳，次高端弹性</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908sm5c.html" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>奢侈品「凛冬已至」：5000 万人拒绝再为奢侈品剁手——36 氪深度分析</h4>
+        <p>36 氪报道：奢侈品市场面临消费信心下行，约 5000 万消费者拒绝再购买奢侈品。优质葡萄酒负增长、烈酒低个位数增长、干邑受美国需求放缓影响。白酒在中国仍占主导但受消费放缓影响。精致餐饮在家庭烹饪中发展迅速，消费者更重视「安全」和「环保」。</p>
+        <div class="why">🦞 <b>读给你听：</b>奢侈品「凛冬」= 中国消费降级 + 全球宏观不确定性的共振。对 lainy 的消费映射：LVMH/开云/历峰短期承压，但中国高端消费（茅台/海底捞高端）韧性更强——因为中国奢侈品消费的结构是「自用升级」而非纯炫耀，经济下行时不会完全消失。</div>
+        <div class="ticker">📌 关联标的：LVMH.PA / 1856.HK（周大福）/ 600519 贵州茅台 — 奢侈品承压，高端消费分化</div>
+        <div class="source">来源：<a href="https://www.36kr.com/p/3061484596733058" target="_blank">36 氪</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 锂/铜/农产品] → 中游 [制造 — 电池/家电/食品] → 下游 [渠道 — 电商/超市/餐饮] — 当前受益环节：下游服务型消费（餐饮 +7.85%）；受损环节：奢侈品/传统商品零售</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>World Series · 万圣节 · Hollywood</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">World Series</span>
+        <h4>2026 World Series Game 5 今晚 8 PM：Brewers 3-0 领先转战 Tampa Bay——离队史首冠一步之遥</h4>
+        <p>MLB 官方赛程：2026 World Series Game 5 今晚（10/28）8:00 PM ET 在 Tampa Bay 举行。Milwaukee Brewers 目前 <strong>3-0</strong> 领先 Tampa Bay Rays，距离队史首个世界大赛冠军只差 1 胜。Game 3 Brewers <strong>10-1</strong> 大胜。两支球队此前都从未赢得世界大赛冠军。</p>
+        <div class="why">🦞 <b>花边点评：</b>Brewers 3-0 = 离首冠 1 步！Milwaukee 这座城市上次赢四大联盟冠军是什么时候？NBA 的 Bucks 2021 年（Giannis），MLB 的 Brewers——从未。lainy 如果晚上有空，这场值得看——可能见证历史。</div>
+        <div class="source">来源：<a href="https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule" target="_blank">MLB.com</a> · <a href="https://www.cbssports.com/mlb/news/2026-mlb-playoff-bracket-schedule-scores-results-how-to-watch/" target="_blank">CBS Sports</a> · <a href="https://www.espn.com/mlb/story/_/id/50022544/2026-mlb-playoffs-schedule-how-watch-postseason-world-series-bracket-standings" target="_blank">ESPN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">Halloween</span>
+        <h4>Halloween 倒计时：名人装扮提前开卷——Overcompensating 主演化身 PinkPantheress & Zara Larsson</h4>
+        <p>People.com 报道：Halloween 2026 前夕，好莱坞名人装扮已提前开卷。Benito Skinner 和 Owen Thiele（《Overcompensating》搭档）化身 PinkPantheress 和 Zara Larsson。Prime Video 10/28 上线《Drive: The Pretenders》，赛车+假恋爱的体育浪漫片。</p>
+        <div class="why">🦞 <b>轻松一下：</b>万圣节装扮卷起来 = 娱乐圈年底前最后的流量战场。lainy 如果参加 Halloween party，PinkPantheress 是一个不错的灵感——低成本高辨识度。</div>
+        <div class="source">来源：<a href="https://people.com/" target="_blank">People.com</a> · <a href="https://www.zoomtventertainment.com/hollywood/new-hollywood-theatrical-and-streaming-releases-october-2026-article-156416602" target="_blank">Zoom TV</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
