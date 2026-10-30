@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-30</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --oil: #B8A07E; --energy: #C4A77D; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.oil { background: #B8A07E18; color: var(--oil); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 30 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Alphabet 暴跌 13%</b>：Google 母公司 Q3 营收不及预期，AI 投入产出失衡引发史上最大单日跌幅，市值蒸发超 $5000 亿；同日 Microsoft $250 亿债券获超额认购，AI 投资人分化。</li>
+      <li><b>霍尔木兹再起火</b>：伊朗 IRGC 宣布 4 艘油轮在海峡触碰水雷起火，宣布海峡对不合规商船关闭；Hegseth 解雇五角大楼最高军事策划官，VP Vance 致信伊朗寻求重启谈判。</li>
+      <li><b>Brewers 队史首冠</b>：密尔沃基酿酒人 4-1 击败坦帕湾光芒，58 年建队史上首次夺得世界大赛冠军；STMicroelectronics Q3 财报超预期，AI 数据中心需求驱动收入 +17.9%。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>Alphabet 财报冲击波 · STMicro 超预期</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Alphabet Q3</span>
+        <h4>Alphabet 史上最大单日跌幅：Q3 营收不及预期，AI 支出激增拖累自由现金流转负，市值蒸发 $5000 亿+</h4>
+        <p>10/29 Alphabet 发布 Q3 财报：营收不及预期，每股利润下降，自由现金流<strong>转负</strong>，资本支出大幅飙升。Google Cloud 营收翻倍但仍无法弥补搜索广告增速放缓。市场对此反应剧烈——GOOGL 当日暴跌<strong>~13%</strong>，为该公司历史上最大单日跌幅，市值蒸发超 <strong>$5000</strong> 亿。Bloomberg 指出，这「强化了投资者对 AI 投资回报的疑虑」——Alphabet 是 AI capex 最激进的巨头之一，但投入产出比正在恶化。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 投资叙事的标志性事件。Alphabet 的暴跌说明市场不再无条件为「AI 信仰」买单——投资人开始要求看到回报。关键信号：① 搜索广告增速放缓 = AI 还没能取代核心广告引擎；② Cloud 营收翻倍但利润率被 capex 拖累 = AI 基建投入吃掉了利润；③ 自由现金流转负 = 烧钱速度在加速。对 lainy 的框架：这跟 Nvidia 的 $2790 亿供应链锁定是同一枚硬币的两面——上游赚钱（芯片），中游烧钱（云厂），下游还没找到 killer app。</p>
+        <div class="ticker">📌 关联标的：GOOGL（Alphabet，暴跌 13%）/ MSFT（Microsoft，同日发 $250 亿债）/ NVDA（Nvidia，AI capex 信心链）/ SMH（半导体 ETF）— Alphabet 拖累科技板块估值，AI capex 回报质疑扩散</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-income-shares-drop" target="_blank">Bloomberg</a> · <a href="https://finance.yahoo.com/quote/GOOGL/" target="_blank">Yahoo Finance</a> · <a href="https://www.gurufocus.com/news/9151587/alphabet-goog-shares-drop-127-after-q3-earnings-miss-sparking-market-selloff" target="_blank">GuruFocus</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Microsoft $250 亿债</span>
+        <h4>Microsoft $250 亿债券获超额认购：2017 年以来首次发债，10 档 tranche 横跨 2-50 年——AI 基建弹药库</h4>
+        <p>10/29 Microsoft 发行 <strong>$250</strong> 亿美元债券（10 档 tranche，2-50 年期），为 2017 年以来首次重返美国投资级债券市场。Bloomberg 报道此次发行获得「红毯级接待」——超额认购。用途明确指向 AI 数据中心建设。同日 Alphabet 暴跌形成鲜明对比：市场对 AI 信念未动摇，但开始区分「赢家」和「烧钱的」。</p>
+        <div class="why">🦞 <b>商业含义：</b>$250 亿债券的超额认购说明机构投资者依然看好 AI 基建的长期回报——但选择通过债券（固定收益）而非股权来参与，因为债券持有人的回报不依赖于 Microsoft 能否从 AI 赚到钱，只依赖 Microsoft 还不还得起。对比 Alphabet 股东的恐慌性抛售：债券市场说「我们相信你花得起」，股票市场说「我们不确定你赚得回来」。这个分化本身就是 AI 投资叙事进入第二阶段的信号。</div>
+        <div class="ticker">📌 关联标的：MSFT（Microsoft，发债用于 AI 基建）/ GOOGL（Alphabet，同日暴跌 13%）/ TLT（20+ 年美债 ETF，$250 亿供给推高长端收益率）— Microsoft 信用扩张利好 AI 基建链，但长债供给压力需关注</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-10-29/microsoft-kicks-off-first-us-high-grade-bond-sale-since-2017" target="_blank">Bloomberg</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/microsoft-seeks-least-25-billion-123509895.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">STMicro Q3</span>
+        <h4>STMicroelectronics Q3 营收 $37.6 亿超预期（+17.9% YoY），上调 2026 AI 数据中心收入预测</h4>
+        <p>10/29 STMicroelectronics（NYSE: STM）发布 Q3 财报：营收 <strong>$37.6</strong> 亿（+17.9% YoY），超分析师预期及公司指引中位数。运营利润 $3.67 亿。增长由 AI 数据中心需求和卫星通信设备驱动。CEO Jean-Marc Chery 上调 2026 年 AI 数据中心收入预测，并给出 Q4 更强指引。工业收入同比 +40%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>STMicro 不是 AI 芯片的「头部玩家」，但它的超预期说明 AI 需求正在向更广泛的半导体供应链扩散——不只是 GPU，电源管理芯片、传感器、射频器件都在受益。对 lainy 的产业链框架：当 AI capex 从 GPU 扩散到电源管理/射频/传感器时，意味着 AI 基建投资进入了「第二波」——更分散、更持续。</div>
+        <div class="ticker">📌 关联标的：STM（STMicroelectronics，超预期）/ NVDA（Nvidia）/ SOXX（费城半导体 ETF）— AI 需求扩散到模拟/混合信号芯片，半导体板块整体受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/stocks/articles/stmicroelectronics-stm-said-q3-earnings-120318401.html" target="_blank">Yahoo Finance</a> · <a href="https://seekingalpha.com/news/4660154-stmicro-beats-q3-revenue-gives-upbeat-outlook-on-ai-demand" target="_blank">Seeking Alpha</a> · <a href="https://www.benzinga.com/news/26/10/62684848/stmicroelectronics-q3-2026-earnings-call-transcript" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC N3C</span>
+        <h4>TSMC N3C 工艺 2026 年量产——3nm 系列完整版图落地，先进制程竞争格局清晰化</h4>
+        <p>TSMC 官网更新确认 N3C 工艺已于 2026 年进入量产。至此 TSMC 3nm 家族（N3/N3E/N3P/N3X/N3C）全系列均进入量产阶段，覆盖从高性能计算到汽车电子的全场景。N3X 已于 2025 年量产，N3C 是最后一块拼图。这意味着 TSMC 在 2nm 大规模量产前，已经把 3nm 系列的产能和良率推到了成熟阶段。</p>
+        <div class="why">🦞 <b>读给你听：</b>N3C 量产看似是个技术节点小新闻，但对产业链格局很重要：① TSMC 3nm 全系列量产 = 在 2nm（预计 2027-2028）之前，TSMC 有一个完整的「产能护城河」窗口期；② 对 Intel 代工来说是压力——Intel 18A 还在争取客户，而 TSMC 已经在用成熟 3nm 赚钱；③ 对三星代工：三星 2nm 拿下 Broadcom 是冲高端，但 TSMC 3nm 中低端市场锁死。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC）/ INTC（Intel，竞争压力加大）/ 005930.KS（三星电子）— TSMC 3nm 全系列量产巩固代工龙头地位</div>
+        <div class="source">🔗 Source: <a href="https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_3nm" target="_blank">TSMC 官网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC 3nm 全系列量产/三星 2nm/Intel 18A] → 下游 [AI 芯片设计 — NVDA/AVGO/GOOGL/MSFT] → 终端 [云厂 — MSFT $250 亿债 GOOGL 自由现金流转负] — 当前分化环节：下游云厂开始分化，Microsoft 信用扩张 vs Alphabet 资本支出失控疑虑</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹再起火 · Vance 致信伊朗</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>伊朗 IRGC 宣布 4 艘油轮在霍尔木兹海峡触碰水雷起火——宣布海峡对不合规商船关闭</h4>
+        <p>10/29 伊朗伊斯兰革命卫队（IRGC）宣布，至少 <strong>4</strong> 艘油轮在霍尔木兹海峡南部「非授权航路」触碰水雷后起火。伊朗军方称这些船只使用的是美国推广的南部航线，非伊朗认可的北部航路。同日 UKMTO 报告另有一艘油轮在海峡遭不明弹丸击中。Reuters 报道本周原油运输量已升至 2 月冲突爆发以来最高——停火后海峡短暂开放，但 IRGC 的布雷行动再次收紧通行。UAE 北部海滩出现大规模原油泄漏。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>霍尔木兹承载全球 25% 海运石油和 20% LNG。IRGC 的布雷行动 + 宣布「对不合规商船关闭」= 事实上恢复了对海峡的封锁。这意味着：① 油价 $100+ 的地缘溢价不会消退；② Qatar LNG 出口受阻继续推高欧洲天然气价格；③ 美国主导的「南部航线」替代方案遭到伊朗直接军事反制。对 lainy 的传导链：油价高 = 通胀粘性 = 美联储 12 月加息概率升至 82% = 科技股估值承压。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（$102.82，地缘溢价维持）/ 600028 中国石化 / 601857 中国石油 / LNG 钱尼尔能源（CQP）— 霍尔木兹封锁利好上游油气，利空下游炼化和运输</div>
+        <div class="source">🔗 Source: <a href="https://www.cbsnews.com/live-updates/iran-war-donald-trump-qatar-mediators-new-proposal-end-war/" target="_blank">CBS News</a> · <a href="https://www.thehindu.com/news/international/iran-says-four-tankers-on-fire-after-hitting-mines-in-hormuz/article71642019.ece" target="_blank">The Hindu</a> · <a href="https://www.democracynow.org/2026/10/29/headlines/three_more_oil_tankers_erupt_in_flames_near_strait_of_hormuz" target="_blank">Democracy Now</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>VP Vance 致信伊朗安全委员会寻求重启谈判 · Hegseth 解雇五角大楼最高军事策划官 · 胡塞袭击利雅得</h4>
+        <p>10/29 多家媒体报道，副总统 JD Vance 致信伊朗最高国家安全委员会秘书 Mohsen Rezaei，寻求重启和平谈判。特朗普称此举仅为「协助医疗物资进入伊朗」。同日国防部长 Hegseth 解雇了五角大楼最高军事策划官 Lt. Gen. Brett Sylvia，因其被指控泄露与伊朗战争相关的机密信息。伊朗 Tasnim 通讯社表示德黑兰不会放弃任何核心条件（解除港口封锁、放松制裁、解冻资产）。此外胡塞武装向利雅得发射弹道导弹，沙特防空系统拦截 2 枚，利雅得听到 8 次爆炸声。</p>
+        <div class="why">🦞 <b>市场含义：</b>三条线同时发生：外交线（Vance 写信）+ 军事整顿线（Hegseth 解雇 Sylvia）+ 胡塞升级线（打利雅得）。Vance 的信是「给台阶」，但伊朗 7 条核心条件不动 = 谈判短期内难有突破。Hegseth 解雇 Sylvia = 内部对伊朗政策路线有分歧。胡塞打利雅得 = 伊朗代理人战线在扩大。综合判断：短期地缘风险不降温，油价 $100+ 是新常态而非尖峰。</div>
+        <div class="ticker">📌 关联标的：SPY（美股，地缘风险压制风险偏好）/ Brent 原油 / GLD 黄金（避险需求）/ XLE（能源 ETF）— 外交进展缓慢 + 军事升级 = 地缘风险持续高位</div>
+        <div class="source">🔗 Source: <a href="https://www.cbsnews.com/live-updates/iran-war-donald-trump-qatar-mediators-new-proposal-end-war/" target="_blank">CBS News</a> · <a href="https://www.csis.org/programs/latest-analysis-war-iran" target="_blank">CSIS</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹 4 艘油轮起火，南部航线遭布雷封锁] → 下游 [炼化 — 中石化/ExxonMobil] → 终端 [能源价格 — Brent $102+，通胀传导至美联储决策] — 当前受损环节：中游航运（IRGC 布雷 + 4 艘起火 + 南部航线关闭）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 刚过 · 12 月加息预期 82%</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC 后续</span>
+        <h4>FOMC 10/28 维持 3.75-4.00% 不变后余波：OIS 定价 12 月加息 82%，Warsh 称「政治未介入」</h4>
+        <p>上周 FOMC 以 10-2 票型维持联邦基金利率 <strong>3.75-4.00%</strong> 不变（Governor Cook 与 Cleveland Fed Hammack 投异议票主张加息 25bp）。Yahoo Finance 报道 Fed Chair Warsh 在记者会上称「政治未介入决策」，回避了中期选举前加息的政治敏感。但市场并不买账——RateProbability 数据显示 OIS 定价 12 月 9 日 FOMC 会议加息 25bp 概率已升至 <strong>82%</strong>。TradingEconomics 显示美国 10 年期国债收益率维持高位。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>FOMC 刚过，但「维持不变 + 2 票异议 + 82% 12 月加息概率」= 实际上是鹰派维持。对 lainy 的传导框架：① 油价 $102+ → 通胀粘性 → 12 月加息概率 82% → 美债收益率高位 → 科技股估值折现率上升 → Alphabet 暴跌不是偶然。② Warsh 的「政治未介入」说法在中期选举前不可信——市场已经在定价 12 月加息，不管 11 月选举结果如何。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（科技股承压）/ TLT（长债 ETF，加息预期推高收益率）/ GLD 黄金（$4,028/oz，避险+加息拉锯）— 12 月加息预期是当前宏观的核心变量</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/economy/policy/live/fed-meeting-live-updates-interest-rates-held-steady-in-split-vote-warsh-says-politics-played-no-role-ahead-of-midterm-elections-191946928.html" target="_blank">Yahoo Finance</a> · <a href="https://rateprobability.com/fed" target="_blank">RateProbability</a> · <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">TradingEconomics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">日本央行</span>
+        <h4>日本央行核心通胀升至 3.2% 创三年新高——80% 经济学家预计 12 月加息，日元套利交易平仓风险上升</h4>
+        <p>日本 9 月核心 CPI 同比 <strong>+3.2%</strong>，创三年新高。80% 经济学家预计日本央行 12 月加息。叠加美联储 12 月可能加息，全球两大央行同时紧缩 = 全球流动性收紧。日元套利交易（carry trade）平仓风险上升——2024 年 8 月日元升值引发的全球股市闪崩可能重演。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>日本央行加息 = 日元升值 = 套利交易平仓 = 全球风险资产短期承压。这对 lainy 意味着：如果 12 月美联储和日本央行同时加息，可能出现「双重紧缩冲击」——类似 2024 年 8 月的日元套利交易平仓，但幅度可能更大。关注日元汇率（USD/JPY）作为全球风险偏好的前置指标。</div>
+        <div class="ticker">📌 关联标的：USDJPY（日元汇率）/ EWJ（日本 ETF）/ QQQ（科技股，套利平仓冲击）— 日元升值 = 全球套利交易平仓 = 科技股短期压力</div>
+        <div class="source">🔗 Source: 前日早报综合报道</div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油价 $102+ → 通胀粘性] → 中游 [FOMC 3.75-4.00% + 12 月加息概率 82% + 日本央行 12 月加息] → 下游 [科技股估值折现率上升 → Alphabet 暴跌 13%] — 当前核心变量：12 月 9 日 FOMC + 日本央行加息，双重紧缩风险</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 · 原油 · 工业金属</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag oil">贵金属</span>
+        <h4>黄金 $4,028/oz 小跌 0.98% / 白银 $53.75——FOMC 后方向待定，12 月加息预期压制避险资产</h4>
+        <p>10/29 黄金收于 <strong>$4,028</strong>/oz（-0.98%），白银 <strong>$53.75</strong>/oz。LiteFinance 预测 10/30 黄金交易区间 $3,952-$4,058。TradingEconomics 数据显示黄金月度跌 3.13%，但同比仍微涨 0.08%。FOMC 维持利率不变后，黄金在 $4,000 关口附近拉锯——下方有地缘避险支撑（霍尔木兹封锁），上方有加息预期压制（82% 12 月加息概率）。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金现在夹在两股力量中间：霍尔木兹封锁 + 伊朗冲突 = 买（避险）；12 月加息 82% + 油价推升通胀 = 卖（加息压金价）。短期看 $4,000 是多空分水岭——跌破意味着市场押注 12 月加息，守住意味着避险情绪还够。对 lainy 的配置框架：中长期央行买金 + 地缘混乱不变，回调到 $3,900 以下是加仓机会。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 $4,028/oz / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ SLV（白银 ETF）— 短期拉锯，中长期看涨</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">TradingEconomics</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/gold-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag oil">原油</span>
+        <h4>Brent $102.82/WTI $100.87——霍尔木兹 4 艘油轮起火推升地缘溢价，OPEC 10 月均价 $112.1</h4>
+        <p>10/29 Brent 原油收 <strong>$102.82</strong>/bbl（+0.04%），WTI <strong>$100.87</strong>/bbl（-0.9%）。月度涨幅 +13.72%，同比 +69.76%。OPEC 一篮子参考均价 10 月为 <strong>$112.1</strong>/bbl。霍尔木兹 4 艘油轮起火 + IRGC 布雷封锁南部航线 = 供应中断风险重新定价。Energy Intelligence 报道美国 LNG 开发商正在推进一批受霍尔木兹混乱推动的扩产项目。Reuters 数据显示本周海峡原油运输量升至 2 月冲突以来最高，但 IRGC 布雷可能逆转这一趋势。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价在 $100+ 已经是「霍尔木兹溢价」的定价。关键问题：IRGC 布雷 + 4 艘起火 = 供应中断风险从「威胁」变成「正在发生」。如果美国南部航线替代方案被 IRGC 用水雷封锁，全球海运石油有 25% 的通道被切断。对 lainy 的传导链：油价 $100+ → 通胀粘性 → 12 月加息 82% → 科技股承压 → Alphabet 暴跌。这是一条完整的因果链。</div>
+        <div class="ticker">📌 关联标的：Brent $102.82 / WTI $100.87 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — 上游油气受益，下游炼化承压（原料成本上升）</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics</a> · <a href="https://countryeconomy.com/raw-materials/opec" target="_blank">CountryEconomy</a> · <a href="https://www.energyintel.com/000001a1-8877-de0b-abf9-f8f73ece0000" target="_blank">Energy Intelligence</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag oil">天然气</span>
+        <h4>美国天然气产量连续两年创纪录（112.2 Bcf/d）vs 欧洲价格高位——霍尔木兹 LNG 断供推升 TTF</h4>
+        <p>OilPrice 报道美国天然气产量 2026 年预计达 <strong>112.2</strong> Bcf/d（创纪录），2027 年进一步升至 116.1 Bcf/d。但欧洲 TTF 天然气价格维持高位——Qatar LNG 经霍尔木兹出口受阻 + 夏季消耗 + 亚洲抢货三重夹击。美国 LNG 开发商借霍尔木兹混乱加速扩产——Energy Intelligence 指出美国 LNG 产能扩张项目正在获得「霍尔木兹混乱顺风」。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>美国天然气产量创新高 + 欧洲 TTF 高位 = 美国对欧洲 LNG 出口的套利窗口持续打开。这对美国 LNG 出口商（钱尼尔能源、NextDecade）是结构性利好。但欧洲买家的成本在上升——传导到欧洲工业（化工、化肥、陶瓷）利润受压。对 lainy：欧洲天然气高价 = 欧洲化工股承压（BASF、Linde），美国 LNG 出口商受益。</div>
+        <div class="ticker">📌 关联标的：Henry Hub 天然气 / TTF 欧洲天然气 / CQP 钱尼尔能源 / LNG（ETF）/ 600028 中国石化 — 美国天然气产量创新高利好 LNG 出口，欧洲工业成本承压</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/" target="_blank">OilPrice</a> · <a href="https://www.energyintel.com/000001a1-8877-de0b-abf9-f8f73ece0000" target="_blank">Energy Intelligence</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油气开采 — 美国天然气 112.2 Bcf/d 创纪录] → 中游 [LNG 运输 — 霍尔木兹封锁推升 TTF] → 下游 [化工/电力 — 欧洲工业成本承压] — 当前受益环节：美国 LNG 出口商（霍尔木兹替代供应），受损环节：欧洲天然气买家</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 · 天然气 · 电力 · 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">原油市场</span>
+        <h4>OPEC 10 月均价 $112.1/bbl（同比 +71.91%）——霍尔木兹封锁 + G7 释放战略储备拉锯</h4>
+        <p>OPEC 一篮子参考价 10 月均价 <strong>$112.1</strong>/bbl，9 月 $110.81，同比 +71.91%。Brent $102.82 / WTI $100.87 维持高位。核心矛盾：IRGC 在霍尔木兹布雷封锁 vs G7 释放战略石油储备（SPR）试图压低价格。Energy Intelligence 指出下游企业认为当前环境是「过渡性的」，不愿大规模新投资——这意味着供给侧弹性不足，任何新的供应中断都可能推油价至 $120+。</p>
+        <div class="why">🦞 <b>市场含义：</b>OPEC 均价 $112 vs Brent $103 = OPEC 溢价来自更重质的原油（更适合炼化）。G7 释放 SPR 是「买时间」策略，不是解决方案——SPR 补充需要 18-24 个月。如果霍尔木兹持续封锁，SPR 在 3-6 个月内耗尽，油价可能飙到 $130+。对 lainy：高油价不是「短期波动」，是「新常态」。</div>
+        <div class="ticker">📌 关联标的：Brent $102.82 / OPEC $112.1 / 601857 中国石油 / XOM 埃克森美孚 / COPX（铜矿 ETF，油价驱动通胀预期）— 上游石油公司受益，SPR 消耗 3-6 个月后供给缺口扩大</div>
+        <div class="source">🔗 Source: <a href="https://countryeconomy.com/raw-materials/opec" target="_blank">CountryEconomy</a> · <a href="https://www.energyintel.com/000001a1-6572-ddc7-a3ad-67ffc8950000" target="_blank">Energy Intelligence</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">Infineon OktoberTech</span>
+        <h4>Infineon 第十届 OktoberTech：Michio Kaku 谈 AI 波浪 · 800VDC 数据中心供电 · GaN IBCs · 德累斯顿工厂爬坡</h4>
+        <p>10/29 Infineon 举办第十届 OktoberTech 大会，理论物理学家 Michio Kaku 主题演讲谈 AI 对物理世界的波浪式影响。技术亮点：① 800VDC 数据中心供电架构（效率更高、损耗更低）；② GaN（氮化镓）IBCs（中间总线变换器）量产；③ 德累斯顿新工厂爬坡。IndexBox 报道会议覆盖物理 AI、边缘 AI、软件定义汽车（SDV）采用障碍和数据中心供电。</p>
+        <div class="why">🦞 <b>读给你听：</b>Infineon 是功率半导体龙头，它的 OktoberTech 是行业风向标。800VDC 数据中心供电 = AI 数据中心功耗暴增后，供电架构从传统 48V 向高压直流迁移——这对功率半导体需求是结构性增量。GaN IBCs 量产 = 第三代半导体在数据中心渗透加速。对 lainy 的框架：AI 不只催生 GPU 需求，也在催生功率半导体需求（电源管理芯片、GaN/SiC 器件），STMicro 的超预期也验证了这一点。</div>
+        <div class="ticker">📌 关联标的：IFNNY（Infineon）/ STM（STMicroelectronics）/ WOLF（Wolfspeed，SiC）/ 688722 锐科激光（国内功率半导体）— AI 数据中心供电升级利好功率半导体全链</div>
+        <div class="source">🔗 Source: <a href="https://www.indexbox.io/blog/infineon-oktobertech-2026-physical-ai-edge-ai-sdvs-and-data-center-power/" target="_blank">IndexBox</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [功率半导体 — Infineon/STM/Wolfspeed] → 中游 [数据中心供电 — 800VDC/GaN IBCs] → 下游 [AI 算力 — Nvidia/Microsoft/Google] → 能源价格 [Brent $102/OPEC $112] — 当前受益环节：功率半导体（AI 供电升级）+ 上游油气（霍尔木兹封锁）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 10/29 收盘：S&amp;P 7,665（-1.02%）/ 纳指 100 约 -1.5% / Alphabet 暴跌 13% 拖累科技板块</h4>
+      <p>10/29 美股收跌：S&amp;P 500 跌至 <strong>7,665</strong> 点（-1.02%），纳指 100 跌约 <strong>1.5%</strong>。Alphabet Q3 财报不及预期暴跌 <strong>13%</strong>，单日市值蒸发超 $5000 亿，为该公司史上最大单日跌幅。Bloomberg 指出科技股抛售促使资金轮动至更广泛的板块，同时推升避险债券需求。Microsoft 同日发行 $250 亿债券获超额认购——AI 投资人开始区分「赢家」和「烧钱的」。TheStreet 指出 Alphabet 和 Microsoft 的分化「凸显了 AI 投资回报的不确定性」。市场关注 Amazon 财报作为下一个 AI capex 验证点。</p>
+      <p><b>重点异动：</b>GOOGL <strong>-13%</strong>（史上最大单日跌幅）· MSFT <strong>-0.16%</strong>（发 $250 亿债，相对抗跌）· SOXX 费城半导体 ETF 继续承压。<b>板块资金：</b>科技板块资金流出 → 避险债券 + 能源板块流入。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 10/29 收盘：沪指 3,651（-0.82%）/ 月度 -4.96%</h4>
+      <p>10/29 A 股延续弱势：沪指收 <strong>3,651</strong>（-0.82%），月度跌幅 <strong>-4.96%</strong>，同比 -8.41%。MoneyControl 数据显示沪指日内区间 3,648-3,708。Reuters 图片显示杭州股民查看收盘指数。24/7 Wall St 分析指出 A 股 0.76% 跌幅是港股 0.23% 跌幅的三倍——「交易者在等北京推出实质刺激而非定向补丁」。成交量维持低位，北向资金流向待观察。<b>关注点：</b>沪指 3,600 关口支撑测试，若无实质政策利好可能下探 3,500。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 10/29 收盘：恒指 22,959（-0.59%）失守 23,000 / 科技板块承压</h4>
+      <p>10/29 恒指收 <strong>22,958.65</strong>（-136 点 / -0.59%），失守 23,000 关口。新华社报道 AI 硬件板块抛售超过早间涨幅，科技股全线回落。Dim Sum Daily 指出开盘前恒指小幅走弱，Evergrande Property Services 暂停交易。24/7 Wall St 分析称「大陆卖家定调」——SSE 跌 0.76% 是恒指 0.23% 跌幅的三倍多，显示交易者在等北京推出真正刺激而非「定向补丁」。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 10/29 收盘：KOSPI 5,937.66（-1.24%）再度失守 6,000 / KOSDAQ 753.23（-2.34%）/ 三星 -4%+</h4>
+      <p>10/29 KOSPI 收 <strong>5,937.66</strong>（-1.24%），再度失守 6,000 关口——仅一天就放弃了前一日的收复。KOSDAQ <strong>753.23</strong>（-2.34%）。三星电子暴跌超 <strong>4%</strong>，拖累大盘。SBS 报道三星跌幅主因是市场对半导体需求持续性的疑虑。Ad-Hoc News 指出三星计划在 2027 年 1 月下旬召开董事会讨论剩余股东回报计划。这是 KOSPI 连续第二天在 6,000 关口拉锯——前日涨 6.63% 后昨日回吐 1.24%，波动剧烈。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>白酒 · 餐饮 · 奢侈品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">白酒出海</span>
+        <h4>珍酒李渡（6979.HK）亮相香港美酒佳肴节 2026——白酒出海 + 港交所白酒第一股</h4>
+        <p>10/29 香港美酒佳肴节 2026 开幕，珍酒李渡集团（ZJLD Group, 6979.HK）旗下旗舰品牌「珍酒」连续第二年参展。香港旅发局主办，ZJLD 作为「港交所白酒第一股」亮相，推动白酒国际化。展位吸引国际买家关注，ZJLD 集团同时展示其旗下李渡、湘窖等品牌。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>白酒出海是中国消费品牌 2026 年的重要叙事——国内消费疲软（服务零售 > 商品零售），白酒企业需要海外增量。ZJLD 作为「港股白酒第一股」，其国际化布局值得关注。对 lainy 的消费框架：白酒国内分化（高端稳、低端弱）+ 海外试水 = 整体增速放缓但头部品牌在寻找新增长曲线。</div>
+        <div class="ticker">📌 关联标的：6979.HK 珍酒李渡（白酒出海概念）/ 600519 贵州茅台（高端白酒锚）— 白酒出海是 2026 消费新叙事</div>
+        <div class="source">🔗 Source: <a href="https://www.malaysiaworldnews.com/zjld-group-returns-to-hong-kong-wine-dine-festival-2026/" target="_blank">Malaysia World News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费数据</span>
+        <h4>商务部：以旧换新带动销售额超 2 万亿，惠及超 2.5 亿人次——通讯器材零售 +18.1%</h4>
+        <p>商务部最新数据：消费品以旧换新政策带动销售额超 <strong>2 万亿</strong>元，惠及超 <strong>2.5 亿</strong>人次。9 月通讯器材零售 <strong>+18.1%</strong>（9 月单月 <strong>+31.1%</strong>）。前三季度服务零售额 +5.0%，快于商品零售 4 个百分点，服务消费占比升至 <strong>47.3%</strong>。以旧换新超 1 亿台。（前日早报已覆盖，此条为延续追踪。）</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>以旧换新 2 万亿 + 通讯器材 +31.1% = 政策刺激在通讯/家电板块有效，但服务消费持续跑赢商品消费 = 消费者仍偏好「体验」>「商品」。对 lainy 的选股框架：家电/通讯受益于政策刺激（短期），但服务消费（餐饮/文娱/旅游）是中长期趋势。</div>
+        <div class="ticker">📌 关联标的：002415 海康威视（通讯器材概念）/ 000651 格力电器（以旧换新受益）/ 002747 埃斯顿（服务消费链条）— 政策刺激短期利好家电通讯，中长期看好服务消费</div>
+        <div class="source">🔗 Source: 前日早报综合数据（商务部公开数据）</div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 粮食/包装] → 中游 [制造 — 白酒/家电/通讯] → 下游 [渠道 — 以旧换新 2 万亿/美酒节出海] — 当前受益环节：政策刺激（以旧换新）+ 出海（白酒国际化），受损环节：传统商品零售（增速 +1.1%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small> Brewers 队史首冠 · 13 Going on 30 翻拍</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">MLB 世界大赛</span>
+        <h4> Brewers 队史首冠！密尔沃基 4-1 击败坦帕湾光芒——58 年建队史上首次世界大赛冠军</h4>
+        <p>10/28 密尔沃基酿酒人（Milwaukee Brewers）在 Game 5 以 4-1 击败坦帕湾光芒（Tampa Bay Rays），以 4-1 总比分赢得 2026 年世界大赛冠军——这是 Brewers 58 年建队史上<strong>首次</strong>世界大赛冠军。NPR 指出 Brewers 是 MLB 最小市场球队，1969 年以西雅图 Pilot 队身份建队，后迁至密尔沃基。Fox Sports 报道 Game 5 在坦帕湾 Tropicana Field 举行。CNN 称这是「近六十年心痛的终结」。</p>
+        <div class="why">🦞 <b>花边点评：</b>小市场球队夺冠在 MLB 里是罕见且让人感动的事——类似 2016 年 Cubs 打破 108 年 drought，但 Brewers 的「弱者逆袭」叙事更纯粹。lainy 如果对体育投资感兴趣：小市场球队夺冠 = MLB 薪资上限/收入分享机制在运作——跟欧洲足球的 FFP 讨论可以对比。给 lainy 一个轻松的周末话题。</div>
+        <div class="source">🔗 Source: <a href="https://www.npr.org/2026/10/29/nx-s1-6021953/brewers-win-first-world-series-title" target="_blank">NPR</a> · <a href="https://www.cnn.com/2026/10/28/sport/live-news/game-5-world-series" target="_blank">CNN</a> · <a href="https://www.foxsports.com/mlb/world-series" target="_blank">Fox Sports</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>Emily Bader 接棒 Jennifer Garner 主演《13 Going on 30》翻拍：「我很忐忑，想不负众望」</h4>
+        <p>E! News 独家报道，Emily Bader 确认接棒 Jennifer Garner 主演《13 Going on 30》翻拍版。Bader 对 E! News 表示「我很忐忑，想不负众望」。原版 2004 年上映，Jennifer Garner 主演的经典喜剧是 2000 年代的代表作品之一。翻拍版将在 Netflix 上线。</p>
+        <div class="why">🦞 <b>轻松一下：</b>2000 年代的经典翻拍潮在持续。Emily Bader 是新生代中很有潜力的人选——在《My Lady Jane》中表现亮眼。接棒 Jennifer Garner 是个不小的挑战，但她的「忐忑」态度反而让人觉得真诚。lainy 如果周末想找点轻松的看，可以重温原版。</div>
+        <div class="source">🔗 Source: <a href="https://www.eonline.com/news" target="_blank">E! News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">WWE</span>
+        <h4>WWE SmackDown 10/30：Trick Williams 挑战 Sami Zayn 无可争议 WWE 冠军赛</h4>
+        <p>10/30 WWE SmackDown 节目中，Trick Williams 将挑战 Sami Zayn 的无可争议 WWE 冠军头衔。这是 Williams 首次挑战 WWE 最高头衔，被视为 WWE 在 Halloween 特别节目中安排的重头戏。Archyde 报道此场比赛为 SmackDown 10 月最大看点。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>Halloween + WWE = 纯娱乐。Trick Williams 是 WWE 新生代的「魅力型选手」，Sami Zayn 是粉丝最爱。lainy 如果刷到 WWE 的热搜，这就是为什么。</div>
+        <div class="source">🔗 Source: <a href="https://www.archyde.com/trick-williams-challenges-sami-zayn-for-wwe-title/" target="_blank">Archyde</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">NVIDIA GTC</span>
+        <h4>NVIDIA GTC 2026 定档 11/30-12/3：黄仁勋将在 San Jose 发表主题演讲</h4>
+        <p>NVIDIA 官网更新：GTC 2026 将于 11 月 30 日至 12 月 3 日在 San Jose 举行，黄仁勋（Jensen Huang）将发表主题演讲。开发者、研究者和企业领袖将探讨「下一波 AI 创新」。这将是 NVIDIA 在 Q3 财报季后的首个重大活动，市场预期可能公布 Vera Rubin 量产进展和下一代架构细节。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>GTC 是 NVIDIA 的「春晚」，每次黄仁勋的主题演讲都会定调 AI 芯片的下一个 12 个月。在 Alphabet 暴跌 13% 的背景下，GTC 2026 将成为 AI 信念的下一个验证点——如果黄仁勋能拿出新的杀手级产品/合作，可能重新点燃 AI capex 信心。对 lainy：这是一个「日历事件」，值得提前关注。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，GTC 是催化剂事件）/ SMH（半导体 ETF）/ AVGO（Broadcom，Nvidia 合作伙伴）— GTC 11/30 是 AI 芯片下一个关键催化剂日</div>
+        <div class="source">🔗 Source: <a href="https://www.nvidia.com/en-us/" target="_blank">NVIDIA 官网</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
