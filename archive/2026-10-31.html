@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-10-31</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-bottom: 4px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #f0ede5; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 10 月 31 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 覆盖 10/30 收盘行情</div>
+  </header>
+
+  <div class="tldr">
+    <h3>TL;DR 三句话速览</h3>
+    <ul>
+      <li><b>Intel 暴跌 28.6%</b>（1974 年以来最差单日），Q4 指引远低于预期，引发全球芯片股恐慌抛售，费城半导体指数 -7.2%</li>
+      <li><b>霍尔木兹海峡油轮触雷起火</b>——伊朗战争爆发以来首次成功命中的商船袭击，Brent 飙至 $113.43（四月新高），黄金跌破 $4,000 创一年新低</li>
+      <li><b>美国 Q3 GDP +3.4% 超预期</b>，但核心 PCE 3.1% 仍高，12 月加息概率升至 ~80%，叠加 G20 外长会在亚特兰大不欢而散</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>全球芯片恐慌日</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">财报</span>
+        <h4>Intel 暴跌 28.6%（1974 年以来最差单日）——Q4 指引 25¢ vs 预期 43¢，CEO Lip-Bu Tan 称 PC 压力持续</h4>
+        <p>Intel (INTC) 周五暴跌 <strong>28.6%</strong>，为 1974 年以来最大单日跌幅。Q3 利润超预期但 Q4 指引 EPS 仅 25¢（分析师预期 43¢），且发出现金消耗警告。CEO Lip-Bu Tan 表示 PC 行业持续承压。这是本周科技股抛售潮的高潮——前一天 Alphabet 已因 AI 烧钱暴跌超 12%。</p>
+        <div class="why">🦞 Intel 的崩塌说明了 AI 投资周期的残酷分层：赢家通吃（Nvidia 吃利润），输家双杀（传统 PC 芯片萎缩 + AI 转型烧钱看不到回报）。Intel 的 Q4 现金消耗警告意味着其代工转型可能需要更多外部资金。</div>
+        <div class="ticker">📌 关联标的：INTC（Intel）— 受损方向；NVDA（Nvidia -4.22%）— 相对受益但被板块拖累；AMD -10.88%、QCOM -11.12% — 芯片板块普跌</div>
+        <div class="source">来源：<a href="https://www.bnnbloomberg.ca/markets/2026/10/30/the-sell-off-for-tech-stocks-deepens-and-drags-wall-street-toward-its-worst-day-since-june/" target="_blank">AP/BNN Bloomberg</a> · <a href="https://cappnotes.substack.com/p/closing-look-friday-october-30-2026" target="_blank">Cappnotes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">AI 资本</span>
+        <h4>Amazon Q3 营收 $2019 亿（+12%）EPS $1.89 不及预期——12 个月自由现金流 -$424 亿，$948 亿 capex 全押 AI</h4>
+        <p>Amazon (AMZN) Q3 营收 <strong>$2019 亿</strong>（+12%），AWS 营收 $460 亿（+39%），但 EPS $1.89 不及 $1.97 预期。更令市场担忧的是 12 个月自由现金流 <strong>-$424 亿</strong>，P&E 投资 $948 亿主要投向 AI 基础设施。盘前跌约 7%。</p>
+        <div class="why">🦞 继 Alphabet 之后第二家「AI capex 烧钱 &gt; 利润」的巨头。市场开始问：AI 投资的 ROI 什么时候兑现？「我们正在从 AI 交易的希望和梦想阶段，进入『给我看回报』阶段」——Equity Armor Investments 的 Joe Tigay 说。</div>
+        <div class="ticker">📌 关联标的：AMZN — 受损（AI capex 焦虑）；GOOGL（前日 -12%+）、MSFT、META — 同一逻辑链受压；SMH（半导体 ETF -6.71%）— 下游客户砍单风险</div>
+        <div class="source">来源：<a href="https://www.marketbeat.com/earnings/reports/2026-10-29-amazoncom-inc-stock/" target="_blank">MarketBeat</a> · <a href="https://vanderbiltreport.com/amazon-earnings-q3-2026-aws-growth/" target="_blank">Vanderbilt Report</a> · <a href="https://www.ecomcrew.com/amazon-q3-2026-earnings-record-margins-mixed-signals-for-sellers/" target="_blank">EcomCrew</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">HBM</span>
+        <h4>SK hynix 高管大换血——开发总裁安贤调任美国，11/1 生效，强化对 Nvidia 的定制 HBM 本土合作</h4>
+        <p>SK hynix (000660.KS) 宣布 11 月 1 日起重组核心高管：CEO 郭鲁正留任（任期至 2028 年 3 月），开发总裁安贤调任美洲区负责人，强化对 Nvidia 的定制 HBM 业务及印第安纳州先进封装基地的技术合作。Q3 营收 <strong>104.6 万亿韩元</strong>（首次突破 100 万亿），运营利润 83.3 万亿韩元，双双创纪录。</p>
+        <div class="why">🦞 把 HBM 开发一把手放到美国，信号很明确：SK hynix 正在把美国从「销售市场」升级为「研发+生产+客户协同枢纽」。Indiana HBM 封装工厂 + Nvidia 定制合作 = HBM 供应链从韩国延伸到美国本土。这也呼应了 Samsung 接受 Nvidia 条件使用 TSMC 3nm 的趋势——AI 芯片产业链正在围绕 Nvidia 重组。</div>
+        <div class="ticker">📌 关联标的：000660.KS SK hynix — 利好（HBM 龙头 + 美国本土化）；005930.KS Samsung — 竞争压力；NVDA — 下游客户受益于供应链本土化；SMH — HBM 供应链格局重塑</div>
+        <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/10/30/sk-hynix-shuffles-presidents-to-speed-up-global-ai-push" target="_blank">Seoul Economic Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">市场</span>
+        <h4>Nvidia 中国数据中心 AI 芯片份额降至 34%——华为升至 28%，非 GPU 加速器出货量首次超过 GPU</h4>
+        <p>据 IDC（Reuters 10/13 报道），Nvidia 2026 上半年中国数据中心 AI 芯片份额 <strong>34%</strong>，同比下降 44%（出货 67.8 万片）；华为 <strong>28%</strong>（57.2 万片，同比近翻倍）。中国 AI 加速器总出货 200.8 万片，非 GPU 加速器首超 GPU（101.6 万 vs 99.1 万），华为/T-Head/昆仑芯/寒武纪合计占非 GPU 的 95%。</p>
+        <div class="why">🦞 出口管制正在重塑中国 AI 芯片格局：Nvidia 从垄断者变成「份额被压缩的高端玩家」，华为Ascend 正在吃掉被制裁挤出的份额。对 lainy：这意味着中国 AI 算力「国产替代」在加速，但性能差距仍大——Nvidia 34% 是被限制后的份额，不是市场竞争的真实水平。</div>
+        <div class="ticker">📌 关联标的：NVDA — 中国市场收入风险；华为产业链（未上市）— 关注 A 股映射：寒武纪 688256.SH、海光信息 688041.SH；SMH — 地缘风险定价</div>
+        <div class="source">来源：<a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/nvidia-stock-faces-china-pressure-as-huawei-gains-ground/70434386" target="_blank">AD-HOC-NEWS / Reuters / IDC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">AI 债务</span>
+        <h4>印度 AI 基础设施公司 AM Intelligence 融资 $30 亿买 Nvidia 下一代芯片——AI 债务潮蔓延全球</h4>
+        <p>据 Bloomberg/CNBC，印度 AI 基础设施公司 AM Intelligence 正在筹集至多 <strong>$30 亿</strong> 债务融资，用于此前宣布的 Nvidia 芯片采购。该公司计划两年内建成 400MW 的 Rubin GPU 算力——这是 AI 基础设施投资「债务化」趋势的最新案例。</p>
+        <div class="why">🦞 继 CoreWeave 的 CDS 突破 1194bp 之后，印度市场也开始出现「借债买 GPU」的模式。对 lainy：AI 产业链的「债务泡沫」不再局限于美国——如果 AI 需求不及预期，全球范围的高杠杆 AI 基础设施项目都会面临现金流危机。</div>
+        <div class="ticker">📌 关联标的：NVDA — 短期利好（芯片订单）；CoreWeave CRWV -9.66% — AI 债务泡沫参照；NBIS Nebius -10.38% — 同板块风险传染</div>
+        <div class="source">来源：<a href="https://www.bloomberg.com/news/articles/2026-10-30/indian-ai-firm-seeks-3-billion-financing-for-nvidia-chips-order" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/10/30/nvidia-india-ai-chips-computing.html" target="_blank">CNBC</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [TSMC/SK hynix HBM] → 中游 [Nvidia GPU/封装] → 下游 [云厂商 capex / AI 应用] — 当前 <b>受损环节：中游</b>（估值过高 + 利率上升压缩数据中心扩张预期）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹首袭 + G20 亚特兰大</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">地缘</span>
+        <h4>霍尔木兹海峡油轮触雷起火——伊朗战争以来首次成功命中商船，Brent 飙至 $113</h4>
+        <p>伊朗报告三艘油轮在霍尔木兹海峡触雷起火，阿曼救起 25 名船员。这是 2026 年 2 月 28 日美以对伊开战以来首次成功命中的商船袭击。Brent 原油飙至 <strong>$113.43/桶</strong>（四月新高），WTI $104.12。卡塔尔调停人返回德黑兰推动美伊协议。</p>
+        <div class="why">🦞 这次袭击标志着伊朗从「布雷封锁」升级到「实际命中商船」，霍尔木兹海峡保险费率将进一步飙升。全球约 20% 原油经由此处，保险+运费翻倍 = 到岸油价上涨的直接传导链。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 — 利好（地缘溢价）；XOM +2.16%、CVX +1.75%（创历史新高）；600028 中国石化、601857 中国石油 — 跟涨；GLD（黄金 ETF）— 避险情绪受益但被加息预期压制</div>
+        <div class="source">来源：<a href="https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco" target="_blank">Kitco</a> · <a href="https://cappnotes.substack.com/p/closing-look-friday-october-30-2026" target="_blank">Cappnotes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">外交</span>
+        <h4>G20 外长会亚特兰大不欢而散——美国取消合影，欧洲外交官拒绝与拉夫罗夫同框</h4>
+        <p>美国取消 G20 外长会合影，因多名欧洲外交官拒绝与俄罗斯外长拉夫罗夫同框并威胁离场。国务卿 Rubio 主持周五至周六的会议，为 G20 峰会铺垫。同日，AP 报道美国官员告知中东盟友准备可能在周二中期选举后对伊朗发动新一轮军事打击。</p>
+        <div class="why">🦞 G20 撤合影是外交断裂的象征性事件——乌克兰、伊朗、中美三大裂痕同时外溢。对 lainy：「选举后可能打伊朗」这个信号很重要——如果下周中期选举结果不利于 Trump，对外军事行动的概率可能上升（转移国内注意力）。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 — 地缘风险溢价加深；UUP（美元 ETF）— 避险资金流；TLT（美债 ETF）— 选举不确定性 + 降息预期推迟</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/atlanta/news/g20-diplomats-including-from-china-and-russia-face-deep-rifts-as-they-prepare-to-meet-in-atlanta-2/" target="_blank">CBS Atlanta / AP</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金跌破 $4,000 · 油价飙升</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">贵金属</span>
+        <h4>黄金跌破 $4,000 创一年新低——现货 $3,883（-3.43%），白银 $49.71（-4.66%）跌破 $50</h4>
+        <p>现货黄金 <strong>$3,883.52/oz</strong>（-3.43%，月跌 7.05%），白银 <strong>$49.71/oz</strong>（-4.66%，月跌 17.83%）。黄金跌破 $4,000 心理关口，创一年来新低。Silver Futures $49.28（-5.70%）。原因：GDP 超预期→加息预期升温→实际利率上行→黄金承压；油价飙升但未推升通胀对冲需求，资金流向美债避险。</p>
+        <div class="why">🦞 黄金跌破 $4,000 是重要心理关口——但不是恐慌性抛售，而是「加息预期 + 美元走强」的组合拳。对 lainy：如果 12 月真的加息，黄金可能继续承压到 $3,700-3,800 区间；如果 ECI 降温趋势延续，支撑可能在 $3,850 附近。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 — 承压；GLD（黄金 ETF）、SLV（白银 ETF）— 跟跌；600547 山东黄金、600916 中国黄金 — A 股黄金股承压；COPX（铜矿 ETF）— 跟跌</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.mining.com/gold-price-slumps-to-one-year-low-silver-price-breaks-50-as-mining-stocks-tank/" target="_blank">Mining.com</a> · <a href="https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">能源金属</span>
+        <h4>原油 Brent $113.43（+1.93%），WTI $104.12（+1.28%）——霍尔木兹地缘溢价推动连4月上涨</h4>
+        <p>Brent <strong>$113.43/桶</strong>（+1.93%），WTI <strong>$104.12/桶</strong>（+1.28%）。原油连续第四个月上涨，月涨幅约 10.85%。LME 铜 $6.48/lb（-1.65%），NYMEX 天然气 $2.898（-0.21%），铝 $3,167/吨（+0.11%）。</p>
+        <div class="why">🦞 油价上涨的双重驱动：1) 霍尔木兹海峡油轮被击中→供给中断风险；2) Q3 GDP 超预期→需求预期上调。但铜下跌说明工业需求并不强——油价涨是地缘溢价，不是需求拉动。</div>
+        <div class="ticker">📌 关联标的：Brent/WTI 原油 — 地缘溢价；XOM +2.16%（创新高）、CVX +1.75%（创新高）；600028 中国石化、601857 中国石油 — 跟涨；LME 铜 — 工业需求偏弱；601899 紫金矿业 — 金铜组合承压</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.mining.com/gold-price-slumps-to-one-year-low-silver-price-breaks-50-as-mining-stocks-tank/" target="_blank">Mining.com</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿山/油田] → 中游 [冶炼/炼化] → 下游 [制造/消费] — 当前 <b>受损环节：贵金属上游</b>（金价跌→矿企利润压缩）；<b>受益环节：原油上游</b>（地缘溢价→油价涨）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>霍尔木兹地缘溢价</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">原油</span>
+        <h4>霍尔木兹海峡油轮袭击→油价飙升——OPEC+ 无新增量，地缘溢价主导</h4>
+        <p>霍尔木兹海峡油轮触雷起火推动 Brent <strong>$113.43</strong>（四月新高），WTI <strong>$104.12</strong>。全球约 20% 原油经由此处。同时，Q3 GDP 超预期推升需求预期。OPEC+ 未宣布新增产量。</p>
+        <div class="why">🦞 能源地缘政治的三个层次：1) 供给中断风险（油轮保险费率飙升）；2) 需求预期上调（GDP 超预期）；3) 通胀传导（油价→CPI→加息预期→压估值）。这三层正在同时运作。</div>
+        <div class="ticker">📌 关联标的：XOM +2.16%（创历史新高）、CVX +1.75%（创历史新高）；601857 中国石油、600028 中国石化 — 跟涨；EOG、PXD（页岩油）— 油价利好</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco" target="_blank">Kitco</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag">天然气</span>
+        <h4>NYMEX 天然气 $2.898（-0.21%）——平稳，未受地缘影响</h4>
+        <p>NYMEX 天然气 <strong>$2.898/MMBtu</strong>（-0.21%），基本持平。天然气未受霍尔木兹事件显著影响，主要因美国本土供给充足、欧洲库存高位。</p>
+        <div class="why">🦞 天然气跟油价脱钩说明：1) 美国天然气自给自足；2) 欧洲冬季库存充足；3) 霍尔木兹主要影响原油，LNG 贸易路线不同。对 lainy：天然气稳 = 美国能源成本可控 = 不会额外推升 CPI。</div>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 — 持平；600256 广汇能源、600803 新奥股份 — 影响有限；LNG 钱尼尔能源 — 出口稳定</div>
+        <div class="source">来源：<a href="https://www.mining.com/gold-price-slumps-to-one-year-low-silver-price-breaks-50-as-mining-stocks-tank/" target="_blank">Mining.com</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [油田/气田] → 中游 [炼化/LNG] → 下游 [交通/电力/工业] — 当前 <b>受益环节：原油上游</b>（地缘溢价推升油价）；<b>承压环节：天然气上游</b>（价格平稳无弹性）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Q3 GDP 超预期 + 加息预期升温</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">GDP</span>
+        <h4>美国 Q3 GDP +3.4% 超预期（预期 3.2%）——核心 PCE 3.1% 仍高，12 月加息概率 ~80%</h4>
+        <p>BEA 10/29 发布 Q3 GDP 初值：<strong>+3.4%</strong> 年化（Q2 +2.2%），超预期 3.2%。同日 PCE 物价指数月增 0.5%、年增 3.6%，核心 PCE 月增 0.3%、年增 3.1%。9 月 CPI 同比 <strong>3.7%</strong>（8 月 3.4%）。10/28 FOMC 10-2 投票维持 3.75%-4.00% 不变，Cook 和 Hammack 投票加息 25bp。</p>
+        <div class="why">🦞 GDP 超预期 + 通胀仍高 = 滞胀恐惧消散但加息预期升温。CME FedWatch 12 月加息概率约 76-84%。10 年期美债收益率 ~4.94%，逼近 24 年新高。圣路易斯联储 Musalem 称「需要更多紧缩，而且很快」；达拉斯 Logan 称至少还需两次 25bp。</div>
+        <div class="ticker">📌 关联标的：TLT（20+ 年美债 ETF）— 承压；SPY — 高利率压估值；DXY（美元指数）— 走强压制新兴市场；IWM（罗素 2000 -1.66%）— 小盘股对利率更敏感</div>
+        <div class="source">来源：<a href="https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco" target="_blank">Kitco / BEA</a> · <a href="https://www.wichitaliberty.org/economics/q3-2026-gdp-report-advance-estimate/" target="_blank">Wichita Liberty</a> · <a href="https://cappnotes.substack.com/p/closing-look-friday-october-30-2026" target="_blank">Cappnotes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">就业</span>
+        <h4>Q3 就业成本指数 +0.8% 符合预期——薪资增速放缓但年度仍 +3.4%，加息预期略有降温</h4>
+        <p>Q3 ECI 季增 <strong>0.8%</strong>（预期 0.8%，Q2 0.9%），薪资 +0.7%（Q2 0.9%），福利 +0.9%（Q2 1.0%）。年度总薪酬 +3.4%，薪资 +3.1%，福利 +3.9%。薪资增速放缓提供了「劳动成本通胀降温」的一丝安慰，但年度增速仍高于 Fed 通胀目标兼容水平。</p>
+        <div class="why">🦞 ECI 是 Fed 最关注的劳动成本指标。季度放缓给了鸽派「不再加息」的弹药，但年度 3.4% 仍高于 2% 通胀目标兼容的 ~2.5%——意味着 Fed 不太可能很快转向降息。</div>
+        <div class="ticker">📌 关联标的：TLT — 短期受益（ECI 降温→加息预期微降）；SPY — 降息预期推迟但不逆转；GLD — ECI 降温但被油价/加息双向拉锯</div>
+        <div class="source">来源：<a href="https://www.kitco.com/news/article/2026-10-30/gold-drops-below-4000-silver-tumbles-hormuz-attack-lifts-oil-prices-kitco" target="_blank">Kitco / BEA</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>10/30 收盘 · 全球科技股恐慌日</small></h2>
+    <div class="cards">
+      <div class="market-block">
+        <h4>🇺🇸 美股 · S&P 500 -1.82% · 7,580 · Nasdaq -2.86% · 25,437 · Dow -1.09% · 51,770</h4>
+        <p>S&amp;P 500 跌 <strong>1.82%</strong> 至 7,580.07（6 月以来最差单日），Nasdaq 跌 <strong>2.86%</strong>，Dow 跌 <strong>572 点</strong>（1.09%）。费城半导体指数跌 <strong>7.20%</strong> 至 10,688.80——主要指数中跌幅最大。科技板块 -4.89%，能源 +1.91%，必需品 +1.41%。Intel -28.58%、Reddit -29.22%、Nvidia -4.22% 领跌。Exxon +2.16%、Chevron +1.75% 创历史新高。连续第三周下跌。</p>
+        <div class="ticker">📌 涨幅 TOP3：FDXF +14.91%（FedEx Freight 强指引）、REGN +13.33%（EPS 超预期）、CVCO +13.11% | 跌幅 TOP3：RDDT -29.22%、INTC -28.58%、CACC -19.26%</div>
+        <div class="source">来源：<a href="https://cappnotes.substack.com/p/closing-look-friday-october-30-2026" target="_blank">Cappnotes</a> · <a href="https://www.cnbc.com/2026/10/30/nvidia-india-ai-chips-computing.html" target="_blank">CNBC</a> · <a href="https://investrade.com/market-review-october-30-2026/" target="_blank">Investrade</a></div>
+      </div>
+
+      <div class="market-block">
+        <h4>🇨🇳 A 股 · 沪指 -1.44% · 3,599.02 · 10 月累计 -6.33%</h4>
+        <p>沪指收 <strong>3,599.02</strong>（-1.44%），10 月累计跌 <strong>6.33%</strong>，创 52 周新低。科技股领跌——CNN 报道「中国 AI 和科技热潮为何救不了股市」，指出 CSI 300 周四已跌 1%。资金从 A 股科技转向港股金融/消费/能源。CXMT（长鑫存储）自 8 月以来跌近 30%，Unitree（人形机器人）较 8 月上市价格跌去一半。</p>
+        <div class="ticker">📌 涨幅 TOP3（周三）：恒瑞医药 6.50%、华能 3.35%、GD Power 2.32% | 跌幅 TOP3：海天味业 -2.96%、安徽海螺 -2.76%、中铝 -2.2%</div>
+        <div class="source">来源：<a href="https://english.news.cn/20261030/25293a21220f4df1aa663dccc3f56303/c.html" target="_blank">新华社</a> · <a href="https://tradingeconomics.com/china/stock-market" target="_blank">Trading Economics</a> · <a href="https://edition.cnn.com/2026/10/30/markets/china-ai-stocks-selloff-intl-hnk" target="_blank">CNN</a></div>
+      </div>
+
+      <div class="market-block">
+        <h4>🇭🇰 港股 · 恒指 +1.46% · 23,294.42 · 资金从 A 股转向港股</h4>
+        <p>恒指收 <strong>23,294.42</strong>（+1.46%），金融、消费、能源、航运板块获资金流入。与 A 股背道而驰——资金正从大陆科技股转向港股金融和传统板块。本周港股相对 A 股的「脱钩」走势明显。</p>
+        <div class="ticker">📌 关联标的：00700 腾讯、01810 小米、09988 阿里巴巴、03690 美团 — 港股科技股仍承压；金融/能源板块走强</div>
+        <div class="source">来源：<a href="https://www.ad-hoc-news.de/boerse/news/marktberichte/hang-seng-closes-1-46-prozent-higher-at-23-294-42-after-october-rebound/70434788" target="_blank">AD-HOC-NEWS</a> · <a href="https://247wallst.com/cards/hong-kong-and-the-mainland-pulled-apart-by-nearly-three-poin-hsi-market-bell-01m65xbg25928resk3wenj8577" target="_blank">24/7 Wall St</a></div>
+      </div>
+
+      <div class="market-block">
+        <h4>🇰🇷 韩股 · KOSPI -3.48% · 5,730.74 · SK hynix -7.08% 触发 sidecar</h4>
+        <p>KOSPI 跌 <strong>3.48%</strong> 至 5,730.74，触发卖方 sidecar 暂停机制。SK hynix 跌 <strong>7.08%</strong>——尽管 Q3 营收首破 100 万亿韩元，但全球芯片股恐慌抛售不放过「赢家」。Nikkei -2.87%，日股同跌。</p>
+        <div class="ticker">📌 关联标的：005930.KS Samsung、000660.KS SK hynix — 芯片板块全跌；KOSDAQ 同步下跌</div>
+        <div class="source">来源：<a href="https://cappnotes.substack.com/p/closing-look-friday-october-30-2026" target="_blank">Cappnotes</a> · <a href="https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-highlights-30th-october-2026/article71640574.ece" target="_blank">Hindu BusinessLine</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>AI 烧钱 vs 消费承压</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费</span>
+        <h4>Amazon Q3 消费数据亮点：营收 $2019 亿创纪录但 FCF -$424 亿——AI 投资正在吞噬消费利润</h4>
+        <p>Amazon Q3 营收 <strong>$2019 亿</strong>（+12%）创历史新高，运营利润率创纪录。但 12 个月自由现金流 <strong>-$424 亿</strong>，P&E 投资 $948 亿主投 AI。消费端增长稳健（电商 + 广告），但 AI 基础设施投入远超利润——这种「消费补贴 AI」的模式正在被市场质疑。</p>
+        <div class="why">🦞 Amazon 是全球消费 + AI 的交集点：消费端强劲说明美国消费者仍有韧性，但 AI 端的烧钱规模让人质疑「什么时候能赚回来」。对 lainy：这也是宏观的一个缩影——GDP +3.4% 的增长很大一部分来自企业 capex（AI 投资），而非消费拉动。</div>
+        <div class="ticker">📌 关联标的：AMZN — 营收利好但 FCF 拖累；消费映射：XLY（可选消费 ETF -0.71%）、XLP（必需消费 +1.41%）；MDLZ +3.85%（Mondelez 超预期）</div>
+        <div class="source">来源：<a href="https://www.indmoney.com/blog/us-stocks/amazon-stock-q3-earnings-analysis-amzn" target="_blank">INDmoney</a> · <a href="https://www.ecomcrew.com/amazon-q3-2026-earnings-record-margins-mixed-signals-for-sellers/" target="_blank">EcomCrew</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>🎃 万圣节快乐！</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">万圣节</span>
+        <h4>🎭 万圣节 2026：Heidi Klum 继续「拥有夜晚」，Paris Hilton 致敬 Britney，Martha Stewart 做万圣节料理</h4>
+        <p>Heidi Klum 在纽约举办年度万圣节派对前夜预热，给 USA Today 透了个线索：「我的身体⋯⋯」。Paris Hilton 继续年度传统致敬 Britney Spears。Martha Stewart 上 Today Show 做万圣节料理。Kerry Washington、North West、Snooki 等明星纷纷晒出万圣节造型。Grindr 在纽约举办了 Pleasure Ball 2026。</p>
+        <div class="why">🦞 lainy 万圣节快乐！🎃 今天是 Halloween，龙虾老师祝你今晚要糖顺利、不给糖就捣蛋！</div>
+        <div class="source">来源：<a href="https://www.today.com/life/holidays/live-blog/2026-today-show-halloween-costume-reveal-rcna605004" target="_blank">TODAY</a> · <a href="https://www.yahoo.com/entertainment/celebrity/articles/best-celebrity-costumes-halloween-2026-104600851.html" target="_blank">Yahoo/People</a> · <a href="https://www.usatoday.com/story/entertainment/celebrities/2026/10/30/celebrity-halloween-costumes-2026-photos/92513358007/" target="_blank">USA Today</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    <p>🦞 龙虾老师 · 每日不错过新闻 · 2026-10-31</p>
+    <p class="footer-note">数据截至 10/30 收盘 · 信源：Reuters, Bloomberg, AP, CNBC, Kitco, Trading Economics, BEA, 新华社, SEDaily, CNN, CBS, Cappnotes 等</p>
+  </footer>
+</div>
+</body>
+</html>
