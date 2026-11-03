@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-03</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px dashed var(--border); border-left: 4px solid var(--accent); padding-left: 12px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 3 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>Apple Q4 财报出炉：</b>营收 <strong>$114.5B</strong>（+12%）超预期，Services 创历史新高，FY2026 全年营收 <strong>$479B</strong>；同日 AMD 盘后公布 Q3 财报，华尔街预期营收 <strong>$130.9</strong> 亿——Intel 暴跌后的 AI 叙事「生死战」。</li>
+      <li><b>霍尔木兹双轨博弈：</b>伊朗外长提出 2 天重开海峡方案，同日 IRGC 宣称 9 天内第 11 艘油轮着火；Trump 打击暂停期今日到期，美国中期选举同日开跑。</li>
+      <li><b>A 股券商板块爆发：</b>央行联合金融监管总局、证监会召开互换便利 + 回购增持再贷款座谈会，券商指数 <strong>+4.60%</strong>，国金证券涨停——外汇局同步发布经常项目外汇管理便利化新政征求意见稿。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AMD 财报日 · Apple 财报 · Nvidia Seoul AI Day</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">Apple Q4 FY2026</span>
+        <h4>Apple Q4 财报：营收 $114.5B（+12%）超预期，Services 创历史新高，Ternus 首次主持财报电话</h4>
+        <p>Apple 11/2 盘后发布 FY2026 Q4（截至 9/26）财报：季度营收 <strong>$114.5B</strong>（<strong>+12%</strong> YoY），毛利率 <strong>47.9%</strong>（含约 1pp 关税退税利好），摊薄 EPS <strong>$2.10</strong>（<strong>+14%</strong> YoY）。iPhone 营收创 9 月季度新高，Services 收入创历史新高。FY2026 全年营收 <strong>$479B</strong>，为史上最佳财年。CEO John Ternus 首次主持财报电话，强调 iPhone Duo「自初代 iPhone 以来最大变革」+ iPhone 18 Pro/Pro Max + 全新 Siri AI + Touch to Mac。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Apple 在 Mag 7 中 YTD 涨幅最佳（+27%），这份财报验证了「硬件换机周期 + Services 增长」双引擎。值得注意：iPhone Duo 是疫情以来最大产品创新周期，Q4（假日季）将是真正考验。关税退税贡献了约 1pp 毛利率——意味着如果没有关税因素，毛利率会回落，后续需关注关税政策变化对利润率的扰动。</div>
+        <div class="ticker">📌 关联标的：AAPL（Apple，FY2026 营收 $479B 创纪录）/ QQQ（纳指 ETF）/ 02800.HK（苹果产业链 ETF 港股）— Apple 财报利好带动供应链情绪</div>
+        <div class="source">🔗 Source: <a href="https://www.apple.com/newsroom/2026/11/apple-reports-fourth-quarter-results/" target="_blank">Apple Newsroom</a> · <a href="https://www.macrumors.com/2026/11/02/apple-4q-2026-earnings/" target="_blank">MacRumors</a> · <a href="https://www.cnbc.com/2026/11/02/apple-aapl-q4-2026-earnings-live-updates.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">AMD Q3 财报</span>
+        <h4>AMD 今日盘后公布 Q3 财报：华尔街预期营收 $130.9 亿、EPS $1.95——Intel 暴跌后的 AI 叙事「生死战」</h4>
+        <p>AMD 将于北京时间 11/3 凌晨（美东 11/2 盘后）发布 Q3 2026 财报。华尔街共识：营收 <strong>$130.9</strong> 亿，调整后 EPS <strong>$1.95</strong>，核心驱动来自 EPYC 服务器处理器 + Instinct AI 加速器。此前 Intel Q4 指引仅 $150-160 亿（远低于预期的 $170 亿），Intel 股价周五暴跌 <strong>28.6%</strong>，拖累 AMD 跌 <strong>10.9%</strong> 至 $504.80。AMD Q3 指引约 $130 亿（±$3 亿），Q4 隐含全年仅 <strong>$162</strong> 亿——市场关注 AI 加速器增长能否弥补 PC 疲软。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Intel 倒下不等于 AMD 自动赢——市场担心的是「AI 基建投资回报被高估」的叙事如果蔓延到 AMD，整个半导体板块都会承压。AMD 过去 4 次财报均超预期但其中 3 次股价下跌——「超预期不够」已经成为 AI 芯片股的新标准。今晚关注：① 数据中心增长是否持续；② 毛利率能否维持 ~56%；③ Q4 指引。</div>
+        <div class="ticker">📌 关联标的：AMD（$504.80，今日盘后财报）/ INTC（Intel，已暴跌）/ NVDA（Nvidia 11/17 财报）/ SMH（半导体 ETF）— AMD 财报定调半导体板块短期方向</div>
+        <div class="source">🔗 Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262263680-amd-q3-earnings-preview-ai-chip-growth-reverse-tradingkey" target="_blank">TradingKey</a> · <a href="https://finance.yahoo.com/technology/article/amd-to-report-q3-results-following-disappointing-showing-from-intel-190327545.html" target="_blank">Yahoo Finance</a> · <a href="https://primexbt.com/for-traders/amd-earnings-date/" target="_blank">PrimeXBT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia Seoul AI Day</span>
+        <h4>Nvidia AI Day Seoul 2026 定档 11/9-10：拉三星、SK Hynix、LG 推进下一代工业 AI + 机器人</h4>
+        <p>Nvidia 官方确认将于 11/9-10 在首尔举办 AI Day 2026，阵容包括三星电子、SK Hynix、LG 电子。三星将展示下一代 AI 基础设施（含 2nm 代工路线图更新），LG 将展示基于 Nvidia <strong>Isaac GR00T</strong> 的闭环学习系统在真实工厂中的应用。这是 Nvidia 在韩国首次举办如此规模的生态大会，时间点恰好在 AMD 财报后一周、Nvidia 自身财报（11/17）前一周。</p>
+        <div class="why">🦞 <b>市场含义：</b>Nvidia 在韩国「拉齐」三大巨头，本质上是在巩固 AI 算力 + 机器人 + HBM 的三角联盟。对 lainy 关注的韩股：① 三星（005930.KS）的 2nm 代工需要新叙事来对冲 TSMC 的份额优势；② SK Hynix（000660.KS）已被 Nvidia 锁定为 HBM4 主供应商；③ LG 的工厂机器人闭环学习 = Nvidia 从云端 AI 向边缘 AI 扩展的新战线。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，11/17 财报预期 YoY +91%）/ 005930.KS（三星电子）/ 000660.KS（SK Hynix）/ 066570.KS（LG 电子）— Nvidia 生态圈利好</div>
+        <div class="source">🔗 Source: <a href="https://www.sammyfans.com/2026/11/01/nvidia-seoul-ai-summit-samsung-sk-hynix-lg/" target="_blank">Sammy Fans</a> · <a href="https://www.thelec.net/news/articleView.html?idxno=15167" target="_blank">The Elec</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前焦点：AMD 今日财报定半导体叙事方向，Nvidia 11/17 财报 + Seoul AI Day 为后续催化剂</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹危机 · 中期选举</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹双轨</span>
+        <h4>伊朗「一手谈判一手布雷」：外长提出 2 天重开海峡方案，同日 IRGC 宣称 9 天内第 11 艘油轮着火</h4>
+        <p>11/1，伊朗外长 Araghchi 在多哈谈判中提出 2 天重开霍尔木兹海峡方案。同日晚间，IRGC 海军宣称又有 2 艘油轮在霍尔木兹海峡触雷起火（含 1 艘超大型油轮）。11/2，IRGC 发布声明：自 10/25（美军 CENTCOM 司令 Cooper 视察海峡当天）至今，<strong>11 艘</strong>油轮在霍尔木兹着火，「部分沉入海底」。IRGC 发言人 Mohebbi 将军贴出 Cooper 飞越海峡的照片，背景是燃烧的油轮和 <strong>$117</strong>/桶的 Brent 油价标签。据 IEA 数据，沙特产量已从 <strong>1090</strong> 万桶/日降至约 <strong>620</strong> 万桶/日。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是「胁迫式外交」的经典模式——上午提方案、晚上炸船，Stimson Center 6/25 已记录过同样模式（伊朗在 Araghchi 与阿曼外长通话时打击 Ever Lovely 货轮）。关键变量：Trump 自设的打击暂停期 <strong>今日（11/3）到期</strong>，与中期选举同日。如果暂停期结束 + 中期选举结果影响 Trump 对伊政策授权，未来 48 小时是霍尔木兹危机最危险窗口。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（$108-113 区间剧烈波动）/ 600028 中国石化 / 601857 中国石油 / XLE（能源 ETF）— 油价高位波动，三桶油受益但波动率上升</div>
+        <div class="source">🔗 Source: <a href="https://houseofsaud.com/iran-hormuz-dual-track-nov2/" target="_blank">House of Saud</a> · <a href="https://www.tasnimnews.ir/en/news/2026/11/02/3738596/11-tankers-caught-fire-in-hormuz-in-9-days-irgc-navy/amp" target="_blank">Tasnim News</a> · <a href="https://www.marinelink.com/news/iran-reports-four-tankers-exploding-544052" target="_blank">MarineLink</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">美国中期选举</span>
+        <h4>美国中期选举今日开票：435 席众议院全改选 + 35 席参议院，伊朗战争超越经济成选民最关注议题</h4>
+        <p>11/3 是 2026 美国中期选举日。全部 435 个众议院席位 + 35 个参议院席位改选。NBC 指出中期选举通常是对总统及其政党的公投——今年是 Trump 回归白宫两年后的答卷。核心议题格局变化：伊朗战争已超越经济成为选民最关注议题，油价成核心辩论焦点。Trump 的对伊政策（暂停轰炸 + 谈判）正面临党内鹰派压力。本次选举结果将直接影响：① 对伊军事授权；② 财政政策（减税/加税）；③ AI 监管立法节奏。</p>
+        <div class="why">🦞 <b>市场含义：</b>中期选举对市场的短期影响通常是「不确定性消除 = 利好」，但如果共和党大胜（控制两院），市场可能解读为 Trump 政策（关税+减税+放松监管）全面加速；如果民主党夺回众议院，则意味着立法僵局 + 对 Trump 的更强监督。对 lainy 关注的领域：① 对伊政策 → 油价 → 通胀 → Fed 加息节奏；② AI 监管立法 → 科技股估值。</div>
+        <div class="ticker">📌 关联标的：SPY（美股大盘）/ QQQ（科技股）/ Brent 原油（选举结果 → 对伊政策 → 油价）— 选举结果定本周风险偏好方向</div>
+        <div class="source">🔗 Source: <a href="https://en.wikipedia.org/wiki/2026_United_States_elections" target="_blank">Wikipedia</a> · <a href="https://www.nbcnews.com/politics/2026-elections/midterms" target="_blank">NBC News</a> · <a href="https://ballotpedia.org/United_States_Congress_elections,_2026" target="_blank">Ballotpedia</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [地缘冲突 → 油价/航运] → 中游 [通胀 → 央行政策] → 下游 [风险偏好 → 股债配置] — 当前关键变量：中期选举结果 + Trump 打击暂停期今日到期 = 48 小时窗口定方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>Fed 12 月加息预期 + 外汇局新政</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed 加息预期</span>
+        <h4>CME FedWatch：12 月加息 25bps 概率升至 69.8%——下次 FOMC 12/8-9，油价仍是核心变量</h4>
+        <p>截至 11/2，CME FedWatch Tool 显示 12 月 FOMC 会议加息 25bps 的概率已升至 <strong>69.8%</strong>。当前联邦基金利率维持在 <strong>3.75-4.00%</strong>，10 月 FOMC 按兵不动。Fed 主席 Warsh 同时宣布 2027 年起将减少利率决议会议次数。下次 FOMC 会议 <strong>12/8-9</strong>。本周关键数据：10 月非农就业（11/6 周五），共识 <strong>5.5</strong> 万人，失业率维持 <strong>4.2%</strong>。霍尔木兹油价高企（Brent $108-113）持续推升通胀预期。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>69.8% 的加息概率意味着市场已经基本定价——如果最终不加息，反而是鸽派惊喜。但油价如果因中期选举后的地缘局势继续上涨，12 月加息概率会进一步上升。对 lainy：高利率环境持续 = 科技股估值承压 = AI 芯片股的「增长」叙事必须在财报中证明自己（AMD 今日 + Nvidia 11/17）。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（科技股，利率敏感）/ GLD 黄金（$4000 关口攻防）/ 513130 港股通科技 ETF — 12 月加息预期压制估值</div>
+        <div class="source">🔗 Source: <a href="https://growbeansprout.com/tools/fedwatch" target="_blank">CME FedWatch via GrowBeanSprout</a> · <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">TradingEconomics</a> · <a href="https://fedratecalc.com/fomc-meeting-schedule/" target="_blank">FedRateCalc</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">外汇局新政</span>
+        <h4>外汇局发布经常项目外汇管理便利化新政征求意见稿——跨境贸易高水平开放 + 支付机构扩围 + 边境贸易轧差结算</h4>
+        <p>国家外汇管理局 11/2 发布《关于进一步优化经常项目外汇管理有关事项的通知（征求意见稿）》，推出一揽子政策：① <strong>2027/1/1 起全国推广</strong>跨境贸易高水平开放外汇收支便利化业务，与银行外汇展业改革融合实施；② 支付机构外汇业务从电子商务<strong>拓展至市场采购贸易、外贸综合服务</strong>等新业态；③ 降低经营性租赁境内外汇结算准入门槛；④ 扩大保险机构外汇资金运用账户收支范围；⑤ 内蒙古等 <strong>9 个边境省区</strong>可对毗邻国家贸易办理轧差净额结算。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 2026 年外汇管理改革的标志性文件——从「管住」转向「便利化」。对 lainy 的金融视角：① 跨境贸易结算成本下降 = 出口型企业（跨境电商、外贸综合服务）利润改善；② 支付机构扩围 = 支付宝/连连支付等跨境支付业务空间扩大；③ 边境贸易轧差 = 人民币国际化在边境省份实质性推进。</div>
+        <div class="ticker">📌 关联标的：300059 东方财富（金融服务受益）/ 002405 四维图新（跨境支付概念）/ 601318 中国平安（保险外汇运用扩围）— 跨境贸易便利化利好金融服务+支付</div>
+        <div class="source">🔗 Source: <a href="https://www.21jingji.com/article/20261102/herald/9c0bf21a1216e96b2b035b941ce737c0.html" target="_blank">21 经济网</a> · <a href="https://finance.sina.com.cn/tech/roll/2026-11-02/doc-inixkeus7107608.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">离岸信托追踪</span>
+        <h4>大陆追税压力下：香港离岸信托资产可能外流——「钱未必跑得掉，信心却会先跑掉」</h4>
+        <p>Dimsum Daily 11/2 报道，大陆加强离岸信托和海外资产追税以来，市场声音警告部分通过香港结构持有的大陆财富可能被转向美国等替代司法管辖区。看中国网同日评论文章指出：「中国最近加强对离岸信托和海外资产的追税，真正值得关注的不只是富豪要多交多少税，而是这种追溯性征管会怎样改变企业主对未来的判断。」文章核心观点：税率高本身未必最可怕，追溯性征管带来的不确定性才是信心动摇的根源。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是离岸信托 20% 个税事件的后续新进展——不是政策本身的公告/生效日（那是 7/24 公告、10/1 生效），而是市场对政策影响的<strong>新反应</strong>：香港作为离岸信托枢纽的地位可能被削弱。对 lainy 作为金融从业者：① 私人银行/家族办公室的离岸架构设计面临重估；② 香港信托业可能面临 AUM 外流；③ 美国信托/新加坡信托可能成为替代受益方。</div>
+        <div class="ticker">📌 关联标的：00700.HK 腾讯（港交所整体信心指标）/ 03888.HK 渣打集团（离岸信托业务）— 关注香港信托业 AUM 变化</div>
+        <div class="source">🔗 Source: <a href="https://www.dimsumdaily.hk/mainland-tax-chase-may-shift-offshore-trusts-out-of-hong-kong/" target="_blank">Dimsum Daily</a> · <a href="https://www.secretchina.com/news/b5/2026/11/02/1106867.html" target="_blank">看中国网</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [地缘 → 油价 → 通胀] → 中游 [央行加息预期 → 利率] → 下游 [科技股估值 + 跨境贸易政策] — 当前关键变量：12/8-9 FOMC + 11/6 非农数据 + 中期选举结果</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🪙</span> 大宗商品 <small>黄金 · 铜 · 原油</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金承压守住 $3,900 关口，铜价 $6.49/lb 平稳——原油大跌 4.5% 缓解通胀焦虑</h4>
+        <p>黄金：MCX 黄金约 Rs <strong>1,38,412</strong>/10g，承压运行，Spot 金价在 $3,900 附近横盘。Kitco 数据显示 11/2 现货市场开盘中。前期黄金跌破 $4,000 创一年新低后，当前在 $3,900 关口附近寻找支撑。<strong>铜</strong>：$<strong>6.49</strong>/lb（+0.18%），价格区间 $6.49-6.53，平稳运行。Bullish Cartel 指出铜价在 7-9 月均价水平上运行，「工业金属未确认黄金白银的恐惧」——AI 数据中心需求 + 地缘供应紧张双支撑。白银约 $49.71 附近。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金 $4,000 关口已从支撑变为阻力，市场在 $3,900 附近重新平衡。原油下跌是黄金的利空因素（通胀预期降温 = 持有黄金的避险需求下降），但中期选举 + 霍尔木兹不确定性仍在支撑。铜价平稳 = AI 基建实物需求仍在传导，未跟随黄金的恐慌。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF（A 股）/ GLD / SLV / LME 铜 $6.49/lb / COPX（铜矿 ETF）/ 600547 山东黄金 / 600362 江西铜业 — 黄金区间震荡，铜受 AI 需求支撑</div>
+        <div class="source">🔗 Source: <a href="https://www.kitco.com/" target="_blank">KITCO</a> · <a href="https://www.goodreturns.in/news/gold-rates-silver-rates-today-2-11-2026-live-spot-gold-mcx-gold-silver-price-24k-22k18k-gold-prices-1544565.html" target="_blank">Goodreturns</a> · <a href="https://bullishcartel1.substack.com/p/gold-and-silver-found-a-floor-on" target="_blank">Bullish Cartel</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">原油</span>
+        <h4>Brent 跌 4.5% 至 $108、WTI 跌破 $100——伊朗外交缓和希望推动油价回落，但 OPEC+ 2027 配额未定</h4>
+        <p>11/2 原油大跌：Brent 从 $113.42 跌约 <strong>4.5%</strong> 至 <strong>$108.64</strong>，WTI 跌至 <strong>$99.71</strong>（-7.5%）。核心驱动：伊朗外长 Araghchi 提出霍尔木兹 2 天重开方案，市场解读为外交缓和信号。但 OPEC+ 2027 年配额尚未确定——下次关键节点为 11 月中旬产能审查会议 + <strong>11/29</strong> 部长级会议。TradingEconomics 显示 WTI 周度仍涨 7.68%，YoY 涨 57.74%。LiteFinance 预测 11 月 WTI 在 $98-110 区间，如地缘持续 + 库存下降可能升至 $112-115。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价终于从「只涨不跌」转为双向波动——这是重要的信号变化。但要注意：① IRGC 同步在炸油轮，外交方案能否落地存疑；② 沙特产量已降至 620 万桶/日，供应缺口巨大；③ OPEC+ 11/29 会议可能重新定义 2027 配额。对 lainy：油价回落 ≠ 危机结束，而是「外交信号 + 军事现实」的双轨博弈阶段。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 $108.64（-4.5%）/ WTI $99.71（-7.5%）/ 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — 油价回落但供应缺口仍在</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">TradingEconomics (WTI)</a> · <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">TradingEconomics (Brent)</a> · <a href="https://discoveryalert.com/news/opec-2027-quotas-oil-price-november-2026/" target="_blank">Discovery Alert</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes Advisor</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹航线 tanker] → 下游 [炼化 — 中石化/ExxonMobil] — 当前变化：油价首现大幅回落，但霍尔木兹军事风险未消除，OPEC+ 11/29 定 2027 配额</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>天然气 · LNG · 电力</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">天然气 &amp; LNG</span>
+        <h4>欧亚天然气价格下滑：伊朗谈判推升 LNG 缓解希望，Freeport LNG 再遇挫折</h4>
+        <p>11/2 欧亚天然气价格下滑，交易商在弱势天气预期与 LNG 需求之间博弈，同时关注中期选举后伊朗战争可能升级。Natural Gas Intelligence 指出，区域天然气基差价格在秋季持续扩大，11 月重新洗牌——美国氨生产商在重新配置前享有成本优势。Freeport LNG 11/2 再遭打击：Gulf South Pipeline 发出新关键通知，指出该德州出口终端未能接收确认气量——此前一周电力中断已导致全部 3 条液化生产线停机。Reuters 同日报道，欧盟将从明年起禁止企业销售俄罗斯 LNG，即使买家在欧盟以外。</p>
+        <div class="why">🦞 <b>市场含义：</b>天然气市场正在「伊朗外交缓和 → 价格下跌」和「Freeport LNG 供应中断 → 价格支撑」之间拉锯。对 lainy 关注的能源股映射：① LNG 出口受阻 → 美国国内气价承压 → 化工/氨生产商成本利好；② 欧盟禁俄 LNG → 欧洲气价结构性高位 → 欧洲能源股受益；③ 东北亚现货 LNG $28.40 的高位如果回落，对中国 LNG 进口商（新奥股份/广汇能源）是成本利好。</div>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 $2.898/MMBtu / TTF 荷兰天然气 / 600333 长春燃气 / 601857 中国石油 / LNG（钱尼尔能源 CQP）— 伊朗谈判缓释 LNG 供给预期，Freeport 中断对冲</div>
+        <div class="source">🔗 Source: <a href="https://naturalgasintel.com/news/european-asian-natural-gas-prices-slide-as-iran-talks-raise-hopes-for-lng-relief/" target="_blank">Natural Gas Intelligence</a> · <a href="https://www.naturalgasintel.com/news/freeport-lng-recovery-hits-another-snag-following-gulf-south-pipeline-warning/" target="_blank">NGI (Freeport LNG)</a> · <a href="https://www.reuters.com/business/energy/" target="_blank">Reuters Energy</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [气田 — 卡塔尔/美国页岩] → 中游 [LNG 液化/航运 — Freeport/钱尼尔] → 下游 [发电/化工 — 欧洲公用事业/中国城燃] — 当前受损环节：Freeport LNG 中断 + 欧盟禁俄 LNG = 全球 LNG 再平衡</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 11/2 收盘：券商板块爆发 +4.60%，国金证券涨停，央行座谈会提振市场信心</h4>
+      <p>11/2 A 股在政策预期托举下震荡走高，券商板块全天强势，中证全指证券公司指数 <strong>+4.60%</strong>。个股：国金证券涨停（<strong>8.45</strong> 元/股）、太平洋 <strong>+9.94%</strong>、东方财富/广发证券/中银证券涨超 <strong>6%</strong>。文化传媒板块同步爆发，影视 ETF 涨停，金融科技 ETF 涨超 9-10%。消息面：央行会同金融监管总局、证监会召开互换便利 + 回购增持再贷款座谈会。前三季度 48 家上市券商营收合计 <strong>5016</strong> 亿（<strong>+18.69%</strong>），归母净利润 <strong>2226</strong> 亿（<strong>+23.58%</strong>）。<b>今日关注：</b>座谈会政策落地效果 + 中期选举对北向资金影响。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 11/2 盘中：道指 +600 点（+1.17%）/ 纳指 +1% / 标普 +1%——亚马逊 +5% 领涨，Apple 财报后盘后微跌</h4>
+      <p>11/2 美股盘中三大指数走高：道指涨超 <strong>600</strong> 点（<strong>+1.17%</strong>），纳指涨超 <strong>1%</strong>，标普涨近 <strong>1%</strong>。「科技七姐妹」普涨：亚马逊 <strong>+5%</strong>、特斯拉/英伟达/谷歌 <strong>+2%</strong>，Apple 跌逾 <strong>1%</strong>（财报前避险）。中概股大涨：纳斯达克中国金龙指数 <strong>+3%</strong>，哔哩哔哩/小鹏 <strong>+7%</strong>，小米 <strong>+6%</strong>，阿里/金山云/拼多多 <strong>+5%</strong>。半导体分化：SK 海力士 <strong>+4%</strong>、德州仪器/高通/博通 <strong>+2%</strong>；Intel/美光/西部数据走低。Apple 财报盘后超预期但市场初步反应温和。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 11/2 收盘：KOSPI 5,859.08（+2.24%）/ KOSDAQ 734.36（+1.38%）——V 型反转，机构买入三星/SK Hynix</h4>
+      <p>KOSPI 早盘一度跌 1.6% 至 5,640（AI 投资质疑延续），随后机构买入 4600 亿韩元推动 V 型反转，收 <strong>5,859.08</strong>（<strong>+2.24%</strong>），KOSDAQ 收 <strong>734.36</strong>（<strong>+1.38%</strong>）。Samsung Electronics、SK Hynix 被机构抄底——市场认为上周暴跌后的估值已具吸引力。Samsung Electro-Mechanics（-0.25%）逆势微跌。<b>本周关注：</b>Nvidia AI Day Seoul 11/9-10 对韩股 AI 板块的催化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 11/3 关注：恒指前期受 A 股情绪 + 美股中概股反弹双重利好</h4>
+      <p>11/2 美股中概股大涨（金龙指数 +3%），A 股券商板块爆发 +4.60%，对今日港股情绪有正面传导。智通投资日志指出市场关注「前瞻布局正当时」。中信证券 11/2 向港交所提交 10/31 证券变动月报。<b>今日关注：</b>恒指能否受益于 A 股 + 中概股双重情绪回暖。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 零售趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品中国</span>
+        <h4>Louis Vuitton 把香港旗舰店变成巨型旅行箱——品牌线下体验升级，Falconeri 进北京、Fope 登陆海港城</h4>
+        <p>Jing Daily 11/2 报道，Louis Vuitton 将香港旗舰店改造为巨型旅行箱造型，强化香港作为奢侈品亚洲门户的定位。意大利品牌 Falconeri 在北京展示四季羊绒系列，目光瞄准上海市场。意大利珠宝品牌 Fope 首次进驻香港海港城。Miu Miu 将于 11/6 在上海举办 Select 活动（刘浩存出席）。Levi's 2026 中国市场策略联动 BLACKPINK ROSÉ 的受众群体，连接高端牛仔+定制化。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>在前期「欧洲奢侈品押注中国失败」的悲观叙事后，品牌仍在用真金白银投票——但策略在变：从「开店扩张」转向「体验升级+本地化营销」。LV 的巨型旅行箱不是开店，是事件营销；Falconi/Levi's 的策略是用本地 KOL/明星连接中国消费者。对 lainy：奢侈品股短期可能仍在消化「中国消费疲软」叙事，但品牌的实际投入比股价更乐观。</div>
+        <div class="ticker">📌 关联标的：LVMH.PA（LV 母公司）/ 1913.HK 郑州丹尼斯（高端零售）/ 02800.HK（消费 ETF 港股）— 奢侈品线下体验投入仍在增长</div>
+        <div class="source">🔗 Source: <a href="https://jingdaily.com/intels/2026-11/02" target="_blank">Jing Daily</a> · <a href="https://retailboss.co/liu-haocun-to-present-miu-miu-select-in-shanghai-on-november-6/" target="_blank">RetailBoss</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌总部 — 欧洲奢侈品集团] → 中游 [零售渠道 — 香港/内地旗舰店] → 下游 [消费者 — 中国高净值/Z 世代] — 当前趋势：品牌从「开店扩张」转向「体验升级+本地化营销」</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Bollywood</span>
+        <h4>Shah Rukh Khan 61 岁生日：《King》首支单曲零点发布，与 Deepika Padukone 再度联手</h4>
+        <p>11/2 零点，Shah Rukh Khan 在 61 岁生日之际发布了备受期待的新片《King》首支单曲，并确认与 Deepika Padukone 再度合作。同时，Ramayana 预售票房已突破 Rs <strong>75</strong> crore（约 ₹7.5 亿）。SRK 当天未按惯例在 Mannat 阳台向粉丝挥手——打破了多年的生日传统，引发粉丝热议。</p>
+        <div class="why">🦞 <b>花边点评：</b>SRK 的生日 = 印度影坛的年度事件。《King》是他 2026 年继 Jawan 后的又一力作，与 Deepika 的组合在印度票房从不出错。Ramayana 预售 75 crore = 印度电影市场在 AI/流媒体冲击下依然强劲。lainy 周末如果刷到 SRH 的热搜，这就是原因。</div>
+        <div class="source">🔗 Source: <a href="https://www.filmibeat.com/bollywood/news/2026/entertainment-news-live-updates-november-2-shah-rukh-khan-birthday-skips-annual-mannat-appearance-536701.html" target="_blank">Filmibeat</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">综艺</span>
+        <h4>ITV 确认 I'm a Celebrity 2026 开播日期——名人版「荒野求生」即将回归</h4>
+        <p>ITV 官方确认 I'm a Celebrity... Get Me Out of Here! 2026 季将于 11 月中旬开播（传闻 11/15 左右）。传闻阵容包括喜剧人 Leigh Francis、模特 Leomie Anderson、YouTuber Sharky 和脱口秀演员 Jack Skipper。Radio Times 11/2 报道新一季节目即将开拍，名人将再次放弃舒适生活前往澳洲丛林。</p>
+        <div class="why">🦞 <b>轻松一下：</b>英国的「下饭综艺」终于回归了。每年 11 月开播的 I'm a Celebrity 是英国冬天的仪式感之一——名人吃虫子、住丛林、做 Bushtucker Trials。lainy 如果追英综，这是 11 月的固定节目。</div>
+        <div class="source">🔗 Source: <a href="https://www.radiotimes.com/tv/entertainment/reality-tv/im-a-celebrity-2026-start-date-confirmed-newsupdate/" target="_blank">Radio Times</a> · <a href="https://www.the-independent.com/bulletin/culture/im-a-celebrity-2026-line-up-rumours-b3077669.html" target="_blank">The Independent</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
