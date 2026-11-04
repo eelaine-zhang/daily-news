@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-04</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --comm: #B8A07E; --energy: #C4A77D; --stock: #D4A64A; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s, transform 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); font-style: normal; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 4 日</h1>
+    <div class="subtitle">周三 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AMD Q3 炸了：</b>营收 $134 亿（+45% YoY）超预期，数据中心收入 +97%，盘后涨超 10%——Intel 暴跌后的 AI 叙事「生死战」AMD 赢了第一回合。</li>
+      <li><b>美国中期选举开票中：</b>众议院 435 席全改选，民调预测民主党有望夺回多数——特朗普面对通胀+伊朗+移民三重压力，59% 不认同其施政。</li>
+      <li><b>央行出手稳汇率：</b>PBoC 11/15 起上调外汇存款准备金率 2 个百分点（近 5 年首次），人民币中间价 6.7150；Fed 12 月加息概率升至 74.9%。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AMD 财报 + Nvidia 限制中国</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">AMD Q3 财报</span>
+        <h4>AMD Q3 营收 $134 亿（+45% YoY）超预期，数据中心 +97%，盘后涨超 10%——AI 叙事「生死战」赢了</h4>
+        <p>AMD 11/3 盘后发布 Q3 财报：营收 <strong>$13.4</strong> 亿（同比 +<strong>45%</strong>），超华尔街预期 $13.09 亿；non-GAAP EPS <strong>$2.09</strong> vs 预期 $1.95；GAAP EPS $1.46。数据中心业务收入暴涨 <strong>97%</strong>，成为最大亮点。CNBC 称「record quarter with revenue exceeding the high end of guidance」。盘后股价涨 <strong>10.43%</strong>，带动芯片板块反弹——Micron、Nvidia、Broadcom 同步走高。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>上周 Intel 暴跌 28.6% 时市场就在等 AMD 这份财报——如果 AMD 也 miss，AI 芯片叙事会彻底崩盘。AMD 不但 beat 了，而且数据中心 +97% 说明 AI capex 正在加速向非 Nvidia 厂商扩散。对 lainy 的框架：① Intel → AMD 的市场份额转移在加速；② 数据中心 +97% 验证了 AI 基建投资没有放缓——上周「AI 泡沫破裂」的恐慌可能过度了；③ AMD 是 Nvidia 最有力的替代者，其强财报对国产业链（通富微电 AMD 封装合作方）是利好。</div>
+        <div class="ticker">📌 关联标的：AMD（+10.43% 盘后）/ NVDA（+3%）/ INTC（Intel，承压）/ 600519 贵州茅台（不相关，但 AMD 强 = AI 情绪回暖 = 科技股风险偏好回升）</div>
+        <div class="source">🔗 Source: <a href="https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results" target="_blank">AMD IR</a> · <a href="https://www.cnbc.com/2026/11/03/amd-amd-q3-earnings-report-2026-.html" target="_blank">CNBC</a> · <a href="https://finance.yahoo.com/technology/article/amd-to-report-q3-results-as-chip-stocks-rebound-following-last-weeks-steep-selloff-150210938.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 限中</span>
+        <h4>Nvidia 收紧中国「后门」算力：要求云厂商非中国客户占比≥51%，物理数据中心核查</h4>
+        <p>FT 11/3 报道，Nvidia 正要求其在新加坡、马来西亚、日本的云租户客户确保至少 <strong>51%</strong> 的服务面向非中国企业，否则可能失去 Nvidia 硬件供应权。执行手段包括物理数据中心核查。Daily Caller 称 Nvidia 将中国客户在租赁算力中的占比上限定在 <strong>49%</strong>。这是继出口管制后，Nvidia 自行收紧的「不成文规则」，防止中国客户通过东南亚云租赁绕道获取 AI 算力。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Nvidia 主动收紧 = 两层意思：① 对美国监管表态「我在合规」，避免被进一步限制；② 对中国云厂商提价——如果只能租 49% 给中国客户，剩下 51% 要找非中国客户，供需失衡下中国客户租金必然上涨。对 lainy：中国 AI 企业获取先进算力的难度再升一档，利好国产替代（寒武纪、华为昇腾），利空依赖 Nvidia 算力的中国云厂和模型公司。</div>
+        <div class="ticker">📌 关联标的：NVDA（+3%，主动合规降低监管风险）/ 688256 寒武纪（国产替代受益）/ 002415 海康威视（算力受限关联度低但 AI 情绪相关）— 国产算力替代加速</div>
+        <div class="source">🔗 Source: <a href="https://www.visiontimes.com/2026/11/03/nvidia-moves-to-restrict-chinas-access-to-ai-computing-as-us-china-tech-rivalry-intensifies.html" target="_blank">Vision Times</a> · <a href="https://dailycaller.com/2026/11/03/nvidia-china-chips-data-centers-artificial-intelligence-models/" target="_blank">Daily Caller</a> · <a href="https://aiweekly.co/ai-news-today" target="_blank">AI Weekly</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">芯片反弹</span>
+        <h4>芯片股反弹：Nvidia +3%、AMD +5%、Micron 领涨——高盛称「隐秘熊市」中 60% 标普成分股在熊市</h4>
+        <p>11/3 美股盘前芯片股集体反弹：Nvidia <strong>+3%</strong>、AMD <strong>+5%</strong>、Micron 领涨，SK Hynix、Sandisk、Seagate、Western Digital 同步走高。但高盛交易员 Bobby Molavi 指出：标普 500 距历史高点仅 3%，但 <strong>60%</strong> 成分股处于熊市——AI capex 的出资方和受益方在同时下跌，「我不懂这两者怎么会同时受罚」。他将此称为「隐秘的熊市」。Nvidia 一家被 NVIDIA 投资的 AI 创业公司 CEO 称中国开源 AI 模型是「给中国芯片的特洛伊木马」，但投资者并未理会。</p>
+        <div class="why">🦞 <b>市场含义：</b>高盛的「隐秘熊市」描述很重要——表面看指数没崩，但大部分个股已经跌得很惨。这说明 AI 的红利高度集中在少数头部公司（Nvidia、AMD 等），而非全面的科技繁荣。对 lainy 的投资框架：选股比择时更重要，指数基金可能掩盖了个股层面的结构性分化。</div>
+        <div class="ticker">📌 关联标的：SMH（半导体 ETF）/ SOXX（费城半导体）/ 159992 半导体ETF（A 股）— 芯片板块超跌反弹，但「隐秘熊市」意味着分化加剧</div>
+        <div class="source">🔗 Source: <a href="https://247wallst.com/investing/2026/11/03/nvidia-rises-3-despite-ai-ceos-warning-on-chinese-chip-competition-amd-climbs-5-broadcom-gains-3/" target="_blank">24/7 Wall St</a> · <a href="https://finance.yahoo.com/markets/article/micron-nvidia-amd-lead-chip-stocks-rebound-140538628.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：AMD（数据中心 +97%），受损环节：Intel（份额持续流失）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美军空袭格什姆岛 + 俄乌谈判定档</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊局势</span>
+        <h4>美军空袭霍尔木兹海峡格什姆岛——中期选举日发动打击，伊朗称「强大伊朗已崛起并控制海峡」</h4>
+        <p>11/3（美国中期选举投票日），特朗普证实美军夜间对霍尔木兹海峡伊朗关键战略要地格什姆岛（Qeshm Island）发动打击。伊朗武装部队总参谋长阿卜杜拉希回应称「一个强大的伊朗已经崛起并控制了霍尔木兹海峡这一咽喉要道」，并阐述了地区持久和平的原则条件。此前伊朗外长通过卡塔尔和巴基斯坦斡旋的伊美间接磋商「非常密集」，伊方已提出自己的条件。特朗普 11/1 在艾奥瓦州助选集会上威胁：「到了某个时间点，我们将不得不对他们『施以重锤』」。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>在中期选举日发动打击——这是「外交为选举服务」的典型操作。特朗普需要展示「强硬」来提振基本盘。但伊朗的反应也很强硬：不退让+提条件+拉普京通话。油价在「轰炸→谈判」的来回中剧烈震荡。对 lainy：① 霍尔木兹每多一天不稳定，油价就多一层溢价；② 如果谈判取得进展（阿曼斡旋），油价可能快速回落 $10-15；③ 中期选举结果将决定特朗普后续对伊朗的政策空间——民主党夺回众议院意味着对伊军事行动的国会约束增强。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价波动）/ 600028 中国石化 / XLE（能源 ETF）— 油价每波动 $10，三桶油利润弹性 15-20%</div>
+        <div class="source">🔗 Source: <a href="https://www.epochtimes.com/gb/26/11/3/n14882402.htm" target="_blank">大纪元</a> · <a href="https://www.21jingji.com/article/20261103/herald/114c954c1d823d3fce520c836c3a6b2e.html" target="_blank">21经济网</a> · <a href="https://k.sina.cn/article_7857201856_1d45362c001908tie2.html" target="_blank">新浪</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">俄乌谈判</span>
+        <h4>俄美乌三方谈判定档 11/10-11 阿布扎比——涵盖停火、战后安全安排、援助</h4>
+        <p>11/2 美国总统特使威特科夫宣布，美国将于 11/10-11 在阿联酋阿布扎比斡旋俄罗斯与乌克兰之间的工作层级谈判。11/3 佩斯科夫证实三方谈判日期。议题涵盖：结束冲突、战后安全安排、局势降温及援助措施。佩斯科夫同时强调「谈判前俄方不准备以任何方式停止作战行动」「筹备谈判不意味着承诺限制军事行动」。乌方 11/2 遭俄航空炸弹袭击，科梅舒瓦哈村 24 人丧生。美国第一夫人梅拉尼娅协助促成了被占领城市奥列什基周边的六天停火。</p>
+        <div class="why">🦞 <b>市场含义：</b>谈判定档 = 地缘风险降温信号，但佩斯科夫「不停火」的表态意味着谈判可能只是「边打边谈」。对 lainy：如果 11/10-11 谈判出现实质进展，欧洲天然气+油价可能快速回落（俄乌冲突溢价消退），利好欧洲经济复苏+通胀回落→Fed 降息空间打开。但不要 overprice 这个可能性——历史上的俄乌谈判多数无果。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（谈判成功则回落）/ SPY（地缘风险降温利好）/ 600028 中国石化 — 关注 11/10 谈判结果</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tg6a.html" target="_blank">新浪</a> · <a href="https://www.voachinese.com/z/4012" target="_blank">VOA中文</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗NIOC] → 中游 [航运 — 霍尔木兹海峡] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（格什姆岛被炸，海峡通行风险升级）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>中期选举 + PBoC 稳汇率 + Fed 加息预期</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美国中期选举</span>
+        <h4>2026 中期选举开票中：众议院 435 席全改选 + 参议院 35 席——民主党有望夺回众议院，特朗普 59% 不认同率</h4>
+        <p>11/3 选举日：改选众议院全部 <strong>435</strong> 个席位、参议院 <strong>35</strong> 个席位及 <strong>36</strong> 个州长。库克政治报告（Cook Political Report）评估约 89 个选区具竞争性，其中 58 个由共和党控制、31 个属民主党——共和党防守压力更大。预计民主党可能净增 <strong>12-25</strong> 席。特朗普民调：约 <strong>59%</strong> 不认同其施政，仅 38% 认同；通胀处理不认同率高达 <strong>70%</strong>。自 1946 年以来，总统所属政党在 20 次中期选举中 18 次失去众议院席位。伊朗战争已超越经济成为选民最关注议题。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>三种情景：① 民主党夺回众议院 + 参议院维持共和党 → 「split Congress」最常见情景，市场通常欢迎（制衡 = 政策不确定降低）；② 民主党夺回两院 → 「blue wave」，可能推动加税、反垄断立法，短期利空科技股；③ 共和党守住两院 → 现状延续，市场反应温和。对 lainy 的关键映射：中期选举结果→美元走势→港股/A 股外资流入→人民币汇率。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，split Congress 偏利好）/ DXY（美元指数，民主党大胜可能走弱）/ 513130 港股通科技ETF — 关注开票结果</div>
+        <div class="source">🔗 Source: <a href="https://www.rfi.fr/cn/%E4%B8%93%E6%A0%8F%E6%A3%80%E7%B4%A2/%E8%A6%81%E9%97%BB%E8%A7%A3%E8%AF%B4/20261103-%E7%BE%8E%E5%9B%BD%E4%B8%AD%E6%9C%9F%E9%80%89%E4%B8%BE-%E6%B0%91%E4%B8%BB%E5%85%9A%E5%AE%9E%E7%8E%B0-%E8%93%9D%E8%89%B2%E6%B5%AA%E6%BD%AE-%E5%A4%BA%E5%9B%9E%E5%9B%BD%E4%BC%9A%E6%8E%A7%E5%88%B6%E6%9D%83" target="_blank">RFI</a> · <a href="https://www.nytimes.com/2026/11/02/us/politics/midterms-election-2026-senate-house-congress.html" target="_blank">NYT</a> · <a href="https://polymarket.com/midterms" target="_blank">Polymarket</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">PBoC 稳汇率</span>
+        <h4>央行近 5 年首次上调外汇存款准备金率 2 个百分点（11/15 起生效）+ 隔夜逆回购常态化</h4>
+        <p>中国人民银行 11/3 发布消息，为加强金融机构外汇流动性管理，决定自 <strong>11/15</strong> 起将金融机构外汇存款准备金率上调 <strong>2</strong> 个百分点——这是近 <strong>5 年</strong>来首次上调。同日央行宣布自 11/2 起每个工作日开展隔夜逆回购操作。人民币兑美元中间价 11/3 报 <strong>6.7150</strong>，下调 4 点。此举意味着央行在「稳汇率」方向加码——提高外汇存款准备金率 = 减少金融机构可用的外汇头寸 = 收紧美元流动性 = 支撑人民币。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这个操作在金融视角的信号意义远大于实际流动性影响——它告诉市场「央行不会放任人民币贬值」。对 lainy 的框架：① 人民币稳 = 港股外资流入更安心 = 恒指有支撑；② A 股外资重仓股（茅台、宁德）受益于汇率稳定；③ 但如果 Fed 12 月真的加息（74.9% 概率），中美利差再扩大，央行稳汇率的压力会更大——11/15 的操作可能只是前菜。</div>
+        <div class="ticker">📌 关联标的：USDCNY（人民币汇率）/ 513130 港股通科技ETF / 600519 贵州茅台（外资重仓）— 央行稳汇率利好人民币资产</div>
+        <div class="source">🔗 Source: <a href="https://m.21jingji.com/article/20261103/herald/2fca7e4847f6aa94b880abda5604db659.html" target="_blank">21财经</a> · <a href="https://www.21jingji.com/article/20261103/herald/b20c88f1a4e486de72d1bd39d089ed41.html" target="_blank">21经济网</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tgwk.html" target="_blank">新浪</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Fed 加息预期</span>
+        <h4>CME FedWatch：12 月加息 25bps 概率升至 74.9%——中性利率区间约 4-4.25%</h4>
+        <p>11/3 CME FedWatch 数据：美联储 12 月维持利率不变概率 <strong>25.1%</strong>，加息 25bps 概率 <strong>74.9%</strong>。财闻分析预测：如果加息，Fed 可能在较长时间暂缓行动，中性利率区间约 <strong>4-4.25%</strong>。摩根大通最新展望：继续做多 10y-30y 美债收益率曲线陡峭化交易，认为 Warsh 近期表态支持短端收益率温和下行。JPM 同时关注能源供应链扰动、铜价下行风险及南美天气变化。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>74.9% 的加息概率意味着市场已经基本 price in 了 12 月加息——如果 Fed 真的加，市场反应可能温和；但如果 Fed 不加（25.1% 概率），那是「鹰派转向」信号，风险资产可能大涨。对 lainy：关注 12/8-9 FOMC 会议，这是 2026 年最后一次。油价是核心变量——如果中东局势降温+油价回落，Fed 可能选择不加。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / GLD 黄金 / 513130 港股通科技ETF — 12 月 FOMC 前市场波动加剧</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tgwk.html" target="_blank">新浪</a> · <a href="https://k.sina.cn/article_7857201856_1d45362c001908tidq.html" target="_blank">新浪2</a> · <a href="https://news.futunn.com/en/post/1003182552/jpmorgan-s-latest-macro-outlook-continue-to-bet-on-steepening" target="_blank">JPMorgan via Futunn</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [Fed 利率/油价] → 中游 [中美利差/资本流向] → 下游 [汇率/股市/债市] — 当前关键变量：12 月 FOMC + 中期选举结果将决定 Q4 方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金守住 $3,900 · 铜铝下跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金 $3,931/oz（-0.39%）、白银 $50.07/oz（-1.15%）——油价回落缓解通胀焦虑，贵金属承压</h4>
+        <p>11/3 收盘：黄金 $<strong>3,931.68</strong>/oz（-0.39%），月度跌幅 <strong>5.03%</strong>；白银 $<strong>50.07</strong>/oz（-1.15%），月度跌幅 <strong>17.99%</strong>（较年内高点跌幅近 30%）。Adrian Day 分析：黄金 1 月曾创纪录 $5,595/oz，现已跌约 <strong>30%</strong>——「如果黄金引领了上一轮大宗周期，下一个引领者是谁？」成为市场讨论焦点。11/4 早盘 IAU 黄金 ETF 收跌 0.65% 报 $73.67，PAAS 泛美白银收跌 1.62% 报 $38.29。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金从 $5,595 跌到 $3,932 不是小回调——是 30% 的趋势性下跌。背后的逻辑链：中东「轰炸→谈判」预期升温 → 油价回落 → 通胀预期降温 → 实际利率上行 → 黄金承压。但央行购金是结构性的支撑（持续 18 个月+），所以 $3,900 附近有买盘。对 lainy：如果 Fed 12 月加息（74.9% 概率），实际利率再上行，黄金可能测试 $3,800——但央行买盘+地缘不确定性限制了下行空间。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD / SLV 白银 ETF / PAAS 泛美白银 — 中东谈判=利空黄金，Fed 加息=利空黄金</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://tradingeconomics.com/commodity/silver" target="_blank">TE Silver</a> · <a href="https://discoveryalert.com/analysis/gold-price-outlook-adrian-day-commodity-cycle-november-2026/" target="_blank">Discovery Alert</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">工业金属</span>
+        <h4>铜 -2.51%、铝 -2.58%——跌幅最大的商品品类，AI 数据中心需求支撑中长期逻辑</h4>
+        <p>11/3 商品市场：铜下跌 <strong>2.51%</strong>、铝合金下跌 <strong>2.58%</strong>，为当日跌幅最大的商品品类。FX168 速递指出跌幅排行：铝合金 &gt; 铜 &gt; 白银 &gt; 黄金。铜价虽然短期下跌，但 AI 数据中心建设对铜的需求仍在——数据中心用铜量是传统写字楼的 3-5 倍。年内铜价仍涨约 <strong>34%</strong>。</p>
+        <div class="why">🦞 <b>市场含义：</b>铜的短期下跌可能反映了全球制造业 PMI 偏弱+美元走压，但 AI 数据中心的中长期需求逻辑没有变。对 lainy 的框架：铜 = 「AI capex 的上游映射」——如果 AMD Q3 数据中心 +97% 是一个信号，铜的需求基本面中长期偏强。短期回调可能是买入窗口。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600547 山东黄金（不直接相关但贵金属板块联动）/ 601899 紫金矿业 / COPX 铜矿 ETF — 短期回调，中长期 AI 需求支撑</div>
+        <div class="source">🔗 Source: <a href="https://www.fx168news.com/express/fastnews/1461620" target="_blank">FX168</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金/银 — 央行购金+地缘支撑] / 工业金属 [铜/铝 — AI 数据中心需求+制造业周期] — 当前：贵金属承压（油价回落），工业金属短期回调但中长期偏强</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>OPEC+ 12 月冻结 · LNG 供应收缩</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">原油</span>
+        <h4>OPEC+ 确认 12 月产量冻结——7 国同意维持现有目标，转向 2027 年策略讨论</h4>
+        <p>OPEC+ 11/1 会议后确认：维持现有原油产量目标至 <strong>12</strong> 月不变。7 个主要产油国同意保持产量不变，同时开始讨论 <strong>2027</strong> 年的生产策略。Energy Intelligence 11/3 报道指出，Gas & LNG 需求「surprisingly resilient」即使考虑当前市场条件和有限的 LNG 货运能力。Wikipedia 2026 Iran war fuel crisis 条目更新：2026 年全球能源投资 $3.4 万亿，其中石油投资连续第三年下降至 &lt;$5000 亿，天然气投资升至 $3300 亿（十年最高），受美国和卡塔尔新 LNG 项目驱动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>OPEC+ 维持产量 = 既不加码也不减产 = 油价方向由需求端和地缘决定，而非供给端。当前油价的核心变量是霍尔木兹海峡局势。对 lainy：如果中东谈判取得进展（11/10 俄乌+伊美间接磋商），油价可能快速回落至 $90s 下方——那将是通胀预期的重大转折点。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — OPEC+ 冻产+中东谈判=油价向下空间打开</div>
+        <div class="source">🔗 Source: <a href="https://energynow.com/2026/11/opec-confirms-december-oil-production-freeze-as-producers-turn-attention-to-critical-2027-strategy/" target="_blank">EnergyNow</a> · <a href="https://www.energyintel.com/000001a1-a2a5-dd44-afad-f7bf8c260000" target="_blank">Energy Intelligence</a> · <a href="https://en.wikipedia.org/wiki/2026_Iran_war_fuel_crisis" target="_blank">Wikipedia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag energy">天然气/LNG</span>
+        <h4>IEA 预测 2026 年全球天然气需求 -1.5%（中东冲突）· 全球 LNG 供应预计创纪录下降 3%（~20 bcm）</h4>
+        <p>IEA 11/3 天然气市场报告：2026 年全球天然气需求预计下降 <strong>1.5%</strong>，主因中东冲突导致的供应中断。Baku 11/3 消息：全球 LNG 供应预计 2026 年下降 <strong>3%</strong>（约 20 bcm），为有记录以来最大年度降幅。ADNOC Gas 同日宣布与 TotalEnergies 签订五年 LNG 供应协议（最高 160 万吨/年）。欧盟 Q2 2026 可再生能源发电占比 <strong>54.1%</strong>，首次过半。</p>
+        <div class="why">🦞 <b>市场含义：</b>LNG 供应创纪录下降 = 亚洲买家（中日韩）竞价争抢现货 LNG = 东北亚 LNG 价格有支撑。对 lainy：① 中国 LNG 进口成本上升 → 城燃公司（新奥股份、广汇能源）毛利承压；② 但可再生能源 54.1% 占比说明欧洲能源转型在加速——光伏/风电的长期逻辑不变。</div>
+        <div class="ticker">📌 关联标的：NYMEX 天然气 / 600256 广汇能源 / 601225 陕西煤业 / LNG（钱尼尔能源）— LNG 供应收缩利好上游，利空下游城燃</div>
+        <div class="source">🔗 Source: <a href="https://tass.com/economy/2212467" target="_blank">TASS/IEA</a> · <a href="https://www.europesays.com/3349720/" target="_blank">Europe Says</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/ADNOC-Gas-to-Supply-LNG-to-TotalEnergies-Under-Five-Year-Deal.html" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Energy/Natural-Gas/Why-Supplying-Europe-With-LNG-Has-a-Best-Before-Date.html" target="_blank">OilPrice 2</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油/天然气开采 — OPEC+/ADNOC] → 中游 [LNG 液化/航运] → 下游 [炼化/发电 — 中石化/电力公司] — 当前受损环节：中游 LNG（供应创纪录下降 3%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 11/3 收盘：沪指险守 3600 点（失而复得），券商板块 +4.60% 爆发，中信证券召开 2027 策略会</h4>
+      <p>11/3 A 股 <strong>3600 点失而复得</strong>，科创50ETF 华夏单日成交额超 <strong>220 亿</strong>，创业板 ETF 易方达、沪深300ETF 华泰柏瑞成交均超 <strong>190 亿</strong>。<b>亮点：</b>券商板块爆发 <strong>+4.60%</strong>，国金证券涨停，央行座谈会提振市场信心。<b>中信证券 2027 策略会：</b>邹迎光首次公开发言称「2027 年 A 股行情宽度有望拓展，非 AI 板块存在广泛结构性修复机会」，建议围绕稳健回报、优秀出海制造业、内需修复布局。<b>今日关注：</b>央行上调外汇存款准备金率对汇率/外资流入的影响。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 ADR 收 23,386（-0.59%）/ 恒生科技 +0.36%</h4>
+      <p>11/3 港股主要指数集体高开：恒指 +0.33%，恒生科技指数 +<strong>0.36%</strong>。盘面上有色金属、银行、传媒、化工上涨，石油石化、半导体、环保、煤炭下跌。科网股分化：小米、网易、京东、阿里、美团上涨，百度、快手下跌。ADR 统计显示恒指较香港收市跌 <strong>139</strong> 点（-0.59%），腾讯 ADR 报 395.6 港元。<b>今日关注：</b>央行稳汇率信号 + AMD 财报后科技股情绪是否外溢到港股。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 11/3 收盘：三大指数涨跌不一 / AMD 盘后 +10.43% / 芯片股反弹</h4>
+      <p>11/3 美股：<b>道指</b> +1.01% / <b>标普</b> +0.58% / <b>纳指</b> +0.80%——三大指数集体高开。芯片股反弹：Nvidia <strong>+3%</strong>、AMD <strong>+5%</strong>（盘后再涨 <strong>10.43%</strong>）、Micron 领涨、Broadcom +3%。亚马逊 +5% 领涨大型科技股。高盛 Bobby Molavi 指出「隐秘熊市」：标普 60% 成分股在熊市，AI capex 出资方和受益方同时下跌。「奇怪之处」在于基线情境仍是 AI 将改变一切。纳指中国金龙指数上涨——中国资产回暖。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — 11/3 收盘：KOSPI -3.59%（盘中一度 -4.15%）/ KOSDAQ -3.59% / 三星 -4.15% / SK Hynix -5.03%</h4>
+      <p>11/3 韩国股市重挫：KOSPI 收跌 <strong>-3.59%</strong>，盘中跌幅一度扩大至 <strong>-4.15%</strong>。三星电子 -<strong>4.15%</strong>，SK 海力士 -<strong>5.03%</strong>，两大半导体权重股成拖累指数主力。日本股市当日休市。外资与机构投资者均呈流出态势。这是继上周 SK Hynix 腰斩、10 月创历史第七大月度跌幅后的延续抛售——AI 芯片叙事在韩股遭遇严重质疑。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>LVMH 年度回顾 · 奢侈品分化 · 白酒价盘</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">LVMH</span>
+        <h4>LVMH 2025 全年：营收 808 亿欧元（-5%），Q4 +1% 回正——中国客群「积极趋势」，香水化妆品逆势增长</h4>
+        <p>LVMH 2025 全年营收 <strong>808</strong> 亿欧元（同比 -<strong>5%</strong>），净利润 -<strong>13%</strong>。但 Q4 营收 +<strong>1%</strong> 延续回升势头——不是溃败而是「换挡」。中国客群整体呈「积极趋势」。精品零售和香水化妆品逆势增长，传统核心的时装皮具部门承压明显。这是「全球最大奢侈品集团的韧性」与「传统核心的挑战」的并存局面。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>LVMH 的 Q4 +1% 回正很重要——它说明中国高端消费在触底。对 lainy 的消费框架：① LVMH 中国客群「积极趋势」= 高净值消费在回暖，利好茅台/爱马仕等超高端定位；② 但时装皮具承压=「中产奢侈品」（LV/Gucci 基础款）的消费力在萎缩——这是中国中产消费降级的延续信号。</div>
+        <div class="ticker">📌 关联标的：LVMH.PA / 600519 贵州茅台（高端消费映射）/ 01810 小米（消费电子）— 高端消费触底，中产消费仍承压</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tgv4.html" target="_blank">新浪</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">奢侈品分化</span>
+        <h4>Gucci 中国降价 30%，万元手袋降至八千——行业称「奢侈品涨价时代终结」</h4>
+        <p>2026 年 9 月 Gucci 在中国市场完成新一轮调价——方向不是涨，而是<strong>降</strong>。Ophidia 系列等万元手袋降至八千元级别。行业观察称「奢侈品涨价时代终结」。LVMH 2026 Q1 在中国大陆（含港澳）营收同比仅 +<strong>2%</strong>，创近五年最低增速。82% 消费者明确表示转向理性购买。爱马仕 Birkin/Kelly 在二手市场保值率常年 &gt;100%，而多数当季爆款手袋一年后残值不足原价六成。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>Gucci 降价是标志性事件——它意味着开云集团承认了「提价策略失效」。对 lainy 的消费投资框架：① 超高端（爱马仕、Chanel）的保值逻辑不变——稀缺性是真护城河；② 中高端（Gucci、LV）的定价权在瓦解——消费者有了比价能力（海南免税价 vs 正价 vs 二手），品牌溢价被压缩；③ 这个分化对 A 股消费板块的映射：白酒也面临类似分化——茅台的稀缺性是真护城河，次高端白酒的提价空间在收窄。</div>
+        <div class="ticker">📌 关联标的：RMS.PA（爱马仕，超高端受益）/ KER.PA（开云/Gucci，降价承压）/ 600519 贵州茅台（白酒稀缺性映射）— 奢侈品分化 = 白酒分化</div>
+        <div class="source">🔗 Source: <a href="https://weibo.com/2/detail/comos:nixnitu2199076" target="_blank">微博/行业分析</a> · <a href="https://weibo.com/2/detail/comos:nixmnqf8779479" target="_blank">微博</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">白酒价盘</span>
+        <h4>白酒 12 大单品 11/3 零售均价：六涨五跌一平——昨日大跌后小幅回升</h4>
+        <p>新浪财经「酒价内参」数据显示，11/3 中国白酒业 12 大单品的终端零售均价：六涨五跌一平，上涨品种数量略占优势，累计涨幅超过下跌端。整体价盘在昨日大幅下挫后小幅回升。这是一个「稳定但不强劲」的信号——白酒消费在三季度进入传统旺季尾声，价盘没有继续崩但也缺乏上行动力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>白酒价盘是消费板块的「温度计」。六涨五跌一平=弱平衡。对 lainy 的框架：茅台批价是整个白酒板块的锚——如果茅台批价稳，次高端就有空间；如果茅台批价松动，整个板块的估值都会承压。当前弱平衡=等待年底消费旺季（春节备货）的催化。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 000858 五粮液 / 002304 洋河股份 — 白酒弱平衡，等春节备货催化</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tgv4.html" target="_blank">新浪</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 棉花/皮革/粮食] → 中游 [品牌制造 — LVMH/Gucci/茅台] → 下游 [渠道 — 免税/电商/经销商] — 当前受益环节：超高端品牌（爱马仕），受损环节：中高端品牌（Gucci/LV基础款）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">陈奕迅家事</span>
+        <h4>香港「网球一哥」黄泽林恋上艺人谭旻萱——陈奕迅徐濠萦齐取关，被陈家 IG 除名</h4>
+        <p>现年 22 岁的香港「网球一哥」黄泽林（Coleman）此前与陈奕迅女儿陈康堤（Constance）交往，近期传出与艺人谭旻萱筑爱巢（月花 5 万）。陈奕迅与妻子徐濠萦在 IG 齐齐取关黄泽林，将其从陈家 IG 中除名。密友爆料称女方「拜金兼好胜」。这则八卦已经登上了多家中港台媒体的热搜。</p>
+        <div class="why">🦞 <b>花边点评：</b>陈奕迅「IG 取关」操作可以理解为香港版「家长表态」——不需要长文声明，一个取关就够了。黄泽林作为香港网球一哥，运动事业正处于关键期，这段感情纠纷可能影响其备战状态。lainy 如果刷到这条八卦，就当吃个瓜 🍉。</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tj80.html" target="_blank">新浪</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tj7y.html" target="_blank">新浪2</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">披荆斩棘</span>
+        <h4>《披荆斩棘 2026》曹骏：38 岁正在练习「放开一点」——从童星到综艺咖的转型</h4>
+        <p>曹骏在《披荆斩棘 2026》的拉票环节中展现了不同于童星时代的另一面——38 岁的他正在适应「在直播舞台上扭一扭腰」这件事。从小的武术功底让他在长枪舞得利落，但「放开一点」是他正在学习的全新课题。节目热度持续，许飞与厉娜的超女友情线也成为热搜话题——许飞经纪人「婉拒彩妆商务、反手推荐厉娜」的举动引发网友讨论。</p>
+        <div class="why">🦞 <b>轻松一下：</b>曹骏是很多 80/90 后的童年记忆（《真命小和尚》《莲花太子》），现在看他上综艺扭腰有点反差萌。许飞经纪人「让合作机会」给厉娜的格局也被网友点赞——娱乐圈也有暖心的时候。</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tjns.html" target="_blank">新浪</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tjvi.html" target="_blank">新浪2</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">世界杯花边</span>
+        <h4>2026 世界杯解说翻车：前国脚李毅「用词不当」引发舆论漩涡——郭德纲相声也犯过类似错误</h4>
+        <p>2026 世界杯一场直播解说中，前国脚李毅在奥地利对阵约旦比赛里为形容球员「奋不顾身」使用了不当表述，迅速引发舆论争议。有评论指出类似的「用词错误」在郭德纲的相声里也出现过，但结果不同——李毅被舆论追着批评，郭德纲却没事。这引发了关于「语境」和「身份」在公共表达中标准是否一致的讨论。</p>
+        <div class="why">🦞 <b>花边点评：</b>这个话题挺有意思的——同样的话在不同人嘴里、不同场景下，社会容错率完全不同。李毅作为前国脚做解说，观众对他的「专业度」有期待，犯错空间自然比相声演员小。lainy 如果关注世界杯的话可以当个轻松话题。</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tkb4.html" target="_blank">新浪</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun" style="background:#B8B0D518;color:var(--tech);">Nvidia AI 工厂</span>
+        <h4>Nvidia 发布「AI 定义工厂」：AI 将半导体晶圆厂的仿真速度提升 35 倍</h4>
+        <p>Nvidia 11/3 博客发布：AI 正在将半导体晶圆厂转变为「AI-defined factories」（AI 定义工厂），仿真速度最高提升 <strong>35</strong> 倍。Nvidia 指出：先进芯片需求在上升，但工艺复杂度和容错空间在缩小——AI 正在帮助工程师在更短时间内完成更复杂的工艺开发。区块链新闻报道，Nvidia 发布时间为 11/3，强调「advanced-chip demand is rising while process complexity and the margin for error are shrinking」。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这是一个有趣的「AI 造 AI」的循环——AI 让芯片更复杂 → 芯片更复杂就需要 AI 来帮着造 → AI 更强 → 芯片更复杂。Nvidia 不只是卖 AI 芯片，还想定义芯片制造流程本身——这是从「卖铲子」到「定义金矿」的升级。对 lainy：如果 Nvidia 把这套 AI 工厂方案卖给 TSMC/三星/Intel，那它就从「芯片公司」变成了「工业软件+芯片公司」——估值逻辑要变。</div>
+        <div class="source">🔗 Source: <a href="https://blogs.nvidia.com/blog/ai-semiconductor-fabs/" target="_blank">Nvidia Blog</a> · <a href="https://blockchain.news/news/nvidia-ai-semiconductor-fabs-engineering-workflows" target="_blank">Blockchain News</a> · <a href="https://www.kucoin.com/news/flash/nvidia-claims-ai-is-reshaping-chip-factories-simulation-speeds-up-to-35x" target="_blank">KuCoin</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
