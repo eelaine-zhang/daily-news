@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-08</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 4px; border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 8 日</h1>
+    <div class="subtitle">周日 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>TSMC 要造内存？</b>传 Nvidia 要求 TSMC 探索 3D DRAM 生产，TSMC 一度否认但股价单日反弹 +6.26%——如果成真将直接挑战三星/SK Hynix/Micron 三寡头格局。</li>
+      <li><b>霍尔木兹再升级：</b>Trump 确认对伊朗 Qeshm 岛实施「有限打击」，伊朗军方放话「7 个条件不答应就不重开海峡」，两艘油轮在海峡内起火；Brent 周跌 12%+ 至 $98。</li>
+      <li><b>「蓝海啸」余震：</b>S&P 500 创 2025 年 4 月关税崩盘以来最差单周，KOSPI 周跌 11.7% 触发熔断，外资抛售 $40 亿韩股——民主党夺参众两院后的 AI 监管预期持续发酵。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC × Nvidia</span>
+        <h4>TSMC 要造内存了？Nvidia 要求探索 3D DRAM，台积电否认但股价 +6.26%——存储三寡头格局可能被打破</h4>
+        <p>The Information 11/6 报道，Nvidia 要求 TSMC 探索生产下一代 3D DRAM 内存芯片，以应对 AI 硬件需求激增导致的全球 DRAM 供应紧张。TSMC 随后否认称「不评论市场传言」，重申自身是逻辑芯片代工。但市场反应强烈：TSMC ADR 11/6 单日反弹 <strong>+6.26%</strong>（前一天刚跌了 -10.78% 至 $353.10）。Seoul Economic Daily 指出，3D DRAM 通过垂直堆叠内存单元提升密度，与 HBM 在结构上不同。如果 TSMC 真的进入，将直接挑战三星、SK Hynix、Micron 三家占据 <strong>88%</strong> DRAM 营收的寡头格局。同时 GlobalFoundries 与 TSMC 签订 <strong>$20</strong> 亿 interposer 合作协议。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 算力军备竞赛的「下一个前沿」——GPU 不够用了，连内存也缺了。Nvidia 找 TSMC 做 3D DRAM 意味着：① AI 需求已严重到让 TSMC 考虑打破「不做内存」的铁律；② 如果成真，三星和 SK Hynix 的 HBM/DRAM 护城河会被直接侵蚀；③ TSMC 的价值定位可能从「纯代工」升级为「AI 全栈方案商」。但 Tom's Hardware 指出 3D DRAM 距量产仍有数年距离——短期更多是情绪驱动。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC ADR，+6.26%）/ NVDA（Nvidia）/ 000660.KS（SK Hynix，承压）/ 005930.KS（三星，承压）/ MU（Micron，承压）— TSMC 受益，内存三寡头短期承压</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/markets/stocks/articles/tsmc-jumped-6-report-could-151351522.html" target="_blank">Yahoo Finance</a> · <a href="https://en.sedaily.com/finance/2026/11/07/tsmc-weighs-3d-dram-push-at-nvidias-request" target="_blank">Seoul Economic Daily</a> · <a href="https://www.tomshardware.com/pc-components/dram/tsmc-denies-exploring-3d-dram-at-nvidias-request-advanced-memory-tech-is-still-years-from-market-viability" target="_blank">Tom's Hardware</a> · <a href="https://www.sammyfans.com/2026/11/07/tsmc-explores-3d-dram-memory-at-nvidia-request/" target="_blank">Sammy Fans</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">内存股崩盘</span>
+        <h4>内存股周跌高达 26% 但 DRAM 现货价继续涨——「AI 需求叙事」与「蓝海啸监管恐慌」的撕裂</h4>
+        <p>FourWeekMBA 分析指出，本周内存相关股票大跌：SK Hynix、三星、Micron 周跌幅达 <strong>26%</strong>，但 DRAM 现货价格仍在持续上涨。基本面（需求旺、供应紧、新产能迟迟不来）与政策面（民主党夺参众两院后可能收紧 AI 数据中心投资）严重背离。SK Hynix 10/28 宣布 2026 财年股东回报计划约 <strong>100 万亿</strong>韩元（约回报率 101% 的净现金），显示管理层对长期价值的高度自信。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是典型的「政策恐慌 vs 基本面」撕裂——DRAM 涨价说明 AI 需求真实存在，但股价崩盘说明市场在重新定价「政策风险」。如果民主党真的推动 AI 数据中心建设审批收紧或出口管制加码，TSMC/SK Hynix 的产能扩张逻辑会被打破。但这种恐慌往往过度定价——上一轮关税恐慌后，基本面最终胜出。对 lainy：关注回调后的买入机会，但短期波动会持续。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星）/ MU（Micron）/ SOXX（半导体 ETF，周跌 ~12%）— 短期超卖，但政策不确定性未消</div>
+        <div class="source">来源：<a href="https://fourweekmba.com/ai-memory-stocks-fell-up-to-26-while-dram-prices-kept-rising/" target="_blank">FourWeekMBA</a> · <a href="https://www.ad-hoc-news.de/boerse/news/corporate-news/tsmc-stock-gains-focus-as-nvidia-and-globalfoundries-expand-ai-links/70473412" target="_blank">Ad-Hoc-News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前关注焦点：TSMC 是否跨界进入 DRAM 制造，打破「纯代工」定位</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹危机</span>
+        <h4>Trump 确认对伊朗 Qeshm 岛「有限打击」，伊朗军方放话「7 个条件不答应就不重开海峡」</h4>
+        <p>11/7 多家媒体报道：Trump 确认美军对伊朗 Qeshm 岛（霍尔木兹海峡内）的防空系统实施了「有限打击」。伊朗国家媒体报道 Qeshm 岛及 Bandar Abbas 附近传出爆炸声。伊朗陆军发言人 Akraminia 放话：霍尔木兹海峡将继续关闭，直到美国接受伊朗提出的 <strong>7</strong> 项条件，直接否定 Trump 所谓「正在谈判」的说法。IRGC 海军称两艘油轮和一艘拖船在试图通过未经授权航线时起火。美国则宣布新的伊朗相关制裁，同时 CENTCOM 在阿曼湾拦截了一艘商船。AP 报道称德黑兰领导人正在考虑调解方案。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>霍尔木兹局势从「边缘博弈」升级到「有限打击 + 条件清单对峙」——Iran 的 7 条件是新的变量，如果双方都拒绝让步，海峡可能长期封锁。Gulf News 指出美国已封锁伊朗港口并护航油轮通过海峡，自夏季以来已帮助海湾国家出口 <strong>15 亿</strong>桶原油。但 IRGC 的「未经授权航线」拦截意味着海峡内航行风险仍在升级。对 lainy：油价短期仍有地缘溢价，但周跌 12%+ 说明市场已在定价「谈判解决」的概率——如果破裂，油价可能重回 $105+。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 $98.32 / WTI $90.83 / 600028 中国石化 / XLE（能源 ETF）— 霍尔木兹封锁 = 油价上行风险；谈判成功 = 快速回落</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/" target="_blank">CBS News</a> · <a href="https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html" target="_blank">RFE/RL</a> · <a href="https://apnews.com/article/iran-war-nuclear-program-negotiations-trump-53ed5d271b9aef6f880aebc133ea6a55" target="_blank">AP News</a> · <a href="https://houseofsaud.com/iran-hormuz-no-backing-down-nov7/" target="_blank">House of Saud</a> · <a href="https://gulfnews.com/world/mena/us-israel-iran-war-trump-warns-iran-heavy-hit-tehran-gulf-diplomacy-1.500737918" target="_blank">Gulf News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹海峡封锁] → 下游 [炼化 — 中石化/ExxonMobil] — 当前受损环节：中游航运（海峡封锁 + IRGC 拦截未经授权航线）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>非农 · 美债 · 蓝海啸余波</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">非农就业</span>
+        <h4>10 月非农 +165,000 人——就业市场温和放缓，2 年期美债收益率 4.51%</h4>
+        <p>BLS 11/7 公布 10 月就业报告：新增非农就业 <strong>165,000</strong> 人。2 年期美债收益率从 4.46% 升至 <strong>4.51%</strong>（周五），10 年期约 <strong>4.98%</strong>（周内最高触及 ~4.99%），但整周 2 年期仍录得连续第六周收益率下降。10 年期周四单日下跌 19.3bp（自 2023 年 3 月以来最大单日跌幅），因油价回落 + 中期选举结果推升降息预期。Fed Funds 利率维持 <strong>3.88%</strong>，Fed 资产负债表 $6.75 万亿。市场关注下周 CPI 数据（11/10）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>非农 +165K 不冷不热——就业市场在放缓但没崩。关键信号：10 年期美债周内冲到 ~5.0% 后快速回落，说明市场在「高利率持续」与「蓝海啸后降息预期」之间剧烈拉锯。下周 CPI 是下一个定盘星——如果通胀继续降温，2 年期收益率可能突破本周低位，风险资产获得新一轮上涨动力。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股，CPI 驱动）/ TLT（20+ 年美债 ETF）/ 513130 港股通科技 ETF — CPI 低于预期 = 鸽派利好科技</div>
+        <div class="source">来源：<a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank">BLS</a> · <a href="https://economictimes.indiatimes.com/news/international/us/us-treasury-bond-prices-down-on-friday-yields-on-10-year-30-year-2-year-jump-check-latest-rates/articleshow/135623624.cms" target="_blank">Economic Times</a> · <a href="https://www.topstep.com/blog/weekly-market-kickoff" target="_blank">Topstep</a> · <a href="https://bullishstation.com/us-jobs-report-october-2026-165000-payrolls-fed-bitcoin" target="_blank">BullishStation</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">S&amp;P 500 最差周</span>
+        <h4>S&amp;P 500 创 2025 年 4 月关税崩盘以来最差单周：周跌 -2.7%，Nasdaq 100 周跌 -5.0%</h4>
+        <p>11/7 收盘：S&amp;P 500 收 <strong>7,376.86</strong>（<strong>+0.31%</strong>），Nasdaq Composite <strong>+1.09%</strong> 至 24,579.43，Dow <strong>-0.46%</strong> 至 51,285.73。但周线惨烈：S&amp;P 500 ETF 周跌 <strong>-2.7%</strong>，Nasdaq 100 ETF 周跌 <strong>-5.0%</strong>，SOXX 半导体 ETF 单日曾跌 <strong>-12%</strong>（周四 4.4% 单日跌幅后周五仅反弹 0.31%）。24/7 Wall St 指出这是自 2025 年 4 月关税崩盘以来最差单周。核心驱动：民主党夺参众两院后 AI 监管收紧预期 + 数据中心建设审批可能收紧。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>「蓝海啸」的市场定价仍在继续——周线 -2.7% 看似不大，但 Nasdaq 100 -5% + SOXX 单日 -12% 说明 AI 概念股是被抛售的重灾区。关键分歧：Dow 只跌了 0.46%，说明抛售集中在 AI 硬件和能源板块，没有扩散到全市场。对 lainy：如果下周 CPI 鸽派 + 霍尔木兹谈判进展，AI 股可能迎来超跌反弹。但在此之前，仓位别太重。</div>
+        <div class="ticker">📌 关联标的：SPY（S&amp;P 500 ETF，周跌 -2.7%）/ QQQ（Nasdaq 100 ETF，周跌 -5.0%）/ SOXX（半导体 ETF，周跌 ~12%）/ SMH（半导体 ETF）— AI 硬件超跌，关注 CPI 后反弹机会</div>
+        <div class="source">来源：<a href="https://247wallst.com/investing/2026/11/07/the-sp-500-just-had-its-worst-week-since-the-april-2025-tariff-crash/" target="_blank">24/7 Wall St</a> · <a href="https://www.sharecast.com/news/market-report-us-close/us-close-tech-stocks-rebound-after-sell-off-dow-slips-after-jobs-report--24081872.html" target="_blank">Sharecast</a> · <a href="https://eurasiabusinessnews.com/2026/11/07/stock-market-today-ai-stocks-rebound-after-brutal-nasdaq-selloff/" target="_blank">Eurasia Business News</a> · <a href="https://www.openingbelldailynews.com/p/stock-market-this-week-nov-7-2026" target="_blank">Opening Bell Daily</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：下周 CPI（11/10）+ 霍尔木兹谈判进展</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 · 白银 · 铜 · 原油</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金守 $4,000、白银重返 $50——8 月以来最强单周涨幅</h4>
+        <p>本周黄金重新站上 <strong>$4,000</strong>/盎司，白银重返 <strong>$50</strong> 以上，录得自 8 月以来最强单周涨幅。WTI 原油从 $104-105 回落至 <strong>$90.83</strong>，Brent 降至 <strong>$98.32</strong>，周跌幅超 <strong>12%</strong>。铜价下跌，铁矿石和铀价上涨，碳酸锂在连续9周下跌后周五反弹后持平。油价暴跌的核心驱动：美国中期选举结果（民主党夺参众两院）推升了「AI 监管收紧 → 数据中心建设放缓 → 能源需求下降」的预期，叠加霍尔木兹谈判进展的迹象。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄金 vs 原油的走势分化是本周最重要的大宗信号——油价跌 = 通胀预期降温 = 鸽派叙事加强 = 利好黄金。但黄金同时守 $4,000 说明市场仍在定价地缘风险。对 lainy 的配置框架：黄金 = 高通胀 + 地缘混乱环境的核心配置，短期支撑 $4,000，阻力 $4,083-4,120。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 $4,000+ / GLD（黄金 ETF）/ 518880 黄金ETF（A 股）/ SLV（白银 ETF）/ 600547 山东黄金 / 600916 中国黄金 — 央行持续买入，中长期看涨</div>
+        <div class="source">来源：<a href="https://sharetrader.com.au/news/2026-11-07-oil-plunges-as-us-midterms-reshape-the-stakes-for-iran-the-week-in-commodities" target="_blank">ShareTrader</a> · <a href="https://telugunow.com/news-headlines/gold-prices-surge-crude-oil-plunges.html" target="_blank">TeluguNow</a> · <a href="https://www.oilpriceapi.com/oil-prices-today" target="_blank">OilPriceAPI</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>铜价下跌、铁矿石和铀价上涨——AI 监管恐慌拖累工业金属</h4>
+        <p>本周铜价下跌，主要受美国中期选举后 AI 数据中心建设放缓预期影响。铁矿石和铀价逆势上涨。碳酸锂在连续 9 周下跌后，周五反弹后持平。WTI 原油 <strong>$90.83</strong>（+0.34%），Brent <strong>$98.32</strong>（+0.03%），Henry Hub 天然气 <strong>$3.00</strong>/MMBtu。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>铜价跌 = 市场在定价「AI 数据中心建设减速」——这个逻辑如果成立，铜的需求端会受损。但铁矿石和铀逆势涨说明传统基建和核能需求仍在。碳酸锂连续 9 周跌后的企稳可能是个信号——锂价如果见底，赣锋锂业/天齐锂业等可能有技术性反弹。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 601899 紫金矿业 / COPX（铜矿 ETF）/ 002460 赣锋锂业 / 002466 天齐锂业 — 铜短期承压，锂价可能见底</div>
+        <div class="source">来源：<a href="https://sharetrader.com.au/news/2026-11-07-oil-plunges-as-us-midterms-reshape-the-stakes-for-iran-the-week-in-commodities" target="_blank">ShareTrader</a> · <a href="https://worldoilmonitor.com/outlook" target="_blank">World Oil Monitor</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿业 — 紫金/Freeport/赣锋] → 中游 [冶炼/精炼] → 下游 [制造/基建/电池] — 当前关注：铜需求受 AI 监管预期影响，锂价可能触底</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 · 天然气 · 地缘</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油</span>
+        <h4>油价周崩 12%+：Brent $98.32、WTI $90.83——BofA 维持 $80 预测，警告「新一轮供应冲击」</h4>
+        <p>本周原油价格大幅下挫：Brent 从 <strong>$104-105</strong> 回落至 <strong>$98.32</strong>（+0.03%），WTI 降至 <strong>$90.83</strong>（+0.34%），周跌幅超 <strong>12%</strong>。BofA 维持 2027 年 Brent <strong>$80</strong> 预测不变，并警告可能面临「新一轮供应冲击」。油价回落的核心驱动：① 美国中期选举后 AI 监管预期 → 数据中心能源需求预期下修；② 霍尔木兹海峡通行谈判有进展迹象；③ EIA 发布冬季燃料展望。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价从 $104+ 跌到 $90 附近——这是本周最大幅度的大宗商品变动。对 lainy：油价跌 = 通胀预期降温 = 美联储有空间鸽派 = 科技股利好。但如果霍尔木兹谈判破裂，$105+ 不是不可能。FinanceFeeds 指出本周关键变量：bull case $105（霍尔木兹破裂），bear case $93（CPI 鸽派 + 谈判进展）。</div>
+        <div class="ticker">📌 关联标的：Brent $98.32 / WTI $90.83 / 601857 中国石油 / 600028 中国石化 / XOM 埃克森美孚 / XLE（能源 ETF）— 油价跌短期利空能源股，但利好通胀预期</div>
+        <div class="source">来源：<a href="https://www.exchangerates.org.uk/news/47699/2026-11-07-brent-and-wti-crude-oil-price-forecast-bofa-expects-lower-2027-averages.html" target="_blank">Exchange Rates</a> · <a href="https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/" target="_blank">FinanceFeeds</a> · <a href="https://www.eia.gov/outlooks/steo/" target="_blank">EIA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">天然气</span>
+        <h4>欧洲 TTF 天然气突破 €92/MWh——2022 年 12 月以来最高，Qatari LNG 受限 + 欧洲库存偏低</h4>
+        <p>Topstep 周报指出：欧洲 TTF 天然气基准价格突破 <strong>€92</strong>/MWh，创 2022 年 12 月以来最高。核心原因：① Qatari LNG 供应受限；② 欧洲天然气库存约 <strong>75%</strong>（五年均值约 86%）；③ 霍尔木兹海峡局势影响 LNG 航运安全。Henry Hub 天然气 <strong>$3.00</strong>/MMBtu（+1.7%）。同时胡塞武装对沙特基础设施的袭击仍是能源供应的尾部风险。</p>
+        <div class="why">🦞 <b>市场含义：</b>欧洲天然气价格创近 4 年新高——如果冬季寒冷 + 霍尔木兹持续封锁，TTF 可能突破 €100。对 lainy：① 欧洲能源股可能有超配价值（Shell/BP/Equinor）；② 中国天然气进口商（新奥股份/广汇能源）可能受益于全球 LNG 价格上涨；③ 但如果霍尔木兹谈判成功，TTF 可能有 €15-20 的回落空间。</div>
+        <div class="ticker">📌 关联标的：TTF €92/MWh / Henry Hub $3.00/MMBtu / 600256 广汇能源 / 600803 新奥股份 / SHEL（Shell）/ BP（BP）— 欧洲天然气紧缺受益</div>
+        <div class="source">来源：<a href="https://www.topstep.com/blog/weekly-market-kickoff" target="_blank">Topstep</a> · <a href="https://www.oilpriceapi.com/live/natural-gas-price" target="_blank">OilPriceAPI</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [开采 — 沙特阿美/伊朗NIOC/卡塔尔能源] → 中游 [LNG/管道运输] → 下游 [发电/工业 — 欧洲公用事业/中国燃气] — 当前受损环节：中游 LNG 贸易（Qatari LNG 受限 + 霍尔木兹封锁）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股 · 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股（11/7 周五收盘）</h4>
+      <p>沪指 <strong>-1.10%</strong>，深证成指 <strong>-2.57%</strong>，创业板指 <strong>-3.96%</strong>，科创综指 <strong>-3.24%</strong>。成交额约 <strong>1.66 万亿</strong>元，较前日缩量 4600 亿。超 4700 只个股下跌。板块方面：电信领涨，电力/油气/银行/电器/农业逆势上涨；通信设备领跌，多只 CPO 概念股重挫，东山精密/剑桥科技跌停，电子元器件/半导体/电脑硬件/互联网/贵金属 全线下跌。华虹宏力 A 股收涨 <strong>+6.86%</strong> 报 173.12 元（盘中振幅 20.87%，成交 55.76 亿），港股收涨 <strong>+4.31%</strong>。AH 股溢价指数最新报 129.58 点（10/27 创年内新高 134.26 后回落）。和谐健康保险 10 月以来累计减持招行近 1.17 亿股，套现约 50 亿元。招行 A 股 11/6 收盘 42.88 元。</p>
+      <div class="ticker">📌 涨幅前3：电信板块 / 电力 / 银行；跌幅前3：通信设备（CPO 概念） / 电子元器件 / 半导体</div>
+      <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908txgy.html" target="_blank">新浪A股</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tx10.html" target="_blank">新浪A股2</a> · <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908tykm.html" target="_blank">新浪A股3</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股（11/7 周五收盘）</h4>
+      <p>恒生指数 <strong>-1.27%</strong> 收 <strong>24,481.86</strong>。恒生科技指数随美股科技股崩盘联动下行。AH 股溢价指数 129.58，反映 A 股相对 H 股溢价仍处年内高位区间。</p>
+      <div class="ticker">📌 关联标的：00700 腾讯 / 01810 小米 / 09888 百度 / 03690 美团 — 港股随美股科技股调整，但跌幅远小于韩股</div>
+      <div class="source">来源：<a href="https://finance.yahoo.com/quote/%5EHSI/" target="_blank">Yahoo Finance HSI</a> · <a href="https://www.deccanchronicle.com/business/market/tech-stocks-suffer-bloodbath-as-us-midterms-fuel-ai-fears-2002432" target="_blank">Deccan Chronicle</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股（11/7 周五收盘）</h4>
+      <p>S&amp;P 500 收 <strong>7,376.86</strong>（<strong>+0.31%</strong>），Nasdaq Composite <strong>+1.09%</strong> 收 24,579.43，Dow <strong>-0.46%</strong> 收 51,285.73。周线：S&amp;P 500 ETF <strong>-2.7%</strong>，Nasdaq 100 ETF <strong>-5.0%</strong>，SOXX 半导体 ETF 周内单日曾跌 <strong>-12%</strong>。24/7 Wall St 指出这是自 2025 年 4 月关税崩盘以来最差单周。抛售集中在 AI 硬件和能源板块，Dow 仅跌 0.46% 说明未扩散到全市场。周四 S&amp;P 500 跌 <strong>-4.4%</strong>，周五仅反弹 +0.31%。</p>
+      <div class="ticker">📌 涨幅前3：NVDA（+6.26%，TSMC 内存消息带动）/ TSM（+6.26%）/ 科技超跌反弹；跌幅前3：AI 硬件 / 能源 / 半导体（SOXX -12% 单日）</div>
+      <div class="source">来源：<a href="https://247wallst.com/investing/2026/11/07/the-sp-500-just-had-its-worst-week-since-the-april-2025-tariff-crash/" target="_blank">24/7 Wall St</a> · <a href="https://www.sharecast.com/news/market-report-us-close/us-close-tech-stocks-rebound-after-sell-off-dow-slips-after-jobs-report--24081872.html" target="_blank">Sharecast</a> · <a href="https://edwardlane.substack.com/p/stock-market-report-for-november-366" target="_blank">Edward Lane</a></div>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股（11/7 周五收盘）</h4>
+      <p>KOSPI 收 <strong>5,059.69</strong>（<strong>-6.02%</strong>），盘中触及 4,911.28——约 9 个月来首次跌破 5,000。KOSDAQ 收 <strong>644.27</strong>（<strong>-5.03%</strong>）。KOSPI 周跌 <strong>-11.71%</strong>，外资抛售超 <strong>6 万亿</strong>韩元（约 $40 亿）股票，11/6 触发熔断。KOSPI 从 6/19 的历史高点 9,385.59 已回撤 <strong>-46.09%</strong>，KOSDAQ 从 4/27 的 1,229.42 回撤近 <strong>-48%</strong>。Nomura 维持 KOSPI 目标 10,000 点不变。韩国金融监管放宽券商抵押品规则以遏制强制平仓。三星/SK Hynix 受 AI 监管恐慌 + 内存股崩盘双重打击。</p>
+      <div class="ticker">📌 关联标的：005930.KS 三星电子 / 000660.KS SK Hynix / KOSPI 周跌 -11.71% — 外资大幅流出，熔断触发</div>
+      <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/11/08/kospi-sinks-117-percent-in-a-week-as-foreigners-dump-4" target="_blank">Seoul Economic Daily</a> · <a href="https://www.chosun.com/english/market-money-en/2026/11/07/KRNNVTGPDNGLPGB3EIMFH4Z7D4/" target="_blank">Chosun</a> · <a href="https://www.byteseu.com/2503231/" target="_blank">Bytes Europe</a> · <a href="https://www.asiae.co.kr/en/article/2026110711261496170" target="_blank">Asia Business Daily</a></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 餐饮 · 时尚</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">时尚</span>
+        <h4>2026 CFDA 时尚奖揭晓 + Pierpaolo Piccioli 退出 Balenciaga + Met 公布下届 Costume Institute 展览</h4>
+        <p>Fashionista 11/7 报道：2026 CFDA 时尚奖获奖者公布。同时 Pierpaolo Piccioli 确认退出 Balenciaga，大都会艺术博物馆公布下届 Costume Institute 展览主题。MarketBeat 指出当前奢侈品关注股：NIKE、Tapestry、Ralph Lauren、ON、V.F.、lululemon、Amer Sports。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>CFDA 年度大奖是时尚界风向标，Piccioli 退出 Balenciaga 可能意味奢牌创意方向再洗牌。对 lainy：奢牌板块近期受中国消费走弱 + 全球科技股财富效应减弱双重压力，但 Louis Vuitton/Hermès 等顶奢韧性强。关注 LVMH/Kering 财报后的情绪修复。</div>
+        <div class="ticker">📌 关联标的：TPR（Tapestry）/ RL（Ralph Lauren）/ LVMH.PA / KER.PA（Kering）— 奢牌换设计师 = 短期情绪波动</div>
+        <div class="source">来源：<a href="https://fashionista.com/2026/11/fashion-news-you-need-to-know-november-7" target="_blank">Fashionista</a> · <a href="https://www.marketbeat.com/instant-alerts/list-luxury-goods-stocks-to-follow-now-november-7th-2026-11-07/" target="_blank">MarketBeat</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">娱乐</span>
+        <h4>Druski 首次主持 SNL + The Strokes 任音乐嘉宾；Hallmark 圣诞档《My Christmas Cowboy》开播</h4>
+        <p>11/7 周六电视看点：Druski 首次主持 Saturday Night Live，The Strokes 任音乐嘉宾。Hallmark Channel 圣诞档新片《My Christmas Cowboy》（Amy Acker + Luke Macfarlane 主演）首播——小镇女制作人重逢大学校花、如今的 celebrity host，一起主持家族活动。Jason Momoa 与 Adria Arjana 出席 2026 WIF Honors 颁奖典礼（Max Mara 赞助）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>周末了——SNL 新主持 + Hallmark 圣诞档 = 完美的 sofa night。Druski 从社交媒体到 SNL 主持台，这个路径值得娱乐产业观察。</div>
+        <div class="source">来源：<a href="https://www.tvline.com/2307641/what-to-watch-november-7-2026-tv-shows-movies-streaming/" target="_blank">TVLine</a> · <a href="https://people.com/star-tracks-saturday-november-7-2026-new-celebrity-photos-updated-daily-12241097" target="_blank">People</a> · <a href="https://www.thetvcave.com/post/what-to-watch-november-7" target="_blank">The TV Cave</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
