@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-09</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 4px; border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 9 日</h1>
+    <div class="subtitle">周一 · 周末回顾 + 本周前瞻</div>
+  </header>
+
+  <div class="tldr">
+    <h3>三句话速览</h3>
+    <ul>
+      <li><b>S&amp;P 500 周跌 -2.7%、Nasdaq 周跌 -5.0%</b> 创 2025 年 4 月以来最差单周——「蓝海啸」后 AI 监管恐慌 + CoreWeave 财报本周来袭</li>
+      <li><b>KOSPI 周崩 -11.7%</b> 至 5,059.69，外资净抛 10.4 万亿韩元；三星/SK 海力士首当其冲，但费城半导体指数周五反弹 +4.2% 带来喘息</li>
+      <li><b>Anthropic IPO 路演本周启动</b>，目标估值从 $1.5T 缩至 $1.2-1.3T；CoreWeave Q3 财报 11/10 盘后发布，AI 算力「验证时刻」</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>HBM / TSMC / Anthropic IPO</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">HBM</span>
+        <h4>Samsung 宣布 2027 年 HBM 产能已全部售罄，Sam Altman 亲赴韩国谈判追加产能</h4>
+        <p>Samsung Electronics 11/8 确认其高带宽内存（HBM）2027 年产能已全部签订合同，采用不可退款押金（non-refundable deposit）或 take-or-pay 结构。OpenAI CEO Sam Altman 10/31 与约 50 名 Samsung 高管会面，请求追加 HBM 供应。SK Hynix 则表示其产能到 2029 年也基本锁定。Samsung + SK Hynix 合计控制全球 DRAM 收入约 63%（2026 Q2，Counterpoint Research）。</p>
+        <div class="why">HBM 供需缺口持续扩大是 AI 算力扩张的最大物理瓶颈。Samsung 2027 全部售罄 + Altman 亲自上门要货，说明 OpenAI 对算力扩张的预期远超当前供应能力。对 lainy：HBM「卖光」= 内存价格继续上涨 = Samsung/SK Hynix 毛利率维持高位，但也意味着下游 AI 公司的硬件成本短期不会下降。</div>
+        <div class="ticker">📌 关联标的：005930.KS 三星电子 / 000660.KS SK 海力士 / NVDA / SMH</div>
+        <div class="source">来源：<a href="https://404kresearch.substack.com/p/456x-evening-brief-november-8-2026" target="_blank">456X Evening Brief</a> · <a href="https://invezz.com/au/news/2026/11/02/sam-altman-courts-uae-investors-as-openai-funding-target-reportedly-shrinks/" target="_blank">Invezz</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC</span>
+        <h4>TSMC 研磨进入内存赛道：Nvidia 要求探索 3D DRAM，台积电否认但已起草方案</h4>
+        <p>The Information 11/7 报道，TSMC 在 Nvidia 要求下已开始起草 3D DRAM 先进内存芯片制造方案，由先进封装副总裁徐国晋主导。TSMC 同时探索收购现有工厂转为内存产线。TSMC 声明称「始终专注核心业务」，未直接否认内存计划。3D DRAM 目标是到 2029 年实现每比特 1 皮焦耳（约标准 HBM 的 40%）能耗。Taipei Times 11/9 头版报道进一步确认。</p>
+        <div class="why">如果 TSMC 真的进入内存制造，将打破 Samsung/SK Hynix/Micron 的三寡头格局——这对内存价格长期是利空，对 TSMC 是从代工到垂直整合的战略跳跃。Nvidia 主动推动说明它对当前 HBM 供应瓶颈已经忍无可忍，需要绕过传统内存厂直接找台积电做定制化方案。</div>
+        <div class="ticker">📌 关联标的：TSMC ADR / 2330.TW 台积电 / 005930.KS 三星电子 / 000660.KS SK 海力士 / MU Micron / NVDA</div>
+        <div class="source">来源：<a href="https://www.taipeitimes.com/News/biz/archives/2026/11/09/2003867384" target="_blank">Taipei Times</a> · <a href="https://wccftech.com/nvidia-custom-hbm-samsung-tsmc-3nm-base-die/" target="_blank">WCCFTech</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">IPO</span>
+        <h4>Anthropic IPO 路演本周启动，目标估值 $1.25T-$1.75T 但持续缩水</h4>
+        <p>Anthropic（Claude 母公司）于 10/26 提交 S-1 申请 Nasdaq 上市，IPO 投资者路演预计本周（11/9 周）启动，目标在感恩节（11/26）前完成上市。估值区间从最初 FT 报道的 $1.5T 降至 Bloomberg 的 $1.2-1.3T，再到 Seeking Alpha 报道的 $1.25T-$1.75T（宽区间反映市场不确定性）。Kalshi 预测 IPO 在 12 月前完成的概率回升至 80%+。</p>
+        <div class="why">Anthropic 是继 OpenAI 之后第二个大型 AI 独角兽 IPO。估值缩水反映「蓝海啸」后市场对 AI 估值泡沫的重新定价。对 lainy：如果 Anthropic 上市后表现好，可能带动 AI 板块回暖；如果破发或低迷，则进一步坐实「AI 泡沫裂开」的叙事。CoreWeave 11/10 财报是 Anthropic 路演前最重要的 AI 情绪风向标。</div>
+        <div class="ticker">📌 关联标的：ANT（拟上市） / CRWV CoreWeave / NVDA / SMH 半导体ETF</div>
+        <div class="source">来源：<a href="https://seekingalpha.com/article/4964841-wall-street-brunch-anthropic-ipo-goes-on-the-road" target="_blank">Seeking Alpha</a> · <a href="https://cryptobriefing.com/anthropic-to-begin-ipo-roadshow-next-week-amid-ai-market-volatility/" target="_blank">Crypto Briefing</a> · <a href="https://mlq.ai/news/anthropics-ipo-what-we-know-about-the-timing-valuation-ticker-and-the-s-1/" target="_blank">MLQ.ai</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">财报</span>
+        <h4>CoreWeave Q3 财报 11/10 盘后发布——AI 算力「验证时刻」</h4>
+        <p>CoreWeave（NASDAQ: CRWV）将于 11/10 盘后发布 Q3 财报。分析师预期每股亏损 $1.16，营收 $35.5 亿（同比 +160%）。市场关注：① 营收增长是否持续 ② 数据中心投资计划是否维持 ③ 融资能力是否足够支撑高资本开支（2026 年资本开支指引高达 $135 亿）。CRWV 11/6 收盘 $46.40，较 11/5 低点 $40.58 反弹 6.3%。</p>
+        <div class="why">CoreWeave 是「AI 算力链」的晴雨表——它的财报直接反映超大规模 AI 训练需求是否真实。如果营收超预期 + 维持投资指引，将缓解「AI 泡沫」恐慌；如果营收不及或下调指引，则可能引发整个 AI 板块第二轮抛售。KOSPI 本周走势也高度依赖此财报。</div>
+        <div class="ticker">📌 关联标的：CRWV CoreWeave / NVDA / SMH / 005930.KS 三星电子</div>
+        <div class="source">来源：<a href="https://www.benzinga.com/markets/earnings/26/11/63020065/earnings-volatility-watch-coreweave-ai-rally-test-week-of-nov-9" target="_blank">Benzinga</a> · <a href="https://financefeeds.com/coreweave-stock-rebounds-6-3-to-46-40-before-tuesdays-q3-report-and-3-45-3-60-billion-guide/" target="_blank">FinanceFeeds</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#D5A0A210;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：上游 [HBM 制造：Samsung/SK Hynix/Micron] → 中游 [先进封装：TSMC CoWoS] → 下游 [AI 算力：CoreWeave/NVDA] — 当前 受益 环节：上游 HBM（供需紧张持续），受损 环节：下游 AI 算力股（蓝海啸监管恐慌 + CoreWeave 验证压力）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>霍尔木兹 / 美伊</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">霍尔木兹</span>
+        <h4>IRGC 在霍尔木兹海峡袭击 3 艘油轮，油轮起火——美国加大封锁力度</h4>
+        <p>11/8-11/9，伊朗伊斯兰革命卫队（IRGC）称 3 艘油轮在霍尔木兹海峡「未经授权航线」上触雷起火。UAE 在阿曼湾救起 22 名船员。CBS 报道美国已组建新任务组加强对伊朗地面运输路线的封锁。Iranian Revolutionary Guards 11/9 声明称将继续对未授权船只采取行动。CNBC 报道双方均报告船只被击中，但伊朗暗示部分爆炸可能并非美军行动。Gulf News 11/9 最新报道 3 艘油轮起火。</p>
+        <div class="why">霍尔木兹海峡每天通过约 2000 万桶原油（占全球石油贸易 ~20%）。油轮连续被袭 + 美国加大封锁 = 油价短期维持高位支撑。但「蓝海啸」后市场也在消化停火预期——两种力量拉锯使油价在 $90-100 区间震荡。对 lainy：如果局势进一步升级，Brent 可能突破 $100；如果出现停火谈判实质进展，可能快速回落至 $80 区间。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / GLD 黄金（避险）</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/11/08/saudi-aramco-riyadh-building-attack.html" target="_blank">CNBC</a> · <a href="https://gulfnews.com/world/mena/uae-rescues-22-crew-in-gulf-of-oman-as-us-tightens-iran-blockade-and-tehran-lifts-missile-limits-1.500739993" target="_blank">Gulf News</a> · <a href="https://townhall.com/news/josephchalfant/2026/11/08/irgc-targets-three-oil-tankers-in-the-strait-of-hormuz-n2686101" target="_blank">Townhall</a></div>
+      </div>
+      <div class="card">
+        <span class="tag geo">美伊</span>
+        <h4>Trump 伊朗策略走到十字路口：中期选举惨败后四条路——从重新打击到谈判解决</h4>
+        <p>CBS 11/8 报道，Trump 政府对伊朗政策面临重大调整。卡塔尔、巴基斯坦等地区力量数月斡旋未能终结 2 月开始的美以对伊战争。伊朗最高国家安全委员会秘书 Mohsen Rezaei 11/5 赴莫斯科向普京递交最高领袖哈梅内伊信函，称德黑兰在美方满足七项条件前不会重开霍尔木兹海峡。同时 Trump 顾问内部分裂。</p>
+        <div class="why">「蓝海啸」后民主党控制参众两院，意味着 Trump 对伊朗的军事行动将面临更强国会监督。这可能促使外交解决——也可能导致伊朗更加强硬。对 lainy：地缘风险溢价短期不会消退，但如果出现外交突破，油价可能快速回落，新兴市场股债汇将受益。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 黄金 / VIX 恐慌指数 / 新兴市场 ETF (EEM)</div>
+        <div class="source">来源：<a href="https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/" target="_blank">CBS News</a> · <a href="https://www.hngn.com/articles/273722/20261107/trump-says-iran-decision-coming-soon-advisers-split.htm" target="_blank">HNGN</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#A9BACB10;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：地缘风险 → 原油溢价 → 油价（Brent $98.32）→ 上游油企（XOM/CVX/601857）受益；下游航运/炼油（VLCC 油轮运价）受冲击；避险资产（黄金 $4,075 / 美债）受益</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI / Fed / 中国通胀</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed</span>
+        <h4>本周前瞻：美国 10 月 CPI（11/10）+ PPI（11/13）+ Fed 官员密集讲话——12 月加息概率仍高</h4>
+        <p>本周宏观经济日历密集。11/10（周二）发布 10 月 CPI，Cleveland Fed Inflation Nowcasting 预测整体 CPI 环比 +0.24%，核心 CPI +0.21%，对应整体 CPI 同比 3.7%，核心 CPI 从 2.6% 降至 2.5%。11/13（周五）发布 PPI。Fed Bowman（副主席）和 Goolsbee（芝加哥）本周讲话。10 月非农 +16.5 万（预期 8 万），失业率 4.1%，Fed 12 月加息概率维持 67.3%（CME FedWatch）。</p>
+        <div class="why">非农大幅超预期后，市场对 Fed 12 月再加息的定价已升至 67%+。如果本周 CPI 也超预期，加息概率可能升至 80%+，对美股尤其科技股是额外压力。反过来如果 CPI 降温，可能成为 AI 股反弹的催化剂。lainy 关注：CPI 数据 → 美债收益率 → 美元 → 新兴市场资金流向（含 A 股/港股/韩股）。</div>
+        <div class="ticker">📌 关联标的：TLT 美债ETF / VIX / DXY 美元指数 / SPY / QQQ</div>
+        <div class="source">来源：<a href="https://www.byteseu.com/2506342/" target="_blank">Bytes Europe</a> · <a href="https://www.kucoin.com/news/flash/u-s-cpi-data-and-fed-officials-speeches-to-be-market-focus-next-week" target="_blank">KuCoin</a> · <a href="https://coincentral.com/the-week-ahead-cpi-coreweave-earnings-and-fed-speeches-in-focus" target="_blank">CoinCentral</a></div>
+      </div>
+      <div class="card">
+        <span class="tag macro">中国</span>
+        <h4>中国 10 月 CPI 今日发布：预测同比 ~0.8%，PPI ~5.2%——消费弱 + 工厂贵剪刀差扩大</h4>
+        <p>国家统计局 11/9（今日）发布 10 月 CPI/PPI 数据。市场预测 CPI 同比 ~0.7-0.8%（前值 0.9%），PPI 同比 ~5.2-5.3%（前值 5.0%）。CICC 预测 CPI 同比 0.9%，国庆假期推动服务价格临时回升。CPI 弱 + PPI 强 的剪刀差意味着：下游消费需求疲软，但上游原材料成本在涨（部分因 HBM/AI 算力需求推升电子材料价格）。</p>
+        <div class="why">CPI 弱 PPI 强 = 企业利润受挤压 + 消费者没钱花。对 lainy：这个数据组合对 A 股不利——企业盈利承压，但央行宽松空间也有限（PPI 通胀约束）。同时也是「中国消费分化」的证据：服务消费（+4.9%）远强于商品消费（+1%），奢侈品/高端消费承压。</div>
+        <div class="ticker">📌 关联标的：000300 沪深300 / 000016 上证50 / FXI 中国大盘ETF / MCHI 中国ETF</div>
+        <div class="source">来源：<a href="https://investinglive.com/news/china-october-inflation-preview-cpi-seen-near-0-8-ppi-above-5/" target="_blank">InvestingLive</a> · <a href="https://news.futunn.com/en/post/1003815536/weekly-outlook-china-and-us-cpis-released-one-after-another" target="_blank">Futu News</a> · <a href="https://polymarket.com/event/october-inflation-china-annual" target="_blank">Polymarket</a></div>
+      </div>
+      <div class="card">
+        <span class="tag macro">债市</span>
+        <h4>10 年期美债收益率 4.86%，2 年期 4.54%——非农推高收益率，新兴市场承压</h4>
+        <p>10 月非农超预期后，10 年期美债收益率升至 4.8574%，2 年期升至 4.51-4.54%。曲线变陡（10Y-2Y 利差 ~32bp）反映市场对长期通胀预期上升 + 短期加息预期强化。高利率环境下，新兴市场资金外流加剧——KOSPI 外资净抛 10.4 万亿韩元就是直接体现。</p>
+        <div class="why">美债收益率是全球资产定价的锚。4.85% 的 10 年期意味着无风险利率已经很高，对成长股（AI/科技）的折现率压力大。lainy 关注：如果 CPI 后收益率突破 5%，AI 股可能再来一轮杀估值。</div>
+        <div class="ticker">📌 关联标的：TLT 20+年美债ETF / IEF 7-10年美债ETF / EEM 新兴市场ETF</div>
+        <div class="source">来源：<a href="https://github.com/datnguyenquy94/news-radar/issues/1026" target="_blank">Macro Dashboard 2026-11-08</a> · <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262294759-week-ahead-october-cpi-ppi-coreweave-cisco-applied-materials-tradingkey" target="_blank">TradingKey</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#B7C0A310;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：非农强 → Fed 加息预期↑ → 美债收益率↑ → 美元↑ → 新兴市场资金外流（KOSPI -11.7%）→ AI 科技股估值承压。CPI 11/10 是下一个验证点</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 / 原油 / 铜</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag" style="background:#B8A07E18;color:#B8A07E">贵金属</span>
+        <h4>黄金 $4,075/oz（周涨 +4.5%），白银重返 $50——8 月以来最强单周</h4>
+        <p>截至 11/7 收盘，COMEX 黄金 $4,074.90/oz，周涨 +4.5%。白银周涨重返 $50 以上。驱动因素：① 蓝海啸避险情绪 ② 美元走弱预期（民主党控制两院 → Fed 独立性风险下降）③ 霍尔木兹地缘风险溢价。KITCO 11/8 数据显示现货市场持续买入。</p>
+        <div class="why">黄金在「蓝海啸 + 地缘冲突 + Fed 加息预期」三重拉锯中依然走强，说明避险需求当前是主导力量。对 lainy：如果 CPI 弱于预期，黄金可能突破 $4,200 创历史新高；如果 CPI 超预期，美元走强可能短期压金至 $3,900-4,000 区间。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / GLD SPDR黄金ETF / SLV 白银ETF / 600547 山东黄金 / 600916 中国黄金</div>
+        <div class="source">来源：<a href="https://www.kitco.com/" target="_blank">KITCO</a> · <a href="https://www.goodreturns.in/news/gold-rates-silver-rates-today-8-11-2026-live-mcx-gold-silver-price-gold-rate-24k-22k-18k-gold-prices-1545955.html" target="_blank">Goodreturns</a></div>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:#B8A07E18;color:#B8A07E">原油</span>
+        <h4>Brent $98.32 / WTI $90.83——周崩 12%+ 后霍尔木兹油轮遇袭支撑</h4>
+        <p>截至 11/7 收盘，Brent $98.32/bbl，WTI $90.83/bbl。WTI 周跌 -12.8%。BofA 维持 $80 预测但警告「新一轮供应冲击」。霍尔木兹 11/8-11/9 三艘油轮起火提供短期支撑。OPEC+ 12 月产量政策待定。WTI 年初至今 +58.5%。</p>
+        <div class="why">油价在 $90-100 区间拉锯：上方推力是霍尔木兹地缘风险，下方压力是蓝海啸停火预期 + 强美元。对 lainy：这个区间对能源股（中石油/中海油/埃克森美孚）仍有利润空间，但如果停火突破，可能快速回落至 $80。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / 600028 中国石化 / 2883.HK 中海油 / XOM 埃克森美孚 / CVX 雪佛龙</div>
+        <div class="source">来源：<a href="https://worldoilmonitor.com/wti" target="_blank">World Oil Monitor</a> · <a href="https://longforecast.com/oil-price-today-forecast-2017-2018-2019-2020-2021-brent-wti" target="_blank">Long Forecast</a></div>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:#B8A07E18;color:#B8A07E">工业金属</span>
+        <h4>铜价 $6.24/lb 走向 3 月以来最差一周——AI 股暴跌拖累，「AI 需求叙事」出现裂缝</h4>
+        <p>铜价 $6.24/lb，周跌明显，创 3 月以来最差单周表现。驱动因素：① 蓝海啸后 AI 科技股暴跌 → 市场重新评估 AI 算力扩张速度 ② 强美元压价 ③ 智利产量预期修正。但 JP Morgan 仍预测 Q4 铜价 $14,800/吨，智利 2026 年产量 -8.4% 的供应面约束仍在。</p>
+        <div class="why">铜是「AI 算力叙事」的实物锚——数据中心建设需要大量铜缆。如果 AI 股继续下跌 → 数据中心投资预期下修 → 铜价进一步承压。但供应面（智利减产）提供下方支撑。对 lainy：短期铜价与 AI 股高度联动。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / COPX 铜矿ETF / 600362 江西铜业 / FCX Freeport-McMoRan / SCCO Southern Copper</div>
+        <div class="source">来源：<a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#B8A07E10;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：贵金属（避险需求↑）→ 黄金股（600547/GLD）受益；原油（地缘溢价 vs 停火预期）→ 油企（601857/XOM）高位震荡；铜（AI 需求叙事松动）→ 铜矿股（FCX/600362）短期承压</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>AI × 油气 / 天然气</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag" style="background:#C4A77D18;color:#C4A77D">AI × 油气</span>
+        <h4>OpenAI × ADNOC × G42 签多年合作协议——「Big Oil 成为 AI 行业最大客户」</h4>
+        <p>OilPrice.com 11/8 报道，OpenAI 与 Abu Dhabi National Oil Company（ADNOC）及 G42 在 ADIPEC 能源大会签署多年合作协议。ADNOC 将部署 OpenAI 技术于油气运营。同期 Sam Altman 积极接触 UAE 投资者（Mubadala/G42），OpenAI 融资目标据报道有所缩减。Inception42（G42 子公司）与 OpenAI 的合作也包含 Mubadala 投资公司。</p>
+        <div class="why">这标志着 AI 与传统能源的深度绑定——AI 需要巨量电力（油气发电），油企需要 AI 优化运营。对 lainy：① AI 数据中心的电力需求短期内只能靠天然气/油气发电解决 ② UAE 正在成为 AI 产业链的关键节点（算力 + 资本 + 能源三位一体）。</div>
+        <div class="ticker">📌 关联标的：ADNOC（未上市）/ G42（未上市）/ NVDA / CRWV / 天然气 ETF (UNG)</div>
+        <div class="source">来源：<a href="https://oilprice.com/Energy/Energy-General/How-Big-Oil-Became-the-AI-Industrys-Favorite-Customer.html" target="_blank">OilPrice.com</a> · <a href="https://cryptobriefing.com/openai-adnoc-ai-energy-operations-partnership/" target="_blank">Crypto Briefing</a></div>
+      </div>
+      <div class="card">
+        <span class="tag" style="background:#C4A77D18;color:#C4A77D">天然气</span>
+        <h4>欧洲 TTF 天然气突破 €92/MWh——2022 年 12 月以来最高，JKM LNG $31.76 创纪录</h4>
+        <p>欧洲 TTF 天然气 11/7 突破 €92/MWh，创 2022 年 12 月以来最高。亚洲 JKM LNG $31.76（年内 +230%）。驱动因素：① Qatari LNG 受霍尔木兹封锁限制 ② 欧洲天然气储存 61% 低于政府目标 ③ Goldman Sachs 上调天然气价格预测 ④ QatarEnergy 签 20 年 Woodside LNG 供应协议。</p>
+        <div class="why">天然气是「AI 数据中心电力需求」与「地缘冲突」的交叉点。欧洲库存偏低 + 霍尔木兹封锁 = 冬季供暖 + AI 算力双重需求叠加。对 lainy：天然气股（新奥股份/广汇能源/LNG 概念）短期受益，但「蓝海啸」推动清洁能源转型加速，长期天然气可能被光伏/风电/储能替代。</div>
+        <div class="ticker">📌 关联标的：TTF 天然气 / JKM LNG / UNG 天然气ETF / 600025 华能水电 / COP31 清洁能源概念</div>
+        <div class="source">来源：<a href="https://github.com/Jason-741/Jason-projects/issues/41" target="_blank">ENR Weekly Recap</a> · <a href="https://oilprice.com/Energy/Energy-General/Wars-May-Spur-Faster-Electrification.html" target="_blank">OilPrice.com</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#C4A77D10;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：AI 数据中心电力需求 → 天然气发电（TTF €92）→ LNG 运输（JKM $31.76）→ 天然气股受益；新能源替代逻辑（光伏/风电/储能）长期受益</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>美股 / A 股 / 港股 / 韩股 · 11/7 周五收盘</small></h2>
+
+    <div class="market-block" style="border-left:4px solid #D4A64A">
+      <h4>🇺🇸 美股（11/7 周五收盘）</h4>
+      <p>S&amp;P 500 <b>7,376.86（+0.31%）</b>，Nasdaq <b>24,579.42（+1.09%）</b>——周五从周四暴跌中部分反弹。芯片股领涨：Nvidia +2.78%、AMD +11.04%、Micron +5.12%。费城半导体指数 +4.21% 但前一日已跌 -12.25%。全周 S&amp;P 500 <b>-2.7%</b>，Nasdaq <b>-5.0%</b> 创 2025 年 4 月以来最差单周。XLK 科技 ETF 从 10 月高点跌了 ~20%。S&amp;P 500 波动率指数跳升至 7 个月新高。</p>
+      <p style="margin-top:4px"><b>本周关键事件：</b>CoreWeave Q3 财报（11/10 盘后）、10 月 CPI（11/10）、PPI（11/13）、Cisco（CSCO）和 Applied Materials（AMAT）财报。</p>
+      <div class="ticker">📌 关联标的：SPY / QQQ / SMH / NVDA / AMD / MU / CRWV / CSCO / AMAT</div>
+      <div class="source">来源：<a href="https://www.cnbc.com/2026/11/08/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://talkdigitalnetwork.substack.com/p/trading-desk-notes-for-november-7" target="_blank">Trading Desk Notes</a></div>
+    </div>
+
+    <div class="market-block" style="border-left:4px solid #D4A64A">
+      <h4>🇰🇷 韩股（11/7 周五收盘）</h4>
+      <p>KOSPI <b>5,059.69（-6.02%）</b>，全周暴跌 <b>-11.71%</b>（从 5,730.74 跌至 5,059.69），创 7 个月新低。KOSDAQ 644.27（周跌 -11.06%）。11/6 盘中触发熔断器（KOSPI 最低 4,911.28）。外资净抛 <b>10.44 万亿韩元</b>（~$72 亿），其中 Samsung + SK Hynix 净抛约 7.7 万亿韩元。KRX 数据显示 2,659 家上市公司中 844 家创年内新低。</p>
+      <p style="margin-top:4px"><b>本周展望：</b>券商预测 KOSPI 区间 5,000-6,000。费城半导体指数周五反弹 +4.21% 带来喘息。CoreWeave 11/11 财报是关键验证点。</p>
+      <div class="ticker">📌 关联标的：005930.KS 三星电子 / 000660.KS SK 海力士 / CRWV CoreWeave / SOXX 费城半导体ETF</div>
+      <div class="source">来源：<a href="https://en.sedaily.com/finance/2026/11/09/kospi-hunts-for-bottom-after-11-percent-plunge-with-nov-11" target="_blank">Seoul Economic Daily</a> · <a href="https://en.fnnews.com/news/202611081001209599" target="_blank">Financial News</a></div>
+    </div>
+
+    <div class="market-block" style="border-left:4px solid #D4A64A">
+      <h4>🇭🇰 港股（11/7 周五收盘）</h4>
+      <p>恒指 <b>24,481.87（-1.27%）</b>，恒生科技 -1.83%。全周涨 +4.76%（蓝海啸前科技大涨）。周五回吐反映 AI 监管担忧蔓延至亚太。恒指期货 24,647（+0.68%），周一可能高开。中国 10 月 CPI 今日发布是本周港股关键变量。</p>
+      <div class="ticker">📌 关联标的：HSI 恒指 / 0700.HK 腾讯 / 9988.HK 阿里 / 1810.HK 小米</div>
+      <div class="source">来源：<a href="https://www.businesstoday.com.my/2026/11/08/hang-seng-surges-4-76-in-first-week-of-november-despite-tech-rout/" target="_blank">Business Today</a></div>
+    </div>
+
+    <div class="market-block" style="border-left:4px solid #D4A64A">
+      <h4>🇨🇳 A 股（11/7 周五收盘）</h4>
+      <p>上证综指周内最低 3,580，受蓝海啸冲击但相对韧性较强。今日 10 月 CPI/PPI 发布是关键变量——CPI 弱（~0.8%）+ PPI 强（~5.2%）组合对 A 股不利（企业盈利承压 + 央行宽松空间有限）。消费分化持续：服务消费 +4.9% vs 商品消费 +1%。</p>
+      <div class="ticker">📌 关联标的：000300 沪深300 / 000016 上证50 / 600519 贵州茅台 / 300750 宁德时代</div>
+      <div class="source">来源：<a href="https://www.fxstreet.com/analysis/weekly-column-strong-jobs-report-defies-rate-hikes-as-nasdaq-breaks-primary-cycle-lows-202611082149" target="_blank">FXStreet</a></div>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>中国消费分化 / 双十一</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">消费</span>
+        <h4>中国消费分化加剧：服务 +4.9% vs 商品 +1%——「双十一」能否提振商品消费存疑</h4>
+        <p>2026 年前 8 个月数据显示中国零售出现「服务强、商品弱」的结构性分化。服务零售 +4.9% YoY，商品零售仅 +1%。高青年失业率 + 房地产持续下行 + 双十一促销前置消费挤压日常消费，市场对双十一提振效果存疑。</p>
+        <div class="why">消费分化对 lainy 关注的领域有直接映射：① 奢侈品/高端消费承压（商品弱）② 餐饮/旅游消费韧性（服务强）③ 白酒等商品消费可能双十一短暂回暖但难改趋势。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 002714 牧原股份 / 9988.HK 阿里（双十一电商）</div>
+        <div class="source">来源：<a href="https://asianmarketsense.substack.com/p/asian-market-sense-data-impacting-e0a" target="_blank">Asian Market Sense</a></div>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding:8px 12px;background:#C9A0B610;border-radius:6px;font-size:12px;color:var(--text-dim);">🔗 产业链：消费分化 → 服务消费（餐饮/旅游）> 商品类（零售/白酒）→ 双十一短期提振但难改趋势</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>Chris Rock / Netflix / TV</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>Chris Rock 执导 A24 新片《Misty Green》今日登陆 Netflix——Adam Driver + Daniel Kaluuya 主演</h4>
+        <p>Chris Rock 首次与 A24 合作执导的《Misty Green》11/9 上线 Netflix。影片 10/9 在北美院线上映后仅一个月即登陆流媒体。阵容：Adam Driver、Daniel Kaluuya、Anna Kendrick。Chris Rock 自编自导自演。Touré 等评论人已在讨论影片对非裔女性角色的争议性描写。</p>
+        <div class="why">Chris Rock 从脱口秀转向 A24 导演 chair——一个值得关注的文化跨界。lainy 放松看的话，这部 A24 dramedy 比纯爆米花电影有点东西。</div>
+        <div class="source">来源：<a href="https://fandomwire.com/chris-rock-adam-driver-misty-green-netflix-release-date/" target="_blank">FandomWire</a> · <a href="https://www.pajiba.com/tv_reviews/the-week-of-november-8th-in-tv-movies-absolutely-nobody-has-chosen-the-easy-route.php" target="_blank">Pajiba</a></div>
+      </div>
+      <div class="card">
+        <span class="tag fun">电视</span>
+        <h4>周末电视速览：Love Is Blind 团聚特辑 + The Institute S2 回归 + Cupertino 新集</h4>
+        <p>周末电视看点：Nick & Vanessa Lachey 主持 Love Is Blind 团聚特辑；The Institute 回归第二季；Cupertino 新集。Netflix 本周新片还包括 Gail Daughtry and the Celebrity Sex Pass（Sony Pictures Classics）。</p>
+        <div class="why">The Institute S2 是 Stephen King 改编，适合下班后追。lainy 如果周末没来得及看可以标记。</div>
+        <div class="source">来源：<a href="https://www.tvline.com/2306909/what-to-watch-november-8-2026-tv-shows-movies-streaming/" target="_blank">TVLine</a> · <a href="https://www.whats-on-netflix.com/whats-new/new-releases-on-netflix-this-week-and-top-10-movies-series-november-8-2026/" target="_blank">What's on Netflix</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 科技/科学花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>太空太阳能 / COP31</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">科技</span>
+        <h4>太空太阳能竞赛升温：多国推进轨道光伏，目标 24 小时不间断清洁供电</h4>
+        <p>OilPrice.com 11/8 报道，多国政府和公司正在推进空间太阳能技术——在地球轨道部署光伏板，将电力以微波传输至地面。目标：提供 24 小时不间断清洁电力。技术挑战包括发射成本、传输效率和轨道部署规模。同期 COP31 推动加速全球电气化，中东和乌克兰战争推高化石燃料价格，清洁能源转型获额外动力。</p>
+        <div class="why">太空太阳能 = 「AI 算力 + 24/7 清洁电力」的终极方案。如果 2030s 突破，将彻底改变能源 → AI 的电力约束。目前还在早期实验阶段，但地缘冲突正在加速投入。</div>
+        <div class="ticker">📌 关联标的：COP31 清洁能源概念 / 航天概念股 / 光伏 ETF (TAN)</div>
+        <div class="source">来源：<a href="https://oilprice.com/Energy/Energy-General/The-Global-Race-to-Harness-Solar-Power-From-Space.html" target="_blank">OilPrice.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻 · 2026-11-09</div>
+    <div class="footer-note">信息截至 2026-11-09 08:00 HKT · 仅供参考，不构成投资建议</div>
+  </footer>
+</div>
+</body>
+</html>
