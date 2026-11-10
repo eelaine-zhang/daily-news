@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-10</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; padding-bottom: 4px !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; color: var(--text-dim); font-size: 13px; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .tldr li b { color: var(--accent); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 10 日</h1>
+    <div class="subtitle">周二 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>CPI 日：</b>美国 10 月 CPI 今日东部时间 8:30 发布——12 月加息预期 67%+，UBS 预计 12 月再加 25bp， CPI 数据将决定方向；黄金飙至 <strong>$4,141</strong>、油价则崩至 Brent <strong>$93.90</strong>。</li>
+      <li><b>美伊谈判利好：</b>卡塔尔总理将伊朗霍尔木兹海峡提案带给白宫，油价周崩 <strong>16%</strong>+ 后继续下行，美股创 7 个月最大单日涨幅；Trump 称将在中国 APEC 期间会见习普。</li>
+      <li><b>AI 变局：</b>Aletheia 将英伟达降级至「持有」，对冲基金创纪录速度抛售科技股；三星/SK Hynix 盘前涨 5%+，韩股从「蓝海啸」熔断中反弹；苹果重回全球市值第一。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你关注的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">英伟达降级</span>
+        <h4>Aletheia Capital 将英伟达评级下调至「持有」——财务承诺估达 $1650 亿，对冲基金创纪录速度抛售科技股</h4>
+        <p>11/9 Aletheia Capital 发布研报将英伟达（NVDA）评级从「买入」下调至「持有」，理由是英伟达的财务承诺（financial commitments）估计已达 <strong>$1650</strong> 亿，市场对 AI capex 回报周期的质疑在升温。同日金十数据显示，对冲基金以创纪录速度抛售全球科技股，英伟达遭降级，AI 叙事降温；半导体材料和煤炭成少数亮点。高盛同日指出欧洲股市对 AI 的敏感度约为标普 500 的三分之一。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 AI 叙事从「无脑买」到「开始算账」的信号。$1650 亿财务承诺意味着英伟达的客户（云厂）签了大量长期合同，但如果 AI 收入不及预期，这些承诺会变成负担。对 lainy 的框架：AI capex 周期正在从「狂热期」进入「验证期」——CoreWeave Q3 财报今日盘后发布就是下一个验证节点。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，被降级）/ SMH（半导体 ETF）/ 159992 半导体ETF（A 股）— AI 叙事降温，短期承压</div>
+        <div class="source">来源：<a href="https://shishixinwen.news/news/jin10/20261110070731898800" target="_blank">金十数据</a> · <a href="https://finance.biggo.com/news/a1ff1e4c-e5f7-4e1a-a9c6-ef27a006b7d1" target="_blank">BigGo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC × 内存</span>
+        <h4>TSMC 否认大规模量产英伟达 3D DRAM，但已起草方案——存储三寡头格局可能被打破</h4>
+        <p>The Information 报道 TSMC 正评估为英伟达生产先进 3D DRAM（NVHBM），TSMC 随后否认大规模量产计划，表示聚焦代工主业。但韩国媒体担忧这动摇 SK Hynix HBM 合作格局。TSMC ADR 11/9 收跌 0.06%。韩国 Daily 分析称 Nvidia 重组供应链的举动引发韩国存储芯片主导地位警报。BofA 同日报告：三星和 SK Hynix 接近「TSMC Moment」，盈利持续性是重新估值关键。YMTC 国产设备比例升至 70%，NAND 份额升至第三。</p>
+        <div class="why">🦞 <b>商业含义：</b>TSMC 进内存 = 英伟达想跳过三星/SK Hynix 直接控供应链。虽被否认，但起草方案已说明意图。对 lainy：HBM 双寡头格局（三星+SK Hynix）可能被「TSMC + 英伟达」垂直整合打破——这是中长期最大的供应链变量。BofA 的「TSMC Moment」比喻 = 当前内存股估值还没充分反映 AI 结构性需求的持久性。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电）/ 005930.KS 三星 / 000660.KS SK Hynix / NVDA（英伟达）— TSMC 扩边界，韩系内存面临新变量</div>
+        <div class="source">来源：<a href="https://finance.yahoo.com/technology/articles/taiwan-semiconductor-wants-enter-advanced-163506479.html" target="_blank">Yahoo Finance</a> · <a href="https://dataconomy.com/2026/11/09/tsmc-denies-plans-to-mass-produce-nvidias-3d-dram/" target="_blank">Dataconomy</a> · <a href="https://en.koreadaily.com/nvidia-tsmc-partnership-south-korea-memory-risk/" target="_blank">Korea Daily</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">苹果市值</span>
+        <h4>苹果重回全球市值第一，新 CEO 约翰·特努斯表态「不为 AI 而 AI」——坚持实用主义 AI 路线</h4>
+        <p>苹果重新成为全球市值最高的公司。新任 CEO 约翰·特努斯近期公开表示，苹果不会为了 AI 而推出 AI，AI 必须服务于产品体验。这一立场与 Google/Meta 的「AI-first」战略形成对比。同日，美国参议员要求谷歌允许学校禁用 AI 功能；中国率先批准世界人工智能合作组织协定。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>苹果的「实用主义 AI」路线在当前 AI 泡沫担忧升温的背景下格外引人注目。当英伟达被降级、对冲基金抛售科技股时，苹果的「不追 AI 风口」反而成为避风港逻辑。对 lainy：AI 投资正在分化——「卖铲人」（NVDA/TSMC）开始被质疑，「终端体验」派（苹果）反而受宠。这个切换值得注意。</div>
+        <div class="ticker">📌 关联标的：AAPL（苹果，重回市值第一）/ NVDA（英伟达，被降级）— AI 投资从「卖铲人」向「终端」轮动</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908u9sk.html" target="_blank">新浪科技</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂/设备 — 苹果/微软] — 当前关键变量：AI capex 回报周期从「狂热」进入「验证」，CoreWeave Q3 今日盘后验证</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>美伊谈判 · 油价 · APEC</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">美伊谈判</span>
+        <h4>卡塔尔将伊朗霍尔木兹提案带给白宫——油价继续崩跌，Brent 跌至 $93.90（-4.50%）</h4>
+        <p>11/9 卡塔尔总理将伊朗提出的霍尔木兹海峡通行方案提交白宫。Brent 原油跌至 <strong>$93.90</strong>（-4.50%），WTI 跌至 <strong>$86.70</strong>（-4.55%），延续上周 <strong>16%+</strong> 的周跌幅。OilPrice 报道称 Brent 一度跌至 $94，较上周高点回落超 $14。美伊外交进展降低了地缘风险溢价。同时伊拉克与美国达成协议通过霍尔木兹增加石油出口。中国削减 LNG 进口（廉价国产气替代），进一步缓解亚洲冬季供应压力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价从 $108 → $94 仅用一周，地缘溢价正在快速消退。如果霍尔木兹协议达成，Brent 可能回到 $80s——这将大幅缓解通胀压力，也会让 Fed 12 月加息的紧迫性下降。但伊朗军方的「7 个条件」仍未正式回应，谈判随时可能破裂。对 lainy：油价下跌 = 通胀预期降温 = 美股 risk-on = 这就是为什么昨晚美股创 7 个月最大单日涨幅。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / XLE（能源 ETF，油价跌利空）/ SPY（美股，油价跌利多）</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/Oil-Sinks-to-94-as-Irans-8-Billion-Hormuz-Deal-Heads-to-Trump.html" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/China-Cuts-LNG-Imports-as-Cheap-Domestic-Gas-Undercuts-Global-Prices.html" target="_blank">OilPrice - China LNG</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">APEC · 三方峰会</span>
+        <h4>Trump 称将在中国 APEC 期间会见习近平和普京——乌克兰和平协议「接近达成」</h4>
+        <p>Trump 11/9 表示预计将在下周中国举行的 APEC 峰会期间与习近平和普京会面。Trump 称乌克兰和平协议「接近达成」，但乌克兰会「形态略有不同」。普京提议用三方会议解决冲突。中国外交部未否认三方会面可能性，称「正与相关各方沟通」。美俄乌谈判代表同时在阿布扎比进行谈判。G7 外长 11/9 在巴黎开会讨论乌克兰战争、伊朗冲突和国际航运安全。</p>
+        <div class="why">🦞 <b>市场含义：</b>APEC 三方会面 = 地缘风险降温的最大催化剂。如果乌克兰和平协议真的接近达成，油价地缘溢价将进一步消退，欧洲资产（DAX +1.29%）已经反应。但 Trump 的「lame duck」处境（中期选举后民主党控制国会）削弱了他的谈判筹码——伊朗战争不受欢迎但国会有否决权。对 lainy：和平协议 = 欧洲复苏 + 油价下行 + risk-on，利好港股（恒指受益）。</div>
+        <div class="ticker">📌 关联标的：SPY（美股）/ EEM（新兴市场 ETF）/ 000001 上证指数（地缘降温利好）— 和平协议若达成，risk-off → risk-on 切换</div>
+        <div class="source">来源：<a href="https://www.thehindu.com/news/international/us-china-russia-leaders-to-meet-next-week-says-trump-beijing-says-in-communication-with-parties/article71682111.ece" target="_blank">The Hindu</a> · <a href="https://www.geopoliticalmonitor.com/trump-enters-his-lame-duck-years-geopolitics-weekly/" target="_blank">Geopolitical Monitor</a> · <a href="https://www.ir-ia.com/news/g7-foreign-ministers-meet-in-paris-to-discuss-ukraine-war-iran-conflict-and-global-security-challenges/" target="_blank">IRIA News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌克兰</span>
+        <h4>俄罗斯袭击乌克兰电网——阿布扎比和谈前夕升级打击</h4>
+        <p>俄罗斯在阿布扎比和谈前夕对乌克兰电网发动大规模袭击。Energoatom 称这是 2026 年以来第 16 次全站断电事件。北欧电价同时飙升——水电储备枯竭 + 欧洲天然气高价叠加，Nordic 电力面临冬季剧烈波动风险。欧洲电价跳涨至 2022 年以来高位。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>俄罗斯在和谈前夕升级打击 = 谈判前的「筹码战」——通过制造军事压力来争取谈判优势。对 lainy：欧洲电价飙升 = 欧洲工业股利润承压，但利好 LNG/可再生能源板块。如果和谈取得进展，这些地缘溢价会快速消退。</div>
+        <div class="ticker">📌 关联标的：European TTF 天然气 / NG=F（NYMEX 天然气）/ 新奥股份（603889）/ 广汇能源（600256）— 欧洲电价飙升利好 LNG 贸易商</div>
+        <div class="source">来源：<a href="https://oilprice.com/Geopolitics/Europe/Russia-Targets-Ukraines-Power-Grid-Ahead-of-Crucial-Abu-Dhabi-Peace-Talks.html" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/Nordic-Power-Prices-Could-Soar-This-Winter-as-Hydropower-Reserves-Plunge.html" target="_blank">OilPrice - Nordic</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [伊朗/俄罗斯能源] → 中游 [霍尔木兹/里海航运] → 下游 [全球油气/LNG 贸易] — 当前受益环节：下游（油价跌 → 通胀降温 → risk-on），受损环节：上游（地缘溢价消退）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>CPI 日 · Fed 加息预期 · 黄金</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">CPI 日</span>
+        <h4>美国 10 月 CPI 今日东部时间 8:30 发布——12 月加息 25bp 概率 67%+，UBS 预计 12 月和 3 月各加一次</h4>
+        <p>今日核心宏事件：美国 10 月 CPI 数据将于东部时间 8:30 AM（香港时间 21:30）发布。市场共识预期环比 +0.2%，核心 CPI 环比 +0.3%。CNBC 报道，多家机构预期 Fed 12 月再加息 25bp，UBS 预计 12 月和 3 月各加一次。Fed 官员 Lisa Cook 和 Beth Hammack 在上次议息会议中投了异议票，主张立即加息。10 年期美债收益率约 <strong>4.87%</strong>，较 10 月初的 5.36%（2002 年以来高位）回落。FXStreet 指出，5 年 5 年远期通胀预期降至 <strong>2.17%</strong>。Fed 官员正在密切关注需求过热信号。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是 12 月 FOMC 前最后一个关键通胀数据。三种情景：① CPI 环比 ≤ 0.2% → 加息预期降温 → risk-on；② 环比 0.3% → 维持 67% 加息概率 → 震荡；③ 环比 ≥ 0.4% → 加息概率飙升至 80%+ → 科技股再跌。对 lainy：油价下跌已经降低了 headline CPI 的上行风险，但 core CPI（服务/房租）才是 Fed 真正关注的——如果 core 仍粘在 0.3%+，12 月加息几乎确定。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（美股）/ 513130 港股通科技 ETF / GLD 黄金 — CPI 决定 12 月加息路径</div>
+        <div class="source">来源：<a href="https://www.cnbc.com/2026/11/09/us-treasurys-bonds-yields.html" target="_blank">CNBC</a> · <a href="https://www.tradingkey.com/analysis/economic/indicators/262295678-us-october-cpi-preview-inflation-slowdown-us-stocks-dollar-gold-reaction-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.ubs.com/us/en/wealth-management/insights/market-news/article.3983955.html" target="_blank">UBS</a> · <a href="https://www.fxstreet.com/analysis/us-cpi-preview-moderation-on-the-horizon-but-underlying-pressures-linger-202611092231" target="_blank">FXStreet</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">黄金</span>
+        <h4>黄金飙至 $4,141/oz（+1.74%）——油价崩 + 地缘不确定 + CPI 前避险需求三重支撑</h4>
+        <p>黄金 11/9 收于 <strong>$4,141.37</strong>（+1.74%），周涨 <strong>4.5%</strong>，创 8 月以来最强单周涨幅。Discovery Alert 报道金价一度触及 $4,129.69。黄金/白银比价 78.7。驱动因素：① 油价崩跌引发通缩担忧 → 实际利率下降预期推升金价；② APEC 前地缘不确定性；③ CPI 前避险买盘。Mitrade 周报：黄金涨 4.51% 至 $4,074.90，Brent 同期崩 16.42% 至 $98.32——两个通胀对冲品，截然相反的答案。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $4,000+ 高位继续冲高，核心逻辑没变：地缘不确定 + 央行持续购金 + Fed 降息预期（即使短期加息，市场已定价远期降息）。但 CPI 如果超预期，短期可能回调到 $4,000 附近——那是加仓机会。对 lainy：黄金是 2026 年最稳的配置之一，央行购金是结构性需求。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF（A 股）/ GLD — 央行持续购金，中长期看涨</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://discoveryalert.com/news/gold-price-fed-hike-odds-cpi-november-2026/" target="_blank">Discovery Alert</a> · <a href="https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105" target="_blank">Mitrade</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">信托监管</span>
+        <h4>上海国家会计学院「自然人税务合规元年」直播——离岸信托/限售股/增值税代扣全面收紧</h4>
+        <p>上海国家会计学院副教授葛玉裕在搜狐「财 8 点」直播中提出「拥抱自然人税务合规元年」主题。核心观点：2026 年税务合规焦点从企业转向自然人，离岸信托个税新政（7/24）、限售股减持税务、增值税代扣代缴等政策密集落地。10 月非标信托集体「跳水」，吉林信托等区域信托以「圈层沙龙」模式切入企业家财富传承市场。21 经济网同日报道《资产管理信托管理办法》实施后信托行业补齐投研、风控能力短板，回归大资管。</p>
+        <div class="why">🦞 <b>读给你听：</b>「自然人税务合规元年」这个定性很重要——监管层正在从「管企业」转向「管人」。离岸信托 21 号公告的执行正在深入具体细节——12366 平台 10/19 发布 6 条解读，明确融资贷款利息不可抵扣、关联方转移损失不可抵扣。对 lainy 作为金融从业者：信托行业正在从「另类融资通道」回归到「大资管」体系，《办法》实施后信托公司必须补齐投研、风控、运营能力短板，跟其他持牌机构同台竞争。</div>
+        <div class="ticker">📌 关联标的：信托概念股 / 家族办公室概念 — 自然人税务合规元年，信托行业回归大资管</div>
+        <div class="source">来源：<a href="https://www.sohu.com/a/1099094695_121123909" target="_blank">搜狐</a> · <a href="https://www.21jingji.com/article/20261109/herald/18ee1438efdec91b7f0235706413dbb2.html" target="_blank">21 经济网</a> · <a href="https://www.kctax.co/china-offshore-tax-clarification/" target="_blank">KCTax</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：今日 CPI 决定 12 月加息路径，油价下跌已降低 headline 通胀上行风险</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金/银/铜/油 — 价格到股票映射</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $4,141（+1.74%）/ 白银重返 $50 — 金银比 78.7，央行购金持续</h4>
+        <p>黄金收 <strong>$4,141.37</strong>（+1.74%），周涨 <strong>4.51%</strong>。白银重返 $50 区间，金银比 78.7。驱动：油价崩跌→通缩预期推升金价 + 地缘不确定 + CPI 前避险。Mitrade 周报总结：黄金涨 4.51%、Brent 崩 16.42%、铜跌 3.72%——3 个商品市场 3 个 regime。</p>
+        <div class="why">🦞 <b>映射：</b>金价涨 → 山东黄金（600547）/紫金矿业（601899）/SPDR GLD 受益；银价涨 → 盛达资源（000603）/SLV 受益。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金 ETF / 600547 山东黄金 / 601899 紫金矿业 / SLV 白银 ETF</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105" target="_blank">Mitrade</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>铜价 $6.24/lb 走向 3 月以来最差一周——AI 股暴跌拖累，「AI 需求叙事」出现裂缝</h4>
+        <p>铜价跌至 <strong>$6.24/lb</strong>，周跌 <strong>3.72%</strong>，创 3 月以来最差单周。驱动：AI 科技股暴跌（对冲基金创纪录抛售）→ AI 数据中心铜需求叙事被质疑。铁矿石和铀价上涨。Mitrade 指出 AI 监管恐慌拖累工业金属。</p>
+        <div class="why">🦞 <b>映射：</b>铜价跌 → 江西铜业（600362）/Freeport（FCX）/Southern Copper（SCCO）承压；但铜价跌 → 电缆/家电原材料成本下降，利好下游。</p>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / FCX Freeport / SCCO Southern Copper / COPX 铜矿 ETF</div>
+        <div class="source">来源：<a href="https://www.mitrade.com/insights/commodity-analysis/weekly/weekly-report-commodity-20261109J1105" target="_blank">Mitrade</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $93.90（-4.50%）/ WTI $86.70（-4.55%）—— 霍尔木兹外交进展 + 中国削减 LNG 进口</h4>
+        <p>Brent 跌至 <strong>$93.90</strong>（-4.50%），WTI 跌至 <strong>$86.70</strong>（-4.55%），延续上周 16%+ 的崩跌。Finobird 报道 Brent 曾在 $106.14 收盘，后续持续下跌。驱动：卡塔尔将伊朗霍尔木兹提案带给白宫 + 伊拉克与美国达成通过霍尔木兹增加出口协议 + 中国削减 LNG 进口（廉价国产气替代）。LiteFinance 预测 11 月 WTI 可能交易在 $98-$110 区间。</p>
+        <div class="why">🦞 <b>映射：</b>油价跌 → 中石化（600028）/中石油（601857）短期承压；但油价跌 → 航空/物流/化工受益于燃料成本下降。</p>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 — 油价跌利空上游，利好下游</div>
+        <div class="source">来源：<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics - WTI</a> · <a href="https://www.litefinance.org/blog/analysts-opinions/oil-price-prediction-forecast/daily-and-weekly/" target="_blank">LiteFinance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 — 紫金/Freeport/山东黄金] → 中游 [冶炼/加工] → 下游 [电缆/家电/航空] — 当前受益环节：贵金属（央行购金），受损环节：工业金属（AI 需求叙事受质疑）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油/天然气/电力/新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">天然气</span>
+        <h4>全球 LNG 市场面临极端不确定的冬天——价格超 $30/MMBtu，欧洲库存偏低</h4>
+        <p>OilPrice 报道 LNG 价格已超 <strong>$30/MMBtu</strong>，关键市场天然气库存明显偏低。欧洲 TTF 天然气突破 €92/MWh（2022 年 12 月以来最高）。中国削减 LNG 进口（廉价国产气替代），部分缓解欧洲和亚洲冬季供应压力。QatarEnergy 此前签署 20 年 Woodside LNG 供应协议。BP 完成 $60 亿 Castrol 65% 股权出售给 Stonepeak。</p>
+        <div class="why">🦞 <b>映射：</b>天然气高价 → 新奥股份（603889）/广汇能源（600256）LNG 贸易商受益；但欧洲工业股（化工/钢铁）因气价高企利润承压。</div>
+        <div class="ticker">📌 关联标的：TTF 天然气 / NYMEX 天然气 / 603889 新奥股份 / 600256 广汇能源 / LNG 钱尼尔能源</div>
+        <div class="source">来源：<a href="https://oilprice.com/Energy/Energy-General/Global-LNG-Markets-Face-a-Winter-of-Extreme-Uncertainty.html" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/China-Cuts-LNG-Imports-as-Cheap-Domestic-Gas-Undercuts-Global-Prices.html" target="_blank">OilPrice - China LNG</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">电力</span>
+        <h4>欧洲电价跳涨至 2022 年高位——风电/光伏出力不足 + 北欧水电储备枯竭</h4>
+        <p>欧洲电价跳涨至 2022 年高位，原因：风电和光伏出力不足（weather risk）+ 北欧水电储备枯竭 + 欧洲天然气高价叠加。东南亚 LNG-to-power 项目超半数被取消或暂停（$678 亿总投资）。俄罗斯同时打击乌克兰电网， Energoatom 称 2026 年以来第 16 次全站断电。</p>
+        <div class="why">🦞 <b>映射：</b>欧洲电价高企 → 欧洲光伏/风电运营商受益；但制造端（化工/钢铁）受损。</div>
+        <div class="ticker">📌 关联标的：欧洲 TTF / 隆基绿能（601012）/ 阳光电源（300274）— 欧洲电价高位利好新能源运营商</div>
+        <div class="source">来源：<a href="https://oilprice.com/Latest-Energy-News/World-News/Europes-Power-Prices-Jump-to-2022-High-as-Wind-and-Solar-Falter.html" target="_blank">OilPrice</a> · <a href="https://oilprice.com/Latest-Energy-News/World-News/Nordic-Power-Prices-Could-Soar-This-Winter-as-Hydropower-Reserves-Plunge.html" target="_blank">OilPrice - Nordic</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气/LNG 供应] → 中游 [电力批发市场] → 下游 [工业/居民用电] — 当前受益环节：LNG 贸易商（高价），受损环节：欧洲工业（高电价）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 · 港股 · 美股 · 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股（11/9 周一收盘）—— 创 7 个月最大单日涨幅</h4>
+      <p>美股三大指数集体收涨，科技股反弹 + 油价崩跌带动。Bloomberg 报道为 7 个月来最佳单日表现。道琼斯指数期货 +1.32%，标普 500 +0.94%，纳斯达克 100 +0.99%。FNArena 报道 WTI -6.1% 至 $85.7/bbl。Aletheia 将英伟达降级至「持有」拖累半导体板块。恒生 ADR 收报 24,409.91（较香港收市 -0.16%），汇丰 ADR +3.06%。欧洲三大股指全线上涨：FTSE 100 +0.86%，CAC 40 +1.04%，DAX 30 +1.29%。<strong>重点异动：</strong>英伟达被降级；苹果重回全球市值第一。<strong>关联标的：</strong>SPY / QQQ / NVDA / AAPL</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股（11/9 周一收盘）—— KOSPI 从「蓝海啸」熔断中反弹</h4>
+      <p>KOSPI 从上周五 -6.02% 的熔断崩跌中反弹，盘中涨至 <strong>5,145.81</strong>（+1.61%），最终勉强守 5,000 点。Samsung Electronics 涨 <strong>3.29%</strong> 至 194,800 韩，SK Hynix 涨 <strong>4.51%</strong> 至 1,182,000 韩。机构净买入 500 亿韩，外资连续第 7 日净卖出约 <strong>$32</strong> 亿。KOSDAQ 涨 1.46% 至 653.69。11/10 盘前 Samsung 和 SK Hynix 涨超 <strong>5%</strong>（美股芯片股反弹带动）。<strong>关联标的：</strong>005930.KS 三星 / 000660.KS SK Hynix</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股（11/9 周一收盘）—— 恒指 24,448.95（-0.13%），科技股承压</h4>
+      <p>恒指收报 <strong>24,448.95</strong>（-0.13%），恒生科技指数 -0.92%。个股：美团 -6.53%，小米 -0.92%，腾讯 -0.33%。存储概念股高开低走：兆易创新 -1.34%，澜起科技 -2.21%。南向资金净买入 <strong>18.56</strong> 亿。中信建投 SFISF 完成首批股票买入。恒指 ADR 较香港收市再跌 39 点（-0.16%），今日开盘可能继续承压。<strong>关联标的：</strong>00700 腾讯 / 03690 美团 / 01810 小米</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股（11/10 周一收盘/周二开盘）</h4>
+      <p>A 股周一收盘小幅上涨，跟涨区域指数。半导体材料、煤炭成少数亮点。对冲基金创纪录抛售科技股， AI 叙事降温背景下半导体板块承压。存储概念股高开低走。今日关注 CPI 数据对 A 股的间接影响（油价跌 → 通胀预期降温 → 货币政策空间扩大）。<strong>关联标的：</strong>512760 半导体ETF / 518880 黄金 ETF</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>双11 预热 · 信托财富管理</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">双 11</span>
+        <h4>双 11 预热今晚 0 点正式开启——各平台促销已启动</h4>
+        <p>2026 年双 11 购物节今晚（11/11 00:00）正式开启，各平台预热活动已启动。Sassy Hong Kong 报道 11/10-11/11 促销活动。Singpromos 列出 KFC、Pizza Hut、Crocs、Nike、Sephora、Klook、Trip.com 等品牌参与。Joybuy 年度双 11 活动也已启动。中国消费分化加剧（上周报过：服务 +4.9% vs 商品 +1%），双 11 能否提振商品消费存疑。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>双 11 已从「全民狂欢」变成「各平台内卷」——今年最大看点是 AI 是否改变购物体验。对 lainy：消费数据后续可持续跟踪，双 11 成交额是 4 季度消费数据的重要参考。</div>
+        <div class="ticker">📌 关联标的：BABA 阿里巴巴 / JD 京东 / PDD 拼多多 / 09988.HK 百度 — 双 11 成交额是 Q4 消费数据参考</div>
+        <div class="source">来源：<a href="https://www.sassyhongkong.com/singles-day-sales-promotion-deals-hong-kong-whats-on/" target="_blank">Sassy Hong Kong</a> · <a href="https://singpromos.com/warehouse-sales/singapore-11-11-singles-day-2026-best-sales-deals-promotions-online-and-in-store-309456" target="_blank">Singpromos</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">信托消费</span>
+        <h4>区域信托以「圈层沙龙」模式切入企业家财富传承市场——10 月非标信托集体「跳水」</h4>
+        <p>搜狐报道，10 月非标信托集体「跳水」，区域信托公司正以「圈层沙龙」模式切入企业家客群财富传承市场。吉林信托财富管理中心联合长春市青年企业家协会举办信托财富管理沙龙，围绕家企资产风险隔离、家族信托定向传承、「吉信·家和」账户整合教育金与婚姻财产保护、慈善信托四大主题推介。地方监管局到会督导，显示新规落实带有「属地推进」色彩。</p>
+        <div class="why">🦞 <b>读给你听：</b>非标信托 10 月「跳水」说明旧模式（非标融资通道）在《办法》实施后加速出清，区域信托转向「财富管理沙龙」式高净值获客。这个转型方向是对的——从「影子银行」走向「真信托」。对 lainy：家族信托/财富传承市场正在从「产品销售」走向「专业咨询」，区域信托在拼价格也在拼服务深度。</div>
+        <div class="ticker">📌 关联标的：信托概念股 / 家族办公室概念 — 非标信托出清，区域信托转向财富管理</div>
+        <div class="source">来源：<a href="https://www.sohu.com/a/1099147287_121123922" target="_blank">搜狐</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌方/供货商] → 中游 [平台 — 淘宝/京东/拼多多] → 下游 [消费者] — 当前关键变量：双 11 能否提振商品消费（服务 vs 商品分化加剧）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>电影 · 电视 · 体育</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">电影</span>
+        <h4>Brad Pitt《Heart of the Beast》11/10 上线数字平台——番茄网新鲜度 95%</h4>
+        <p>Brad Pitt 和 J.K. Simmons 主演的生存惊悚片《Heart of the Beast》11/10 上线数字平台，Rotten Tomatoes 新鲜度 <strong>95%</strong>。导演 David Ayer（曾执导《Fury》《Suicide Squad》）。AP 同日报道 11 月流媒体上新：U2 新专辑、Chris Rock 执导 A24 新片《Misty Green》已在 Netflix 上线。</p>
+        <div class="why">🦞 <b>轻松一下：</b>Brad Pitt 95% 新鲜度 + David Ayer 硬核生存题材，周末可以看看。另外 Chris Rock 执导的《Misty Green》也在 Netflix 上线了——上周报过，Adam Driver + Daniel Kaluuya 主演。</div>
+        <div class="source">来源：<a href="https://www.aceshowbiz.com/news/view/00263129.html" target="_blank">AceShowBiz</a> · <a href="https://apnews.com/article/november-2026-streaming-tv-music-movies-465085508c38bfcc487ed247d4b987f5" target="_blank">AP News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">电视</span>
+        <h4>《Dancing With the Stars》2026 舞蹈对决 11/10 上演——粉丝吐槽赛制不公</h4>
+        <p>《Dancing With the Stars》2026 季将于 11/10 上演舞蹈对决环节争夺加分，粉丝对赛制安排表达不满。英国《I'm a Celebrity》2026 季也将于 11/16 开播，预期阵容包括喜剧演员 Leigh Francis、模特 Leomie Anderson、YouTube 创作者 Sharky 和单口喜剧演员 Jack Skipper。BBC Sports Personality of the Year 2026 投票 11/10 开启。</p>
+        <div class="source">来源：<a href="https://www.tvinsider.com/1302392/dancing-with-the-stars-2026-dance-off-pairings-fan-reaction/" target="_blank">TV Insider</a> · <a href="https://www.independent.co.uk/bulletin/culture/im-a-celeb-start-date-line-up-b3081965.html" target="_blank">The Independent</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技/科学花边 <small>中国空间站刷新纪录</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>中国空间站超冷原子实验：铷原子云冷却至 9.7 皮开尔文——人类已知最冷人造物质</h4>
+        <p>中国科学院 11/6 宣布，中国空间站梦天1号超冷原子物理实验柜成功将铷原子云冷却至 <strong>9.7 皮开尔文</strong>（千亿分之一开尔文），比室温低 14 个数量级，可稳定观测 7 秒，刷新此前国际团队 38 皮开尔文的纪录。这是量子模拟研究的重要进展——在极低温下，原子行为更接近量子力学预测，有助于理解超导、超流等量子现象。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>9.7 皮开尔文 = 比绝对零度高不到 0.01 度。这个实验柜在中国空间站梦天舱内，利用微重力环境实现更低温度——地面上做不到。对 lainy：量子计算/量子模拟是下一个前沿，这个实验是中国在量子科技领域的标志性进展。</div>
+        <div class="source">来源：<a href="https://k.sina.com.cn/article_7857201856_1d45362c001908u9d4.html" target="_blank">新浪科学/华西都市报</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;">
+    <a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a>
+  </div>
+
+  <footer>
+    🦞 龙虾老师 · 每日不错过新闻 · 为 lainy 量身定制<br>
+    <div class="footer-note">数据截至 2026-11-10 08:00 HKT · 信源见每条新闻下方链接</div>
+  </footer>
+</div>
+</body>
+</html>
