@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-15</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-bottom: 4px; border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; font-style: normal; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 15 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>WSJ 爆料黄仁勋「循环融资」：</b>前英伟达 CEO 被曝曾用自筹资金补贴 AI 初创公司购买英伟达 GPU，以吸收 TSMC 过剩硅片和内存——「GPU 短缺」叙事被打破，NVDA 周五收 $162.85，11/17 财报前市场紧张。</li>
+      <li><b>APEC 历史性三方峰会确认：</b>Trump-Xi-Putin 将于 11/18-19 深圳 APEC 期间举行史无前例的三方会晤，白宫和克里姆林宫同时确认，AI 与芯片安全列入议程。</li>
+      <li><b>霍尔木兹危机升级：</b>伊朗海军宣布一艘油轮在霍尔木兹海峡东部触雷起火，联合国安理会紧急审议——伊朗「几乎封锁」海峡，全球油价高位震荡。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>英伟达财报周 + 黄仁勋事件持续发酵</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">WSJ 调查</span>
+        <h4>WSJ 爆料：黄仁勋曾用「循环融资」补贴 AI 初创公司吸收过剩硅片——「GPU 短缺」叙事被打破</h4>
+        <p>据 WSJ 调查报道（11/13-14 披露），前英伟达 CEO 黄仁勋被曝曾通过<strong>循环融资</strong>方式资助 AI 初创公司和小型云厂商，使其购买英伟达 GPU 建设数据中心——本质是用自筹资金创造 GPU 需求，以吸收 TSMC 过剩硅片和内存产能。报道称 NVIDIA 面临 TSMC 硅片和内存「雪崩式」过剩，唯一遏制供过于求的方式就是资助下游买家。此前有报道称相关担保承诺规模达 <strong>$5300 亿</strong>，但未经独立证实。批评者将此模式称为「循环融资」，引发市场对 AI 需求真实性的质疑。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是黄仁勋事件以来最具冲击力的爆料。如果「循环融资」坐实，意味着英伟达超常规增长的收入中有一部分是「自导自演」的需求——不是纯市场驱动。对 lainy 的金融视角：① 11/17 财报的核心看点不是营收数字，而是数据中心客户的真实构成——有多少是独立需求、多少是「关联方」？② 这个事件正在重塑整个 AI 芯片投资叙事——从「需求无限」到「需求可能被人为放大」。③ Needham 和 DA Davidson 同时下调目标价但仍维持买入评级，说明市场仍在消化影响。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，11/17 财报前极端波动）/ TSM（台积电，产能过剩担忧）/ AMD + AVGO（竞争受益逻辑强化）— 短期情绪面承压，财报后定方向</div>
+        <div class="source">来源：<a href="https://wccftech.com/jensen-huang-financed-ai-startups-absorb-excess-silicon/" target="_blank">Wccftech / WSJ 调查</a> · <a href="https://dev.to/frankchu/530b-in-guarantees-nvidia-funded-its-own-demand-4g89" target="_blank">Dev.to 分析</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/buy-nvidia-stock-nov-17-110502271.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">英伟达财报前瞻</span>
+        <h4>英伟达 Q3 财报 11/17 发布——Colette Kress 首次以临时 CEO 身份亮相，Street 预期 EPS $2.47 / 营收 $1092 亿</h4>
+        <p>英伟达将于周二（11/17）美股盘后发布 FY2027 Q3 财报，这是黄仁勋辞职事件后的首份财报，也是临时 CEO Colette Kress 的首次亮相。分析师预期：营收 <strong>$1092 亿</strong>（YoY +91%），EPS <strong>$2.47</strong>（YoY +90%），公司自身指引营收 <strong>$1080 亿</strong>（±2%）。期权市场定价财报后约 <strong>7-10%</strong> 波动。当前 NVDA 周五收盘 $162.85，P/E 20.59，股息率 0.32%。本周连续 6 周下跌，创 2012 年以来最长连跌纪录，市值已跌破 $4 万亿。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这可能是 2026 年最重要的一份财报。三个核心问题：① 营收能否超指引？（过去 8 个季度连续 beat）② Kress 能否稳住市场信心？（领导层过渡期投资者极度敏感）③ 数据中心增长是否出现减速信号？（循环融资报道后市场最关心的问题）如果 beat 且 Kress 给出稳健指引，NVDA 有望反弹；如果 miss 或指引偏弱，连跌可能加速。</div>
+        <div class="ticker">📌 关联标的：NVDA（核心）/ SMH（半导体 ETF）/ 000660.KS SK Hynix / 005930.KS 三星（HBM 供应商联动）— 财报结果将决定半导体板块短期方向</div>
+        <div class="source">来源：<a href="https://financefeeds.com/nvidia-nvda-stock-162-85-saturday-week-ahead-q3-results-17-november-first-under-kress-bull-187-bear-149/" target="_blank">FinanceFeeds</a> · <a href="https://www.fool.com/investing/2026/11/14/should-you-buy-nvidia-stock-before-nov-17/" target="_blank">Motley Fool</a> · <a href="https://fourweekmba.com/ai-nvidia-earnings-nov-17-108b-guide-89-above-a-year-ago/" target="_blank">FourWeekMBA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国 × HBM</span>
+        <h4>中国敦促韩国向其出售先进 HBM 芯片——黄仁勋事件后全球 AI 供应链格局可能重组</h4>
+        <p>据首尔经济日报（Seoul Economic Daily）11/14 报道，黄仁勋事件后中国正在敦促韩国芯片制造商向中国市场出售先进 HBM（高带宽内存）芯片。英伟达的出口管制审查加剧了市场不确定性，三星和 SK Hynix 可能需要重新评估 HBM 的销售去向。TechCrunch 同日报道，亚洲多国政府对黄仁勋事件做出反应——部分确认芯片供应承诺，部分在评估对本地项目的影响。</p>
+        <div class="why">🦞 <b>市场含义：</b>黄仁勋事件正在产生二阶效应——如果英伟达对华出口受限加严，三星和 SK Hynix 可能成为中国市场的替代供应商，这对韩国存储双雄是机遇也是地缘风险。韩国证券机构（Hana Securities、Mirae Asset）判断：即使订单从英伟达转向 AMD 或定制芯片，HBM 需求本身不太可能大幅下滑。对 lainy：关注 11/18-19 APEC 期间中美芯片谈判信号——深圳峰会可能涉及这个议题。</div>
+        <div class="ticker">📌 关联标的：000660.KS（SK Hynix）/ 005930.KS（三星电子）/ AMD（替代受益）/ 159992 半导体ETF（A 股国产替代情绪）— HBM 格局可能重塑</div>
+        <div class="source">来源：<a href="https://en.sedaily.com/world/2026/11/14/china-urges-korea-to-sell-advanced-memory-chips-to-beijing" target="_blank">Seoul Economic Daily</a> · <a href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" target="_blank">TechCrunch</a> · <a href="https://en.sedaily.com/market/2026/11/15/nvidia-ceos-exit-clouds-kospi-outlook-as-earnings-loom" target="_blank">Seoul Economic Daily (KOSPI)</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">参议院调查</span>
+        <h4>参议院银行委员会传召 Lutnick 和黄仁勋就 AI 芯片出口进行调查——国会立法加码</h4>
+        <p>据 CASRAI 报道，参议院银行委员会领导层已启动 AI 芯片出口调查，传召商务部长 Howard Lutnick 和黄仁勋作证。同时据 Fortune 报道，三项涉及 AI 芯片和先进半导体设备出口管制的新法案已附加到等待国会通过的《国防授权法案》中。众议院议长 Johnson 称「共识正在形成」。此前 Fortune 的长篇报道将黄仁勋事件与芯片出口管制立法推进直接关联。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是黄仁勋事件的「政策溢出」——国会正在利用事件推动更严格的出口管制。4 项法案待表决意味着美国对华芯片出口可能进一步收紧。对 lainy 的产业链框架：① 出口管制加严 → 英伟达在华收入下降 → AMD/国产替代受益；② 三星和 SK Hynix 可能需要在美国和中国之间选边——这关系到 HBM 供应链的全球分配。</div>
+        <div class="ticker">📌 关联标的：NVDA（出口管制直接风险）/ AMD + AVGO（替代受益）/ 688256 寒武纪（国产替代）— 立法推进中，不确定性持续</div>
+        <div class="source">来源：<a href="https://casrai.org/news/senate-banking-lutrick-huang-nvidia-chip-export-probe-2026" target="_blank">CASRAI</a> · <a href="https://fortune.com/2026/11/14/jensen-huang-nvidia-ai-5-7-trillion-downfall/" target="_blank">Fortune</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AMD/AVGO] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受损环节：下游 NVDA（循环融资曝光 + 11/17 财报前不确定）；潜在受益：AMD/AVGO（订单分散逻辑）+ 三星/SK Hynix（中国替代需求）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>APEC 历史三方 + 霍尔木兹升级 + 乌俄战场</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">APEC 三方峰会</span>
+        <h4>Trump-Xi-Putin 深圳 APEC 三方会晤获正式确认——史无前例的大国领导人会晤 11/18-19 举行</h4>
+        <p>白宫和克里姆林宫同时确认，特朗普将在中国深圳 APEC 峰会期间与习近平和普京举行史无前例的三方联合会晤。白宫发言人 Olivia Wales 表示，「这次历史性会晤将讨论地区安全、经济合作和人工智能治理」。BBC 和 Al Jazeera 报道称这是「首次三方峰会」，AP 称其为「前所未有的会晤」。此前 NBC 报道特朗普将于下周前往深圳。APEC 峰会本身 11/18-19 在深圳举办，AI 与芯片安全已列入议程。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这可能是 2026 年最重要的地缘政治事件。美中俄三国领导人同时出席 APEC 且举行三方会晤——冷战以来首次。对 lainy 关注的领域：① AI 芯片出口管制可能在三方谈判中被提及——如果中美达成某种「技术隔离」框架，将直接影响英伟达/三星/Hynix 的市场分配；② 乌克兰和平协议可能成为 Trump 的外交筹码；③ 深圳作为举办地本身就是信号——中国展示技术实力。</div>
+        <div class="ticker">📌 关联标的：SPY（美股，地缘风险降温利好）/ NVDA + TSM（AI 治理谈判直接相关）/ 513130 港股通科技ETF — 三方会晤结果将定短期方向</div>
+        <div class="source">来源：<a href="https://apnews.com/article/trump-xi-putin-summit-china-5fe92253ef38100bae913834a9b74d72" target="_blank">AP News</a> · <a href="https://www.bbc.co.uk/news/articles/ckz74jzpy18do" target="_blank">BBC</a> · <a href="https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china" target="_blank">Al Jazeera</a> · <a href="https://www.nbcnews.com/world/china/trump-xi-putin-plan-unprecedented-joint-meeting-sidelines-apec-officia-rcna609275" target="_blank">NBC News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">霍尔木兹升级</span>
+        <h4>伊朗海军：油轮在霍尔木兹东部触雷起火——联合国安理会紧急审议，伊朗「几乎封锁」海峡</h4>
+        <p>据 AFP/Iran Navy 11/15 消息，一艘油轮在霍尔木兹海峡东部触雷后起火。伊朗海军警告，关闭追踪系统的船只进入其指定「限制区域」将面临严重危险。联合国安理会正在就「脆弱的海湾平静」进行紧急审议。联合国新闻称伊朗「已几乎关闭」霍尔木兹海峡——该海峡此前承载全球 <strong>五分之一</strong> 的石油运输。此前 11/13 伊朗曾向巴林的美国军事资产发射无人机（9 月以来首次对美本土资产的打击），同时在霍尔木兹南部进行水雷信息战。海峡通行量恢复至战前 <strong>74%</strong>。</p>
+        <div class="why">🦞 <b>市场含义：</b>霍尔木兹危机从「偶发事件」升级为「持续低烈度封锁」。油轮触雷 = 保险费飙升 = 油价底部抬高。对 lainy：① 油价维持 $90+ 高位的概率在上升；② APEC 期间 Trump-Xi-Putin 会晤可能讨论伊朗问题——如果达成某种谅解，油价可能回落；③ 安理会介入意味着外交压力升级，但也意味着冲突可能被「管理」而非失控。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（$96 附近，地缘溢价持续）/ 601857 中国石油 / XOM 埃克森美孚（高油价受益）/ XOP（油服 ETF）— 油价高位震荡</div>
+        <div class="source">来源：<a href="https://www.timesnownews.com/world/middle-east/ukraine-russia-us-trilateral-peace-talks-abu-dhabi-live-updates-witkoff-kushner-umerov-medinsky-security-guarantees-liveblog-156490079" target="_blank">Times Now</a> · <a href="https://news.un.org/en/story/2026/11/1168804" target="_blank">UN News</a> · <a href="https://martyau79.substack.com/p/14nov2026-geopolitical-intelligence" target="_blank">Au79 Macro Research</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">乌俄战场</span>
+        <h4>乌克兰远程无人机打击俄军舰 + Volgograd 炼油厂；PLA 台海-关岛之间持续围堵演习</h4>
+        <p>据 ISW 和 Militarnyi 11/13-14 报道，乌克兰远程打击无人机在芬兰湾内重创一艘俄罗斯 Kalibr 巡航导弹护卫舰，并损坏了伏尔加格勒炼油厂的主要蒸馏装置。同时中国人民解放军水面编队在台湾和关岛之间持续进行持续数周的不宣而告的围堵和远距离封锁演习。Au79 Macro Research 指出这些事件在 11/13-14 同时发生，构成多线地缘紧张。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>乌俄战场外溢到芬兰湾（波罗的海），PLA 在台海持续演习——三条线同时升温。对 lainy：① 乌克兰打击俄罗斯炼油能力 = 油价地缘溢价持续；② PLA 围堵演习 = APEC 前中国展示军事实力，可能在与 Trump 谈判中作为筹码；③ 多线地缘紧张 = 避险资产（黄金、美债）需求支撑。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（炼油厂被打击）/ GLD 黄金（避险需求）/ 518880 黄金ETF（A 股）— 多线地缘紧张支撑避险资产</div>
+        <div class="source">来源：<a href="https://martyau79.substack.com/p/14nov2026-geopolitical-intelligence" target="_blank">Au79 Macro Research</a> · <a href="https://josephbrucevarner.substack.com/p/geopolitics-daily-14-nov-26" target="_blank">Joseph Bruce Varner</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 沙特阿美/伊朗 NIOC] → 中游 [航运 — 霍尔木兹/红海航线受阻] → 下游 [炼化 — 俄罗斯炼油厂被打击] — 当前受损环节：中游航运（油轮触雷，保险费飙升）+ 俄罗斯炼油产能</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美债收益率 5.14% + 美元走强 + 12 月加息预期</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美债抛售</span>
+        <h4>10 年期美债收益率收 5.14%——2 年期周涨 35bp，美元指数创 3 月以来最高周收盘</h4>
+        <p>本周美债延续抛售：2 年期收益率周涨 <strong>35bp</strong>，10 年期收益率上涨近 <strong>30bp</strong> 至 <strong>5.14%</strong>。美元现货指数周涨 <strong>0.7%</strong>，创 3 月以来最高周收盘。Forbes 分析指出 10 年期收益率可能进一步升至 <strong>5-5.5%</strong> 区间。驱动因素：CPI 超预期后市场对美联储 12 月加息的预期持续升温。当前联邦基金利率维持在 <strong>4%</strong>。Kevin Warsh 将于 2027 年上任美联储主席，2027 年仅 7 次利率投票——意味着加息空间更大、节奏更慢。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美债收益率 5%+ 是 2026 年宏观的核心变量。对 lainy 的跨市场框架：① 美债 5%+ → 科技股估值承压（折现率上升）→ NVDA 财报前额外的逆风；② 美元走强 → 新兴市场资金外流 → 港股/A 股承压；③ 如果 12 月真的加息，是全球央行进入新一轮紧缩周期的信号——对风险资产不利。关注：APEC 期间 Trump 是否就贸易/利率发声。</div>
+        <div class="ticker">📌 关联标的：TLT（长期美债，价格下跌）/ SPY（估值承压）/ 513130 港股通科技ETF（美元走强，资金外流压力）— 高利率环境利空成长股</div>
+        <div class="source">来源：<a href="https://stocktwits.com/news-articles/markets/equity/what-shaped-us-treasury-yields-and-the-dollar-in-week-ended-november-13/cNb2sojR9Qd" target="_blank">Stocktwits</a> · <a href="https://finance.yahoo.com/markets/currencies/articles/weekly-spread-shaped-us-treasury-012244050.html" target="_blank">Yahoo Finance</a> · <a href="https://www.forbes.com/sites/garthfriesen/2026/11/14/will-the-10-year-treasury-yield-hit-55-or-fall-to-45/" target="_blank">Forbes</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">财税/财富监管</span>
+        <h4>财政部发布离岸信托个税政策口径问答——汇率中间价适用规则明确化</h4>
+        <p>财政部于近日发布离岸信托个人所得税政策口径问答，明确汇率中间价适用规则：① 居民个人 2025 年 12 月 31 日前设立的离岸信托，计算 2025 年及以前年度应纳税所得额时适用 2025/12/31 人民币汇率中间价；自 2026/1/1 起适用上一纳税年度 12 月 31 日汇率中间价。② 非居民个人在公告发布日前设立离岸信托适用 2025/12/31 汇率；公告发布后按上一月最后一日汇率。此为对 7/24 公告的执行细则补充。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这是离岸信托个税政策的执行细则更新——明确了汇率计算口径，属于技术性补充而非新政策。对 lainy 作为金融从业者：这个口径问答影响离岸信托的实际税负计算——汇率波动可能造成应纳税额差异。7/24 公告的执行层面在逐步细化，但无新政策变化。注意：此条与之前报道的累计申报超 1600 亿、10 月单月入库超 1200 亿为同一事件线的执行细节，无新增量信息。</div>
+        <div class="ticker">📌 关联标的：无直接标的——影响高净值客户/家族信托/私银行/律所/家办的实际操作</div>
+        <div class="source">来源：<a href="https://www.sohu.com/a/1101390198_121119378" target="_blank">搜狐/财政部口径问答</a> · <a href="https://www.sohu.com/a/1101138741_119038" target="_blank">搜狐/财政部解读</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：11/17 NVDA 财报 + APEC 三方会晤将决定未来 1 个月方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金回调 + 铜 $13,000+ + 油价高位</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金周初破 $4,140 后回落至周低附近——白银 $50.05 窄幅震荡</h4>
+        <p>本周黄金走势呈「冲高回落」：周初金价突破 <strong>$4,140</strong>，白银突破 <strong>$53</strong>，但随后持续回落至周低附近收盘。现货白银稳定在 <strong>$50.05</strong>/盎司，铂金下跌 0.31% 至 <strong>$1,513.92</strong>，钯金上涨 2%。Business Recorder 分析指出，如果下周 PPI 数据偏热，可能限制黄金上行空间。前周（11/14 报道）黄金跌至 <strong>$3,886</strong>（13 个月新低），美元指数 <strong>103.33</strong> 创 3 月以来最高周收盘。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金在 $3,886-$4,140 间剧烈震荡，反映两股力量对撞：地缘避险（买）vs 美元走强+高利率（卖）。本周冲高回落说明美元/利率端暂占上风。对 lainy 的配置框架：APEC 三方会晤如果带来地缘缓和信号，黄金可能进一步回调；如果霍尔木兹再升级，$4,000+ 可期。中长期央行购金趋势不变。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股黄金 ETF）/ SLV（白银 ETF）/ 600547 山东黄金 — 短期震荡，中长期央行买盘支撑</div>
+        <div class="source">来源：<a href="https://sharetrader.com.au/news/2026-11-14-gold-rebound-unravels-as-oil-extends-losses-the-week-in-commodities" target="_blank">ShareTrader</a> · <a href="https://www.brecorder.com/news/40448964/gold-rebounds-modestly" target="_blank">Business Recorder</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>铜价创历史新高 $13,000+/吨——MCX 2025 年涨 61%，2026 年继续攀升</h4>
+        <p>铜价已突破 <strong>$13,000</strong>/吨创历史新高，印度 MCX 2025 年涨 <strong>61%</strong>，全球涨 <strong>42%</strong>，2026 年继续上涨。Economic Times 分析指出，投资者和产业界都在押注铜在下一个经济周期中的核心地位。前周（11/14）铜矿股 ETF COPX 周涨 <strong>15%</strong>——通胀数据后铜基本面走强，矿商供不应求预期升温。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜价 $13,000+ 是结构性供需紧张（AI 数据中心/电网/新能源车三重需求）叠加通胀预期的结果。对 lainy 的产业链映射：铜价涨 → 紫金矿业/洛阳钼业/Freeport 受益；但下游电缆/家电成本承压。铜矿股 COPX 周涨 15% 说明市场开始定价「铜超周期」。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / COPX（铜矿 ETF）/ 600547 山东黄金（黄金）/ 600368 紫金矿业 / FCX Freeport-McMoRan / 603993 洛阳钼业 — 上游矿企受益</div>
+        <div class="source">来源：<a href="https://economictimes.indiatimes.com/commoditysummary/symbol-COPPER.cms" target="_blank">Economic Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $96.42 / WTI $88.92——霍尔木兹油轮触雷维持高位，周线二连跌后企稳</h4>
+        <p>前周（11/13 收盘）Brent <strong>$96.42</strong>，WTI <strong>$88.92</strong>，周线二连跌后企稳。霍尔木兹恢复战前 <strong>74%</strong> 通行量 + 美国产量 <strong>1400 万桶/日</strong> 推动供应缺口收窄，但 11/15 油轮触雷事件维持地缘溢价。IEA 成员国释放 <strong>7100 万桶</strong> 战略储备，全球商业库存冬季开端处于 10 年低点。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价在 $90+ 高位企稳，霍尔木兹触雷事件确保地缘溢价不退。对 lainy：① 油价 $90+ = 通胀粘性 = 美联储难降息 = 科技股估值承压链；② APEC 如果带来说伊朗问题缓和信号，油价有 $10-15 回落空间；③ IEA 释放战略储备 = 短期供应缓解但库存低位 = 冬季需求高峰价格敏感。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 601857 中国石油 / 600028 中国石化 / XOM 埃克森美孚 / XLE（能源 ETF）— 高油价受益；JETS（航空）受损</div>
+        <div class="source">来源：<a href="https://josephbrucevarner.substack.com/p/geopolitics-daily-14-nov-26" target="_blank">Joseph Bruce Varner</a> · 叱<a href="https://martyau79.substack.com/p/14nov2026-traditional-markets-and" target="_blank">Au79 Macro Research</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金 $3,886-4,140 / 银 $50] → 工业金属 [铜 $13,000+ 创新高 / COPX 周涨 15%] → 能源 [Brent $96 / WTI $89] — 当前受益环节：上游矿企（铜/金）、能源股；受损环节：下游制造业（铜成本上升）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>天然气 + LNG + 电力</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">天然气/LNG</span>
+        <h4>欧洲天然气库存处 2020 年代最低——德国储气率仅 58%，波兰 Orlen 终止卡塔尔 LNG 长期合同</h4>
+        <p>欧洲天然气价格本周反弹，低库存加剧冬季风险。德国储气率仅 <strong>58%</strong>，欧洲暴露于更强供暖需求。商业中断持续：波兰 Orlen 终止与卡塔尔能源的 <strong>100 万吨/年</strong> LNG 长期合同（此前已报）。JKM LNG 价格 <strong>$28.66/MMBtu</strong>，预计 <strong>150 亿立方米</strong>供应损失持续到 2030 年。亚洲国家占全球 LNG 进口的 <strong>63%</strong>。美国 LNG 出口工厂平均天然气流量 11 月降至 <strong>18.1 bcfd</strong>（10 月 18.5 bcfd）。挪威 Troll 气田 11/16 恢复生产。中东 LNG 船只触雷事件推高价格。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>欧洲天然气低库存 + LNG 贸易中断 = 冬季能源价格持续高位。对 lainy：① 欧洲天然气紧缺 → JKM LNG $28+ → 新奥股份/广汇能源等 LNG 进口商受益；② 波兰 Orlen 终止卡塔尔合同 = 中东地缘风险正在重塑全球 LNG 贸易格局；③ 加拿大政府注资 C$2000 万（$1.4 亿）支持印尼富豪的西海岸 LNG 项目 = 新 LNG 产能在加速。</div>
+        <div class="ticker">📌 关联标的：JKM LNG / 600256 广汇能源 / 600803 新奥股份 / RDS.B 壳牌 / SHEL — LNG 价格高位，进口商受益</div>
+        <div class="source">来源：<a href="https://serbia-energy.eu/european-gas-prices-rebound-as-low-inventories-sharpen-winter-risks/" target="_blank">Serbia Energy</a> · <a href="https://www.brecorder.com/news/40448972/us-natgas-falls-after-eia-storage-data" target="_blank">Business Recorder</a> · <a href="https://www.energyconnects.com/news/oil/2026/november/indonesian-billionaire-s-lng-plant-gets-140-million-from-canada/" target="_blank">Energy Connects</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采 — 挪威/卡塔尔/美国] → 中游 [LNG 贸易 — JKM $28.66] → 下游 [电力 — UK baseload £183/MWh] — 当前受损环节：中游 LNG 贸易（中东船只触雷 + 合同违约）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>11/14 周五收盘 · A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股（11/14 周五收盘）—— 道指 +0.1% / S&amp;P -0.4% / 纳指 -0.9%，英伟达拖累科技</h4>
+      <p>周五收盘：道指 <strong>52,347.55</strong>（+0.1%，+50.46 点），S&amp;P 500 <strong>7,561.67</strong>（-0.4%），纳指 <strong>25,136.27</strong>（-0.9%，-229.82 点）。恐惧指数（VIX）攀升 <strong>3.48%</strong>。科技股承压主因：英伟达 CEO 事件持续发酵 + 美债收益率高位。道指领涨个股：可口可乐 +1.68%、雪佛龙 +1.64%、沃尔玛 +1.39%。最大跌幅：思科 -6.24%、英伟达 -1.92%、3M -1.48%。NVDA 收 <strong>$162.85</strong>，市值跌破 $4 万亿，连续 6 周下跌创 2012 年以来最长纪录。<b>下周焦点：</b>11/17 英伟达 Q3 财报——Colette Kress 首次以临时 CEO 身份亮相，Street 预期 EPS $2.47 / 营收 $1092 亿。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股（11/13 周四收盘→11/14 周五数据有限）—— 恒指 -1.55% 跌至 23,637.60，科技股三连跌</h4>
+      <p>恒指 <strong>23,637.60</strong>（-1.55%），连跌三日。恒生科技指数跌 <strong>3%</strong>，AI 担忧主导。美债收益率上升 + 美元走强 = 港股双重压力（资金外流 + 估值下调）。英伟达事件波及亚洲科技股——腾讯、阿里等 AI 概念股承压。<b>下周关注：</b>APEC 深圳 11/18-19 期间港股可能受政策利好扰动；英伟达 11/17 财报对科技股方向定调。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股（11/13 周五收盘）—— KOSPI -0.98% 报 5,290.53 / KOSDAQ +0.45% 报 699.66</h4>
+      <p>KOSPI <strong>5,290.53</strong>（-0.98%），外资持续抛售芯片股。KOSDAQ <strong>699.66</strong>（+0.45%）。三星电子和 SK Hynix 承压——英伟达事件 + 中国敦促韩国出售 HBM 的双重不确定性。Hana Securities 判断 AI 芯片需求直接影响有限（GPU 开发由专业团队负责）；Mirae Asset 认为即使订单转向 AMD，HBM 需求不会大幅下滑。<b>下周关注：</b>11/17 英伟达财报对 HBM 供应商信心影响；APEC 期间中美芯片议题。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股（11/13 周四收盘）—— CSI 300 -0.68% 报 4,016.29 / 沪指 -0.67% 收 3,656</h4>
+      <p>CSI 300 <strong>4,016.29</strong>（-0.68%），沪指 <strong>3,656</strong>（-0.67%）。前周创业板跌 <strong>2.44%</strong>，超 4,600 股下跌。A 股受港股科技股拖累 + 美元走强资金外流影响。前 10 月个税收入约 <strong>1.64 万亿</strong>（+22%），超 2025 全年——反映经济活动和税收征管加强。<b>下周关注：</b>APEC 11/18-19 深圳举办，可能带来政策利好；特朗普同期访华参加 APEC。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>奢侈品 · 趋势</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">奢侈品</span>
+        <h4>历峰集团（Richemont）上半年利润 +42% 至 $28 亿——Cartier + Van Cleef &amp; Arpels 逆势跑赢奢侈品大盘</h4>
+        <p>瑞士奢侈品集团历峰集团（Richemont，Cartier/Van Cleef &amp; Arpels 母公司）发布 H1 财报：营业利润增长 <strong>38%</strong> 至 <strong>€31.3 亿</strong>，净利润增长 <strong>42%</strong> 至 <strong>$28 亿</strong>，营收增长 <strong>16%</strong> 至 <strong>€123 亿</strong>。但股价下跌——珠宝增速放缓引发担忧。CNA Luxury 分析指出，珠宝是奢侈品中韧性最强的品类，富裕消费者仍愿为高端珠宝买单，即使手袋和时装需求走弱。Quilter Cheviot 称 14% 增速在跌 30% 的行业中「相对强劲的超配表现」。历峰成为本周最新一家「在奢侈品低迷中逆势生存」的案例。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>奢侈品行业分化明显：珠宝（硬奢）> 手袋/时装。历峰以珠宝为主业（Cartier/VCA），在 LVMH/Kering 手袋业务疲软时逆势增长。对 lainy 的消费框架：① 高净值消费韧性 = 珠宝品类逻辑验证；② 但股价下跌说明市场担心增速放缓趋势——14% 虽好但不是 20%+；③ 整个奢侈品行业年内跌约 30%，历峰是「最不差」的那个。</div>
+        <div class="ticker">📌 关联标的：CFR（历峰，JSE 上市）/ LVMH（路易威登，手袋承压）/ Kering（开云，最弱）/ 600916 中国黄金（珠宝消费）— 珠宝品类韧性最强</div>
+        <div class="source">来源：<a href="https://www.billionaires.africa/2026/11/14/south-african-billionaire-johann-ruperts-richemont-lifts-half-year-profit-42-to-2-8-billion/" target="_blank">Billionaires.Africa</a> · <a href="https://cnaluxury.channelnewsasia.com/obsessions/richemont-cartier-van-cleef-arpels-luxury-downturn-296311" target="_blank">CNA Luxury</a> · <a href="https://www.fxleaders.com/news/2026/11/13/jse-cfr-share-price-holds-the-uptrend-despite-dip-as-swiss-luxury-group-richemont-posts-strong-first-half-results/" target="_blank">FX Leaders</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 钻石/贵金属] → 中游 [珠宝制造 — Cartier/VCA/Tiffany] → 下游 [零售 — 高净值消费] — 当前受益环节：珠宝零售（高净值消费韧性）；受损环节：手袋/时装（中产消费疲软）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">NFL</span>
+        <h4>Travis Kelce 投资 $2 亿的 Six Flags 主题公园面临财务压力——区域公园可能受损</h4>
+        <p>据 Times of India 报道，NFL 球星 Travis Kelce（Taylor Swift 男友）投资的 <strong>$2 亿</strong> Six Flags 主题公园项目正面临财务压力，可能影响区域公园运营。Travis Kelce 在回忆母亲 Donna Kelce 的职业历程时表示「看着妈妈怎么做到的，让我学到了很多」。</p>
+        <div class="why">🦞 <b>花边点评：</b>Kelce 投资 Six Flags 是体育明星跨界娱乐地产的最新案例。$2 亿不是小数目——但如果 Six Flags 整体经营承压，区域公园可能首当其冲被砍。泰勒丝的男友投资不一定都有泰勒丝的运气。</div>
+        <div class="source">来源：<a href="https://timesofindia.indiatimes.com/sports/nfl/news/travis-kelce-backed-200-million-six-flags-could-lose-more-than-regional-parks-as-financial-pressure-reaches-new-heights/articleshow/135844317.cms" target="_blank">Times of India</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">好莱坞</span>
+        <h4>Michelle Pfeiffer 庆祝结婚 33 周年 + Russell Wilson &amp; Ciara 一家 Macy's 节日季亮灯</h4>
+        <p>本周名人花边：Michelle Pfeiffer 庆祝与丈夫 David E. 的 <strong>33 周年</strong> 结婚纪念日。同时 Russell Wilson 和 Ciara 带着孩子们在纽约 Macy's 为节日季造势，加上 A$AP Rocky、Nicky Hilton 等出席。</p>
+        <div class="why">🦞 <b>轻松一下：</b>33 年在好莱坞是奇迹级别的婚姻。 lainy 周末刷到 People 杂志的明星动态，这就是来龙去脉。</div>
+        <div class="source">来源：<a href="https://www.eonline.com/news" target="_blank">E! Online</a> · <a href="https://people.com/star-tracks-saturday-november-14-2026-new-celebrity-photos-updated-daily-12253778" target="_blank">People</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI 蜜蜂陷阱</span>
+        <h4>「Alice 甜蜜陷阱」：前英伟达 CEO 黄仁勋的婚外情如何成为全球 AI 芯片政治的杠杆</h4>
+        <p>Bhaskar English 11/15 深度报道：2026 年 10 月，关于 Alice 的美国情报疑虑公开化——质疑她是否被中国情报部门招募，并利用与黄仁勋的关系获取信息。黄仁勋于 11 月承认婚外情。一颗小小的芯片（AI 芯片）如何成为当今全球政治中最强大的力量之一——从个人绯闻到国家安全的传导链。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>这是黄仁勋事件最「戏剧化」的解读角度——一段婚外情可能影响全球 AI 芯片供应链。虽然 Bhaskar 不是主流财经信源，但故事本身已引发广泛讨论。 lainy 如果在热搜上看到「AI 蜜蜂陷阱」，这就是背景。事实部分以权威信源（AP/WSJ/Reuters）为准。</div>
+        <div class="source">来源：<a href="https://www.bhaskarenglish.in/originals/news/nvidia-ceo-us-china-ai-chips-jensen-huang-honeytrap-conspiracy-alice-huang-megaspeed-139685673.html" target="_blank">Bhaskar English</a>（⚠️ 非主流财经信源，故事性报道）</div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
