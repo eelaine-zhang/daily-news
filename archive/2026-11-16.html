@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-16</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  section { margin-bottom: 40px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; margin-bottom: 20px; }
+  .section-title h2 { font-size: 22px; margin: 0; font-weight: 700; }
+  .section-title .emoji { font-size: 24px; }
+  .section-title small { color: var(--text-dim); font-size: 13px; }
+  .cards { display: grid; gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+  .card:hover { background: var(--card-hover); }
+  .card .tag { display: inline-block; font-size: 11px; padding: 2px 10px; border-radius: 20px; background: var(--accent-soft); color: var(--accent); margin-bottom: 8px; }
+  .card h4 { margin: 0 0 8px; font-size: 16px; font-weight: 600; line-height: 1.4; }
+  .card p { margin: 0 0 10px; font-size: 14px; color: #5C5852; }
+  .why { font-size: 13px; color: #7A7268; background: #F8F6EE; border-radius: 8px; padding: 10px 12px; margin: 8px 0; }
+  .why b { color: var(--accent); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 6px; }
+  .source a { color: var(--text-dim); text-decoration: underline; }
+  .rel { font-size: 12px; color: #8A8278; margin-top: 4px; }
+  .chain { font-size: 12px; color: #8A8278; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
+  .sub-h4 { font-size: 15px; font-weight: 600; margin: 16px 0 8px; color: var(--text); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); text-decoration: none; font-size: 14px; }
+  .back-link .arrow { font-size: 16px; }
+  .back-link:hover { color: var(--accent); }
+  footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-dim); font-size: 13px; }
+  .footer-note { font-size: 11px; margin-top: 8px; color: #C4BBAE; }
+  .tag.ai { background: #D5A0A218; color: #D5A0A2; }
+  .tag.geo { background: #A9BACB18; color: #6B8AAD; }
+  .tag.macro { background: #B7C0A318; color: #6B8A53; }
+  .tag.commodity { background: #B8A07E18; color: #8A7050; }
+  .tag.energy { background: #C4A77D18; color: #8A6B40; }
+  .tag.stock { background: #D4A64A18; color: #A07820; }
+  .tag.biz { background: #C9A0B618; color: #9B6B88; }
+  .tag.fun { background: #D4B79C18; color: #8A7050; }
+  .tag.tech { background: #B8B0D518; color: #6B6BA0; }
+  section.ai-sec .section-title { border-left: 4px solid #D5A0A2; padding-left: 12px; }
+  section.geo-sec .section-title { border-left: 4px solid #A9BACB; padding-left: 12px; }
+  section.macro-sec .section-title { border-left: 4px solid #B7C0A3; padding-left: 12px; }
+  section.commodity-sec .section-title { border-left: 4px solid #B8A07E; padding-left: 12px; }
+  section.energy-sec .section-title { border-left: 4px solid #C4A77D; padding-left: 12px; }
+  section.stock-sec .section-title { border-left: 4px solid #D4A64A; padding-left: 12px; }
+  section.biz-sec .section-title { border-left: 4px solid #C9A0B6; padding-left: 12px; }
+  section.fun-sec .section-title { border-left: 4px solid #D4B79C; padding-left: 12px; }
+  section.tech-sec .section-title { border-left: 4px solid #B8B0D5; padding-left: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span>🦞 龙虾老师 · 每日不错过新闻</div>
+    <h1>每日不错过新闻</h1>
+    <div class="subtitle">2026 年 11 月 16 日（周一）· Asia/Hong_Kong</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 三句话速览</h3>
+    <ul>
+      <li><strong>英伟达 Q3 财报明晚（11/17 美股盘后）发布</strong>——黄仁勋辞职后首个财报，Street 预期 EPS $2.49 / 营收 $1090 亿，期权定价约 ±9% 波动</li>
+      <li><strong>Trump-Xi-Putin 深圳 APEC 三方会晤 11/19 确认</strong>——白宫和克里姆林宫同时确认，议程含核不扩散 / 伊朗局势，乌克兰被边缘化</li>
+      <li><strong>10 年期美债收益率冲 5.16%（两年多最大周涨幅）</strong>——CPI 超预期 + 美联储鹰派发声，12 月加息预期升温</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section class="ai-sec">
+    <div class="section-title">
+      <span class="emoji">💾</span><h2>AI & 芯片产业链</h2><small>英伟达财报前夕 · 半导体设备强势 · 芯片出口管制加码</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag ai">头条</span>
+        <h4>英伟达 Q3 财报 11/17 美股盘后发布——黄仁勋辞职后首份财报，Street 预期 EPS $2.49 / 营收 $1090 亿</h4>
+        <p>这是英伟达自黄仁勋因婚外情丑闻和国家安全疑虑辞职以来首份季度财报，CFO 兼临时 CEO Colette Kress 将首次以代理 CEO 身份亮相。Zacks 共识预期：EPS $2.49，营收 $108.99B（vs 上季 $96.2B）。Q2 毛利率 75%，公司指引 Q3 毛利率 74% ±0.5%。投资者关注：Blackwell Ultra 产能爬坡进度、Vera Rubin 何时贡献收入、中国出口管制风险、以及「循环融资」丑闻对 GPU 短缺叙事的影响。期权市场定价财报后约 ±9% 波动。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这可能是英伟达史上最具不确定性的一次财报——CEO 换人 + 国会出口管制立法加码 + WSJ 「循环融资」爆料打破 GPU 短缺叙事 + 连续 6 周下跌。财报本身的 beat/raise 已经不够了，市场要看的是 guidance 和 commentary 能否稳住信心。</div>
+        <div class="rel">📌 关联标的：NVDA — 财报直接标的；AMD、AVGO — 竞争对手/替代受益；SMH、512760 半导体ETF — 板块情绪</div>
+        <div class="source">🔗 Source: <a href="https://www.asktraders.com/analysis/nvidia-q3-earnings-preview-17-november/" target="_blank">AskTraders</a> · <a href="https://tickernews.co/nvidia-earnings-due-as-stock-slides-and-ceo-quits-raise-fresh-risks/" target="_blank">Ticker News</a> · <a href="https://mlq.ai/news/nvidia-third-quarter-earnings-preview-what-to-watch-on-nov-17-in-its-first-report-without-jensen-huang/" target="_blank">MLQ.ai</a></div>
+      </div>
+      <div class="card">
+        <span class="tag ai">设备</span>
+        <h4>应用材料 (AMAT) Q4 营收创纪录 $104.1 亿（+53% YoY），EPS $4.16 超预期——计划 2028 年产能翻倍</h4>
+        <p>应用材料 11/12 公布 FY2026 Q4 财报：营收 $10.41B（vs 预期 $10.3B），YoY +53%，non-GAAP EPS $4.16（vs 预期 $4.06），半导体系统业务 +64%。ROE 43.37%，净利率 29.29%。公司宣布计划到 2028 年将设备出货量翻倍，AI 驱动的芯片设备需求持续强劲。但股价反应平淡——投资者在英伟达财报前不愿加仓半导体。</p>
+        <div class="why">🦞 <b>市场含义：</b>设备商是 AI capex 的「卖铲人」——AMAT 的创纪录业绩 + 翻倍产能计划说明芯片设备需求并未因英伟达股价动荡而放缓。但股价不涨 = 市场已 price-in 设备周期，等英伟达财报确认需求后才愿意追。</div>
+        <div class="rel">📌 关联标的：AMAT — 直接标的；ASML、TEL、Lam Research (LRCX) — 设备同行；512760 半导体ETF</div>
+        <div class="source">🔗 Source: <a href="https://cryptobriefing.com/applied-materials-double-output-2028/" target="_blank">CryptoBriefing</a> · <a href="https://www.marketbeat.com/articles/applied-materials-beats-and-raises-but-investors-stay-unconvinced/" target="_blank">MarketBeat</a></div>
+      </div>
+      <div class="card">
+        <span class="tag ai">政策</span>
+        <h4>美国国会借黄仁勋事件推芯片出口管制加码——两党议员加速立法，4 项法案待表决</h4>
+        <p>据 Times Now 和 Latin Times 报道，黄仁勋辞职事件正在加速国会两党收紧 AI 芯片出口管制的立法进程。众议院议长 Johnson 称「共识正在形成」，4 项相关法案待表决。参议院银行委员会已传召 Lutnick 和黄仁勋就 AI 芯片出口进行调查。同时，台湾陆委会警告半导体从业者赴中国大陆面临人身自由受限风险，引用 470 起案例。</p>
+        <div class="why">🦞 <b>市场含义：</b>出口管制从「行政令」升级到「国会立法」= 管制长期化、制度化。对英伟达中国收入是结构性风险，对三星/SK 海力士/SMIC 是供应链重组机会。</div>
+        <div class="rel">📌 关联标的：NVDA — 出口管制直接受影响；005930.KS 三星电子、000660.KS SK 海力士 — 供应链替代受益；SMIC 0981.HK — 国产替代逻辑</div>
+        <div class="source">🔗 Source: <a href="https://www.timesnownews.com/world/us/us-news/nvidia-scandal-boosts-bipartisan-push-to-control-ai-chip-exports-article-156515597" target="_blank">Times Now</a> · <a href="https://www.latintimes.com/jensen-huang-resigns-china-chip-export-controls-601367" target="_blank">Latin Times</a> · <a href="https://www.digitimes.com/news/a20261113PD217/nvidia-taiwan-ceo-jensen-huang-technology.html" target="_blank">DigiTimes</a></div>
+      </div>
+      <div class="card">
+        <span class="tag ai">产业</span>
+        <h4>MediaTek 上调 2026 定制 AI 芯片营收预期至 $25 亿——首次公开点名客户 Google</h4>
+        <p>MediaTek 首次公开将 Google 列为其定制 AI 芯片客户，并上调 2026 年定制 AI 芯片营收预期至约 $25 亿。这标志着 AI 芯片市场从「英伟达一家独大」向「定制化 ASIC 多元化」演进——云巨头开始自研或委托设计专用 AI 芯片，降低对英伟达的依赖。</p>
+        <div class="why">🦞 <b>市场含义：</b>Google 公开背书 MediaTek 的定制 AI 芯片 = 云厂商「去英伟达化」趋势实质化。如果出货量起来，MediaTek 从手机芯片商转型 AI 基础设施供应商的估值重估空间大。</div>
+        <div class="rel">📌 关联标的：2454.TW MediaTek — 直接标的；GOOGL Google — 自研芯片需求方；AVGO Broadcom — 定制 ASIC 竞争对手</div>
+        <div class="source">🔗 Source: <a href="https://thecherrycreeknews.com/mediaktor-custom-ai-chips-google-2-5b/" target="_blank">Cherry Creek News</a></div>
+      </div>
+      <div class="card">
+        <span class="tag ai">存储</span>
+        <h4>Advantest 提前 AI SoC 测试设备扩产计划——高需求持续驱动高端半导体测试市场</h4>
+        <p>Advantest 宣布提前其 SoC（系统级芯片）测试设备产能扩张计划，AI 驱动的高端半导体测试需求持续超出预期。同时，中国半导体博览会（IC China 2026）上行业高管指出，AI 推理需求正从「峰值算力」转向「能效 / 单 token 成本 / TCO」，存储带宽和能效成为新竞争维度。</p>
+        <div class="why">🦞 <b>市场含义：</b>测试设备是半导体周期的滞后指标——Advantest 扩产 = 上游晶圆厂预期产量持续增长。推理侧从算力转向带宽/能效 = HBM 和高速存储的叙事加强。</div>
+        <div class="rel">📌 关联标的：6857.T Advantest — 直接标的；000660.KS SK 海力士 — HBM 受益；AMAT — 设备链</div>
+        <div class="source">🔗 Source: <a href="https://www.digitimes.com/news/a20261113PD246/advantest-soc-expansion-equipment-market.html" target="_blank">DigiTimes</a> · <a href="https://www.newsbeep.com/us/917824/" target="_blank">NewsBeep</a></div>
+      </div>
+      <div class="chain">🔗 产业链：上游 [设备 AMAT/ASML] → 中游 [晶圆 TSMC/SMIC] → 下游 [设计 NVDA/AMD/MediaTek] — 当前受益环节：设备 + 存储测试（AI capex 未退坡）</div>
+    </div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section class="geo-sec">
+    <div class="section-title">
+      <span class="emoji">🌍</span><h2>国际局势</h2><small>APEC 深圳 · 美伊局势 · 乌俄和谈</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">头条</span>
+        <h4>Trump-Xi-Putin 深圳 APEC 三方会晤获白宫和克里姆林宫正式确认——11/19 史无前例核大国领导人三方会晤</h4>
+        <p>白宫和克里姆林宫同时确认，特朗普、习近平和普京将于 11/19（周四）在深圳 APEC 峰会期间举行史无前例的三方会晤。议程包括核不扩散、伊朗局势。特朗普将先赴马尼拉参加 ASEAN 峰会，再前往深圳。APEC 峰会 11/18-19 举行，超过 100 家《财富》全球 500 强企业参加 CEO 峰会。CNN 报道称特朗普希望讨论削减核武库和伊朗战争，同时淡化乌克兰议题。</p>
+        <div class="why">🦞 <b>市场含义：</b>三个最大核大国领导人首次三方会晤 = 地缘政治格局可能重大重塑。议程含核不扩散 + 伊朗 = 中东安全框架变动。乌克兰被边缘化 = 对乌克兰资产利好（战争溢价消退）但对欧洲安全叙事有冲击。APEC 在深圳举办 = 中国主场外交优势。</div>
+        <div class="rel">📌 关联标的：地缘风险溢价下降 — 新兴市场/港股可能受益；原油 — 若伊朗局势缓和则利空油价</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/world/2026/nov/15/asia-diplomatic-summits-trump-xi-putin-apec-asean" target="_blank">The Guardian</a> · <a href="https://www.cnn.com/2026/11/13/politics/trump-putin-xi-meeting" target="_blank">CNN</a> · <a href="https://vinnews.com/2026/11/14/trump-xi-and-putin-plan-unprecedented-joint-meeting-on-apec-sidelines-white-house-and-kremlin-say/" target="_blank">AP via VIN News</a></div>
+      </div>
+      <div class="card">
+        <span class="tag geo">美伊</span>
+        <h4>美国暂缓对伊朗进一步攻击——伊朗 IRGC 无人机袭击巴林美军基地，沙特联军拦截 3 架无人机</h4>
+        <p>伊朗革命卫队向巴林美军基地发射无人机，巴林部队报告拦截了袭击。特朗普表示在没有新挑衅的情况下可能暂缓进一步军事行动。财政部长 Bessent 因伊朗对其生命威胁已转移至军事基地。伊朗专家议会呼吁审查国防政策，包括是否继续留在《核不扩散条约》内。IEA 周五报告称世界石油市场将在 Q4 回到过剩。</p>
+        <div class="why">🦞 <b>市场含义：</b>美伊冲突从「交火」进入「低烈度对峙」——霍尔木兹海峡通行恢复至战前 74%，油价暂未进一步飙升。但伊朗退出 NPT 的讨论 = 核扩散风险升级信号，长期地缘溢价难降。</div>
+        <div class="rel">📌 关联标的：Brent 原油 — 短期承压但长期风险溢价仍在；XOM/CVX — 能源股；LMT/RTX — 防务股</div>
+        <div class="source">🔗 Source: <a href="https://www.timesnownews.com/world/middle-east/ukraine-russia-us-trilateral-peace-talks-abu-dhabi-live-updates-witkoff-kushner-umerov-medinsky-security-guarantees-liveblog-156490079" target="_blank">Times Now</a> · <a href="https://www.thegeopoliticaldesk.com/iran-war-update-ukraine-russia-negotiations-israeli-coalition-talks/" target="_blank">Geopolitical Desk</a></div>
+      </div>
+      <div class="card">
+        <span class="tag geo">乌俄</span>
+        <h4>乌俄美阿布扎比三方和谈持续——9 个月来首次三方会谈，但成果有限</h4>
+        <p>乌克兰、俄罗斯和美国在阿布扎比重启三方谈判，为 9 个月来首次。美国特使 Kushner 推动新安全框架，但谈判成果有限。Zelenskyy 表示美方理解乌克兰立场。同时，俄罗斯情报部门被指控策划对爱沙尼亚总理的袭击。俄罗斯在战场继续承受重大损失。APEC 议程中特朗普明确将乌克兰边缘化，聚焦核不扩散和伊朗。</p>
+        <div class="why">🦞 <b>市场含义：</b>和谈持续 = 地缘风险溢价逐步消退。但「成果有限」+ 乌克兰被 APEC 议程边缘化 = 西方对乌支持可能减弱，对东欧资产有不确定性。</div>
+        <div class="rel">📌 关联标的：俄罗斯概念股 — 若制裁缓和利好； wheat — 黑海粮食通道稳定性</div>
+        <div class="source">🔗 Source: <a href="https://www.thegeopoliticaldesk.com/iran-war-update-ukraine-russia-negotiations-israeli-coalition-talks/" target="_blank">Geopolitical Desk</a> · <a href="https://mickryan.substack.com/p/ukraine-diplomacy-huge-russian-battlefield" target="_blank">Mick Ryan Substack</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section class="macro-sec">
+    <div class="section-title">
+      <span class="emoji">📈</span><h2>宏观 & 市场</h2><small>美债收益率飙升 · 加息预期升温 · 财税监管</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">头条</span>
+        <h4>10 年期美债收益率冲 5.16%——两年多最大周涨幅，CPI 超预期 + 鹰派发声推动 12 月加息预期</h4>
+        <p>10 年期美债收益率周五收 5.14-5.16%，为三周高点，本周涨幅创两年多来最大。2 年期收益率周涨 42bp（2024 年以来最差周表现），反映加息预期大幅前置。CPI 超预期 + 美联储官员密集鹰派发声推动债市抛售。10 年期国债拍卖疲软——需 5.02% 收益率才能卖完 $510 亿，比二级市场高 14bp。30 年期拍卖同样疲软。债市与股市同跌——债券对冲功能减弱。FNArena 分析指出，过去一个月短端（2 年）上升 14bp，长端（10 年）仅升 6bp，收益率曲线呈「前端投降」形态。</p>
+        <div class="why">🦞 <b>市场含义：</b>5%+ 的无风险利率对风险资产估值是结构性压制——尤其是 AI/科技股。债市定价 12 月和 1 月各加 25bp 的概率上升。Warsh 上任后 Fed 投票节奏可能更慢但加息空间更大。债券与股票同跌 = 传统 60/40 组合失去对冲价值。</div>
+        <div class="rel">📌 关联标的：TLT — 长期国债ETF（做空方向）；HYG — 高收益债；QQQ/SPY — 利率敏感型科技股承压；美元指数 DXY — 走强</div>
+        <div class="source">🔗 Source: <a href="https://wolfstreet.com/2026/11/14/treasury-yields-snap-back-on-ugly-inflation-rough-10-year-30-year-treasury-auctions-bond-bloodbath-returns/" target="_blank">Wolf Street</a> · <a href="https://fnarena.com/2026/11/16/the-front-end-surrender-how-hot-inflation-and-ai-debt-stress-reshaped-the-yield-curve/" target="_blank">FNArena</a> · <a href="https://www.benzinga.com/markets/macro-economic-events/26/11/63276859/weekend-market-roundup-bond-yields-jones-act-housing-bitcoin" target="_blank">Benzinga</a></div>
+      </div>
+      <div class="card">
+        <span class="tag macro">财税</span>
+        <h4>离岸信托个税过渡期结束转入常态化稽查——累计申报超 1600 亿，10 月单月入库超 1200 亿，个税增速近 90%</h4>
+        <p>离岸信托个税 90 天过渡期已于 10/22 结束。截至 11/11，税务总局通报累计申报超 1600 亿元，10 月单月入库超 1200 亿（占累计七成以上），带动全国 10 月个税收入增长近 90%。11/13 财政部发布《离岸信托个人所得税政策口径问答》（8 问 8 答），明确汇率中间价适用规则、财产原值不按装入时市场价值调整等操作细节。11/15 腾讯新闻报道，过渡期结束后进入常态化稽查阶段——申报不实或未主动申报者将督促申报 + 加收滞纳金，情节恶劣者立案稽查并公开曝光，协助逃税的中介机构也将被查处。2026/1/1 起装入和收益纳入常规年度申报轨道。</p>
+        <div class="why">🦞 <b>市场含义：</b>从「过渡期集中补报」转向「常态化稽查」= 离岸信托从灰色地带正式纳入常规税收监管体系。对高净值人群的财富架构有结构性影响——离岸信托的税后收益率假设需要重新计算。中介机构（律所/信托公司/私银）面临合规压力升级。</div>
+        <div class="rel">📌 关联标的：港股信托概念股 — 信托/私银/律所相关；离岸人民币 — 跨境资金流动；高净值消费 — 财富缩水预期</div>
+        <div class="source">🔗 Source: <a href="https://news.qq.com/rain/a/20261115A068Q000" target="_blank">腾讯新闻</a> · <a href="https://original.ifeng.com/c/8y1o7FlCajt" target="_blank">凤凰网</a> · <a href="https://original.ifeng.com/c/8xyVIzPaXU6" target="_blank">凤凰网</a></div>
+      </div>
+      <div class="card">
+        <span class="tag macro">数据</span>
+        <h4>本周经济数据日历：中国 10 月经济数据 + 美国 10 月零售销售 + FOMC 会议纪要</h4>
+        <p>本周（11/16-20）市场关注：中国周一上午公布 10 月经济数据（通胀/贸易/GDP 相关）；美国周三公布 10 月零售销售数据 + Fed 公布 10 月 FOMC 会议纪要。英伟达 11/17 财报 + Walmart/Home Depot/Target 等零售商财报提供消费端信号。Baidu/Alibaba 也将发布财报。</p>
+        <div class="why">🦞 <b>市场含义：</b>中国数据 = A 股/港股短期催化剂；美国零售销售 + FOMC 纪要 = 12 月加息预期定调关键。零售商财报 = 节日季消费晴雨表。</div>
+        <div class="rel">📌 关联标的：SPY/QQQ — 美股大盘；FXI/KWEB — 中国相关；WMT/HD/TGT — 零售股；BIDU/BABA — 中概股财报</div>
+        <div class="source">🔗 Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262305825-week-ahead-nvidia-q3-earnings-us-october-retail-sales-fomc-minutes-walmart-tradingkey" target="_blank">TradingKey</a> · <a href="https://asianmarketsense.substack.com/p/asian-market-sense-data-impacting-299" target="_blank">Asian Market Sense</a></div>
+      </div>
+      <div class="chain">🔗 产业链：央行政策 [Fed 加息预期] → 利率 [美债 5.16%] → 风险资产估值 [科技股承压] → 财富效应 [高净值税负加重] — 当前受损环节：长久期资产 / 高估值科技股</div>
+    </div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section class="commodity-sec">
+    <div class="section-title">
+      <span class="emoji">🪙</span><h2>大宗商品</h2><small>黄金大跌 · 铜价回调 · 原油企稳</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag commodity">贵金属</span>
+        <h4>黄金跌至 $3,884（-1.8%，13 个月新低）——白银 $49.12（-5.43%），美元走强 + 美债收益率飙升双杀</h4>
+        <p>黄金周五收 $3,884.5/oz，周跌超 4%，为 13 个月新低。白银收 $49.12/oz，单日跌 5.43%。美元指数创 3 月以来最高周收盘。MCX 黄金周跌 4.1%。美元走强 + 美债收益率飙升 + CPI 超预期 = 贵金属三重打击。本周 APEC 三方会晤可能带来地缘缓和预期，进一步压制贵金属避险溢价。</p>
+        <div class="why">🦞 <b>市场含义：</b>黄金跌破 $4,000 心理关口后加速下行——5%+ 的无风险利率让持有成本飙升。但 13 个月低位 + 美伊局势未解 + APEC 地缘变量 = 短期超跌反弹可能。白银跌速更快 = 工业属性叠加金融属性双杀。</div>
+        <div class="rel">📌 关联标的：GLD — 黄金ETF；SLV — 白银ETF；600547 山东黄金、600916 中国黄金 — A 股金矿股承压</div>
+        <div class="source">🔗 Source: <a href="https://fnarena.com/2026/11/16/the-monday-report-16-november-2026/" target="_blank">FNArena</a> · <a href="https://economictimes.indiatimes.com/news/international/us/gold-price-prediction-bullion-traders-pin-hope-on-gold-rate-to-hit-usd-4000-mark-silver-eye-positive-trading-amidst-volatile-circumstances/articleshow/135868182.cms" target="_blank">Economic Times</a> · <a href="https://timesofindia.indiatimes.com/business/india-business/gold-prices-drop-4-1-to-rs-1-36-lakh-silver-slides-nearly-5-to-rs-1-76-lakh-on-mcx-inflation-data-fed-signals-and-us-iran-tensions-could-keep-bullion-prices-volatile/articleshow/135857019.cms" target="_blank">Times of India</a></div>
+      </div>
+      <div class="card">
+        <span class="tag commodity">工业金属</span>
+        <h4>铜价跌至近 4 个月低位——周线创 3 月以来最大跌幅，Dalian 铁矿石连跌 3 日</h4>
+        <p>铜价跌至近 4 个月低位，本周录得 3 月以来最大周跌幅。Dalian 铁矿石期货连跌 3 日，创 5 周来最大周跌幅。美元走强 + 中国需求复苏不及预期 + 美债收益率飙升 = 工业金属承压。此前铜价在 11/13 创历史新高 $13,000+/吨后快速回调。</p>
+        <div class="why">🦞 <b>市场含义：</b>铜从历史新高快速回调 = 前期涨势过快 + 宏观逆风。但供给端紧张（矿商供不应求）仍未改变，COPX 周涨 15% 后回吐部分涨幅。回调可能仍是买入机会。</div>
+        <div class="rel">📌 关联标的：LME 铜 — 直接标的；COPX — 铜矿股ETF；FCX Freeport-McMoRan、600368 紫金矿业 — 矿业股</div>
+        <div class="source">🔗 Source: <a href="https://www.abc.net.au/news/2026-11-16/asx-markets-business-live-news-nov-16/107388134" target="_blank">ABC News</a></div>
+      </div>
+      <div class="card">
+        <span class="tag commodity">原油</span>
+        <h4>Brent ~$96 / WTI ~$88.6——IEA 预期 Q4 全球石油市场回归过剩</h4>
+        <p>WTI 周五微跌 0.2% 至 $88.6/bbl，Brent ~$96。IEA 周五报告称全球石油市场将在 Q4 回归过剩，中东出口恢复推动供应增加。霍尔木兹海峡通行量恢复至战前 74%。美国原油产量达 1400 万桶/日。IEA 成员国释放 7100 万桶战略储备。全球商业库存冬季开端处于 10 年低点。</p>
+        <div class="why">🦞 <b>市场含义：</b>供应过剩预期 + 霍尔木兹恢复 = 油价短期承压。但库存 10 年低点 + 地缘风险溢价未消除 = 下跌空间有限。APEC 三方会晤若带来伊朗局势缓和 = 额外利空。</div>
+        <div class="rel">📌 关联标的：Brent/WTI 原油期货；XOM/CVX — 美国石油股；601857 中国石油、600028 中国石化 — A 股石油股；OPEC+ — 产量政策</div>
+        <div class="source">🔗 Source: <a href="https://okenergytoday.com/2026/11/energy-briefs-world-oil-surplus-and-putting-the-squeeze-on-iran/" target="_blank">Oklahoma Energy Today</a> · <a href="https://fnarena.com/2026/11/16/the-monday-report-16-november-2026/" target="_blank">FNArena</a></div>
+      </div>
+      <div class="chain">🔗 产业链：矿商 [紫金/Freeport] → 冶炼/精炼 [江铜/江西铜业] → 制造 [新能源/电子] — 当前受损环节：矿商（金属价格回调）但供给紧张支撑</div>
+    </div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section class="energy-sec">
+    <div class="section-title">
+      <span class="emoji">⚡</span><h2>能源</h2><small>欧洲天然气紧张 · 数据中心电力 · IEA 供应过剩</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">天然气</span>
+        <h4>欧洲天然气库存处 2020 年代最低——德国储气率仅 58%，波兰 Orlen 终止卡塔尔 LNG 长期合同</h4>
+        <p>欧洲天然气库存处于 2020 年代以来最低水平，德国储气率仅 58%。波兰 Orlen 终止了与卡塔尔的 LNG 长期合同。欧洲风电「低谷」导致电力价格飙至 €600+/MWh。EU 目标到 2040 年电力占最终能源消费 46%，但风电不足 + 库存偏低 = 短期供应安全风险加剧。</p>
+        <div class="why">🦞 <b>市场含义：</b>欧洲天然气紧缺 = LNG 现货价格高企（JKM ~$28.66/MMBtu），对欧洲工业成本是结构性压力。对中国 LNG 进口商 = 套利窗口。对全球天然气股 = 利好。</div>
+        <div class="rel">📌 关联标的：JKM LNG 现货；RWE、Uniper — 欧洲电力股；601398 工商银行 — 能源金融</div>
+        <div class="source">🔗 Source: <a href="https://oilprice.com/Energy/Energy-General/Electrifying-Ambitions-Meet-Tough-Reality-in-Europe.html" target="_blank">OilPrice</a></div>
+      </div>
+      <div class="card">
+        <span class="tag energy">电力</span>
+        <h4>数据中心承担美国电网基础设施成本 38%——Nature Energy 研究揭示 AI 基建对电网影响</h4>
+        <p>2026 年 11 月 Nature Energy 发表研究（Cornell 大学摘要），发现美国四大电网区域中数据中心承担了 2025 年因增长产生的 $82.5 亿基础设施成本的 38%。AI 数据中心驱动的电力需求增长正在改变电网投资分摊模式。</p>
+        <div class="why">🦞 <b>市场含义：</b>数据中心电力成本显性化 = AI capex 的「隐性税」。对 hyperscaler（GOOGL/MSFT/META/AMZN）的 TCO 影响逐步体现，对电网设备商（GE/Vernova/Eaton）是收入驱动。</div>
+        <div class="rel">📌 关联标的：GEV/ETN Eaton — 电网设备；NEE NextEra — 电力公用事业；NVDA/MSFT/GOOGL — 数据中心运营方</div>
+        <div class="source">🔗 Source: <a href="https://moderndiplomacy.eu/2026/11/15/who-pays-to-keep-the-electrified-economy-running/" target="_blank">Modern Diplomacy</a></div>
+      </div>
+      <div class="card">
+        <span class="tag energy">原油</span>
+        <h4>IEA 预期 Q4 全球石油市场回归过剩——中东出口恢复 + 美国产量 1400 万桶/日</h4>
+        <p>IEA 周五报告：Q4 全球石油市场将回归过剩，中东出口恢复推动供应增加。美国原油产量达 1400 万桶/日。IEA 成员国释放 7100 万桶战略储备，全球商业库存冬季开端处于 10 年低点。</p>
+        <div class="why">🦞 <b>市场含义：</b>供应过剩回归 = 油价短期下行压力。但库存低位 + 地缘风险 = 回调幅度有限。OPEC+ 若减产保价则可能抵消过剩。</div>
+        <div class="rel">📌 关联标的：Brent/WTI；XOM/CVX/601857 — 油气股；OPEC+ 产量政策</div>
+        <div class="source">🔗 Source: <a href="https://okenergytoday.com/2026/11/energy-briefs-world-oil-surplus-and-putting-the-squeeze-on-iran/" target="_blank">Oklahoma Energy Today</a></div>
+      </div>
+      <div class="chain">🔗 产业链：上游 [油气开采 XOM/CVX/中石油] → 中游 [管道/LNG] → 下游 [电力/工业] — 当前受益环节：电网设备（AI 数据中心电力需求）</div>
+    </div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section class="stock-sec">
+    <div class="section-title">
+      <span class="emoji">🏦</span><h2>股市行情</h2><small>美股 · 港股 · A 股 · 韩股</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h4 class="sub-h4">🇺🇸 美股（11/13 周五收盘）—— 道指 +0.1% / S&P -0.4% / 纳指 -0.9%，英伟达拖累科技</h4>
+        <p>道指逆势收涨 0.1%，S&P 500 跌 0.4%，纳指跌 0.9%。英伟达连续下跌拖累科技板块，NVDA 周跌 3.12%，市值跌破 $4 万亿，连续 6 周下跌创 2012 年以来最长记录。Bloomberg 周一早间亚洲盘前期货微涨——投资者在英伟达财报前回归风险资产。本周关注：英伟达 11/17 财报、10 月零售销售、FOMC 纪要、Walmart/Home Depot/Target 财报。</p>
+        <div class="why">🦞 <b>市场含义：</b>英伟达财报前的「观望」情绪主导——指数跌幅不大但科技股承压。道指逆涨 = 资金从科技向价值轮动。本周若英伟达 beat + raise + guidance 稳健 = 科技股可能反弹；若 guidance 不及预期 = 连跌加速。</div>
+        <div class="rel">📌 关联标的：NVDA — 财报核心；SMH — 半导体ETF；QQQ — 纳指；DIA — 道指</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/markets/stocks/articles/nvidia-earnings-along-baggage-top-053700154.html" target="_blank">Yahoo Finance</a> · <a href="https://www.bloomberg.com/news/articles/2026-11-15/stock-market-today-dow-s-p-live-updates" target="_blank">Bloomberg</a></div>
+      </div>
+      <div class="card">
+        <h4 class="sub-h4">🇭🇰 港股（11/13 周五收盘）—— 恒指 -1.55% 跌至 23,637，科技股三连跌</h4>
+        <p>恒指周五跌 1.55% 至 23,637.60，科技股三连跌。本周一开盘预期微涨。BizToc 报道：「负债累累的香港开发商新世界发展以 81% 折价进行 $32 亿配股」——地产股可能继续承压。中国监管机构警告「黑天鹅」和「灰犀牛」风险。APEC 深圳 CEO 峰会本周举行，超过 100 家《财富》500 强参加。</p>
+        <div class="why">🦞 <b>市场含义：</b>港股科技三连跌 + 新世界 81% 折价配股 = 地产 + 科技双杀。但 APEC 本周在深圳举办 = 短期政策利好预期可能支撑周一开盘。</div>
+        <div class="rel">📌 关联标的：HSI 恒指；HSTECH 恒科；新世界发展 0017.HK — 配股折价；腾讯 00700 — 科技权重</div>
+        <div class="source">🔗 Source: <a href="https://biztoc.com/" target="_blank">BizToc</a> · <a href="https://mezha.net/eng/news/mezha-ae57150bbef7ac8413d4e13f_nikkei_225_and" target="_blank">Mezha</a></div>
+      </div>
+      <div class="card">
+        <h4 class="sub-h4">🇨🇳 A 股（11/13 周四收盘→周一开盘）—— CSI 300 -0.68% 报 4,016 / 沪指 -0.67% 收 3,656</h4>
+        <p>A 股周四收盘：CSI 300 跌 0.68% 至 4,016.29，沪指跌 0.67% 至 3,656，创业板跌 2.44%，超 4,600 股下跌。本周一关注 10 月经济数据公布。APEC 深圳峰会 = 本土政策利好窗口。</p>
+        <div class="why">🦞 <b>市场含义：</b>A 股上周回调 + 创业板大跌 2.44% = 市场风险偏好回落。10 月经济数据 = 短期催化剂。APEC 主场外交 = 科技/贸易板块可能有情绪修复。</div>
+        <div class="rel">📌 关联标的：CSI 300 — 000300.SH；创业板 — 399006；512760 半导体ETF — AI/芯片板块情绪</div>
+        <div class="source">🔗 Source: <a href="https://asianmarketsense.substack.com/p/asian-market-sense-pre-market-data" target="_blank">Asian Market Sense</a></div>
+      </div>
+      <div class="card">
+        <h4 class="sub-h4">🇰🇷 韩股（11/13 周五收盘）—— KOSPI -0.98% 报 5,290.53 / KOSDAQ +0.45% 报 699.66</h4>
+        <p>KOSPI 跌 0.98% 至 5,290.53，KOSDAQ 涨 0.45% 至 699.66。成交量清淡——237.3M 股 vs 前日 233.7M 股。KB Securities 报告称三星电子是英伟达管理层变动后 AI 芯片供应链重组的最大受益者——长期将加速供应链多元化。本周一开盘预期微涨。</p>
+        <div class="why">🦞 <b>市场含义：</b>KB Sec 看好三星 = 英伟达危机 → 供应链多元化 → 三星份额提升逻辑。但短期 KOSPI 受英伟达情绪拖累。本周英伟达财报 = 韩股芯片双雄关键催化剂。</div>
+        <div class="rel">📌 关联标的：005930.KS 三星电子 — AI 芯片受益逻辑；000660.KS SK 海力士 — HBM 供应商；KOSPI — ^KS11</div>
+        <div class="source">🔗 Source: <a href="https://en.bloomingbit.io/feed/news/124494" target="_blank">BloomingBit</a> · <a href="https://asianmarketsense.substack.com/p/asian-market-sense-pre-market-data" target="_blank">Asian Market Sense</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section class="biz-sec">
+    <div class="section-title">
+      <span class="emoji">🛍️</span><h2>消费</h2><small>Burberry 复苏 · 奢侈品分化 · 节日季预期</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">头条</span>
+        <h4>Burberry H1 营收 +6% 至 £11 亿——三年来首次转正，CEO Schulman 回归经典策略见效</h4>
+        <p>Burberry 公布 2026/27 财年 H1 财报：营收 £10.98 亿（+6%），可比零售销售 +4-5%（三年来首次转正）。调整后营业利润从 £1900 万跃升至 £6200 万。CEO Joshua Schulman 主导的「回归风衣/格纹经典款」策略见效，Burberry 重返富时 100 指数。Vogue Taiwan 报道其在新秀前数小时重返蓝筹股指数。对消费者而言：打折清仓窗口收窄，经典款回到正价逻辑。</p>
+        <div class="why">🦞 <b>市场含义：</b>Burberry 复苏 = 奢侈品行业分化的又一个例证——Richemont（珠宝）和Burberry（经典回归）在走强，而其他品牌仍在挣扎。Schulman 的「去设计师化、回归品牌资产」策略对整个奢侈品行业有参考意义。</div>
+        <div class="rel">📌 关联标的：BRBY.L — Burberry；CFR.SW Richemont — 珠宝强劲；LVMH/Kering — 奢侈品同行对比</div>
+        <div class="source">🔗 Source: <a href="https://www.americanbankingnews.com/2026/11/15/burberry-group-h1-earnings-call-highlights.html" target="_blank">American Market News</a> · <a href="https://theluxedigest.substack.com/p/burberry-is-back" target="_blank">The Luxe Digest</a></div>
+      </div>
+      <div class="card">
+        <span class="tag biz">零售</span>
+        <h4>节日季零售商谨慎乐观——Walmart/Home Depot/Target 本周公布财报</h4>
+        <p>本周美股零售财报密集：Walmart (11/17)、Home Depot (11/18)、Target (11/19)。市场关注节日季消费指引。Manila Times 报道亚洲零售商对节日季保持「谨慎乐观」，SM Retail 表示将持续扩张。Economic Times 报道印度零售商引入 Singles' Day 和 Thanksgiving 等国际购物节提升消费。Luxury Goods Stocks to Watch: NIKE、Tapestry、lululemon、Deckers、ON、Crocs。</p>
+        <div class="why">🦞 <b>市场含义：</b>Walmart 财报 = 美国消费底层晴雨表。在 5%+ 美债收益率环境下，消费信心是否被侵蚀 = 关键问题。如果 Walmart 给出保守指引 = 零售股集体承压。</div>
+        <div class="rel">📌 关联标的：WMT — Walmart；HD — Home Depot；TGT — Target；NKE — Nike；LULU — lululemon</div>
+        <div class="source">🔗 Source: <a href="https://www.manilatimes.net/2026/11/16/business/top-business/retailers-remain-optimistic-on-holiday-spending/2470385" target="_blank">Manila Times</a> · <a href="https://www.tickerreport.com/banking-finance/13664599/luxury-goods-stocks-to-watch-now-november-15th.html" target="_blank">Ticker Report</a></div>
+      </div>
+      <div class="chain">🔗 产业链：品牌 [Burberry/Richemont] → 渠道 [百货/电商] → 消费者 [节日季] — 当前受益环节：经典品牌回归 / 珠宝品类</div>
+    </div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section class="fun-sec">
+    <div class="section-title">
+      <span class="emoji">✨</span><h2>娱乐花边</h2><small>名人八卦 · 体育 · 科技花边</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">娱乐</span>
+        <h4>I'm A Celebrity 2026 开播——Wayne Rooney 领 11 位明星进入澳洲丛林</h4>
+        <p>英国 ITV 热门真人秀《I'm A Celebrity... Get Me Out Of Here!》2026 季于 11/16 周一晚 9 点首播（95 分钟特别版），因足球赛程调整改到周一开播。Wayne Rooney、AJ Odudu 等 11 位明星进入澳大利亚丛林。这是 Rooney 退役后首次大型电视亮相。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Rooney 从足球圈进入娱乐圈的转型 = 英国体育明星「退役后路」的典型样本。加上黄仁勋的「婚外情 → 间谍门」剧情，最近名人新闻比企业财报还精彩。</div>
+        <div class="source">🔗 Source: <a href="https://www.lancashiretelegraph.co.uk/news/26730192.celebrity-2026-starts-different-day-year/" target="_blank">Lancashire Telegraph</a> · <a href="https://journalarta.com/en/2026/11/15/im-a-celebrity-2026-line-up-rooney-leads-11-stars-into-jungle/" target="_blank">Journalarta</a></div>
+      </div>
+      <div class="card">
+        <span class="tag fun">科技花边</span>
+        <h4>Musk 等科技巨头向英伟达董事会施压——「Nvidia has a big leather jacket to fill」</h4>
+        <p>BizToc 头条讽刺：「英伟达有一件大皮夹克需要填补」——黄仁勋辞职后，Musk 等科技圈重量级人物被报道向英伟达董事会施压。同日 BizToc 还报道：微软全球 IT 故障导致美国所有航班停飞 4 小时；Megaspeed 否认供应链指控并与 Alice Huang 划清界限。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄仁勋的皮夹克已经成了科技圈的文化符号——他的辞职不仅是企业事件，更是行业文化时刻。Musk 施压 = 科技巨头对 AI 芯片供应链的控制权博弈。</div>
+        <div class="source">🔗 Source: <a href="https://biztoc.com/" target="_blank">BizToc</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 花边（可选） -->
+  <section class="tech-sec">
+    <div class="section-title">
+      <span class="emoji">🎨</span><h2>科技 / 科学花边</h2><small>印度 AI 芯片创业 · 中国半导体博览会</small>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">创业</span>
+        <h4>印度 AI 传感器芯片创业公司 Bharat Semi 完成 $2400 万种子轮——TechCrunch 报道</h4>
+        <p>据 TechCrunch，印度半导体创业公司 Bharat Semi 完成 $2400 万种子轮融资，用于开发 AI 集成图像传感器。这是印度 AI 芯片赛道 noteworthy 的早期融资，反映全球 AI 芯片投资从「训练」向「边缘/推理」扩散。</p>
+        <div class="why">🦞 <b>市场含义：</b>AI 芯片投资从训练端向边缘端扩散 = 行业从「集中训练」向「分布式推理」转型的信号。对全球 AI 芯片格局：印度正在追赶中美韩，但差距仍大。</div>
+        <div class="source">🔗 Source: <a href="https://www.techflowpost.com/en-US/newsletter/144736" target="_blank">TechFlow Post</a></div>
+      </div>
+      <div class="card">
+        <span class="tag tech">产业</span>
+        <h4>IC China 2026 博览会——行业焦点从「峰值算力」转向能效/带宽/TCO</h4>
+        <p>第 23 届中国国际半导体博览会（IC China 2026）在北京国家会议中心举行。行业高管指出，AI 推理需求正在改变芯片设计标准——从「峰值算力」转向内存带宽、能效、单 token 成本和 TCO。这意味着 HBM、高速互联和能效优化成为新竞争维度。</p>
+        <div class="why">🦞 <b>市场含义：</b>算力竞赛从「TFLOPS」转向「TFLOPS/W」和「$/token」= HBM 和能效管理供应商的叙事加强。对 SK 海力士和三星的 HBM 业务是直接利好。</div>
+        <div class="source">🔗 Source: <a href="https://www.newsbeep.com/us/917824/" target="_blank">NewsBeep</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    <div>🦞 龙虾老师 · 每日不错过新闻 · 2026-11-16</div>
+    <div class="footer-note">本报告由 AI 自动生成，信息来源于公开网络，不构成投资建议</div>
+  </footer>
+</div>
+</body>
+</html>
