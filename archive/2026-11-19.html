@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-19</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; font-size: 14.5px; line-height: 1.7; color: var(--text); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 19 日</h1>
+    <div class="subtitle">周四 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>APEC 历史时刻：</b>特朗普抵达深圳，今天将与习近平、普京举行史无前例的三方会晤（&lt;60 分钟），AI 监管、贸易、台湾、核武器全部上桌；特朗普还另约普京一对一。</li>
+      <li><b>英伟达炸裂但股价倒戈：</b>Q3 FY27 营收 <strong>$1158 亿</strong>（+103% YoY），Q4 指引 <strong>$1300 亿</strong>，Vera Rubin NVL72 已出货——但 Jensen Huang 离任后首个财报电话会让投资者信心崩塌，股价倒跌 <strong>2.89%</strong>。</li>
+      <li><b>美联储 10 月纪要 + 大宗崩盘：</b>官员预期更多加息，10Y 美债站 5% 已 27 天逼近 2007 纪录；黄金跌至 14 个月新低 <strong>$3,771</strong>，铜暴跌 5.6% 至七月低位。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>NVDA 财报季 · 后 Jensen 时代</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">NVDA Q3 FY27</span>
+        <h4>英伟达 Q3 营收 $1158 亿翻倍，Q4 指引 $1300 亿——但后 Jensen 时代首个财报电话会让股价倒跌 2.89%</h4>
+        <p>英伟达美东时间 11/18 盘后发布 FY2027 Q3 财报：营收 <strong>$115.8B</strong>（<strong>+103%</strong> YoY），连续六个季度 Beat；数据中心营收 <strong>$107.6B</strong>（<strong>+110%</strong> YoY）；Q4 指引 <strong>$130B</strong>（假设中国数据中心营收为零）。Vera Rubin NVL72 已出货，被描述为"史上最快产品爬坡"。Hyperscale 营收 $60B（环比 +23%），由 Vera Rubin 爬坡和 Grace Blackwell 需求驱动。但盘后初期涨 4% 后倒戈，因为：① 这是 Jensen Huang 离任后首个财报电话会，临时 CEO 兼长期 CFO Colette Kress 表现获"A"（财务）但"C"（ optics）；② 董事会拒绝了 Jensen 回归的提议；③ 市场质疑"后 Jensen 时代"AI 需求的可见性。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>英伟达交出了一份无可挑剔的财报——$1158 亿营收翻倍、$1300 亿 Q4 指引、Vera Rubin 史上最快爬坡——但股价却不买账。核心矛盾：基本面是 A+，但"谁来掌舵"让市场不安。Jensen Huang 是英伟达的灵魂人物，他离开后的第一个财报电话会，CFO Kress 虽然财务过硬但在"愿景叙事"上明显逊色。华尔街分析师仍多数维持买入（Citi 目标价 $225），但短期"后 Jensen 折价"可能持续。对 lainy：AI 芯片基本面无恙，但英伟达的"领导力溢价"正在被重新定价。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，短期领导力折价）/ SMH（半导体 ETF）/ 000660.KS SK Hynix（+4.19% 吃 NVDA 红利）/ 005930.KS 三星（+2.31%）— HBM 供应链受益，NVDA 短期承压</div>
+        <div class="source">🔗 Source: <a href="https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" target="_blank">NVIDIA Newsroom</a> · <a href="https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" target="_blank">CNBC</a> · <a href="https://finance.yahoo.com/markets/stocks/article/nvidia-delivered-a-monster-quarter-then-its-new-leaders-stumbled-on-the-earnings-call-120332810.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">NeoCloud</span>
+        <h4>CoreWeave、Nebius 盘后飙涨 7-10%：AI 基建链在 NVDA 财报后继续狂欢</h4>
+        <p>英伟达财报后，neocloud 公司盘后大涨——CoreWeave 涨超 <strong>7%</strong>、Nebius Group 涨超 <strong>10%</strong>。这验证了"AI 基建需求不减"的叙事：Vera Rubin 爬坡意味着新一轮 GPU 部署周期开启，neocloud 作为 GPU 算力转售商直接受益。与此同时，三星和 SK Hynix 在亚洲时段分别涨 <strong>2.31%</strong> 和 <strong>4.19%</strong>，KOSPI 收涨 <strong>+1.99%</strong> 重上 5,000 点。</p>
+        <div class="why">🦞 <b>商业含义：</b>英伟达财报的核心信号不是"NVDA 涨不涨"，而是"整条 AI 基建链在涨"。CoreWeave +10%、SK Hynix +4.19%、Samsung +2.31%——说明市场对 AI 需求的信心没有动摇，只是对 NVDA 的"领导力溢价"在重新定价。对 lainy 的框架：AI 投资正从"单一 GPU 公司"扩散到"整条算力链"——HBM、neocloud、先进封装、电力，都是受益环节。</div>
+        <div class="ticker">📌 关联标的：CRWV（CoreWeave，+7%）/ NBIS（Nebius，+10%）/ 000660.KS（SK Hynix）/ SMH（半导体 ETF）— AI 基建链全面受益</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank">Trading Economics</a> · <a href="https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html" target="_blank">CNBC</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC 竞争</span>
+        <h4>Economist：TSMC 先进制程近乎垄断将在 2027 面临挑战——Intel、三星、Rapidus 联合围攻</h4>
+        <p>《经济学人》"The World Ahead" 11/18 深度分析指出：TSMC 当前主导全球先进制程，但 2027 年将面临 Intel、三星和日本 Rapidus 联盟的竞争。AI 需求正在拉紧供应链，TSMC 的近垄断地位在 N3/N2 产能被英伟达和 Google 塞满后，给竞争者留出了窗口。同时，美国新规收紧了远程访问先进 AI 芯片的规则，给 TSMC 高端数据中心需求前景增加压力。13F 显示：Bridgewater 增持美光/SanDisk/高通/Qorvo，Soros 新开 SK Hynix ADR，Druckenmiller 退出 TSMC 和 SanDisk。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>TSMC 的"近垄断"不是靠技术领先（三星 2nm 良率已到 60%），而是靠"产能锁定"——英伟达和 Google 把 N3 全包了。但 2027 年 Intel 18A 和 Rapidus 2nm 如果能量产，TSMC 的定价权将被首次实质性挑战。对 lainy：这是"AI 芯片代工格局"从单极到多极的关键拐点，关注三星代工、Intel Foundry 的进展。</div>
+        <div class="ticker">📌 关联标的：TSM（台积电，短期承压）/ INTC（Intel，代工翻身赌注）/ 005930.KS（三星）— 代工格局多极化，TSMC 定价权面临挑战</div>
+        <div class="source">🔗 Source: <a href="https://www.economist.com/the-world-ahead/2026/11/18/tsmcs-grip-on-advanced-chipmaking-will-face-competition" target="_blank">The Economist</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-nyse-tsm-031120579.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO] → 终端 [云厂/NeoCloud — MSFT/CRWV] — 当前受益环节：HBM 内存（SK Hynix +4.19%）+ NeoCloud（CoreWeave +7%、Nebius +10%），受损环节：TSMC 定价权预期（竞争加剧）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>APEC 历史时刻 · 深圳</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">APEC 深圳</span>
+        <h4>历史性三方会晤今日上演：习近平-特朗普-普京在深圳举行 &lt;60 分钟三方会谈，AI 监管与台湾成焦点</h4>
+        <p>APEC 峰会 11/17-19 在深圳举行。11/18 欢迎宴会上习近平、特朗普、普京同台合影，习近平在停机坪拥抱迎接特朗普。今日（11/19）将举行史无前例的中美俄三方领导人会晤，克里姆林宫发言人 Peskov 表示会谈将"少于 60 分钟"。据 Reuters，三方将讨论贸易、AI 和核武器；AP 报道特朗普还将与普京单独举行一对一会议。日本首相高市早苗也在 sidelines 与普京进行了约 30 分钟的面对面会谈——这是日俄领导人首次面对面会晤。议题：AI 监管、贸易、台湾、核武器。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是后冷战以来最具象征性的地缘政治事件——中美俄三国领导人同台 + 三方会晤。对 lainy 的市场含义：① 如果 AI 监管达成任何共识，直接影响英伟达/AMD 对华出口前景；② 台湾议题如果在三方场合被提及，地缘风险溢价可能变动；③ 中美贸易如果释放缓和信号，港股/A 股受益。但前两次习特会（5 月北京、9 月华盛顿）都是"重仪式轻突破"，专家预期深圳也类似。另外，美国刚选出民主党控制国会两院，特朗普在后两年执政期内将面临更大制衡。</div>
+        <div class="ticker">📌 关联标的：SPY（美股，贸易缓和利好）/ KWEB（中概 ETF，中美关系风向标）/ 513050 港股通科技ETF / Brent 原油（地缘溢价变动）— 三方会晤结果定方向</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/world/live/2026/nov/18/apec-summit-live-updates-xi-putin-trump-world-leaders-gather-in-china" target="_blank">The Guardian</a> · <a href="https://www.nytimes.com/live/2026/11/18/world/trump-china-asia-apec" target="_blank">NYT</a> · <a href="https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html" target="_blank">CNBC</a> · <a href="https://asia.nikkei.com/politics/international-relations/apec/apec-live-banquet-brings-trump-and-putin-xi-and-takaichi-together" target="_blank">Nikkei Asia</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">APEC · AI 芯片</span>
+        <h4>美国在 APEC 前夕出手收紧 AI 芯片远程访问漏洞——Nvidia CEO 辞职风波成为会谈背景板</h4>
+        <p>据 NCUSCR（美国国家美中关系研究所）11/19 简报，美国在 APEC 峍会前采取行动收紧 AI 芯片远程访问漏洞。此前英伟达 CEO Jensen Huang 辞职一事引发国会审查，成为 APEC 谈判的背景板之一。The Statesman 报道，台湾军售、AI 规则、贸易和英伟达丑闻都笼罩着此次会谈。Anthropic CEO Dario Amodei 呼吁放慢 AI 开发速度，并警告如果中国不跟进的风险。Anthropic 预计 11/19 在纳斯达克上市。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>AI 芯片出口管制已经从"技术议题"升级为"地缘政治议题"——APEC 三方会晤把 AI 监管放在核武器和贸易同一张桌上。对 lainy：英伟达对华出口的"远程访问漏洞"被堵上 = 中国 AI 算力获取更难，国产替代（华为昇腾、寒武纪）逻辑加强。Anthropic IPO 也是今天的重头戏——AI 安全 + 商业化的风向标。</div>
+        <div class="ticker">📌 关联标的：NVDA（AI 出口管制承压）/ 688256 寒武纪（国产替代受益）/ ANT（Anthropic IPO，今日纳斯达克上市）— AI 监管成为地缘博弈工具</div>
+        <div class="source">🔗 Source: <a href="https://ncuscr.substack.com/p/trump-arrives-in-shenzhen-for-trilateral" target="_blank">NCUSCR</a> · <a href="https://www.thestatesman.com/world/will-trump-apec-trip-bring-breakthroughs-on-ai-safety-taiwan-and-trade-or-just-more-ceremony-in-xi-backyard-1503663776.html" target="_blank">The Statesman</a> · <a href="https://www.timesnownews.com/world/asia/trump-xi-jinping-putin-meeting-china-apec-summit-key-issues-shenzhen-article-156534270" target="_blank">Times Now</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [AI 芯片出口管制] → 中游 [APEC 三方会晤] → 下游 [对华 AI 算力供应 / 国产替代] — 当前关键变量：三方会晤结果将决定 AI 芯片出口管制的下一步走向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美联储纪要 · 美债 5% · 财税动态</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储 10 月纪要</span>
+        <h4>美联储 10 月纪要：官员预期更多加息，担忧 AI 投资过热——10Y 美债站 5% 已 27 天逼近 2007 纪录</h4>
+        <p>美联储 11/18 公布 10 月议息会议纪要：官员投票维持基准利率在 <strong>3.75%-4%</strong> 区间，但纪要显示官员预期可能需要更多加息。圣路易斯联储主席穆萨莱姆表示，为及时控制通胀，美国经济可能需要在 2027 年春季前经历数次加息，当前政策利率可能比恢复物价稳定所需水平低约 1 个百分点。10Y 美债收益率站上 5% 已达 <strong>27 个交易日</strong>，距 2007 年创下的 29 天历史纪录仅一步之遥。美元指数触及 <strong>103.66</strong>，创 2025 年 4 月以来 19 个月新高。2Y ~<strong>4.81%</strong>，5Y ~<strong>4.92%</strong>，10Y ~<strong>5.11%</strong>，30Y ~<strong>5.46%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>美联储纪要的核心信号："按兵不动"不是"停止加息"。穆萨莱姆"还差 1 个百分点"的表态意味着市场需要重新定价 2027 年前的加息路径。10Y 美债 27 天站在 5% 以上 = 全球融资成本的锚在上移。对 lainy：高利率持续 = ① 科技股估值承压（折现率↑）；② 黄金承压（机会成本↑）；③ 美元走强（新兴市场资金外流）；④ 港股/A 股面临汇率 + 资金双重压力。</div>
+        <div class="ticker">📌 关联标的：TLT（20+ 年美债 ETF，利率敏感）/ DXY（美元指数，19 个月新高）/ QQQ（纳指，折现率承压）— 鹰派信号利空久期资产和成长股</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html" target="_blank">CNBC</a> · <a href="https://finance.sina.cn/2026-11-18/detail-inizcexm4983376.d.html" target="_blank">新浪财经</a> · <a href="https://www.fx168news.com/article/1117078" target="_blank">FX168</a> · <a href="https://m.21jingji.com/article/20261118/herald/084d42f41bc45d10a876798e67cd5d29.html" target="_blank">21 经济</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">大宗崩盘</span>
+        <h4>黄金跌至 14 个月新低 $3,771，铜暴跌 5.6% 至七月低位——美联储加息恐惧主导</h4>
+        <p>11/18 现货黄金跌至 <strong>$3,771.49/oz</strong>（<strong>-2.03%</strong>），逼近 14 个月低位。黄金自 1 月创下的历史高点 $5,589.38 已跌 <strong>32.6%</strong>（$1,822.81）。白银跌至约 <strong>$45.21</strong>（<strong>-4.6%</strong>），创一年新低。LME 铜暴跌 <strong>5.6%</strong> 至七个月低位，投机性抛售加速。MCX 五大合约全线下跌，铜 <strong>-4.09%</strong>、银 <strong>-3.46%</strong>，仅天然气 +0.44% 逆势上涨。核心驱动：美联储加息预期升温 + 美元走强 + AI 投资回报质疑叠加。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>大宗商品正在经历"三杀"——美元强杀购买力、加息预期杀机会成本、AI 质疑杀工业需求预期。黄金从 $5,589 跌到 $3,771 跌了 1/3，但这里面既有宏观因素（加息预期），也有情绪因素（AI 投资过热担忧→工业金属需求预期下调）。对 lainy：短期黄金在 $3,700-3,800 可能有支撑（超卖），但中期方向取决于美联储 12 月会议。铜暴跌 5.6% 值得关注——铜是"经济的铜博士"，大跌意味着市场在 price in 全球减速。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / GLD（黄金 ETF）/ SLV（白银 ETF）/ LME 铜 / 600547 山东黄金（金价承压）/ FCX（Freeport-McMoRan，铜价承压）— 贵金属和工业金属双杀</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://mining.com.au/gold-price-sinks-to-14-month-low-on-growing-fed-hike-fears/" target="_blank">Mining.com.au</a> · <a href="https://www.brecorder.com/news/40449630/copper-tumbles-to-seven-month-low-on-speculative-selling" target="_blank">Business Recorder</a> · <a href="https://discoveryalert.com/news/gold-price-below-3800-fed-hike-november-2026/" target="_blank">Discovery Alert</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">财税动态</span>
+        <h4>税务总局披露离岸信托个税申报超 1,600 亿元，10 月单月入库超 1,200 亿——郭树清建议启动遗产和赠与税立法</h4>
+        <p>国家税务总局 11/11 披露：离岸信托个人所得税累计申报金额超 <strong>1,600 亿元</strong>（人民币），其中 10 月单月实际入库超 <strong>1,200 亿元</strong>，带动当月全国个人所得税收入增长近 <strong>90%</strong>。此外，郭树清在《社会保障评论》发表文章，建议尽快启动遗产和赠与税立法。财政部/税务总局 7/24 联合发布的 21 号公告（离岸信托三阶段征 20% 个税）首批申报已落地。腾讯新闻 11/13 发表"离岸信托个税 8 问 8 答"解读：财产原值不按装入时市场价值调整，税基不会因装入环节低估值被缩小。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>1,600 亿申报额 + 10 月 1,200 亿入库 = 离岸信托 20% 个税已从"政策公告"进入"真金白银执行"阶段。对 lainy 作为金融从业者：① 高净值客户的离岸信托架构面临实质税负（20%），家族办公室/私行业务模式需调整；② 郭树清喊话遗产/赠与税立法 = 下一轮财富监管方向；③ 10 月个税 +90% 的数据说明首批补税规模巨大，可能影响境外资金回流节奏。</div>
+        <div class="ticker">📌 关联标的：港股信托概念 / 私行概念 / 高净值财富管理板块 — 离岸信托从政策落地进入执行收税阶段</div>
+        <div class="source">🔗 Source: <a href="https://www.aboluowang.com/2026/1119/2459735.html" target="_blank">阿波罗新闻</a> · <a href="https://news.qq.com/rain/a/20261113A0EYDO00" target="_blank">腾讯新闻</a> · <a href="https://www.sohu.com/a/1103301789_739521" target="_blank">搜狐</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [美联储利率/美元] → 中游 [美债收益率/资金流向] → 下游 [黄金/铜/油/股市/汇率] — 当前关键变量：10Y 美债 5% 已 27 天，12 月 FOMC 将定下一阶段方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>贵金属 / 工业金属 / 能源 / 农产品</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">贵金属</span>
+        <h4>黄金 $3,771（-2.03%）逼近 14 个月低位，白银 $45.21 创一年新低</h4>
+        <p>现货黄金 <strong>$3,771.49/oz</strong>（<strong>-2.03%</strong>），月度跌幅 <strong>8.92%</strong>，从 1 月历史高点 $5,589.38 已回撤 <strong>32.6%</strong>。现货白银约 <strong>$45.21</strong>（<strong>-4.6%</strong>），跌幅超过黄金。美元指数 19 个月新高 + 美债 5% + 加息预期 = 贵金属三重压力。中国黄金进口创 15 个月新高（逢低买盘），但不足以扭转趋势。</p>
+        <div class="why">🦞 <b>市场含义：</b>黄金从 $5,589 到 $3,771 跌了 1/3，是"加息周期 + AI 挤泡"的双重结果。短期超卖可能在 $3,700 有支撑，但美联储如果 12 月再加息，$3,500 不是不可能。对 lainy：黄金中长期配置价值仍在（央行持续增持），但短期别抄底——等 FOMC 信号。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / GLD / 518880 黄金ETF / 600547 山东黄金 — 贵金属全面承压，央行逢低买入但难挡趋势</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.kitco.com/price/precious-metals" target="_blank">KITCO</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">工业金属</span>
+        <h4>LME 铜暴跌 5.6% 至七个月低位，投机性抛售加速——AI 需求预期下调</h4>
+        <p>LME 铜价跌至七个月低位，单日跌幅 <strong>5.6%</strong>。MCX 铜合约跌 <strong>4.09%</strong>。Mining.com.au 指出"金属随 AI 预期一起泄气"——市场重新质疑 AI 数据中心建设对工业金属的真实需求拉动。投机性抛售加速，LME 库存数据待关注。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>"铜博士"跌 5.6% 是个大信号——铜是全球工业活动的最灵敏指标。如果市场开始质疑 AI 数据中心对铜的真实需求（数据中心铜用量约 20-30 吨/千台服务器），那之前"AI 拉动工业金属"的叙事就要打折。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / FCX Freeport-McMoRan / COPX 铜矿 ETF — 铜价大跌利空上游矿企</div>
+        <div class="source">🔗 Source: <a href="https://www.brecorder.com/news/40449630/copper-tumbles-to-seven-month-low-on-speculative-selling" target="_blank">Business Recorder</a> · <a href="https://mining.com.au/gold-price-sinks-to-14-month-low-on-growing-fed-hike-fears/" target="_blank">Mining.com.au</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">原油</span>
+        <h4>Brent 跌 4.05% 至 $89.44，WTI 跌 3.13%——EIA 原油库存意外增加 338 万桶</h4>
+        <p>Brent 原油跌至约 <strong>$89.44/bbl</strong>（<strong>-4.05%</strong>），WTI 跌至约 <strong>$83.24/bbl</strong>（<strong>-3.13%</strong>）。EIA 周报显示美国原油库存意外增加 <strong>+338 万桶</strong>（预期 -50 万桶），全球过剩预期叠加加息鹰派信号压制油价。天然气期货 <strong>$3.176</strong>（<strong>-1%</strong>）。Brent-WTI 价差约 $7.55。油价从周初反弹高点回落，APEC 地缘缓和预期 + 库存增加 = 短期利空。</p>
+        <div class="why">🦞 <b>市场含义：</b>油价跌 4% + 库存意外大增 = 市场在重新定价"供给过剩"而非"地缘风险"。APEC 三方会晤如果传出地缘缓和信号，油价可能进一步走弱。对 lainy：油价下行 = 通胀压力缓解 = 美联储加息理由减弱 = 利好利率敏感资产。但这条传导链需要 1-2 个月才能在通胀数据中体现。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 601857 中国石油 / 600028 中国石化 / XOM 埃克森美孚 — 油价走空，上游油企承压</div>
+        <div class="source">🔗 Source: <a href="https://www.fxempire.com/forecasts/article/natural-gas-wti-oil-brent-oil-forecasts-oil-retreats-as-traders-focus-on-hawkish-interest-rate-outlook-1645554" target="_blank">FXEmpire</a> · <a href="https://gulfnews.com/business/energy/oil-slips-in-asia-led-by-murban-brent-wti-what-to-know-on-nov-18-2026-1.500751476" target="_blank">Gulf News</a> · <a href="https://www.forbes.com/advisor/investing/oil-prices-today/" target="_blank">Forbes</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿企 — 山东黄金/Freeport/沙特阿美] → 中游 [LME/COMEX 期货定价] → 下游 [制造业/能源/消费品] — 当前受损环节：贵金属矿企（金价 -2%）+ 工业金属矿企（铜 -5.6%）+ 油企（Brent -4%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / 天然气 / 电力 / 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">原油市场</span>
+        <h4>EIA 库存意外大增 338 万桶 + OPEC+ 过剩预期 = 油价短期承压，但 APEC 地缘缓和可能进一步压制</h4>
+        <p>EIA 周度石油状况报告：原油库存 <strong>+338 万桶</strong>（预期 -50 万桶），为连续超预期累库。Brent 跌破 <strong>$90</strong> 至 $89.44，WTI 跌至 $83.24。Murban 原油跌 4.22% 至 $91.39。OPEC+ 过剩预期 + 美国库存增加 + APEC 地缘缓和 = 三重利空。天然气期货 $3.176（-1%），但 MCX 天然气逆势 +0.44%。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价跌破 $90 = "地缘溢价"正在被挤出来。如果 APEC 传出中东缓和信号（阿曼-伊朗霍尔木兹协议在推进中），Brent 可能快速下探 $85。对 lainy 的映射：油价下跌 → 三桶油（中石油/中石化/中海油）短期承压，但下游炼化（中石化）受益于原料成本下降。新能源板块：如果油价持续走低，光伏/风电的"相对经济性"减弱，但储能不受影响。</div>
+        <div class="ticker">📌 关联标的：Brent / WTI / 601857 中国石油 / 600028 中国石化 / 600938 中海油 / XOM / CVX — 上游油企承压，下游炼化受益</div>
+        <div class="source">🔗 Source: <a href="https://www.fxempire.com/forecasts/article/natural-gas-wti-oil-brent-oil-forecasts-oil-retreats-as-traders-focus-on-hawkish-interest-rate-outlook-1645554" target="_blank">FXEmpire</a> · <a href="https://gulfnews.com/business/energy/oil-slips-in-asia-led-by-murban-brent-wti-what-to-know-on-nov-18-2026-1.500751476" target="_blank">Gulf News</a> · <a href="https://journalarta.com/en/2026/11/18/brent-crude-slides-4-05-as-rising-us-stockpiles-weigh-on-oil/" target="_blank">JournalArta</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [勘探开采 — 中石油/中海油/XOM] → 中游 [炼化 — 中石化/Valero] → 下游 [零售/化工] — 当前受益环节：下游炼化（原料成本↓），受损环节：上游勘探（油价↓4%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 3,587.83 (+0.09%) / 深成指 10,659.41 (+0.20%) / 创业板 2,311.62 (+0.85%)</h4>
+      <p>11/18 A 股三大指数午后探底回升收涨，创业板从盘中跌超 1% 反弹至 <strong>+0.85%</strong>。两市成交额 <strong>1.37 万亿</strong>，创年内新低。算力租赁概念股涨停潮，STAR 50 涨 <strong>2.19%</strong>。有色金属板块（黄金/铜）承压。<b>今日关注：</b>APEC 三方会晤对市场情绪影响 + 算力租赁概念持续性。无结构性制度变化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 23,294.75 (-0.91%) / 半日 23,241 (-1.13%)</h4>
+      <p>恒指 11/18 收跌 <strong>0.91%</strong>，互联网广告疲软 + 地产融资压力 + 半导体板块相对抗跌。美债收益率上升 + 美元走强 = 港股双重压力（资金外流 + 估值下调）。恒指期货 23,414，低于收盘价。<b>今日关注：</b>APEC 三方会晤如果传出中美贸易缓和信号，恒指有望反弹。关键位 23,000-23,500。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 50,198.17 (-1.11%) / S&amp;P 7,323.63 (-0.23%) / 纳指 24,429.88 (+0.42%)</h4>
+      <p>11/18 收盘分化：道指跌 <strong>561 点</strong>（<strong>-1.11%</strong>），S&amp;P 连跌五日至 <strong>7,323.63</strong>（<strong>-0.23%</strong>），纳指逆势涨 <strong>+0.42%</strong>。NVDA 财报后跌 <strong>2.89%</strong>，健康保险股续跌第二日。TGT 财报后涨 <strong>+6.7%</strong>。Palo Alto Networks 盘后 Beat 预期。资金从旧经济板块轮动至科技。<b>今日关注：</b>WMT 财报（盘前）+ APEC 结果 + Fed 纪要后续发酵。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 5,067.44 (+1.99%) 重上 5,000 / SK Hynix +4.19% / Samsung +2.31%</h4>
+      <p>KOSPI 11/18 收涨 <strong>+1.99%</strong> 至 <strong>5,067.44</strong>，五连跌后首次反弹，重夺 5,000 关口。核心驱动：NVDA 财报翻倍直接利好 HBM 双寡头——SK Hynix 涨 <strong>4.19%</strong> 至 ₩1,144,000，Samsung 涨 <strong>2.31%</strong>。Advantest +4.6%、Lasertec +5.0%（日本半导体设备股也受益）。日经 225 +0.28% 至 59,024.28，结束四连跌。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>Target 财报 · Walmart 预览</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Target Q3</span>
+        <h4>Target Q3 财报炸裂：净销售 +7.1% 至 $271 亿，EPS $2.65 大超预期，股价涨 6.7%——五年来最佳销售增长</h4>
+        <p>Target 11/18 发布 Q3 FY2026 财报：净销售 <strong>$271 亿</strong>（<strong>+7.1%</strong> YoY），为五年来最强增长；调整后 EPS <strong>$2.65</strong>（大幅超预期 $2.07）；可比销售增长 <strong>+5.6%</strong>（流量 +5.0%）；上调全年预期至净销售增长约 <strong>6%</strong>，EPS $10.65-$11.40。但需注意：EPS 中约 <strong>$0.50</strong> 来自一次性 IEEPA 关税退款。股价当日涨 <strong>6.7%</strong>，年初至今涨 74%。新 CEO Michael Fiddelke 带领下的复苏势头持续。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Target 的五年来最佳销售增长 = 美国消费韧性仍在。但 Walmart 管理 层在 Target 财报后提到"消费者在 trade off"（消费降级/替代效应），意味着 Target 的增长部分来自从 Walmart 流入的客户。对 lainy：美国消费股的分化——Target 复苏 vs Walmart 稳健——反映"中产阶级消费回归"的趋势。</div>
+        <div class="ticker">📌 关联标的：TGT（Target，+6.7%）/ WMT（Walmart，今日盘前财报）— 消费分化，Target 复苏 + Walmart 稳健</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/18/target-tgt-q3-2026-earnings.html" target="_blank">CNBC</a> · <a href="https://corporate.target.com/press/release/2026/11/target-corporation-reports-third-quarter-earnings" target="_blank">Target IR</a> · <a href="https://www.investing.com/news/transcripts/earnings-call-transcript-target-beats-q3-2026-estimates-as-sales-accelerate-93CH-5036340" target="_blank">Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">Walmart 预览</span>
+        <h4>Walmart Q3 预览：预期营收 $1872 亿（+5.3%），EPS $0.64——今日盘前发布</h4>
+        <p>Walmart 将于今日（11/19）盘前 7:00 AM ET 发布 Q3 FY2026 财报。市场预期：营收 <strong>$1,872-1,874 亿</strong>（<strong>+5.3-5.4%</strong> YoY），调整后 EPS <strong>$0.64</strong>，可比销售增长 +3.2%。关注重点：① Walmart 对消费降级趋势的评论；② 电商 vs 实体增长；③ 关税对供应链成本的影响。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>Walmart 是美国消费的"晴雨表"——如果 WMT 也超预期，说明美国消费整体健康；如果 Walmart 不如 Target，说明"消费降级→消费升级替代"的分化加剧。</div>
+        <div class="ticker">📌 关联标的：WMT（Walmart，今日盘前财报）/ TGT（Target，昨日已涨 6.7%）— WMT 财报将定消费板块方向</div>
+        <div class="source">🔗 Source: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262310726-stock-walmart-wmt-wall-streets-155-tradingkey" target="_blank">TradingKey</a> · <a href="https://www.tradingview.com/news/tradingview:93d203e3bcc6:0-wmt-q3-26-earnings-eps-estimate-is-0-64-usd/" target="_blank">TradingView</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [供应商/关税] → 中游 [零售运营 — Target/Walmart] → 下游 [消费者] — 当前受益环节：Target（+6.7%），消费分化持续</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">乡村音乐</span>
+        <h4>2026 CMA Awards 今晚在纳什维尔开播——乡村音乐盛典回归 Bridgestone Arena</h4>
+        <p>2026 年 CMA Awards（乡村音乐最高荣誉）将于今晚 8-11 PM ET 在 ABC/Disney+ 直播，地点纳什维尔 Bridgestone Arena。完整演出和颁奖阵容已公布。次日上线 Hulu 回放。</p>
+        <div class="why">🦞 <b>花边点评：</b>lainy 如果喜欢乡村音乐，今晚可以看看。CMA Awards 是美国乡村音乐界的"奥斯卡"——今年在 Bridgestone Arena，Luke Bryan 主持。</div>
+        <div class="source">🔗 Source: <a href="https://www.justjared.com/2026/11/18/cma-awards-2026-performers-presenters-list-revealed/" target="_blank">Just Jared</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">多哈电影节</span>
+        <h4>多哈电影节 Industry Days 11/19-20 开幕——卡塔尔影视产业野心加速</h4>
+        <p>卡塔尔电影委员会在多哈电影节期间举办第二届 Industry Days（11/19-20），加速发展该国影视和电视产业。Deadline 报道，这是卡塔尔在文化和娱乐产业"软实力"战略的一环。</p>
+        <div class="why">🦞 <b>轻松一下：</b>中东正在从石油转向文化——沙特有 Riyadh Season，卡塔尔有多哈电影节。能源资本在文化上"再投资"，趋势值得关注。</div>
+        <div class="source">🔗 Source: <a href="https://deadline.com/" target="_blank">Deadline</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">ARIA Awards</span>
+        <h4>2026 ARIA Awards 悉尼举行：Mel C 闪耀黑裙造型</h4>
+        <p>2026 年澳大利亚唱片业协会奖（ARIA Awards）在悉尼举行，Spice Girl 出身的 Mel C 以一身利落黑裙亮相，成为红毯焦点。Kate Middleton、Mariah Carey、Hailey Bieber 等也在 People 杂志"周三明星照片"专题中亮相。</p>
+        <div class="why">🦞 <b>花边：</b>Spice Girl 出身的 Mel C 出席 ARIA——90s 流行音乐 nostalgia 仍在继续。</div>
+        <div class="source">🔗 Source: <a href="https://people.com/star-tracks-wednesday-november-18-2026-new-celebrity-photos-updated-daily-12261507" target="_blank">People</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag tech">13F 持仓</span>
+        <h4>Q3 13F 揭秘：Bridgewater 增持美光/SanDisk/高通，Soros 新开 SK Hynix ADR，Druckenmiller 清仓 TSMC</h4>
+        <p>Q3 13F 持仓报告显示大佬动向：Bridgewater（达利欧）增持美光、SanDisk、高通和 Qorvo，继续持有英伟达和博通；Soros（索罗斯）新开 SK Hynix ADR 仓位；Druckenmiller 开仓 202,125 股 SpaceX（约 $3050 万），清仓 SanDisk 和 TSMC；Tepper 增持 SpaceX 17 倍至 $5.57 亿；ARK 增持 SpaceX 51% 至 $10.2 亿。NVIDIA 自身披露 SpaceX 为其最大持仓约 $196.8 亿，13F 总值下降 24% 至 $483 亿。Goldman Sachs 设 2027 年底 S&amp;P 500 目标 <strong>8,700</strong>（隐含约 18% 总回报），预计 AI 投资将从基建转向变现和采用。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>13F 是"聪明钱"的风向标。三个信号值得注意：① Bridgewater 增持内存股 = 赌 AI 基建链；② Druckenmiller 清仓 TSMC = 对台积电竞争格局的判断；③ 所有人都在追 SpaceX = AI 和太空的交叉点。</div>
+        <div class="source">🔗 Source: <a href="https://neoreports.substack.com/p/daily-ai-investment-brief-261118" target="_blank">Neo Reports</a> · <a href="https://tapeout.substack.com/p/nvidia-bought-your-memory" target="_blank">Tape Out</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
