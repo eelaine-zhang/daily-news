@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-20</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C; --sci: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); border-left: 4px solid var(--macro); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; font-size: 13px; color: var(--text); }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 20 日</h1>
+    <div class="subtitle">周五 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>TSMC 收紧中国 AI 芯片封锁：</b>路透独家报道 TSMC 配合美国商务部新规封堵「算力租赁」漏洞——HBM 和先进封装均在限制范围，中国 AI 公司远程获取算力的路径被切断。</li>
+      <li><b>Anthropic IPO 首日收官：</b>收盘 $97.17（+17%），估值 <strong>$1.76 万亿</strong>——史上第二大 AI 公司上市顺利落地；同日 NVDA 财报后股价续跌，纳指 -2.25% 遭全面抛售，VIX 飙 15%。</li>
+      <li><b>APEC 三方峰会无突破：</b>Trump-Xi-Putin 深圳「和平宣言」但核扩散和乌克兰问题无具体协议；A 股成交 1.31 万亿创年内新低，港股恒指 -1.95%。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>TSMC 封锁升级 · Anthropic 上市</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">TSMC 封锁</span>
+        <h4>路透独家：TSMC 收紧中国 AI 芯片限制——配合美国商务部新规封堵「算力租赁」漏洞</h4>
+        <p>11/20 路透/台北时报报道，TSMC 正在收紧对中国客户的 AI 芯片出口限制，配合美国商务部新规（本周生效），封堵此前中国公司通过海外数据中心远程「租用」AI 算力的漏洞。新限制覆盖范围包括：① HBM（高带宽内存）——AI 处理器处理海量数据的核心组件；② 先进封装——将芯片和内存集成以提升算力的关键技术。此前中国 AI 公司通过在马来西亚、新加坡等地数据中心部署 TSMC 代工芯片来「绕道」获取算力，新规直接关闭这条路径。Reuters 消息人士称，TSMC 已开始要求所有客户声明最终用途并承诺不向中国实体转移。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这是上周 BIS 新规的「执行落地」——从政策公告变成 TSMC 的实际操作。对 lainy 的框架：① 中国 AI 公司的「算力缺口」进一步扩大——无法通过海外租用弥补，国产替代（华为昇腾、寒武纪）需求更紧迫；② HBM 被纳入限制 = SK Hynix/三星对中国的 HBM 出口也会受美国盟友协调压力；③ TSMC 的「合规成本」上升但市场地位不变——被限制的是中国客户，不是 TSMC 本身。连锁影响会在下周 A 股科技板块体现。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC，合规成本上升但垄断不变）/ 688256 寒武纪（国产替代受益）/ 600760 中航沈飞（军工 AI 概念外溢）— 中国 AI 算力封锁升级，国产替代逻辑强化</div>
+        <div class="source">🔗 Source: <a href="https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868041" target="_blank">Taipei Times</a> · <a href="https://www.investing.com/news/stock-market-news/tsmc-tightens-china-ai-chip-curbs-as-new-us-rules-close-manufacturing-loophole-sources-say-5038806" target="_blank">Reuters via Investing.com</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Anthropic IPO</span>
+        <h4>Anthropic IPO 首日收官：收盘 $97.17（+17%），估值 $1.76 万亿——史上第二大 AI 公司上市</h4>
+        <p>11/19（周四）Anthropic（ANT）在纳斯达克首日交易，IPO 定价 <strong>$83</strong>（此前区间 $70-$78 上限上调），收盘 <strong>$97.17</strong>（<strong>+17%</strong>），首日市值约 <strong>$1.76 万亿</strong>。CNN 报道称这是 2026 年迄今最大 IPO，也是继 Meta 之后 AI 领域最大规模上市。纽约时代广场竖起 Anthropic 广告牌。Anthropic 核心产品为 Claude AI 系列模型，主要竞争对手为 OpenAI 和 Google。此前 11/17-18 早报已连续跟踪定价和上市预期，今日为首日交易结果。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 的金融视角：① $1.76 万亿 = 仅次于英伟达（~$28 万亿）和台积电（~$18 万亿）的 AI 公司市值，验证了「AI 基建→AI 模型」价值链的第二层定价；② 首日 +17% 说明需求远超供给——定价 $83 已经在上调区间之上，仍被买单吃掉；③ 对 VC/PE 市场的信号：AI 一级市场估值将被重新校准，后续 OpenAI、xAI 的上市定价预期会上调。</div>
+        <div class="ticker">📌 关联标的：ANT（Anthropic，新上市）/ NVDA（英伟达，AI 芯片供应商）/ MSFT（微软，Anthropic 战略投资者）— AI 模型公司上市窗口打开</div>
+        <div class="source">🔗 Source: <a href="https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo" target="_blank">CNN</a> · <a href="https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html" target="_blank">CNBC</a> · <a href="https://www.nytimes.com/live/2026/11/19/technology/anthropic-ipo-ai" target="_blank">NYT</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">NVDA 后市</span>
+        <h4>Nvidia 财报后股价续跌——纳指 -2.25% 遭全面抛售，VIX 飙 15% 至 28.31</h4>
+        <p>11/19（周四）美股收盘：纳指 <strong>-2.25%</strong> 报 23,879.20；道指 <strong>-2.19%</strong> 报 49,097.77（逼近技术性回调）；S&amp;P <strong>-1.97%</strong> 报 7,179.38。VIX 恐慌指数飙升 <strong>15.27%</strong> 至 28.31。Nvidia 财报数据亮眼（Q3 营收 $1158 亿 +103% YoY，Q4 指引 $1300 亿）但周三盘后已跌 2.89%，周四继续承压。Motley Fool 指出投资者在权衡 AI 支出可持续性和 CEO 过渡不确定性。Bloomberg 报道道指已处于技术性回调边缘，纳指创 4 月以来最长连跌周。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>「财报超预期但股价跌」是典型的「利好出尽」——市场已把 NVDA 增长定价进去，现在的问题是「下个季度还能超多少？」。更重要的信号是 VIX +15%——这不只是 NVDA 的问题，是整个 AI 叙事在被重新审视：① 高估值科技股在美债 5%+ 环境下的估值压缩；② CEO 过渡期不确定性让市场给 NVDA 打了「治理折价」；③ 连跌周 = 系统性减仓而非个股情绪。</div>
+        <div class="ticker">📌 关联标的：NVDA（英伟达，核心标的）/ SMH（半导体 ETF）/ QQQ（纳指 ETF）/ VIX（恐慌指数）— AI 叙事回调，短期避险</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-nvidia-slides-as-investors-weigh-ceo-transition-fallout-despite-strong-q3-results/" target="_blank">Motley Fool</a> · <a href="https://www.bloomberg.com/news/articles/2026-11-19/stock-market-today-dow-s-p-live-updates" target="_blank">Bloomberg</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/nvidia-nvda-stock-drops-despite-232131314.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">稀土出口管制</span>
+        <h4>中国扩大稀土出口管制：新增 5 种元素 + 半导体用户附加审查——APEC 前夕加码</h4>
+        <p>Reuters 报道，中国在 APEC 峰会前夕大幅扩大稀土出口管制范围，新增 5 种稀土元素并加强对半导体用户的审查。中国稀土（000831.SZ）复牌后经历剧烈震荡：11/16 冲击涨停后炸板，随后连续两日跌停，11/19 收报 40.70 元（+0.89%），全天成交 14.84 亿，总市值 431.92 亿。Mining.com 报道，中国稀土巨头利润翻倍——000831 前 9 个月净利润 4.08 亿元（+100%+），稀土价格飙升推动业绩。公司证券部对股价表现表示「意外」。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>稀土是中美科技博弈的「中国反制牌」——中国控制全球 70%+ 重稀土供应，扩管 = 芯片制造成本上升。对 lainy 的框架：① 稀土价格上行利好上游（北方稀土 600111、中国稀土 000831）；② 但 000831 复牌后的剧烈波动说明市场对「政策红利 vs 估值泡沫」分歧巨大；③ APEC 后中美关系走向将决定稀土板块中期方向。</div>
+        <div class="ticker">📌 关联标的：000831 中国稀土（核心标的）/ 600111 北方稀土（龙头）/ 600547 山东黄金（贵金属联动）— 稀土出口管制升级，上游受益但波动剧烈</div>
+        <div class="source">🔗 Source: <a href="https://www.reuters.com/markets/companies/000831.SZ/" target="_blank">Reuters</a> · <a href="https://www.mining.com/chinas-rare-earth-giants-double-profits-as-prices-soar/" target="_blank">MINING.COM</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/稀土/化学品] → 中游 [代工 — TSMC/三星] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Anthropic] — 当前关键变量：TSMC 封锁执行力度 + Anthropic 上市后 AI 模型估值重校准</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>APEC 三方峰会结果</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">APEC 三方峰会</span>
+        <h4>Trump-Xi-Putin 深圳「和平宣言」但无实质突破——核扩散和乌克兰问题无具体协议</h4>
+        <p>11/19（周四）APEC 峰会期间，Trump-Xi-Putin 三方会谈在深圳举行，持续约 60 分钟。Guardian/RFE/CFR 多家报道：三方发表「和平宣言」但会谈在核心议题上无突破——① 核扩散问题未达成具体协议；② 乌克兰问题未取得进展。克里姆林宫发言人佩斯科夫表示会后将有联合声明。RFE/RL 总结为「modest wins for all three men but no game-changing accords」。CFR 专家分析指出：这是核大国领导人首次三方峰会，象征意义大于实质成果。Trump 在会后的表态中提及可能见金正恩。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对市场的增量信息：① 「和平宣言」但无协议 = 地缘风险溢价不会完全消退，但也不升级——对油价是「中性偏利空」（风险溢价收窄）；② 乌克兰问题无进展 = 欧洲安全不确定性持续，但非增量风险；③ 对 A 股/AI 监管：三方会谈中提及 AI 监管和台湾问题（此前已报），但无具体新共识。对 lainy：短期市场反应有限，但「三方峰会机制化」如果成立，长期可能成为新的地缘协调框架。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价收窄偏空）/ SPY（美股，地缘缓和利好风险偏好）/ 513130 港股通科技ETF（中美关系缓和利好港股流动性）— 地缘风险中性偏降</div>
+        <div class="source">🔗 Source: <a href="https://www.theguardian.com/world/live/2026/nov/19/apec-summit-trump-xi-putin-meeting-shenzhen-china" target="_blank">The Guardian</a> · <a href="https://www.rferl.org/a/trump-xi-putin-summit-four-key-takeaways/33902100.html" target="_blank">RFE/RL</a> · <a href="https://www.cfr.org/articles/six-experts-on-what-trump-xi-and-putins-first-trilateral-means" target="_blank">CFR</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [地缘风险溢价] → 中游 [能源/大宗商品定价] → 下游 [风险偏好/资金流向] — 当前状态：地缘溢价小幅收窄，油价承压，风险偏好边际改善但美股承压</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 12/9 倒计时 · 美债 5%+</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">美联储</span>
+        <h4>FOMC 12/9 会议倒计时：当前利率 3.75%-4.00%，市场押注 12 月加息 25bp 概率高位</h4>
+        <p>Trading Economics / FedRateCalc 数据：美联储 10 月会议维持利率 <strong>3.75%-4.00%</strong> 不变（10-2 投票），9 月曾加息 25bp（2023 年以来首次）。下次 FOMC 会议 <strong>12/8-9</strong>，将同步发布 SEP 经济预测和点阵图。FedWatch 显示 12 月加息 25bp 概率维持高位（此前报 96.8%）。10Y 美债收益率已站 5% 超过 27 天，逼近 2007 年以来最长纪录。高盛预计 12 月 + 1 月连续加息。EIA 11 月 STEO 报告预测 Brent 11-12 月均价约 $100/桶。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 的配置框架：① 美债 5%+ = 全球资产定价的「锚」在高处——科技股估值压缩、黄金承压、新兴市场资金外流；② 12 月 FOMC 有 SEP + 点阵图 = 2027 年利率路径预期将被重新校准，如果点阵图显示「更高更久」，全球风险资产可能再一轮调整；③ A 股相对独立（不在美元周期内），但港股对美债高度敏感。</div>
+        <div class="ticker">📌 关联标的：TLT（美债 ETF）/ SPY / QQQ（美股，利率敏感）/ GLD 黄金（利率 inversely correlated）/ 513130 港股通科技ETF — 12/9 FOMC 前避险情绪升温</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/united-states/interest-rate" target="_blank">Trading Economics</a> · <a href="https://fedratecalc.com/fomc-meeting-schedule/december-2026/" target="_blank">FedRateCalc</a> · <a href="https://www.eia.gov/outlooks/steo/report/global_oil.php" target="_blank">EIA STEO</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [利率/油价] → 中游 [风险偏好/资金流向] → 下游 [资产配置 — 股/债/金/油] — 当前关键变量：12/9 FOMC + SEP 点阵图将决定 2027 H1 方向</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金价 14 个月新低 · 铜 5.69 · 油回落</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $3,692（14 个月新低）· 白银 $45.21 创一年新低——美联储加息恐惧 + 美元走强双杀</h4>
+        <p>Trading Economics 数据：11/19 黄金跌至 <strong>$3,692.46</strong>/盎司，日内 -0.89%，月跌 <strong>-10.48%</strong>，年跌 -9.43%。白银 $45.21 创一年新低。此前 11/18 早报记录黄金 $3,771（-2.03%），11/19 续跌至 $3,692，已逼近 14 个月低位。核心驱动：① 美联储加息预期升温（12 月概率高位）；② 10Y 美债 5%+ 持续 27+ 天；③ 美元指数走强；④ APEC 地缘溢价收窄减少避险需求。世界银行预测 2026 年大宗商品价格整体上涨 23%。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金从 10 月高点 $4,100+ 跌至 $3,692，跌幅超 10%。对 lainy：① 短期看 FOMC 12/9 结果——如果加息，金价可能再探底 $3,600；如果按兵不动， $3,900 可期；② 央行购金趋势不变（中国央行连续 18 个月增持），中长期支撑在 $3,500-3,600；③ 矿业股已提前跌透——山东黄金、紫金矿业 A 股较 6 月高点已跌 30%+，当前位置比金价本身更便宜。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD（美股）/ 600547 山东黄金 / 601899 紫金矿业 — 短期超卖，中长期央行购金支撑</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/gold" target="_blank">Trading Economics</a> · <a href="https://www.worldbank.org/en/research/commodity-markets" target="_blank">World Bank</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>LME 铜跌至 $5.69/Lbs（-4.99%）——AI 需求预期下调 + 投机性抛售加速</h4>
+        <p>Trading Economics 数据：11/18 LME 铜跌至 <strong>$5.69</strong>/Lbs，日内 -4.99%，月跌 <strong>-13.01%</strong>，但年涨 +12.87%。此前 11/19 早报记录 LME 铜 $13,300/吨（-5.6%），投机性抛售加速。铝市场历史性 squeeze 仍在持续。核心驱动：① NVDA 财报后 AI 资本支出可持续性被质疑 → 铜需求预期下调；② 美元走强压制以美元计价的大宗商品；③ 中国 10 月经济数据不及预期（社零 +0.4% vs 预期 +3.5%）拖累工业金属需求预期。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜是「AI 基建 + 电气化」的双重代理品种——AI 数据中心建设拉动铜需求（每个数据中心用铜量约 2-3 万吨），但 NVDA 财报后市场开始质疑 AI capex 的可持续性。对 lainy：① 铜价月跌 13% = 市场在定价「AI capex 放缓」情景；② Freeport-McMoRan（FCX）、Southern Copper（SCCO）Q3 已跌 15%+；③ 中国端：江西铜业（600362）、洛阳钼业（603993）跟跌但幅度更小。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / FCX（Freeport）/ SCCO（Southern Copper）/ 600362 江西铜业 / 603993 洛阳钼业 / COPX（铜矿 ETF）— AI capex 叙事回调拖累铜价</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/copper" target="_blank">Trading Economics</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent ~$92.5 / WTI ~$83.4——月跌 20%，APEC 地缘缓和 + 供应恢复压制油价</h4>
+        <p>OilPriceAPI 数据（11/19）：Brent <strong>$92.50</strong>（月跌 ~20%），WTI <strong>$83.44</strong>，Henry Hub 天然气 $3.38/MMBtu。Trading Economics 指出油价本月已跌约 20%，核心原因：① 中东供应恢复（尽管间歇性地区紧张）；② Trump 暂停对伊朗大规模军事打击；③ APEC 三方「和平宣言」地缘溢价收窄。EIA 11 月 STEO 预测 Brent 11-12 月均价约 $100/桶，但实际市场价已低于预测。EIA 数据显示美国 10 月底商业原油库存降至 4.1 亿桶（2014 年以来同期最低），Brent-WTI 价差扩大促进出口。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价从 10 月高点 $100+ 回落至 $92，跌幅 20%。对 lainy：① APEC 后如果地缘风险持续收窄，Brent 可能回测 $85-88 区间；② EIA 预测 $100 vs 实际 $92 的缺口 = 要么 EIA 上调库存预期，要么地缘风险再起推油价回 $100；③ 三桶油跟跌但跌幅有限——中国原油需求预期未变，汇率缓冲部分跌幅。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / 600938 中国海油 / XOM 埃克森美孚 / XLE（能源 ETF）— 油价回落，三桶油短期承压</div>
+        <div class="source">🔗 Source: <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank">Trading Economics</a> · <a href="https://www.oilpriceapi.com/oil-prices-today" target="_blank">OilPriceAPI</a> · <a href="https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf" target="_blank">EIA STEO Nov 2026</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿业 — 紫金/山东黄金/FCX/南方铜] → 中游 [冶炼/炼化 — 江铜/中石化] → 下游 [制造业/能源/投资] — 当前状态：贵金属超卖（央行购金支撑）、工业金属承压（AI 需求质疑）、原油回落（地缘缓和）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>油价回落 · 天然气 · 新能源</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>EIA 库存数据 + OPEC+ 过剩预期——油价短期承压但中长期 EIA 预测 $100 均价</h4>
+        <p>本周原油市场核心矛盾：短期过剩 vs 中长期偏紧。短期：① EIA 11 月 STEO 预测 Q4 全球库存开始累积；② 中东供应恢复；③ Trump 暂停对伊朗军事打击。中长期：① EIA 预测 Brent 11-12 月均价 $100（当前 $92 缺口 $8）；② 美国 10 月底原油库存 4.1 亿桶（2014 年以来同期最低）；③ Brent-WTI 价差扩大促进美国出口。OPEC+ 方面，此前增产预期仍在，但 APEC 后地缘缓和可能进一步压制油价。Henry Hub 天然气 $3.38/MMBtu，欧洲库存仍处 2020 年代最低。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>对 lainy 的能源框架：① 油价 $92 vs EIA 预测 $100 = 要么市场低估了风险，要么 EIA 高估了需求；② 如果 12 月 FOMC 加息，美元走强进一步压制油价；③ 中国 10 月经济数据不及预期 = 需求端偏弱。三桶油中，中海油（600938）对油价弹性最大（纯上游），中石化（600028）炼化下游成本端受益于油价下行。</div>
+        <div class="ticker">📌 关联标的：Brent / WTI / 600938 中国海油（上游弹性最大）/ 600028 中国石化（下游成本受益）/ XOM 埃克森美孚 / CVX 雪佛龙 — 油价短期承压，炼化下游受益</div>
+        <div class="source">🔗 Source: <a href="https://www.eia.gov/outlooks/steo/pdf/steo_full.pdf" target="_blank">EIA STEO Nov 2026</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原油开采 — 中石油/中海油/Exxon] → 中游 [炼化 — 中石化/Shell] → 下游 [消费/化工] — 当前受益环节：下游炼化（油价回落降低原料成本）；受损环节：上游开采（油价回落压缩利润）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 3,577.62 (-0.28%) / 深成指 10,583.20 (-0.71%) / 创业板 2,293.34 (-0.79%)</h4>
+      <p>11/19 收盘三大指数小幅收跌，成交额 <strong>1.31 万亿</strong>（年内新低），较前日缩量 646 亿。尾盘科创 50、上证 50 双双发力收涨，宽基 ETF 尾盘 15 分钟集体爆量。增量资金观望情绪浓厚，APEC 三方峰会结果待消化。中国稀土（000831）复牌后剧烈震荡——冲涨停后连续跌停，11/19 收 40.70（+0.89%）。<b>结构性变化自检：</b> 无新交易所制度变化。<b>资金面：</b> 年内地量区间，增量资金观望。<b>重点异动：</b> 中国稀土 000831 先涨停后跌停（±10%）连续 3 日；贵金属板块午后爆发（晓程科技、兴业银锡、湖南黄金涨停）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 -1.95% / 恒生科技 -2.33%（11/19 收盘）</h4>
+      <p>11/19 港股收跌，恒指 <strong>-1.95%</strong>，恒生科技 <strong>-2.33%</strong>。板块：休闲设施、工程咨询服务涨幅靠前；航空货运、摄影器材跌幅靠前。个股：奥克斯电气（HK2580）+16.84%，MOMENTA-W（HK6880）+8.21%，华虹宏力（HK1347）+8.01%，芯碁微装（HK9630）+7.44%；天数智芯（HK9903）-17.45%，本末科技（HK6731）-11.49%。美债 5%+ 持续压制港股流动性，APEC 后中美关系未实质改善。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — 道指 49,097.77 (-2.19%) / S&amp;P 7,179.38 (-1.97%) / 纳指 23,879.20 (-2.25%)（11/19 收盘）</h4>
+      <p>11/19 美股遭全面抛售，纳指创 4 月以来最长连跌周。VIX 飙 <strong>+15.27%</strong> 至 28.31。道指逼近技术性回调。核心驱动：① NVDA 财报后 AI 叙事回调——「利好出尽」；② 10Y 美债 5%+ 持续；③ FOMC 12/9 加息预期高位。但 11/20 早盘期货反弹：纳指 +1.70% 至 24,844.98，S&amp;P +0.91% 至 7,390.22，道指 +0.04% 至 50,217.36（NCTV Profit 数据）。Anthropic IPO 首日 +17% 为 AI 板块提供支撑。<b>重点异动：</b> NVDA -2.89%（盘后续跌）；CoreWeave、Nebius 盘后飙涨 7-10%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 重上 5,000（+1.99% 至 5,067.44）/ 三星 +2.31% / SK Hynix +4.19%（11/18 收盘）</h4>
+      <p>11/18 KOSPI 收复 5,000 关口（<strong>+1.99%</strong> 报 5,067.44），机构净买入驱动。三星电子 +2.31%，SK Hynix +4.19%——NVDA 财报提振韩国半导体股。KOSDAQ 方面：GST +18.54%，TES +16.34%，CMTX +15.44%，Hana Materials +14.78%，PSK +12.28% 均双位数涨幅。此前 11/17 KOSPI 曾跌破 5,000（-3.59% 报 5,100.50，9 个月低点），养老基金创 5 年最大净卖出。<b>结构性变化自检：</b> 无新交易所制度变化。KRX 延长交易新规已在此前早报覆盖。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>Walmart 财报 · 双 11 后续</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Walmart</span>
+        <h4>Walmart Q3 财报：营收 $1795 亿超预期，EPS $0.62 beat，上调全年指引</h4>
+        <p>CNBC / TT News 报道，Walmart 11/19 发布 Q3 FY26 财报（截至 10/31）：营收约 <strong>$1795 亿</strong>（预期 $1872 亿），净利 <strong>$49.5 亿</strong>（$0.62/share，去年同期 $61.4 亿/$0.77），eCommerce 增长连续 7 季超 20%。Walmart 上调全年指引：EPS $2.84-$2.89（前值 $2.80-$2.87），销售增长 4.9%-5.2%（前值 4%-5%）。此前 11/18 早报已预览 Walmart 预期，今日为实际结果——营收略低于预期但盈利超预期，且上调指引显示信心。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Walmart 是美国消费的「晴雨表」——Q3 结果说明美国消费韧性仍在，但增速在放缓（净利 YoY 下降）。对 lainy：① eCommerce 20%+ 连续增长 = 实体零售数字化在加速；② 上调指引 = 管理层对 Q4 假日季有信心；③ 但净利 YoY 下降（$49.5 亿 vs $61.4 亿）说明价格压力下利润在压缩。</div>
+        <div class="ticker">📌 关联标的：WMT（Walmart，核心标的）/ TGT（Target，昨日财报已报 +6.7%）/ AMZN（Amazon，竞争格局）/ XLY（可选消费 ETF）— Walmart 盈利超预期但利润 YoY 下降</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html" target="_blank">CNBC</a> · <a href="https://www.ttnews.com/articles/walmart-earnings-q3-2026" target="_blank">TT News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [供应商/品牌] → 中游 [零售渠道 — Walmart/Target/Amazon] → 下游 [消费者] — 当前状态：美国消费韧性尚存但利润压缩，假日季预期偏正面</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>奈飞《三体》第二季定档！继续"魔改"还是让原著粉买账？</h4>
+        <p>继 11/18 早报后，奈飞《三体》第二季持续热搜——刘慈欣原著改编的争议仍在持续，但第二季定档消息让粉丝期待值拉满。讨论焦点：第一季的"魔改"（对原著剧情大幅修改）是否会在第二季收敛？还是继续按好莱坞节奏重新叙事？</p>
+        <div class="why">🦞 <b>轻松一下：</b>《三体》是中国硬科幻的巅峰，奈飞版让全球观众看到了中国科幻的故事力，但「魔改」的争议也是文化输出的必经之路。lainy 如果追剧，可以期待第二季的视觉效果——奈飞的钱没白花。</div>
+        <div class="source">来源：11/18 持续热搜话题</div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">综艺</span>
+        <h4>《我们再发光》综艺热搜不断：段林希"倒嗓"引热议 + 刘力扬与乐评人梁源现场交锋</h4>
+        <p>2026 年综艺《我们再发光》持续霸热搜——段林希的"倒嗓"（嗓音变化）引发讨论，刘力扬与乐评人梁源的现场交锋名场面刷屏。这档综艺汇集了超女/快女系歌手的回归与重聚，引发怀旧热潮。</p>
+        <div class="why">🦞 <b>花边点评：</b>超女/快女 nostalgia 是 2026 年综艺的最大流量密码——这批歌手的粉丝（80后-90后）现在正是消费主力。段林希的「倒嗓」其实是年龄和阅历带来的声音变化，不必苛求「和当年一样」。</div>
+        <div class="source">来源：11/18 持续热搜话题</div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>《沙丘 3》曝光帕丁森与维伦纽瓦幕后新照——俩人将在 007 再度合作</h4>
+        <p>《沙丘 3》（Dune: Part Three）曝光罗伯特·帕丁森与导演丹尼斯·维伦纽瓦的幕后工作照。更让影迷兴奋的是：帕丁森将主演维伦纽瓦执导的下一部 007 电影——这是两人从《沙丘》到 007 的二度合作。</p>
+        <div class="why">🦞 <b>轻松一下：</b>帕丁森从「暮光之城」到「蝙蝠侠」再到「沙丘」+「007」，完成了一个类型片的完全进化。维伦纽瓦拍 007 = 艺术导演拍商业大片，大概率会像《沙丘》一样——既有票房又有口碑。lainy 如果喜欢科幻/艺术片，这个组合值得期待。</div>
+        <div class="source">来源：11/18 持续热搜话题</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">科学</span>
+        <h4>Nature Energy 研究：数据中心承担美国电网基础设施成本 38%——AI 基建对电网影响首次量化</h4>
+        <p>Nature Energy 发表研究，首次量化数据中心对美国电网基础设施的成本负担——数据中心占美国电网基础设施成本的 <strong>38%</strong>。这意味着 AI 基建的大规模扩张不仅在「买芯片」，还在「建电网」。此前 11/18 早报已记录此项。美国科技巨头 2026 年 AI 数据中心资本支出预计超 $3000 亿，对应的电网升级成本将由谁来买单？Nature Energy 的研究暗示：可能是电费用户。</p>
+        <div class="why">🦞 <b>彩蛋视角：</b>对 lainy 的技术-商业映射：① AI 不只是算力的竞争，更是「电力」的竞争——数据中心选址从硅谷转向德州/弗吉尼亚（电价低、电网容量大）；② 中国端：阿里、腾讯、华为的数据中心向西部（内蒙古、贵州）转移，逻辑相同——电价低 + 气候凉；③ 投资含义：电力设备商（施耐德、ABB、西门子）+ 电网升级 ETF（XLU）可能是 AI 消息的「隐性受益方」。</div>
+        <div class="ticker">📌 关联标的：施耐德电气 SBFEY / ABB / 西门子能源 / XLU（公用事业 ETF）/ 300750 宁德时代（储能）— AI 基建的电力成本首次被量化</div>
+        <div class="source">来源：11/18 持续话题 · <a href="https://www.nature.com/articles/s41560-026-02026-x" target="_blank">Nature Energy</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
