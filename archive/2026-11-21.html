@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-21</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-style: normal; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block h4.sub-h4 { font-size: 14px; color: var(--text-dim); }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 21 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 股灾日：</b>英伟达单日暴跌 <strong>-14%</strong> 至 $125.53，SEC 会计调查叠加 AI 估值质疑，市值从峰值蒸发约 $2.5 万亿；S&P 500 进入修正区间，纳指年内转负，VIX 飙至 35.89（盘中触 40）。</li>
+      <li><b>亚太黑色星期五：</b>A 股创业板 -3.54%、韩股 KOSPI -5.21% 创 10 个月新低、日经 -5.06%、港股恒指 -1.89%——全亚洲科技股遭抛售，仅阿里逆市涨 3%（财报超预期）。</li>
+      <li><b>避险狂欢：</b>黄金跌穿 $3,530 创 14 个月新低（周跌 9%），美债收益率大幅回落，Brent $92.57 连跌三周——商品和股市双杀，资金涌入债市。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AI 股灾 + TSMC 落地执行</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">NVDA -14%</span>
+        <h4>英伟达单日暴跌 14%：SEC 会计调查 + AI 估值质疑双杀，市值从峰值蒸发 $2.5 万亿</h4>
+        <p>11/20 收盘 NVDA 跌 <strong>-14.01%</strong> 至 <strong>$125.53</strong>，连续第七个交易日下跌。成交量飙至 6.078 亿股（约为 3 个月日均的 <strong>262%</strong>）。Motley Fool 报道，SEC 已对英伟达展开会计调查，叠加出口管制收紧，投资者正在重新质疑「AI 芯片龙头」的估值逻辑。同期 AMD <strong>-13.25%</strong> 至 $424.32、Broadcom <strong>-12.19%</strong> 至 $304.65、META <strong>-5.9%</strong>、TSLA <strong>-7.6%</strong>——半导体板块全线崩盘。</p>
+        <div class="why">🦞 <b>龙虾老师解读：</b>英伟达 Q3 营收 $1158 亿翻倍增长——但市场已经不关心了。核心矛盾：① SEC 会计调查意味着「增长数字本身」开始被审视；② 出口管制收紧（TSMC 已开始限制中国客户）意味着未来增长天花板在下移；③ 连续 7 天下跌 = 技术面破位，量化资金在加速离场。从峰值蒸发的 <strong>$2.5 万亿</strong>相当于整个法国 GDP。对 lainy 的启示：AI capex 故事正在从「信仰」阶段进入「验证」阶段——财报好看不够了，市场要看到 ROI。</div>
+        <div class="ticker">📌 关联标的：NVDA（-14%）/ AMD（-13.25%）/ AVGO（-12.19%）/ SMH（半导体 ETF）/ 159992 半导体ETF（A 股）— 全线受损，短期无明确支撑</div>
+        <div class="source">🔗 Source: <a href="https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-nvidia-s-usd2-5-trillion-rout-deepens-as-sec-accounting-probe-adds-to-wall-street-s-ai-sell-off/" target="_blank">Motley Fool</a> · <a href="https://finance.yahoo.com/quote/NVDA/" target="_blank">Yahoo Finance</a> · <a href="https://finance.yahoo.com/markets/stocks/article/the-post-earnings-slide-in-nvidia-stock-is-getting-uglier-by-the-day-112801786.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC</span>
+        <h4>TSMC 正式暂停部分中国客户先进制程订单——封堵「算力租赁」最后漏洞</h4>
+        <p>路透社报道，TSMC 已依据 11/19 生效的美国新出口规则，正式通知部分中国芯片设计公司：暂停此前获批的先进制程代工订单，相关客户将被限制在更旧的制程节点。此前中国客户仍可使用 TSMC 7nm 制程——这是中国获取先进 AI 芯片的「最后一条通道」。TSMC 同时加强了对客户使用境外数据中心远程访问 AI 算力的审查。美国商务部核准的芯片设计名单包括英伟达、AMD、苹果、联发科等，但不包括中国大陆公司。</p>
+        <div class="why">🦞 <b>读给你听：</b>这不是「宣布意图」，是「已经停了」。11/18 报的美国 BIS 新规、11/20 报的 TSMC 路透独家——到 11/21 这条已经变成实际执行。对中国 AI 产业的影响：① 国产替代（华为、寒武纪）的逻辑被强化——但短期内产能和技术差距无法弥补；② 中国 AI 公司可能被迫使用更旧制程，性能/能效大幅下降；③ 对 lainy 关注的 HBM 链：三星和 SK Hynix 的中国客户可能间接受限。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC ADR）/ 688256 寒武纪（国产替代）/ 002747 埃斯顿（半导体设备）— TSMC 短期执行风险，国产替代长期受益</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/technology/ai/articles/tsmc-tightens-restrictions-chinese-ai-104705695.html" target="_blank">Yahoo Finance / Reuters</a> · <a href="https://www.asiaone.com/money/tsmc-tightens-china-ai-chip-curbs-new-us-rules-close-manufacturing-loophole-sources-say" target="_blank">AsiaOne</a> · <a href="https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868107" target="_blank">Taipei Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">ANT -8.5%</span>
+        <h4>Anthropic IPO 次日回落 -8.5%：收盘 $87.97，逼近 IPO 价 $83——市场不再迷信 AI 估值</h4>
+        <p>Anthropic（ANT）上市第二日收 <strong>$87.97</strong>（<strong>-8.44%</strong>），较首日收盘 $97.17 回吐大部分涨幅。SEC 文件显示 Anthropic 前 9 个月营收 <strong>$332.4 亿</strong>。Fortune 指出，AI 股票全板块抛售让这只「AI 第二大 IPO」也撑不住。同期 The Hill 指出，尽管 Anthropic 创纪录 IPO，美股本周依然重挫——AI 叙事正在失去对市场的拉动效应。</p>
+        <div class="why">🦞 <b>市场含义：</b>Anthropic 首日 +17% 被视为「AI 泡沫还活着」的证明——但第二日 -8.5% 说明泡沫在缩水。$332 亿/9 个月的营收不差，但在英伟达暴跌的大环境下，市场情绪已经从「AI 无限增长」转向「AI 也要证明赚钱」。对 lainy：Anthropic 是观察 AI 行业从私募走向公开市场的温度计——如果破发，整个 AI 一级市场估值都会承压。</div>
+        <div class="ticker">📌 关联标的：ANT（Anthropic）/ NVDA / MSFT（OpenAI 合作伙伴）— AI 板块估值全面承压</div>
+        <div class="source">🔗 Source: <a href="https://fortune.com/2026/11/20/anthropic-stock-teeters-close-to-ipo-price-in-second-day-of-trading/" target="_blank">Fortune</a> · <a href="https://finance.yahoo.com/markets/stocks/article/anthropic-stock-dives-after-rip-roaring-ipo-095411951.html" target="_blank">Yahoo Finance</a> · <a href="https://thehill.com/business/6234002-stocks-plummet-anthropic-record-ipo/" target="_blank">The Hill</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">US Congress</span>
+        <h4>美国众议院对英伟达涉嫌影响商务部调查展开 probe——Megaspeed 走私案的政治余波</h4>
+        <p>路透社获取的信件显示，美国众议院已就英伟达是否对商务部调查 Megaspeed（涉嫌非法转运芯片至中国）施加影响展开调查。信件于 11/20 发给商务部长，质询商务部在调查过程中是否受到英伟达游说影响。这是继 SEC 会计调查后，英伟达面临的第二重监管压力。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>英伟达现在面临三重压力：① SEC 会计调查（财务层面）② 众议院调查（政治/监管层面）③ 出口管制收紧（业务层面）。三重叠加意味着「AI 龙头」的监管风险溢价在快速上升。对 lainy：这不是短期噪音——监管调查一旦启动，通常持续数月到数年，期间估值会被持续压制。</div>
+        <div class="ticker">📌 关联标的：NVDA — 监管风险溢价上升，估值天花板下移</div>
+        <div class="source">🔗 Source: <a href="https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868107" target="_blank">Taipei Times / Reuters</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC 限制中国客户/三星/Intel] → 下游 [AI 芯片设计 — NVDA 面临 SEC+国会双重调查/AMD/AVGO] → 终端 [云厂 — MSFT/GOOG/Anthropic IPO 承压] — 当前受损环节：全链条（NVDA -14% / AMD -13% / AVGO -12% / TSMC 限制执行）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>APEC 后续 · 稀土</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">深圳三方会晤后续</span>
+        <h4>普京「赢了」：CNBC 称三方会晤重塑其大国地位，莫斯科随后拒绝北约式乌克兰安全保障</h4>
+        <p>CNBC 11/20 报道，特朗普-习近平-普京深圳三方会晤让普京获得「巨大胜利」——被置于与美国和中国领导人平等的位置上，使这位深陷多年战争的威权领导人在国际舞台上重回大国牌桌。但一天后莫斯科即拒绝了 Kushner 提出的「北约式乌克兰安全保障」方案。The Guardian 指出三方「和平宣言」四点文本中完全未提及乌克兰和伊朗战争。分析师认为几乎没有实质成果。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>对 lainy 的金融视角：① 三方会晤对油价影响为「短期降温、长期不确定」——莫斯科拒绝北约式保障 = 乌克兰问题没有出路 = 地缘风险不会消失；② 稀土/矿物方面（见下条），中国正在用「推迟」换取筹码；③ 美中俄三方关系的「正常化」对全球供应链意味着去全球化在减速，但「技术脱钩」在加速。</div>
+        <div class="ticker">📌 关联标的：Brent 原油（地缘溢价仍存）/ SPY（风险偏好波动）— 和平宣言无实质 → 风险溢价不会完全消退</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/20/putin-xi-china-trump-russia-ukraine-.html" target="_blank">CNBC</a> · <a href="https://apnews.com/live/trump-xi-putin-china-politics-news-updates-11-19-2026" target="_blank">AP News</a> · <a href="https://www.theguardian.com/world/2026/nov/19/china-russia-us-agree-peace-statement-no-mention-ukraine-iran-wars" target="_blank">The Guardian</a> · <a href="https://www.hngn.com/articles/273878/20261120/trump-xi-putin-issue-peace-declaration-that-omits-ukraine.htm" target="_blank">HNGN</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">稀土 · 出口管制</span>
+        <h4>中国将稀土出口暂停延长至 2027 年 1 月：Busan 会晤后「两个月缰绳」策略</h4>
+        <p>MD Briefing 11/20 报道，中国将关键矿物出口暂停延长至 2027 年 1 月。The Diplomat 同日分析指出，中国 10 月宣布、11/18 生效的新出口许可规定将生物技术资产（含 AI 技术）、隧道掘进机、重型挖掘设备、特种海洋装备纳入管制。但在 Busan 会晤后，中国推迟了更广泛的贸易限制包到 2027 年初。分析认为，短期延期「不是续约，而是配给」——北京选择了短缰绳策略来保留筹码。</p>
+        <div class="why">🦞 <b>市场含义：</b>对 lainy 关注的产业链：① 稀土出口暂停 = 全球磁材供应链紧张 = 新能源车/风电/机器人成本上行；② 但「推迟到 2027」= 短期内不升级，给谈判留窗口；③ 新管制范围扩展到 AI 技术和生物技术 = 中美「技术脱钩」在深化。</div>
+        <div class="ticker">📌 关联标的：600547 山东黄金 / 北方稀土（600111）/ MP Materials (MP) — 稀土供给受限，价格有上行风险</div>
+        <div class="source">🔗 Source: <a href="https://mdbriefing.substack.com/p/chinas-rare-earth-pause-extended" target="_blank">MD Briefing</a> · <a href="https://thediplomat.com/2026/11/china-ratchets-up-its-weaponization-of-trade/" target="_blank">The Diplomat</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [矿物开采 — 中国控制稀土供给] → 中游 [加工/冶炼 — 中国占全球 85% 精炼产能] → 下游 [磁材/电池/半导体 — 稀土永磁用于 EV 电机/风电/机器人] — 当前受益环节：上游（中国议价权强化），受损环节：下游（成本上行风险）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>VIX 35.89 · 美债避险 · S&amp;P 修正</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">VIX · 修正</span>
+        <h4>S&amp;P 500 进入修正区间、纳指年内转负、VIX 飙至 35.89（盘中触 40）——2025 关税风暴以来最高</h4>
+        <p>11/20 收盘：S&amp;P 500 跌 <strong>-3.70%</strong>（-265 点）至 <strong>6,910.39</strong>，跌破 7000 心理关口，连续七日下跌，进入修正区间（correction territory），周跌 <strong>-8.6%</strong>（2025 年 4 月以来最差周）。道指 <strong>-1.9%</strong> 至 <strong>48,147</strong>，同样进入修正。纳指 <strong>-5.3%</strong> 至 <strong>22,617.73</strong>——年内涨幅全部回吐，转为负值。VIX 收 <strong>35.89</strong>，盘中一度触及 <strong>40</strong>，为 2025 年关税风暴以来最高。Bloomberg 称这是 VIX 的「波动率警告闪烁」时刻。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>三个信号同时亮红灯：① S&amp;P 修正 = 从高位跌超 10%；② 纳指年内转负 = AI 增长叙事的「财富效应」蒸发；③ VIX 35.89 = 恐慌但不是崩溃（2008 级别是 80+）。历史规律：VIX 突破 30 后，如果基本面没有系统性崩溃（如 2008 金融海啸），通常 1-3 个月内市场会企稳。但这次的特殊性：AI 估值质疑 + 联储加息预期 + 监管风险三重叠加，反弹可能需要更长时间。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ / VIX — 修正区间内不要急于抄底，等 VIX 回落至 25 以下再看方向</div>
+        <div class="source">🔗 Source: <a href="https://www.bloomberg.com/news/articles/2026-11-20/vix-hits-highest-level-since-2025-tariff-turmoil-as-volatility-warning-flash" target="_blank">Bloomberg</a> · <a href="https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html" target="_blank">CNBC</a> · <a href="https://spectrumlocalnews.com/nc/coastal/business/2026/11/20/wall-street-nov-20-2026" target="_blank">Spectrum News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">美债避险</span>
+        <h4>美债收益率大幅回落：2Y -14bp 至 4.634%，资金涌入避险资产</h4>
+        <p>CNBC 报道，随着股市抛售加剧，投资者涌入美债避险。2 年期收益率降超 <strong>14bp</strong> 至 <strong>4.634%</strong>。此前 11/19 数据显示 10Y 美债收益率仍在 <strong>5.04%</strong>，30Y 在 <strong>5.40%</strong>——高位美债 + AI 股抛售 = 股债双杀中的「债市反弹」。但收益率曲线仍为向上倾斜（2Y 4.76% → 10Y 5.04% → 30Y 5.40%），表明市场仍预期联储高利率持续。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>美债收益率从高位回落 14bp 看起来是好事——但发生在股市暴跌中就是「避险驱动」而非「基本面改善」。如果下周股市企稳，收益率会反弹回去。真正要关注的是：FOMC 12/9 会议前，10Y 能否回落到 4.90% 以下？如果能 = 市场在消化降息预期；如果不能 = 加息恐惧仍在。</div>
+        <div class="ticker">📌 关联标的：TLT（20+ 年美债 ETF）/ IEF（7-10 年）— 避险资金涌入短期利好债市</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/20/treasury-yields-bonds-inflation.html" target="_blank">CNBC</a> · <a href="https://ceoeconomy.com/article/what-is-the-yield-curve-5-percent-10-year-treasury-borrowers" target="_blank">CEO Economy</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：利率 [10Y 5.04% → 避险回落至 ~4.9%] → 风险偏好 [VIX 35.89 = 恐慌] → 资产配置 [股→债切换] → 下一节点 [FOMC 12/9] — 当前关键变量：AI 估值重估 + 加息预期 = 风险资产持续承压</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">💰</span> 财税/财富监管 <small>个税数据更新</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">个税数据</span>
+        <h4>财政部公布 1-10 月个税收入 1.64 万亿（+22.9%），超 2025 全年——离岸信托补税为主要驱动力</h4>
+        <p>11/20 财政部公布 1-10 月财政收支：个税收入 <strong>16,428 亿元</strong>，同比增长 <strong>22.9%</strong>，增速超过同期全国税收收入增速 17 个百分点。虎嗅报道指出，10 月单月个税高增长主要受离岸信托补税驱动——7 月公告的《关于离岸信托个人所得税有关事项的公告》要求在 90 天过渡期内（即 10 月底前）完成申报缴税。此为 11/14 首次报出后的官方数据确认，不含新增案例信息。</p>
+        <div class="why">🦞 <b>增量自检：</b>11/14 已首报「个税收入超去年全年」，11/20 数据为财政部官方确认——核心数字（16,428 亿/+22.9%）与 11/14 报道一致，无新增案例名单或新政策解读。按同案例 7 天冷却期规则，本次仅作数据确认简报，不展开。如有新一批补税名单或新执行细则再报。</div>
+        <div class="ticker">📌 关联标的：无直接个股标的 — 影响高净值财富管理/私银/律所/家族办公室</div>
+        <div class="source">🔗 Source: <a href="https://news.sina.com.cn/o/2026-11-20/doc-inizkqhz5523539.shtml" target="_blank">新浪新闻</a> · <a href="https://m.huxiu.com/moment/1298548.html" target="_blank">虎嗅</a> · <a href="https://news.ifeng.com/c/8yD37xyGwwj" target="_blank">凤凰网</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金银铜油全线暴跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">贵金属</span>
+        <h4>黄金 $3,530 创 14 个月新低（周跌 9%），白银 $41.16 创一年新低——AI 股灾 + 加息恐惧双杀</h4>
+        <p>现货黄金 11/20 跌 <strong>-3.71%</strong> 至 <strong>$3,530.75/oz</strong>，本周累计跌近 <strong>9%</strong>，触及 2025 年 9 月以来最低。白银跌 <strong>-4.2%</strong> 至 <strong>$41.16/oz</strong>，过去 5 个交易日跌逾 <strong>15%</strong>。新浪报道指出，金价已有效跌破 $4,000 关口——此前市场认为央行买盘和逢低买盘会守住这一水平。核心驱动：美联储鹰派加息预期 + AI 股抛售引发金属市场全面平仓。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>黄金跌破 $4,000 后加速下行——说明央行买盘也扛不住恐慌性平仓。但注意：白银 5 日跌 15% = 投机性抛售加速 = 通常意味着接近底部。历史上 VIX 35+ + 金银暴跌 = 恐慌见底信号之一。对 lainy：不要在暴跌中追空，等企稳后看 $3,500 是否守住。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / 518880 黄金ETF（A 股）/ GLD / SLV — 短期恐慌性抛售，$3,500 为关键支撑</div>
+        <div class="source">🔗 Source: <a href="https://journalarta.com/en/2026/11/20/gold-price-today-bullion-drops-3-71-to-3530-75-in-broad-metals-and-equity-selloff/" target="_blank">JournalArta</a> · <a href="https://www.usagold.com/daily-precious-metals-market-report-november-20-2026/" target="_blank">USAGOLD</a> · <a href="https://finance.sina.com.cn/stock/usstock/c/2026-11-21/doc-inizmwan6852758.shtml" target="_blank">新浪财经</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">工业金属</span>
+        <h4>LME 铜跌破 $12,100/吨 创 2026 年 3 月以来新低——AI 需求预期下调拖累</h4>
+        <p>Mitrade 报道，伦铜价格跌破 <strong>$12,100/吨</strong>，创 2026 年 3 月以来新低。核心逻辑：AI 股灾 → AI capex 预期下调 → 铜需求预期下调 → 铜价下跌。同时金银暴跌引发金属板块全面平仓。</p>
+        <div class="why">🦞 <b>商业含义：</b>铜价跌 = AI 基建/数据中心建设的「通胀预期」在退潮。如果 AI capex 故事真的不变，铜价跌是买入机会；但如果市场在重新定价 AI capex 增速（NVDA -14% 就是在说这个），铜的下游需求预期也在下修。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / 600547 山东黄金 / Freeport (FCX) — 铜价下跌利空上游矿企</div>
+        <div class="source">🔗 Source: <a href="https://www.mitrade.com/cn/insights/commodity-analysis/gold/20261120A01C" target="_blank">Mitrade</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">原油</span>
+        <h4>Brent $92.57（+0.64%）周线三连跌，WTI $83.98——中东出口恢复 + 供应过剩预期压制</h4>
+        <p>11/20 收盘 Brent <strong>$92.57</strong>（+0.64%），WTI <strong>$83.98</strong>。WTI 周跌 <strong>-5.17%</strong>，连续三周下跌。EnergyNow 报道指出，中东出口恢复（APEC 后地缘缓和）+ 供应过剩预期（OPEC+ 产量恢复、美国产量 1400 万桶/日）= 油价地缘溢价在消退。但同期油价仍比去年同期高 <strong>42.86%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>油价在 AI 股灾中没暴涨 = 地缘风险溢价确实在消退。但 $92 Brent 不是低油价——对通胀仍有推力。对 lainy 的逻辑链：油价稳在 $90+ → 通胀粘性 → 美联储难降息 → 科技股估值承压。这个链在 11/20 完全验证了。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI / 601857 中国石油 / 600028 中国石化 / XOM 埃克森美孚 — 油价高位利好上游，但跌势中三桶油跟跌</div>
+        <div class="source">🔗 Source: <a href="https://energynow.com/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/" target="_blank">EnergyNow</a> · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank">Trading Economics</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金 $3,530 / 银 $41.16] → 工业金属 [铜 $12,100/吨] → 能源 [Brent $92.57] — 全线暴跌：AI 股灾 + 加息预期 + 投机平仓三重打击，$3,500 金 / $90 Brent 为关键支撑</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油周线三连跌</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">原油市场</span>
+        <h4>Brent $92.57 / WTI $83.98——中东出口恢复 + OPEC+ 产量回归 = 地缘溢价消退</h4>
+        <p>同大宗商品板块原油条目。Brent 周线三连跌，但单日反弹 +0.64%。Henry Hub 天然气 $3.28/MMBtu。核心矛盾：APEC 地缘缓和 → 出口恢复 → 供应过剩预期主导；但 $92 Brent 仍高于去年同期 $65 的 42.86%——通胀传导效应未消。</p>
+        <div class="why">🦞 <b>能源映射：</b>油价跌 → 三桶油（中石油/中石化/中海油）短期承压但中长期估值不贵；LNG 流量创新高 + 欧洲储气率低 → 新奥股份/广汇能源的 LNG 贸易利润有支撑；光伏/风电装机不受油价直接影响（政策驱动），但 AI capex 预期下调可能影响电力需求增速。</div>
+        <div class="ticker">📌 关联标的：601857 中国石油 / 600028 中国石化 / 600938 中国海油 / XOM / CVX — 短期跟跌，中期油气价格仍高于去年</div>
+        <div class="source">🔗 Source: <a href="https://energynow.com/2026/11/oil-prices-slide-as-recovering-middle-east-exports-push-wti-toward-81-and-brent-near-90/" target="_blank">EnergyNow</a> · <a href="https://www.oilpriceapi.com/oil-prices-today" target="_blank">OilPriceAPI</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [开采 — 三桶油/XOM/CVX] → 中游 [炼化 — 中石化/Shell] → 下游 [消费 — 高油价压制需求] — 当前定价：地缘溢价消退，基本面偏松，$90 Brent 为中枢</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股 — 黑色星期五</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 -1.23% 报 3,533 / 深成指 -3.09% / 创业板 -3.54%（11/20 周五收盘）</h4>
+      <p>三大指数全天低开震荡，仅 313 只个股上涨，5236 只下跌。半导体产业链领跌：通富微电、金海通、联合化学、张江高科跌停。红利股逆市拉升：建设银行、工商银行、中国银行、长江电力均创历史新高。猪肉股反弹，金新农涨停。上证 50 尾盘翻红。<b>本周特征：</b>AI 股灾传导至半导体 + 科技板块全杀，资金涌向红利避险。</p>
+      <p><b>重点异动：</b>通富微电（002156）跌停、金海通（003029）跌停、张江高科（600895）跌停 — 半导体全板块遭遇 NVDA -14% 传导。建设银行（601939）/ 工商银行（601398）/ 中国银行（601988）创历史新高 — 红利避险逻辑持续。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 -1.89% 报 22,410 / 恒生科技 -3.78% 报 3,511（11/20 收盘）</h4>
+      <p>恒指八日连跌，盘中一度击穿 3,500 点。科网股跌多涨少：网易 -17%、快手 -11%，阿里巴巴逆市涨 3%（财报超预期：营收 2,715 亿 +10%，净利 +213% 至 644 亿，阿里云 AI 收入 +53%）。成交 2703 亿港元。<b>亮点：</b>阿里 Q2 财报全面超预期，经营利润率从 2% 升至 11%，是港股今日唯一逆市拉升的科技龙头。</p>
+      <p><b>重点异动：</b>阿里巴巴-W（09988）+3% 逆市上涨 — 财报驱动；网易（09999）-17% — 游戏业务增速放缓担忧；快手（01024）-11% — 科技板块集体抛售。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — S&amp;P -3.70% 报 6,910 / 道指 -1.9% 报 48,147 / 纳指 -5.3% 报 22,617（11/20 收盘）</h4>
+      <p>S&amp;P 进入修正区间，纳指年内转负。道指和 S&amp;P 同步进入 correction。<b>跌幅 TOP 3：</b>NVDA -14% / META -5.9% / TSLA -7.6%。<b>领跌板块：</b>半导体全线崩盘（AMD -13.25%、AVGO -12.19%）、科技（AMZN -4.1%、GOOG -2.6%、MSFT -2.8%）。VIX 收 35.89，盘中触 40。<b>本周特征：</b>2025 年 4 月以来最差单周（S&amp;P 周跌 -8.6%）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI -5.21% 报 4,870 创 10 个月新低（11/20 收盘）</h4>
+      <p>KOSPI 创 1 月 16 日以来最低。三星电子 -7.01%、SK 海力士 -5.92%——韩国科技股遭 NVDA -14% 直接传导。<b>本周特征：</b>AI 估值质疑 + 出口管制收紧 = 韩国半导体双寡头遭遇双重打击。日本日经 225 同日 -5.06% 报 56,436，全亚洲科技股黑色星期五。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>阿里财报 · 袁记云饺 · 消费股边际改善</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">阿里财报</span>
+        <h4>阿里巴巴 Q2 财报全面超预期：营收 2,715 亿 +10%，净利 +213%，阿里云 AI 收入 +53%</h4>
+        <p>11/19 发布的 2027 财年 Q2 财报：营收 <strong>2,715.19 亿</strong>（+10%），调整后 EBITA <strong>326.36 亿</strong>（+260%），经营利润率从 2% 升至 <strong>11%</strong>，净利润 <strong>644.20 亿</strong>（+213%）。阿里云 AI 收入增长 <strong>53%</strong>，即时零售减亏。阿里港股逆市涨 3% 至 82.3 港元。但同期美团、网易、快手大幅下跌——阿里是唯一逆市走强的科技龙头。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>阿里财报证明了两件事：① 云 AI 收入 +53% = AI 需求确实在增长（不是只有英伟达在赚钱）；② 经营利润率从 2% 到 11% = 降本增效在起效。但在 NVDA -14% 的大环境下，单个公司的好财报挡不住板块抛售。对 lainy：阿里是「AI 需求传导到云端」的验证信号。</div>
+        <div class="ticker">📌 关联标的：BABA / 09988 阿里巴巴 — 财报超预期但短期被板块拖累；阿里云 AI 增速是 AI capex 故事的「下游验证」</div>
+        <div class="source">🔗 Source: <a href="https://www.163.com/dy/article/LC5UUA8R0550WHYR.html" target="_blank">网易</a> · <a href="https://www.163.com/dy/article/LC6TO64705118O92.html" target="_blank">网易</a> · <a href="https://www.sohu.com/a/1104056903_465270" target="_blank">搜狐</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">餐饮 IPO</span>
+        <h4>袁记云饺母公司通过港交所聆讯：2026 年首家港股内地餐饮 IPO，「饺子第一股」要来了</h4>
+        <p>11/19 晚间，袁记食品（袁记云饺母公司）在港交所披露聆讯后资料集，通过上市聆讯。联席保荐人华泰国际、广发证券，拟募资 3-4 亿港元。从广州菜市场 5 平米档口起步，将成为港交所「饺子第一股」。2026 年前 8 个月港股内地餐饮上市数为零——袁记的突围被视为消费赛道的「破冰」。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>消费 IPO 在冰封期破冰 = 一级市场信心在修复的信号。3-4 亿港元募资规模不大，但「首家」的信号意义 > 金额。对 lainy：关注消费赛道一级市场解冻的节奏——如果袁记顺利挂牌后有溢价，后续消费 IPO 管线会放开。</div>
+        <div class="ticker">📌 关联标的：无直接 A 股标的 — 关注消费 IPO 解冻信号 + 港股餐饮板块情绪</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.cn/article_7857201856_1d45362c001908vm56.html" target="_blank">新浪零售</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">消费趋势</span>
+        <h4>消费股正在悄悄启动：酒店餐饮降本增效、超市减亏、白酒降幅收窄——边际改善信号</h4>
+        <p>21 财经报道指出，消费股资金面正在改善——公募基金消费持仓从低配开始回升。无论是酒店餐饮的「降本增效」、超市的「大幅减亏」，还是白酒的「降幅收窄」与原奶的「产能出清」，都在指向同一个事实：整个消费市场正在发生实质性的边际改善。瑞银对周大福评级「买入」，香港奢侈品零售逐步复苏。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>消费股的「边际改善」不等于「V 型反转」——但降幅收窄 = 最差的时候可能过去了。对 lainy 的配置框架：白酒关注高端（茅台 > 洋河），餐饮关注连锁化率提升（蜜雪/瑞幸逻辑），零售关注「服务 > 商品」的趋势。</div>
+        <div class="ticker">📌 关联标的：600519 贵州茅台 / 002511 顺网科技 / 01929 周大福 — 消费边际改善，但需精选个股</div>
+        <div class="source">🔗 Source: <a href="https://www.21jingji.com/article/20261120/herald/1ce5586f27255e2ac4182ae351302933.html" target="_blank">21财经</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [原材料 — 锂/铜/农产品] → 中游 [制造 — 电池/家电/食品加工] → 下游 [渠道 — 电商/超市/餐饮] — 当前受益环节：下游服务型消费边际改善，阿里云 AI 验证下游需求</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>三体第二季定档 · I'm a Celeb</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">Netflix</span>
+        <h4>Netflix《3 Body Problem》第二季定档 2027/1/14！6 集一次性放出——「黑暗森林」来了</h4>
+        <p>Netflix 官方放出《3 Body Problem》第二季预告片：6 集长集一次性播出，2027 年 1 月 14 日上线。从第一季 2024 年 3 月播出后近三年等待，外星人终于「回电话」了。The Geek Twins 评价：「San-Ti 不再从 400 年外观望——这次人类必须真的反击。」预告片定调更黑暗，对应原著《黑暗森林》的宇宙社会学法则。</p>
+        <div class="why">🦞 <b>花边点评：</b>三体第二季选在 1/14 开播 = Netflix Q1 留客战略。对 lainy：如果第一季的「魔改」让你又爱又恨，第二季由 Benioff &amp; Weiss（《权力的游戏》团队）操刀，黑暗森林的叙事密度比第一部高——但「魔改」争议大概率不会消失。无论如何，1 月的周末有了着落。</div>
+        <div class="source">🔗 Source: <a href="https://thegeektwins.com/2026/11/3-body-problem-season-2-humanitys-ultimate-danger-arrives.html" target="_blank">The Geek Twins</a> · <a href="https://www.andrewliptak.com/3-body-problem-season-2-trailer-netflix-watch/" target="_blank">Andrew Liptak</a> · <a href="https://www.makeuseof.com/3-body-problem-netflixs-sci-fi-dark-forest/" target="_blank">MakeUseOf</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag fun">真人秀</span>
+        <h4>I'm a Celebrity 营地内战：AJ 落泪、Mariella Frostrup 100/1 赔率——英国综艺收视爆款</h4>
+        <p>英国 ITV 真人秀《I'm a Celebrity... Get Me Out of Here!》2026 季开播，营地冲突升级：AJ 因 Mariella 的烹饪管控情绪崩溃落泪，社交媒体热议。博彩公司给 Mariella Frostrup 100/1 的胜出赔率——观众投票首次淘汰即将到来。</p>
+        <div class="why">🦞 <b>轻松一下：</b>在 NVDA -14% 的一天后，看看英国名人在澳洲丛林里为做饭吵架——可能正是你需要的心情调剂。</div>
+        <div class="source">🔗 Source: <a href="https://www.express.co.uk/showbiz/tv-radio/2266702/im-celebrity-2026-launch-show" target="_blank">Express</a> · <a href="https://journalarta.com/en/2026/11/21/mariella-frostrup-im-a-celebrity-cooking-rows-odds/" target="_blank">JournalArta</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>一条就好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI · 科幻</span>
+        <h4>AI 股灾中没人提的讽刺：Anthropic 上市融资 $332 亿，但市场正在质疑 AI 能不能赚钱</h4>
+        <p>Anthropic IPO 文件披露前 9 个月营收 $332.24 亿——但上市第二日股价 -8.5%。同期英伟达市值蒸发 $2.5 万亿。市场正在用一种矛盾的方式定价 AI：一边给 AI 公司 IPO 定 $1.76 万亿估值，一边把 AI 芯片龙头打到 7 连跌。这不是理性的「AI 泡沫破裂」叙事——这是市场在「信仰」和「验证」之间的剧烈摇摆。</p>
+        <div class="why">🦞 <b>龙虾老师的花边视角：</b>2026 年 11 月 20 日可能是 AI 叙事的分水岭——不是「AI 不行了」，而是「AI 从信仰阶段进入验证阶段」。对 lainy 来说，这就像 2000 年的互联网泡沫：技术革命是真的，但估值太多了。区别在于 2000 年的互联网公司很多没有营收——而英伟达每季度赚 $1158 亿。问题是：市场愿意为这个增长付多少钱？今天答案是：比昨天少 14%。</div>
+        <div class="source">🔗 Source: <a href="https://fortune.com/2026/11/20/anthropic-stock-teeters-close-to-ipo-price-in-second-day-of-trading/" target="_blank">Fortune</a> · <a href="https://finance.yahoo.com/markets/stocks/article/anthropic-stock-dives-after-rip-roaring-ipo-095411951.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+    </div>
+  </section>
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
