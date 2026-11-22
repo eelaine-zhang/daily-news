@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-22</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 18px; padding-bottom: 4px; border-left: 4px solid var(--accent); padding-left: 12px; border-bottom: none !important; margin-bottom: 20px !important; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; color: var(--text-dim); }
+  .card .why::before { content: "💡 "; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .source { font-size: 12px; color: var(--text-dim); }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 22 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>AI 股灾持续：</b>英伟达周五再暴跌 14%（收 $125.53），SEC 已对其会计 Practices 展开民事调查；费城半导体指数周跌 17%，创 2001 年以来最差单周——纳指 100 距高点仅差 0.2% 即进入技术性熊市。</li>
+      <li><b>芯片管制升级：</b>美国新出口管制规则 11/19 生效后，TSMC 与三星已暂停向中国客户发运先进制程芯片（16nm 及以下需许可），同时将印尼、马来西亚、新加坡、泰国、巴西也纳入许可范围。</li>
+      <li><b>12 月加息概率飙至 90%：</b>FOMC 会议纪要显示「几乎所有官员」预期 12 月加息 25bp，Waller 公开支持；联邦基金期货已 fully price in，Lisa Cook 更暗示可能需要更大幅度加息。</li>
+    </ul>
+  </div>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>AI 股灾 + 芯片管制双线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">SEC 调查</span>
+        <h4>英伟达单日再暴跌 14%（收 $125.53），SEC 已对其会计 Practices 展开民事调查——市值从峰值蒸发 $2.7 万亿</h4>
+        <p>继 11/20 英伟达因 SEC 会计调查传闻暴跌后，周五（11/21）跌势加速。Reuters 报道 SEC 正在调查英伟达的会计 Practices，NYT 引述两名知情人士确认。英伟达收盘 $125.53（<strong>-14%</strong>），较 10 月高点已跌超 <strong>45%</strong>。自 Jensen Huang 11/12 因婚外情+涉嫌间谍案辞职以来，公司已失去 CEO、面临 SEC 调查、众议院 probe 三重压力。Broadcom、AMD、Marvell、Applied Materials 周五均跌超 <strong>10%</strong>。Yahoo Finance 报道标题称「$2.7 万亿大撤退」。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这不是普通的回调——这是 AI 估值信仰的系统性崩塌。英伟达从峰值蒸发 $2.7 万亿，相当于整个英国 GDP。SEC 调查会计 Practices 意味着市场此前对 AI 收入增速的信任正在被质疑。加上 Jensen 辞职、众议院 probe、TSMC 暂停中国订单——英伟达的多重危机正在从个股风险扩散为系统性风险。对 lainy：这验证了「AI 估值泡沫」的担忧不是空穴来风，短期内 NVDA 及整个 AI 板块可能继续承压。</div>
+        <div class="ticker">📌 关联标的：NVDA（-14%，较峰值 -45%）/ AMD / AVGO / MRVL / AMAT（均跌超 10%）/ SOX（费城半导体，周跌 17%）/ SMH（半导体 ETF）— AI 芯片链系统性抛售</div>
+        <div class="source">🔗 Source: <a href="https://www.nytimes.com/2026/11/20/business/nvidia-sec-accounting.html" target="_blank">New York Times</a> · <a href="https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html" target="_blank">Yahoo Finance / Reuters</a> · <a href="https://www.fool.com/investing/2026/11/21/after-its-worst-week-in-18-years-nvidia-now-faces-an-sec-investigation-what-it-means-for-investors/" target="_blank">Motley Fool</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC + 三星</span>
+        <h4>TSMC 与三星正式暂停中国客户先进制程出货——16nm 及以下需美国出口许可，新规还覆盖东南亚五国</h4>
+        <p>美国商务部修订后的出口管制规则于 11/19 生效。Reuters 报道 TSMC 已告知中国客户暂停 <strong>16nm 及更先进制程</strong>的订单，除非获得美国出口许可。三星同步跟进。新规还取消了拜登时代的 AI Diffusion Rule，将许可要求扩展至<strong>印尼、马来西亚、新加坡、泰国、巴西</strong>。TSMC 同时在审查中国客户和非中国客户的合规性。Yahoo Finance 确认 TSMC 和三星均已暂停先进芯片对华出货。</p>
+        <div class="why">🦞 <b>商业含义：</b>这是对中国 AI 芯片「算力租赁」漏洞的最终封堵。16nm 是新门槛——比之前 7nm 更严格，意味着大量用于 AI 推理的中端芯片也被卡住。扩展到东南亚五国说明美国在防止通过第三国转口。对 lainy：① 中国 AI 公司的推理算力将受到实质性限制；② TSMC 短期收入可能受影响（中国客户占其收入 ~10%）；③ 国产替代情绪利好中芯国际、寒武纪等。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC，短期承压）/ SSNLF（三星）/ 688981 中芯国际（国产替代利好）/ 688256 寒武纪 — 中国先进制程获取能力进一步收紧</div>
+        <div class="source">🔗 Source: <a href="https://aiweekly.co/alerts/tsmc-pauses-shipments-as-new-us-chip-rules-hit-beyond-ai" target="_blank">AI Weekly</a> · <a href="https://theopenpress.in/article/us-chip-curbs-tsmc-samsung-pause-china-shipments" target="_blank">The Open Press / Reuters</a> · <a href="https://finance.yahoo.com/technology/articles/taiwan-semiconductor-manufacturing-nyse-tsm-042528694.html" target="_blank">Yahoo Finance</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Jensen Huang 事件</span>
+        <h4>Jensen Huang 复出意愿被董事会否决——英伟达确认由 CFO Colette Kress 担任临时 CEO</h4>
+        <p>Yahoo Finance 11/21 报道，Jensen Huang 在辞职后曾公开表示愿意回归，但被英伟达董事会直接否决。Wikipedia 记载 Huang 于 11/12 因被曝与多名下属存在婚外关系（包括与 Megaspeed 前高管 Alice Huang，后者被美国官员怀疑与中国情报有关），被董事会要求辞职。NYT 报道临时 CEO Colette Kress（原 CFO）在内部信中告诉员工「公司将度过难关」。Trump 总统早在 2025 年就被情报部门告知相关情况。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>从「AI 之王」到「被自己的公司拒之门外」只用了 10 天。董事会的否决说明 Jensen 的回归可能性基本归零——这对英伟达是最大的不确定性：创始人文化没了，新 CEO 悬而未决，SEC 在查账。对 lainy：英伟达的「Jensen 溢价」正在被市场定价 out，估值重估可能还要持续几个季度。</div>
+        <div class="ticker">📌 关联标的：NVDA（管理层真空 + SEC 调查 = 估值持续承压）/ 竞争对手 AMD、AVGO 可能从中获益但也被板块情绪拖累</div>
+        <div class="source">🔗 Source: <a href="https://finance.yahoo.com/technology/articles/nvidia-shuts-down-jensen-huang-093453815.html" target="_blank">Yahoo Finance</a> · <a href="https://en.wikipedia.org/wiki/Jensen_Huang_spying_scandal" target="_blank">Wikipedia</a> · <a href="https://www.nytimes.com/2026/11/18/technology/nvidia-jensen-huang-affair-colette-kress.html" target="_blank">New York Times</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受损环节：下游 AI 芯片设计（NVDA -45% from peak）+ 中游代工（TSMC 中国订单暂停）；受益环节：国产替代（中芯国际/寒武纪）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>芯片战 + 稀土博弈</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">稀土管制</span>
+        <h4>中国将稀土出口暂停延长至 2027 年 1 月 10 日——MOFCOM 2025/61 和 2025/62 号公告暂停期正式续期</h4>
+        <p>中国商务部正式宣布，将 MOFCOM 2025/61 和 2025/62 号公告中关于稀土相关技术出口管制的暂停期从 2026 年 11 月 11 日延长至 <strong>2027 年 1 月 10 日</strong>。Europe Says 报道指出，这给了欧洲制造商更多时间评估战略供应风险。该决定紧随中美贸易谈判之后，被视为「两个月缰绳」策略——暂时缓手但随时可以收紧。CASRAI Global Trade Alert 同步确认。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>稀土是中国对美芯片管制的「反向杠杆」——你卡我芯片，我卡你稀土。延长到 2027/1/10 意味着中国在留后手：如果美方继续加码芯片管制，稀土可能立刻收紧。对 lainy：① 稀土概念股（北方稀土、广晟有色）可能受政策波动；② 这条线跟芯片战是镜像关系——一边紧一边松的概率不大。</div>
+        <div class="ticker">📌 关联标的：600111 北方稀土 / 600259 广晟有色 / 稀土 ETF — 政策性博弈工具，阶段性波动</div>
+        <div class="source">🔗 Source: <a href="https://casrai.org/news/china-mofcom-extends-rare-earth-export-control-suspension-2027" target="_blank">CASRAI</a> · <a href="https://www.europesays.com/europe/187083/" target="_blank">Europe Says</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [稀土开采 — 中国六大稀土集团] → 中游 [磁材加工 — 宁波韵升/中科三环] → 下游 [电动车/风电/电机 — 比亚迪/金风科技] — 当前格局：中国保留稀土出口管制杠杆，随时可收紧</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>FOMC 12/8-9 · 加息预期 90%</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">FOMC 加息</span>
+        <h4>12 月加息概率飙至 90%——FOMC 纪要显示「几乎所有官员」预期加息 25bp，Lisa Cook 暗示可能需要更大幅度</h4>
+        <p>FOMC 10 月会议纪要显示，<strong>几乎所有官员</strong>预期 12 月将加息 25 个基点。The Street 报道 Waller 公开表态支持「12 月 jumbo rate hike」。COINOTAG 数据显示联邦基金期货已将 12 月加息概率定价至 <strong>90%</strong>。24/7 Wall St 报道 Fed 理事 Lisa Cook 警告可能需要<strong>更大幅度加息</strong>。但 NY Fed 主席 Williams 发言一度让加息概率回落——内部仍有分歧。当前利率 3.75%-4.00%，Q3 GDP 初值 3.4%。下次 FOMC 会议 12/8-9，将发布新的 SEP（经济预测摘要）。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>90% 概率 = 市场已经 fully price in 12 月加息。真正的变量是：① 加息幅度是 25bp 还是 50bp？Lisa Cook 的表态让 50bp 的尾部风险上升；② 2027 年加息路径——如果通胀因油价/工资粘性而居高不下，加息周期可能延长。对 lainy：加息 = 科技股估值承压 = AI 板块雪上加霜。但好消息是「90% 已定价」意味着如果不加息反而是「意外利好」。</div>
+        <div class="ticker">📌 关联标的：SPY / QQQ（科技股，加息直接承压）/ TLW（2Y 美债 ETF）/ GLD 黄金（加息预期已定价，观望）— 12/8 FOMC 是下一个关键节点</div>
+        <div class="source">🔗 Source: <a href="https://www.eagletribune.com/news/business/fed-minutes-higher-interest-rates-needed-in-december-as-inflation-worries-mount/article_36f97f9c-8a0b-475c-87c3-192b9b55aadc.html" target="_blank">Eagle Tribune</a> · <a href="https://en.coinotag.com/fed-december-rate-hike-odds-90-fomc-decision" target="_blank">COINOTAG</a> · <a href="https://247wallst.com/investing/2026/11/21/feds-lisa-cook-warns-of-larger-rate-hikes-ahead/" target="_blank">24/7 Wall St</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">财政数据</span>
+        <h4>财政部公布 1-10 月个税收入 1.64 万亿（+22.9%）超 2025 全年——离岸信托补税仍为主要驱动力</h4>
+        <p>21 经济网报道财政部数据：1-10 月个人所得税收入同比 <strong>+22.9%</strong>，其中 10 月单月增长 <strong>89.6%</strong>。第一财经此前从税务总局获悉，离岸信托收益征税政策过渡期已平稳结束，累计申报离岸信托个税超 <strong>1600 亿元</strong>，10 月单月入库超 <strong>1200 亿元</strong>。其他税种：增值税 +5.3%，企业所得税 +5.9%，证券交易印花税 <strong>+54.1%</strong>。</p>
+        <div class="why">🦞 <b>龙虾老师的解读：</b>这条线的核心信息已经在 11/21 早报中报道过（个税 +22.9% / 信托补税 1600 亿），今天没有新的增量事实。但 10 月单月 +89.6% 这个数据本身——配合证券交易印花税 +54.1%——说明 10 月 A 股交易量大幅放大。离岸信托补税已从「新闻」变成「常态化」，以后只在有新案例/新数据时再报。</div>
+        <div class="ticker">📌 关联标的：无直接个股关联——宏观税收数据，关注 A 股交易量（印花税 +54.1% = 10 月行情活跃）</div>
+        <div class="source">🔗 Source: <a href="https://www.21jingji.com/article/20261121/herald/efb56d9560c3597ce8d6e6fef975c211.html" target="_blank">21 经济网</a> · <a href="https://www.thepaper.cn/newsDetail_forward_34530748" target="_blank">澎湃新闻</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [通胀数据/油价] → 中游 [Fed 利率决策] → 下游 [风险资产估值] — 当前关键变量：12/8 FOMC + Lisa Cook 是否推动 50bp 加息</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>黄金 14 个月新低 · 铜连跌三周 · 油价回落</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag" style="background:#D4A64A18;color:#D4A64A;">贵金属</span>
+        <h4>黄金 $3,530（14 个月新低，月跌 14.6%）· 白银 $41.19（月跌 28.9%）——AI 股灾 + 加息恐惧双杀持续</h4>
+        <p>Commodity Merchant 引用 Trading Economics 数据（截至 11/20）：黄金报 <strong>$3,535/oz</strong>，月跌 <strong>14.64%</strong>，年跌 12.97%；白银报 <strong>$41.19/oz</strong>，月跌 <strong>28.93%</strong>，年跌 17.63%。铜报 $5.4650/lb，月跌 16.48%。APA 报道黄金已跌破 $3,800。Sharetrader 报道黄金和白银在 Fed 会议纪要后继续下滑。加息预期 + 美元走强 = 贵金属持续承压。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>黄金在两周内从 $4,000 跌到 $3,530——跌掉 12%。这不是避险资产该有的表现，说明市场在抛售一切换取现金（margin call 级别的流动性需求）。白银月跌 29% 更极端。对 lainy：① 短期黄金可能超跌，但加息预期不逆转就难有像样反弹；② 金矿股（山东黄金/紫金矿业）短期承压但中长期估值有支撑。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 $3,535（月跌 14.6%）/ 518880 黄金 ETF / GLD / 600547 山东黄金 / 600916 龙高股份 — 短期超跌但需等 Fed 转向</div>
+        <div class="source">🔗 Source: <a href="https://commoditymerchant.substack.com/p/three-metals-fell-within-135-points" target="_blank">Commodity Merchant</a> · <a href="https://sharetrader.com.au/news/2026-11-21-gold-and-silver-slide-after-fed-minutes-oil-falls-despite-hormuz-attacks-the-week-in-commodities" target="_blank">Sharetrader</a> · <a href="https://en.apa.az/bourse/gold-and-other-precious-metals-prices-fall-sharply-537600" target="_blank">APA</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag" style="background:#D4A64A18;color:#D4A64A;">工业金属</span>
+        <h4>LME 铜跌至 $5.47/lb 创 7 个月新低（周线三连跌）——AI 数据中心需求预期下调为主要拖累</h4>
+        <p>Sharetrader 报道铜收于 <strong>US$5.4770/lb</strong>，11 月连续第三周下跌。Upstox 报道铜期货跌至约 $5.50/lb，为 7 个月来最低。铝同期跌 6%。主要原因：AI 数据中心建设需求预期下调 + 投机性抛售加速 + 美元走强。LME 铜价已较 10 月高点回落约 20%。</p>
+        <div class="why">🦞 <b>商业含义：</b>铜是「AI 基建」的实体指标——数据中心建设需要大量铜线/铜排。铜价持续下跌 = 市场在 pricing out AI 基建的天花板预期。对 lainy：① 铜矿股（江西铜业/Freeport）短期承压；② 但如果 AI capex 实际持续，铜的供需缺口会在 2027 年重新出现——当前下跌可能是中期买入机会。</div>
+        <div class="ticker">📌 关联标的：LME 铜 $5.47/lb / FCX（Freeport）/ 600362 江西铜业 / 600508 上海能源 / COPX（铜 ETF）— 短期承压，中期供需缺口逻辑未变</div>
+        <div class="source">🔗 Source: <a href="https://sharetrader.com.au/news/2026-11-21-gold-and-silver-slide-after-fed-minutes-oil-falls-despite-hormuz-attacks-the-week-in-commodities" target="_blank">Sharetrader</a> · <a href="https://upstox.com/news/market-news/commodities/crude-oil-falls-over-3-over-the-week-aluminium-sinks-6-silver-tumbles-16-key-factors-to-know/article-203803/" target="_blank">Upstox</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag" style="background:#D4A64A18;color:#D4A64A;">原油</span>
+        <h4>Brent $90.33（周跌 5.2%）/ WTI $81.59（周跌 7.8%）——供应过剩 + 地缘缓和 = 油价从 10 月高点回落 21%</h4>
+        <p>HDFC Sky 报道 Brent 周五收 <strong>$90.33</strong>，较上周跌 $4.98（<strong>-5.2%</strong>）。WTI 收 <strong>$81.59</strong>，跌 $6.91（<strong>-7.8%</strong>）。Benzinga 报道 Brent 周线收 $92.58，较 10 月 $117.64 高点已回落 <strong>21%</strong>。Trading Economics 数据 WTI $83.62（+1.43%）。油价下跌驱动：OPEC+ 供应过剩预期 + 中东出口恢复 + APEC 地缘缓和。Goldman Sachs 上调 2027 年 Brent 预测至 <strong>$140</strong>。Unbiased News 报道周中最佳结算价为周二 $93.14（WTI $86.01），受海湾冲突短暂推升。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>油价正在从「地缘溢价」回归「基本面」。10 月 $117 是 Hormuz 袭击 + 以色列参战恐慌的高点，现在地缘风险消退 + OPEC+ 产量回归 = 回到 $90 区间。但 Goldman 预测 2027 $140 说明机构认为中长期供需仍然偏紧。对 lainy：低油价 = 通胀压力减轻 = 美联储加息压力缓解——这是当前唯一利好科技股的大宗信号。</div>
+        <div class="ticker">📌 关联标的：Brent $90.33 / WTI $81.59 / 600028 中国石化 / 601857 中国石油 / XOM 埃克森美孚 / XLE 能源 ETF — 油价回落利好通胀预期但利空能源股</div>
+        <div class="source">🔗 Source: <a href="https://hdfcsky.com/news/brent-falls-5-2percent-to-90-33-wti-drops-7-8percent-as-supply-glut-deepens" target="_blank">HDFC Sky</a> · <a href="https://www.benzinga.com/markets/commodities/26/11/63516226/crude-oil-choppy-as-strait-of-hormuz-flows-fall-and-traders-price-in-renewed-us-iran-strikes" target="_blank">Benzinga</a> · <a href="https://unbiasednews.substack.com/p/oil-monitor-weekly-summary-nov-15" target="_blank">Unbiased News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：贵金属 [金/银 — 央行购金/避险] → 工业金属 [铜/铝 — AI 基建/制造业] → 能源 [油/气 — OPEC+/地缘] — 当前格局：全线下跌，加息预期主导；低油价是唯一利好信号</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>LNG 扩容 · 天然气 +4%</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag" style="background:#C4A77D18;color:#C4A77D;">LNG</span>
+        <h4>FERC 批准 Sabine Pass LNG 重大扩建——Cheniere 获准增加约 2/3 产能，美国 LNG 出口再扩容</h4>
+        <p>Regional Media News 报道，美国联邦能源监管机构（FERC）周四授权 Cheniere Energy 旗下 Sabine Pass LNG 出口终端新增三个生产线（trains）和两条州际管道项目，预计可将其产能提高约 <strong>三分之二</strong>。这是美国 LNG 出口基础设施的重大扩建。Longbridge 周报显示美国天然气周涨 <strong>+4.04%</strong>，接近历史高点。EIA 预测 2026 年发电量将达 4390 亿千瓦时（+2.7%），天然气提供其中近 40%。IEA World Energy Outlook 2026 指出天然气使用强劲增长，由新一轮 LNG 供应潮支撑。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>Sabine Pass 扩建 = 美国 LNG 出口能力再上台阶。对 lainy：① 美国天然气 +4% 说明 AI 数据中心电力需求正在推高天然气价格——这是「AI → 电力 → 天然气」的传导链；② 中国 LNG 进口商（新奥股份/广汇能源）可能受益于全球供应增加；③ 但美国 permitting reform 法案进展也是关键——如果通过，更多 LNG 项目将加速。</div>
+        <div class="ticker">📌 关联标的：LNG（Cheniere Energy）/ 600803 新奥股份 / 603693 广汇能源 / UNG（天然气 ETF）— AI 数据中心电力需求 → 天然气需求传导</div>
+        <div class="source">🔗 Source: <a href="https://www.regionalmedianews.com/news/national/energy/energy-regulator-approves-sabine-pass-lng-for-major-expansion/" target="_blank">Regional Media News</a> · <a href="https://longbridge.com/en/news/306349080" target="_blank">Longbridge</a> · <a href="https://www.iea.org/reports/world-energy-outlook-2026/executive-summary" target="_blank">IEA</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [天然气开采 — Cheniere/新奥] → 中游 [LNG 液化/运输 — Sabine Pass/LNG 船] → 下游 [发电 — 电力公司] — 当前受益环节：上游 LNG 出口（Sabine Pass 扩建 + 天然气 +4%）</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股 · 11/20 周五收盘</small></h2>
+
+    <div class="market-block">
+      <h4>🇨🇳 A 股 — 沪指 3,533.79（-1.23%）/ 深成指 -3.09% / 创业板 -3.54%（11/20 周五收盘）</h4>
+      <p>A 股周五跟随亚太跌势。沪指收 3,533.79（<strong>-1.23%</strong>），深成指和创业板跌幅更大（<strong>-3.09%</strong> / <strong>-3.54%</strong>）。AI/半导体板块受 NVDA 暴跌拖累。阿里巴巴 Q2 财报超预期（营收 2715 亿 +10%，净利 +213%，阿里云 AI 收入 +53%）但股价周五仍跌 2.7%，反映市场情绪已盖过基本面。本周无交易所公告/监管新规/指数调整——纯行情下跌。24/7 Wall St 报道上海综指同期跌约 2.0%。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇭🇰 港股 — 恒指 22,410.80（-1.89%）进入熊市区域 · 恒生科技 -3.78% 报 3,511（11/20 收盘）</h4>
+      <p>BusinessToday 报道恒指跌至一年多来最低收盘位（<strong>-1.89%</strong> 报 22,410.80），进入技术性熊市。恒生科技指数跌 <strong>-3.78%</strong>。阿里财报利好未能提振板块——市场在抛售一切 AI/科技概念。247WallSt 报道恒指同期跌 2.2%。本周无港股交易所公告/制度变化。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇺🇸 美股 — S&amp;P 6,910.39（-3.70%）进入修正区间 · 道指 48,147（-1.93%）· 纳指 22,617（-5.28%）（11/21 周五收盘）</h4>
+      <p>Noctaaa / TechFlow 报道：S&amp;P 500 收 6,910.39（<strong>-3.70%</strong>），自 10 月高点回落 10%+ 进入修正区间。道指 48,147.33（<strong>-1.93%</strong>）。纳指 22,617.73（<strong>-5.28%</strong>），年内转负。<strong>纳指 100 距离技术性熊市仅差 0.2%</strong>（较峰值 -19.8%）。费城半导体指数（SOX）周五跌 10.73%，<strong>周跌 17%</strong>，创 2001 年 9/11 以来最差单周。CNBC 统计道琼斯本周表现为 2020 年 3 月以来最差，纳指本周跌幅为 6 年来最大。英伟达收 $125.53（-14%），Broadcom/AMD/Marvell/Applied Materials 均跌超 10%，Anthropic 收 $88.91（-11%，逼近 IPO 价 $83）。VIX 飙至 35.89（盘中触 40）。</p>
+    </div>
+
+    <div class="market-block">
+      <h4>🇰🇷 韩股 — KOSPI 4,869.96（-5.21%）创 10 个月新低 · 在野党要求特检（11/20 收盘）</h4>
+      <p>Seoul Economic Daily / Chosun / BusinessToday 报道：KOSPI 崩跌 <strong>-5.21%</strong> 报 4,869.96，10 个月新低。BigGo Finance 报道在野党直接将矛头对准李在明政府的股市政策，要求特别检察官调查。费城半导体指数 -10.73% 传导到韩国：三星电子和 SK Hynix 作为 KOSPI 权重股遭受双重打击——AI 芯片需求质疑 + 半导体管制升级。本周无韩国交易所公告/制度变化。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>阿里财报 · Black Friday 预热</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">阿里巴巴</span>
+        <h4>阿里巴巴 Q2 财报：营收 2715 亿（+10%），阿里云 AI 收入 +53%，但 FCF 转 -344.7 亿——capex 暴增 60%</h4>
+        <p>Seeking Alpha / Ad-Hoc-News / DefenseWorld 报道：阿里巴巴截至 9 月的 Q2 营收 <strong>$405 亿</strong>（+9.6%），超预期。阿里云 AI 收入 <strong>+53%</strong>，EBITA margin 14.5%。但资本开支暴增 <strong>60%</strong>，自由现金流转负至 <strong>-344.7 亿元</strong>。BABA 交易在 9.1x 前瞻 P/E，反映市场对 VIE 结构和政治风险的折价。Seeking Alpha 认为「超卖」。但股价周五仍跌 2.7%——AI capex 焦虑盖过财报利好。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>阿里的财报是一个缩影——AI 投入在吞噬现金流。云收入 +53% 是好消息，但 FCF 转 -344 亿说明阿里正在「用利润换 AI 算力」，跟美国科技巨头的 capex 焦虑一模一样。对 lainy：① 这验证了「AI capex → 利润承压」是跨市场的统一逻辑；② 但阿里 9.1x P/E 确实便宜——如果云增长持续，中期估值有修复空间。</div>
+        <div class="ticker">📌 关联标的：BABA（阿里巴巴）/ 9988.HK — 阿里云 +53% 是核心亮点，但 FCF 转负是估值拖累</div>
+        <div class="source">🔗 Source: <a href="https://seekingalpha.com/article/4970838-alibaba-50-percent-plus-cloud-growth-9-1x-pe-oversold" target="_blank">Seeking Alpha</a> · <a href="https://www.defenseworld.net/2026/11/21/alibaba-group-nysebaba-shares-down-2-7-following-weak-earnings.html" target="_blank">DefenseWorld</a> · <a href="https://www.ad-hoc-news.de/boerse/news/unternehmensnachrichten/alibaba-s-cloud-margins-improve-as-capital-spending-and-legal-risks-weigh-on-the-stock/70541301" target="_blank">Ad-Hoc-News</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">Black Friday</span>
+        <h4>Black Friday 2026 预热已开始：Amazon / Best Buy / Home Depot 提前开跑——11/27 正式日</h4>
+        <p>Today.com / CNN Underscored / USA Today / TechRadar 均报道 Black Friday 2026 早期促销已全面启动。主要零售商（Amazon, Best Buy, Home Depot, Lowe's, Samsung, Dell）提前推出折扣。热门品类：LG OLED 电视、AirPods、Galaxy S26 Ultra、Sony 耳机、Garmin 智能手表。Black Friday 正式日期 <strong>11/27</strong>（感恩节后周五），Cyber Monday 11/30。</p>
+        <div class="why">🦞 <b>花边视角：</b>Black Friday 在 AI 股灾背景下启动——美股暴跌但消费者可能在「跌出来的折扣」里找到安慰。对 lainy：如果关注消费趋势，今年 BF 的看点是 AI 产品（智能手表/耳机）是否打折力度加大——如果清库存，可能暗示消费电子需求疲软。</div>
+        <div class="ticker">📌 关联标的：AMZN（Amazon）/ BBY（Best Buy）/ HD（Home Depot）/ LULU（lululemon）/ NKE（Nike）— 消费情绪指标</div>
+        <div class="source">🔗 Source: <a href="https://www.today.com/shop/black-friday-sales-2026-rcna605702" target="_blank">Today</a> · <a href="https://edition.cnn.com/cnn-underscored/deals/best-black-friday-deals-2026-11-21" target="_blank">CNN Underscored</a> · <a href="https://www.usatoday.com/story/shopping/deals/black-friday/2026/11/20/shop-black-friday-sales-events-2026/92881272007/" target="_blank">USA Today</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [品牌 — Nike/LG/Sony] → 中游 [零售 — Amazon/Best Buy] → 下游 [消费者] — 当前格局：Black Friday 提前启动，但 AI 股灾可能压制消费情绪</div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末轻松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">影视</span>
+        <h4>《The Odyssey》伦敦 Q&amp;A：Robert Pattinson + Tom Holland + Himesh Patel + Samantha Morton 同台——Christopher Nolan 荷马史诗大片蓄势待发</h4>
+        <p>People Magazine 11/21 报道，Robert Pattinson、Tom Holland、Himesh Patel 和 Samantha Morton 出席在伦敦举行的《The Odyssey》Q&amp;A 活动。Keanu Reeves 也被拍到。Christopher Nolan 执导的荷马史诗改编大片阵容豪华，预计 2026 年上映。同期 HBO 播出 Anthony Bourdain 传记片《Tony》，Hallmark 频道播出 Erin Cahill 和 Andrew Walker 主演的《Christmas in Blue Dog Valley》。</p>
+        <div class="why">🦞 <b>花边点评：</b>Nolan 的《The Odyssey》是 2026 年最受期待的大片之一——Pattinson 自《TENET》后再次与 Nolan 合作，加上 Tom Holland 的票房号召力，这部荷马史诗可能成为明年暑期档炸弹。lainy 周末如果想刷娱乐新闻，这就是今天的热搜。</div>
+        <div class="source">🔗 Source: <a href="https://people.com/star-tracks-saturday-november-21-2026-new-celebrity-photos-updated-daily-12268555" target="_blank">People</a> · <a href="https://www.tvline.com/2323637/what-to-watch-november-21-2026-tv-shows-movies-streaming/" target="_blank">TVLine</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8B0D5"><span class="emoji">🎨</span> 科技花边 <small>AI 泡沫的讽刺</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">AI 泡沫</span>
+        <h4>AI 股灾中最讽刺的画面：Anthropic IPO 融资 $813 亿，但市场正在质疑「AI 能不能赚钱」</h4>
+        <p>Anthropic 11/18 以 $83/股 IPO 定价（高于 $70-78 区间），融 <strong>$813 亿</strong>（史上最大 IPO）。首日收 $97.17（+17%），但周五收 $88.91（-11%），逼近 IPO 价。Memeburn 报道创始人套现 $20 亿。Mashable 指出 Anthropic 成为首个上市的前沿 AI 实验室。但就在 IPO 同周，英伟达暴跌 14%、SEC 展开调查、整个 AI 板块遭遇 2001 年以来最差单周——市场正在用脚投票：AI 能不能赚钱？</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>这是本周最有戏剧性的讽刺——史上最大 AI IPO 在 AI 信心崩塌的一周里完成。Anthropic 首日 +17%，第三天就逼近发行价。这说明市场对 AI 的态度已经从「无脑买入」变成「给我看到利润再说」。lainy 如果关注 AI 投资：现在不是追高的时候，等估值消化 + Jensen 事件尘埃落定再看。</div>
+        <div class="source">🔗 Source: <a href="https://mashable.com/tech/anthropic-ipo-details-price-valuation-stock-ticker" target="_blank">Mashable</a> · <a href="https://memeburn.com/anthropics-nasdaq-debut-founders-cash-out-2b/" target="_blank">Memeburn</a> · <a href="https://en.wikipedia.org/wiki/Initial_public_offering_of_Anthropic" target="_blank">Wikipedia</a></div>
+      </div>
+    </div>
+  </section>
+
+  <div style="text-align:center; margin: 40px 0 20px;"><a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a></div>
+
+  <footer>
+    🦞 龙虾老师出品 · 每天早上自动送达<br>
+    <div class="footer-note">信息来源经过人工筛选，但请以原始新闻为准。投资相关信息不构成建议。</div>
+  </footer>
+</div>
+</body>
+</html>
