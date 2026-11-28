@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日不错过新闻 · 2026-11-28</title>
+<style>
+  :root {
+    --bg: #F8F6EE; --card: #FFFFFF; --card-hover: #FBF9F2; --border: #E3D7C7;
+    --text: #4A4640; --text-dim: #A79F92; --accent: #D5A0A2; --accent-soft: #D5A0A218;
+    --hbm: #D4A64A; --geo: #A9BACB; --macro: #B7C0A3; --biz: #C9A0B6; --fun: #D4B79C;
+    --comm: #B8A07E; --energy: #C4A77D; --tech: #B8B0D5;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Noto Sans CJK SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { padding: 28px 0 20px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-dim); letter-spacing: 0.08em; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: 36px; margin: 12px 0 6px; font-weight: 700; letter-spacing: -0.02em; }
+  .subtitle { color: var(--text-dim); font-size: 15px; }
+  .tldr { background: linear-gradient(135deg, var(--accent-soft), transparent); border: 1px solid var(--border); border-left: 4px solid var(--macro); border-radius: 10px; padding: 18px 20px; margin: 24px 0 36px; box-shadow: 0 2px 8px rgba(74,70,64,0.04); }
+  .tldr h3 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; color: var(--macro); text-transform: uppercase; }
+  .tldr ul { margin: 0; padding-left: 20px; }
+  .tldr li { margin: 4px 0; }
+  .tldr li b { color: var(--accent); }
+  section { margin-bottom: 56px; }
+  section + section { padding-top: 8px; }
+  .section-title { display: flex; align-items: baseline; gap: 10px; font-size: 20px; margin: 0 0 20px; padding-left: 12px; border-left: 4px solid var(--accent); border-bottom: none; padding-bottom: 4px; }
+  .section-title .emoji { font-size: 22px; }
+  .section-title small { font-size: 12px; color: var(--text-dim); font-weight: normal; }
+  .cards { display: grid; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; transition: background 0.15s; }
+  .card:hover { background: var(--card-hover); }
+  .card h4 { margin: 0 0 8px; font-size: 17px; line-height: 1.5; font-weight: 600; }
+  .card p { margin: 0 0 10px; color: var(--text); font-size: 14.5px; line-height: 1.7; }
+  .card b, .card strong { color: var(--accent); font-weight: 600; }
+  .card .why { margin-top: 14px; padding: 12px 14px; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 6px; border-top: none; font-size: 13px; font-style: normal; }
+  .card .why::before { content: "💡 "; font-style: normal; }
+  .card .ticker { margin-top: 6px; font-size: 13px; color: var(--accent); }
+  .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; letter-spacing: 0.05em; vertical-align: middle; }
+  .tag.hbm { background: #D4A64A18; color: var(--hbm); }
+  .tag.geo { background: #A9BACB18; color: var(--geo); }
+  .tag.macro { background: #B7C0A318; color: var(--macro); }
+  .tag.biz { background: #C9A0B618; color: var(--biz); }
+  .tag.fun { background: #D4B79C18; color: var(--fun); }
+  .tag.comm { background: #B8A07E18; color: var(--comm); }
+  .tag.energy { background: #C4A77D18; color: var(--energy); }
+  .tag.tech { background: #B8B0D518; color: var(--tech); }
+  .source { font-size: 12px; color: var(--text-dim); margin-top: 8px; }
+  .source a { color: var(--text-dim); text-decoration: none; border-bottom: 1px dotted var(--border); }
+  .source a:hover { color: var(--text); }
+  .market-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
+  .market-block h4 { margin: 0 0 6px; font-size: 15px; }
+  .market-block p { margin: 0; font-size: 13px; color: var(--text); }
+  .market-block b, .market-block strong { color: var(--hbm); }
+  .chain-link { margin-top: 12px; padding: 8px 12px; background: #1a1f2a; border-radius: 6px; font-size: 12px; color: var(--text-dim); }
+  .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-dim); font-size: 13px; text-decoration: none; margin-bottom: 16px; padding: 6px 12px; border-radius: 6px; transition: all 0.15s; }
+  .back-link:hover { background: var(--accent-soft); color: var(--accent); }
+  .back-link .arrow { font-size: 16px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 13px; text-align: center; }
+  .footer-note { margin-top: 6px; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><span class="dot"></span><span>🦞 龙虾老师 · 每日不错过新闻</span></div>
+    <h1>2026 年 11 月 28 日</h1>
+    <div class="subtitle">周六 · Asia/Hong_Kong · 给 lainy 的每日简报</div>
+  </header>
+
+  <div class="tldr">
+    <h3>⚡ 今日三句话</h3>
+    <ul>
+      <li><b>国务院「国家队」稳市：</b>A 股科创 50 单日暴涨 <strong>15%</strong>、创业板涨 <strong>11.6%</strong>、CSI 半导体指数创纪录涨 <strong>17.6%</strong>——国务院常务会议要求中央汇金加大类「平准基金」稳市力度，A 股港股同步飙升。</li>
+      <li><b>Blackwell 走私实锤：</b>Bloomberg 查到 Nvidia 被禁 Blackwell GB300 芯片安装在 linked to Alice Huang 的上海数据中心——美国出口管制形同虚设，Jensen Huang 曾称「GB300 太大走私不了」。</li>
+      <li><b>Fed 12 月加息 95% 定价：</b>10 月 PCE 通胀升至 <strong>3.8%</strong>、Q3 GDP 上修至 <strong>4.3%</strong>，市场押注 12/8-9 会议加息 25bp 至 <strong>4-4.25%</strong>；同时 Black Friday 线上销售创纪录 <strong>$12.9B</strong>。</li>
+    </ul>
+  </div>
+
+  <!-- 💾 AI & 芯片 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D5A0A2"><span class="emoji">💾</span> AI &amp; 芯片产业链 <small>你最近在学的那条线</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag hbm">出口管制</span>
+        <h4>Bloomberg 实锤：被禁 Nvidia Blackwell GB300 芯片出现在上海数据中心，场地关联 Alice Huang</h4>
+        <p>Bloomberg 11/27 报道，通过中国监管机构的贷款备案文件追踪到，两家中国公司在上海「长三角项目」数据中心安装了 Nvidia <strong>Blackwell GB300</strong> 系列硬件——该数据中心有文件可追溯的关联指向 Alice Huang（新加坡 Megaspeed 创始人，本周刚被美国商务部加入 Entity List）。GB300 NVL72 是 Nvidia 最强数据中心产品，<strong>未获美国许可出口至中国属违法行为</strong>。Jensen Huang 此前曾公开声称「GB300 机架太大，不可能走私」。这是首次有书面文件证明被禁芯片已实际部署在中国境内。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>这条新闻同时打击 Nvidia 的政治风险和出口管制政策可信度。① Nvidia 在华盛顿的游说立场（「我们能管好自己的渠道」）被戳破；② 美国国会鹰派可能推动更严格的出口执法立法；③ 对 Nvidia 股价短期利空（政治风险溢价上升），但中长期可能反而推动更多「合规替代」订单流向非 Nvidia 供应商。lainy 注意：这是 AI 芯片产业链中「地缘政治」变量第一次被实证新闻坐实。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，政治风险溢价上升）/ SMH（半导体 ETF）/ 688981 中芯国际（国产替代情绪受益）— Nvidia 短期承压，国产替代叙事加强</div>
+        <div class="source">🔗 Source: <a href="https://gizmodo.com/nvidias-advanced-ai-chips-being-used-at-chinese-data-center-tied-to-alice-huang-2000846169" target="_blank">Gizmodo</a> · <a href="https://finance.yahoo.com/technology/articles/nvidia-blackwell-chips-turn-china-114546617.html" target="_blank">Yahoo Finance</a> · <a href="https://www.benzinga.com/markets/prediction-markets/26/11/63672242/nvidia-blackwell-china-smuggling-huang" target="_blank">Benzinga</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">TSMC</span>
+        <h4>TSMC 发布 AI Design Kit：用 AI 代理自动生成 A14 工艺布局，芯片设计提速 3-6 倍</h4>
+        <p>TSMC 11/27 在慕尼黑 2026 欧洲 OIP 生态工作坊发布 <strong>AI Design Kit (ADK)</strong>——一套让 AI 代理利用自然语言提示自动生成合格布局布线（placement-and-routing）流程的工具包，首个支持节点为 <strong>A14</strong>。TSMC 指出，相比 N5 系列工艺，A14 的设计规则数量增长了 <strong>3.6 倍</strong>（N3P 增 2.3 倍、N2P 增 3.1 倍），人工设计效率已跟不上工艺复杂度增长。A14 工艺设计包 v0.9 预计 <strong>2026 年 11 月底</strong>向客户开放设计，风险量产目标 <strong>2027 年底</strong>。ADK 配合 Synopsys、Cadence、Siemens EDA 的工具使用。</p>
+        <div class="why">🦞 <b>商业含义：</b>这意味着 TSMC 正在用 AI 降本——芯片设计的人力成本和周期是先进工艺量产的关键瓶颈。A14 是 TSMC 2027-2028 的核心增长节点，ADK 如果能将设计周期缩短 3-6 倍，意味着客户（Apple、Nvidia、Qualcomm）能更快推出新一代芯片 → TSMC 的产能利用率和客户粘性同步提升。lainy 的视角：这是「AI 卖铲子」的升级版——不只是卖芯片给 AI 公司，TSMC 自身也在用 AI 提升产能效率。</div>
+        <div class="ticker">📌 关联标的：TSM（TSMC ADR）/ 002371 北方华创（国产设备受益）/ SNPS（Synopsys，EDA 合作伙伴）— TSMC 长期竞争力强化，EDA 厂商受益</div>
+        <div class="source">🔗 Source: <a href="https://www.tomshardware.com/tech-industry/semiconductors/tsmc-gives-a-sneap-peak-at-ai-design-kit-agentic-ai-with-foundry-expertise" target="_blank">Tom's Hardware</a> · <a href="https://chipdispatch.com/articles/tsmc-unveils-ai-design-kit-to-automate-chip-design-at-a14" target="_blank">Chip Dispatch</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Broadcom</span>
+        <h4>Broadcom 定制 AI 芯片成 Nvidia 最强挑战者：AI 半导体收入 $16.7B，2027-28 预计翻倍</h4>
+        <p>多家财经媒体本周报道，Broadcom (AVGO) 正在成为 Nvidia 在 AI 芯片领域「最强对手」——不是 AMD。Broadcom 的 AI 半导体收入已达 <strong>$16.7B</strong>（同比增 <strong>221%</strong>），客户包括 Alphabet、Anthropic、Meta。Broadcom 预计 2027-2028 年 AI 半导体收入将再翻倍，增速指引超过 Nvidia 的 75% 增长预期。OpenAI、Google、Meta 都在推进自研定制芯片（custom silicon），Broadcom 作为 ASIC 合作伙伴是最大受益方。</p>
+        <div class="why">🦞 <b>市场含义：</b>「Nvidia 垄断 AI 芯片」的叙事正在松动。云巨头自研芯片（Google TPU、Meta MTIA、Amazon Trainium）都在蚕食 Nvidia 的份额，而 Broadcom 是这些定制芯片的核心设计合作伙伴。对 lainy：① AVGO 的 AI 敞口可能比 NVDA 更分散、更稳健——不依赖单一产品线；② 「Nvidia vs Broadcom」叙事会持续到 2027 年；③ HBM 内存供应商（SK Hynix、三星）两面下注，无论谁赢都要买 HBM。</div>
+        <div class="ticker">📌 关联标的：AVGO（Broadcom，受益）/ NVDA（Nvidia，份额被侵蚀风险）/ 000660.KS SK Hynix（HBM 双向受益）— Broadcom 定制芯片崛起，Nvidia 垄断叙事松动</div>
+        <div class="source">🔗 Source: <a href="https://finance.biggo.com/news/86aaf883-bfbb-4bbe-9bf5-d021e4192ba8" target="_blank">BigGo Finance</a> · <a href="https://cryptobriefing.com/broadcom-custom-ai-chips-threat-nvidia/" target="_blank">Crypto Briefing</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">Nvidia 暂停泰国</span>
+        <h4>Nvidia 暂停向泰国等东南亚国家发货 AI 芯片订单，Dell/Supermicro 已通知客户</h4>
+        <p>据 Chiang Rai Times 报道，Dell 和 Supermicro 已通知泰国、新加坡、马来西亚、印尼的买家，Nvidia 将不会授权向这些地区发运 AI 芯片订单。这被视为美国出口管制政策收紧向东南亚延伸的信号。泰国数据中心建设热潮正盛，Nvidia 此举可能影响该区域 AI 基建投资节奏。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>出口管制不只是中美的事——东南亚正在成为 AI 芯片贸易的「灰色地带」，Nvidia 主动收缩说明美国政府的管控压力在扩大。对 lainy：① 东南亚数据中心投资可能放缓；② 中国厂商通过东南亚「曲线进口」的路径被进一步封锁；③ 国产 AI 芯片替代逻辑再次加强。</div>
+        <div class="ticker">📌 关联标的：NVDA（Nvidia，区域营收风险）/ DELL（Dell，东南亚服务器订单受影响）/ 688981 中芯国际（国产替代叙事）— 东南亚 AI 基建短期受阻</div>
+        <div class="source">🔗 Source: <a href="https://www.chiangraitimes.com/tech/nvidia-chip-orders-thailand/" target="_blank">Chiang Rai Times</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag hbm">中国 AI 芯片份额</span>
+        <h4>中国 AI 加速器市场：上半年进口 200.8 万台，Nvidia 份额降至 34%</h4>
+        <p>据 Asia Daily 报道，2026 年上半年中国买家共收到约 <strong>200.8 万台</strong> AI 加速器。Nvidia 出货 <strong>67.8 万台</strong>，同比降 <strong>44%</strong>，份额降至 <strong>34%</strong>。国产替代正在加速——中国 AI 芯片供应商预计将在 2026-2027 年占据中国 <strong>88%</strong> 的市场份额。</p>
+        <div class="why">🦞 <b>读给你听：</b>Nvidia 在中国的份额从接近垄断降到 34%，这个趋势不可逆。美国每加一层出口管制，国产替代就多一个订单。lainy 的金融视角：华为昇腾、寒武纪、海光信息的订单和产能是直接受益方——这跟今天 A 股半导体板块暴涨 <strong>17.6%</strong> 的逻辑一致。</div>
+        <div class="ticker">📌 关联标的：688256 寒武纪（国产 AI 芯片受益）/ 002049 海光信息（国产替代）/ NVDA（中国市场份额持续下降）— 国产 AI 芯片份额加速替代</div>
+        <div class="source">🔗 Source: <a href="https://asiadaily.org/news/20772/" target="_blank">Asia Daily</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：上游 [硅片/化学品 — SUMCO/信越] → 中游 [代工 — TSMC/三星/Intel] → 下游 [AI 芯片设计 — NVDA/AVGO/华为] → 终端 [云厂 — MSFT/GOOG/Meta] — 当前受益环节：Broadcom 定制芯片（份额上升）+ 国产替代（管制加码）+ HBM 内存（双向受益）</div>
+  </section>
+
+  <!-- 🌍 国际局势 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#A9BACB"><span class="emoji">🌍</span> 国际局势 <small>影响油价与全球风险偏好</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag geo">俄乌</span>
+        <h4>乌克兰提议黑海停火以保护粮食出口；10 月俄军伤亡 5.44 万人创开战以来最高</h4>
+        <p>据 Al Jazeera 11/27 报道，基辅方面提出黑海停火倡议，旨在保护商业航运和全球粮食供应安全——乌克兰和俄罗斯都是主要农产品出口国，对港口基础设施的攻击正在威胁全球粮食链。与此同时，据乌克兰总参谋部数据，<strong>2026 年 10 月</strong>是俄军自全面入侵以来伤亡最惨重的一个月：共 <strong>54,400</strong> 人死亡、受伤或失踪。Trump 同日表示「我一直在对俄罗斯很强硬，但我想做交易」，暗示个人外交可能推动停火。</p>
+        <div class="why">🦞 <b>市场含义：</b>如果黑海停火成真，① 小麦/玉米价格可能回落（利好全球通胀降温）；② 乌克兰重建概念股有短期炒作空间；③ 但 Trump 同时暗示可能减少驻欧美军（约 8 万人），欧洲防务股可能受益。lainy 关注：粮食价格回落 → 全球 CPI 降温 → Fed 降息空间增大。</div>
+        <div class="ticker">📌 关联标的：小麦期货（停火预期利空）/ DBA（农产品 ETF）/ 600028 中国石化（地缘溢价回落利空油价）— 停火预期利空大宗商品、利好通胀降温</div>
+        <div class="source">🔗 Source: <a href="https://www.aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy" target="_blank">Al Jazeera</a> · <a href="https://oilprice.com/Geopolitics/Europe/Trump-Urges-Putin-to-End-Aggression-as-Europe-Braces-for-US-Military-Cuts.html" target="_blank">OilPrice</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag geo">APEC 地缘</span>
+        <h4>APEC 深圳峰会余波：Trump-Xi-Putin 三方会面后，乌克兰问题被放上桌——但乌克兰不在场</h4>
+        <p>11/19 深圳 APEC 峰会上的 Trump-Xi-Putin 三边会面余波持续发酵。据多家国际媒体追踪，Trump 在会后表示「实际上我们三个国家要讨论（乌克兰问题）」——但乌克兰未被邀请参与。分析人士指出，这次三边会面在中国主场进行，中国扮演了「全球召集人」角色。与此同时，加沙以色列地面攻势仍在持续，伊朗警惕地观察 Tel Aviv 释放更多军事打击准备信号。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>「G3」格局（美中俄三方共治）正在被试探——如果乌克兰问题真的被「三个大国」决定，意味着战后安全秩序的根本性重塑。对 lainy 的市场视角：① 地缘不确定性如果下降 → 风险偏好回升 → 科技股估值受益；② 但如果被解读为「牺牲乌克兰」→ 欧洲可能加大防务开支 → NATO 概念股受益；③ 中国「调停人」角色可能改善中欧关系。</div>
+        <div class="ticker">📌 关联标的：LMT（洛克希德，防务股）/ EPI（欧洲防务 ETF）/ 600150 中国船舶（防务）— 地缘重塑期，防务股中性偏多</div>
+        <div class="source">🔗 Source: <a href="https://dailynews.lk/2026/11/28/features/1053497/china-plays-global-convenor-with-shenzhen-summit/" target="_blank">Daily News</a> · <a href="https://chrystiafreeland.substack.com/p/the-geopolitics-of-disorder" target="_blank">Chrystia Freeland</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：地缘风险溢价 → 油气价格 → 通胀传导 → 央行政策 → 股债估值 — 当前传导：黑海停火预期（利空油价）vs 伊朗局势持续（利多油价），双向拉锯</div>
+  </section>
+
+  <!-- 📈 宏观 & 市场 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B7C0A3"><span class="emoji">📈</span> 宏观 &amp; 市场 <small>美联储 · 通胀 · 利率</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag macro">Fed 12 月</span>
+        <h4>PCE 3.8% + GDP 4.3% = 12 月加息几乎确定：市场定价 95% 概率加 25bp 至 4-4.25%</h4>
+        <p>11/27 公布的 10 月 PCE 通胀数据全线超预期：整体 PCE 同比 <strong>3.8%</strong>（前值 3.5%），核心 PCE 升至 <strong>3.3%</strong>（约三年高位）。同时 Q3 GDP 被上修至 <strong>4.3%</strong>。据 CME FedWatch，市场定价 12/8-9 FOMC 会议加息 25bp 的概率已达 <strong>95%</strong>，目标区间 <strong>4.00%-4.25%</strong>。Fed 鹰派立场明确——通胀走错方向、增长强于预期、劳动力市场未见明显恶化。纽约联储主席 Williams 表示预计 2026 年底通胀 <strong>3.5%</strong>，2028 年达 2%，不排除连续加息。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>lainy 记住这条传导链：通胀超预期 → Fed 加息 → 国债收益率上行 → 科技股估值承压 → 但同时强劲 GDP 和就业 = 「软着陆」叙事仍在。关键矛盾：Fed 在通胀 3.8% 时加息，但经济增速 4.3% 意味着企业盈利也在增长——所以股市可能在「加息恐惧」和「盈利增长」之间拉锯。本周五美股反弹就是后者占上风的例子。</div>
+        <div class="ticker">📌 关联标的：TLT（长期国债 ETF，加息预期利空）/ QQQ（纳斯达克，拉锯）/ XLU（公用事业，防御性配置）— 加息预期升温但盈利增长对冲</div>
+        <div class="source">🔗 Source: <a href="https://www.babypips.com/news/headline-the-feds-favorite-inflation-gauge-just-locked-in-a-december-hike-2026-11-27" target="_blank">BabyPips</a> · <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11272026-12283022" target="_blank">Investopedia</a> · <a href="https://www.indmoney.com/blog/us-stocks/us-pce-inflation-fed-interest-rate-outlook-2027" target="_blank">IND Money</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag macro">Black Friday</span>
+        <h4>Black Friday 2026：Adobe 预期线上销售创纪录 $12.9B，假期总消费或破 $1 万亿</h4>
+        <p>Adobe Analytics 预计 11/28（Black Friday）美国线上销售额达 <strong>$12.9B</strong>，创历史新高。11/1-11/22 线上消费已达 <strong>$82.5B</strong>（同比 +9.1%）。美国零售联合会预期 11-12 月假期销售增长 <strong>4.1%</strong>，总额约 <strong>$1.01 万亿</strong>；但通胀约贡献其中一半增长。Deloitte 调查显示人均计划消费 <strong>$624</strong>（与去年持平），参与率达 10 年高位 87%。Conference Board 数据显示人均假期计划支出 <strong>$1,049</strong>（同比 +5.9%）。消费者情绪处于三年低位——但仍在花钱，只是更精打细算。AI 购物助手（ChatGPT、Perplexity 等）正在改变比价行为。</p>
+        <div class="why">🦞 <b>商业含义：</b>名义消费增长 4.1%，但通胀占一半 = 实际增长约 2%，并不亮眼。关键信号：① 消费者更依赖折扣（deals thinner this year = 折扣力度变小但人们仍在买）；② AI 购物助手改变比价行为 → 零售商定价权被削弱；③ Z 世代参与率达 10 年高位 = 新生代消费力开始释放。lainy 视角：消费「名义稳健 + 实际温吞」= 不崩盘但也不热 → Fed 的「软着陆」叙事暂时成立。</div>
+        <div class="ticker">📌 关联标的：AMZN（亚马逊，受益线上销售）/ WMT（沃尔玛，折扣消费受益）/ SHOP（Shopify，电商基建）— 消费名义稳健，实际温和</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html" target="_blank">CNBC</a> · <a href="https://www.fastcompany.com/91649440/black-friday-2026-these-unexpected-items-driving-up-u-s-consumer-spending" target="_blank">Fast Company</a> · <a href="https://apnews.com/article/black-friday-deals-shopping-stores-online-21e10113de5d5941024b3220bec29433" target="_blank">AP News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 传导链：PCE 3.8% → Fed 加息 25bp（95% 定价）→ 美债收益率上行 → 美元走强 → 新兴市场资金外流压力 → 但 GDP 4.3% + 消费稳健 = 对冲下行风险</div>
+  </section>
+
+  <!-- 🪙 大宗商品 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#B8A07E"><span class="emoji">🪙</span> 大宗商品 <small>金 / 银 / 铜 / 原油</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag comm">贵金属</span>
+        <h4>黄金重返 $3,650+、白银暴涨 7% 至 $44.32：美股反弹带动贵金属齐涨</h4>
+        <p>11/27 周五，黄金现货升至 <strong>$3,666.56</strong>/盎司，较周中低点 $3,596 反弹近 <strong>$70</strong>。白银单日暴涨约 <strong>7%</strong> 至 <strong>$44.32</strong>/盎司（此前一度跌至 $41.96）。Kitco 分析指出，美股 Black Friday 反弹带动风险偏好回升，贵金属受益于空头回补。但月度来看，黄金本月跌约 <strong>8%</strong>、白银跌约 <strong>20%</strong>——均在接近一年低位。Fed 加息预期升温是贵金属本月回调的核心利空。</p>
+        <div class="why">🦞 <b>市场含义：</b>短期反弹不改变月度弱势格局。Fed 12 月加息 95% 定价 = 实际利率上行 = 贵金属持仓成本上升 = 短期承压。但长期支撑仍在：央行购金趋势未变、地缘风险持续、通胀粘性 <strong>3.8%</strong>。lainy 的关注点：黄金在 $3,500-3,700 区间可能形成阶段性底部——如果 Fed 12 月加息后释放鸽派指引，反弹窗口在 Q1。</div>
+        <div class="ticker">📌 关联标的：COMEX 黄金 / SLV（白银 ETF）/ 600547 山东黄金 / 600489 中金黄金 / GLD（SPDR 黄金 ETF）— 贵金属短期反弹但月度仍弱</div>
+        <div class="source">🔗 Source: <a href="http://www.kitco.com/news/article/2026-11-27/gold-climbs-above-3650-silver-surges-wall-street-rebounds-sharply-kitco-pm" target="_blank">Kitco</a> · <a href="https://www.tokenpost.com/news/investing/63264" target="_blank">TokenPost</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">原油</span>
+        <h4>Brent 突破 $97、周涨约 4%：地缘风险溢价回归，OPEC+ 明日会议维持产量不变</h4>
+        <p>Brent 原油连涨四日后在 <strong>$96-97</strong>/桶区间交易，本周涨约 <strong>4%</strong>，为本月首周上涨。WTI 收于 <strong>$83.08</strong>，周内先跌后涨。驱动因素：① 伊朗战争持续限制中东供应；② OPEC+ 将于 <strong>周日 11/29</strong> 召开部长级会议，Reuters 报道三位消息人士称成员国已原则同意将 Q1 2027 产量目标维持在 <strong>31.01 百万桶/日</strong>不变。伊拉克要求提高配额，但预期被拒。UAE 已于数月前退出 OPEC+ 以自行扩产。Brent 10 月曾触及 $118 高点。</p>
+        <div class="why">🦞 <b>龙虾老师解读：</b>OPEC+ 维持产量不变 = 不增产也不减产 = 「观望」姿态。关键变量是伊朗战争——如果冲突升级导致霍尔木兹海峡通行受影响，Brent 可能重回 $100+。但如果没有实质断供，美国页岩油产量创新高 + 全球需求放缓 = $90s 可能是短期天花板。lainy 关注：明日（11/29）OPEC+ 会议结果是本周最后一个重要大宗商品事件。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / WTI 原油 / 600028 中国石化 / 601857 中国石油 / XOM（埃克森美孚）/ CVX（雪佛龙）— OPEC+ 维持产量，地缘溢价支撑油价</div>
+        <div class="source">🔗 Source: <a href="https://www.businesstimes.com.sg/companies-markets/energy-commodities/opec-set-keep-oil-production-targets-steady-sources-say" target="_blank">Business Times</a> · <a href="https://www.ebc.com/forex/opec-november-29-meeting-2027-output-quotas" target="_blank">EBC Financial</a> · <a href="https://leprivatebanker.com/2026/11/27/opec-heads-into-sundays-2027-quota-meeting-with-brent-near-96-after-a-118-peak-as-iraq-presses-for-leeway/" target="_blank">Le Private Banker</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag comm">工业金属</span>
+        <h4>铜价反弹：LME 铜从年内低点回升，跟随贵金属和股市反弹</h4>
+        <p>据 Investing.com 和 Urgent News 报道，铜价周五从近期低点反弹，跟随贵金属和全球股市反弹走势。ARA 精炼铜库存下降 <strong>280kt</strong> 至 <strong>4.2mt</strong>（ WoW ），由 gasoil 和 naphtha 库存下降主导。全球大宗商品周度回顾显示，Brent 周涨、金属从低点大幅反弹，但月度趋势仍偏弱。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>铜是「经济晴雨表」——反弹说明市场在 Fed 加息恐惧和经济增长之间选择了后者。但库存下降也说明供给端偏紧。lainy 视角：铜价反弹 + GDP 4.3% = 全球工业需求不差，但 Fed 加息限制了上行空间。长期来看，AI 数据中心建设潮对铜的需求是结构性利好。</div>
+        <div class="ticker">📌 关联标的：LME 铜 / 600362 江西铜业 / FCX（Freeport-McMoRan）/ COPX（铜矿 ETF）— 铜价反弹但上行受限</div>
+        <div class="source">🔗 Source: <a href="https://www.investing.com/analysis/copper-and-gold-rebound-while-oil-extends-gains-200692418" target="_blank">Investing.com</a> · <a href="https://urgent.news/2026/11/27/the-commodities-feed-copper-and-gold-rebound-while-oil-extends-gains" target="_blank">Urgent News</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 传导链：Fed 加息 → 美元走强 → 大宗商品普遍承压 → 但地缘风险（油价溢价）+ 央行购金（金价底部支撑）+ 库存下降（铜供给紧）= 分品种分化，不是齐跌</div>
+  </section>
+
+  <!-- ⚡ 能源 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C4A77D"><span class="emoji">⚡</span> 能源 <small>原油 / OPEC+ / 天然气</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag energy">OPEC+</span>
+        <h4>OPEC+ 明日会议前瞻：Q1 2027 产量配额 31.01 百万桶/日不变，伊拉克争取更高配额</h4>
+        <p>OPEC+ 部长级会议将于 <strong>周日 11/29</strong>举行，将举行四场连续会议。Reuters 三位消息人士确认，成员国已原则同意将 Q1 2027 产量目标维持在 <strong>31.01 百万桶/日</strong>不变。主要分歧：伊拉克要求提高配额，挑战独立产能评估结果；哈萨克斯坦同样不满。俄罗斯副总理 Novak 表示产能调查将在年内完成。UAE 已于数月前退出 OPEC+ 以自行扩产。Brent 从 10 月 $118 高点回落至 $96-97，但周涨约 <strong>4%</strong>。</p>
+        <div class="why">🦞 <b>市场含义：</b>维持产量不变 = 短期利好油价（不增产）。但伊拉克和哈萨克斯坦的「超额产能」问题如果得不到解决，可能在 Q2 2027 引发配额调整。伊朗战争导致的供应风险仍是最大不确定性。lainy 关注：如果 OPEC+ 明日宣布维持不变 → Brent 在 $95-100 区间稳定；如果意外增产 → 油价可能快速回落至 $85-90。</div>
+        <div class="ticker">📌 关联标的：Brent 原油 / 600028 中国石化 / 601857 中国石油 / 0883.HK 中海油 / XOM（埃克森美孚）/ SHEL（壳牌）— 维持产量利好油价稳定</div>
+        <div class="source">🔗 Source: <a href="https://www.investing.com/analysis/oil-prices-face-a-2027-supply-glut-despite-rising-middle-east-war-risks-200692469" target="_blank">Investing.com</a> · <a href="https://www.ebc.com/forex/opec-november-29-meeting-2027-output-quotas" target="_blank">EBC</a> · <a href="https://world-today-journal.com/iraq-demands-higher-opec-quota-ahead-of-sunday-meeting/" target="_blank">World Today Journal</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 传导链：OPEC+ 维持产量 → 供应不增 → 油价 $95-100 稳定 → 通胀粘性持续 → Fed 加息理由充分 → 但如果伊朗战争缓和 → 油价回落 → 通胀降温 → Fed 转鸽可能</div>
+  </section>
+
+  <!-- 🏦 股市行情 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4A64A"><span class="emoji">🏦</span> 股市行情 <small>A 股 / 港股 / 美股 / 韩股</small></h2>
+
+    <!-- A 股 -->
+    <div class="market-block">
+      <h4>🇨🇳 A 股：沪指 +3.73% 重返 3,606 / 创业板 +11.61% / 科创 50 +15.07%</h4>
+      <p>11/27（周五）A 股午后放量暴涨。上证指数收报 <strong>3,606.49</strong>（+3.73%）；深证成指收 <strong>10,814.02</strong>（+7.24%）；创业板指收 <strong>2,443.96</strong>（+11.61%）；科创 50 收 <strong>1,346.25</strong>（+15.07%，历史第三大单日涨幅）。沪深 300 升 <strong>4.17%</strong>，创两年最大升幅。全日成交约 <strong>2 万亿</strong>元。触发因素：<strong>国务院常务会议</strong>午间发布公报，要求加力发挥「国家队」稳市作用，进一步优化中央汇金公司的类「平准基金」功能，提供充足流动性保障。半导体板块掀涨停潮：华海诚科、京仪装备、灿芯股份 20cm 涨停，长川科技涨超 15%，寒武纪涨超 13%，中芯国际涨超 10%。国产存储替代叙事加速：长鑫科技 DRAM 全球市占率从 2025Q1 的 3% 升至 2026Q1 的 8%，长江存储 NAND 从 8% 升至 13%。</p>
+      <p style="margin-top:8px"><b>结构性变化置顶：</b>国务院将汇金「平准基金」功能制度化——这是 A 股「国家队」从临时干预走向常态化市场稳定机制的重要信号。</p>
+      <div class="ticker">📌 涨幅 TOP：寒武纪 +13%、长川科技 +15%、中芯国际 +10%+ | 关联标的：588200 科创50ETF / 512760 半导体ETF / 688981 中芯国际</div>
+      <div class="source">🔗 Source: <a href="https://cn.investing.com/news/stock-market-news/article-3688786" target="_blank">Investing.com</a> · <a href="https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html" target="_blank">CNBC</a> · <a href="https://news.mingpao.com/pns/%E7%B6%93%E6%BF%9F/article/20261128/s00004/1795795567132" target="_blank">明报</a></div>
+    </div>
+
+    <!-- 港股 -->
+    <div class="market-block">
+      <h4>🇭🇰 港股：恒指 +2.11% 收 22,694 / 恒生科技 +3.3% / 半导体股大涨</h4>
+      <p>11/27 恒指收报 <strong>22,694</strong>（+467 点 / +2.11%），连升两日累涨超 728 点。恒生科技指数报 <strong>3,528</strong>（+3.3%）。全日成交 <strong>2,571 亿</strong>港元。半导体概念股大涨：华虹宏力涨超 20%、中芯国际涨超 16%、智谱涨超 18%、天数智芯涨超 8%。A+H 两地联动效应明显，A 股午后暴涨带动港股午后升势加速。国务院「国家队」稳市信号对港股中概股提振明显。</p>
+      <div class="ticker">📌 涨幅 TOP：华虹宏力 +20%+ / 中芯国际 +16%+ / 智谱 +18%+ | 关联标的：00981 中芯国际 / 01347 华虹宏力 / 01810 小米</div>
+      <div class="source">🔗 Source: <a href="https://www.dotdotnews.com/a/202611/27/AP6b095251e4b091a65a30dace.html" target="_blank">点新闻</a> · <a href="https://www.21jingji.com/article/20261127/herald/a2c8291a7119451dba48629be0a4885a.html" target="_blank">21经济网</a></div>
+    </div>
+
+    <!-- 美股 -->
+    <div class="market-block">
+      <h4>🇺🇸 美股：Black Friday 反弹！费城半导体 +4.69% / Micron +7.6% / Marvell +7.34%</h4>
+      <p>11/27（周五，Black Friday 半日交易）美股反弹。费城半导体指数（SOX）涨 <strong>4.69%</strong>。Micron (MU) 涨 <strong>7.6%</strong> 至约 $643.81；Marvell (MRVL) 涨 <strong>7.34%</strong>；Dell (DELL) +6.7%；Arista (ANET) +6.55%；Intel (INTC) +5%；AMD +5%；Broadcom (AVGO) +4%。Nvidia (NVDA) 收盘微涨 <strong>0.8%</strong>，成交 <strong>$269.8 亿</strong>。Sandisk (SNDK) 涨约 <strong>11%</strong>。道指本周创 2022 以来最佳周表现。iShares 半导体 ETF (SOXX) 涨近 <strong>5%</strong>。反弹逻辑：经历 11 月大幅回调后，逢低买盘进场 + PCE 超预期但被解读为「已知利空」。</p>
+      <div class="ticker">📌 涨幅 TOP：SNDK +11% / MU +7.6% / MRVL +7.34% / DELL +6.7% | 关联标的：SMH / SOXX / NVDA / MU</div>
+      <div class="source">🔗 Source: <a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11272026-12283022" target="_blank">Investopedia</a> · <a href="https://cappnotes.substack.com/p/closing-look-friday-november-27-2026" target="_blank">Cappnotes</a> · <a href="https://www.gurufocus.com/news/9228870/nvidia-nvda-micron-mu-sandisk-sndk-lead-us-mosttraded-stocks" target="_blank">GuruFocus</a></div>
+    </div>
+
+    <!-- 韩股 -->
+    <div class="market-block">
+      <h4>🇰🇷 韩股：KOSPI +4.34% 至 4,915.69 / KOSDAQ +8.11% / SK Hynix +5%+</h4>
+      <p>11/27 KOSPI 收 <strong>4,915.69</strong>（+4.34%），逼近 5,000 点关口；KOSDAQ 涨 <strong>8.11%</strong> 至 708.88。外资转为净买入，领涨大盘。SK Hynix 涨超 <strong>5%</strong>，三星电子同步走强。Kioxia 涨近 <strong>9%</strong>。日经 225 涨 <strong>2.11%</strong> 至 58,711。韩国综合股指本周曾跌超 6%，周五反弹由超卖回补和政策稳定预期双重驱动。韩元走强。Fed 静默期开始，市场新信息减少。</p>
+      <div class="ticker">📌 涨幅 TOP：SK Hynix +5%+ / Kioxia +9% / KOSDAQ +8.11% | 关联标的：005930.KS 三星电子 / 000660.KS SK Hynix</div>
+      <div class="source">🔗 Source: <a href="https://www.koreatimes.co.kr/economy/20261127/kospi-surges-over-4-kosdaq-gains-top-8-on-hopes-for-market-stabilization-fund" target="_blank">Korea Times</a> · <a href="https://en.sedaily.com/market/2026/11/27/bargain-hunters-lift-kospi-43-percent-kosdaq-81-percent" target="_blank">Seoul Economic Daily</a> · <a href="https://www.tradingkey.com/analysis/stocks/more/262324835-japan-south-korea-stocks-kospi-nikkei-softbank-sk-hynix-samsung-kioxia-tradingkey" target="_blank">TradingKey</a></div>
+    </div>
+  </section>
+
+  <!-- 🛍️ 消费 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#C9A0B6"><span class="emoji">🛍️</span> 消费 <small>Black Friday / 零售 / 中国 IPO</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag biz">Black Friday</span>
+        <h4>Black Friday 2026 实况：人均消费 $624 与去年持平，参与率达 10 年高位 87%</h4>
+        <p>Deloitte 调查显示，Black Friday 至 Cyber Monday 期间人均计划消费 <strong>$624</strong>（与去年持平），但参与率达 <strong>87%</strong>（10 年高位），Z 世代全面入场。Adobe 预期 11/28 线上销售创纪录 <strong>$12.9B</strong>。National Retail Federation 预期 11-12 月假期零售增长 <strong>4.1%</strong>，总额约 <strong>$1.01 万亿</strong>——但通胀约贡献一半增长。Conference Board 人均假期计划支出 <strong>$1,049</strong>（+5.9% YoY）。零售商维持价格不涨、提供稳定折扣，说服消费者提前购物。AI 购物助手正在改变比价行为。</p>
+        <div class="why">🦞 <b>市场含义：</b>名义增长 4.1%，实际增长约 2%。消费者「参与率」高但「客单价」持平 = 精打细算型消费。零售商定价权被 AI 比价工具削弱。lainy 视角：通胀驱动消费增长 ≠ 真实消费力增长；Fed 的「软着陆」叙事在此数据下暂时成立。</div>
+        <div class="ticker">📌 关联标的：AMZN（亚马逊）/ WMT（沃尔玛）/ TGT（Target）/ BABA（阿里巴巴）— 消费名义稳健，实际温吞</div>
+        <div class="source">🔗 Source: <a href="https://www.cnbc.com/2026/11/27/black-friday-2026-inflation-value-deals.html" target="_blank">CNBC</a> · <a href="https://apnews.com/article/black-friday-deals-shopping-stores-online-21e10113de5d5941024b3220bec29433" target="_blank">AP News</a> · <a href="https://www.the-independent.com/us/money/black-friday-thanksgiving-us-retail-spending-b3092651.html" target="_blank">The Independent</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">中国 IPO</span>
+        <h4>2026 中国 IPO 回暖：A 股 + 港股合计 310+ 家上市、募资超 $1000 亿</h4>
+        <p>安永 11/27 发布报告：预计全年中国内地和香港新上市企业超 <strong>310 家</strong>，募资超 <strong>$1000 亿</strong>美元，同比分别增 <strong>24%</strong> 和 <strong>59%</strong>。A 股在监管导向和制度改革推动下更突出硬科技与创新型中小企业；港股受益于 A+H 企业集中上市以及国际资本参与。</p>
+        <div class="why">🦞 <b>商业含义：</b>59% 的募资增长说明港股作为「中国企业全球融资渠道」的功能在恢复——这对 lainy 所在的香港金融市场是直接利好。</div>
+        <div class="ticker">📌 关联标的：03968.HK 招商证券 / 601688 华泰证券 — IPO 回暖利好券商和投行</div>
+        <div class="source">🔗 Source: <a href="https://www.21jingji.com/article/20261127/herald/210388738e5e1dce58ceaa5c43b4436d.html" target="_blank">21经济网</a></div>
+      </div>
+
+      <div class="card">
+        <span class="tag biz">股票回购贷款</span>
+        <h4>四大国有行股票回购增持贷款超 6000 亿元：央行再贷款政策转为长期制度</h4>
+        <p>截至 11/26，工、农、中、建四大国有行已签订的股票回购增持贷款合同及额度承诺金额合计超 <strong>6000 亿元</strong>。11/2 央行联合金融监管总局、证监会将股票回购增持再贷款政策由阶段性安排转为长期制度，再贷款利率从 <strong>1.25%</strong> 降至 <strong>1%</strong>。</p>
+        <div class="why">🦞 <b>为什么值得看：</b>6000 亿回购贷款 = 上市公司获得低成本资金回购股票 = 直接提振股价。这跟今天国务院要求汇金加大稳市力度的政策一脉相承。</div>
+        <div class="ticker">📌 关联标的：601398 工商银行 / 601288 农业银行 / 601988 中国银行 / 601939 建设银行 — 回购贷款政策利好银行和被回购标的</div>
+        <div class="source">🔗 Source: <a href="https://k.sina.com.cn/article_7857201856_1d45362c001908w8v6.html" target="_blank">新浪财经</a></div>
+      </div>
+    </div>
+    <div class="chain-link">🔗 产业链：央行再贷款 1% → 银行放贷 6000 亿 → 上市公司回购 → 股价提振 → 市场信心 → 消费/IPO 联动 — 当前受益环节：券商/银行（流动性提供方）+ 硬科技企业（回购+IPO 双通道）</div>
+  </section>
+
+  <!-- ✨ 娱乐花边 -->
+  <section>
+    <h2 class="section-title" style="border-left-color:#D4B79C"><span class="emoji">✨</span> 娱乐花边 <small>周末放松一下</small></h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag fun">体育</span>
+        <h4>感恩节周末体育大乱炖：13 场 NHL + 5 场 NBA + 20+ 场大学橄榄球对决</h4>
+        <p>11/28 是感恩节周末最忙的体育日——13 场 NHL、5 场 NBA、20+ 场大学橄榄球传统对决同时开打。2026 Davis Cup Final 8 半决赛同步进行。WWE Survivor Series: WarGames 今晚在休斯顿 Daikin Park 上演。National Dog Show 迎来 25 周年，208 个品种参赛、64 只金毛寻回犬和 3 个新犬种首秀。</p>
+        <div class="why">🦞 <b>龙虾老师说：</b>感恩节周末 = 一年中最疯狂的体育日。NBA/NHL/大学橄榄球全在同一天，加上 WWE WarGames 和 National Dog Show——lainy 如果要看球，今天是选择困难症爆发日。</div>
+        <div class="ticker">📌 关联标的：DKNG（DraftKings，体育博彩）/ PENN（Penn Entertainment）— 感恩节周末体育消费高峰</div>
+        <div class="source">🔗 Source: <a href="https://www.essentiallysports.com/tennis-nfl-college-football-basketball-nba-olympics-nhl-soccer-motorsports-f1-news-november-twenty-eighth-complete-sports-schedule-where-when-and-how-to-watch-your-favorite-sports-event/" target="_blank">Essentially Sports</a> · <a href="https://www.newsx.com/sports/wwe-survivor-series-2026-date-start-time-match-card-and-live-streaming-details-in-us-uk-india-canada-and-more-295602/" target="_blank">NewsX</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 返回首页 -->
+  <div style="text-align:center; margin: 40px 0 20px;">
+    <a class="back-link" href="../index.html"><span class="arrow">←</span><span>返回首页</span></a>
+  </div>
+
+  <footer>
+    <p>🦞 龙虾老师 · 每日不错过新闻 · 2026-11-28</p>
+    <div class="footer-note">本报告基于公开新闻信源，仅供参考。不构成投资建议。</div>
+  </footer>
+</div>
+</body>
+</html>
